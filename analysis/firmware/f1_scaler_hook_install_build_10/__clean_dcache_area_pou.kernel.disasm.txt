@@ -1,0 +1,22 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_scaler_hook_install_build_10/kernel_narrow.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+ffffff800809b770 <__clean_dcache_area_pou>:
+ffffff800809b770: d503201f     	nop
+ffffff800809b774: d503201f     	nop
+ffffff800809b778: d53b0023     	mrs	x3, CTR_EL0
+ffffff800809b77c: d503201f     	nop
+ffffff800809b780: d3504c63     	ubfx	x3, x3, #16, #4
+ffffff800809b784: d2800082     	mov	x2, #0x4        // =4
+ffffff800809b788: 9ac32042     	lsl	x2, x2, x3
+ffffff800809b78c: 8b010001     	add	x1, x0, x1
+ffffff800809b790: d1000443     	sub	x3, x2, #0x1
+ffffff800809b794: 8a230000     	bic	x0, x0, x3
+ffffff800809b798: d50b7b20     	dc	cvau, x0
+ffffff800809b79c: 8b020000     	add	x0, x0, x2
+ffffff800809b7a0: eb01001f     	cmp	x0, x1
+ffffff800809b7a4: 54ffffa3     	b.lo	0xffffff800809b798 <__clean_dcache_area_pou+0x28>
+ffffff800809b7a8: d5033b9f     	dsb	ish
+ffffff800809b7ac: d65f03c0     	ret

@@ -1,0 +1,66 @@
+--- tools/firmware/f4_native_menu_03/menu.c
++++ tools/firmware/f4_native_menu_04/menu.c
+@@ -1,12 +1,14 @@
+-#include "menu.h"
+-#include "native_calls.h"
++#include "../f4_native_menu_03/menu.h"
++#include "../f4_native_menu_03/native_calls.h"
+ #include "../f4_native_source_02/native_calls.h"
+-#include "code_pins.h"
++#include "../f4_native_menu_03/code_pins.h"
+ #include <string.h>
++#include "../f4_native_diagnostics_04/diagnostics.h"
+ static Iq4F4SelfRead02 read_memory;static void*read_context;static uintptr_t selector,manager,queue,parent;
+ static void*source;static Iq4F4MenuPorts03 ports;
+-static void*menu,*items[9];static uintptr_t mt[24],it[22];static unsigned held,building,connected,exit_pending;
+-static const char*const names[9]={"Start","Stop","Stop and Exit","Mode","Status","Encoded","Dropped","Notifications","Card"};
++enum {ITEMS=14};static void*menu,*items[ITEMS];static uintptr_t mt[24],it[22];static unsigned held,building,connected,exit_pending;
++static const char*const names[ITEMS]={"Start","Stop","Stop and Exit","Mode","Status","Encoded","Dropped","Notifications","Card","Entry stage/error","Source stage/error","Session stage/error","First detail","Diagnostic ABI"};
++static Iq4F4UiView03 observed;
+ static int read_exact(uintptr_t a,void*p,size_t n){return read_memory&&a>=4096&&n&&n<=4096&&a<=UINTPTR_MAX-n&&read_memory(read_context,a,p,n)==1;}
+ static int word(uintptr_t a,uintptr_t*v){return read_exact(a,v,8);}
+ static int pins(void){unsigned char b[64];size_t i,j;for(i=0;i<sizeof iq4_f4_menu_pins_03/sizeof*iq4_f4_menu_pins_03;++i){const Iq4F4MenuPin03*p=&iq4_f4_menu_pins_03[i];for(j=0;j<p->length;j+=sizeof b){size_t n=p->length-j;if(n>sizeof b)n=sizeof b;if(!read_exact(p->va+j,b,n)||memcmp(b,p->bytes+j,n))return 0;}}return 1;}
+@@ -25,21 +27,28 @@
+  if(!read_exact(selector+0x470,&depth,4)||depth>7||!word(selector+0x430+8*depth,&top))return -1;
+  return top==(uintptr_t)menu?1:0;
+ }
+-static Iq4F4UiView03 view(void){Iq4F4UiView03 v={0};if(held){v.phase=IQ4_F4_UI_HOLD;return v;}
+- if(connected&&on_ui()&&ports.view_on_ui(ports.context,&v)==1&&v.phase<=IQ4_F4_UI_HOLD)return v;
+- memset(&v,0,sizeof v);return v;
++static Iq4F4UiView03 view(void){Iq4F4UiView03 v={0};
++ if(connected&&on_ui()&&ports.view_on_ui(ports.context,&v)==1&&v.phase<=IQ4_F4_UI_HOLD){observed=v;}else v=observed;
++ /* Hold remains terminal. It no longer fabricates all-zero evidence. */
++ if(held)v.phase=IQ4_F4_UI_HOLD;return v;
+ }
+ static char*text(char*b,int32_t n,const char*s){int32_t i=0;if(!b||n<=0)return(char*)"";for(;i+1<n&&s[i];++i)b[i]=s[i];b[i]=0;return b;}
+ static char*number(char*b,int32_t n,uint64_t v){char d[20];unsigned i=0,j=0;do{d[i++]=(char)('0'+v%10);v/=10;}while(v);if(!b||n<=0)return(char*)"";while(i&&j+1<(unsigned)n)b[j++]=d[--i];b[j]=0;return b;}
+-static unsigned item_index(void*p){for(unsigned i=0;i<9;++i)if(p==items[i])return i;return 9;}
++static unsigned item_index(void*p){for(unsigned i=0;i<ITEMS;++i)if(p==items[i])return i;return ITEMS;}
+ static char*menu_name(void*p,char*b,int32_t n){(void)p;return text(b,n,"LV Recording");}
+ static const char*phase(uint32_t n){const char*const s[]={"Unavailable","Ready","Preparing","Recording","Finalizing","Error","Hold"};return n<7?s[n]:"Hold";}
+ static char*menu_value(void*p,char*b,int32_t n){(void)p;return text(b,n,phase(view().phase));}
+-static char*item_name(void*p,char*b,int32_t n){unsigned i=item_index(p);return text(b,n,i<9?names[i]:"Unknown");}
++static char*item_name(void*p,char*b,int32_t n){unsigned i=item_index(p);return text(b,n,i<ITEMS?names[i]:"Unknown");}
+ static char*item_value(void*p,char*b,int32_t n){unsigned i=item_index(p);Iq4F4UiView03 v=view();
+  if(i==3){if(!v.width||!v.height)return text(b,n,"Unavailable");char a[20],h[20],s[48];number(a,sizeof a,v.width);number(h,sizeof h,v.height);size_t k=0;for(size_t j=0;a[j];++j)s[k++]=a[j];s[k++]='x';for(size_t j=0;h[j];++j)s[k++]=h[j];s[k++]=' ';s[k++]='V';s[k++]='F';s[k++]='R';s[k]=0;return text(b,n,s);}
+  if(i==4)return text(b,n,phase(v.phase));if(i==5)return number(b,n,v.encoded);if(i==6)return number(b,n,v.dropped);if(i==7)return number(b,n,v.notifications);
+- if(i==8)return text(b,n,v.destination_fs_id==10?(v.card_request_held?"SD (held)":"SD"):v.destination_fs_id==11?(v.card_request_held?"XQD (held)":"XQD"):"Unavailable");
++ if(i==8)return text(b,n,v.destination_fs_id==10?(v.card_request_held?"SD (held)":"SD target"):v.destination_fs_id==11?(v.card_request_held?"XQD (held)":"XQD target"):"Unavailable");
++ if(i>=9&&i<=12){Iq4F4Diag04 d={0};if(!iq4_f4_entry_diagnostics_04(&d))return text(b,n,"Unavailable");
++  if(i==12){char a[11],s[40];size_t k=0;uint32_t v[3]={d.entry.detail,d.source.detail,d.session.detail};
++   for(unsigned x=0;x<3;++x){number(a,sizeof a,v[x]);if(x)s[k++]='/';for(size_t j=0;a[j];++j)s[k++]=a[j];}s[k]=0;return text(b,n,s);}
++  Iq4F4DiagUnit04 q=i==9?d.entry:i==10?d.source:d.session;char a[11],e[11],s[24];number(a,sizeof a,q.stage);number(e,sizeof e,q.error);size_t k=0;
++  for(size_t j=0;a[j];++j)s[k++]=a[j];s[k++]='/';for(size_t j=0;e[j];++j)s[k++]=e[j];s[k]=0;return text(b,n,s);}
++ if(i==13)return text(b,n,"04 / scalar snapshot");
+  return text(b,n,i==2?"Finalize then return":"");
+ }
+ static uint32_t activate(void*p){unsigned i=item_index(p);if((i>2&&i!=8)||!connected||!on_ui()||iq4_f4_menu_page_guard_03(0)!=1||held)return 0;
+@@ -66,7 +75,7 @@
+   mt[2+3]=(uintptr_t)menu_name;mt[2+4]=(uintptr_t)menu_value;
+   it[2+3]=(uintptr_t)item_name;it[2+4]=(uintptr_t)item_value;it[2+10]=(uintptr_t)activate;
+   if(!iq4_f4_menu_new_03(0x118,&menu)||!menu||!iq4_f4_menu_ctor_03(0x4e5744,menu))goto fail;put(menu,0,(uintptr_t)&mt[2]);
+-  for(unsigned i=0;i<9;++i){if(!iq4_f4_menu_new_03(0x38,&items[i])||!items[i]||!iq4_f4_menu_ctor_03(0x4e9d30,items[i]))goto fail;put(items[i],0,(uintptr_t)&it[2]);if(!iq4_f4_menu_append_03(menu,items[i]))goto fail;}
++  for(unsigned i=0;i<ITEMS;++i){if(!iq4_f4_menu_new_03(0x38,&items[i])||!items[i]||!iq4_f4_menu_ctor_03(0x4e9d30,items[i]))goto fail;put(items[i],0,(uintptr_t)&it[2]);if(!iq4_f4_menu_append_03(menu,items[i]))goto fail;}
+  }
+  if(!iq4_f4_menu_append_03(r,menu)||present(parent,(uintptr_t)menu)!=1)goto fail;building=0;return 1;
+  fail:held=1;return 0; /* Retain partial native objects, no retry/free. */

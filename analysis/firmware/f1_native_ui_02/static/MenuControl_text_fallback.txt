@@ -1,0 +1,38 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual callable binding.
+  4c0504: f94087e2     	ldr	x2, [sp, #0x108]
+  4c0508: f94087e0     	ldr	x0, [sp, #0x108]
+  4c050c: f9400000     	ldr	x0, [x0]
+  4c0510: 91002000     	add	x0, x0, #0x8
+  4c0514: f9400001     	ldr	x1, [x0]
+  4c0518: aa0203e0     	mov	x0, x2
+  4c051c: d63f0020     	blr	x1
+  4c0520: b90263e0     	str	w0, [sp, #0x260]
+  4c0524: f9402fe0     	ldr	x0, [sp, #0x58]
+  4c0528: f9405800     	ldr	x0, [x0, #0xb0]
+  4c052c: f9400803     	ldr	x3, [x0, #0x10]
+  4c0530: f9402fe0     	ldr	x0, [sp, #0x58]
+  4c0534: f9405800     	ldr	x0, [x0, #0xb0]
+  4c0538: f9400800     	ldr	x0, [x0, #0x10]
+  4c053c: f9400000     	ldr	x0, [x0]
+  4c0540: 91006000     	add	x0, x0, #0x18
+  4c0544: f9400002     	ldr	x2, [x0]
+  4c0548: b94263e1     	ldr	w1, [sp, #0x260]
+  4c054c: aa0303e0     	mov	x0, x3
+  4c0550: d63f0040     	blr	x2
+  4c0554: f9014be0     	str	x0, [sp, #0x290]
+  4c0558: 3901a3ff     	strb	wzr, [sp, #0x68]
+  4c055c: f9414be0     	ldr	x0, [sp, #0x290]
+  4c0560: f100001f     	cmp	x0, #0x0
+  4c0564: 54000181     	b.ne	0x4c0594
+  4c0568: f94087e4     	ldr	x4, [sp, #0x108]
+  4c056c: f94087e0     	ldr	x0, [sp, #0x108]
+  4c0570: f9400000     	ldr	x0, [x0]
+  4c0574: 91008000     	add	x0, x0, #0x20
+  4c0578: f9400003     	ldr	x3, [x0]
+  4c057c: 9101a3e0     	add	x0, sp, #0x68
+  4c0580: 52800402     	mov	w2, #0x20
+  4c0584: aa0003e1     	mov	x1, x0
+  4c0588: aa0403e0     	mov	x0, x4
+  4c058c: d63f0060     	blr	x3
+  4c0590: f9014be0     	str	x0, [sp, #0x290]

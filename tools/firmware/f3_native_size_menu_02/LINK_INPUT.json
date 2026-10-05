@@ -1,0 +1,30 @@
+{
+  "schema": "iq4_native_storage_size_menu_link_01",
+  "source": {
+    "path": "tools/firmware/f3_native_size_menu_02/SOURCE_SHA256.json",
+    "bytes": 5573,
+    "sha256": "9a49b570fc55a8ce69dfcbad56845c54d5f3390c290a98134cc5f5509f5871f6"
+  },
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_native_size_menu_02/build/size_menu.o",
+      "bytes": 13824,
+      "sha256": "731d12b08e0f02f14f768081552db987895b57fe4f4e4489aed87102ad102a81"
+    }
+  ],
+  "BL_hooks": [
+    {
+      "va": 5178664,
+      "old_hex": "e4d4ff97",
+      "original_target": 5134520,
+      "target_symbol": "iq4_f3_storage_size_append_wrapper_01"
+    }
+  ],
+  "required_functions": [
+    "iq4_f3_storage_size_child_01"
+  ],
+  "aliases": [],
+  "requires_native_storage_bridge_01": true,
+  "initialization_success_stage": 100,
+  "target_executed": false
+}

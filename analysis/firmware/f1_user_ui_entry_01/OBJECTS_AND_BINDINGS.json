@@ -1,0 +1,527 @@
+{
+  "schema": 1,
+  "stage": "real_firmware_UI_payload_ET_REL_not_yet_User",
+  "stock_SHA256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "Normal11_source_SHA256": "eb4f73531c23942b192156bdef986bad3d8ebf282b24e9d2ca1c0e84d2acfde6",
+  "objects": [
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_01/runtime.o",
+      "bytes": 183192,
+      "sha256": "92eb5fdc7741db343df09d98da6bf324f0e33de29b1a534a2f2245d584bdd7f1"
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_01/module.o",
+      "bytes": 87288,
+      "sha256": "8b2027a9c598671ea7a205e39bf11955b587c1602a67656aead289dd733d6263"
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_01/entry_binding_10.o",
+      "bytes": 201584,
+      "sha256": "0be3f80f77fedb0d059b7cb4852ac2ba139f24b76258e3a729132de29a5d6288"
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_01/inspector.o",
+      "bytes": 97080,
+      "sha256": "9c28e551fa125c522e2159c9a9aa800b5deedf92d20d09ad62b56afcf7844cc5"
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_01/candidates.o",
+      "bytes": 50584,
+      "sha256": "fff3b45086b73d188ca7d1c33694a7ea617df8a907889d187e2e9eed10a6ab5f"
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_01/bootstrap.o",
+      "bytes": 121896,
+      "sha256": "d39a77ee3a6370a045e150cd5a5f952421b7bebced0353f9c6ffbe23752f8cb5"
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_01/counter.o",
+      "bytes": 83496,
+      "sha256": "1314d5b4e013dfab72651ba4797b06945e93a8e727122467e4014d18febfa048"
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_01/ctor_wrapper.o",
+      "bytes": 2664,
+      "sha256": "8cff42cc9839dedc1517a487b028d156ea715f13e0c5adf27f67a6e1b879b1c4"
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_01/compare.o",
+      "bytes": 3752,
+      "sha256": "00bc93b0641a403c3ade0716b3709b384154582846323be4902ea72272ca30df"
+    }
+  ],
+  "initializer": "iq4_f1_firmware_initialize_01",
+  "UI_hook": "iq4_f1_firmware_unlock_01",
+  "ctor_hook": "iq4_f1_lv_ctor_wrapper_01",
+  "shared_state_symbol": "iq4_f1_state_01",
+  "shared_state_bytes": 64,
+  "default_requested_mode": 0,
+  "bindings": {
+    "__cxa_begin_catch": {
+      "name": "__cxa_begin_catch",
+      "va": 4234496,
+      "file_offset": 40192,
+      "bytes": 16,
+      "original_hex": "d05900d0114e40f91062029120021fd6",
+      "jump_slot_va": 16003224,
+      "dynsym_index": 19
+    },
+    "__cxa_end_catch": {
+      "name": "__cxa_end_catch",
+      "va": 4237824,
+      "file_offset": 43520,
+      "bytes": 16,
+      "original_hex": "d05900b0118e43f910621c9120021fd6",
+      "jump_slot_va": 16004888,
+      "dynsym_index": 225
+    },
+    "__errno_location": {
+      "name": "__errno_location",
+      "va": 4236512,
+      "file_offset": 42208,
+      "bytes": 16,
+      "original_hex": "d05900b0114642f91022129120021fd6",
+      "jump_slot_va": 16004232,
+      "dynsym_index": 145
+    },
+    "__gxx_personality_v0": {
+      "name": "__gxx_personality_v0",
+      "va": 4236864,
+      "file_offset": 42560,
+      "bytes": 16,
+      "original_hex": "d05900b0119e42f910e2149120021fd6",
+      "jump_slot_va": 16004408,
+      "dynsym_index": 523
+    },
+    "iq4_stock_lv_ctor_01": {
+      "name": "iq4_stock_lv_ctor_01",
+      "va": 5338552,
+      "file_offset": 1144248,
+      "bytes": 16,
+      "original_hex": "ff430ad1fd7b03a9fdc30091f35304a9",
+      "source_call_va": 5173036,
+      "original_call_word": 2483069347
+    },
+    "iq4_stock_pthread_mutex_unlock_01": {
+      "name": "pthread_mutex_unlock",
+      "va": 4237104,
+      "file_offset": 42800,
+      "bytes": 16,
+      "original_hex": "d05900b011da42f910c2169120021fd6",
+      "jump_slot_va": 16004528,
+      "dynsym_index": 181,
+      "alias_of": "pthread_mutex_unlock"
+    },
+    "memcpy": {
+      "name": "memcpy",
+      "va": 4236592,
+      "file_offset": 42288,
+      "bytes": 16,
+      "original_hex": "d05900b0115a42f910c2129120021fd6",
+      "jump_slot_va": 16004272,
+      "dynsym_index": 150
+    },
+    "memset": {
+      "name": "memset",
+      "va": 4235680,
+      "file_offset": 41376,
+      "bytes": 16,
+      "original_hex": "d05900b0117641f910a20b9120021fd6",
+      "jump_slot_va": 16003816,
+      "dynsym_index": 94
+    },
+    "strchr": {
+      "name": "strchr",
+      "va": 4236880,
+      "file_offset": 42576,
+      "bytes": 16,
+      "original_hex": "d05900b011a242f91002159120021fd6",
+      "jump_slot_va": 16004416,
+      "dynsym_index": 167
+    },
+    "strcmp": {
+      "name": "strcmp",
+      "va": 4238144,
+      "file_offset": 43840,
+      "bytes": 16,
+      "original_hex": "d05900b011de43f910e21e9120021fd6",
+      "jump_slot_va": 16005048,
+      "dynsym_index": 244
+    },
+    "strlen": {
+      "name": "strlen",
+      "va": 4239008,
+      "file_offset": 44704,
+      "bytes": 16,
+      "original_hex": "d05900b011b644f910a2259120021fd6",
+      "jump_slot_va": 16005480,
+      "dynsym_index": 297
+    },
+    "strrchr": {
+      "name": "strrchr",
+      "va": 4238272,
+      "file_offset": 43968,
+      "bytes": 16,
+      "original_hex": "d05900b011fe43f910e21f9120021fd6",
+      "jump_slot_va": 16005112,
+      "dynsym_index": 252
+    }
+  },
+  "object_level_undefined": [
+    "_ZSt9terminatev",
+    "__cxa_begin_catch",
+    "__cxa_end_catch",
+    "__errno_location",
+    "__gxx_personality_v0",
+    "iq4_stock_lv_ctor_01",
+    "iq4_stock_pthread_mutex_unlock_01",
+    "memcpy",
+    "memset",
+    "strchr",
+    "strcmp",
+    "strlen",
+    "strrchr"
+  ],
+  "unbound_object_symbols_before_final_GC": [
+    "_ZSt9terminatev"
+  ],
+  "outline_atomic_helpers": [],
+  "original_unlock_static_call_count": 1,
+  "original_ctor_static_call_count": 1,
+  "original_ctor_stack_argument_forwarded": true,
+  "target_executed": false,
+  "firmware_generated": false,
+  "UI_installed": false,
+  "actual_display_qualification": false,
+  "five_masks_available": false,
+  "SDK_Windows_network_device_operations": 0,
+  "commands": [
+    [
+      "python3",
+      "-B",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_user_ui_entry_01/materialize.py"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-fPIC",
+      "-mno-outline-atomics",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-omit-frame-pointer",
+      "-fno-optimize-sibling-calls",
+      "-fvisibility=hidden",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/core/include",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/display/include",
+      "-MD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/runtime.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_user_ui_entry_01/runtime.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/runtime.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-fPIC",
+      "-mno-outline-atomics",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-omit-frame-pointer",
+      "-fno-optimize-sibling-calls",
+      "-fvisibility=hidden",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/core/include",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/display/include",
+      "-MD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/module.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_user_ui_entry_01/module.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/module.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-fPIC",
+      "-mno-outline-atomics",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-omit-frame-pointer",
+      "-fno-optimize-sibling-calls",
+      "-fvisibility=hidden",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/core/include",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/display/include",
+      "-MD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/entry_binding_10.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_user_ui_entry_01/entry_binding_10.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/entry_binding_10.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-fPIC",
+      "-mno-outline-atomics",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-omit-frame-pointer",
+      "-fno-optimize-sibling-calls",
+      "-fvisibility=hidden",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/core/include",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/display/include",
+      "-MD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/inspector.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_user_ui_entry_01/inspector.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/inspector.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-fPIC",
+      "-mno-outline-atomics",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-omit-frame-pointer",
+      "-fno-optimize-sibling-calls",
+      "-fvisibility=hidden",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/core/include",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/display/include",
+      "-MD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/candidates.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_native_ui_02/candidates.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/candidates.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-fPIC",
+      "-mno-outline-atomics",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-omit-frame-pointer",
+      "-fno-optimize-sibling-calls",
+      "-fvisibility=hidden",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/core/include",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/display/include",
+      "-MD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/bootstrap.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_ui_bootstrap_02/bootstrap.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/bootstrap.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-fPIC",
+      "-mno-outline-atomics",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fno-omit-frame-pointer",
+      "-fno-optimize-sibling-calls",
+      "-fvisibility=hidden",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/core/include",
+      "-I",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/display/include",
+      "-MD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/counter.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_ui_counter_01/counter.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/counter.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-fPIC",
+      "-MD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/ctor_wrapper.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_user_ui_entry_01/ctor_wrapper.S",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/ctor_wrapper.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-O2",
+      "-fPIC",
+      "-ffunction-sections",
+      "-fvisibility=hidden",
+      "-MD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/compare.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_user_ui_entry_01/compare.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/compare.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-dr",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/runtime.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/runtime.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-dr",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/module.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/module.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-dr",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/entry_binding_10.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/entry_binding_10.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-dr",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/inspector.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/inspector.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-dr",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/candidates.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/candidates.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-dr",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/bootstrap.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/bootstrap.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-dr",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/counter.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/counter.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-dr",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/ctor_wrapper.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/ctor_wrapper.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-dr",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/compare.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/compare.o"
+    ]
+  ]
+}

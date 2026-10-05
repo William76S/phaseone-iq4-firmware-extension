@@ -1,0 +1,393 @@
+--- tools/firmware/f1_card_source_bundle_01/bundle.py
++++ tools/firmware/f1_card_source_bundle_02/bundle.py
+@@ -6,7 +6,7 @@
+ 
+ ROOT = Path(__file__).resolve().parents[3]
+ HERE = Path(__file__).resolve().parent
+-SCHEMA = 'iq4_f1_card_source_closure_01'
++SCHEMA = 'iq4_f1_card_source_closure_02'
+ TEXT = {'.c', '.cpp', '.h', '.hpp', '.S', '.inc', '.py', '.md', '.json', '.txt', '.ld', '.d'}
+ UI_NAMES = ('runtime', 'module', 'entry_binding_10', 'inspector', 'candidates',
+             'bootstrap', 'counter', 'ctor_wrapper', 'compare')
+@@ -64,12 +64,13 @@
+     for group in ('members', 'frozen_refs', 'review_artifacts', 'artifacts'):
+         for r in j.get(group, []):
+             if isinstance(r,dict) and 'path' in r: rows.append((group,r))
+-    for name,r in j.get('files',{}).items():
+-        if isinstance(r,dict): rows.append(('files',dict(r,path=name)))
++    for group in ('files','references_not_in_source_zip'):
++        for name,r in j.get(group,{}).items():
++            if isinstance(r,dict): rows.append((group,dict(r,path=name)))
+     return rows
+ def compile_records(root, revision):
+     names=[f'analysis/firmware/f1_user_ui_entry_{revision}/OBJECTS_AND_BINDINGS.json',
+-           'analysis/firmware/f1_stock_display_payload_build_12/BUILD.json']
++           'analysis/firmware/f1_stock_display_payload_build_13/BUILD.json']
+     rows=[]
+     for name in names:
+         j=json.loads(source_bytes(root,name))
+@@ -82,8 +83,8 @@
+             rows.append({'source':src,'output':out,'original_argv':argv,'record':name})
+     need(len(rows)==11 and len({r['output']for r in rows})==11, 'requires actual nine UI/two display compile records')
+     return names, rows
+-def plan(root=ROOT, revision='02'):
+-    need(revision in ('01','02'), 'finite UI revision')
++def plan(root=ROOT, revision='03'):
++    need(revision == '03', 'finite UI revision')
+     sources=set(); deps=set(); tool_deps=set(); drows=[]
+     for stem in UI_NAMES:
+         name=f'analysis/firmware/f1_user_ui_entry_{revision}/{stem}.d'
+@@ -95,18 +96,33 @@
+                 need(rel.startswith(('tools/firmware/','src/')), 'unexpected actual compile input '+rel)
+                 source_bytes(root,rel);deps.add(rel)
+     sources|=deps
+-    # Display12 never emitted .d. Record its real local quoted include closure;
+-    # do not claim a nonexistent compiler dependency file was checked.
+-    display=quoted_closure(root,{'tools/firmware/f1_stock_display_payload_12/payload.c',
+-                               'tools/firmware/f1_stock_display_payload_12/wrapper.S'})
++    display_drows=[]
++    for stem in ('payload','wrapper'):
++        name=f'analysis/firmware/f1_stock_display_payload_build_13/{stem}.d'
++        display_drows.append(record(root,name));sources.add(name)
++        for raw in make_dependencies(source_bytes(root,name).decode()):
++            rel=normalize_dep(root,raw)
++            if rel.startswith('build/toolchains/'):tool_deps.add(rel)
++            else:
++                need(rel.startswith(('tools/firmware/','src/')), 'unexpected display compile input '+rel)
++                source_bytes(root,rel);deps.add(rel)
++    sources|=deps
++    display=quoted_closure(root,{'tools/firmware/f1_stock_display_payload_13/payload.c',
++                               'tools/firmware/f1_stock_display_payload_13/wrapper.S'})
+     sources|=display
+-    dirs=['f1_user_ui_entry_01',f'f1_user_ui_entry_{revision}',
+-          'f1_stock_display_payload_12','f1_user_elf_append_01',
+-          'user_only_package_stock_wrapper_02','user_only_package_01','f1_card_source_bundle_01']
++    dirs=['f1_user_ui_entry_01','f1_user_ui_entry_02',f'f1_user_ui_entry_{revision}',
++          'f1_stock_display_payload_13','f1_user_elf_append_02',
++          'user_only_package_stock_wrapper_02','user_only_package_01','f1_card_source_bundle_02']
+     for d in set(dirs):
+         for p in (root/'tools/firmware'/d).iterdir():
+             if p.is_file() and p.suffix in TEXT and not p.name.startswith('.'):
+                 sources.add(p.relative_to(root).as_posix())
++    backend_manifest='tools/firmware/f1_user_elf_append_02/SOURCE_SHA256.json'
++    if (root/backend_manifest).is_file():
++        # Include all backend-owned frozen text, including the actual11 argv,
++        # independent linker review and final version/provenance records.
++        for name in json.loads(source_bytes(root,backend_manifest)).get('files',{}):
++            source_bytes(root,name);sources.add(name)
+     # Complete explicitly-used derivation sources; historic materialize/freeze
+     # scripts are retained, but their other research validators are not promised.
+     extra=['tools/target/toolchain.lock.json','tools/firmware/f1_user_elf_integration_12/inspect.py',
+@@ -120,7 +136,7 @@
+     for base in ('src/core/include','src/display/include'):
+         sources.update(p.relative_to(root).as_posix() for p in (root/base).rglob('*') if p.is_file() and p.suffix in TEXT)
+     meta, commands=compile_records(root,revision);sources.update(meta)
+-    sources.add('tools/firmware/f1_stock_display_payload_12/LINK_INPUT.json')
++    sources.add('tools/firmware/f1_stock_display_payload_13/LINK_INPUT.json')
+     manifests=sorted(n for n in sources if n.endswith('SOURCE_SHA256.json'))
+     refs=[]
+     for name in manifests:
+@@ -148,18 +164,25 @@
+         if r['classification']=='external_vendor_input'and r['path']not in known:
+             externals.append({k:r[k]for k in ('path','bytes','sha256')}|{'role':'historical manifest input; not used by current compiler replay','included_in_ZIP':False});known.add(r['path'])
+     rows=[record(root,n)for n in sorted(sources)]
+-    backend=[r for r in rows if r['path'].startswith('tools/firmware/f1_user_elf_append_01/')]
++    backend=[r for r in rows if r['path'].startswith('tools/firmware/f1_user_elf_append_02/')]
+     backend_digest=sha((json.dumps(backend,sort_keys=True,separators=(',',':'))+'\n').encode())
+     ui_manifest=f'tools/firmware/f1_user_ui_entry_{revision}/SOURCE_SHA256.json'
+     ui_frozen=ui_manifest in sources
++    display_manifest='tools/firmware/f1_stock_display_payload_13/SOURCE_SHA256.json'
++    need(display_manifest in sources,'frozen Display13 source required')
++    backend_manifest='tools/firmware/f1_user_elf_append_02/SOURCE_SHA256.json'
++    backend_frozen=backend_manifest in sources
+     return {'schema':SCHEMA,'UI_revision':revision,'original_project_root':str(root.resolve()),
+-      'members':rows,'actual_UI_dependency_files':drows,'actual_UI_compile_inputs':sorted(deps),
+-      'display_dependency_method':'local quoted includes; original display build has no .d',
++      'members':rows,'actual_UI_dependency_files':drows,'actual_display_dependency_files':display_drows,'actual_compile_inputs':sorted(deps),
++      'display_revision':'13','display_source_manifest_sha256':sha(source_bytes(root,display_manifest)),
++      'display_dependency_method':'two actual Display13 MMD files plus local quoted include closure',
+       'display_local_include_closure':sorted(display),'toolchain_dependency_count':len(tool_deps),
+       'toolchain_lock':json.loads(source_bytes(root,'tools/target/toolchain.lock.json')),
+       'compiler_records':commands,'reference_dispositions':refs,'external_inputs':externals,
+-      'external_runtime_requirement':{'path':'/lib/libpthread-2.28.so','bytes':105736,'sha256':'9305ff30980749a3f64b3e445764db2bc378d14d1ef8bbe004d0ecc768d00f77','source':'UI02 native_helpers.inc runtime verification; from stock rootfs','included_in_ZIP':False,'actual_camera_identity_verified':False},
++      'external_runtime_requirement':{'path':'/lib/libpthread-2.28.so','bytes':105736,'sha256':'9305ff30980749a3f64b3e445764db2bc378d14d1ef8bbe004d0ecc768d00f77','source':'unchanged UI03 native_helpers.inc runtime verification; from stock rootfs','included_in_ZIP':False,'actual_camera_identity_verified':False},
+       'backend_source_set_sha256':backend_digest,'UI_source_frozen':ui_frozen,
++      'backend_source_frozen':backend_frozen,
++      'backend_source_manifest_sha256':sha(source_bytes(root,backend_manifest)) if backend_frozen else None,
+       'UI_source_manifest_sha256':sha(source_bytes(root,ui_manifest)) if ui_frozen else None,
+       'original_full_freeze_validators_runnable_from_ZIP_alone':False,
+       'original_validator_limit':'Historical validators require listed toolchain/vendor/review artifacts; bundle verification covers its own complete member set, not omitted rows.',
+@@ -168,9 +191,10 @@
+ def verify_members(root,j):
+     need(j['schema']==SCHEMA,'source bundle schema')
+     for row in j['members']: need(record(root,row['path'])==row,'bundle source changed '+row['path'])
+-def emit(root,j,path,ui_sha,backend_sha):
+-    need(j['UI_revision']=='02'and j['UI_source_frozen'],'final source ZIP requires separately frozen UI02')
+-    need(ui_sha==j['UI_source_manifest_sha256']and backend_sha==j['backend_source_set_sha256'],'explicit final source-set SHA mismatch')
++def emit(root,j,path,ui_sha,display_sha,backend_sha):
++    need(j['UI_revision']=='03'and j['UI_source_frozen'],'final source ZIP requires separately frozen UI03')
++    need(j['backend_source_frozen'],'final source ZIP requires separately frozen backend02')
++    need(ui_sha==j['UI_source_manifest_sha256']and display_sha==j['display_source_manifest_sha256']and backend_sha==j['backend_source_set_sha256'],'explicit final source-set SHA mismatch')
+     verify_members(root,j);need(not path.exists(),'ZIP must be a new local file')
+     path.parent.mkdir(parents=True,exist_ok=True)
+     with path.open('xb')as out:
+@@ -182,9 +206,9 @@
+             z.writestr(i,(json.dumps(j,indent=2,sort_keys=True)+'\n').encode())
+     return {'path':str(path),'bytes':path.stat().st_size,'sha256':sha(path.read_bytes()),'source_files':len(j['members'])}
+ def main():
+-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--ui-revision',choices=('01','02'),default='02');p.add_argument('--plan-output',type=Path)
++    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--ui-revision',choices=('03',),default='03');p.add_argument('--plan-output',type=Path)
+     p.add_argument('--verify-bundle',type=Path);p.add_argument('--emit-zip',type=Path)
+-    p.add_argument('--expected-ui-source-sha256');p.add_argument('--expected-backend-source-set-sha256');a=p.parse_args()
++    p.add_argument('--expected-display-source-sha256');p.add_argument('--expected-ui-source-sha256');p.add_argument('--expected-backend-source-set-sha256');a=p.parse_args()
+     if a.verify_bundle:
+         need(not a.emit_zip and not a.plan_output,'verification is separate');j=json.loads(a.verify_bundle.read_text());verify_members(ROOT,j)
+         print(json.dumps({'bundle_sources_verified':len(j['members']),'target_executed':False}));return
+@@ -192,8 +216,8 @@
+     if a.plan_output:
+         need(not a.plan_output.exists(),'plan output must be fresh');a.plan_output.parent.mkdir(parents=True,exist_ok=True)
+         a.plan_output.write_text(json.dumps(j,indent=2,sort_keys=True)+'\n')
+-    if a.emit_zip:print(json.dumps(emit(ROOT,j,a.emit_zip,a.expected_ui_source_sha256,a.expected_backend_source_set_sha256)))
+-    else:print(json.dumps({k:j[k]for k in ('schema','UI_revision','UI_source_frozen','UI_source_manifest_sha256','backend_source_set_sha256','toolchain_dependency_count','compile_project_source_closure_complete')}|{'source_files':len(j['members']),'vendor_binaries_included':False,'target_executed':False}))
++    if a.emit_zip:print(json.dumps(emit(ROOT,j,a.emit_zip,a.expected_ui_source_sha256,a.expected_display_source_sha256,a.expected_backend_source_set_sha256)))
++    else:print(json.dumps({k:j[k]for k in ('schema','UI_revision','UI_source_frozen','UI_source_manifest_sha256','display_source_manifest_sha256','backend_source_frozen','backend_source_set_sha256','toolchain_dependency_count','compile_project_source_closure_complete')}|{'source_files':len(j['members']),'vendor_binaries_included':False,'target_executed':False}))
+ if __name__=='__main__':
+     try:main()
+     except (Refused,OSError,UnicodeError,KeyError,ValueError)as e:raise SystemExit('REFUSED: '+str(e))
+--- tools/firmware/f1_card_source_bundle_01/replay_objects.py
++++ tools/firmware/f1_card_source_bundle_02/replay_objects.py
+@@ -35,7 +35,7 @@
+             argv.append(arg)
+         argv[0]=str(zig)
+         if '-MF'in argv:
+-            argv[argv.index('-MF')+1]=str(root/'build/f1_source_replay_01/deps'/(Path(r['output']).stem+'.d'))
++            argv[argv.index('-MF')+1]=str(root/'build/f1_source_replay_02/deps'/(Path(r['output']).stem+'.d'))
+         need('-c'in argv and '-o'in argv and argv[1]in ('cc','c++'),'compile-only invocation')
+         need(Path(argv[argv.index('-c')+1]).resolve()==local(root,r['source']).resolve(),'recorded source mismatch')
+         out=root/r['output']
+@@ -50,30 +50,30 @@
+         need(int.from_bytes(b[16:18],'little')==1 and int.from_bytes(b[18:20],'little')==183,'output must remain AArch64 ET_REL')
+         return {'path':name,'bytes':len(b),'sha256':sha(b)}
+     ui=[obj(r['output'])for r in j['compiler_records']if 'f1_user_ui_entry_'in r['output']]
+-    display=[obj(r['output'])for r in j['compiler_records']if 'f1_stock_display_payload_build_12'in r['output']]
++    display=[obj(r['output'])for r in j['compiler_records']if 'f1_stock_display_payload_build_13'in r['output']]
+     need(len(ui)==9 and len(display)==2,'rebuilt role separation')
+-    provenance={'schema':'iq4_source_bundle_recompiled_objects_01','bundle_members_digest':sha((json.dumps(j['members'],sort_keys=True,separators=(',',':'))+'\n').encode()),
++    provenance={'schema':'iq4_source_bundle_recompiled_objects_02','bundle_members_digest':sha((json.dumps(j['members'],sort_keys=True,separators=(',',':'))+'\n').encode()),
+       'original_project_root':j['original_project_root'],'replay_project_root':str(root),
+       'target_executed':False,'old_freeze_manifest_artifact_rows_revalidated':False,
+       'whole_object_hash_identity_claimed':False,
+       'limitation':'UI objects include DWARF paths; changed source-root paths can change whole .o hashes. The backend discards nonallocated debug sections. Independently compare the final User against its actual final hash.',
+       'commands':commands,'objects':ui+display}
+-    dest=root/'analysis/firmware/f1_card_source_replay_01/REPLAY.json'
++    dest=root/'analysis/firmware/f1_card_source_replay_02/REPLAY.json'
+     need(not dest.exists(),'fresh replay receipt');dest.parent.mkdir(parents=True,exist_ok=True)
+     dest.write_text(json.dumps(provenance,indent=2,sort_keys=True)+'\n')
+     return dest
+ def create_replay_lock(root,j,output):
+     """Use the actual rebuilt .o hashes with the original finite backend API."""
+-    receipt=root/'analysis/firmware/f1_card_source_replay_01/REPLAY.json'
++    receipt=root/'analysis/firmware/f1_card_source_replay_02/REPLAY.json'
+     r=json.loads(receipt.read_text())
+-    need(r['schema']=='iq4_source_bundle_recompiled_objects_01'and not r['target_executed'],'actual replay receipt required')
++    need(r['schema']=='iq4_source_bundle_recompiled_objects_02'and not r['target_executed'],'actual replay receipt required')
+     need(r['bundle_members_digest']==sha((json.dumps(j['members'],sort_keys=True,separators=(',',':'))+'\n').encode()),'replay source-set identity mismatch')
+-    backend=root/'tools/firmware/f1_user_elf_append_01';sys.path.insert(0,str(backend))
++    backend=root/'tools/firmware/f1_user_elf_append_02';sys.path.insert(0,str(backend))
+     spec=importlib.util.spec_from_file_location('source_bundle_original_lock',backend/'input_lock.py')
+     original=importlib.util.module_from_spec(spec);spec.loader.exec_module(original)
+-    source=[f"tools/firmware/f1_user_ui_entry_{j['UI_revision']}/SOURCE_SHA256.json",'tools/firmware/f1_stock_display_payload_12/SOURCE_SHA256.json']
++    source=[f"tools/firmware/f1_user_ui_entry_{j['UI_revision']}/SOURCE_SHA256.json",'tools/firmware/f1_stock_display_payload_13/SOURCE_SHA256.json']
+     lib='analysis/firmware/f1_user_ui_entry_01/libstdcxx_original_ANALYSIS_ONLY.elf'
+-    lock={'schema':'iq4_f1_actual_payload_set_01','roles':['UI','display'],'UI_revision':'02','synthetic_fixture':False,
++    lock={'schema':'iq4_f1_actual_payload_set_01','roles':['UI','display'],'UI_revision':'03','display_revision':'13','synthetic_fixture':False,
+       'objects':r['objects'],'source_manifests':[original.row(n)for n in source],
+       'support_evidence':[original.row(str(receipt.relative_to(root)))],
+       'original_libstdcxx':original.row(lib),'new_import_original_export':original.lib_export(lib),
+@@ -84,7 +84,7 @@
+ def main():
+     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--manifest',type=Path,default=ROOT/'BUNDLE_MANIFEST.json')
+     ap.add_argument('--zig',type=Path);ap.add_argument('--compile-objects',action='store_true');ap.add_argument('--make-payload-lock',type=Path);a=ap.parse_args()
+-    j=json.loads(a.manifest.read_text());need(j['schema']==SCHEMA and j['UI_revision']=='02'and j['UI_source_frozen'],'final source closure required')
++    j=json.loads(a.manifest.read_text());need(j['schema']==SCHEMA and j['UI_revision']=='03'and j['UI_source_frozen']and j['backend_source_frozen'],'final frozen source closure required')
+     verify_members(ROOT,j)
+     if a.make_payload_lock:
+         need(not a.compile_objects,'lock creation is a separate read-only review step')
+--- tools/firmware/f1_card_source_bundle_01/test_bundle.py
++++ tools/firmware/f1_card_source_bundle_02/test_bundle.py
+@@ -35,14 +35,18 @@
+   self.put('a.h');j={'schema':bundle.SCHEMA,'members':[bundle.record(self.root,'a.h')]};self.put('a.h',b'changed\n')
+   with self.assertRaises(bundle.Refused):bundle.verify_members(self.root,j)
+  def test_unfrozen_final_refused(self):
+-  with self.assertRaises(bundle.Refused):bundle.emit(self.root,{'UI_revision':'02','UI_source_frozen':False},self.root/'out.zip',None,None)
++  with self.assertRaises(bundle.Refused):bundle.emit(self.root,{'UI_revision':'03','UI_source_frozen':False},self.root/'out.zip',None,None,None)
++ def test_wrong_display_source_identity_refused(self):
++  j={'UI_revision':'03','UI_source_frozen':True,'backend_source_frozen':True,'UI_source_manifest_sha256':'a'*64,'display_source_manifest_sha256':'b'*64,'backend_source_set_sha256':'c'*64}
++  with self.assertRaises(bundle.Refused):bundle.emit(self.root,j,self.root/'out.zip','a'*64,'d'*64,'c'*64)
++  self.assertFalse((self.root/'out.zip').exists())
+  def test_compile_records_never_tests(self):
+-  for n,count in [('analysis/firmware/f1_user_ui_entry_02/OBJECTS_AND_BINDINGS.json',9),('analysis/firmware/f1_stock_display_payload_build_12/BUILD.json',2)]:
++  for n,count in [('analysis/firmware/f1_user_ui_entry_03/OBJECTS_AND_BINDINGS.json',9),('analysis/firmware/f1_stock_display_payload_build_13/BUILD.json',2)]:
+    cmds=[]
+    for i in range(count):cmds.append(['/tmp/zig','cc','-c',str(self.root/f'{count}_{i}.c'),'-o',str(self.root/f'{count}_{i}.o')])
+    cmds.append(['/usr/bin/clang','-c',str(self.root/'host.c'),'-o',str(self.root/'host.exe')])
+    self.put(n,json.dumps({'commands':cmds}).encode())
+-  _,rows=bundle.compile_records(self.root,'02');self.assertEqual(len(rows),11);self.assertTrue(all(r['output'].endswith('.o')for r in rows))
++  _,rows=bundle.compile_records(self.root,'03');self.assertEqual(len(rows),11);self.assertTrue(all(r['output'].endswith('.o')for r in rows))
+  def test_replay_refuses_existing_objects(self):
+   self.put('a.c');self.put('a.o')
+   j={'original_project_root':'/old','compiler_records':[{'source':'a.c','output':'a.o','original_argv':['/old/zig','cc','-c','/old/a.c','-o','/old/a.o']}]*11}
+--- tools/firmware/f1_card_source_bundle_01/README.md
++++ tools/firmware/f1_card_source_bundle_02/README.md
+@@ -1,118 +1,52 @@
+-# F1 card candidate source closure 01
++# F1 card candidate source closure 02
+ 
+-This local tool packages the actual project-owned compilation closure for UI02
+-and display12, the finite ELF append backend and stock wrapper02. It never
+-accesses an SDK, camera, remote computer or network, and never executes an
+-AArch64 object, User or firmware package. A source ZIP is not device acceptance
+-or a recovery test.
++This source-only bundle closes UI03 + Display13 + ELF append backend02 and the unchanged stock wrapper02. All previous sources/candidates stay frozen. The two substantive fixes are native csu consumer redirection to the actual341-item init array (with four exact original-word exclusions in UI03), and the positively identified LCD-derived Surface admission in Display13. Default mode remains OFF; host reproduction is not camera acceptance.
+ 
+-`bundle.py` defaults to a file-only plan. The nine actual UI `.d` files identify
+-all local translation-unit/header dependencies. Zig's 720 referenced standard
+-headers are supplied by the exact external Zig 0.15.2 toolchain, rather than
+-silently copied into this project source ZIP. Display12 originally produced no
+-`.d`; its complete local quoted-include closure is inspected separately and
+-reported with that limitation. The actual eleven compiler argv records are
+-retained. UI01, UI02 and the necessary previous derivation sources are included
+-as provenance, together with core/display headers and `toolchain.lock.json`.
+-
+-The vendor User, FWR, FWP, rootfs, Boot, pthread, libstdc++ and SDK binaries are
+-excluded. Required local OEM inputs have exact bytes/SHA-256 in the plan;
+-other vendor references are classified as historical input rows. No opaque
+-EEPROM backup or device-private output is a source member. No third-party Zig
+-archive or runtime binary is redistributed by this tool.
+-
+-From the existing project root, create a fresh plan:
++`bundle.py` defaults to local plan. It reads nine actual UI03 dependency files and two actual Display13 MMD dependency files; their project-owned source/header closure, actual eleven compiler argv records, UI01/UI02/UI03 provenance, necessary module/Binding derivation sources, core/display headers and toolchain.lock are included. Exact referenced Zig runtime headers remain external dependencies. Vendor User/FWR/FWP/rootfs/Boot/pthread/libstdc++/SDK binaries and private camera backups are never source members.
+ 
+ ```sh
+-python3 -B tools/firmware/f1_card_source_bundle_01/test_bundle.py
+-python3 -B tools/firmware/f1_card_source_bundle_01/bundle.py \
+-  --plan-output build/f1_card_source_bundle_01/FRESH_PLAN.json
++python3 -B tools/firmware/f1_card_source_bundle_02/test_bundle.py
++python3 -B tools/firmware/f1_card_source_bundle_02/bundle.py \
++  --plan-output build/f1_card_source_bundle_02/FRESH_PLAN.json
++python3 -B tools/firmware/f1_card_source_bundle_02/bundle.py \
++  --expected-ui-source-sha256 ACTUAL_UI03_SOURCE_SHA \
++  --expected-display-source-sha256 ACTUAL_DISPLAY13_SOURCE_SHA \
++  --expected-backend-source-set-sha256 ACTUAL_BACKEND02_SOURCE_SET_SHA \
++  --emit-zip build/f1_card_source_bundle_02/FRESH_SOURCE.zip
+ ```
+ 
+-This reports the final UI02 manifest hash and a canonical digest over the
+-entire included backend source set. After Root has confirmed those exact
+-identities, produce a fresh source-only ZIP using both printed hashes:
++The manifest records exact member bytes/hashes plus dispositions of every historical reference row. Original full freeze/materialize validators may still need omitted research/toolchain/vendor artifacts; this bundle does not falsely claim those validators are independently runnable. The provided verifier checks its complete actual bundled set. The new replay driver does **not** call old materialize/build_objects/freeze recipes or rewrite bundled dependency files/metadata.
++
++Extract into a fresh project-shaped directory. Copy only the exact OEM User to `analysis/firmware/extracted/P1Linux_6.03.21.bin` and original libstdc++ to `analysis/firmware/f1_user_ui_entry_01/libstdcxx_original_ANALYSIS_ONLY.elf`. Sizes and SHA-256 are in BUNDLE_MANIFEST. Reuse the full external Zig0.15.2 installation whose executable and all referenced files pass the frozen toolchain checks; a standalone zig executable is insufficient. FWR/FWP remain separate exact originals and are passed with full absolute paths to packaging below.
+ 
+ ```sh
+-python3 -B tools/firmware/f1_card_source_bundle_01/bundle.py \
+-  --expected-ui-source-sha256 ACTUAL_UI02_SOURCE_SHA \
+-  --expected-backend-source-set-sha256 ACTUAL_BACKEND_SOURCE_SET_SHA \
+-  --emit-zip build/f1_card_source_bundle_01/FRESH_SOURCE.zip
++python3 -B tools/firmware/f1_card_source_bundle_02/bundle.py \
++  --verify-bundle BUNDLE_MANIFEST.json
++python3 -B tools/firmware/f1_card_source_bundle_02/replay_objects.py \
++  --zig /ABSOLUTE/EXISTING/ZIG/zig
++python3 -B tools/firmware/f1_card_source_bundle_02/replay_objects.py \
++  --zig /ABSOLUTE/EXISTING/ZIG/zig --compile-objects
++python3 -B tools/firmware/f1_card_source_bundle_02/replay_objects.py \
++  --make-payload-lock analysis/firmware/f1_card_source_replay_02/ACTUAL_INPUT_LOCK.json
+ ```
+ 
+-The ZIP contains the original relative paths plus `BUNDLE_MANIFEST.json`.
+-Every member has an exact bytes/hash record; ZIP dates/order are deterministic.
+-The entire original manifests remain included. `reference_dispositions` names
+-each omitted historical row explicitly. **The old full freeze/materialize
+-validators are not claimed runnable from this ZIP alone:** some demand OEM
+-rootfs, all toolchain headers, prior artifacts or older study packages. The
+-bundle's own verifier validates its complete source set. The actual backend
+-finite input lock and wrapper02 still perform their own exact input checks.
+-
+-## Recompile and package on this Mac
+-
+-Extract into a fresh project-shaped directory. Keep the unmodified source tree
+-and original metadata. Put the exact OEM User at
+-`analysis/firmware/extracted/P1Linux_6.03.21.bin`, the exact original libstdc++ at
+-`analysis/firmware/f1_user_ui_entry_01/libstdcxx_original_ANALYSIS_ONLY.elf`, the
+-stock FWP at the listed vendor-download path, and the stock FWR at
+-`../Firmware-BP-IQ4-IQ4_6.03.18.fwr`. These remain separate local inputs, never
+-source ZIP members. Reuse the local Zig whose binary SHA is
+-`c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c`.
+-The full Zig installation beside that executable must match the archive SHA
+-in `tools/target/toolchain.lock.json`; a bare executable is insufficient.
+-The replay preflight checks every actual referenced standard header and the
+-compiler against the retained original manifest rows, even when Zig is reused
+-from a different absolute directory.
+-
+-Do not run the historical `materialize.py` or `build_objects.py`: they are
+-pre-freeze derivation recipes and deliberately reject a frozen source tree.
+-The new replay driver runs only the actual eleven compiler invocations, first
+-requiring every expected `.o` destination to be absent. It does not run tests
+-or firmware, and does not rewrite any bundled sources, `.d` or build metadata.
++Each `.o` output must initially be absent. Replay writes honest rebuilt object hashes and a new input lock validated by backend02's finite original-library and 9+2 object role checks. Other absolute source roots can change DWARF paths and whole object hashes; exact final User/package bytes must be independently compared, never assumed.
+ 
+ ```sh
+-python3 -B tools/firmware/f1_card_source_bundle_01/bundle.py \
+-  --verify-bundle BUNDLE_MANIFEST.json
+-python3 -B tools/firmware/f1_card_source_bundle_01/replay_objects.py \
+-  --zig /ABSOLUTE/EXISTING/ZIG/zig
+-python3 -B tools/firmware/f1_card_source_bundle_01/replay_objects.py \
+-  --zig /ABSOLUTE/EXISTING/ZIG/zig --compile-objects
+-python3 -B tools/firmware/f1_card_source_bundle_01/replay_objects.py \
+-  --make-payload-lock analysis/firmware/f1_card_source_replay_01/ACTUAL_INPUT_LOCK.json
+-```
+-
+-The last command reviews the real rebuilt ET_REL hashes and original library
+-export through the unchanged finite backend validator. It prints the actual
+-new lock SHA. Use it with an explicit app version chosen by Root:
+-
+-```sh
+-python3 -B tools/firmware/f1_user_elf_append_01/elf_append.py \
++python3 -B tools/firmware/f1_user_elf_append_02/elf_append.py \
+   --stock analysis/firmware/extracted/P1Linux_6.03.21.bin \
+-  --payload-lock analysis/firmware/f1_card_source_replay_01/ACTUAL_INPUT_LOCK.json \
++  --payload-lock analysis/firmware/f1_card_source_replay_02/ACTUAL_INPUT_LOCK.json \
+   --expected-payload-lock-sha256 ACTUAL_REPLAY_LOCK_SHA \
+-  --app-version EXPLICIT_APP_VERSION \
+-  --emit build/f1_card_source_replay_01/FRESH_User.bin \
+-  --report build/f1_card_source_replay_01/FRESH_LINK_REPORT.json
+-```
+-
+-Then independently compare the emitted whole User SHA with Root's final
+-candidate record. Package that exact User with the unchanged stock wrapper02:
+-
+-```sh
++  --app-version 6.03.23 \
++  --emit build/f1_card_source_replay_02/FRESH_User.bin \
++  --report build/f1_card_source_replay_02/FRESH_LINK_REPORT.json
+ python3 -B tools/firmware/user_only_package_stock_wrapper_02/package.py \
+-  --user-payload build/f1_card_source_replay_01/FRESH_User.bin \
++  --original-fwr /ABSOLUTE/Firmware-BP-IQ4-IQ4_6.03.18.fwr \
++  --original-fwp /ABSOLUTE/XFSystem8.02.0.fwp \
++  --user-payload build/f1_card_source_replay_02/FRESH_User.bin \
+   --expected-user-sha256 ACTUAL_EMITTED_USER_SHA \
+-  --app-version EXPLICIT_APP_VERSION --release-version EXPLICIT_RELEASE_VERSION \
+-  --system-version EXPLICIT_SYSTEM_VERSION \
++  --app-version 6.03.23 --release-version 6.03.20 --system-version 8.02.2 \
+   --emit-candidate-directory build/FRESH_CARD_REPRO_DIRECTORY
+ ```
+ 
+-All output paths must be new. Use the exact versions from the final Root
+-guide; this helper does not invent a release/version identity. UI objects
+-contain DWARF source paths, so extracting to another absolute directory can
+-change whole `.o` hashes. The unchanged linker excludes nonallocated debug
+-sections; equivalent final User bytes must be checked, not assumed. Exact
+-whole-object reproduction uses the original absolute project root and original
+-compiler flags. This package preparation has not rebuilt the final User in a
+-fresh extraction or loaded a camera.
++All outputs must be new. These commands compile AArch64 ET_REL and parse/link/package bytes locally; they never execute target ELF/SDK or access a camera. Stock interface preservation, actual F1 mask button/mode operation, normal-fit display, OFF/native and disable/recovery remain hardware acceptance items in Root's deployment guide. Fresh reproduction evidence generated after freezing this source is separate, not a retroactive claim of camera validation.

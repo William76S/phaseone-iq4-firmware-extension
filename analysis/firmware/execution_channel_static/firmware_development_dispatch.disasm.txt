@@ -1,0 +1,31 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)>:
+  8637f4: 39400000     	ldrb	w0, [x0]
+  8637f8: b900cfe0     	str	w0, [sp, #0xcc]
+  8637fc: b940cfe0     	ldr	w0, [sp, #0xcc]
+  863800: 7100041f     	cmp	w0, #0x1
+  863804: 54000120     	b.eq	0x863828 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x1f464>
+  863808: 7100081f     	cmp	w0, #0x2
+  86380c: 54000741     	b.ne	0x8638f4 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x1f530>
+  863810: f9400be0     	ldr	x0, [sp, #0x10]
+  863814: f90063e0     	str	x0, [sp, #0xc0]
+  863818: f94063e1     	ldr	x1, [sp, #0xc0]
+  86381c: f9400fe0     	ldr	x0, [sp, #0x18]
+  863820: 97fffe02     	bl	0x863028 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x1ec64>
+  863824: 1400004d     	b	0x863958 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x1f594>
+  863828: 9102b3e1     	add	x1, sp, #0xac
+  86382c: 9102c3e0     	add	x0, sp, #0xb0
+  863830: aa0103e5     	mov	x5, x1
+  863834: aa0003e4     	mov	x4, x0
+  863838: 52800103     	mov	w3, #0x8                // =8
+  86383c: 52801022     	mov	w2, #0x81               // =129
+  863840: b0002a00     	adrp	x0, 0xda4000
+  863844: 91018001     	add	x1, x0, #0x60
+  863848: f9400fe0     	ldr	x0, [sp, #0x18]
+  86384c: 97fffe8d     	bl	0x863280 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x1eebc>
+  863850: f9005fe0     	str	x0, [sp, #0xb8]

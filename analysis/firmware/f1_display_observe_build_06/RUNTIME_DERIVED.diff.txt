@@ -1,0 +1,83 @@
+--- frozen_stack05/runtime_linux.cpp
++++ new_display06/runtime_linux.cpp
+@@ -1,5 +1,6 @@
+ // Target-only Linux/AArch64 wrapper. Never executed by the host validation tool.
+ #include "../f1_observe_geometry_04/observe.hpp"
++#include "../f1_observe_stack_05/observe.hpp"
+ #include "observe.hpp"
+ #include "../f4_ui_bootstrap_02/sha256.h"
+ #include <elf.h>
+@@ -18,7 +19,9 @@
+ #endif
+ extern "C" {__attribute__((visibility("default"))) iq4::f1::entry01::PublishedObservation iq4_f1_entry_observed;
+ __attribute__((visibility("default"))) iq4::f1::observe04::Published iq4_f1_geometry_observed_04;
+-__attribute__((visibility("default"))) iq4::f1::stack05::Published iq4_f1_stack_observed_05;}
++__attribute__((visibility("default"))) iq4::f1::stack05::Published iq4_f1_stack_observed_05;
++__attribute__((visibility("default"))) iq4::f1::display06::Published iq4_f1_display_observed_06;}
++iq4::f1::native_ui02::Rectangle24 iq4_f1_display_paint_callback_06(void*,void*,const iq4::f1::native_ui02::Rectangle24*,iq4::f1::native_ui02::Rectangle24*) __asm__("iq4_f1_display_paint_callback_06");
+ namespace {
+ using namespace iq4::f1::entry01;
+ // No dlvsym/dlsym, pthread_create, SDK, signal, process exit or retry interface.
+@@ -56,6 +59,10 @@
+ iq4::f1::observe04::Collector* geometry=nullptr;
+ alignas(iq4::f1::stack05::Collector) unsigned char stack_storage[sizeof(iq4::f1::stack05::Collector)]{};
+ iq4::f1::stack05::Collector* stack_collector=nullptr;
++alignas(iq4::f1::display06::Collector) unsigned char display_storage[sizeof(iq4::f1::display06::Collector)]{};
++iq4::f1::display06::Collector* display_collector=nullptr;
++std::atomic<Address> original_paint{};
++std::atomic_flag display_busy=ATOMIC_FLAG_INIT;
+ std::atomic<bool> diagnostic_ready{false};thread_local bool inside=false;
+ bool self_read(void*,Address address,void* data,std::size_t n) noexcept {return n<=4096 && pread_all(memory_fd,data,n,address);}
+ // Resolve only the original exact public export, from the actual loaded library.
+@@ -132,6 +139,9 @@
+     module=new(module_storage)Module;
+     geometry=new(geometry_storage)iq4::f1::observe04::Collector({nullptr,self_read},0);
+     stack_collector=new(stack_storage)iq4::f1::stack05::Collector({nullptr,self_read},0);
++    display_collector=new(display_storage)iq4::f1::display06::Collector({nullptr,self_read},0,reinterpret_cast<Address>(&iq4_f1_display_paint_callback_06));
++    original_paint.store(0x51da0c,std::memory_order_release);
++    iq4::f1::display06::publish(iq4_f1_display_observed_06,display_collector->snapshot());
+     if(module->configure({nullptr,self_read},{true,true,true,true,0},reinterpret_cast<int(*)(void*)>(original_try_lock.load(std::memory_order_acquire)),reinterpret_cast<int(*)(void*)>(original_unlock.load(std::memory_order_acquire)))){diagnostic_ready.store(true,std::memory_order_release);iq4_f1_entry_observed.startup.store(4,std::memory_order_release);}
+     else iq4_f1_entry_observed.startup.store(7,std::memory_order_release);
+ 
+@@ -172,6 +182,12 @@
+                 iq4_f1_stack_observed_05.sequence.fetch_add(1,std::memory_order_acq_rel);
+                 iq4_f1_stack_observed_05.metadata=stack_facts;
+                 iq4_f1_stack_observed_05.sequence.fetch_add(1,std::memory_order_release);
++                iq4::f1::display06::Metadata display_facts{};
++                if(display_collector&&!display_busy.test_and_set(std::memory_order_acquire)){
++                    if(display_collector->capture_boundary(input,stack_facts,display_facts))
++                        iq4::f1::display06::publish(iq4_f1_display_observed_06,display_facts);
++                    display_busy.clear(std::memory_order_release);
++                }
+                 if(stack_facts.attempts>=64)diagnostic_ready.store(false,std::memory_order_release);
+             }
+         }
+@@ -184,3 +200,28 @@
+ // menu, fill, observer, repaint, stop, or pointer-based integration methods.
+ // Stack05 independently reads only scalar identities/graph at this real boundary;
+ // it never changes the inherited Entry phase or Geometry03/04 gates.
++
++// Callback is retained and exported for a separately reviewed reversible RAM
++// table trial. This source only builds the private table; it never writes LV's
++// vptr or installs a hook. No selector/toolbar callback is changed or invoked.
++__attribute__((visibility("default"),noinline,aligned(16)))
++iq4::f1::native_ui02::Rectangle24 iq4_f1_display_paint_callback_06(
++    void* lv,void* surface,const iq4::f1::native_ui02::Rectangle24* draw,
++    iq4::f1::native_ui02::Rectangle24* clip) {
++    const auto original=original_paint.load(std::memory_order_acquire);
++    if(!original)unresolved_hold(); // no table may be installed before actual User gate.
++    Address tp{};asm volatile("mrs %0, tpidr_el0":"=r"(tp));
++    const iq4::f1::geometry03::PaintInput input{
++      tp,reinterpret_cast<Address>(__builtin_frame_address(0)),
++      reinterpret_cast<Address>(__builtin_return_address(0)),
++      reinterpret_cast<Address>(lv),reinterpret_cast<Address>(surface),
++      reinterpret_cast<Address>(draw),reinterpret_cast<Address>(clip)};
++    const bool own=!display_busy.test_and_set(std::memory_order_acquire);
++    try {
++      const auto returned=iq4::f1::display06::forward_once(
++        reinterpret_cast<iq4::f1::native_overlay::LVPaint>(original),lv,surface,draw,clip,
++        own?display_collector:nullptr,own?&input:nullptr,own?&iq4_f1_display_observed_06:nullptr);
++      if(own)display_busy.clear(std::memory_order_release);
++      asm volatile("":::"memory");return returned;
++    } catch(...) {if(own)display_busy.clear(std::memory_order_release);throw;}
++}

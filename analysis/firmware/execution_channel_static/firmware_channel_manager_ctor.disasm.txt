@@ -1,0 +1,197 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)>:
+  85bd0c: d101c3ff     	sub	sp, sp, #0x70
+  85bd10: a9017bfd     	stp	x29, x30, [sp, #0x10]
+  85bd14: 910043fd     	add	x29, sp, #0x10
+  85bd18: a90253f3     	stp	x19, x20, [sp, #0x20]
+  85bd1c: f90037e0     	str	x0, [sp, #0x68]
+  85bd20: f90033e1     	str	x1, [sp, #0x60]
+  85bd24: f9002fe2     	str	x2, [sp, #0x58]
+  85bd28: f9002be3     	str	x3, [sp, #0x50]
+  85bd2c: 39013fe4     	strb	w4, [sp, #0x4f]
+  85bd30: 39013be5     	strb	w5, [sp, #0x4e]
+  85bd34: f90023e6     	str	x6, [sp, #0x40]
+  85bd38: f9001fe7     	str	x7, [sp, #0x38]
+  85bd3c: f94037e0     	ldr	x0, [sp, #0x68]
+  85bd40: 9400037d     	bl	0x85cb34 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x18770>
+  85bd44: f94037e0     	ldr	x0, [sp, #0x68]
+  85bd48: 91002013     	add	x19, x0, #0x8
+  85bd4c: 39413be2     	ldrb	w2, [sp, #0x4e]
+  85bd50: 39413fe1     	ldrb	w1, [sp, #0x4f]
+  85bd54: f9402be0     	ldr	x0, [sp, #0x50]
+  85bd58: 97fabb44     	bl	0x70aa68 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x1c9e8>
+  85bd5c: f94033e2     	ldr	x2, [sp, #0x60]
+  85bd60: aa0003e1     	mov	x1, x0
+  85bd64: aa1303e0     	mov	x0, x19
+  85bd68: 97fad035     	bl	0x70fe3c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x21dbc>
+  85bd6c: f94037e0     	ldr	x0, [sp, #0x68]
+  85bd70: 91008000     	add	x0, x0, #0x20
+  85bd74: 97ffddcf     	bl	0x8534b0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0xf0ec>
+  85bd78: b0002a20     	adrp	x0, 0xda0000
+  85bd7c: 91384001     	add	x1, x0, #0xe10
+  85bd80: f94037e0     	ldr	x0, [sp, #0x68]
+  85bd84: f9000001     	str	x1, [x0]
+  85bd88: b0002a20     	adrp	x0, 0xda0000
+  85bd8c: 9139e001     	add	x1, x0, #0xe78
+  85bd90: f94037e0     	ldr	x0, [sp, #0x68]
+  85bd94: f9000401     	str	x1, [x0, #0x8]
+  85bd98: b0002a20     	adrp	x0, 0xda0000
+  85bd9c: 913a8001     	add	x1, x0, #0xea0
+  85bda0: f94037e0     	ldr	x0, [sp, #0x68]
+  85bda4: f9001001     	str	x1, [x0, #0x20]
+  85bda8: f94037e0     	ldr	x0, [sp, #0x68]
+  85bdac: 9100a013     	add	x19, x0, #0x28
+  85bdb0: b0002a20     	adrp	x0, 0xda0000
+  85bdb4: 91208001     	add	x1, x0, #0x820
+  85bdb8: f9402be0     	ldr	x0, [sp, #0x50]
+  85bdbc: 97fabb60     	bl	0x70ab3c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x1cabc>
+  85bdc0: 52800002     	mov	w2, #0x0                // =0
+  85bdc4: aa0003e1     	mov	x1, x0
+  85bdc8: aa1303e0     	mov	x0, x19
+  85bdcc: 97fad894     	bl	0x71201c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x23f9c>
+  85bdd0: d2800300     	mov	x0, #0x18               // =24
+  85bdd4: 97eeb823     	bl	0x409e60 <_Znwm@plt>
+  85bdd8: aa0003f3     	mov	x19, x0
+  85bddc: aa1303e0     	mov	x0, x19
+  85bde0: 97ff5778     	bl	0x831bc0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, unsigned long, std::allocator<char> const&)+0x75bf8>
+  85bde4: f94037e0     	ldr	x0, [sp, #0x68]
+  85bde8: f9004013     	str	x19, [x0, #0x80]
+  85bdec: f94037e0     	ldr	x0, [sp, #0x68]
+  85bdf0: 91022013     	add	x19, x0, #0x88
+  85bdf4: b0002a20     	adrp	x0, 0xda0000
+  85bdf8: 91212001     	add	x1, x0, #0x848
+  85bdfc: f9402be0     	ldr	x0, [sp, #0x50]
+  85be00: 97fabb4f     	bl	0x70ab3c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x1cabc>
+  85be04: aa0003e1     	mov	x1, x0
+  85be08: aa1303e0     	mov	x0, x19
+  85be0c: 97faccc8     	bl	0x70f12c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x210ac>
+  85be10: b0002a20     	adrp	x0, 0xda0000
+  85be14: 9121e001     	add	x1, x0, #0x878
+  85be18: f9402be0     	ldr	x0, [sp, #0x50]
+  85be1c: 97fabb48     	bl	0x70ab3c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x1cabc>
+  85be20: aa0003f4     	mov	x20, x0
+  85be24: d2801b00     	mov	x0, #0xd8               // =216
+  85be28: 97eeb80e     	bl	0x409e60 <_Znwm@plt>
+  85be2c: aa0003f3     	mov	x19, x0
+  85be30: 52800023     	mov	w3, #0x1                // =1
+  85be34: 52800002     	mov	w2, #0x0                // =0
+  85be38: aa1403e1     	mov	x1, x20
+  85be3c: aa1303e0     	mov	x0, x19
+  85be40: 97eee545     	bl	0x415354 <.text+0xa124>
+  85be44: aa1303e1     	mov	x1, x19
+  85be48: f94037e0     	ldr	x0, [sp, #0x68]
+  85be4c: f900a001     	str	x1, [x0, #0x140]
+  85be50: f94037e0     	ldr	x0, [sp, #0x68]
+  85be54: f9403be1     	ldr	x1, [sp, #0x70]
+  85be58: f900a401     	str	x1, [x0, #0x148]
+  85be5c: f94037e0     	ldr	x0, [sp, #0x68]
+  85be60: f9401fe1     	ldr	x1, [sp, #0x38]
+  85be64: f900a801     	str	x1, [x0, #0x150]
+  85be68: f94037e0     	ldr	x0, [sp, #0x68]
+  85be6c: f94023e1     	ldr	x1, [sp, #0x40]
+  85be70: f900ac01     	str	x1, [x0, #0x158]
+  85be74: f94037e0     	ldr	x0, [sp, #0x68]
+  85be78: f900b01f     	str	xzr, [x0, #0x160]
+  85be7c: f94037e0     	ldr	x0, [sp, #0x68]
+  85be80: 39413fe1     	ldrb	w1, [sp, #0x4f]
+  85be84: 3905a001     	strb	w1, [x0, #0x168]
+  85be88: f94037e0     	ldr	x0, [sp, #0x68]
+  85be8c: 39413be1     	ldrb	w1, [sp, #0x4e]
+  85be90: 3905a401     	strb	w1, [x0, #0x169]
+  85be94: f94037e0     	ldr	x0, [sp, #0x68]
+  85be98: f940ac00     	ldr	x0, [x0, #0x158]
+  85be9c: 9103e000     	add	x0, x0, #0xf8
+  85bea0: 97ffdddf     	bl	0x85361c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0xf258>
+  85bea4: 7100041f     	cmp	w0, #0x1
+  85bea8: 1a9f07e0     	cset	w0, ne
+  85beac: 12001c00     	and	w0, w0, #0xff
+  85beb0: 7100001f     	cmp	w0, #0x0
+  85beb4: 54000140     	b.eq	0x85bedc <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x17b18>
+  85beb8: 528004c3     	mov	w3, #0x26               // =38
+  85bebc: b0002a20     	adrp	x0, 0xda0000
+  85bec0: 9122a002     	add	x2, x0, #0x8a8
+  85bec4: b0002a20     	adrp	x0, 0xda0000
+  85bec8: 91236001     	add	x1, x0, #0x8d8
+  85becc: b0002a20     	adrp	x0, 0xda0000
+  85bed0: 91252000     	add	x0, x0, #0x948
+  85bed4: 97eeb9ab     	bl	0x40a580 <printf@plt>
+  85bed8: 97fc420c     	bl	0x76c708 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x529dc>
+  85bedc: f94037e0     	ldr	x0, [sp, #0x68]
+  85bee0: 3945a001     	ldrb	w1, [x0, #0x168]
+  85bee4: f94037e0     	ldr	x0, [sp, #0x68]
+  85bee8: 3945a400     	ldrb	w0, [x0, #0x169]
+  85beec: 2a0003e2     	mov	w2, w0
+  85bef0: f9402be0     	ldr	x0, [sp, #0x50]
+  85bef4: 97fabadd     	bl	0x70aa68 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x1c9e8>
+  85bef8: aa0003f4     	mov	x20, x0
+  85befc: d2805900     	mov	x0, #0x2c8              // =712
+  85bf00: 97eeb7d8     	bl	0x409e60 <_Znwm@plt>
+  85bf04: aa0003f3     	mov	x19, x0
+  85bf08: f94037e0     	ldr	x0, [sp, #0x68]
+  85bf0c: f940ac01     	ldr	x1, [x0, #0x158]
+  85bf10: f94037e0     	ldr	x0, [sp, #0x68]
+  85bf14: 3945a002     	ldrb	w2, [x0, #0x168]
+  85bf18: f94037e0     	ldr	x0, [sp, #0x68]
+  85bf1c: 3945a403     	ldrb	w3, [x0, #0x169]
+  85bf20: f94037e0     	ldr	x0, [sp, #0x68]
+  85bf24: f940a804     	ldr	x4, [x0, #0x150]
+  85bf28: f94043e0     	ldr	x0, [sp, #0x80]
+  85bf2c: f90003e0     	str	x0, [sp]
+  85bf30: f9403fe7     	ldr	x7, [sp, #0x78]
+  85bf34: aa0403e6     	mov	x6, x4
+  85bf38: 2a0303e5     	mov	w5, w3
+  85bf3c: 2a0203e4     	mov	w4, w2
+  85bf40: aa0103e3     	mov	x3, x1
+  85bf44: f9402fe2     	ldr	x2, [sp, #0x58]
+  85bf48: aa1403e1     	mov	x1, x20
+  85bf4c: aa1303e0     	mov	x0, x19
+  85bf50: 97ffd469     	bl	0x8510f4 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0xcd30>
+  85bf54: f94037e0     	ldr	x0, [sp, #0x68]
+  85bf58: f900b013     	str	x19, [x0, #0x160]
+  85bf5c: f94037e0     	ldr	x0, [sp, #0x68]
+  85bf60: 91002013     	add	x19, x0, #0x8
+  85bf64: f94037e0     	ldr	x0, [sp, #0x68]
+  85bf68: f940ac00     	ldr	x0, [x0, #0x158]
+  85bf6c: 9103e000     	add	x0, x0, #0xf8
+  85bf70: 97ffdda5     	bl	0x853604 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0xf240>
+  85bf74: aa0003e1     	mov	x1, x0
+  85bf78: aa1303e0     	mov	x0, x19
+  85bf7c: 97facfd7     	bl	0x70fed8 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x21e58>
+  85bf80: f94037e0     	ldr	x0, [sp, #0x68]
+  85bf84: 91002002     	add	x2, x0, #0x8
+  85bf88: f94037e0     	ldr	x0, [sp, #0x68]
+  85bf8c: 91022000     	add	x0, x0, #0x88
+  85bf90: aa0003e1     	mov	x1, x0
+  85bf94: aa0203e0     	mov	x0, x2
+  85bf98: 97facfd0     	bl	0x70fed8 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x21e58>
+  85bf9c: f94037e0     	ldr	x0, [sp, #0x68]
+  85bfa0: 91002013     	add	x19, x0, #0x8
+  85bfa4: f94037e0     	ldr	x0, [sp, #0x68]
+  85bfa8: f940a000     	ldr	x0, [x0, #0x140]
+  85bfac: aa0003e2     	mov	x2, x0
+  85bfb0: f94037e0     	ldr	x0, [sp, #0x68]
+  85bfb4: f940a000     	ldr	x0, [x0, #0x140]
+  85bfb8: f9400000     	ldr	x0, [x0]
+  85bfbc: 91004000     	add	x0, x0, #0x10
+  85bfc0: f9400001     	ldr	x1, [x0]
+  85bfc4: aa0203e0     	mov	x0, x2
+  85bfc8: d63f0020     	blr	x1
+  85bfcc: aa0003e1     	mov	x1, x0
+  85bfd0: aa1303e0     	mov	x0, x19
+  85bfd4: 97facfc1     	bl	0x70fed8 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x21e58>
+  85bfd8: 14000024     	b	0x85c068 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x17ca4>
+  85bfdc: aa0003f4     	mov	x20, x0
+  85bfe0: d2801b01     	mov	x1, #0xd8               // =216
+  85bfe4: aa1303e0     	mov	x0, x19
+  85bfe8: 97eeb77e     	bl	0x409de0 <_ZdlPvm@plt>
+  85bfec: aa1403f3     	mov	x19, x20
+  85bff0: 14000008     	b	0x85c010 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x17c4c>
+  85bff4: aa0003f4     	mov	x20, x0
+  85bff8: d2805901     	mov	x1, #0x2c8              // =712
+  85bffc: aa1303e0     	mov	x0, x19
+  85c000: 97eeb778     	bl	0x409de0 <_ZdlPvm@plt>

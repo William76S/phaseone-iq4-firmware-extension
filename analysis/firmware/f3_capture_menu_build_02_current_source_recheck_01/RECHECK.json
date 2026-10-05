@@ -1,0 +1,177 @@
+{
+  "schema": "iq4_f3_capture_menu_current_source_cross_recheck_01",
+  "reason": "explicit current-source recompile after policy.h comment clarification; no code/ABI change",
+  "source_manifest_sha256": "b22c33cda86aa43febba058e73165c0c205aa192d260114c3f6342114426c265",
+  "inputs": [
+    {
+      "path": "tools/firmware/f3_capture_menu_02/policy.h",
+      "sha256": "2d4c2f0171dda5b416cf54060bd8639f82cabaaea0e7a988185465f4619f56a9"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_02/policy.c",
+      "sha256": "288c599367b5471548e81406c0c920f29db18abe762ef3633c552ef7e9bd8722"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_02/runtime.c",
+      "sha256": "5952042659026d52978d0b86cef2adb4cdfc5a45c85564c525d263257a34fc07"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_02/wrapper.S",
+      "sha256": "6213d5f24db6ebd5e47f0a546abf83019fca90de148c3cfb7529f0d3210751b4"
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-std=c11",
+        "-O2",
+        "-g0",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-mno-outline-atomics",
+        "-funwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-omit-frame-pointer",
+        "-fno-optimize-sibling-calls",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fPIC",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_02_current_source_recheck_01/policy.o.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_02/policy.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_02_current_source_recheck_01/policy.o"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-std=c11",
+        "-O2",
+        "-g0",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-mno-outline-atomics",
+        "-funwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-omit-frame-pointer",
+        "-fno-optimize-sibling-calls",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fPIC",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_02_current_source_recheck_01/menu_EN0.o.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_02/runtime.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_02_current_source_recheck_01/menu_EN0.o"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-std=c11",
+        "-O2",
+        "-g0",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-mno-outline-atomics",
+        "-funwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-omit-frame-pointer",
+        "-fno-optimize-sibling-calls",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fPIC",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-DIQ4_F3_MENU_PRODUCTION_ENABLE=1",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_02_current_source_recheck_01/menu_EN1_inspection_only.o.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_02/runtime.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_02_current_source_recheck_01/menu_EN1_inspection_only.o"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-g0",
+        "-fPIC",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_02/wrapper.S",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_02_current_source_recheck_01/wrapper.o"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_02_current_source_recheck_01/policy.o",
+      "bytes": 4168,
+      "sha256": "01505f1ec14f6f6a803002c7e1d85ad8eb1af3413a6c53ef0aabc78abf08d4ea",
+      "original_object_path": "analysis/firmware/f3_capture_menu_build_02/policy.o",
+      "direct_byte_equal": true
+    },
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_02_current_source_recheck_01/menu_EN0.o",
+      "bytes": 1184,
+      "sha256": "0beca2c8b5ae19d1f2dbbac7c7bed473d23dd7c9348f4ef1026a4d64889b1613",
+      "original_object_path": "analysis/firmware/f3_capture_menu_build_02/menu_EN0.o",
+      "direct_byte_equal": true
+    },
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_02_current_source_recheck_01/menu_EN1_inspection_only.o",
+      "bytes": 12216,
+      "sha256": "e29b1a3b69243d9013a1ddcd5ca8a531fd93d5f8ddf5e2fcd1c38a8e15102bcb",
+      "original_object_path": "analysis/firmware/f3_capture_menu_build_02/menu_EN1_inspection_only.o",
+      "direct_byte_equal": true
+    },
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_02_current_source_recheck_01/wrapper.o",
+      "bytes": 1232,
+      "sha256": "8435b89fea567ed1aabd03101512d0224a77af1bd8755b17497fc708c055b954",
+      "original_object_path": "analysis/firmware/f3_capture_menu_build_02/wrapper.o",
+      "direct_byte_equal": true
+    }
+  ],
+  "target_executed": false,
+  "device_access": false
+}

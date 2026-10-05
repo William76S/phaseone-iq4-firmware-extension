@@ -1,0 +1,46 @@
+{
+  "schema": "iq4_f4_source05_exact_queue_lock",
+  "original": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "windows": [
+    {
+      "name": "queue_mutex_lock",
+      "va": 7414828,
+      "bytes": 56,
+      "hex": "fd7bbda9fd030091e00f00f9e00f40f9e7ffff97e02f00b9e02f40b91f00007160000054e02f40b9b7dff3971f2003d5fd7bc3a8c0035fd6",
+      "sha256": "1d11721af343b727c4847f2651ef6f4cfc5d2116ca4b88fd75420cec249ecbb9"
+    },
+    {
+      "name": "queue_mutex_lock_thunk",
+      "va": 7414744,
+      "bytes": 28,
+      "hex": "fd7bbea9fd030091e00f00f9e00f40f9cfffff97fd7bc2a8c0035fd6",
+      "sha256": "f2f4911af10a4992458f52a799353530cbffa1a04327c2b04cf63249fd0aa6f3"
+    },
+    {
+      "name": "gthread_mutex_lock",
+      "va": 7414564,
+      "bytes": 60,
+      "hex": "fd7bbea9fd030091e00f00f934ffff971f000071e0079f1a001c00121f00007180000054e00f40f9e5e1f3970200001400008052fd7bc2a8c0035fd6",
+      "sha256": "e913d1d85e0435c3fed4178202065c97c845ed54325b959c48e4f68b7c0b222d"
+    },
+    {
+      "name": "gthread_active",
+      "va": 7413760,
+      "bytes": 28,
+      "hex": "004200f000a00e91000040f91f0000f1e0079f1a001c0012c0035fd6",
+      "sha256": "fab00fd00a8b944f0a322fcea098945554d5acbb220bf10535fe627946300666"
+    },
+    {
+      "name": "pthread_mutex_lock_plt",
+      "va": 4238048,
+      "bytes": 16,
+      "hex": "d05900b011c643f910221e9120021fd6",
+      "sha256": "f5c6349387d97a03cd5bd5410c885138104c9f9bbe1816c1f5b6e78944f15473"
+    }
+  ],
+  "target_executed": false
+}

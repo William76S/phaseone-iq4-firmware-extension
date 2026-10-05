@@ -1,0 +1,28 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution or actual field read.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  7876cc: 35001b00     	cbnz	w0, 0x787a2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6dd00>
+  7876d0: 528035e1     	mov	w1, #0x1af              // =431
+  7876d4: aa1303e0     	mov	x0, x19
+  7876d8: 97ffd71e     	bl	0x77d350 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x63624>
+  7876dc: 7100041f     	cmp	w0, #0x1
+  7876e0: 54001bc1     	b.ne	0x787a58 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6dd2c>
+  7876e4: 528034c1     	mov	w1, #0x1a6              // =422
+  7876e8: aa1303e0     	mov	x0, x19
+  7876ec: 97ffd719     	bl	0x77d350 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x63624>
+  7876f0: 2a0003f6     	mov	w22, w0
+  7876f4: 528034e1     	mov	w1, #0x1a7              // =423
+  7876f8: aa1303e0     	mov	x0, x19
+  7876fc: b9006ff6     	str	w22, [sp, #0x6c]
+  787700: 97ffd714     	bl	0x77d350 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x63624>
+  787704: 710002df     	cmp	w22, #0x0
+  787708: 2a0003fa     	mov	w26, w0
+  78770c: 1a9f17fb     	cset	w27, eq
+  787710: 7100001f     	cmp	w0, #0x0
+  787714: 1a9f177b     	csinc	w27, w27, wzr, ne
+  787718: 34fff77b     	cbz	w27, 0x787604 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6d8d8>

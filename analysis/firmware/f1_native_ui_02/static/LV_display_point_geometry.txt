@@ -1,0 +1,99 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual callable binding.
+  51f50c: a9b87bfd     	stp	x29, x30, [sp, #-0x80]!
+  51f510: 910003fd     	mov	x29, sp
+  51f514: f9000bf3     	str	x19, [sp, #0x10]
+  51f518: f90017e0     	str	x0, [sp, #0x28]
+  51f51c: f90013e1     	str	x1, [sp, #0x20]
+  51f520: f94017e2     	ldr	x2, [sp, #0x28]
+  51f524: f94017e0     	ldr	x0, [sp, #0x28]
+  51f528: f9400000     	ldr	x0, [x0]
+  51f52c: 9102e000     	add	x0, x0, #0xb8
+  51f530: f9400001     	ldr	x1, [x0]
+  51f534: 910103e0     	add	x0, sp, #0x40
+  51f538: aa0003e8     	mov	x8, x0
+  51f53c: aa0203e0     	mov	x0, x2
+  51f540: d63f0020     	blr	x1
+  51f544: f94017e0     	ldr	x0, [sp, #0x28]
+  51f548: bd419000     	ldr	s0, [x0, #0x190]
+  51f54c: 910083e0     	add	x0, sp, #0x20
+  51f550: 97fefdfc     	bl	0x4ded40
+  51f554: f90033e0     	str	x0, [sp, #0x60]
+  51f558: f94017e0     	ldr	x0, [sp, #0x28]
+  51f55c: 91044000     	add	x0, x0, #0x110
+  51f560: 97fe953d     	bl	0x4c4a54
+  51f564: f90037e0     	str	x0, [sp, #0x68]
+  51f568: 9101a3e1     	add	x1, sp, #0x68
+  51f56c: 910183e0     	add	x0, sp, #0x60
+  51f570: 97fd1402     	bl	0x464578
+  51f574: f9002fe0     	str	x0, [sp, #0x58]
+  51f578: 910103e0     	add	x0, sp, #0x40
+  51f57c: 97fd13d6     	bl	0x4644d4
+  51f580: f9003be0     	str	x0, [sp, #0x70]
+  51f584: 9101c3e1     	add	x1, sp, #0x70
+  51f588: 910163e0     	add	x0, sp, #0x58
+  51f58c: 97fd13fb     	bl	0x464578
+  51f590: f9001fe0     	str	x0, [sp, #0x38]
+  51f594: f94017e0     	ldr	x0, [sp, #0x28]
+  51f598: f9408400     	ldr	x0, [x0, #0x108]
+  51f59c: 94065aec     	bl	0x6b614c
+  51f5a0: f9003fe0     	str	x0, [sp, #0x78]
+  51f5a4: f9403fe0     	ldr	x0, [sp, #0x78]
+  51f5a8: b9400400     	ldr	w0, [x0, #0x4]
+  51f5ac: 1e220001     	scvtf	s1, w0
+  51f5b0: f94017e0     	ldr	x0, [sp, #0x28]
+  51f5b4: bd419000     	ldr	s0, [x0, #0x190]
+  51f5b8: 1e201820     	fdiv	s0, s1, s0
+  51f5bc: 5ea1b802     	fcvtzs	s2, s0
+  51f5c0: f9403fe0     	ldr	x0, [sp, #0x78]
+  51f5c4: b9400800     	ldr	w0, [x0, #0x8]
+  51f5c8: 1e220001     	scvtf	s1, w0
+  51f5cc: f94017e0     	ldr	x0, [sp, #0x28]
+  51f5d0: bd419000     	ldr	s0, [x0, #0x190]
+  51f5d4: 1e201820     	fdiv	s0, s1, s0
+  51f5d8: 5ea1b800     	fcvtzs	s0, s0
+  51f5dc: 9100c3e0     	add	x0, sp, #0x30
+  51f5e0: 1e260002     	fmov	w2, s0
+  51f5e4: 1e260041     	fmov	w1, s2
+  51f5e8: 97fc485e     	bl	0x431760
+  51f5ec: b94033e1     	ldr	w1, [sp, #0x30]
+  51f5f0: b94053e0     	ldr	w0, [sp, #0x50]
+  51f5f4: 6b00003f     	cmp	w1, w0
+  51f5f8: 5400016a     	b.ge	0x51f624
+  51f5fc: b9403be1     	ldr	w1, [sp, #0x38]
+  51f600: b94053e2     	ldr	w2, [sp, #0x50]
+  51f604: b94033e0     	ldr	w0, [sp, #0x30]
+  51f608: 4b000040     	sub	w0, w2, w0
+  51f60c: 531f7c02     	lsr	w2, w0, #31
+  51f610: 0b000040     	add	w0, w2, w0
+  51f614: 13017c02     	asr	w2, w0, #1
+  51f618: 2a0203e0     	mov	w0, w2
+  51f61c: 0b000020     	add	w0, w1, w0
+  51f620: b9003be0     	str	w0, [sp, #0x38]
+  51f624: b94037e1     	ldr	w1, [sp, #0x34]
+  51f628: b94057e0     	ldr	w0, [sp, #0x54]
+  51f62c: 6b00003f     	cmp	w1, w0
+  51f630: 5400016a     	b.ge	0x51f65c
+  51f634: b9403fe1     	ldr	w1, [sp, #0x3c]
+  51f638: b94057e2     	ldr	w2, [sp, #0x54]
+  51f63c: b94037e0     	ldr	w0, [sp, #0x34]
+  51f640: 4b000040     	sub	w0, w2, w0
+  51f644: 531f7c02     	lsr	w2, w0, #31
+  51f648: 0b000040     	add	w0, w2, w0
+  51f64c: 13017c02     	asr	w2, w0, #1
+  51f650: 2a0203e0     	mov	w0, w2
+  51f654: 0b000020     	add	w0, w1, w0
+  51f658: b9003fe0     	str	w0, [sp, #0x3c]
+  51f65c: f9401ff3     	ldr	x19, [sp, #0x38]
+  51f660: 910103e0     	add	x0, sp, #0x40
+  51f664: 97fce190     	bl	0x457ca4
+  51f668: aa1303e0     	mov	x0, x19
+  51f66c: 14000006     	b	0x51f684
+  51f670: aa0003f3     	mov	x19, x0
+  51f674: 910103e0     	add	x0, sp, #0x40
+  51f678: 97fce18b     	bl	0x457ca4
+  51f67c: aa1303e0     	mov	x0, x19
+  51f680: 97fbac34     	bl	0x40a750
+  51f684: f9400bf3     	ldr	x19, [sp, #0x10]
+  51f688: a8c87bfd     	ldp	x29, x30, [sp], #0x80
+  51f68c: d65f03c0     	ret

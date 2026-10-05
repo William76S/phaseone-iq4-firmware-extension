@@ -1,0 +1,66 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006ee080 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_>:
+  710524: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  710528: 910003fd     	mov	x29, sp
+  71052c: f9000bf3     	str	x19, [sp, #0x10]
+  710530: f9001fe0     	str	x0, [sp, #0x38]
+  710534: f9001be1     	str	x1, [sp, #0x30]
+  710538: f90017e2     	str	x2, [sp, #0x28]
+  71053c: f9401fe0     	ldr	x0, [sp, #0x38]
+  710540: f9401be1     	ldr	x1, [sp, #0x30]
+  710544: 97f75646     	bl	0x4e5e5c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0xafeb0>
+  710548: f0002880     	adrp	x0, 0xc23000
+  71054c: 91324001     	add	x1, x0, #0xc90
+  710550: f9401fe0     	ldr	x0, [sp, #0x38]
+  710554: f9000001     	str	x1, [x0]
+  710558: f94017e0     	ldr	x0, [sp, #0x28]
+  71055c: f100001f     	cmp	x0, #0x0
+  710560: 54000061     	b.ne	0x71056c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x224ec>
+  710564: 9400016a     	bl	0x710b0c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x22a8c>
+  710568: 14000002     	b	0x710570 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x224f0>
+  71056c: f94017e0     	ldr	x0, [sp, #0x28]
+  710570: f9401fe1     	ldr	x1, [sp, #0x38]
+  710574: f9001820     	str	x0, [x1, #0x30]
+  710578: f9401fe0     	ldr	x0, [sp, #0x38]
+  71057c: 3900e01f     	strb	wzr, [x0, #0x38]
+  710580: f9401fe0     	ldr	x0, [sp, #0x38]
+  710584: f900201f     	str	xzr, [x0, #0x40]
+  710588: f9401fe0     	ldr	x0, [sp, #0x38]
+  71058c: 91012000     	add	x0, x0, #0x48
+  710590: 940000f1     	bl	0x710954 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x228d4>
+  710594: f9401fe0     	ldr	x0, [sp, #0x38]
+  710598: 9101a000     	add	x0, x0, #0x68
+  71059c: 940000ee     	bl	0x710954 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x228d4>
+  7105a0: f9401fe0     	ldr	x0, [sp, #0x38]
+  7105a4: 91012000     	add	x0, x0, #0x48
+  7105a8: f9401fe1     	ldr	x1, [sp, #0x38]
+  7105ac: 9400010e     	bl	0x7109e4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x22964>
+  7105b0: f9401fe0     	ldr	x0, [sp, #0x38]
+  7105b4: 9101a000     	add	x0, x0, #0x68
+  7105b8: f9401fe1     	ldr	x1, [sp, #0x38]
+  7105bc: 9400010a     	bl	0x7109e4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x22964>
+  7105c0: f9401fe0     	ldr	x0, [sp, #0x38]
+  7105c4: 94000032     	bl	0x71068c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x2260c>
+  7105c8: 14000010     	b	0x710608 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x22588>
+  7105cc: aa0003f3     	mov	x19, x0
+  7105d0: f9401fe0     	ldr	x0, [sp, #0x38]
+  7105d4: 9101a000     	add	x0, x0, #0x68
+  7105d8: 940000ed     	bl	0x71098c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x2290c>
+  7105dc: 14000002     	b	0x7105e4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x22564>
+  7105e0: aa0003f3     	mov	x19, x0
+  7105e4: f9401fe0     	ldr	x0, [sp, #0x38]
+  7105e8: 91012000     	add	x0, x0, #0x48
+  7105ec: 940000e8     	bl	0x71098c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x2290c>
+  7105f0: 14000002     	b	0x7105f8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x22578>
+  7105f4: aa0003f3     	mov	x19, x0
+  7105f8: f9401fe0     	ldr	x0, [sp, #0x38]
+  7105fc: 97f7569f     	bl	0x4e6078 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0xb00cc>
+  710600: aa1303e0     	mov	x0, x19
+  710604: 97f3e853     	bl	0x40a750 <_Unwind_Resume@plt>
+  710608: f9400bf3     	ldr	x19, [sp, #0x10]
+  71060c: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  710610: d65f03c0     	ret

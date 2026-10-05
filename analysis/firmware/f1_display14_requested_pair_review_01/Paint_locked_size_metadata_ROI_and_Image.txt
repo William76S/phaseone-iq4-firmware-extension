@@ -1,0 +1,56 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no camera access or target execution.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:
+  51db50: f9401fe0     	ldr	x0, [sp, #0x38]
+  51db54: f9408400     	ldr	x0, [x0, #0x108]
+  51db58: 940661a9     	bl	0x6b61fc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15e3c>
+  51db5c: f9005fe0     	str	x0, [sp, #0xb8]
+  51db60: f9401fe0     	ldr	x0, [sp, #0x38]
+  51db64: f9408400     	ldr	x0, [x0, #0x108]
+  51db68: 94066179     	bl	0x6b614c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15d8c>
+  51db6c: f900b7e0     	str	x0, [sp, #0x168]
+  51db70: f9401fe0     	ldr	x0, [sp, #0x38]
+  51db74: f9408400     	ldr	x0, [x0, #0x108]
+  51db78: 910283e1     	add	x1, sp, #0xa0
+  51db7c: aa0103e8     	mov	x8, x1
+  51db80: 940661a7     	bl	0x6b621c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15e5c>
+  51db84: b940bbe1     	ldr	w1, [sp, #0xb8]
+  51db88: b940bfe2     	ldr	w2, [sp, #0xbc]
+  51db8c: f9401fe0     	ldr	x0, [sp, #0x38]
+  51db90: f940c403     	ldr	x3, [x0, #0x188]
+  51db94: 910303e0     	add	x0, sp, #0xc0
+  51db98: 52800005     	mov	w5, #0x0                // =0
+  51db9c: aa0303e4     	mov	x4, x3
+  51dba0: 2a0203e3     	mov	w3, w2
+  51dba4: 2a0103e2     	mov	w2, w1
+  51dba8: 52800001     	mov	w1, #0x0                // =0
+  51dbac: 97fd08b8     	bl	0x45fe8c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x29ee0>
+  51dbb0: 910283e0     	add	x0, sp, #0xa0
+  51dbb4: 97fd1a48     	bl	0x4644d4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x2e528>
+  51dbb8: aa0003e1     	mov	x1, x0
+  51dbbc: f9401fe0     	ldr	x0, [sp, #0x38]
+  51dbc0: 94000653     	bl	0x51f50c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x2645c>
+  51dbc4: f9004fe0     	str	x0, [sp, #0x98]
+  51dbc8: b9409be1     	ldr	w1, [sp, #0x98]
+  51dbcc: b9409fe2     	ldr	w2, [sp, #0x9c]
+  51dbd0: b940b3e0     	ldr	w0, [sp, #0xb0]
+  51dbd4: 1e220001     	scvtf	s1, w0
+  51dbd8: f9401fe0     	ldr	x0, [sp, #0x38]
+  51dbdc: bd419000     	ldr	s0, [x0, #0x190]
+  51dbe0: 1e201820     	fdiv	s0, s1, s0
+  51dbe4: 5ea1b802     	fcvtzs	s2, s0
+  51dbe8: b940b7e0     	ldr	w0, [sp, #0xb4]
+  51dbec: 1e220001     	scvtf	s1, w0
+  51dbf0: f9401fe0     	ldr	x0, [sp, #0x38]
+  51dbf4: bd419000     	ldr	s0, [x0, #0x190]
+  51dbf8: 1e201820     	fdiv	s0, s1, s0
+  51dbfc: 5ea1b800     	fcvtzs	s0, s0
+  51dc00: 910203e0     	add	x0, sp, #0x80
+  51dc04: 1e260004     	fmov	w4, s0
+  51dc08: 1e260043     	fmov	w3, s2
+  51dc0c: 97fce839     	bl	0x457cf0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21d44>

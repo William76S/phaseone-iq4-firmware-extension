@@ -1,0 +1,70 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  7962f8: 91400801     	add	x1, x0, #0x2, lsl #12   // =0x2000
+  7962fc: 39422021     	ldrb	w1, [x1, #0x88]
+  796300: 340006c1     	cbz	w1, 0x7963d8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7c6ac>
+  796304: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  796308: 91404005     	add	x5, x0, #0x10, lsl #12  // =0x10000
+  79630c: d2842801     	mov	x1, #0x2140             // =8512
+  796310: 910003fd     	mov	x29, sp
+  796314: a90153f3     	stp	x19, x20, [sp, #0x10]
+  796318: d2842e02     	mov	x2, #0x2170             // =8560
+  79631c: aa0003f3     	mov	x19, x0
+  796320: a9025bf5     	stp	x21, x22, [sp, #0x20]
+  796324: d2890103     	mov	x3, #0x4808             // =18440
+  796328: 8b010015     	add	x21, x0, x1
+  79632c: a90363f7     	stp	x23, x24, [sp, #0x30]
+  796330: 8b020016     	add	x22, x0, x2
+  796334: 8b030017     	add	x23, x0, x3
+  796338: b94c00a0     	ldr	w0, [x5, #0xc00]
+  79633c: b0ffe604     	adrp	x4, 0x457000 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21054>
+  796340: 9136f084     	add	x4, x4, #0xdbc
+  796344: 11000400     	add	w0, w0, #0x1
+  796348: b90c00a0     	str	w0, [x5, #0xc00]
+  79634c: f94fbe60     	ldr	x0, [x19, #0x1f78]
+  796350: f9505674     	ldr	x20, [x19, #0x20a8]
+  796354: f9400001     	ldr	x1, [x0]
+  796358: f9402025     	ldr	x5, [x1, #0x40]
+  79635c: eb0400bf     	cmp	x5, x4
+  796360: 54000441     	b.ne	0x7963e8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7c6bc>
+  796364: 39430018     	ldrb	w24, [x0, #0xc0]
+  796368: f94fc260     	ldr	x0, [x19, #0x1f80]
+  79636c: d0ffe3e5     	adrp	x5, 0x414000 <.text+0x8dd0>
+  796370: 9125f0a5     	add	x5, x5, #0x97c
+  796374: f9400001     	ldr	x1, [x0]
+  796378: f9402026     	ldr	x6, [x1, #0x40]
+  79637c: eb0500df     	cmp	x6, x5
+  796380: 540002e1     	b.ne	0x7963dc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7c6b0>
+  796384: 39430005     	ldrb	w5, [x0, #0xc0]
+  796388: d283b700     	mov	x0, #0x1db8             // =7608
+  79638c: 8b000260     	add	x0, x19, x0
+  796390: 39430006     	ldrb	w6, [x0, #0xc0]
+  796394: 34000066     	cbz	w6, 0x7963a0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7c674>
+  796398: 91402260     	add	x0, x19, #0x8, lsl #12  // =0x8000
+  79639c: 39445006     	ldrb	w6, [x0, #0x114]
+  7963a0: 91401273     	add	x19, x19, #0x4, lsl #12 // =0x4000
+  7963a4: 2a1803e4     	mov	w4, w24
+  7963a8: aa1703e3     	mov	x3, x23
+  7963ac: aa1603e2     	mov	x2, x22
+  7963b0: aa1503e1     	mov	x1, x21
+  7963b4: aa1403e0     	mov	x0, x20
+  7963b8: b947d267     	ldr	w7, [x19, #0x7d0]
+  7963bc: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  7963c0: 710000ff     	cmp	w7, #0x0
+  7963c4: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+  7963c8: 1a9f17e7     	cset	w7, eq
+  7963cc: a94363f7     	ldp	x23, x24, [sp, #0x30]
+  7963d0: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  7963d4: 17ffc38f     	b	0x787210 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6d4e4>
+  7963d8: d65f03c0     	ret
+  7963dc: d63f00c0     	blr	x6
+  7963e0: 12001c05     	and	w5, w0, #0xff
+  7963e4: 17ffffe9     	b	0x796388 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7c65c>
+  7963e8: d63f00a0     	blr	x5
+  7963ec: 12001c18     	and	w24, w0, #0xff
+  7963f0: 17ffffde     	b	0x796368 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7c63c>
+  7963f4: d503201f     	nop

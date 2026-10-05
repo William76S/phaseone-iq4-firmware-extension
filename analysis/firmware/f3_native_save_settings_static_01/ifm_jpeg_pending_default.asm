@@ -1,0 +1,8 @@
+  495c70: f907d401     	str	x1, [x0, #0xfa8]
+  495c74: f94017e0     	ldr	x0, [sp, #0x28]
+  495c78: b90fb01f     	str	wzr, [x0, #0xfb0]
+  495c7c: f94017e0     	ldr	x0, [sp, #0x28]
+  495c80: 393ed01f     	strb	wzr, [x0, #0xfb4]
+  495c84: f94017e0     	ldr	x0, [sp, #0x28]
+  495c88: 393ed41f     	strb	wzr, [x0, #0xfb5]
+  495c8c: f94017e0     	ldr	x0, [sp, #0x28]

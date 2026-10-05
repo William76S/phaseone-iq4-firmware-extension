@@ -1,0 +1,57 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution or actual field read.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6b6d44: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  6b6d48: 910003fd     	mov	x29, sp
+  6b6d4c: f9000fe0     	str	x0, [sp, #0x18]
+  6b6d50: f9400fe1     	ldr	x1, [sp, #0x18]
+  6b6d54: d2842e00     	mov	x0, #0x2170             // =8560
+  6b6d58: 8b000020     	add	x0, x1, x0
+  6b6d5c: 97ffff85     	bl	0x6b6b70 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x167b0>
+  6b6d60: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  6b6d64: d65f03c0     	ret
+  6b6d68: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  6b6d6c: 910003fd     	mov	x29, sp
+  6b6d70: f9000bf3     	str	x19, [sp, #0x10]
+  6b6d74: aa0803f3     	mov	x19, x8
+  6b6d78: f90017e0     	str	x0, [sp, #0x28]
+  6b6d7c: f94017e1     	ldr	x1, [sp, #0x28]
+  6b6d80: d2842e00     	mov	x0, #0x2170             // =8560
+  6b6d84: 8b000020     	add	x0, x1, x0
+  6b6d88: aa1303e8     	mov	x8, x19
+  6b6d8c: 97ffff95     	bl	0x6b6be0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16820>
+  6b6d90: aa1303e0     	mov	x0, x19
+  6b6d94: f9400bf3     	ldr	x19, [sp, #0x10]
+  6b6d98: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  6b6d9c: d65f03c0     	ret
+  6b6da0: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  6b6da4: 910003fd     	mov	x29, sp
+  6b6da8: f9000fe0     	str	x0, [sp, #0x18]
+  6b6dac: f9400fe1     	ldr	x1, [sp, #0x18]
+  6b6db0: d2842e00     	mov	x0, #0x2170             // =8560
+  6b6db4: 8b000020     	add	x0, x1, x0
+  6b6db8: 97ffff5e     	bl	0x6b6b30 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16770>
+  6b6dbc: d503201f     	nop
+  6b6dc0: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  6b6dc4: d65f03c0     	ret
+  6b6dc8: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  6b6dcc: 910003fd     	mov	x29, sp
+  6b6dd0: f9000fe0     	str	x0, [sp, #0x18]
+  6b6dd4: f9400fe1     	ldr	x1, [sp, #0x18]
+  6b6dd8: d2842e00     	mov	x0, #0x2170             // =8560
+  6b6ddc: 8b000020     	add	x0, x1, x0
+  6b6de0: 97ffffa8     	bl	0x6b6c80 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x168c0>
+  6b6de4: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  6b6de8: d65f03c0     	ret
+  6b6dec: d10043ff     	sub	sp, sp, #0x10
+  6b6df0: f90007e0     	str	x0, [sp, #0x8]
+  6b6df4: f94007e1     	ldr	x1, [sp, #0x8]
+  6b6df8: d288ec00     	mov	x0, #0x4760             // =18272
+  6b6dfc: 8b000020     	add	x0, x1, x0
+  6b6e00: 910043ff     	add	sp, sp, #0x10
+  6b6e04: d65f03c0     	ret

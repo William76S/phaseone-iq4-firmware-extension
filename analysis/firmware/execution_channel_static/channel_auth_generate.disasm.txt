@@ -1,0 +1,60 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPChannel.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000000170 <P1::IQP::Channel::GenerateAuthenticationToken(char const*)>:
+     170: 41 54                        	pushq	%r12
+     172: 49 89 fc                     	movq	%rdi, %r12
+     175: 55                           	pushq	%rbp
+     176: 48 83 ec 28                  	subq	$0x28, %rsp
+     17a: 48 85 f6                     	testq	%rsi, %rsi
+     17d: 74 08                        	je	0x187 <P1::IQP::Channel::GenerateAuthenticationToken(char const*)+0x17>
+     17f: 80 3e 00                     	cmpb	$0x0, (%rsi)
+     182: 48 89 f5                     	movq	%rsi, %rbp
+     185: 75 21                        	jne	0x1a8 <P1::IQP::Channel::GenerateAuthenticationToken(char const*)+0x38>
+     187: 66 0f ef c0                  	pxor	%xmm0, %xmm0
+     18b: 4c 89 e0                     	movq	%r12, %rax
+     18e: 41 0f 11 04 24               	movups	%xmm0, (%r12)
+     193: 41 0f 11 44 24 10            	movups	%xmm0, 0x10(%r12)
+     199: 48 83 c4 28                  	addq	$0x28, %rsp
+     19d: 5d                           	popq	%rbp
+     19e: 41 5c                        	popq	%r12
+     1a0: c3                           	retq
+     1a1: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+     1a8: 48 89 f7                     	movq	%rsi, %rdi
+     1ab: e8 00 00 00 00               	callq	0x1b0 <P1::IQP::Channel::GenerateAuthenticationToken(char const*)+0x40>
+		00000000000001ac:  R_X86_64_PLT32	strlen-0x4
+     1b0: 48 89 e7                     	movq	%rsp, %rdi
+     1b3: 48 89 ee                     	movq	%rbp, %rsi
+     1b6: 48 89 c2                     	movq	%rax, %rdx
+     1b9: e8 00 00 00 00               	callq	0x1be <P1::IQP::Channel::GenerateAuthenticationToken(char const*)+0x4e>
+		00000000000001ba:  R_X86_64_PLT32	P1::Platform::Sha256::Sha256(unsigned char const*, unsigned long)-0x4
+     1be: 66 0f 6f 0c 24               	movdqa	(%rsp), %xmm1
+     1c3: 66 0f 6f 54 24 10            	movdqa	0x10(%rsp), %xmm2
+     1c9: 4c 89 e0                     	movq	%r12, %rax
+     1cc: 41 0f 11 0c 24               	movups	%xmm1, (%r12)
+     1d1: 41 0f 11 54 24 10            	movups	%xmm2, 0x10(%r12)
+     1d7: 48 83 c4 28                  	addq	$0x28, %rsp
+     1db: 5d                           	popq	%rbp
+     1dc: 41 5c                        	popq	%r12
+     1de: c3                           	retq
+     1df: 90                           	nop
+
+00000000000001e0 <P1::IQP::Channel::SetAuthenticationToken(std::array<unsigned char, 32ul> const&)>:
+     1e0: 48 83 ec 48                  	subq	$0x48, %rsp
+     1e4: f3 0f 6f 06                  	movdqu	(%rsi), %xmm0
+     1e8: f3 0f 6f 4e 10               	movdqu	0x10(%rsi), %xmm1
+     1ed: b9 05 00 00 00               	movl	$0x5, %ecx
+     1f2: 48 8d 54 24 20               	leaq	0x20(%rsp), %rdx
+     1f7: 48 8d b7 b6 00 00 00         	leaq	0xb6(%rdi), %rsi
+     1fe: bf 20 00 00 00               	movl	$0x20, %edi
+     203: 0f 29 4c 24 30               	movaps	%xmm1, 0x30(%rsp)
+     208: 0f 29 44 24 20               	movaps	%xmm0, 0x20(%rsp)
+     20d: e8 00 00 00 00               	callq	0x212 <P1::IQP::Channel::SetAuthenticationToken(std::array<unsigned char, 32ul> const&)+0x32>
+		000000000000020e:  R_X86_64_PLT32	__atomic_store-0x4
+     212: 48 83 c4 48                  	addq	$0x48, %rsp
+     216: c3                           	retq
+     217: 90                           	nop
+     218: 0f 1f 84 00 00 00 00 00      	nopl	(%rax,%rax)

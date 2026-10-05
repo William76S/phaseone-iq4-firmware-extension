@@ -1,0 +1,83 @@
+--- frozen/entry01/runtime_linux.cpp
++++ new/observe04/runtime_linux.cpp
+@@ -1,5 +1,5 @@
+ // Target-only Linux/AArch64 wrapper. Never executed by the host validation tool.
+-#include "module.hpp"
++#include "observe.hpp"
+ #include "../f4_ui_bootstrap_02/sha256.h"
+ #include <elf.h>
+ #include <fcntl.h>
+@@ -15,7 +15,8 @@
+ #if !defined(__aarch64__) || !defined(__linux__)
+ #error This runtime binds only the fixed IQ4 AArch64 Linux original
+ #endif
+-extern "C" {__attribute__((visibility("default"))) iq4::f1::entry01::PublishedObservation iq4_f1_entry_observed;}
++extern "C" {__attribute__((visibility("default"))) iq4::f1::entry01::PublishedObservation iq4_f1_entry_observed;
++__attribute__((visibility("default"))) iq4::f1::observe04::Published iq4_f1_geometry_observed_04;}
+ namespace {
+ using namespace iq4::f1::entry01;
+ // No dlvsym/dlsym, pthread_create, SDK, signal, process exit or retry interface.
+@@ -49,6 +50,8 @@
+ }
+ std::atomic<Address> original_unlock{}, original_try_lock{};int memory_fd=-1;
+ alignas(Module) unsigned char module_storage[sizeof(Module)]{};Module* module=nullptr;
++alignas(iq4::f1::observe04::Collector) unsigned char geometry_storage[sizeof(iq4::f1::observe04::Collector)]{};
++iq4::f1::observe04::Collector* geometry=nullptr;
+ std::atomic<bool> diagnostic_ready{false};thread_local bool inside=false;
+ bool self_read(void*,Address address,void* data,std::size_t n) noexcept {return n<=4096 && pread_all(memory_fd,data,n,address);}
+ // Resolve only the original exact public export, from the actual loaded library.
+@@ -123,6 +126,7 @@
+     memory_fd=ropen("/proc/self/mem");if(memory_fd<0||!user_gate()){rclose(memory_fd);memory_fd=-1;iq4_f1_entry_observed.startup.store(6,std::memory_order_release);return;}
+     iq4_f1_entry_observed.startup.store(3,std::memory_order_release);
+     module=new(module_storage)Module;
++    geometry=new(geometry_storage)iq4::f1::observe04::Collector({nullptr,self_read},0);
+     if(module->configure({nullptr,self_read},{true,true,true,true,0},reinterpret_cast<int(*)(void*)>(original_try_lock.load(std::memory_order_acquire)),reinterpret_cast<int(*)(void*)>(original_unlock.load(std::memory_order_acquire)))){diagnostic_ready.store(true,std::memory_order_release);iq4_f1_entry_observed.startup.store(4,std::memory_order_release);}
+     else iq4_f1_entry_observed.startup.store(7,std::memory_order_release);
+ 
+@@ -136,30 +140,31 @@
+     errno=incoming;
+     const int result=reinterpret_cast<int(*)(void*)>(address)(mutex); // EXACTLY ONCE, first.
+     const int saved=errno;
+-    if(caller==0x6be8ac && result==0 && !inside && diagnostic_ready.load(std::memory_order_acquire)) {
++    if(caller==0x6be8ac && result==0 && diagnostic_ready.load(std::memory_order_acquire) && !inside) {
+         inside=true;Address tp{};asm volatile("mrs %0, tpidr_el0":"=r"(tp));
+-        module->after_unlock({caller,reinterpret_cast<Address>(__builtin_frame_address(0)),tp,reinterpret_cast<Address>(mutex),result});
++        const BoundaryInput input{caller,reinterpret_cast<Address>(__builtin_frame_address(0)),tp,reinterpret_cast<Address>(mutex),result};
++        module->after_unlock(input);
+         iq4::f1::entry01::Observation observed{};
+         if(module->snapshot(observed)){
+             iq4_f1_entry_observed.sequence.fetch_add(1,std::memory_order_acq_rel);
+             iq4_f1_entry_observed.metadata=observed;
+             iq4_f1_entry_observed.sequence.fetch_add(1,std::memory_order_release);
++            // Bound even the inherited original-current getter attempts if
++            // native layout keeps failing before qualified epoch advances.
++            if(observed.native_original_calls>=64 || observed.qualified_boundaries>=64 ||
++               observed.phase==static_cast<unsigned>(iq4::f1::entry01::Phase::Stopped) || observed.phase==static_cast<unsigned>(iq4::f1::entry01::Phase::Hold))
++                diagnostic_ready.store(false,std::memory_order_release);
++            iq4::f1::observe04::Metadata facts{};
++            if(geometry&&geometry->capture(input,observed,iq4_f1_entry_observed.startup.load(std::memory_order_acquire),facts)){
++                iq4_f1_geometry_observed_04.sequence.fetch_add(1,std::memory_order_acq_rel);
++                iq4_f1_geometry_observed_04.metadata=facts;
++                iq4_f1_geometry_observed_04.sequence.fetch_add(1,std::memory_order_release);
++            }
+         }
+         inside=false;
+     }
+     errno=saved;return result;
+ }
+ 
+-extern "C" __attribute__((visibility("default"))) bool iq4_f1_entry_read_metadata(iq4::f1::entry01::Observation* out) noexcept {
+-    // Own ABI. This is a same-thread module integration port, not permission
+-    // to invoke an arbitrary address from a remote shell or another thread.
+-    return out&&module&&diagnostic_ready.load(std::memory_order_acquire)&&module->snapshot(*out);
+-}
+-extern "C" __attribute__((visibility("default"))) bool iq4_f1_entry_concrete_ports(iq4::f1::native_ui02::Native* ui,iq4::f1::native_overlay::Native* overlay) noexcept {
+-    if(!ui||!overlay||!module||!diagnostic_ready.load(std::memory_order_acquire)||!module->observed_owner().queue)return false;
+-    *ui=module->selector_ports();*overlay=module->overlay_ports();return true;
+-}
+-extern "C" __attribute__((visibility("default"))) bool iq4_f1_entry_button_ports(iq4::f1::entry_ports01::Candidates* out) noexcept {
+-    if(!out||!module||!diagnostic_ready.load(std::memory_order_acquire)||!module->observed_owner().queue)return false;
+-    *out=module->button_ports();return true;
+-}
++// Data publications only. Read-only Geo04 deliberately exports no original
++// menu, fill, observer, repaint, stop, or pointer-based integration methods.

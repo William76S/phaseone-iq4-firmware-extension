@@ -1,0 +1,133 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  764764:      	stp	x29, x30, [sp, #-0x140]!
+  764768:      	mov	x29, sp
+  76476c:      	str	x19, [sp, #0x10]
+  764770:      	str	x0, [sp, #0x38]
+  764774:      	str	x1, [sp, #0x30]
+  764778:      	str	w2, [sp, #0x2c]
+  76477c:      	str	x3, [sp, #0x20]
+  764780:      	ldr	x0, [sp, #0x38]
+  764784:      	bl	0x7677a8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4da7c>
+  764788:      	ldr	x0, [sp, #0x38]
+  76478c:      	add	x0, x0, #0x8, lsl #12   // =0x8000
+  764790:      	ldr	x1, [sp, #0x20]
+  764794:      	str	x1, [x0, #0x1888]
+  764798:      	ldr	w0, [sp, #0x2c]
+  76479c:      	ldr	x1, [sp, #0x30]
+  7647a0:      	add	x0, x1, x0
+  7647a4:      	ldrb	w0, [x0]
+  7647a8:      	cmp	w0, #0x0
+  7647ac:      	b.eq	0x7647e0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4aab4>
+  7647b0:      	adrp	x0, 0xc3d000
+  7647b4:      	add	x3, x0, #0xc88
+  7647b8:      	mov	w2, #0x57               // =87
+  7647bc:      	adrp	x0, 0xc3d000
+  7647c0:      	add	x1, x0, #0xcb8
+  7647c4:      	mov	w0, #0x4                // =4
+  7647c8:      	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  7647cc:      	ldr	x0, [sp, #0x38]
+  7647d0:      	strb	wzr, [x0, #0x10]
+  7647d4:      	ldr	x0, [sp, #0x38]
+  7647d8:      	ldrb	w19, [x0, #0x10]
+  7647dc:      	b	0x764934 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4ac08>
+  7647e0:      	add	x0, sp, #0x70
+  7647e4:      	bl	0x99bdfc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x24d5c>
+  7647e8:      	ldr	w1, [sp, #0x2c]
+  7647ec:      	add	x0, sp, #0x70
+  7647f0:      	add	x2, sp, #0x58
+  7647f4:      	mov	x8, x2
+  7647f8:      	mov	w4, #0x0                // =0
+  7647fc:      	mov	w3, #0x174              // =372
+  764800:      	mov	x2, x1
+  764804:      	ldr	x1, [sp, #0x30]
+  764808:      	bl	0x99c790 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x256f0>
+  76480c:      	ldr	w0, [sp, #0x58]
+  764810:      	cmp	w0, #0x0
+  764814:      	b.eq	0x764854 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4ab28>
+  764818:      	add	x0, sp, #0x58
+  76481c:      	bl	0x99bcf0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x24c50>
+  764820:      	mov	x4, x0
+  764824:      	adrp	x0, 0xc3d000
+  764828:      	add	x3, x0, #0xce8
+  76482c:      	mov	w2, #0x63               // =99
+  764830:      	adrp	x0, 0xc3d000
+  764834:      	add	x1, x0, #0xcb8
+  764838:      	mov	w0, #0x2                // =2
+  76483c:      	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  764840:      	ldr	x0, [sp, #0x38]
+  764844:      	strb	wzr, [x0, #0x10]
+  764848:      	ldr	x0, [sp, #0x38]
+  76484c:      	ldrb	w19, [x0, #0x10]
+  764850:      	b	0x76492c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4ac00>
+  764854:      	add	x0, sp, #0x70
+  764858:      	bl	0x998104 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x21064>
+  76485c:      	str	x0, [sp, #0x50]
+  764860:      	add	x0, sp, #0x50
+  764864:      	mov	x1, x0
+  764868:      	ldr	x0, [sp, #0x38]
+  76486c:      	bl	0x764d1c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4aff0>
+  764870:      	and	w0, w0, #0xff
+  764874:      	eor	w0, w0, #0x1
+  764878:      	and	w0, w0, #0xff
+  76487c:      	cmp	w0, #0x0
+  764880:      	b.eq	0x7648a8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4ab7c>
+  764884:      	adrp	x0, 0xc3d000
+  764888:      	add	x3, x0, #0xd10
+  76488c:      	mov	w2, #0x6b               // =107
+  764890:      	adrp	x0, 0xc3d000
+  764894:      	add	x1, x0, #0xcb8
+  764898:      	mov	w0, #0x2                // =2
+  76489c:      	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  7648a0:      	mov	w19, #0x0               // =0
+  7648a4:      	b	0x76492c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4ac00>
+  7648a8:      	add	x2, sp, #0x70
+  7648ac:      	adrp	x0, 0xc3d000
+  7648b0:      	add	x1, x0, #0xd40
+  7648b4:      	mov	x0, x2
+  7648b8:      	bl	0x9978c8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x20828>
+  7648bc:      	str	x0, [sp, #0x48]
+  7648c0:      	add	x0, sp, #0x48
+  7648c4:      	bl	0x997404 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x20364>
+  7648c8:      	cmp	x0, #0x0
+  7648cc:      	cset	w0, ne
+  7648d0:      	and	w0, w0, #0xff
+  7648d4:      	cmp	w0, #0x0
+  7648d8:      	b.eq	0x764924 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4abf8>
+  7648dc:      	add	x0, sp, #0x48
+  7648e0:      	mov	x1, x0
+  7648e4:      	ldr	x0, [sp, #0x38]
+  7648e8:      	bl	0x764fac <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4b280>
+  7648ec:      	and	w0, w0, #0xff
+  7648f0:      	cmp	w0, #0x0
+  7648f4:      	b.eq	0x764908 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4abdc>
+  7648f8:      	ldr	x0, [sp, #0x38]
+  7648fc:      	mov	w1, #0x1                // =1
+  764900:      	strb	w1, [x0, #0x10]
+  764904:      	b	0x764924 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4abf8>
+  764908:      	add	x2, sp, #0x48
+  76490c:      	adrp	x0, 0xc3d000
+  764910:      	add	x1, x0, #0xd40
+  764914:      	mov	x0, x2
+  764918:      	bl	0x997a58 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x209b8>
+  76491c:      	str	x0, [sp, #0x48]
+  764920:      	b	0x7648c0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4ab94>
+  764924:      	ldr	x0, [sp, #0x38]
+  764928:      	ldrb	w19, [x0, #0x10]
+  76492c:      	add	x0, sp, #0x70
+  764930:      	bl	0x99be2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x24d8c>
+  764934:      	mov	w0, w19
+  764938:      	b	0x764950 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4ac24>
+  76493c:      	mov	x19, x0
+  764940:      	add	x0, sp, #0x70
+  764944:      	bl	0x99be2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x24d8c>
+  764948:      	mov	x0, x19
+  76494c:      	bl	0x40a750 <_Unwind_Resume@plt>
+  764950:      	ldr	x19, [sp, #0x10]
+  764954:      	ldp	x29, x30, [sp], #0x140
+  764958:      	ret

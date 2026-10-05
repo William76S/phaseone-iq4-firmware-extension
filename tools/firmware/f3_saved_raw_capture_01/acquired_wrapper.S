@@ -1,0 +1,90 @@
+.text
+.p2align 2
+.global iq4_f3_raw_acquired_wrapper_01
+.type iq4_f3_raw_acquired_wrapper_01,%function
+/* B (not BL) replaces original 8dc4c0 STR. Preserve the actual original LR,
+ * flags and complete SIMD registers across our bounded noexcept notification.
+ * A JUMP26 relocation resolves the final B to exact original 8dc4c4. */
+iq4_f3_raw_acquired_wrapper_01:
+ .cfi_startproc
+ str x1,[x0,#0x48]
+ sub sp,sp,#800
+ .cfi_def_cfa_offset 800
+ stp x29,x30,[sp,#0]
+ .cfi_offset 29,-800
+ .cfi_offset 30,-792
+ mov x29,sp
+ stp x0,x1,[sp,#16]
+ stp x2,x3,[sp,#32]
+ stp x4,x5,[sp,#48]
+ stp x6,x7,[sp,#64]
+ stp x8,x9,[sp,#80]
+ stp x10,x11,[sp,#96]
+ stp x12,x13,[sp,#112]
+ stp x14,x15,[sp,#128]
+ stp x16,x17,[sp,#144]
+ str x18,[sp,#160]
+ mrs x9,nzcv
+ str x9,[sp,#168]
+ mrs x9,fpcr
+ str x9,[sp,#176]
+ mrs x9,fpsr
+ str x9,[sp,#184]
+ stp q0,q1,[sp,#192]
+ stp q2,q3,[sp,#224]
+ stp q4,q5,[sp,#256]
+ stp q6,q7,[sp,#288]
+ stp q8,q9,[sp,#320]
+ stp q10,q11,[sp,#352]
+ stp q12,q13,[sp,#384]
+ stp q14,q15,[sp,#416]
+ stp q16,q17,[sp,#448]
+ stp q18,q19,[sp,#480]
+ stp q20,q21,[sp,#512]
+ stp q22,q23,[sp,#544]
+ stp q24,q25,[sp,#576]
+ stp q26,q27,[sp,#608]
+ stp q28,q29,[sp,#640]
+ stp q30,q31,[sp,#672]
+ bl iq4_f3_raw_acquired_after_01
+ ldp q0,q1,[sp,#192]
+ ldp q2,q3,[sp,#224]
+ ldp q4,q5,[sp,#256]
+ ldp q6,q7,[sp,#288]
+ ldp q8,q9,[sp,#320]
+ ldp q10,q11,[sp,#352]
+ ldp q12,q13,[sp,#384]
+ ldp q14,q15,[sp,#416]
+ ldp q16,q17,[sp,#448]
+ ldp q18,q19,[sp,#480]
+ ldp q20,q21,[sp,#512]
+ ldp q22,q23,[sp,#544]
+ ldp q24,q25,[sp,#576]
+ ldp q26,q27,[sp,#608]
+ ldp q28,q29,[sp,#640]
+ ldp q30,q31,[sp,#672]
+ ldr x9,[sp,#176]
+ msr fpcr,x9
+ ldr x9,[sp,#184]
+ msr fpsr,x9
+ ldr x9,[sp,#168]
+ msr nzcv,x9
+ ldp x0,x1,[sp,#16]
+ ldp x2,x3,[sp,#32]
+ ldp x4,x5,[sp,#48]
+ ldp x6,x7,[sp,#64]
+ ldp x8,x9,[sp,#80]
+ ldp x10,x11,[sp,#96]
+ ldp x12,x13,[sp,#112]
+ ldp x14,x15,[sp,#128]
+ ldp x16,x17,[sp,#144]
+ ldr x18,[sp,#160]
+ ldp x29,x30,[sp,#0]
+ add sp,sp,#800
+ .cfi_def_cfa_offset 0
+ .cfi_restore 29
+ .cfi_restore 30
+ b iq4_f3_raw_acquired_continue_01
+ .cfi_endproc
+.size iq4_f3_raw_acquired_wrapper_01,.-iq4_f3_raw_acquired_wrapper_01
+.section .note.GNU-stack,"",@progbits

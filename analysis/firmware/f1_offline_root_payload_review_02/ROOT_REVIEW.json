@@ -1,0 +1,68 @@
+{
+  "schema": "iq4_root_display12_actual_host_review_02",
+  "time": "2026-10-04T16:51:31.885126+00:00",
+  "tests": [
+    {
+      "environment": "normal",
+      "owned_host_groups": 12,
+      "passed": true,
+      "target_executed": false,
+      "exe_bytes": 35576,
+      "exe_sha256": "a646b9e609bae12b0b391d5b56071b84360dbd8d6ebd5e1c4bd817c7a427544b"
+    },
+    {
+      "environment": "asan_ubsan",
+      "owned_host_groups": 12,
+      "passed": true,
+      "target_executed": false,
+      "exe_bytes": 106672,
+      "exe_sha256": "f98b331ec603b1b88f7559eb22c772c80a56f8dd690def0d9d67f948ecec3710"
+    }
+  ],
+  "source_manifest_sha256": "00d40bbd97f9ba820ee2abc954dd07831b9ee1c98b3195497bd73e8ea15d0ea7",
+  "reviewed_sources": [
+    "payload.c",
+    "payload.h",
+    "wrapper.S",
+    "LINK_INPUT.json",
+    "README.md"
+  ],
+  "commands": [
+    [
+      "/usr/bin/clang",
+      "-std=c11",
+      "-O2",
+      "-ffp-contract=off",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DIQ4_F1_DISPLAY12_HOST",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_stock_display_payload_12/payload.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_stock_display_payload_12/test_payload.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_offline_root_payload_review_02/host_normal"
+    ],
+    [
+      "/usr/bin/clang",
+      "-std=c11",
+      "-O2",
+      "-ffp-contract=off",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DIQ4_F1_DISPLAY12_HOST",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_stock_display_payload_12/payload.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_stock_display_payload_12/test_payload.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_offline_root_payload_review_02/host_asan_ubsan"
+    ]
+  ],
+  "stock_call_once_and_hidden_x8_reviewed": true,
+  "unsupported_rotations_hidden": true,
+  "only_own_host_memory_executed": true,
+  "camera_or_SDK_executed": false,
+  "actual_display_provider_Hardware_verified": false,
+  "installed": false
+}

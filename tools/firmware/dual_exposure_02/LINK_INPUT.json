@@ -1,0 +1,52 @@
+{
+  "schema": "iq4_dual_exposure_exact_thirds_link_02",
+  "replace_only": {
+    "path": "analysis/firmware/dual_exposure_build_01_fixed_fixture/dual.o",
+    "bytes": 15560,
+    "sha256": "cd26146f29f60f26a481d64c2b917e0b404c967f8ebef1b026561c13a4e2abb9"
+  },
+  "replacement": {
+    "path": "analysis/firmware/dual_exposure_build_02/dual.o",
+    "bytes": 16464,
+    "sha256": "723460c19d94403d01977b284f4e1cb8555600e6d4eaf22e5a65465a88dc9057"
+  },
+  "kept_public_symbols": [
+    "iq4_dual_after_open_01",
+    "iq4_dual_cycle_01",
+    "iq4_dual_open_wrapper_01",
+    "iq4_dual_unknown_tag_wrapper_01"
+  ],
+  "added_symbols": [
+    "iq4_dual_long_tick_02",
+    "iq4_dual_long_tick_wrapper_02"
+  ],
+  "added_aliases": [
+    {
+      "symbol": "iq4_stock_dual_quantize_02",
+      "va": 7452676,
+      "kind": "code",
+      "original_first16_LE": "fd7bbda9fd030091e01f00bd00608352"
+    }
+  ],
+  "added_BL_hooks": [
+    {
+      "va": 5473600,
+      "old_hex": "b18c0794",
+      "original_target": 7452676,
+      "target_symbol": "iq4_dual_long_tick_wrapper_02"
+    }
+  ],
+  "existing_UI_hooks_unchanged": true,
+  "stock": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "test_User": {
+    "path": "analysis/firmware/dual_exposure_link_dev_02/P1Linux_RatioMask_JPEG_LVRecording_6.03.34.bin",
+    "bytes": 13225824,
+    "sha256": "858e36063e3f1ea65e1f7956c32639aae5e6aa6e8dd1aad071f98a9da2e44fde"
+  },
+  "target_executed": false,
+  "camera_accessed": false
+}

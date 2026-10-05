@@ -1,0 +1,143 @@
+[
+  {
+    "kind": "host_sdk",
+    "argv": [
+      "/usr/bin/xcrun",
+      "--show-sdk-path"
+    ],
+    "exit": 0,
+    "stdout": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk\n",
+    "stderr": ""
+  },
+  {
+    "kind": "cross_compiler_identity",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "version"
+    ],
+    "exit": 0,
+    "stdout": "0.15.2\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_unique_06/fs06.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_unique_06/test_unique.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/host_posix.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_unique_build_06/unique_normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_execute",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_unique_build_06/unique_normal",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_unique_build_06"
+    ],
+    "exit": 0,
+    "stdout": "{\"groups\":14,\"real_host_files\":true,\"RAW_source_unchanged\":true,\"target_executed\":false,\"camera_accessed\":false}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_unique_06/fs06.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_unique_06/test_unique.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/host_posix.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_unique_build_06/unique_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_execute",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_unique_build_06/unique_sanitized",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_unique_build_06"
+    ],
+    "exit": 0,
+    "stdout": "{\"groups\":14,\"real_host_files\":true,\"RAW_source_unchanged\":true,\"target_executed\":false,\"camera_accessed\":false}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "target_compile_only",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-fPIC",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-omit-frame-pointer",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_unique_build_06/fs06.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_unique_06/fs06.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_unique_build_06/fs06.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "target_import_inspect",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+      "-u",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_unique_build_06/fs06.o"
+    ],
+    "exit": 0,
+    "stdout": "                 U memcpy\n                 U memset\n",
+    "stderr": ""
+  },
+  {
+    "kind": "target_format_inspect",
+    "argv": [
+      "/usr/bin/file",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_unique_build_06/fs06.o"
+    ],
+    "exit": 0,
+    "stdout": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_unique_build_06/fs06.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped\n",
+    "stderr": ""
+  }
+]

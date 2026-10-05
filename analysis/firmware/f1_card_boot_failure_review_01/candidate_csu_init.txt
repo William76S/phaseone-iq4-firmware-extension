@@ -1,0 +1,37 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_02/P1Linux_IQ4_F1_6.03.22.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  9ef0b0: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  9ef0b4: 910003fd     	mov	x29, sp
+  9ef0b8: a90153f3     	stp	x19, x20, [sp, #0x10]
+  9ef0bc: f0002a94     	adrp	x20, 0xf42000
+  9ef0c0: 91210294     	add	x20, x20, #0x840
+  9ef0c4: a9025bf5     	stp	x21, x22, [sp, #0x20]
+  9ef0c8: d0002a95     	adrp	x21, 0xf41000
+  9ef0cc: 913682b5     	add	x21, x21, #0xda0
+  9ef0d0: cb150294     	sub	x20, x20, x21
+  9ef0d4: 2a0003f6     	mov	w22, w0
+  9ef0d8: a90363f7     	stp	x23, x24, [sp, #0x30]
+  9ef0dc: aa0103f7     	mov	x23, x1
+  9ef0e0: aa0203f8     	mov	x24, x2
+  9ef0e4: 9343fe94     	asr	x20, x20, #3
+  9ef0e8: 97e86aaa     	bl	0x409b90 <.init>
+  9ef0ec: b4000174     	cbz	x20, 0x9ef118 <.text+0x5e3ee8>
+  9ef0f0: d2800013     	mov	x19, #0x0               // =0
+  9ef0f4: d503201f     	nop
+  9ef0f8: f8737aa3     	ldr	x3, [x21, x19, lsl #3]
+  9ef0fc: aa1803e2     	mov	x2, x24
+  9ef100: 91000673     	add	x19, x19, #0x1
+  9ef104: aa1703e1     	mov	x1, x23
+  9ef108: 2a1603e0     	mov	w0, w22
+  9ef10c: d63f0060     	blr	x3
+  9ef110: eb13029f     	cmp	x20, x19
+  9ef114: 54ffff21     	b.ne	0x9ef0f8 <.text+0x5e3ec8>
+  9ef118: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  9ef11c: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+  9ef120: a94363f7     	ldp	x23, x24, [sp, #0x30]
+  9ef124: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  9ef128: d65f03c0     	ret

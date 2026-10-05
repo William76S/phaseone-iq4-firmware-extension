@@ -1,0 +1,17 @@
+STATIC ONLY; complete .eh_frame start-to-next-start interval; nearest labels are not private symbols
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6b6d1c: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  6b6d20: 910003fd     	mov	x29, sp
+  6b6d24: f9000fe0     	str	x0, [sp, #0x18]
+  6b6d28: f9400fe1     	ldr	x1, [sp, #0x18]
+  6b6d2c: d2842e00     	mov	x0, #0x2170             // =8560
+  6b6d30: 8b000020     	add	x0, x1, x0
+  6b6d34: 52800021     	mov	w1, #0x1                // =1
+  6b6d38: 97ffff41     	bl	0x6b6a3c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1667c>
+  6b6d3c: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  6b6d40: d65f03c0     	ret

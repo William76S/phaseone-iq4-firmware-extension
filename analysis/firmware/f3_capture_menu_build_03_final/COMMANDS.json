@@ -1,0 +1,725 @@
+[
+  {
+    "kind": "compiler_identity",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "version"
+    ],
+    "exit": 0,
+    "stdout": "0.15.2\n",
+    "stderr": ""
+  },
+  {
+    "kind": "host_compiler_identity",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "--version"
+    ],
+    "exit": 0,
+    "stdout": "Apple clang version 17.0.0 (clang-1700.0.13.3)\nTarget: arm64-apple-darwin24.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin\n",
+    "stderr": ""
+  },
+  {
+    "kind": "host_sdk_identity",
+    "argv": [
+      "/usr/bin/xcrun",
+      "--show-sdk-path"
+    ],
+    "exit": 0,
+    "stdout": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/test_menu.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/policy.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-pthread",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/test_policy.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/policy.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_policy_normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/test_production_disabled.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/runtime.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/policy.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_disabled_normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "1"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "2"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "3"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "4"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "5"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "6"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "7"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "8"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "9"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "10"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "11"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "12"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "13"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "14"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_normal",
+      "15"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_policy_normal"
+    ],
+    "exit": 0,
+    "stdout": "PASS: immutable once-per-node policy/unknown owner/CAS concurrency; no actual source lease\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_disabled_normal"
+    ],
+    "exit": 0,
+    "stdout": "PASS: production EN0 performs no menu or native read/call\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/test_menu.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/policy.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-pthread",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/test_policy.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/policy.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_policy_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/test_production_disabled.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/runtime.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/policy.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_disabled_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "1"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "2"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "3"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "4"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "5"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "6"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "7"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "8"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "9"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "10"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "11"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "12"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "13"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "14"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_menu_sanitized",
+      "15"
+    ],
+    "exit": 0,
+    "stdout": "PASS: own-memory native-menu ABI fixture; no native firmware execution\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_policy_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "PASS: immutable once-per-node policy/unknown owner/CAS concurrency; no actual source lease\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_fixture_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/test_disabled_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "PASS: production EN0 performs no menu or native read/call\n",
+    "stderr": ""
+  },
+  {
+    "kind": "cross_compile_only",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-omit-frame-pointer",
+      "-fno-optimize-sibling-calls",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fPIC",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/policy.o.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/policy.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/policy.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "cross_compile_only",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-omit-frame-pointer",
+      "-fno-optimize-sibling-calls",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fPIC",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/geometry.o.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/geometry.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "cross_compile_only",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-omit-frame-pointer",
+      "-fno-optimize-sibling-calls",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fPIC",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/menu_EN0.o.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/runtime.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/menu_EN0.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "cross_compile_only",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-omit-frame-pointer",
+      "-fno-optimize-sibling-calls",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fPIC",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DIQ4_F3_MENU_PRODUCTION_ENABLE=1",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/menu_EN1_inspection_only.o.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/runtime.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/menu_EN1_inspection_only.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "cross_compile_only",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-g0",
+      "-fPIC",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_03/wrapper.S",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/wrapper.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "static_disassemble_ET_REL",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-d",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/wrapper.o"
+    ],
+    "exit": 0,
+    "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/wrapper.o:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n0000000000000000 <iq4_f3_file_settings_append_wrapper_01>:\n       0: d10483ff     \tsub\tsp, sp, #0x120\n       4: a9117bfd     \tstp\tx29, x30, [sp, #0x110]\n       8: 910003fd     \tmov\tx29, sp\n       c: f90083e0     \tstr\tx0, [sp, #0x100]\n      10: d28b1710     \tmov\tx16, #0x58b8            // =22712\n      14: f2a009d0     \tmovk\tx16, #0x4e, lsl #16\n      18: d63f0200     \tblr\tx16\n      1c: a90007e0     \tstp\tx0, x1, [sp]\n      20: a9010fe2     \tstp\tx2, x3, [sp, #0x10]\n      24: a90217e4     \tstp\tx4, x5, [sp, #0x20]\n      28: a9031fe6     \tstp\tx6, x7, [sp, #0x30]\n      2c: f90023e8     \tstr\tx8, [sp, #0x40]\n      30: d53b4209     \tmrs\tx9, NZCV\n      34: f90027e9     \tstr\tx9, [sp, #0x48]\n      38: ad0287e0     \tstp\tq0, q1, [sp, #0x50]\n      3c: ad038fe2     \tstp\tq2, q3, [sp, #0x70]\n      40: ad0497e4     \tstp\tq4, q5, [sp, #0x90]\n      44: ad059fe6     \tstp\tq6, q7, [sp, #0xb0]\n      48: f94083e0     \tldr\tx0, [sp, #0x100]\n      4c: f9408fe1     \tldr\tx1, [sp, #0x118]\n      50: 94000000     \tbl\t0x50 <iq4_f3_file_settings_append_wrapper_01+0x50>\n      54: ad4287e0     \tldp\tq0, q1, [sp, #0x50]\n      58: ad438fe2     \tldp\tq2, q3, [sp, #0x70]\n      5c: ad4497e4     \tldp\tq4, q5, [sp, #0x90]\n      60: ad459fe6     \tldp\tq6, q7, [sp, #0xb0]\n      64: f94027e9     \tldr\tx9, [sp, #0x48]\n      68: d51b4209     \tmsr\tNZCV, x9\n      6c: a94007e0     \tldp\tx0, x1, [sp]\n      70: a9410fe2     \tldp\tx2, x3, [sp, #0x10]\n      74: a94217e4     \tldp\tx4, x5, [sp, #0x20]\n      78: a9431fe6     \tldp\tx6, x7, [sp, #0x30]\n      7c: f94023e8     \tldr\tx8, [sp, #0x40]\n      80: a9517bfd     \tldp\tx29, x30, [sp, #0x110]\n      84: 910483ff     \tadd\tsp, sp, #0x120\n      88: d65f03c0     \tret\n",
+    "stderr": ""
+  },
+  {
+    "kind": "static_relocations_ET_REL",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-r",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/policy.o"
+    ],
+    "exit": 0,
+    "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/policy.o:\tfile format elf64-littleaarch64\n\nRELOCATION RECORDS FOR [.text.iq4_f3_mode_get_01]:\nOFFSET           TYPE                     VALUE\n0000000000000000 R_AARCH64_ADR_PREL_PG_HI21 .bss.requested_settings\n0000000000000004 R_AARCH64_ADD_ABS_LO12_NC .bss.requested_settings\n\nRELOCATION RECORDS FOR [.text.iq4_f3_scale_get_01]:\nOFFSET           TYPE                     VALUE\n0000000000000000 R_AARCH64_ADR_PREL_PG_HI21 .bss.requested_settings\n0000000000000004 R_AARCH64_ADD_ABS_LO12_NC .bss.requested_settings\n\nRELOCATION RECORDS FOR [.text.iq4_f3_quality_get_03]:\nOFFSET           TYPE                     VALUE\n0000000000000000 R_AARCH64_ADR_PREL_PG_HI21 .bss.requested_settings\n0000000000000004 R_AARCH64_ADD_ABS_LO12_NC .bss.requested_settings\n\nRELOCATION RECORDS FOR [.text.iq4_f3_mode_set_on_ui_01]:\nOFFSET           TYPE                     VALUE\n0000000000000010 R_AARCH64_ADR_PREL_PG_HI21 .bss.requested_settings\n0000000000000014 R_AARCH64_LDST32_ABS_LO12_NC .bss.requested_settings\n0000000000000018 R_AARCH64_ADR_PREL_PG_HI21 .bss.requested_settings\n000000000000001c R_AARCH64_ADD_ABS_LO12_NC .bss.requested_settings\n\nRELOCATION RECORDS FOR [.text.iq4_f3_scale_set_on_ui_01]:\nOFFSET           TYPE                     VALUE\n0000000000000010 R_AARCH64_ADR_PREL_PG_HI21 .bss.requested_settings\n0000000000000014 R_AARCH64_ADR_PREL_PG_HI21 .bss.requested_settings\n0000000000000018 R_AARCH64_ADD_ABS_LO12_NC .bss.requested_settings\n000000000000001c R_AARCH64_LDST32_ABS_LO12_NC .bss.requested_settings\n\nRELOCATION RECORDS FOR [.text.iq4_f3_quality_set_on_ui_03]:\nOFFSET           TYPE                     VALUE\n0000000000000014 R_AARCH64_ADR_PREL_PG_HI21 .bss.requested_settings\n0000000000000018 R_AARCH64_ADR_PREL_PG_HI21 .bss.requested_settings\n000000000000001c R_AARCH64_ADD_ABS_LO12_NC .bss.requested_settings\n0000000000000020 R_AARCH64_LDST32_ABS_LO12_NC .bss.requested_settings\n\nRELOCATION RECORDS FOR [.text.iq4_f3_policy_begin_01]:\nOFFSET           TYPE                     VALUE\n0000000000000044 R_AARCH64_ADR_PREL_PG_HI21 .bss.requested_settings\n0000000000000048 R_AARCH64_ADD_ABS_LO12_NC .bss.requested_settings\n000000000000009c R_AARCH64_CALL26         iq4_export_geometry\n\nRELOCATION RECORDS FOR [.eh_frame]:\nOFFSET           TYPE                     VALUE\n000000000000001c R_AARCH64_PREL32         .text.iq4_f3_mode_get_01\n0000000000000030 R_AARCH64_PREL32         .text.iq4_f3_scale_get_01\n0000000000000044 R_AARCH64_PREL32         .text.iq4_f3_quality_get_03\n0000000000000058 R_AARCH64_PREL32         .text.iq4_f3_mode_set_on_ui_01\n000000000000006c R_AARCH64_PREL32         .text.iq4_f3_scale_set_on_ui_01\n0000000000000080 R_AARCH64_PREL32         .text.iq4_f3_quality_set_on_ui_03\n0000000000000094 R_AARCH64_PREL32         .text.iq4_f3_policy_begin_01\n00000000000000c0 R_AARCH64_PREL32         .text.iq4_f3_policy_read_01\n00000000000000d4 R_AARCH64_PREL32         .text.iq4_f3_policy_finish_01\n",
+    "stderr": ""
+  },
+  {
+    "kind": "static_relocations_ET_REL",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-r",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/menu_EN1_inspection_only.o"
+    ],
+    "exit": 0,
+    "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/menu_EN1_inspection_only.o:\tfile format elf64-littleaarch64\n\nRELOCATION RECORDS FOR [.text.iq4_f3_after_file_settings_append_01]:\nOFFSET           TYPE                     VALUE\n0000000000000094 R_AARCH64_ADR_PREL_PG_HI21 .bss.format_menu\n00000000000000b4 R_AARCH64_ADR_PREL_PG_HI21 .bss.building\n00000000000000b8 R_AARCH64_LDST8_ABS_LO12_NC .bss.building\n00000000000000c0 R_AARCH64_ADR_PREL_PG_HI21 .bss.bound_parent\n00000000000000c4 R_AARCH64_LDST64_ABS_LO12_NC .bss.bound_parent\n00000000000000d8 R_AARCH64_ADR_PREL_PG_HI21 .bss.menu_table\n00000000000000dc R_AARCH64_ADD_ABS_LO12_NC .bss.menu_table\n00000000000001ac R_AARCH64_ADR_PREL_PG_HI21 .bss.item_table\n00000000000001b0 R_AARCH64_ADD_ABS_LO12_NC .bss.item_table\n000000000000025c R_AARCH64_LDST8_ABS_LO12_NC .bss.building\n0000000000000260 R_AARCH64_ADR_PREL_PG_HI21 .text.menu_name\n0000000000000264 R_AARCH64_ADD_ABS_LO12_NC .text.menu_name\n000000000000026c R_AARCH64_ADR_PREL_PG_HI21 .text.menu_value\n0000000000000270 R_AARCH64_ADD_ABS_LO12_NC .text.menu_value\n000000000000027c R_AARCH64_ADR_PREL_PG_HI21 .text.item_name\n0000000000000280 R_AARCH64_ADD_ABS_LO12_NC .text.item_name\n0000000000000284 R_AARCH64_ADR_PREL_PG_HI21 .text.item_value\n0000000000000288 R_AARCH64_ADD_ABS_LO12_NC .text.item_value\n0000000000000290 R_AARCH64_ADR_PREL_PG_HI21 .text.activate\n0000000000000294 R_AARCH64_ADD_ABS_LO12_NC .text.activate\n00000000000002a4 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_menu\n00000000000002c8 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_menu\n00000000000002cc R_AARCH64_ADR_PREL_PG_HI21 .bss.menu_table+0x10\n00000000000002d0 R_AARCH64_ADD_ABS_LO12_NC .bss.menu_table+0x10\n00000000000002e0 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_menu\n00000000000002e4 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_menu\n00000000000002fc R_AARCH64_LDST64_ABS_LO12_NC .bss.size_menu\n000000000000030c R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_menu\n0000000000000310 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_menu\n0000000000000328 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_menu\n0000000000000338 R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.0\n000000000000033c R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.0\n000000000000035c R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.0\n0000000000000360 R_AARCH64_ADR_PREL_PG_HI21 .bss.item_table+0x10\n0000000000000364 R_AARCH64_ADD_ABS_LO12_NC .bss.item_table+0x10\n0000000000000374 R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.1\n0000000000000378 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.1\n0000000000000398 R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.1\n00000000000003a0 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.1\n00000000000003ac R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.2\n00000000000003b0 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.2\n00000000000003d0 R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.2\n00000000000003d8 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.2\n00000000000003e4 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.0\n00000000000003e8 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.0\n0000000000000408 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.0\n0000000000000410 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.0\n000000000000041c R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.1\n0000000000000420 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.1\n0000000000000440 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.1\n0000000000000448 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.1\n0000000000000454 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.2\n0000000000000458 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.2\n0000000000000478 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.2\n0000000000000480 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.2\n000000000000048c R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.3\n0000000000000490 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.3\n00000000000004b0 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.3\n00000000000004b8 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.3\n00000000000004c4 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.4\n00000000000004c8 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.4\n00000000000004e8 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.4\n00000000000004f0 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.4\n00000000000004fc R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.5\n0000000000000500 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.5\n0000000000000520 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.5\n0000000000000528 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.5\n0000000000000534 R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_items.0\n0000000000000538 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.0\n0000000000000558 R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_items.0\n0000000000000560 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.0\n000000000000056c R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_items.1\n0000000000000570 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.1\n0000000000000590 R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_items.1\n0000000000000598 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.1\n00000000000005a8 R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_items.2\n00000000000005ac R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.2\n00000000000005d4 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.2\n00000000000005dc R_AARCH64_LDST64_ABS_LO12_NC .bss.format_menu\n00000000000005e0 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.0\n00000000000005e8 R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.1\n00000000000005ec R_AARCH64_LDST64_ABS_LO12_NC .bss.format_menu\n00000000000005f0 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.1\n00000000000005f8 R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.2\n00000000000005fc R_AARCH64_LDST64_ABS_LO12_NC .bss.format_menu\n0000000000000600 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.2\n0000000000000608 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.0\n000000000000060c R_AARCH64_LDST64_ABS_LO12_NC .bss.size_menu\n0000000000000610 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.0\n0000000000000618 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.1\n000000000000061c R_AARCH64_LDST64_ABS_LO12_NC .bss.size_menu\n0000000000000620 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.1\n0000000000000628 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.2\n000000000000062c R_AARCH64_LDST64_ABS_LO12_NC .bss.size_menu\n0000000000000630 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.2\n0000000000000638 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.3\n000000000000063c R_AARCH64_LDST64_ABS_LO12_NC .bss.size_menu\n0000000000000640 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.3\n0000000000000648 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.4\n000000000000064c R_AARCH64_LDST64_ABS_LO12_NC .bss.size_menu\n0000000000000650 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.4\n0000000000000658 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.5\n000000000000065c R_AARCH64_LDST64_ABS_LO12_NC .bss.size_menu\n0000000000000660 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.5\n0000000000000668 R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_items.0\n000000000000066c R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_menu\n0000000000000670 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.0\n0000000000000678 R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_items.1\n000000000000067c R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_menu\n0000000000000680 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.1\n0000000000000688 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_menu\n000000000000068c R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.2\n0000000000000694 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_menu\n0000000000000698 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_menu\n00000000000006a0 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_menu\n00000000000006a4 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_menu\n00000000000006ac R_AARCH64_LDST64_ABS_LO12_NC .bss.format_menu\n00000000000006b8 R_AARCH64_LDST64_ABS_LO12_NC .bss.bound_parent\n00000000000006bc R_AARCH64_LDST8_ABS_LO12_NC .bss.building\n00000000000006dc R_AARCH64_LDST64_ABS_LO12_NC .bss.format_menu\n\nRELOCATION RECORDS FOR [.text.menu_name]:\nOFFSET           TYPE                     VALUE\n0000000000000000 R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_menu\n0000000000000004 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_menu\n0000000000000008 R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0x17\n000000000000000c R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0x17\n0000000000000010 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_menu\n0000000000000014 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_menu\n000000000000001c R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0xa\n0000000000000020 R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0xa\n0000000000000028 R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1\n000000000000002c R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1\n0000000000000034 R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0x26\n0000000000000038 R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0x26\n\nRELOCATION RECORDS FOR [.text.menu_value]:\nOFFSET           TYPE                     VALUE\n0000000000000010 R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_menu\n000000000000001c R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_menu\n000000000000002c R_AARCH64_CALL26         iq4_f3_scale_get_01\n0000000000000030 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_menu\n0000000000000034 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_menu\n0000000000000040 R_AARCH64_CALL26         iq4_f3_mode_get_01\n000000000000004c R_AARCH64_ADR_PREL_PG_HI21 .rodata..Lswitch.table.menu_value\n0000000000000050 R_AARCH64_ADD_ABS_LO12_NC .rodata..Lswitch.table.menu_value\n0000000000000054 R_AARCH64_ADR_PREL_PG_HI21 .data.rel.ro.format_names\n0000000000000058 R_AARCH64_ADD_ABS_LO12_NC .data.rel.ro.format_names\n0000000000000068 R_AARCH64_CALL26         iq4_f3_quality_get_03\n000000000000008c R_AARCH64_ADR_PREL_PG_HI21 .data.rel.ro.size_names\n0000000000000090 R_AARCH64_ADD_ABS_LO12_NC .data.rel.ro.size_names\n000000000000009c R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0x27\n00000000000000a0 R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0x27\n00000000000000a4 R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0x26\n00000000000000a8 R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0x26\n0000000000000154 R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0x26\n0000000000000158 R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0x26\n\nRELOCATION RECORDS FOR [.text.item_name]:\nOFFSET           TYPE                     VALUE\n0000000000000004 R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.0\n0000000000000008 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.0\n0000000000000014 R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.1\n0000000000000018 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.1\n0000000000000024 R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.2\n0000000000000028 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.2\n0000000000000034 R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_items.0\n0000000000000038 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.0\n0000000000000044 R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_items.1\n0000000000000048 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.1\n0000000000000054 R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_items.2\n0000000000000058 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.2\n0000000000000064 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.0\n0000000000000068 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.0\n0000000000000074 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.1\n0000000000000078 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.1\n0000000000000084 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.2\n0000000000000088 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.2\n0000000000000094 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.3\n0000000000000098 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.3\n00000000000000a4 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.4\n00000000000000a8 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.4\n00000000000000b4 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.5\n00000000000000b8 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.5\n00000000000000c4 R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0x26\n00000000000000c8 R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0x26\n00000000000000cc R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0x26\n00000000000000d0 R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0x26\n0000000000000120 R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0x26\n0000000000000124 R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0x26\n000000000000013c R_AARCH64_ADR_PREL_PG_HI21 .data.rel.ro.format_names\n0000000000000140 R_AARCH64_ADD_ABS_LO12_NC .data.rel.ro.format_names\n0000000000000180 R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0x26\n0000000000000184 R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0x26\n000000000000019c R_AARCH64_ADR_PREL_PG_HI21 .rodata.quality_names.rel\n00000000000001a0 R_AARCH64_ADD_ABS_LO12_NC .rodata.quality_names.rel\n0000000000000208 R_AARCH64_ADR_PREL_PG_HI21 .data.rel.ro.size_names\n000000000000020c R_AARCH64_ADD_ABS_LO12_NC .data.rel.ro.size_names\n\nRELOCATION RECORDS FOR [.text.item_value]:\nOFFSET           TYPE                     VALUE\n0000000000000018 R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0x26\n000000000000001c R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0x26\n0000000000000024 R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.0\n0000000000000028 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.0\n0000000000000034 R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.1\n0000000000000038 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.1\n0000000000000044 R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.2\n0000000000000048 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.2\n0000000000000054 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.0\n0000000000000058 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.0\n0000000000000064 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.1\n0000000000000068 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.1\n0000000000000074 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.2\n0000000000000078 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.2\n0000000000000084 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.3\n0000000000000088 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.3\n0000000000000094 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.4\n0000000000000098 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.4\n00000000000000a4 R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.5\n00000000000000a8 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.5\n00000000000000b4 R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0x26\n00000000000000b8 R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0x26\n00000000000000e4 R_AARCH64_ADR_PREL_PG_HI21 .rodata.format_modes\n00000000000000e8 R_AARCH64_ADD_ABS_LO12_NC .rodata.format_modes\n00000000000000f0 R_AARCH64_CALL26         iq4_f3_mode_get_01\n00000000000000f8 R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0x9e\n00000000000000fc R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0x9e\n0000000000000164 R_AARCH64_CALL26         iq4_f3_scale_get_01\n000000000000016c R_AARCH64_ADR_PREL_PG_HI21 .rodata.str1.1+0x9e\n0000000000000170 R_AARCH64_ADD_ABS_LO12_NC .rodata.str1.1+0x9e\n\nRELOCATION RECORDS FOR [.text.activate]:\nOFFSET           TYPE                     VALUE\n000000000000000c R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.0\n0000000000000010 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.0\n000000000000001c R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.1\n0000000000000020 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.1\n000000000000002c R_AARCH64_ADR_PREL_PG_HI21 .bss.format_items.2\n0000000000000030 R_AARCH64_LDST64_ABS_LO12_NC .bss.format_items.2\n000000000000003c R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.0\n0000000000000040 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.0\n000000000000004c R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.1\n0000000000000050 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.1\n000000000000005c R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.2\n0000000000000060 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.2\n000000000000006c R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.3\n0000000000000070 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.3\n000000000000007c R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.4\n0000000000000080 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.4\n000000000000008c R_AARCH64_ADR_PREL_PG_HI21 .bss.size_items.5\n0000000000000090 R_AARCH64_LDST64_ABS_LO12_NC .bss.size_items.5\n000000000000009c R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_items.0\n00000000000000a0 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.0\n00000000000000ac R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_items.1\n00000000000000b0 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.1\n00000000000000bc R_AARCH64_ADR_PREL_PG_HI21 .bss.quality_items.2\n00000000000000c0 R_AARCH64_LDST64_ABS_LO12_NC .bss.quality_items.2\n00000000000000ec R_AARCH64_ADR_PREL_PG_HI21 .rodata.format_modes\n00000000000000f0 R_AARCH64_ADD_ABS_LO12_NC .rodata.format_modes\n00000000000000f8 R_AARCH64_CALL26         iq4_f3_mode_set_on_ui_01\n0000000000000130 R_AARCH64_CALL26         iq4_f3_scale_set_on_ui_01\n000000000000013c R_AARCH64_CALL26         iq4_f3_quality_get_03\n0000000000000154 R_AARCH64_CALL26         iq4_f3_quality_get_03\n000000000000016c R_AARCH64_CALL26         iq4_f3_quality_get_03\n0000000000000174 R_AARCH64_CALL26         iq4_f3_quality_set_on_ui_03\n\nRELOCATION RECORDS FOR [.data.rel.ro.size_names]:\nOFFSET           TYPE                     VALUE\n0000000000000000 R_AARCH64_ABS64          .rodata.str1.1+0x33\n0000000000000008 R_AARCH64_ABS64          .rodata.str1.1+0x38\n0000000000000010 R_AARCH64_ABS64          .rodata.str1.1+0x3c\n0000000000000018 R_AARCH64_ABS64          .rodata.str1.1+0x40\n0000000000000020 R_AARCH64_ABS64          .rodata.str1.1+0x44\n0000000000000028 R_AARCH64_ABS64          .rodata.str1.1+0x53\n\nRELOCATION RECORDS FOR [.data.rel.ro.format_names]:\nOFFSET           TYPE                     VALUE\n0000000000000000 R_AARCH64_ABS64          .rodata.str1.1+0x62\n0000000000000008 R_AARCH64_ABS64          .rodata.str1.1+0x66\n0000000000000010 R_AARCH64_ABS64          .rodata.str1.1+0x6b\n\nRELOCATION RECORDS FOR [.rodata.quality_names.rel]:\nOFFSET           TYPE                     VALUE\n0000000000000000 R_AARCH64_PREL32         .rodata.str1.1+0x76\n0000000000000004 R_AARCH64_PREL32         .L.str.15+0x4\n0000000000000008 R_AARCH64_PREL32         .L.str.16+0x8\n\nRELOCATION RECORDS FOR [.eh_frame]:\nOFFSET           TYPE                     VALUE\n000000000000001c R_AARCH64_PREL32         .text.iq4_f3_after_file_settings_append_01\n000000000000004c R_AARCH64_PREL32         .text.menu_name\n0000000000000060 R_AARCH64_PREL32         .text.menu_value\n0000000000000080 R_AARCH64_PREL32         .text.item_name\n0000000000000094 R_AARCH64_PREL32         .text.item_value\n00000000000000b8 R_AARCH64_PREL32         .text.activate\n",
+    "stderr": ""
+  },
+  {
+    "kind": "static_relocations_ET_REL",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-r",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/wrapper.o"
+    ],
+    "exit": 0,
+    "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_03_final/wrapper.o:\tfile format elf64-littleaarch64\n\nRELOCATION RECORDS FOR [.text]:\nOFFSET           TYPE                     VALUE\n0000000000000050 R_AARCH64_CALL26         iq4_f3_after_file_settings_append_01\n\nRELOCATION RECORDS FOR [.eh_frame]:\nOFFSET           TYPE                     VALUE\n000000000000001c R_AARCH64_PREL32         .text\n",
+    "stderr": ""
+  }
+]

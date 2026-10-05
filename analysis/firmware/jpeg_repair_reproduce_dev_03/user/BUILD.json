@@ -1,0 +1,66 @@
+{
+  "schema": "iq4_actual_F1_F3_F4_User_link_01",
+  "spec": {
+    "path": "tools/firmware/f1_f3_f4_user_integration_05/INPUTS_JPEG_DEV_03.json",
+    "bytes": 45720,
+    "sha256": "6fa0de04453388f081818eb8a03f55d6f18fcadf6fb9e657b15432c15670733f"
+  },
+  "stock": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "compiler": {
+    "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+    "bytes": 188226560,
+    "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c"
+  },
+  "compiled": [
+    {
+      "source": {
+        "path": "tools/firmware/f1_f3_f4_user_integration_05/initialize.c",
+        "bytes": 2965,
+        "sha256": "dbac211a3d79b24c94c5471b8d4bd9458e22ff885462478e14afebf5a66f889e"
+      },
+      "object": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_03/user/initialize.o",
+        "bytes": 6416,
+        "sha256": "9d67650c28c696ac7b00e4cd67ee15893bfb928b3fb1adeb784ac13731bbd2ca"
+      }
+    },
+    {
+      "source": {
+        "path": "tools/firmware/native_linked_contract_01/contract.c",
+        "bytes": 2309,
+        "sha256": "2e263730f30e6599301113a8e6eb2b0bcba38e392d7136bf17c3995de8622b58"
+      },
+      "object": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_03/user/contract.o",
+        "bytes": 137536,
+        "sha256": "f082417891ffe3638c263afdf764a05a3c71d91b55c4e28835d2c18f6ac7cdd4"
+      }
+    }
+  ],
+  "User": {
+    "path": "analysis/firmware/jpeg_repair_reproduce_dev_03/user/P1Linux_RatioMask_JPEG_LVRecording_6.03.34.bin",
+    "bytes": 13227744,
+    "sha256": "75ea0a08252cfb3379e7e99335962d686a0bf47a4a417960b68fb846bb924ecf"
+  },
+  "link_report": {
+    "path": "analysis/firmware/jpeg_repair_reproduce_dev_03/user/LINK_REPORT.json",
+    "bytes": 131639,
+    "sha256": "fe5c3020eb6fcdcb656dbd6ebb02f16f0f0331efbb9bebe685f4cf7c801a9467"
+  },
+  "object_count": 65,
+  "linked_contract_sealed": true,
+  "F3_manual_full_RAW_implementation_linked": true,
+  "F3_SD_automatic_implementation_linked": true,
+  "F3_XQD_automatic_implementation_linked": true,
+  "F3_XQD_automatic_accepted": false,
+  "target_executed": false,
+  "camera_accessed": false,
+  "full_RAW_native_execution_accepted": false,
+  "in_camera_recording_accepted": false,
+  "persistent_recovery_verified": false,
+  "persistent_installation_safe": false
+}

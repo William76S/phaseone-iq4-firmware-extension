@@ -1,0 +1,55 @@
+[
+  {
+    "argv": [
+      "clang",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "tools/firmware/native_linked_contract_01/contract.c",
+      "tools/firmware/native_linked_contract_01/test_contract.c",
+      "-o",
+      "analysis/firmware/native_linked_contract_host_check_02/normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/native_linked_contract_host_check_02/normal"
+    ],
+    "exit": 0,
+    "stdout": "10 actual host manifest/byte/failure checks; no target execution\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "clang",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-sanitize-recover=all",
+      "-fno-omit-frame-pointer",
+      "tools/firmware/native_linked_contract_01/contract.c",
+      "tools/firmware/native_linked_contract_01/test_contract.c",
+      "-o",
+      "analysis/firmware/native_linked_contract_host_check_02/asan_ubsan"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/native_linked_contract_host_check_02/asan_ubsan"
+    ],
+    "exit": 0,
+    "stdout": "10 actual host manifest/byte/failure checks; no target execution\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,194 @@
+{
+  "schema": "iq4_F4_initialization_readonly_review_01",
+  "baseline": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "sources": [
+    {
+      "path": "tools/firmware/f4_native_entry_03/entry.c",
+      "bytes": 5331,
+      "sha256": "9ec863a62cd029ef67be539a3f1eccf3ee117b75541cef6836586f6242253ddd"
+    },
+    {
+      "path": "tools/firmware/f4_native_entry_03/test_entry.c",
+      "bytes": 5998,
+      "sha256": "0c03959e44e283dc621ab4b22e807ceb2a771b467769f6ca5ff99ef9d49d1b96"
+    },
+    {
+      "path": "tools/firmware/f4_native_menu_03/menu.c",
+      "bytes": 8338,
+      "sha256": "d97e27f8a59acb0f06200522e992b645c2da61b9842ce32a68d21793b8f69b51"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/session.c",
+      "bytes": 13489,
+      "sha256": "adcd73f967cbe48116a79c0bc048a1626568d42f92205fe87bac63d3143b262d"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/test_session.c",
+      "bytes": 9927,
+      "sha256": "ad2498af585b2accb231bd787b56596b38776bcbf5605a6f089c3054a2d9dc91"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/native_calls.cpp",
+      "bytes": 2500,
+      "sha256": "c732b54b4eca961a81f8ccaf8af321b9b0bde261876c8d5ddd663f16db33ce4c"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_03/source.c",
+      "bytes": 18473,
+      "sha256": "81b3c096134a9c2d76cbb16003766350b51758d9eeb5ea57456868b684b91a81"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_03/test_source.c",
+      "bytes": 10207,
+      "sha256": "b286b72547abc7c430e8f8b6f3e32de1267ac785c974aa2e0f85f2e3d107b87e"
+    }
+  ],
+  "windows": [
+    {
+      "name": "Listener_SetObserver",
+      "va": "0x710380",
+      "end": "0x7103a4",
+      "file_offset": "0x310380",
+      "bytes": 36,
+      "sha256": "379cc9b11e104e40d169b5a2ac3d575d49d44148bfa710bba82c6621f8987eec",
+      "hex": "ff4300d1e00700f9e10300f9e00740f9e10340f9012000f91f2003d5ff430091c0035fd6",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x710380",
+        "--stop-address=0x7103a4",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "Listener_GetQueueOwner",
+      "va": "0x7103a4",
+      "end": "0x7103bc",
+      "file_offset": "0x3103a4",
+      "bytes": 24,
+      "sha256": "38e5c69e17ab8c885f44ddd7e19cb960333b3edcff1a76be211997b2ed84ae90",
+      "hex": "ff4300d1e00700f9e00740f9001840f9ff430091c0035fd6",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x7103a4",
+        "--stop-address=0x7103bc",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "GlobalRecursiveMutex_UniqueLock",
+      "va": "0x712790",
+      "end": "0x7127c4",
+      "file_offset": "0x312790",
+      "bytes": 52,
+      "sha256": "76e0af9433d10e8edc996d0dc9f4776a1add857d0af759ecc5efd6fa1be13f60",
+      "hex": "fd7bbea9fd030091e00f00f9802800d001e01691e00f40f9010000f9004200f000000f911effff971f2003d5fd7bc2a8c0035fd6",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x712790",
+        "--stop-address=0x7127c4",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "NativeMutex_ToPthread",
+      "va": "0x6beddc",
+      "end": "0x6bedf0",
+      "file_offset": "0x2beddc",
+      "bytes": 20,
+      "sha256": "d4a9901c0c32b5d8f72fa768ce8b083996b8e4ad7e80b62a5dcbd5294aeb081d",
+      "hex": "ff4300d1e00700f9e00740f9ff430091c0035fd6",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x6beddc",
+        "--stop-address=0x6bedf0",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "observer_construct",
+      "va": "0x70fe3c",
+      "end": "0x70fe80",
+      "offset": "0x30fe3c",
+      "sha256": "72cfbbaf527d3af31de90471f5f3e273bde3eadfe0eac12ddd32ad802276242b",
+      "hex": "ff8300d1e00f00f9e10b00f9e20700f9a028009001602a91e00f40f9010000f9e00f40f9e10740f9010400f9e00f40f9e10b40f9010800f91f2003d5ff830091c0035fd6",
+      "existing_evidence": "analysis/firmware/f4_native_source_02/static/EXACT.json",
+      "raw_bytes_verified": true
+    },
+    {
+      "name": "observer_register",
+      "va": "0x70fed8",
+      "end": "0x70ff08",
+      "offset": "0x30fed8",
+      "sha256": "bde39012f5658168bc9950161edcb06a5477ad86f006efb9117ab3eead821d9c",
+      "hex": "fd7bbea9fd030091e00f00f9e10b00f9e00f40f9000440f9e20f40f9e10b40f95a0000941f2003d5fd7bc2a8c0035fd6",
+      "existing_evidence": "analysis/firmware/f4_native_source_02/static/EXACT.json",
+      "raw_bytes_verified": true
+    },
+    {
+      "name": "queue_register",
+      "va": "0x710060",
+      "end": "0x71015c",
+      "offset": "0x310060",
+      "sha256": "c098b1e7e534b11f8af9a721cb578369eff66de99f907e7149f8ad2ae15153ee",
+      "hex": "fd7bbba9fd030091f35301a9e01f00f9e11b00f9e21700f9ff2700f9e0030191c4090094e0bc019000602491b1bafe97001c001200000052001c00121f000071c000005421008052e0bc019000602491d0000094e02700f9e0030191c2090094e02740f91f0000f140010054e02740f9e11b40f949ffff97e01740f9d299f797e10300aae02740f9e60100940a000014001180d25be7f397f30300aae01f40f9e20300aae11b40f9e00313aa06010094f32700f9e11740f9e02740f9990000940c000014f30300aae0030191a6090094e00313aa87e9f397f40300aa011180d2e00313aa27e7f397e00314aa81e9f397f35341a9fd7bc5a8c0035fd6",
+      "existing_evidence": "analysis/firmware/f4_native_source_02/static/EXACT.json",
+      "raw_bytes_verified": true
+    },
+    {
+      "name": "queue_unregister",
+      "va": "0x71015c",
+      "end": "0x7102d0",
+      "offset": "0x31015c",
+      "sha256": "ee474a02068d072ba2fe7de1e8b34a3827feae0ea24ec51eb8b58c6dcf3efd4b",
+      "hex": "fd7bb9a9fd030091f30b00f9e01f00f9e11b00f9e21700f9ff3700f9e023019185090094e01740f9a899f797e02f00f9e01f40f900a001916fbafe97001c001200000052001c00121f00007100070054e01f40f900a00191010080526fbafe97e03300f9e01f40f900a00191e13340f974bafe97001c001200000052001c00121f00007140050054e03340f978bafe97e02b00f9e02b40f9f96ef597e10300aae01b40f91f0001ebe0179f1a001c00121f000071c0020054e02b40f963000094e10300aae02f40f91f0001ebe0179f1a001c00121f000071a0010054e02b40f9b6b9fe97e10300aae01740f91f0001ebe0179f1a001c00121f00007180000054e02b40f9e03700f909000014e03340f9000040f900000191010040f9e03340f920003fd6e03300f9cfffff17e02301914e090094e03740f91f0000f140010054e13740f9e01f40f90b00009406000014f30300aae023019144090094e00313aa25e9f3971f2003d5f30b40f9fd7bc7a8c0035fd6",
+      "existing_evidence": "analysis/firmware/f4_native_source_02/static/EXACT.json",
+      "raw_bytes_verified": true
+    },
+    {
+      "name": "listener_construct",
+      "va": "0x710524",
+      "end": "0x710614",
+      "offset": "0x310524",
+      "sha256": "6bd451f6230345d756ab780aebd26054e34b8dae1a3c0222f68ada730646b72d",
+      "hex": "fd7bbca9fd030091f30b00f9e01f00f9e11b00f9e21700f9e01f40f9e11b40f94656f797802800f001403291e01f40f9010000f9e01740f91f0000f1610000546a01009402000014e01740f9e11f40f9201800f9e01f40f91fe00039e01f40f91f2000f9e01f40f900200191f1000094e01f40f900a00191ee000094e01f40f900200191e11f40f90e010094e01f40f900a00191e11f40f90a010094e01f40f93200009410000014f30300aae01f40f900a00191ed00009402000014f30300aae01f40f900200191e800009402000014f30300aae01f40f99f56f797e00313aa53e8f397f30b40f9fd7bc4a8c0035fd6",
+      "existing_evidence": "analysis/firmware/f4_native_source_02/static/EXACT.json",
+      "raw_bytes_verified": true
+    },
+    {
+      "name": "native_list_append",
+      "va": "0x70bc18",
+      "end": "0x70bc44",
+      "offset": "0x30bc18",
+      "sha256": "66cccca647442d7c23695c2836a9795f3a12c999f0ff3e3fa37ccc57f7517005",
+      "hex": "fd7bbea9fd030091e00f00f9e10b00f9e00f40f900200091e10b40f9d1ffff971f2003d5fd7bc2a8c0035fd6",
+      "existing_evidence": "analysis/firmware/f4_native_source_02/static/EXACT.json",
+      "raw_bytes_verified": true
+    },
+    {
+      "name": "listener_from_node",
+      "va": "0x6bebc8",
+      "end": "0x6bebe0",
+      "offset": "0x2bebc8",
+      "sha256": "8518c4d010a350cac6da3d043cf4dd8e8bb6ba6b034da1376e6ffc6da1e7f9aa",
+      "hex": "ff4300d1e00700f9e00740f9000c40f9ff430091c0035fd6",
+      "existing_evidence": "analysis/firmware/f4_native_source_02/static/EXACT.json",
+      "raw_bytes_verified": true
+    }
+  ],
+  "target_executed": false,
+  "camera_access": false,
+  "SDK_invoked": false,
+  "actual_user_version_unknown": true
+}

@@ -1,0 +1,28 @@
+# F1 button ports 01 — default off, contracts only
+
+This finite source accompanies the frozen positive entrance candidate at `analysis/sdk_reference/f1_entry_menu_candidate_01`. It provides native type aliases, 19 exact-input first16 entry signatures, four complete interface tables in `analysis/firmware/f1_entry_button_ports_01/bindings.json`, and static metadata. `Candidates` has 19 null slots. `ProductionEntryEnabled=false`. There is no native pointer resolver, constructor/interposer, target-ready parameter, vptr writer, enabled create API or deployment artifact. `static_catalog()` reads its own constant metadata and invokes no vendor function.
+
+The aliases are bound to the full User SHA/size in the frozen candidate. A first16 match is only entry identity; it is not full mapped-image, native object, runtime ABI, owner, thread, lifetime or authorization proof. An explicit synthetic host argument or mock return value never becomes an actual guard.
+
+## Actual constructors and two observer interfaces
+
+`TextButtonCtor` describes the original **nine arguments**: x0 storage (0xb8B), w1/w2 width/height, x3 resource provider, w4 font ID, x5 persistent text, w6 U8 flag, w7 U32 value, and ninth U32 at caller `[sp]`. Original caller `500260..5002fc` passes W/H128, font5, `Play`, flag0/value1/stack1. Names for the last flags remain numeric. Original `4ad230` stores the owned text pointer +80, sets +88=-1; original Label paint directly uses +80 in that state. The string is not copied and must persist. See the frozen complete constructor/paint bytes.
+
+`PopupCtor`: x0 own 0x4b8B storage, x1 original manager, x2 private menu root, w3 list width (original LV750), w4 **U8** flag. Complete ctor `4fad38` stores the byte and calls original base/Navigator constructors. It performs native allocations/subscriptions; a prototype is not permission or a transactional create guarantee.
+
+`ControlObserverNative` is an **8B** native interface; ctor `4c4588` only installs VTb89650. Its direct callback is `(observer, senderControl, borrowedEventPointer, U32 tag)` at VT+10. `QueueObserverNative` is a distinct **24B** base; ctor `70fe3c` takes `(observer,persistentName,explicitQueue)`, and its callback has `(observer,nativeEvent)` at VT+10. Never pass the Control callback/table layout to the queue observer or retain the borrowed pointer event. A future module-owned implementation needs its own retained lifetime; this source constructs neither interface.
+
+Original resource owner chain: `4f6938(manager)` reads manager+788; original LV ctor stores it at LV+f0; actual original LV Label caller reads wrapper+10 for x3 provider. The popup ctor stores the same manager wrapper at ownPopup+488. These offsets only describe exact original code; caller-supplied pointers do not establish ownership. Actual chain/VT/readable mappings must be observed from the real UI thread before construction.
+
+## Complete bind/attach/detach facts and unresolved gates
+
+- `ControlBind` / `4ac660`: own control x0, own Control observer x1, U32 tag w2; saves +60/+68 and sets +42=1. Original dispatch `4ac590` reads those fields and calls observer VT+10 with sender/event/tag. Calling Bind(null,0) clears only these own fields; it is not an input capture or queued-event cancellation method.
+- `ControlAttach` / `4ab898`: x0 parent, x1 own child, w2/w3 positions, w4/w5 numeric placement flags; original `4ab984` writes child's +30/+34/+44/+48, then parent VT+50 invokes `70c6c8`. This detaches an existing child first and appends it to the parent's native tree. Only a fresh validated own child may enter this path. No stock button observer, resource pointer, tag1/tag8 or stock menu field is written by this source.
+- `ControlDetach` / `70c9bc`: x0 own child; repairs parent's firstChild and neighbor siblings, clears own +18/+20, **leaves +8 parent value intact**, and never deletes. Verify absence by bounded original parent traversal, not parent==null. This method does not clear manager input capture/focus or prove callback quiescence.
+- Input capture references, appropriate new control placement/hit-test, simultaneous pointer dispatch, private popup/current-page stack, exact queued triple/later boundary and fresh OFF repaint remain unresolved actual facts. Therefore **no full create, disable-and-delete or hot unload is implemented**. New native events and their registry nodes, labels, menu nodes, Dialog, observers and module remain retained until stock User exit under the prior bootstrap contract.
+
+The next target SO stage should Observe only. Full running User/provider/owner/resource/geometry/lifetime facts and actual UI-thread boundaries precede a separate reviewed construction increment. Existing frozen Selector02 accepts only LV+588 and null root; stock popup exit is a no-op, so directly using that entry after stock menu use is not generally valid. A new module-private popup requires its own finite owner/stack branch; this contract source does not widen the frozen inspector.
+
+## Own-code verification
+
+`python3 tools/firmware/f1_entry_button_ports_01/build_validate.py` runs three **owned synthetic** argument fixtures (nine-argument text constructor, five-argument popup constructor, four-argument Control callback) and verifies production EN0/null19, both normal and ASan/UBSan. Pinned Zig0.15.2 compiles metadata-only Linux AArch64 **ET_REL**; inspection requires no undefined symbols and no init/fini array. No native firmware function or target object is executed. No `.so`, device operation or enabled installation is produced. `build_validation.json` records native/runtime acceptance as false.

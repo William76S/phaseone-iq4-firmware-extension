@@ -1,0 +1,23 @@
+STATIC ONLY; linked VAs; exported nearest labels are not recovered private names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6bdf70: 52800000     	mov	w0, #0x0                // =0
+  6bdf74: 14000005     	b	0x6bdf88 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1dbc8>
+  6bdf78: d503201f     	nop
+  6bdf7c: 14000002     	b	0x6bdf84 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1dbc4>
+  6bdf80: d503201f     	nop
+  6bdf84: 52800020     	mov	w0, #0x1                // =1
+  6bdf88: 14000007     	b	0x6bdfa4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1dbe4>
+  6bdf8c: aa0003f4     	mov	x20, x0
+  6bdf90: d2806b01     	mov	x1, #0x358              // =856
+  6bdf94: aa1303e0     	mov	x0, x19
+  6bdf98: 97f52f92     	bl	0x409de0 <_ZdlPvm@plt>
+  6bdf9c: aa1403e0     	mov	x0, x20
+  6bdfa0: 97f531ec     	bl	0x40a750 <_Unwind_Resume@plt>
+  6bdfa4: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  6bdfa8: a8cc7bfd     	ldp	x29, x30, [sp], #0xc0
+  6bdfac: d65f03c0     	ret

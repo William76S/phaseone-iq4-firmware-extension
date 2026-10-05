@@ -1,0 +1,54 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution or actual field read.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:
+  520814: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  520818: 910003fd     	mov	x29, sp
+  52081c: f9000bf3     	str	x19, [sp, #0x10]
+  520820: f90017e0     	str	x0, [sp, #0x28]
+  520824: bd0027e0     	str	s0, [sp, #0x24]
+  520828: f94017e0     	ldr	x0, [sp, #0x28]
+  52082c: bd419001     	ldr	s1, [x0, #0x190]
+  520830: 1e2a1000     	fmov	s0, #0.25000000
+  520834: 1e202030     	fcmpe	s1, s0
+  520838: 540001c5     	b.pl	0x520870 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x277c0>
+  52083c: bd4027e0     	ldr	s0, [sp, #0x24]
+  520840: 1e22c000     	fcvt	d0, s0
+  520844: d00033c0     	adrp	x0, 0xb9a000
+  520848: 911fe003     	add	x3, x0, #0x7f8
+  52084c: 52814e62     	mov	w2, #0xa73              // =2675
+  520850: d00033c0     	adrp	x0, 0xb9a000
+  520854: 91166001     	add	x1, x0, #0x598
+  520858: 52800040     	mov	w0, #0x2                // =2
+  52085c: 9408973c     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  520860: f94017e0     	ldr	x0, [sp, #0x28]
+  520864: 1e2a1000     	fmov	s0, #0.25000000
+  520868: bd019000     	str	s0, [x0, #0x190]
+  52086c: 14000004     	b	0x52087c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x277cc>
+  520870: f94017e0     	ldr	x0, [sp, #0x28]
+  520874: b94027e1     	ldr	w1, [sp, #0x24]
+  520878: b9019001     	str	w1, [x0, #0x190]
+  52087c: f94017e0     	ldr	x0, [sp, #0x28]
+  520880: 91294013     	add	x19, x0, #0xa50
+  520884: f94017e0     	ldr	x0, [sp, #0x28]
+  520888: 97ffffd3     	bl	0x5207d4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x27724>
+  52088c: 2a0003e2     	mov	w2, w0
+  520890: d00033c0     	adrp	x0, 0xb9a000
+  520894: 91208001     	add	x1, x0, #0x820
+  520898: aa1303e0     	mov	x0, x19
+  52089c: 97fba7d9     	bl	0x40a800 <sprintf@plt>
+  5208a0: f94017e0     	ldr	x0, [sp, #0x28]
+  5208a4: f9452402     	ldr	x2, [x0, #0xa48]
+  5208a8: f94017e0     	ldr	x0, [sp, #0x28]
+  5208ac: 91294000     	add	x0, x0, #0xa50
+  5208b0: aa0003e1     	mov	x1, x0
+  5208b4: aa0203e0     	mov	x0, x2
+  5208b8: 97fcdc96     	bl	0x457b10 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21b64>
+  5208bc: d503201f     	nop
+  5208c0: f9400bf3     	ldr	x19, [sp, #0x10]
+  5208c4: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  5208c8: d65f03c0     	ret

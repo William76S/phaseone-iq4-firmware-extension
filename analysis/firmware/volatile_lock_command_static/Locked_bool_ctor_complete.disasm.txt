@@ -1,0 +1,57 @@
+STATIC ONLY; linked VAs; exported nearest labels are not recovered private names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  415354: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  415358: 910003fd     	mov	x29, sp
+  41535c: f9000bf3     	str	x19, [sp, #0x10]
+  415360: f9001fe0     	str	x0, [sp, #0x38]
+  415364: f9001be1     	str	x1, [sp, #0x30]
+  415368: 3900bfe2     	strb	w2, [sp, #0x2f]
+  41536c: b9002be3     	str	w3, [sp, #0x28]
+  415370: f9401fe0     	ldr	x0, [sp, #0x38]
+  415374: 97ffffd6     	bl	0x4152cc <.text+0xa09c>
+  415378: f9401fe0     	ldr	x0, [sp, #0x38]
+  41537c: 91002000     	add	x0, x0, #0x8
+  415380: f9401be1     	ldr	x1, [sp, #0x30]
+  415384: 940be76a     	bl	0x70f12c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x210ac>
+  415388: 90002ee0     	adrp	x0, 0x9f1000
+  41538c: 91238001     	add	x1, x0, #0x8e0
+  415390: f9401fe0     	ldr	x0, [sp, #0x38]
+  415394: f9000001     	str	x1, [x0]
+  415398: 90002ee0     	adrp	x0, 0x9f1000
+  41539c: 91262001     	add	x1, x0, #0x988
+  4153a0: f9401fe0     	ldr	x0, [sp, #0x38]
+  4153a4: f9000401     	str	x1, [x0, #0x8]
+  4153a8: 90002ee0     	adrp	x0, 0x9f1000
+  4153ac: 91272001     	add	x1, x0, #0x9c8
+  4153b0: f9401fe0     	ldr	x0, [sp, #0x38]
+  4153b4: f9001001     	str	x1, [x0, #0x20]
+  4153b8: f9401fe0     	ldr	x0, [sp, #0x38]
+  4153bc: 3940bfe1     	ldrb	w1, [sp, #0x2f]
+  4153c0: 39030001     	strb	w1, [x0, #0xc0]
+  4153c4: f9401fe0     	ldr	x0, [sp, #0x38]
+  4153c8: 3940bfe1     	ldrb	w1, [sp, #0x2f]
+  4153cc: 39030401     	strb	w1, [x0, #0xc1]
+  4153d0: f9401fe0     	ldr	x0, [sp, #0x38]
+  4153d4: b9402be1     	ldr	w1, [sp, #0x28]
+  4153d8: b900c401     	str	w1, [x0, #0xc4]
+  4153dc: f9401fe0     	ldr	x0, [sp, #0x38]
+  4153e0: f900641f     	str	xzr, [x0, #0xc8]
+  4153e4: f9401fe0     	ldr	x0, [sp, #0x38]
+  4153e8: f900681f     	str	xzr, [x0, #0xd0]
+  4153ec: f9401fe0     	ldr	x0, [sp, #0x38]
+  4153f0: 52800061     	mov	w1, #0x3                // =3
+  4153f4: b9001801     	str	w1, [x0, #0x18]
+  4153f8: 14000006     	b	0x415410 <.text+0xa1e0>
+  4153fc: aa0003f3     	mov	x19, x0
+  415400: f9401fe0     	ldr	x0, [sp, #0x38]
+  415404: 97ffffbe     	bl	0x4152fc <.text+0xa0cc>
+  415408: aa1303e0     	mov	x0, x19
+  41540c: 97ffd4d1     	bl	0x40a750 <_Unwind_Resume@plt>
+  415410: f9400bf3     	ldr	x19, [sp, #0x10]
+  415414: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  415418: d65f03c0     	ret

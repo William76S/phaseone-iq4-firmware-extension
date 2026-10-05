@@ -1,0 +1,52 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/sdk_reference/vendor_downloads/dest/lib/libCameraSdkCpp.so.3.2.5:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000094c10 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)>:
+   94c10: 41 57                        	pushq	%r15
+   94c12: 41 56                        	pushq	%r14
+   94c14: 41 55                        	pushq	%r13
+   94c16: 41 54                        	pushq	%r12
+   94c18: 55                           	pushq	%rbp
+   94c19: 48 89 d5                     	movq	%rdx, %rbp
+   94c1c: 53                           	pushq	%rbx
+   94c1d: 48 89 fb                     	movq	%rdi, %rbx
+   94c20: 48 81 ec 78 02 00 00         	subq	$0x278, %rsp            # imm = 0x278
+   94c27: 4c 8d bc 24 80 00 00 00      	leaq	0x80(%rsp), %r15
+   94c2f: 89 74 24 5c                  	movl	%esi, 0x5c(%rsp)
+   94c33: 48 8d b7 10 0c 00 00         	leaq	0xc10(%rdi), %rsi
+   94c3a: 4c 89 ff                     	movq	%r15, %rdi
+   94c3d: e8 0e 67 fb ff               	callq	0x4b350 <_ZN11LockContextC1ERSt5mutex@plt>
+   94c42: 48 8b 93 f0 0b 00 00         	movq	0xbf0(%rbx), %rdx
+   94c49: 48 85 d2                     	testq	%rdx, %rdx
+   94c4c: 0f 84 9e 06 00 00            	je	0x952f0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x6e0>
+   94c52: 48 8d bb e8 0b 00 00         	leaq	0xbe8(%rbx), %rdi
+   94c59: 8b 4c 24 5c                  	movl	0x5c(%rsp), %ecx
+   94c5d: 48 89 d0                     	movq	%rdx, %rax
+   94c60: 48 89 fe                     	movq	%rdi, %rsi
+   94c63: eb 0f                        	jmp	0x94c74 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x64>
+   94c65: 0f 1f 00                     	nopl	(%rax)
+   94c68: 48 89 c6                     	movq	%rax, %rsi
+   94c6b: 48 8b 40 10                  	movq	0x10(%rax), %rax
+   94c6f: 48 85 c0                     	testq	%rax, %rax
+   94c72: 74 0e                        	je	0x94c82 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x72>
+   94c74: 3b 48 20                     	cmpl	0x20(%rax), %ecx
+   94c77: 7e ef                        	jle	0x94c68 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x58>
+   94c79: 48 8b 40 18                  	movq	0x18(%rax), %rax
+   94c7d: 48 85 c0                     	testq	%rax, %rax
+   94c80: 75 f2                        	jne	0x94c74 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x64>
+   94c82: 48 39 f7                     	cmpq	%rsi, %rdi
+   94c85: 0f 84 65 06 00 00            	je	0x952f0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x6e0>
+   94c8b: 3b 4e 20                     	cmpl	0x20(%rsi), %ecx
+   94c8e: 0f 8c 5c 06 00 00            	jl	0x952f0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x6e0>
+   94c94: 48 8d ab e0 0b 00 00         	leaq	0xbe0(%rbx), %rbp
+   94c9b: 49 89 fc                     	movq	%rdi, %r12
+   94c9e: eb 0c                        	jmp	0x94cac <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x9c>
+   94ca0: 49 89 d4                     	movq	%rdx, %r12
+   94ca3: 48 8b 52 10                  	movq	0x10(%rdx), %rdx
+   94ca7: 48 85 d2                     	testq	%rdx, %rdx
+   94caa: 74 0e                        	je	0x94cba <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0xaa>
+   94cac: 3b 4a 20                     	cmpl	0x20(%rdx), %ecx
+   94caf: 7e ef                        	jle	0x94ca0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x90>

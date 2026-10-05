@@ -1,0 +1,24 @@
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/52_movie_binding.o: \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/movie_binding.c \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/movie_binding.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/session.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/worker.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/source.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../../../src/codec/bounded_jpeg.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../../../src/codec/vendor/libjpeg-turbo-1.5.3/jpeglib.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../../../src/codec/vendor/libjpeg-turbo-1.5.3/jconfig.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../../../src/codec/vendor/libjpeg-turbo-1.5.3/jmorecfg.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../../../src/recording/native_mkv.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../../../src/recording/../../tools/firmware/f3_stream_transaction_02/stream.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../../../src/recording/../../tools/firmware/f3_stream_transaction_02/../f3_save_transaction_01/transaction.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../../../src/recording/../../tools/firmware/f3_stream_transaction_02/sha256.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../f4_native_menu_03/menu.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../f4_native_menu_03/../f4_native_source_02/source.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../f3_native_card_bridge_06/card.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../f3_native_card_bridge_06/../f3_native_card_bridge_05/card.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../f3_native_card_bridge_06/../f3_native_card_bridge_05/../f3_native_fs_adapter_04/fs.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../f3_native_card_bridge_06/../f3_native_card_bridge_05/../f3_native_fs_adapter_04/../f3_stream_transaction_02/stream.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../movie_card_01/movie.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../movie_card_01/../f3_native_card_bridge_05/card.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/../movie_card_01/../../../src/recording/native_mkv.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/../f4_native_source_02/native_calls.h

@@ -1,0 +1,79 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  862b40: a9ba7bfd     	stp	x29, x30, [sp, #-0x60]!
+  862b44: 910003fd     	mov	x29, sp
+  862b48: f9000bf3     	str	x19, [sp, #0x10]
+  862b4c: f9002fe0     	str	x0, [sp, #0x58]
+  862b50: f9002be1     	str	x1, [sp, #0x50]
+  862b54: f90027e2     	str	x2, [sp, #0x48]
+  862b58: f90023e3     	str	x3, [sp, #0x40]
+  862b5c: f9001fe4     	str	x4, [sp, #0x38]
+  862b60: 3900dfe5     	strb	w5, [sp, #0x37]
+  862b64: 3900dbe6     	strb	w6, [sp, #0x36]
+  862b68: f90017e7     	str	x7, [sp, #0x28]
+  862b6c: f9402fe0     	ldr	x0, [sp, #0x58]
+  862b70: f94027e2     	ldr	x2, [sp, #0x48]
+  862b74: f9402be1     	ldr	x1, [sp, #0x50]
+  862b78: 97fab4b1     	bl	0x70fe3c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x21dbc>
+  862b7c: f9402fe0     	ldr	x0, [sp, #0x58]
+  862b80: 91006000     	add	x0, x0, #0x18
+  862b84: 97ffddf8     	bl	0x85a364 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x15fa0>
+  862b88: d0002a00     	adrp	x0, 0xda4000
+  862b8c: 9105a001     	add	x1, x0, #0x168
+  862b90: f9402fe0     	ldr	x0, [sp, #0x58]
+  862b94: f9000001     	str	x1, [x0]
+  862b98: d0002a00     	adrp	x0, 0xda4000
+  862b9c: 91068001     	add	x1, x0, #0x1a0
+  862ba0: f9402fe0     	ldr	x0, [sp, #0x58]
+  862ba4: f9000c01     	str	x1, [x0, #0x18]
+  862ba8: f9402fe0     	ldr	x0, [sp, #0x58]
+  862bac: f94023e1     	ldr	x1, [sp, #0x40]
+  862bb0: f9001001     	str	x1, [x0, #0x20]
+  862bb4: f9402fe0     	ldr	x0, [sp, #0x58]
+  862bb8: f9401fe1     	ldr	x1, [sp, #0x38]
+  862bbc: f9001401     	str	x1, [x0, #0x28]
+  862bc0: f9402fe0     	ldr	x0, [sp, #0x58]
+  862bc4: 9100c000     	add	x0, x0, #0x30
+  862bc8: 52800002     	mov	w2, #0x0                // =0
+  862bcc: 52800001     	mov	w1, #0x0                // =0
+  862bd0: 97ffa2af     	bl	0x84b68c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x72c8>
+  862bd4: f9402fe0     	ldr	x0, [sp, #0x58]
+  862bd8: 3940dfe1     	ldrb	w1, [sp, #0x37]
+  862bdc: 3900c801     	strb	w1, [x0, #0x32]
+  862be0: f9402fe0     	ldr	x0, [sp, #0x58]
+  862be4: 3940dbe1     	ldrb	w1, [sp, #0x36]
+  862be8: 3900cc01     	strb	w1, [x0, #0x33]
+  862bec: f9402fe0     	ldr	x0, [sp, #0x58]
+  862bf0: f94017e1     	ldr	x1, [sp, #0x28]
+  862bf4: f9001c01     	str	x1, [x0, #0x38]
+  862bf8: f9402fe0     	ldr	x0, [sp, #0x58]
+  862bfc: b900401f     	str	wzr, [x0, #0x40]
+  862c00: f9402fe0     	ldr	x0, [sp, #0x58]
+  862c04: b900441f     	str	wzr, [x0, #0x44]
+  862c08: f9402fe0     	ldr	x0, [sp, #0x58]
+  862c0c: f94033e1     	ldr	x1, [sp, #0x60]
+  862c10: f9002401     	str	x1, [x0, #0x48]
+  862c14: f9402ff3     	ldr	x19, [sp, #0x58]
+  862c18: f9402fe0     	ldr	x0, [sp, #0x58]
+  862c1c: f9401000     	ldr	x0, [x0, #0x20]
+  862c20: 97ffc279     	bl	0x853604 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0xf240>
+  862c24: aa0003e1     	mov	x1, x0
+  862c28: aa1303e0     	mov	x0, x19
+  862c2c: 97fab4ab     	bl	0x70fed8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x21e58>
+  862c30: 14000009     	b	0x862c54 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x1e890>
+  862c34: aa0003f3     	mov	x19, x0
+  862c38: f9402fe0     	ldr	x0, [sp, #0x58]
+  862c3c: 91006000     	add	x0, x0, #0x18
+  862c40: 97ffddd2     	bl	0x85a388 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x15fc4>
+  862c44: f9402fe0     	ldr	x0, [sp, #0x58]
+  862c48: 97eebe20     	bl	0x4124c8 <.text+0x7298>
+  862c4c: aa1303e0     	mov	x0, x19
+  862c50: 97ee9ec0     	bl	0x40a750 <_Unwind_Resume@plt>
+  862c54: f9400bf3     	ldr	x19, [sp, #0x10]
+  862c58: a8c67bfd     	ldp	x29, x30, [sp], #0x60
+  862c5c: d65f03c0     	ret

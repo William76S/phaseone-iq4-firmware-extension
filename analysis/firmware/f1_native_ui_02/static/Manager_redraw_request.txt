@@ -1,0 +1,32 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual callable binding.
+  4e4820: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  4e4824: 910003fd     	mov	x29, sp
+  4e4828: f9000bf3     	str	x19, [sp, #0x10]
+  4e482c: f90017e0     	str	x0, [sp, #0x28]
+  4e4830: b90027e1     	str	w1, [sp, #0x24]
+  4e4834: b94027e0     	ldr	w0, [sp, #0x24]
+  4e4838: 7100001f     	cmp	w0, #0x0
+  4e483c: 54000200     	b.eq	0x4e487c
+  4e4840: f94017e0     	ldr	x0, [sp, #0x28]
+  4e4844: 911ea013     	add	x19, x0, #0x7a8
+  4e4848: 9408ca81     	bl	0x71724c
+  4e484c: 2a0003e1     	mov	w1, w0
+  4e4850: b94027e0     	ldr	w0, [sp, #0x24]
+  4e4854: 0b000020     	add	w0, w1, w0
+  4e4858: 11019000     	add	w0, w0, #0x64
+  4e485c: b9003fe0     	str	w0, [sp, #0x3c]
+  4e4860: 9100f3e0     	add	x0, sp, #0x3c
+  4e4864: aa0003e1     	mov	x1, x0
+  4e4868: aa1303e0     	mov	x0, x19
+  4e486c: 97fe0315     	bl	0x4654c0
+  4e4870: b9400001     	ldr	w1, [x0]
+  4e4874: f94017e0     	ldr	x0, [sp, #0x28]
+  4e4878: b907a801     	str	w1, [x0, #0x7a8]
+  4e487c: f94017e0     	ldr	x0, [sp, #0x28]
+  4e4880: f9408000     	ldr	x0, [x0, #0x100]
+  4e4884: 9408aa9d     	bl	0x70f2f8
+  4e4888: d503201f     	nop
+  4e488c: f9400bf3     	ldr	x19, [sp, #0x10]
+  4e4890: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  4e4894: d65f03c0     	ret

@@ -1,0 +1,233 @@
+{
+  "commands": [
+    {
+      "label": "compile_activity_normal",
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-DIQ4_ACTIVITY_SYNTHETIC_HOST",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_activity_01/activity.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/activity_normal.o"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "compile_actual_executor_normal",
+      "argv": [
+        "/usr/bin/clang++",
+        "-std=c++17",
+        "-isysroot",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-isystem",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-DIQ4_F3_EXECUTOR_SYNTHETIC_HOST",
+        "-DIQ4_ACTIVITY_SYNTHETIC_HOST",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_executor_02/test_executor.cpp",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/activity_normal.o",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/test_normal"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "run_actual_executor_normal",
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/test_normal"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS 17 native-thread mailbox/exception/fence fault groups\n{\"focused_groups\":8,\"finish_SD_race_repetitions\":32,\"inherited_groups\":17,\"actual_executor_body\":true,\"native_callbacks_fixture\":true,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "label": "compile_activity_san",
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DIQ4_ACTIVITY_SYNTHETIC_HOST",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_activity_01/activity.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/activity_san.o"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "compile_actual_executor_san",
+      "argv": [
+        "/usr/bin/clang++",
+        "-std=c++17",
+        "-isysroot",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-isystem",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DIQ4_F3_EXECUTOR_SYNTHETIC_HOST",
+        "-DIQ4_ACTIVITY_SYNTHETIC_HOST",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_executor_02/test_executor.cpp",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/activity_san.o",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/test_san"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "run_actual_executor_san",
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/test_san"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS 17 native-thread mailbox/exception/fence fault groups\n{\"focused_groups\":8,\"finish_SD_race_repetitions\":32,\"inherited_groups\":17,\"actual_executor_body\":true,\"native_callbacks_fixture\":true,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "label": "compile_activity_tsan",
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fsanitize=thread",
+        "-DIQ4_ACTIVITY_SYNTHETIC_HOST",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_activity_01/activity.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/activity_tsan.o"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "compile_actual_executor_tsan",
+      "argv": [
+        "/usr/bin/clang++",
+        "-std=c++17",
+        "-isysroot",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-isystem",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fsanitize=thread",
+        "-DIQ4_F3_EXECUTOR_SYNTHETIC_HOST",
+        "-DIQ4_ACTIVITY_SYNTHETIC_HOST",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_executor_02/test_executor.cpp",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/activity_tsan.o",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/test_tsan"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "run_actual_executor_tsan",
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/test_tsan"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS 17 native-thread mailbox/exception/fence fault groups\n{\"focused_groups\":8,\"finish_SD_race_repetitions\":32,\"inherited_groups\":17,\"actual_executor_body\":true,\"native_callbacks_fixture\":true,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "label": "target_compile_only",
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "c++",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-std=c++17",
+        "-O2",
+        "-g0",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-ffreestanding",
+        "-fPIC",
+        "-fno-stack-protector",
+        "-mno-outline-atomics",
+        "-funwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-omit-frame-pointer",
+        "-fexceptions",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/executor.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_executor_02/executor.cpp",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/executor.o"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "target_undefined",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+        "-u",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/executor.o"
+      ],
+      "exit_code": 0,
+      "stdout": "                 U _Unwind_Resume\n                 U _ZSt9terminatev\n                 U __cxa_begin_catch\n                 U __cxa_end_catch\n                 U __cxa_rethrow\n                 U __gxx_personality_v0\n                 U f3_executor_clock_01\n                 U f3_executor_current_01\n                 U f3_executor_event_ctor_01\n                 U f3_executor_event_notify_01\n                 U f3_executor_listener_ctor_01\n                 U f3_executor_pause_01\n                 U f3_executor_pthread_self_01\n                 U f3_executor_read_01\n                 U f3_executor_selected_get_01\n                 U f3_executor_tid_01\n                 U iq4_activity_hold_01\n                 U iq4_activity_release_01\n                 U iq4_activity_try_01\n                 U iq4_activity_valid_01\n                 U iq4_f3_original_ifm_wait_01\n                 U memcmp\n",
+      "stderr": ""
+    },
+    {
+      "label": "target_relocations",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-r",
+        "-t",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/executor.o"
+      ],
+      "exit_code": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_executor_build_02/executor.o:\tfile format elf64-littleaarch64\n\nSYMBOL TABLE:\n0000000000000000 l    df *ABS*\t0000000000000000 executor.cpp\n0000000000000000 l    d  .text\t0000000000000000 .text\n0000000000000000 l       .text\t0000000000000000 $x\n0000000000000000 l     O .bss\t00000000000001c0 _ZL1g\n0000000000000280 l     F .text\t00000000000001b0 _ZL5on_uiv\n0000000000000430 l     F .text\t0000000000000088 _ZL4wordmRm\n0000000000000624 l     F .text\t00000000000001a8 _ZL18retire_finished_02v\n0000000000001310 l     F .text\t00000000000000ac _ZL9on_workerm\n0000000000000000 l     O .data.rel.ro\t0000000000000150 _ZL23iq4_f3_executor_pins_01\n00000000000013bc l     F .text\t0000000000000254 _ZL7inspectmR17F3ExecutorOwner01\n0000000000000000 l    d  .gcc_except_table\t0000000000000000 .gcc_except_table\n0000000000000000 l       .gcc_except_table\t0000000000000000 GCC_except_table11\n0000000000000000 l       .gcc_except_table\t0000000000000000 $d\n0000000000000000 l    d  .text.__clang_call_terminate\t0000000000000000 .text.__clang_call_terminate\n0000000000000000 l       .text.__clang_call_terminate\t0000000000000000 $x\n0000000000000000 l    d  .bss\t0000000000000000 .bss\n0000000000000000 l       .bss\t0000000000000000 $d\n0000000000000000 l    d  .data.rel.ro\t0000000000000000 .data.rel.ro\n0000000000000000 l       .data.rel.ro\t0000000000000000 $d\n0000000000000000 l     O .rodata\t0000000000000020 _ZL21iq4_f3_executor_pin_0\n0000000000000020 l     O .rodata\t0000000000000020 _ZL21iq4_f3_executor_pin_1\n0000000000000040 l     O .rodata\t0000000000000020 _ZL21iq4_f3_executor_pin_2\n0000000000000060 l     O .rodata\t0000000000000020 _ZL21iq4_f3_executor_pin_3\n0000000000000080 l     O .rodata\t000000000000001c _ZL21iq4_f3_executor_pin_4\n000000000000009c l     O .rodata\t0000000000000020 _ZL21iq4_f3_executor_pin_5\n00000000000000bc l     O .rodata\t0000000000000020 _ZL21iq4_f3_executor_pin_6\n00000000000000dc l     O .rodata\t0000000000000020 _ZL21iq4_f3_executor_pin_7\n00000000000000fc l     O .rodata\t0000000000000028 _ZL21iq4_f3_executor_pin_8\n0000000000000124 l     O .rodata\t0000000000000020 _ZL21iq4_f3_executor_pin_9\n0000000000000144 l     O .rodata\t0000000000000020 _ZL22iq4_f3_executor_pin_10\n0000000000000164 l     O .rodata\t0000000000000014 _ZL22iq4_f3_executor_pin_11\n0000000000000178 l     O .rodata\t0000000000000014 _ZL22iq4_f3_executor_pin_12\n000000000000018c l     O .rodata\t0000000000000010 _ZL22iq4_f3_executor_pin_13\n0000000000000000 l    d  .rodata\t0000000000000000 .rodata\n0000000000000000 l       .rodata\t0000000000000000 $d\n0000000000000000 l       .data.DW.ref.__gxx_personality_v0\t0000000000000000 $d\n0000000000000000 l       .comment\t0000000000000000 $d\n0000000000000000 l       .eh_frame\t0000000000000000 $d\n0000000000000000 g     F .text\t0000000000000058 iq4_f3_executor_hold_01\n0000000000000000         *UND*\t0000000000000000 iq4_activity_hold_01\n0000000000000058 g     F .text\t0000000000000228 iq4_f3_executor_selection_on_ui_01\n0000000000000000         *UND*\t0000000000000000 f3_executor_read_01\n0000000000000000         *UND*\t0000000000000000 memcmp\n0000000000000000         *UND*\t0000000000000000 f3_executor_selected_get_01\n0000000000000000         *UND*\t0000000000000000 f3_executor_current_01\n00000000000004b8 g     F .text\t000000000000016c iq4_f3_executor_begin_on_ui_01\n0000000000000000         *UND*\t0000000000000000 iq4_activity_try_01\n0000000000000000         *UND*\t0000000000000000 iq4_activity_valid_01\n00000000000007cc g     F .text\t00000000000000d4 iq4_f3_executor_cancel_on_ui_01\n0000000000000000         *UND*\t0000000000000000 iq4_activity_release_01\n00000000000008a0 g     F .text\t000000000000011c iq4_f3_executor_submit_on_ui_01\n0000000000000000         *UND*\t0000000000000000 f3_executor_event_notify_01\n00000000000009bc g     F .text\t0000000000000084 iq4_f3_executor_view_on_ui_01\n0000000000000a40 g     F .text\t000000000000007c iq4_f3_executor_finish_on_ui_01\n0000000000000abc g     F .text\t00000000000003cc iq4_f3_executor_invoke_saved_on_native_01\n0000000000000000         *UND*\t0000000000000000 f3_executor_tid_01\n0000000000000000         *UND*\t0000000000000000 f3_executor_pthread_self_01\n0000000000000000         *UND*\t0000000000000000 f3_executor_clock_01\n0000000000000000         *UND*\t0000000000000000 f3_executor_pause_01\n0000000000000e88 g     F .text\t0000000000000488 iq4_f3_ifm_wait_entry_01\n0000000000000000         *UND*\t0000000000000000 iq4_f3_original_ifm_wait_01\n0000000000000000         *UND*\t0000000000000000 __cxa_begin_catch\n0000000000000000         *UND*\t0000000000000000 __cxa_end_catch\n0000000000000000         *UND*\t0000000000000000 f3_executor_event_ctor_01\n0000000000000000         *UND*\t0000000000000000 f3_executor_listener_ctor_01\n0000000000000000         *UND*\t0000000000000000 __cxa_rethrow\n0000000000000000         *UND*\t0000000000000000 _Unwind_Resume\n0000000000000000  w    F .text.__clang_call_terminate\t0000000000000010 .hidden __clang_call_terminate\n0000000000000000         *UND*\t0000000000000000 _ZSt9terminatev\n0000000000000000  w    O .data.DW.ref.__gxx_personality_v0\t0000000000000008 .hidden DW.ref.__gxx_personality_v0\n0000000000000000         *UND*\t0000000000000000 __gxx_personality_v0\n\nRELOCATION RECORDS FOR [.text]:\nOFFSET           TYPE                     VALUE\n000000000000000c R_AARCH64_ADR_PREL_PG_HI21 .bss+0x8\n0000000000000010 R_AARCH64_ADD_ABS_LO12_NC .bss+0x8\n0000000000000038 R_AARCH64_CALL26         iq4_activity_hold_01\n0000000000000040 R_AARCH64_ADR_PREL_PG_HI21 .bss\n0000000000000044 R_AARCH64_ADD_ABS_LO12_NC .bss\n000000000000007c R_AARCH64_ADR_PREL_PG_HI21 .bss\n0000000000000080 R_AARCH64_ADD_ABS_LO12_NC .bss\n0000000000000098 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x18\n00000000000000a4 R_AARCH64_LDST64_ABS_LO12_NC .bss+0x18\n00000000000000cc R_AARCH64_CALL26         f3_executor_read_01\n00000000000000e4 R_AARCH64_CALL26         f3_executor_read_01\n00000000000000fc R_AARCH64_CALL26         memcmp\n0000000000000104 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x20\n000000000000010c R_AARCH64_LDST64_ABS_LO12_NC .bss+0x20\n0000000000000134 R_AARCH64_CALL26         f3_executor_read_01\n000000000000014c R_AARCH64_CALL26         f3_executor_read_01\n0000000000000164 R_AARCH64_CALL26         memcmp\n00000000000001a0 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x28\n00000000000001a8 R_AARCH64_LDST64_ABS_LO12_NC .bss+0x28\n00000000000001e0 R_AARCH64_CALL26         f3_executor_selected_get_01\n0000000000000220 R_AARCH64_LDST64_ABS_LO12_NC .bss+0x18\n0000000000000240 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x18\n0000000000000244 R_AARCH64_ADD_ABS_LO12_NC .bss+0x18\n00000000000002a0 R_AARCH64_CALL26         f3_executor_current_01\n00000000000002d4 R_AARCH64_CALL26         f3_executor_read_01\n00000000000002ec R_AARCH64_CALL26         f3_executor_read_01\n0000000000000304 R_AARCH64_CALL26         memcmp\n0000000000000344 R_AARCH64_CALL26         f3_executor_read_01\n000000000000035c R_AARCH64_CALL26         f3_executor_read_01\n0000000000000374 R_AARCH64_CALL26         memcmp\n00000000000003b8 R_AARCH64_CALL26         f3_executor_read_01\n00000000000003d0 R_AARCH64_CALL26         f3_executor_read_01\n00000000000003e8 R_AARCH64_CALL26         memcmp\n0000000000000464 R_AARCH64_CALL26         f3_executor_read_01\n000000000000047c R_AARCH64_CALL26         f3_executor_read_01\n0000000000000494 R_AARCH64_CALL26         memcmp\n00000000000004d8 R_AARCH64_ADR_PREL_PG_HI21 .bss\n00000000000004dc R_AARCH64_ADD_ABS_LO12_NC .bss\n0000000000000524 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x4\n0000000000000528 R_AARCH64_ADD_ABS_LO12_NC .bss+0x4\n0000000000000574 R_AARCH64_ADR_PREL_PG_HI21 .bss\n0000000000000578 R_AARCH64_ADD_ABS_LO12_NC .bss\n000000000000058c R_AARCH64_CALL26         iq4_activity_try_01\n00000000000005b4 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x10\n00000000000005b8 R_AARCH64_ADD_ABS_LO12_NC .bss+0x10\n00000000000005d8 R_AARCH64_ADR_PREL_PG_HI21 .bss+0xc\n00000000000005dc R_AARCH64_ADD_ABS_LO12_NC .bss+0xc\n0000000000000618 R_AARCH64_CALL26         iq4_f3_executor_hold_01\n0000000000000634 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x8\n0000000000000638 R_AARCH64_ADD_ABS_LO12_NC .bss+0x8\n0000000000000644 R_AARCH64_ADR_PREL_PG_HI21 .bss\n0000000000000648 R_AARCH64_ADD_ABS_LO12_NC .bss\n0000000000000678 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x4\n000000000000067c R_AARCH64_ADD_ABS_LO12_NC .bss+0x4\n0000000000000688 R_AARCH64_ADR_PREL_PG_HI21 .bss+0xc\n000000000000068c R_AARCH64_ADD_ABS_LO12_NC .bss+0xc\n0000000000000738 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x10\n000000000000073c R_AARCH64_ADD_ABS_LO12_NC .bss+0x10\n0000000000000758 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x58\n000000000000075c R_AARCH64_ADD_ABS_LO12_NC .bss+0x58\n0000000000000774 R_AARCH64_CALL26         iq4_activity_valid_01\n0000000000000784 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x38\n0000000000000788 R_AARCH64_ADD_ABS_LO12_NC .bss+0x38\n00000000000007c4 R_AARCH64_CALL26         iq4_f3_executor_hold_01\n00000000000007e8 R_AARCH64_ADR_PREL_PG_HI21 .bss\n00000000000007ec R_AARCH64_ADD_ABS_LO12_NC .bss\n00000000000007fc R_AARCH64_ADR_PREL_PG_HI21 .bss+0x10\n0000000000000800 R_AARCH64_ADD_ABS_LO12_NC .bss+0x10\n0000000000000810 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x58\n0000000000000814 R_AARCH64_ADD_ABS_LO12_NC .bss+0x58\n000000000000082c R_AARCH64_CALL26         iq4_activity_release_01\n0000000000000834 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x8\n0000000000000838 R_AARCH64_ADD_ABS_LO12_NC .bss+0x8\n0000000000000860 R_AARCH64_CALL26         iq4_activity_hold_01\n00000000000008c0 R_AARCH64_ADR_PREL_PG_HI21 .bss\n00000000000008c4 R_AARCH64_ADD_ABS_LO12_NC .bss\n00000000000008e4 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x10\n00000000000008e8 R_AARCH64_ADD_ABS_LO12_NC .bss+0x10\n000000000000091c R_AARCH64_ADR_PREL_PG_HI21 .bss+0x58\n0000000000000920 R_AARCH64_ADD_ABS_LO12_NC .bss+0x58\n0000000000000938 R_AARCH64_CALL26         iq4_activity_valid_01\n00000000000009a0 R_AARCH64_CALL26         f3_executor_event_notify_01\n00000000000009b0 R_AARCH64_CALL26         iq4_f3_executor_hold_01\n00000000000009dc R_AARCH64_ADR_PREL_PG_HI21 .bss\n00000000000009e0 R_AARCH64_ADD_ABS_LO12_NC .bss\n00000000000009ec R_AARCH64_ADR_PREL_PG_HI21 .bss+0x10\n00000000000009f0 R_AARCH64_ADD_ABS_LO12_NC .bss+0x10\n0000000000000a58 R_AARCH64_ADR_PREL_PG_HI21 .bss\n0000000000000a5c R_AARCH64_ADD_ABS_LO12_NC .bss\n0000000000000a6c R_AARCH64_ADR_PREL_PG_HI21 .bss+0x10\n0000000000000a70 R_AARCH64_ADD_ABS_LO12_NC .bss+0x10\n0000000000000a80 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x4\n0000000000000a84 R_AARCH64_ADD_ABS_LO12_NC .bss+0x4\n0000000000000b14 R_AARCH64_CALL26         f3_executor_current_01\n0000000000000b3c R_AARCH64_ADR_PREL_PG_HI21 .bss+0x18\n0000000000000b40 R_AARCH64_LDST64_ABS_LO12_NC .bss+0x18\n0000000000000b80 R_AARCH64_CALL26         f3_executor_tid_01\n0000000000000c54 R_AARCH64_CALL26         f3_executor_pthread_self_01\n0000000000000c70 R_AARCH64_CALL26         iq4_activity_valid_01\n0000000000000c78 R_AARCH64_ADR_PREL_PG_HI21 .bss\n0000000000000c7c R_AARCH64_ADD_ABS_LO12_NC .bss\n0000000000000ca8 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x4\n0000000000000cac R_AARCH64_ADD_ABS_LO12_NC .bss+0x4\n0000000000000cf8 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x10\n0000000000000cfc R_AARCH64_ADD_ABS_LO12_NC .bss+0x10\n0000000000000d10 R_AARCH64_ADR_PREL_PG_HI21 .bss+0xc\n0000000000000d14 R_AARCH64_ADD_ABS_LO12_NC .bss+0xc\n0000000000000d54 R_AARCH64_CALL26         f3_executor_clock_01\n0000000000000d6c R_AARCH64_CALL26         f3_executor_event_notify_01\n0000000000000d78 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x58\n0000000000000d7c R_AARCH64_ADD_ABS_LO12_NC .bss+0x58\n0000000000000dac R_AARCH64_CALL26         f3_executor_clock_01\n0000000000000dc0 R_AARCH64_CALL26         f3_executor_pause_01\n0000000000000de0 R_AARCH64_CALL26         iq4_activity_valid_01\n0000000000000e08 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x8\n0000000000000e0c R_AARCH64_ADD_ABS_LO12_NC .bss+0x8\n0000000000000e34 R_AARCH64_CALL26         iq4_activity_valid_01\n0000000000000e80 R_AARCH64_CALL26         iq4_f3_executor_hold_01\n0000000000000eb4 R_AARCH64_ADR_PREL_PG_HI21 .bss\n0000000000000eb8 R_AARCH64_ADD_ABS_LO12_NC .bss\n0000000000000ec8 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x4\n0000000000000ecc R_AARCH64_ADD_ABS_LO12_NC .bss+0x4\n0000000000000ed4 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x8\n0000000000000ed8 R_AARCH64_ADD_ABS_LO12_NC .bss+0x8\n0000000000000ef0 R_AARCH64_CALL26         iq4_f3_original_ifm_wait_01\n0000000000000f50 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x68\n0000000000000f54 R_AARCH64_ADD_ABS_LO12_NC .bss+0x68\n0000000000000f78 R_AARCH64_ADR_PREL_PG_HI21 .bss+0xc\n0000000000000f7c R_AARCH64_ADD_ABS_LO12_NC .bss+0xc\n0000000000000fb4 R_AARCH64_CALL26         iq4_activity_hold_01\n0000000000000fec R_AARCH64_CALL26         iq4_activity_hold_01\n0000000000001008 R_AARCH64_CALL26         f3_executor_event_notify_01\n0000000000001018 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x58\n000000000000101c R_AARCH64_ADD_ABS_LO12_NC .bss+0x58\n0000000000001038 R_AARCH64_CALL26         iq4_activity_release_01\n0000000000001044 R_AARCH64_CALL26         __cxa_begin_catch\n0000000000001048 R_AARCH64_CALL26         __cxa_end_catch\n0000000000001078 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x18\n000000000000107c R_AARCH64_LDST64_ABS_LO12_NC .bss+0x18\n00000000000010a0 R_AARCH64_ADR_PREL_PG_HI21 .data.rel.ro+0x10\n00000000000010a4 R_AARCH64_ADD_ABS_LO12_NC .data.rel.ro+0x10\n00000000000010e4 R_AARCH64_CALL26         f3_executor_read_01\n00000000000010fc R_AARCH64_CALL26         f3_executor_read_01\n0000000000001114 R_AARCH64_CALL26         memcmp\n000000000000112c R_AARCH64_CALL26         memcmp\n0000000000001144 R_AARCH64_CALL26         f3_executor_current_01\n0000000000001184 R_AARCH64_CALL26         memcmp\n0000000000001190 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x18\n0000000000001194 R_AARCH64_ADD_ABS_LO12_NC .bss+0x18\n00000000000011a0 R_AARCH64_CALL26         f3_executor_event_ctor_01\n00000000000011a8 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x70\n00000000000011ac R_AARCH64_ADD_ABS_LO12_NC .bss+0x70\n00000000000011b8 R_AARCH64_CALL26         f3_executor_listener_ctor_01\n00000000000011c0 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x70\n00000000000011c4 R_AARCH64_ADD_ABS_LO12_NC .bss+0x70\n0000000000001204 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x130\n0000000000001208 R_AARCH64_ADD_ABS_LO12_NC .bss+0x130\n0000000000001228 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x138\n000000000000122c R_AARCH64_ADD_ABS_LO12_NC .bss+0x138\n0000000000001248 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x160\n000000000000124c R_AARCH64_ADD_ABS_LO12_NC .bss+0x160\n0000000000001268 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x168\n000000000000126c R_AARCH64_ADD_ABS_LO12_NC .bss+0x168\n0000000000001278 R_AARCH64_ADR_PREL_PG_HI21 .bss+0x168\n000000000000127c R_AARCH64_ADD_ABS_LO12_NC .bss+0x168\n0000000000001288 R_AARCH64_CALL26         f3_executor_read_01\n00000000000012b4 R_AARCH64_CALL26         iq4_f3_executor_hold_01\n00000000000012bc R_AARCH64_CALL26         iq4_f3_executor_hold_01\n00000000000012cc R_AARCH64_CALL26         __cxa_begin_catch\n00000000000012f4 R_AARCH64_CALL26         iq4_f3_executor_hold_01\n00000000000012f8 R_AARCH64_CALL26         __cxa_rethrow\n0000000000001300 R_AARCH64_CALL26         __cxa_end_catch\n0000000000001308 R_AARCH64_CALL26         _Unwind_Resume\n000000000000130c R_AARCH64_CALL26         __clang_call_terminate\n0000000000001338 R_AARCH64_CALL26         f3_executor_current_01\n0000000000001380 R_AARCH64_CALL26         memcmp\n000000000000139c R_AARCH64_ADR_PREL_PG_HI21 .bss+0x18\n00000000000013a0 R_AARCH64_ADD_ABS_LO12_NC .bss+0x18\n00000000000013ac R_AARCH64_CALL26         memcmp\n0000000000001408 R_AARCH64_CALL26         f3_executor_read_01\n0000000000001420 R_AARCH64_CALL26         f3_executor_read_01\n0000000000001438 R_AARCH64_CALL26         memcmp\n0000000000001464 R_AARCH64_CALL26         f3_executor_read_01\n000000000000147c R_AARCH64_CALL26         f3_executor_read_01\n0000000000001494 R_AARCH64_CALL26         memcmp\n00000000000014dc R_AARCH64_CALL26         f3_executor_read_01\n00000000000014f4 R_AARCH64_CALL26         f3_executor_read_01\n000000000000150c R_AARCH64_CALL26         memcmp\n0000000000001554 R_AARCH64_CALL26         f3_executor_read_01\n000000000000156c R_AARCH64_CALL26         f3_executor_read_01\n0000000000001584 R_AARCH64_CALL26         memcmp\n00000000000015f0 R_AARCH64_CALL26         f3_executor_tid_01\n\nRELOCATION RECORDS FOR [.text.__clang_call_terminate]:\nOFFSET           TYPE                     VALUE\n0000000000000008 R_AARCH64_CALL26         __cxa_begin_catch\n000000000000000c R_AARCH64_CALL26         _ZSt9terminatev\n\nRELOCATION RECORDS FOR [.data.rel.ro]:\nOFFSET           TYPE                     VALUE\n0000000000000010 R_AARCH64_ABS64          .rodata\n0000000000000028 R_AARCH64_ABS64          .rodata+0x20\n0000000000000040 R_AARCH64_ABS64          .rodata+0x40\n0000000000000058 R_AARCH64_ABS64          .rodata+0x60\n0000000000000070 R_AARCH64_ABS64          .rodata+0x80\n0000000000000088 R_AARCH64_ABS64          .rodata+0x9c\n00000000000000a0 R_AARCH64_ABS64          .rodata+0xbc\n00000000000000b8 R_AARCH64_ABS64          .rodata+0xdc\n00000000000000d0 R_AARCH64_ABS64          .rodata+0xfc\n00000000000000e8 R_AARCH64_ABS64          .rodata+0x124\n0000000000000100 R_AARCH64_ABS64          .rodata+0x144\n0000000000000118 R_AARCH64_ABS64          .rodata+0x164\n0000000000000130 R_AARCH64_ABS64          .rodata+0x178\n0000000000000148 R_AARCH64_ABS64          .rodata+0x18c\n\nRELOCATION RECORDS FOR [.data.DW.ref.__gxx_personality_v0]:\nOFFSET           TYPE                     VALUE\n0000000000000000 R_AARCH64_ABS64          __gxx_personality_v0\n\nRELOCATION RECORDS FOR [.eh_frame]:\nOFFSET           TYPE                     VALUE\n000000000000001c R_AARCH64_PREL32         .text\n0000000000000038 R_AARCH64_PREL32         .text+0x58\n0000000000000058 R_AARCH64_PREL32         .text+0x280\n0000000000000074 R_AARCH64_PREL32         .text+0x430\n0000000000000094 R_AARCH64_PREL32         .text+0x4b8\n00000000000000b4 R_AARCH64_PREL32         .text+0x624\n00000000000000d0 R_AARCH64_PREL32         .text+0x7cc\n00000000000000f0 R_AARCH64_PREL32         .text+0x8a0\n0000000000000110 R_AARCH64_PREL32         .text+0x9bc\n000000000000012c R_AARCH64_PREL32         .text+0xa40\n0000000000000148 R_AARCH64_PREL32         .text+0xabc\n0000000000000170 R_AARCH64_PREL32         .text+0x1310\n000000000000018c R_AARCH64_PREL32         .text.__clang_call_terminate\n00000000000001a8 R_AARCH64_PREL32         .text+0x13bc\n00000000000001d7 R_AARCH64_PREL64         DW.ref.__gxx_personality_v0\n00000000000001ec R_AARCH64_PREL32         .text+0xe88\n00000000000001f5 R_AARCH64_PREL64         .gcc_except_table\n",
+      "stderr": ""
+    }
+  ],
+  "focused_groups": 8,
+  "inherited_regression_groups": 17,
+  "finish_SD_race_repetitions": 32,
+  "configurations": [
+    "normal",
+    "asan_ubsan",
+    "tsan"
+  ],
+  "target_objects": 1,
+  "target_executed": false,
+  "sdk_loaded": false
+}

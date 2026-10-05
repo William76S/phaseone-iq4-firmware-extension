@@ -1,0 +1,9 @@
+#pragma once
+struct StockCodeWindow01 {unsigned long long va,bytes;const char*sha;};
+inline constexpr StockCodeWindow01 StockCodeWindows01[]={
+{4194928ULL,978108ULL,"d4a42e53f94aba829414b53d34b157624fde551d814bb3791c2907f2fd0dcbb0"},
+{5173040ULL,192156ULL,"cf86a52a1013e45a01aebccee6c3849c8d6cef9c065da34cd6004961d7c41893"},
+{5365200ULL,1706712ULL,"103faaeb71f6bc64f928e6df8f585701871183bc5d6b39bb85f54785caa7720a"},
+{7071916ULL,7454676ULL,"f1fe5e15c278d684ced9fd768f731a64edfaee0868ea5f15162344bd1d4d316e"},
+{14526596ULL,1404622ULL,"ba9def7fc8b5515a563cb0b598581f9de169dde16d7c9122d9c2c037742389db"},
+};

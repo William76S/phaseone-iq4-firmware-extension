@@ -1,0 +1,390 @@
+{
+  "schema": "iq4_f3_native_fs_build_04",
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/fs.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/host_posix.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/test_files.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/files_normal"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/files_normal",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04"
+      ],
+      "returncode": 0,
+      "stdout": "{\"real_host_POSIX_groups\":17,\"passed\":true,\"host_nonreplacement\":\"linkat_then_unlinkat\",\"camera_renameat2_tested\":false,\"RAW_bytes_synthetic\":true,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/owner_guard.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/test_guard.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/guard_normal"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/guard_normal"
+      ],
+      "returncode": 0,
+      "stdout": "{\"own_memory_guard_groups\":7,\"passed\":true,\"actual_camera_owner_observed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/fs.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/host_posix.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/test_files.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/files_asan_ubsan"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/files_asan_ubsan",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04"
+      ],
+      "returncode": 0,
+      "stdout": "{\"real_host_POSIX_groups\":17,\"passed\":true,\"host_nonreplacement\":\"linkat_then_unlinkat\",\"camera_renameat2_tested\":false,\"RAW_bytes_synthetic\":true,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/owner_guard.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/test_guard.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/guard_asan_ubsan"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/guard_asan_ubsan"
+      ],
+      "returncode": 0,
+      "stdout": "{\"own_memory_guard_groups\":7,\"passed\":true,\"actual_camera_owner_observed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-std=c11",
+        "-O2",
+        "-g0",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-mno-outline-atomics",
+        "-funwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-omit-frame-pointer",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/fs.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/fs.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/fs.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+        "-u",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/fs.o"
+      ],
+      "returncode": 0,
+      "stdout": "                 U memcpy\n                 U memset\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/file",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/fs.o"
+      ],
+      "returncode": 0,
+      "stdout": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/fs.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-std=c11",
+        "-O2",
+        "-g0",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-mno-outline-atomics",
+        "-funwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-omit-frame-pointer",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/owner_guard.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/owner_guard.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/owner_guard.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+        "-u",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/owner_guard.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/file",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/owner_guard.o"
+      ],
+      "returncode": 0,
+      "stdout": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/owner_guard.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-std=c11",
+        "-O2",
+        "-g0",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-mno-outline-atomics",
+        "-funwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-omit-frame-pointer",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/native_linux.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/native_linux.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/native_linux.o"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+        "-u",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/native_linux.o"
+      ],
+      "returncode": 0,
+      "stdout": "                 U iq4_f3_original_errno_location_03\n                 U iq4_f3_original_syscall_03\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/file",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/native_linux.o"
+      ],
+      "returncode": 0,
+      "stdout": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_fs_adapter_build_04/native_linux.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped\n",
+      "stderr": ""
+    }
+  ],
+  "inputs": [
+    {
+      "path": "tools/firmware/f3_native_fs_adapter_04/ORIGINAL_BINDINGS.json",
+      "bytes": 780,
+      "sha256": "8e9f0aa3d75599155aa915c49a5d23c64c144bdcd6fcb42759aa9524a7dbc4cd"
+    },
+    {
+      "path": "tools/firmware/f3_native_fs_adapter_04/README.md",
+      "bytes": 7619,
+      "sha256": "51d9d9e9e2aedbed3525bdeca23af8d1a96d5177edeb4f42040225325d98f406"
+    },
+    {
+      "path": "tools/firmware/f3_native_fs_adapter_04/build.py",
+      "bytes": 2488,
+      "sha256": "afdae4990ac7d30a484b71d9c9cc97059699008addcdb0be181daac0fc7fb7b6"
+    },
+    {
+      "path": "tools/firmware/f3_native_fs_adapter_04/fs.c",
+      "bytes": 11148,
+      "sha256": "fded49f95e1206d5356afeb73cf34759362fee7c392d772db9b0096f4a02aea7"
+    },
+    {
+      "path": "tools/firmware/f3_native_fs_adapter_04/fs.h",
+      "bytes": 3339,
+      "sha256": "1e96f6ba0dedb9af9ddb6c32709fe44d2ef7ff6a0325f5943a46329c9a3c4813"
+    },
+    {
+      "path": "tools/firmware/f3_native_fs_adapter_04/host_posix.c",
+      "bytes": 2038,
+      "sha256": "1f38796b91da1156b73602f7006ec08ab163ac20f3d1dc41338d74a1364fe1d5"
+    },
+    {
+      "path": "tools/firmware/f3_native_fs_adapter_04/native_linux.c",
+      "bytes": 2762,
+      "sha256": "920121da6b945f2a3a634097114bdffbb5be91d103ae1cbe3470b751865f8f03"
+    },
+    {
+      "path": "tools/firmware/f3_native_fs_adapter_04/owner_guard.c",
+      "bytes": 1931,
+      "sha256": "b4bec4e0a724f577883bd11a1fb9c2807b4f2295ff0d328928203a6db28d2dd6"
+    },
+    {
+      "path": "tools/firmware/f3_native_fs_adapter_04/test_files.c",
+      "bytes": 11145,
+      "sha256": "8e93ed8c0aa683654c895848e7b0381689572747288073dd988a5dcf959ae667"
+    },
+    {
+      "path": "tools/firmware/f3_native_fs_adapter_04/test_guard.c",
+      "bytes": 2162,
+      "sha256": "679aaa2a378b237835817ed794e2948b3c47d62c84f2f77233a4afa1b8b9abc4"
+    },
+    {
+      "path": "tools/firmware/f3_native_fs_adapter_04/validate.py",
+      "bytes": 1269,
+      "sha256": "34f1b71c19286c984e5ad2af78def9c7d0ead766cde50d9fb4a55252270a5a34"
+    },
+    {
+      "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "bytes": 188226560,
+      "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "analysis/firmware/f3_native_fs_adapter_build_04/COMMANDS.json",
+      "bytes": 9961,
+      "sha256": "a9c76eef2c617df18510497fe03bc10faa61564b0b92d0d21df87b3e4862472c"
+    },
+    {
+      "path": "analysis/firmware/f3_native_fs_adapter_build_04/files_asan_ubsan",
+      "bytes": 281664,
+      "sha256": "adc1b00fc5ee2ab968e95d392e8b793f413410ebc726cf25651de260b3e0a911"
+    },
+    {
+      "path": "analysis/firmware/f3_native_fs_adapter_build_04/files_normal",
+      "bytes": 73008,
+      "sha256": "bddd6b7274894e4e49b06d66a27f179bffafdc9817f9c2900bd49468fc2eb0e1"
+    },
+    {
+      "path": "analysis/firmware/f3_native_fs_adapter_build_04/fs.d",
+      "bytes": 787,
+      "sha256": "39cb5b59be983d62924c716240f603c0f36b8c4591ac54de0147c03aba053329"
+    },
+    {
+      "path": "analysis/firmware/f3_native_fs_adapter_build_04/fs.o",
+      "bytes": 18888,
+      "sha256": "4e105b96473898aa12827753fdc393e5dae8547c317652156200365c5022e729"
+    },
+    {
+      "path": "analysis/firmware/f3_native_fs_adapter_build_04/guard_asan_ubsan",
+      "bytes": 54224,
+      "sha256": "b10fee20fa465e3d41c757f0f4affa9d065afef58e2c5b5a39ce837a332da6f5"
+    },
+    {
+      "path": "analysis/firmware/f3_native_fs_adapter_build_04/guard_normal",
+      "bytes": 50960,
+      "sha256": "fb821735bbccdb6d40186c71f53802d2da2ce6aff38959c11210b9e4eb8439f0"
+    },
+    {
+      "path": "analysis/firmware/f3_native_fs_adapter_build_04/native_linux.d",
+      "bytes": 807,
+      "sha256": "989b91971393b13e698871220b6cb559837ec430b4445f7f1bb51bfcdd3757d3"
+    },
+    {
+      "path": "analysis/firmware/f3_native_fs_adapter_build_04/native_linux.o",
+      "bytes": 5984,
+      "sha256": "0bd82a72c22583f202e0be68f13843f406c5994b21dd1775caec7fe334322a82"
+    },
+    {
+      "path": "analysis/firmware/f3_native_fs_adapter_build_04/owner_guard.d",
+      "bytes": 805,
+      "sha256": "7f0eda498483e409bd97ce4c39d8f5244f4f07efe212dce6bbe7f175e185480f"
+    },
+    {
+      "path": "analysis/firmware/f3_native_fs_adapter_build_04/owner_guard.o",
+      "bytes": 2680,
+      "sha256": "e9eb62bf3332309fb3ab7cd9fb2fa76bac55e6b5fe9ec2f94a0c047b0a4ba686"
+    }
+  ],
+  "device_ports_invoked": false,
+  "target_executed": false,
+  "actual_camera_card_epoch_not_observed": true
+}

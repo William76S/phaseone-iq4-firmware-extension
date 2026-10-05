@@ -1,0 +1,35 @@
+cmake_minimum_required(VERSION 3.16)
+project(iq4_recording LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_library(iq4_recording STATIC mjpeg_avi.cpp)
+target_include_directories(iq4_recording PUBLIC . ../runtime)
+if(APPLE)
+  execute_process(COMMAND xcrun --show-sdk-path OUTPUT_VARIABLE IQ4_RECORDING_SDK OUTPUT_STRIP_TRAILING_WHITESPACE)
+  target_include_directories(iq4_recording SYSTEM PUBLIC ${IQ4_RECORDING_SDK}/usr/include/c++/v1)
+endif()
+target_compile_options(iq4_recording PRIVATE -Wall -Wextra -Wpedantic)
+if(TARGET iq4_bounded_codec)
+  add_library(iq4_rgb_jpeg_backend STATIC rgb_jpeg_backend.cpp)
+  target_compile_features(iq4_rgb_jpeg_backend PUBLIC cxx_std_17)
+  target_link_libraries(iq4_rgb_jpeg_backend PUBLIC iq4_bounded_codec iq4_recording)
+  target_compile_options(iq4_rgb_jpeg_backend PRIVATE -Wall -Wextra -Wpedantic)
+  if(IQ4_CODEC_BUILD_HOST_TESTS)
+    add_executable(iq4_rgb_recording_tests ../../tests/recording/test_rgb_backend.cpp ../runtime/recording.cpp)
+    target_link_libraries(iq4_rgb_recording_tests PRIVATE iq4_rgb_jpeg_backend ${IQ4_CODEC_HOST_LIBJPEG})
+  endif()
+endif()
+add_executable(iq4_recording_tests ../../tests/recording/test_recording.cpp ../runtime/recording.cpp)
+target_link_libraries(iq4_recording_tests PRIVATE iq4_recording)
+find_package(Python3 COMPONENTS Interpreter REQUIRED)
+enable_testing()
+if(TARGET iq4_rgb_recording_tests)
+  add_test(NAME iq4_rgb_recording_host_validation
+    COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/../../tests/recording/run_rgb_host_validation.py
+      --test-executable $<TARGET_FILE:iq4_rgb_recording_tests>
+      --evidence-root ${CMAKE_CURRENT_SOURCE_DIR}/../../evidence/recording/runs/rgb-cmake)
+endif()
+add_test(NAME iq4_recording_media_host_validation
+  COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/../../tests/recording/run_host_validation.py
+    --test-executable $<TARGET_FILE:iq4_recording_tests>
+    --evidence-root ${CMAKE_CURRENT_SOURCE_DIR}/../../evidence/recording/runs)

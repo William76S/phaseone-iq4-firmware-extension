@@ -1,0 +1,26 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  419534: d2800100     	mov	x0, #0x8                // =8
+  419538: 97ffc24a     	bl	0x409e60 <_Znwm@plt>
+  41953c: aa0003f3     	mov	x19, x0
+  419540: aa1303e0     	mov	x0, x19
+  419544: 9401987f     	bl	0x47f740 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49794>
+  419548: f90ef7f3     	str	x19, [sp, #0x1de8]
+  41954c: d2803100     	mov	x0, #0x188              // =392
+  419550: 97ffc244     	bl	0x409e60 <_Znwm@plt>
+  419554: aa0003f3     	mov	x19, x0
+  419558: f94effe3     	ldr	x3, [sp, #0x1df8]
+  41955c: f94f03e2     	ldr	x2, [sp, #0x1e00]
+  419560: f94ef7e1     	ldr	x1, [sp, #0x1de8]
+  419564: aa1303e0     	mov	x0, x19
+  419568: 9401b173     	bl	0x485b34 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x4fb88>
+  41956c: f100027f     	cmp	x19, #0x0
+  419570: 54000060     	b.eq	0x41957c <.text+0xe34c>
+  419574: 91016260     	add	x0, x19, #0x58
+  419578: 14000002     	b	0x419580 <.text+0xe350>
+  41957c: d2800000     	mov	x0, #0x0                // =0
+  419580: f90ef3e0     	str	x0, [sp, #0x1de0]

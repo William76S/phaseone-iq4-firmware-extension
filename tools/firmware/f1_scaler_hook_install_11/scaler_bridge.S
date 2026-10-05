@@ -1,0 +1,115 @@
+// Compile-only AArch64 ABI bridge. No installer; trampoline starts NULL.
+.text
+.p2align 2
+.global iq4_f1_scaler_bridge_10
+.hidden iq4_f1_scaler_bridge_10
+.type iq4_f1_scaler_bridge_10,%function
+iq4_f1_scaler_bridge_10:
+.cfi_startproc
+ sub sp,sp,#1024
+.cfi_def_cfa_offset 1024
+ stp x29,x30,[sp,#136]
+.cfi_offset 29,-888
+.cfi_offset 30,-880
+ stp x0,x1,[sp,#64]
+ stp x2,x3,[sp,#80]
+ stp x4,x5,[sp,#96]
+ stp x6,x7,[sp,#112]
+ str x8,[sp,#128]
+ add x9,sp,#1024
+ str x9,[sp,#152]
+ mrs x10,tpidr_el0
+ str x10,[sp,#160]
+ ldp x10,x11,[x9]
+ stp x10,x11,[sp]
+ ldp x10,x11,[x9,#16]
+ stp x10,x11,[sp,#16]
+ ldr x10,[x9,#32]
+ str x10,[sp,#32]
+ adrp x16,iq4_f1_scaler_trampoline_10
+ ldr x16,[x16,:lo12:iq4_f1_scaler_trampoline_10]
+ blr x16
+// Reached only after a normal original return; preserve all ordinary results.
+ stp x0,x1,[sp,#176]
+ stp x2,x3,[sp,#192]
+ stp x4,x5,[sp,#208]
+ stp x6,x7,[sp,#224]
+ stp x8,x9,[sp,#240]
+ stp x10,x11,[sp,#256]
+ stp x12,x13,[sp,#272]
+ stp x14,x15,[sp,#288]
+ stp x16,x17,[sp,#304]
+ str x18,[sp,#320]
+ stp q0,q1,[sp,#336]
+ stp q2,q3,[sp,#368]
+ stp q4,q5,[sp,#400]
+ stp q6,q7,[sp,#432]
+ stp q8,q9,[sp,#464]
+ stp q10,q11,[sp,#496]
+ stp q12,q13,[sp,#528]
+ stp q14,q15,[sp,#560]
+ stp q16,q17,[sp,#592]
+ stp q18,q19,[sp,#624]
+ stp q20,q21,[sp,#656]
+ stp q22,q23,[sp,#688]
+ stp q24,q25,[sp,#720]
+ stp q26,q27,[sp,#752]
+ stp q28,q29,[sp,#784]
+ stp q30,q31,[sp,#816]
+ mrs x9,nzcv
+ str x9,[sp,#848]
+ mrs x9,fpcr
+ str x9,[sp,#856]
+ mrs x9,fpsr
+ str x9,[sp,#864]
+ mov x0,sp
+ bl iq4_f1_scaler_after_10
+ ldp q0,q1,[sp,#336]
+ ldp q2,q3,[sp,#368]
+ ldp q4,q5,[sp,#400]
+ ldp q6,q7,[sp,#432]
+ ldp q8,q9,[sp,#464]
+ ldp q10,q11,[sp,#496]
+ ldp q12,q13,[sp,#528]
+ ldp q14,q15,[sp,#560]
+ ldp q16,q17,[sp,#592]
+ ldp q18,q19,[sp,#624]
+ ldp q20,q21,[sp,#656]
+ ldp q22,q23,[sp,#688]
+ ldp q24,q25,[sp,#720]
+ ldp q26,q27,[sp,#752]
+ ldp q28,q29,[sp,#784]
+ ldp q30,q31,[sp,#816]
+ ldr x9,[sp,#848]
+ msr nzcv,x9
+ ldr x9,[sp,#856]
+ msr fpcr,x9
+ ldr x9,[sp,#864]
+ msr fpsr,x9
+ ldp x0,x1,[sp,#176]
+ ldp x2,x3,[sp,#192]
+ ldp x4,x5,[sp,#208]
+ ldp x6,x7,[sp,#224]
+ ldp x8,x9,[sp,#240]
+ ldp x10,x11,[sp,#256]
+ ldp x12,x13,[sp,#272]
+ ldp x14,x15,[sp,#288]
+ ldp x16,x17,[sp,#304]
+ ldr x18,[sp,#320]
+ ldp x29,x30,[sp,#136]
+.cfi_restore 29
+.cfi_restore 30
+ add sp,sp,#1024
+.cfi_def_cfa_offset 0
+ ret
+.cfi_endproc
+.size iq4_f1_scaler_bridge_10,.-iq4_f1_scaler_bridge_10
+.data
+.p2align 3
+.global iq4_f1_scaler_trampoline_10
+.hidden iq4_f1_scaler_trampoline_10
+.type iq4_f1_scaler_trampoline_10,%object
+iq4_f1_scaler_trampoline_10:
+.quad 0
+.size iq4_f1_scaler_trampoline_10,8
+.section .note.GNU-stack,"",%progbits

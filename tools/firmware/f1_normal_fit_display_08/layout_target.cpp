@@ -1,0 +1,2 @@
+#include "provider.hpp"
+extern "C" __attribute__((visibility("default"))) const std::uint64_t iq4_f1_normal08_layout[]={sizeof(iq4::f1::normal08::PublishedIngress),sizeof(iq4::f1::normal08::IngressStatus),sizeof(iq4::f1::normal08::WriteFacts),sizeof(iq4::f1::normal08::Geometry),offsetof(iq4::f1::normal08::PublishedIngress,metadata),offsetof(iq4::f1::normal08::IngressStatus,last),sizeof(iq4::f1::normal08::ScalerCapture),offsetof(iq4::f1::normal08::ScalerCapture,arguments)};

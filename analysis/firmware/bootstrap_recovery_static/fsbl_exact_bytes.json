@@ -1,0 +1,149 @@
+{
+  "evidence_level": "static_bytes_and_instructions",
+  "target_code_executed": false,
+  "source_sha256": "7a3a3d6f62c61e7d627a9f55d844d74be9111b26eb7a7fa42f5bdd7be7dabe9e",
+  "header_words": {
+    "0x2c": "0xfffc0000",
+    "0x30": "0x2800",
+    "0x34": "0x1fae0",
+    "0x3c": "0x1e3f8",
+    "0x1100": "0xf7b6",
+    "0x1108": "0xf7c2",
+    "0x1110": "0xfffc0000",
+    "0x1120": "0xa00"
+  },
+  "static_view_mapping": {
+    "file_offset": "0x222e0",
+    "size": "0x1e3f8",
+    "proposed_va_base": "0xfffc0000",
+    "runtime_mapping_verified": false,
+    "view_sha256": "298a9745fec84477a9f078f4c791661ec4865f885ab36533f3e1b42d2739d053",
+    "view_is_installable": false
+  },
+  "ranges": [
+    {
+      "name": "fsbl_main_gpio_owner",
+      "boot_file_offset": "0x32e24",
+      "proposed_va": "0xfffd0b44",
+      "end_proposed_va_exclusive": "0xfffd0b80",
+      "bytes_hex": "fd7baca9fd030091f55b02a995000090b5021991a04200d1f35301a91400805213008052f76303a938008052f96b04a9fb7305a9e03b00f9e83300fd",
+      "bytes_sha256": "41fb9995ebee5449a1295df81b4a208e43f0abed56e43e3d81d810d24b080bbf",
+      "disassembly": "analysis/firmware/bootstrap_recovery_static/fsbl_main_gpio_owner.disasm.txt",
+      "disassembly_sha256": "8d497aea7968cb981ee8a9c35c2152237ce92e28b1d014e5d34edb4d1b1252dc"
+    },
+    {
+      "name": "fsbl_factory_user_environment_and_gpio17",
+      "boot_file_offset": "0x33494",
+      "proposed_va": "0xfffd11b4",
+      "end_proposed_va_exclusive": "0xfffd13ac",
+      "bytes_hex": "1300805258008052000000f000880891c5d0ff97010000d00040a0d221802c919bfdff97004080d2c0ebbff2000040b91f0c40f2a00d0054c0f25379000a0034000000f000803e91b7d0ff97b60201d12200805241058052e00316aa33c9ff97170000d022008052e1048052e00316aa2ec9ff9722008052e1028052e00316aa2ac9ff970200805241058052e00316aa4bc9ff9702008052e1028052e00316aa47c9ff9722008052e1048052e00316aa43c9ff9741058052e00316aa73c3ff97f7463f91e1048052e00316aa6fc3ff97e1028052e00316aa6cc3ff9700e284d272caff972200805241058052e00316aa33c9ff97602c80d26ccaff9722008052e1028052e00316aa2dc9ff97000280d2010000d040f9bff221a83f91190040b90040a0d23fff1371f782819ac8fdff970240a0d2e10317aa40c0208b54fdff973fff137148c4ff5421028052e00316aa02008052f5c8ff97a1825cb8e0e300323f00006b81010054a0425eb81f440071a80100540121805208000014c2fe49b9c1e22791a00201d138c9ff9700f6ff34acffff17e1208052000000b000683c9139c3ff97e1a3029120028052e22303913cbfff97e0a34239a1425cb8006000112008000be1234339000040b90024c11ae0bf0736000000f0000c099152d0ff9700a08052e6ddff97000000f0007409914dd0ff97f6fdff17",
+      "bytes_sha256": "afaec47e9f496817b38185e108af559071f791cae0a1a75ff4d0299b0ebb1915",
+      "disassembly": "analysis/firmware/bootstrap_recovery_static/fsbl_factory_user_environment_and_gpio17.disasm.txt",
+      "disassembly_sha256": "77ca980ff66857b29890e649e377d827282d5831b1b746079a59e39c9d2f24fc"
+    },
+    {
+      "name": "fsbl_reset_writer_complete",
+      "boot_file_offset": "0x2ae10",
+      "proposed_va": "0xfffc8b30",
+      "end_proposed_va_exclusive": "0xfffc8bac",
+      "bytes_hex": "010280d241f9bff2200000b9800880d240f9bff2000040b91f0c40f2c1000054010680d2c1ebbff2200040b900001d32200000b99f3f03d5df3f03d5a00000b000fc48b91f08007180010054fd7bbfa9400000f000f41491fd03009153f2ff97014380d2c1ebbff2200040b900001c32200000b90000001400000014",
+      "bytes_sha256": "46c5ed92bb8077aeb210e2783ef20820897f478d119b64c0b6d0c20f906420c4",
+      "disassembly": "analysis/firmware/bootstrap_recovery_static/fsbl_reset_writer_complete.disasm.txt",
+      "disassembly_sha256": "a6f454f678101539511f87ad87fa763367c8d609332a6ede003c0b28a65bdb5b"
+    },
+    {
+      "name": "fsbl_gpio_pin_bank_bit",
+      "boot_file_offset": "0x23334",
+      "proposed_va": "0xfffc1054",
+      "end_proposed_va_exclusive": "0xfffc10d8",
+      "bytes_hex": "ff8300d1230380d26306c0f2001c0012e42300913f000039e30700f9a30980d2a30dc0f2e30b00f9a31180d2a315c0f2e30f00f9230040397f140071090100546304005181d863b8210400110308c11a6080011b001c00120800001485d863b8bf00006b820000546304001123000039f1ffff1763feff3540000039ff830091c0035fd6",
+      "bytes_sha256": "ccb342d3df9b42cf7c5fd6edfc6d957189b80872d6429cd085daa8c056c00bbb",
+      "disassembly": "analysis/firmware/bootstrap_recovery_static/fsbl_gpio_pin_bank_bit.disasm.txt",
+      "disassembly_sha256": "a0e3a184b47878c437fbae428370cea8586c1d4005a9683c1c68476baee6217c"
+    },
+    {
+      "name": "fsbl_gpio_configure_direction",
+      "boot_file_offset": "0x259bc",
+      "proposed_va": "0xfffc36dc",
+      "end_proposed_va_exclusive": "0xfffc3770",
+      "bytes_hex": "e60300aafd7bbea9e703022afd030091c20840b9e003012ae1e300325f00016bc1000054c12440b93f00006be8000054a13580520200001481358052600000f000683c9146faff97e27f0091e17b00914af6ff97c10440b9e07b403922008052ff00007100641a53001008110000010be17f4039030040b94120c11a2200032a6100210a2100821a010000b9fd7bc2a8c0035fd6",
+      "bytes_sha256": "364877ecb04e90f9d3bd1f404b8e602efee5e88e604a3176c509e3f8a9bc54d1",
+      "disassembly": "analysis/firmware/bootstrap_recovery_static/fsbl_gpio_configure_direction.disasm.txt",
+      "disassembly_sha256": "ffd30003d688bc72d7fbd54e892c22cb06c9093c13184f704faadced57c3c289"
+    },
+    {
+      "name": "fsbl_gpio_owner_configure",
+      "boot_file_offset": "0x25afc",
+      "proposed_va": "0xfffc381c",
+      "end_proposed_va_exclusive": "0xfffc38e0",
+      "bytes_hex": "fd7bbfa9fd030091810000b4e2000035410d805202000014210d8052600000f000683c91fef9ff972100407903008012010000790100009021101b91010800f9210080d2c115c0f2011000f9c100805202fc002901a0003901008052022040b95f180071e1000054022c40b94201003522040051421c00125f04007109010054020440b9425008114218010b430000b9030000143f08007141ffff542104001102a04039211c00125f00016b88fdff54e1e30032010800b900008052fd7bc1a8c0035fd6",
+      "bytes_sha256": "6772d643a6719b8f0825f748d945dd51c099c045923e00efe871ce83c6aeca94",
+      "disassembly": "analysis/firmware/bootstrap_recovery_static/fsbl_gpio_owner_configure.disasm.txt",
+      "disassembly_sha256": "38a20a375a6830191c1fcf3efb62a5d0b7c316f6e10d40a11b9a0614621830fa"
+    },
+    {
+      "name": "fsbl_environment_strlen",
+      "boot_file_offset": "0x32ce0",
+      "proposed_va": "0xfffd0a00",
+      "end_proposed_va_exclusive": "0xfffd0b40",
+      "bytes_hex": "042c4092e8c300b29fc03ff12c080054020c40a9440008cb45d800b2660008cb67d800b2840025eac500278aa00840fa000100548430859a000180d2840cc0da8410c0dae033809a000c448bc0035fd601ec7c92214000d1220cc2a9440008cb660008cb850006aabf1c08ea01010054220c41a9440008cb660008cb850006aabf1c08eaa0feff542140009145d800b267d800b2840025eac500278aa00840fa200100548430859a200000cb840cc0da052000918410c0da0030859a000c448bc0035fd6220cc1a9440008cb45d800b2660008cb67d800b2840025eac500278aa00840fa01feff54220cc1a9440008cb45d800b2660008cb67d800b2840025eac500278aa00840fae0fdff54e6ffff1701ec7c92220c40a904f07dd307008092e420c49a84c001b2420024aa650024aa1f007df24200879a6300859ac8ffff17",
+      "bytes_sha256": "4809adc1b328a275fd8add28a2b60ae167558f9b69243e3a42fb58ac1eb0a994",
+      "disassembly": "analysis/firmware/bootstrap_recovery_static/fsbl_environment_strlen.disasm.txt",
+      "disassembly_sha256": "c989d01fe0ddbaf3ea631ac4ea2d54d46ca304ad1256a1dd75b43b27c326e3a4"
+    },
+    {
+      "name": "fsbl_environment_copy",
+      "boot_file_offset": "0x32b20",
+      "proposed_va": "0xfffd0840",
+      "end_proposed_va_exclusive": "0xfffd0900",
+      "bytes_hex": "292c4092ecc300b2310c40923fc13ff1e80311cbcc080054241440a988000ccb89d800b2060129eac1010054aa000ccbabd800b247012bea40040054e70cc0daef10c0da090780d2030c4f8b2f010fcba520cf9a651000f8040000f9c0035fd6c60cc0dacf10c0da030c4f8be96100f1ab0000548524c99a65d01fb8040000b9c0035fd64f0000b4040000797f000039c0035fd61f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d51f2003d5",
+      "bytes_sha256": "5de98dc5c9d014e809ad1320cc1127be436b5d749fedcc2485afd792587e1938",
+      "disassembly": "analysis/firmware/bootstrap_recovery_static/fsbl_environment_copy.disasm.txt",
+      "disassembly_sha256": "35731d8a43a0f31f6a47fc4a702f4134b271c7e4e5cc217e02a779ab67dc9c7e"
+    }
+  ],
+  "tables": [
+    {
+      "name": "boot_header",
+      "boot_file_offset": "0x20",
+      "size": 128,
+      "bytes_hex": "665599aa584e4c58000000000000fcff00280000e0fa0100e0fa0100f8e3010028e40100000b0000616b16fd00000000000000000000000000000000000000000000000000000000000000002000000100000000000000000000000000000000000000000000000000000000000000000000000000000000c008000000110000",
+      "sha256": "22a7c0616ad5816d10f2aa28843bbfcc34092a2aed2b211b06a34860296e7ec0"
+    },
+    {
+      "name": "boot_first_partition_header",
+      "boot_file_offset": "0x1100",
+      "size": 64,
+      "bytes_hex": "b6f70000b6f70000c2f70000500400000000fcff000000000000fcff00000000000a00001631000001000000000000004002000000000000000000002ad70400",
+      "sha256": "22b55433280a609ca8349078a19857f14b92cf7dcd37aa2d224db8592fe8a456"
+    },
+    {
+      "name": "factory_user_strings",
+      "boot_file_offset": "0x362ac",
+      "size": 52,
+      "bytes_hex": "554e4b4e00666163746f72795f6f725f757365723d666163746f72790a00666163746f72795f6f725f757365723d757365720a00",
+      "sha256": "b4dd4a849149ed7243c1eb4a83aba23237de920e6d4dc002d087256fa2aaa68a"
+    },
+    {
+      "name": "force_factory_and_jtag_strings",
+      "boot_file_offset": "0x36523",
+      "size": 67,
+      "bytes_hex": "466f7263696e6720666163746f72792064656661756c740a0d004a54414720626f6f743a20536b697070696e672042726f776e4f757420646574656374696f6e0a0d00",
+      "sha256": "0ed2438f71e443fd03de309bad68b92e03bb3cc29e30c34700d5fb46e892188b"
+    },
+    {
+      "name": "gpio_configuration_table",
+      "boot_file_offset": "0x3fce0",
+      "size": 24,
+      "bytes_hex": "0000000000000aff00000000000030ff0100000002000000",
+      "sha256": "3dc2560869dbfceabbfc3b6c02b760e3d574667d18758ed6cf40dfb8a4651d01"
+    },
+    {
+      "name": "fsbl_gpio_assert_source_name",
+      "boot_file_offset": "0x351fa",
+      "size": 10,
+      "bytes_hex": "786770696f70732e6300",
+      "sha256": "b6c127498d0221ab00b953010229393e8b8ad4b271848a3092e335dd58269201"
+    }
+  ]
+}

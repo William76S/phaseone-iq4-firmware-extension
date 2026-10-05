@@ -1,0 +1,21 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  86a67c: f94053f4     	ldr	x20, [sp, #0xa0]
+  86a680: aa1403e1     	mov	x1, x20
+  86a684: d2800700     	mov	x0, #0x38               // =56
+  86a688: 97ee9cdc     	bl	0x4119f8 <.text+0x67c8>
+  86a68c: aa0003f3     	mov	x19, x0
+  86a690: 794103e1     	ldrh	w1, [sp, #0x80]
+  86a694: aa1303e0     	mov	x0, x19
+  86a698: 94000ac7     	bl	0x86d1b4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x28df0>
+  86a69c: f9004ff3     	str	x19, [sp, #0x98]
+  86a6a0: f9401fe0     	ldr	x0, [sp, #0x38]
+  86a6a4: 91354000     	add	x0, x0, #0xd50
+  86a6a8: aa0003e1     	mov	x1, x0
+  86a6ac: f9404fe0     	ldr	x0, [sp, #0x98]
+  86a6b0: 94000b61     	bl	0x86d434 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x29070>

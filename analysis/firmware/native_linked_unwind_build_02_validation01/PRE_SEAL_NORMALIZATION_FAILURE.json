@@ -1,0 +1,17 @@
+{
+  "command": [
+    "build/host-venv/bin/python",
+    "tools/firmware/native_linked_contract_01/seal.py",
+    "--build",
+    "analysis/firmware/f1_f3_f4_user_integration_build_01_final01",
+    "--loader-proof",
+    "tools/firmware/native_copy_rtti_01/ABI_PROOF.json"
+  ],
+  "exit_code": 1,
+  "failure": "Python tuple in locally constructed composition.calls was not accepted as JSON sequence",
+  "failure_stage": "semantic identity construction before any User or seal output writes",
+  "User_unchanged_sha256": "25727654bfccdeb6140380767cead82fae1b5f2a9237ae02fa9ef52110f2c0ff",
+  "fix": "JSON-equivalent tuple/list normalization",
+  "target_executed": false,
+  "camera_accessed": false
+}

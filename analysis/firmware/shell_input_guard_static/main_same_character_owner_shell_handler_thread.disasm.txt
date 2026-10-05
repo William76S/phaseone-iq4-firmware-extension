@@ -1,0 +1,81 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  424688: b0002e80     	adrp	x0, 0x9f5000
+  42468c: 91308000     	add	x0, x0, #0xc20
+  424690: f9086be0     	str	x0, [sp, #0x10d0]
+  424694: d2900b00     	mov	x0, #0x8058             // =32856
+  424698: 97ff95f2     	bl	0x409e60 <_Znwm@plt>
+  42469c: aa0003f3     	mov	x19, x0
+  4246a0: f9486be1     	ldr	x1, [sp, #0x10d0]
+  4246a4: aa1303e0     	mov	x0, x19
+  4246a8: 941135a6     	bl	0x871d40 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2d97c>
+  4246ac: f90867f3     	str	x19, [sp, #0x10c8]
+  4246b0: 914007e0     	add	x0, sp, #0x1, lsl #12   // =0x1000
+  4246b4: 91014000     	add	x0, x0, #0x50
+  4246b8: 3901dc1f     	strb	wzr, [x0, #0x77]
+  4246bc: d2805900     	mov	x0, #0x2c8              // =712
+  4246c0: 97ff95e8     	bl	0x409e60 <_Znwm@plt>
+  4246c4: aa0003f3     	mov	x19, x0
+  4246c8: f94867e1     	ldr	x1, [sp, #0x10c8]
+  4246cc: 52800005     	mov	w5, #0x0                // =0
+  4246d0: d2800004     	mov	x4, #0x0                // =0
+  4246d4: 914007e0     	add	x0, sp, #0x1, lsl #12   // =0x1000
+  4246d8: 91014000     	add	x0, x0, #0x50
+  4246dc: 3941dc03     	ldrb	w3, [x0, #0x77]
+  4246e0: 90002e80     	adrp	x0, 0x9f4000
+  4246e4: 91178002     	add	x2, x0, #0x5e0
+  4246e8: aa1303e0     	mov	x0, x19
+  4246ec: 940c73cf     	bl	0x741628 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x278fc>
+  4246f0: f9085ff3     	str	x19, [sp, #0x10b8]
+  4246f4: d2800800     	mov	x0, #0x40               // =64
+  4246f8: 97ff95da     	bl	0x409e60 <_Znwm@plt>
+  4246fc: aa0003f3     	mov	x19, x0
+  424700: f94867e3     	ldr	x3, [sp, #0x10c8]
+  424704: f94237e2     	ldr	x2, [sp, #0x468]
+  424708: f9486be1     	ldr	x1, [sp, #0x10d0]
+  42470c: aa1303e0     	mov	x0, x19
+  424710: 94113846     	bl	0x872828 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2e464>
+  424714: f9085bf3     	str	x19, [sp, #0x10b0]
+  424718: f9485fe0     	ldr	x0, [sp, #0x10b8]
+  42471c: 9100c003     	add	x3, x0, #0x30
+  424720: f9485fe0     	ldr	x0, [sp, #0x10b8]
+  424724: f9401800     	ldr	x0, [x0, #0x30]
+  424728: 9102e000     	add	x0, x0, #0xb8
+  42472c: f9400002     	ldr	x2, [x0]
+  424730: f9485be1     	ldr	x1, [sp, #0x10b0]
+  424734: aa0303e0     	mov	x0, x3
+  424738: d63f0040     	blr	x2
+  42473c: f9485fe0     	ldr	x0, [sp, #0x10b8]
+  424740: f9400000     	ldr	x0, [x0]
+  424744: 91018000     	add	x0, x0, #0x60
+  424748: f9400001     	ldr	x1, [x0]
+  42474c: f9485fe0     	ldr	x0, [sp, #0x10b8]
+  424750: d63f0020     	blr	x1
+  424754: d2800400     	mov	x0, #0x20               // =32
+  424758: 97ff95c2     	bl	0x409e60 <_Znwm@plt>
+  42475c: aa0003f3     	mov	x19, x0
+  424760: d2800b18     	mov	x24, #0x58              // =88
+  424764: d2800039     	mov	x25, #0x1               // =1
+  424768: aa1803e2     	mov	x2, x24
+  42476c: aa1903e3     	mov	x3, x25
+  424770: f9485fe1     	ldr	x1, [sp, #0x10b8]
+  424774: aa1303e0     	mov	x0, x19
+  424778: 97ffc3ff     	bl	0x415774 <.text+0xa544>
+  42477c: f90857f3     	str	x19, [sp, #0x10a8]
+  424780: d2803600     	mov	x0, #0x1b0              // =432
+  424784: 97ff95b7     	bl	0x409e60 <_Znwm@plt>
+  424788: aa0003f3     	mov	x19, x0
+  42478c: f94857e0     	ldr	x0, [sp, #0x10a8]
+  424790: aa0003e2     	mov	x2, x0
+  424794: b0002e80     	adrp	x0, 0x9f5000
+  424798: 9130c001     	add	x1, x0, #0xc30
+  42479c: aa1303e0     	mov	x0, x19
+  4247a0: 97ffba4f     	bl	0x4130dc <.text+0x7eac>
+  4247a4: f90853f3     	str	x19, [sp, #0x10a0]
+  4247a8: f94853e0     	ldr	x0, [sp, #0x10a0]
+  4247ac: 97ffb4f3     	bl	0x411b78 <.text+0x6948>

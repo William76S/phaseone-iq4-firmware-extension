@@ -1,0 +1,40 @@
+{
+  "schema": "iq4_native_storage_bridge_build_01",
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_native_storage_bridge_01/build/storage_bridge.o",
+      "bytes": 20624,
+      "sha256": "fd547ad57d9acb3086bb4846d6d77e26c8cd58a4f59963175e753fe8a5df5052"
+    },
+    {
+      "path": "analysis/firmware/f3_native_storage_bridge_01/build/storage_native_calls.o",
+      "bytes": 2920,
+      "sha256": "95642629f03107d2a3579b7c65ad0d380920ce9c9989b0f9849fd18d47b2f49e"
+    },
+    {
+      "path": "analysis/firmware/f3_native_storage_bridge_01/build/storage_wrappers.o",
+      "bytes": 2504,
+      "sha256": "c1aebe641a8220e5ef6a5eb3d5ca0c5a7d2321c591a8f4552d7591cd4b5398ef"
+    },
+    {
+      "path": "analysis/firmware/f3_native_storage_bridge_01/build/storage_mutex.o",
+      "bytes": 2272,
+      "sha256": "eebf602743fd3b4f16920c19625170aa4918f7ccb73c838a8fbb139bf1f4cf1c"
+    }
+  ],
+  "compiler": {
+    "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+    "bytes": 188226560,
+    "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c"
+  },
+  "normal_process_cases": 25,
+  "san_process_cases": 25,
+  "native_exception_cases_each": 9,
+  "pthread_interleavings_each": 300,
+  "mutex_initializer_cases": 4,
+  "actual_A64_wrapper_cases": 108,
+  "stock_pthread_fastpath_cycles": 3,
+  "reproducible": true,
+  "target_executed": false,
+  "camera_accessed": false
+}

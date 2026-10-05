@@ -1,0 +1,23 @@
+{
+  "source_manifest": {
+    "path": "tools/firmware/f1_f3_f4_user_integration_05/DEV_SOURCE_JPEG_02.json",
+    "bytes": 1034,
+    "sha256": "ace8ce675235a0f2a977af1fc0d73aa557ab44b7f25698edc9bf04eb57cfd995"
+  },
+  "normal": 7,
+  "asan_ubsan": 7,
+  "stages": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    45,
+    50
+  ],
+  "added_gate": "45: initialize the independent storage mutex before capture backend; failure leaves stage below 100",
+  "no_retry": true,
+  "F1_initialization_preserved": true,
+  "dependencies_are_host_fixtures": true,
+  "target_executed": false
+}

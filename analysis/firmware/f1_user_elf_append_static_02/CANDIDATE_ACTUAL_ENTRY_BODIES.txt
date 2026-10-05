@@ -1,0 +1,1420 @@
+original_entry
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  40b38c: d280001d     	mov	x29, #0x0               // =0
+  40b390: d280001e     	mov	x30, #0x0               // =0
+  40b394: aa0003e5     	mov	x5, x0
+  40b398: f94003e1     	ldr	x1, [sp]
+  40b39c: 910023e2     	add	x2, sp, #0x8
+  40b3a0: 910003e6     	mov	x6, sp
+  40b3a4: d2e00000     	movz	x0, #0x0, lsl #48
+  40b3a8: f2c00000     	movk	x0, #0x0, lsl #32
+  40b3ac: f2a00800     	movk	x0, #0x40, lsl #16
+  40b3b0: f2969d00     	movk	x0, #0xb4e8
+  40b3b4: d2e00003     	movz	x3, #0x0, lsl #48
+  40b3b8: f2c00003     	movk	x3, #0x0, lsl #32
+  40b3bc: f2a013c3     	movk	x3, #0x9e, lsl #16
+  40b3c0: f29e1603     	movk	x3, #0xf0b0
+  40b3c4: d2e00004     	movz	x4, #0x0, lsl #48
+  40b3c8: f2c00004     	movk	x4, #0x0, lsl #32
+  40b3cc: f2a013c4     	movk	x4, #0x9e, lsl #16
+  40b3d0: f29e2604     	movk	x4, #0xf130
+  40b3d4: 97fffd1b     	bl	0x40a840 <__libc_start_main@plt>
+  40b3d8: 97fffcd2     	bl	0x40a720 <abort@plt>
+
+repaired_CSU_loop
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  9ef0b0: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  9ef0b4: 910003fd     	mov	x29, sp
+  9ef0b8: a90153f3     	stp	x19, x20, [sp, #0x10]
+  9ef0bc: f001c594     	adrp	x20, 0x42a2000
+  9ef0c0: 911a0294     	add	x20, x20, #0x680
+  9ef0c4: a9025bf5     	stp	x21, x22, [sp, #0x20]
+  9ef0c8: d001c595     	adrp	x21, 0x42a1000
+  9ef0cc: 912f62b5     	add	x21, x21, #0xbd8
+  9ef0d0: cb150294     	sub	x20, x20, x21
+  9ef0d4: 2a0003f6     	mov	w22, w0
+  9ef0d8: a90363f7     	stp	x23, x24, [sp, #0x30]
+  9ef0dc: aa0103f7     	mov	x23, x1
+  9ef0e0: aa0203f8     	mov	x24, x2
+  9ef0e4: 9343fe94     	asr	x20, x20, #3
+  9ef0e8: 97e86aaa     	bl	0x409b90 <.init>
+  9ef0ec: b4000174     	cbz	x20, 0x9ef118 <.text+0x5e3ee8>
+  9ef0f0: d2800013     	mov	x19, #0x0               // =0
+  9ef0f4: d503201f     	nop
+  9ef0f8: f8737aa3     	ldr	x3, [x21, x19, lsl #3]
+  9ef0fc: aa1803e2     	mov	x2, x24
+  9ef100: 91000673     	add	x19, x19, #0x1
+  9ef104: aa1703e1     	mov	x1, x23
+  9ef108: 2a1603e0     	mov	w0, w22
+  9ef10c: d63f0060     	blr	x3
+  9ef110: eb13029f     	cmp	x20, x19
+  9ef114: 54ffff21     	b.ne	0x9ef0f8 <.text+0x5e3ec8>
+  9ef118: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  9ef11c: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+  9ef120: a94363f7     	ldp	x23, x24, [sp, #0x30]
+  9ef124: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  9ef128: d65f03c0     	ret
+
+iq4_f1_firmware_initialize_01
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin:	file format elf64-littleaarch64
+
+Disassembly of section .f1.0.6.text.iq4_f1_firmware_initialize_01:
+
+0000000004240080 <iq4_f1_firmware_initialize_01>:
+ 4240080: a9ba7bfd     	stp	x29, x30, [sp, #-0x60]!
+ 4240084: a9016ffc     	stp	x28, x27, [sp, #0x10]
+ 4240088: a90267fa     	stp	x26, x25, [sp, #0x20]
+ 424008c: a9035ff8     	stp	x24, x23, [sp, #0x30]
+ 4240090: a90457f6     	stp	x22, x21, [sp, #0x40]
+ 4240094: a9054ff4     	stp	x20, x19, [sp, #0x50]
+ 4240098: 910003fd     	mov	x29, sp
+ 424009c: d1404bff     	sub	sp, sp, #0x12, lsl #12  // =0x12000
+ 42400a0: d11b83ff     	sub	sp, sp, #0x6e0
+ 42400a4: 9707290f     	bl	0x40a4e0 <__errno_location@plt>
+ 42400a8: b0000308     	adrp	x8, 0x42a1000
+ 42400ac: 91222108     	add	x8, x8, #0x888
+ 42400b0: b940000d     	ldr	w13, [x0]
+ 42400b4: 08dffd08     	ldarb	w8, [x8]
+ 42400b8: aa0003ec     	mov	x12, x0
+ 42400bc: 37003088     	tbnz	w8, #0x0, 0x42406cc <iq4_f1_firmware_initialize_01+0x64c>
+ 42400c0: 90000008     	adrp	x8, 0x4240000 <iq4_f1_publish_ctor_on_return_01>
+ 42400c4: 92800c60     	mov	x0, #-0x64              // =-100
+ 42400c8: 9000030e     	adrp	x14, 0x42a0000 <iq4_f1_state_01>
+ 42400cc: fd403100     	ldr	d0, [x8, #0x60]
+ 42400d0: 90000308     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 42400d4: 90000316     	adrp	x22, 0x42a0000 <iq4_f1_state_01>
+ 42400d8: 90000317     	adrp	x23, 0x42a0000 <iq4_f1_state_01>
+ 42400dc: aa1f03e3     	mov	x3, xzr
+ 42400e0: d0000001     	adrp	x1, 0x4242000
+ 42400e4: 911f8021     	add	x1, x1, #0x7e0
+ 42400e8: fd000500     	str	d0, [x8, #0x8]
+ 42400ec: 52800708     	mov	w8, #0x38               // =56
+ 42400f0: 52a00102     	mov	w2, #0x80000            // =524288
+ 42400f4: d4000001     	svc	#0
+ 42400f8: b90041c0     	str	w0, [x14, #0x40]
+ 42400fc: 37f82c20     	tbnz	w0, #0x1f, 0x4240680 <iq4_f1_firmware_initialize_01+0x600>
+ 4240100: d0000009     	adrp	x9, 0x4242000
+ 4240104: 91291129     	add	x9, x9, #0xa44
+ 4240108: 914007e8     	add	x8, sp, #0x1, lsl #12   // =0x1000
+ 424010c: ad400520     	ldp	q0, q1, [x9]
+ 4240110: 91014108     	add	x8, x8, #0x50
+ 4240114: 91400bfa     	add	x26, sp, #0x2, lsl #12  // =0x2000
+ 4240118: aa1f03eb     	mov	x11, xzr
+ 424011c: b000030a     	adrp	x10, 0x42a1000
+ 4240120: 9122414a     	add	x10, x10, #0x890
+ 4240124: 9100b114     	add	x20, x8, #0x2c
+ 4240128: 911b435a     	add	x26, x26, #0x6d0
+ 424012c: 5280081c     	mov	w28, #0x40              // =64
+ 4240130: ad0003e1     	stp	q1, q0, [sp]
+ 4240134: 8b0b0148     	add	x8, x10, x11
+ 4240138: 3d8417e0     	str	q0, [sp, #0x1050]
+ 424013c: a940610f     	ldp	x15, x24, [x8]
+ 4240140: f9400908     	ldr	x8, [x8, #0x10]
+ 4240144: 3d841be1     	str	q1, [sp, #0x1060]
+ 4240148: a90423eb     	stp	x11, x8, [sp, #0x40]
+ 424014c: f9083bff     	str	xzr, [sp, #0x1070]
+ 4240150: b9107bff     	str	wzr, [sp, #0x1078]
+ 4240154: b4000858     	cbz	x24, 0x424025c <iq4_f1_firmware_initialize_01+0x1dc>
+ 4240158: 2a1f03f5     	mov	w21, wzr
+ 424015c: aa1f03f9     	mov	x25, xzr
+ 4240160: cb190308     	sub	x8, x24, x25
+ 4240164: 52820009     	mov	w9, #0x1000             // =4096
+ 4240168: f140051f     	cmp	x8, #0x1, lsl #12       // =0x1000
+ 424016c: 9a89311b     	csel	x27, x8, x9, lo
+ 4240170: ab0f032a     	adds	x10, x25, x15
+ 4240174: 54002864     	b.mi	0x4240680 <iq4_f1_firmware_initialize_01+0x600>
+ 4240178: b94041c9     	ldr	w9, [x14, #0x40]
+ 424017c: 37f82829     	tbnz	w9, #0x1f, 0x4240680 <iq4_f1_firmware_initialize_01+0x600>
+ 4240180: d240fb68     	eor	x8, x27, #0x7fffffffffffffff
+ 4240184: eb08015f     	cmp	x10, x8
+ 4240188: 540027c8     	b.hi	0x4240680 <iq4_f1_firmware_initialize_01+0x600>
+ 424018c: aa1f03eb     	mov	x11, xzr
+ 4240190: eb0b0362     	subs	x2, x27, x11
+ 4240194: 54000149     	b.ls	0x42401bc <iq4_f1_firmware_initialize_01+0x13c>
+ 4240198: aa0903e0     	mov	x0, x9
+ 424019c: 8b0b0341     	add	x1, x26, x11
+ 42401a0: 8b0a0163     	add	x3, x11, x10
+ 42401a4: 52800868     	mov	w8, #0x43               // =67
+ 42401a8: d4000001     	svc	#0
+ 42401ac: 8b0b000b     	add	x11, x0, x11
+ 42401b0: f100001f     	cmp	x0, #0x0
+ 42401b4: 54fffeec     	b.gt	0x4240190 <iq4_f1_firmware_initialize_01+0x110>
+ 42401b8: 14000132     	b	0x4240680 <iq4_f1_firmware_initialize_01+0x600>
+ 42401bc: f9483be8     	ldr	x8, [sp, #0x1070]
+ 42401c0: 91400bf6     	add	x22, sp, #0x2, lsl #12  // =0x2000
+ 42401c4: aa1b03f3     	mov	x19, x27
+ 42401c8: 911b42d6     	add	x22, x22, #0x6d0
+ 42401cc: f90017ef     	str	x15, [sp, #0x28]
+ 42401d0: 8b1b0108     	add	x8, x8, x27
+ 42401d4: b90037ed     	str	w13, [sp, #0x34]
+ 42401d8: f9001fec     	str	x12, [sp, #0x38]
+ 42401dc: f9083be8     	str	x8, [sp, #0x1070]
+ 42401e0: 14000004     	b	0x42401f0 <iq4_f1_firmware_initialize_01+0x170>
+ 42401e4: cb170273     	sub	x19, x19, x23
+ 42401e8: 8b1702d6     	add	x22, x22, x23
+ 42401ec: b4000273     	cbz	x19, 0x4240238 <iq4_f1_firmware_initialize_01+0x1b8>
+ 42401f0: 4b150388     	sub	w8, w28, w21
+ 42401f4: 8b354280     	add	x0, x20, w21, uxtw
+ 42401f8: aa1603e1     	mov	x1, x22
+ 42401fc: eb08027f     	cmp	x19, x8
+ 4240200: 9a883277     	csel	x23, x19, x8, lo
+ 4240204: aa1703e2     	mov	x2, x23
+ 4240208: 970728ca     	bl	0x40a530 <memcpy@plt>
+ 424020c: 0b1702b5     	add	w21, w21, w23
+ 4240210: 710102bf     	cmp	w21, #0x40
+ 4240214: b9107bf5     	str	w21, [sp, #0x1078]
+ 4240218: 54fffe61     	b.ne	0x42401e4 <iq4_f1_firmware_initialize_01+0x164>
+ 424021c: 914007e0     	add	x0, sp, #0x1, lsl #12   // =0x1000
+ 4240220: aa1403e1     	mov	x1, x20
+ 4240224: 91014000     	add	x0, x0, #0x50
+ 4240228: 940005f9     	bl	0x4241a0c
+ 424022c: 2a1f03f5     	mov	w21, wzr
+ 4240230: b9107bff     	str	wzr, [sp, #0x1078]
+ 4240234: 17ffffec     	b	0x42401e4 <iq4_f1_firmware_initialize_01+0x164>
+ 4240238: 8b190379     	add	x25, x27, x25
+ 424023c: f9401fec     	ldr	x12, [sp, #0x38]
+ 4240240: b94037ed     	ldr	w13, [sp, #0x34]
+ 4240244: f94017ef     	ldr	x15, [sp, #0x28]
+ 4240248: eb18033f     	cmp	x25, x24
+ 424024c: 90000316     	adrp	x22, 0x42a0000 <iq4_f1_state_01>
+ 4240250: 90000317     	adrp	x23, 0x42a0000 <iq4_f1_state_01>
+ 4240254: 9000030e     	adrp	x14, 0x42a0000 <iq4_f1_state_01>
+ 4240258: 54fff843     	b.lo	0x4240160 <iq4_f1_firmware_initialize_01+0xe0>
+ 424025c: 914007e0     	add	x0, sp, #0x1, lsl #12   // =0x1000
+ 4240260: 910143e1     	add	x1, sp, #0x50
+ 4240264: aa0c03f8     	mov	x24, x12
+ 4240268: 91014000     	add	x0, x0, #0x50
+ 424026c: 2a0d03f3     	mov	w19, w13
+ 4240270: aa0e03f9     	mov	x25, x14
+ 4240274: 940005a9     	bl	0x4241918
+ 4240278: f94027e1     	ldr	x1, [sp, #0x48]
+ 424027c: 910143e0     	add	x0, sp, #0x50
+ 4240280: 97072a30     	bl	0x40ab40 <strcmp@plt>
+ 4240284: aa1903ee     	mov	x14, x25
+ 4240288: 2a1303ed     	mov	w13, w19
+ 424028c: aa1803ec     	mov	x12, x24
+ 4240290: 35001f80     	cbnz	w0, 0x4240680 <iq4_f1_firmware_initialize_01+0x600>
+ 4240294: f94023eb     	ldr	x11, [sp, #0x40]
+ 4240298: ad4003e1     	ldp	q1, q0, [sp]
+ 424029c: b000030a     	adrp	x10, 0x42a1000
+ 42402a0: 9122414a     	add	x10, x10, #0x890
+ 42402a4: 9100616b     	add	x11, x11, #0x18
+ 42402a8: f102a17f     	cmp	x11, #0xa8
+ 42402ac: 54fff441     	b.ne	0x4240134 <iq4_f1_firmware_initialize_01+0xb4>
+ 42402b0: 6f00e400     	movi	v0.2d, #0000000000000000
+ 42402b4: 92800c60     	mov	x0, #-0x64              // =-100
+ 42402b8: aa1f03e3     	mov	x3, xzr
+ 42402bc: d0000001     	adrp	x1, 0x4242000
+ 42402c0: 911fbc21     	add	x1, x1, #0x7ef
+ 42402c4: 52800708     	mov	w8, #0x38               // =56
+ 42402c8: 52a00102     	mov	w2, #0x80000            // =524288
+ 42402cc: d4000001     	svc	#0
+ 42402d0: aa0003f4     	mov	x20, x0
+ 42402d4: ad0283e0     	stp	q0, q0, [sp, #0x50]
+ 42402d8: ad0383e0     	stp	q0, q0, [sp, #0x70]
+ 42402dc: ad0483e0     	stp	q0, q0, [sp, #0x90]
+ 42402e0: ad0583e0     	stp	q0, q0, [sp, #0xb0]
+ 42402e4: 37f81cf4     	tbnz	w20, #0x1f, 0x4240680 <iq4_f1_firmware_initialize_01+0x600>
+ 42402e8: 92407a80     	and	x0, x20, #0x7fffffff
+ 42402ec: aa1f03e2     	mov	x2, xzr
+ 42402f0: aa1f03e3     	mov	x3, xzr
+ 42402f4: 910143e1     	add	x1, sp, #0x50
+ 42402f8: 52800a08     	mov	w8, #0x50               // =80
+ 42402fc: d4000001     	svc	#0
+ 4240300: b94063e8     	ldr	w8, [sp, #0x60]
+ 4240304: 52900009     	mov	w9, #0x8000             // =32768
+ 4240308: f100001f     	cmp	x0, #0x0
+ 424030c: 92800c60     	mov	x0, #-0x64              // =-100
+ 4240310: d0000001     	adrp	x1, 0x4242000
+ 4240314: 911ff821     	add	x1, x1, #0x7fe
+ 4240318: 12140d08     	and	w8, w8, #0xf000
+ 424031c: 52a00102     	mov	w2, #0x80000            // =524288
+ 4240320: aa1f03e3     	mov	x3, xzr
+ 4240324: 7a490100     	ccmp	w8, w9, #0x0, eq
+ 4240328: 52800708     	mov	w8, #0x38               // =56
+ 424032c: 1a9f17eb     	cset	w11, eq
+ 4240330: d4000001     	svc	#0
+ 4240334: 914007e8     	add	x8, sp, #0x1, lsl #12   // =0x1000
+ 4240338: 91014508     	add	x8, x8, #0x51
+ 424033c: 393ffd1f     	strb	wzr, [x8, #0xfff]
+ 4240340: 37f818a0     	tbnz	w0, #0x1f, 0x4240654 <iq4_f1_firmware_initialize_01+0x5d4>
+ 4240344: 91400be1     	add	x1, sp, #0x2, lsl #12   // =0x2000
+ 4240348: aa0003ec     	mov	x12, x0
+ 424034c: 92407800     	and	x0, x0, #0x7fffffff
+ 4240350: aa1f03e3     	mov	x3, xzr
+ 4240354: 911b4021     	add	x1, x1, #0x6d0
+ 4240358: 528007e8     	mov	w8, #0x3f               // =63
+ 424035c: 529fffe2     	mov	w2, #0xffff             // =65535
+ 4240360: d4000001     	svc	#0
+ 4240364: aa0003e9     	mov	x9, x0
+ 4240368: 91400be1     	add	x1, sp, #0x2, lsl #12   // =0x2000
+ 424036c: 92407980     	and	x0, x12, #0x7fffffff
+ 4240370: 528007e8     	mov	w8, #0x3f               // =63
+ 4240374: 91014021     	add	x1, x1, #0x50
+ 4240378: 52800022     	mov	w2, #0x1                // =1
+ 424037c: aa1f03e3     	mov	x3, xzr
+ 4240380: d4000001     	svc	#0
+ 4240384: aa0003ea     	mov	x10, x0
+ 4240388: 52800728     	mov	w8, #0x39               // =57
+ 424038c: 92407980     	and	x0, x12, #0x7fffffff
+ 4240390: aa1f03e1     	mov	x1, xzr
+ 4240394: aa1f03e2     	mov	x2, xzr
+ 4240398: aa1f03e3     	mov	x3, xzr
+ 424039c: d4000001     	svc	#0
+ 42403a0: f100053f     	cmp	x9, #0x1
+ 42403a4: 5400158b     	b.lt	0x4240654 <iq4_f1_firmware_initialize_01+0x5d4>
+ 42403a8: b500156a     	cbnz	x10, 0x4240654 <iq4_f1_firmware_initialize_01+0x5d4>
+ 42403ac: 91400be8     	add	x8, sp, #0x2, lsl #12   // =0x2000
+ 42403b0: 911b4108     	add	x8, x8, #0x6d0
+ 42403b4: 3829691f     	strb	wzr, [x8, x9]
+ 42403b8: 340014eb     	cbz	w11, 0x4240654 <iq4_f1_firmware_initialize_01+0x5d4>
+ 42403bc: aa1f03f7     	mov	x23, xzr
+ 42403c0: 5280015a     	mov	w26, #0xa               // =10
+ 42403c4: b0000309     	adrp	x9, 0x42a1000
+ 42403c8: 91224129     	add	x9, x9, #0x890
+ 42403cc: 8b170128     	add	x8, x9, x23
+ 42403d0: a940211b     	ldp	x27, x8, [x8]
+ 42403d4: 8b1b010a     	add	x10, x8, x27
+ 42403d8: eb0a037f     	cmp	x27, x10
+ 42403dc: 54000a22     	b.hs	0x4240520 <iq4_f1_firmware_initialize_01+0x4a0>
+ 42403e0: f90027ea     	str	x10, [sp, #0x48]
+ 42403e4: 91400be8     	add	x8, sp, #0x2, lsl #12   // =0x2000
+ 42403e8: 910f4108     	add	x8, x8, #0x3d0
+ 42403ec: 394c0108     	ldrb	w8, [x8, #0x300]
+ 42403f0: 34001328     	cbz	w8, 0x4240654 <iq4_f1_firmware_initialize_01+0x5d4>
+ 42403f4: 91400bf6     	add	x22, sp, #0x2, lsl #12  // =0x2000
+ 42403f8: d150037c     	sub	x28, x27, #0x400, lsl #12 // =0x400000
+ 42403fc: 911b42d6     	add	x22, x22, #0x6d0
+ 4240400: 14000004     	b	0x4240410 <iq4_f1_firmware_initialize_01+0x390>
+ 4240404: 38401ea8     	ldrb	w8, [x21, #0x1]!
+ 4240408: aa1503f6     	mov	x22, x21
+ 424040c: 34001248     	cbz	w8, 0x4240654 <iq4_f1_firmware_initialize_01+0x5d4>
+ 4240410: aa1603e0     	mov	x0, x22
+ 4240414: 52800141     	mov	w1, #0xa                // =10
+ 4240418: 9707288e     	bl	0x40a650 <strchr@plt>
+ 424041c: b40011c0     	cbz	x0, 0x4240654 <iq4_f1_firmware_initialize_01+0x5d4>
+ 4240420: aa0003f5     	mov	x21, x0
+ 4240424: 3900001f     	strb	wzr, [x0]
+ 4240428: 914007e0     	add	x0, sp, #0x1, lsl #12   // =0x1000
+ 424042c: 91014000     	add	x0, x0, #0x50
+ 4240430: 2a1f03e1     	mov	w1, wzr
+ 4240434: 528045a2     	mov	w2, #0x22d              // =557
+ 4240438: 9707275a     	bl	0x40a1a0 <memset@plt>
+ 424043c: 914007e1     	add	x1, sp, #0x1, lsl #12   // =0x1000
+ 4240440: aa1603e0     	mov	x0, x22
+ 4240444: 91014021     	add	x1, x1, #0x50
+ 4240448: 94000479     	bl	0x424162c
+ 424044c: 390002ba     	strb	w26, [x21]
+ 4240450: 3607fda0     	tbz	w0, #0x0, 0x4240404 <iq4_f1_firmware_initialize_01+0x384>
+ 4240454: f9482be8     	ldr	x8, [sp, #0x1050]
+ 4240458: eb080369     	subs	x9, x27, x8
+ 424045c: 54fffd43     	b.lo	0x4240404 <iq4_f1_firmware_initialize_01+0x384>
+ 4240460: f9482fe8     	ldr	x8, [sp, #0x1058]
+ 4240464: eb08037f     	cmp	x27, x8
+ 4240468: 54fffce2     	b.hs	0x4240404 <iq4_f1_firmware_initialize_01+0x384>
+ 424046c: f9483bea     	ldr	x10, [sp, #0x1070]
+ 4240470: f9402feb     	ldr	x11, [sp, #0x58]
+ 4240474: eb0b015f     	cmp	x10, x11
+ 4240478: 540001e1     	b.ne	0x42404b4 <iq4_f1_firmware_initialize_01+0x434>
+ 424047c: f9402bea     	ldr	x10, [sp, #0x50]
+ 4240480: b9506bec     	ldr	w12, [sp, #0x1068]
+ 4240484: d360fd4b     	lsr	x11, x10, #32
+ 4240488: 92744d6b     	and	x11, x11, #0xfffff000
+ 424048c: b3484d4b     	bfxil	x11, x10, #8, #12
+ 4240490: eb0c017f     	cmp	x11, x12
+ 4240494: 54000101     	b.ne	0x42404b4 <iq4_f1_firmware_initialize_01+0x434>
+ 4240498: d354ad4b     	ubfx	x11, x10, #20, #24
+ 424049c: 92401d4a     	and	x10, x10, #0xff
+ 42404a0: aa0b214a     	orr	x10, x10, x11, lsl #8
+ 42404a4: b9506feb     	ldr	w11, [sp, #0x106c]
+ 42404a8: eb0b015f     	cmp	x10, x11
+ 42404ac: 1a9f17ea     	cset	w10, eq
+ 42404b0: 14000002     	b	0x42404b8 <iq4_f1_firmware_initialize_01+0x438>
+ 42404b4: 2a1f03ea     	mov	w10, wzr
+ 42404b8: 34fffa6a     	cbz	w10, 0x4240404 <iq4_f1_firmware_initialize_01+0x384>
+ 42404bc: 914007ea     	add	x10, sp, #0x1, lsl #12  // =0x1000
+ 42404c0: 9101414a     	add	x10, x10, #0x50
+ 42404c4: 3940a14a     	ldrb	w10, [x10, #0x28]
+ 42404c8: 7101c95f     	cmp	w10, #0x72
+ 42404cc: 54fff9c1     	b.ne	0x4240404 <iq4_f1_firmware_initialize_01+0x384>
+ 42404d0: 914007ea     	add	x10, sp, #0x1, lsl #12  // =0x1000
+ 42404d4: 9101414a     	add	x10, x10, #0x50
+ 42404d8: 3940a54a     	ldrb	w10, [x10, #0x29]
+ 42404dc: 7100b55f     	cmp	w10, #0x2d
+ 42404e0: 54fff921     	b.ne	0x4240404 <iq4_f1_firmware_initialize_01+0x384>
+ 42404e4: 914007ea     	add	x10, sp, #0x1, lsl #12  // =0x1000
+ 42404e8: 9101414a     	add	x10, x10, #0x50
+ 42404ec: 3940a94a     	ldrb	w10, [x10, #0x2a]
+ 42404f0: 7101e15f     	cmp	w10, #0x78
+ 42404f4: 54fff881     	b.ne	0x4240404 <iq4_f1_firmware_initialize_01+0x384>
+ 42404f8: f94833ea     	ldr	x10, [sp, #0x1060]
+ 42404fc: 8b0a0129     	add	x9, x9, x10
+ 4240500: eb1c013f     	cmp	x9, x28
+ 4240504: 54fff801     	b.ne	0x4240404 <iq4_f1_firmware_initialize_01+0x384>
+ 4240508: f94027ea     	ldr	x10, [sp, #0x48]
+ 424050c: b0000309     	adrp	x9, 0x42a1000
+ 4240510: 91224129     	add	x9, x9, #0x890
+ 4240514: eb0a011f     	cmp	x8, x10
+ 4240518: 9a8a311b     	csel	x27, x8, x10, lo
+ 424051c: 54fff643     	b.lo	0x42403e4 <iq4_f1_firmware_initialize_01+0x364>
+ 4240520: 910062f7     	add	x23, x23, #0x18
+ 4240524: f102a2ff     	cmp	x23, #0xa8
+ 4240528: 54fff521     	b.ne	0x42403cc <iq4_f1_firmware_initialize_01+0x34c>
+ 424052c: 92407a80     	and	x0, x20, #0x7fffffff
+ 4240530: 52800728     	mov	w8, #0x39               // =57
+ 4240534: aa1f03e1     	mov	x1, xzr
+ 4240538: aa1f03e2     	mov	x2, xzr
+ 424053c: aa1f03e3     	mov	x3, xzr
+ 4240540: 52800029     	mov	w9, #0x1                // =1
+ 4240544: d4000001     	svc	#0
+ 4240548: 90000308     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 424054c: d0000001     	adrp	x1, 0x4242000
+ 4240550: 911ff821     	add	x1, x1, #0x7fe
+ 4240554: 39011109     	strb	w9, [x8, #0x44]
+ 4240558: 90000308     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 424055c: 39011509     	strb	w9, [x8, #0x45]
+ 4240560: 92800c60     	mov	x0, #-0x64              // =-100
+ 4240564: 52800708     	mov	w8, #0x38               // =56
+ 4240568: 52a00102     	mov	w2, #0x80000            // =524288
+ 424056c: aa1f03e3     	mov	x3, xzr
+ 4240570: d4000001     	svc	#0
+ 4240574: aa0003e9     	mov	x9, x0
+ 4240578: aa1803ec     	mov	x12, x24
+ 424057c: 2a1303ed     	mov	w13, w19
+ 4240580: aa1903ee     	mov	x14, x25
+ 4240584: 37f80829     	tbnz	w9, #0x1f, 0x4240688 <iq4_f1_firmware_initialize_01+0x608>
+ 4240588: 91400be1     	add	x1, sp, #0x2, lsl #12   // =0x2000
+ 424058c: 92407920     	and	x0, x9, #0x7fffffff
+ 4240590: 528007e8     	mov	w8, #0x3f               // =63
+ 4240594: aa1f03e3     	mov	x3, xzr
+ 4240598: 911b4021     	add	x1, x1, #0x6d0
+ 424059c: 529fffe2     	mov	w2, #0xffff             // =65535
+ 42405a0: d4000001     	svc	#0
+ 42405a4: 91400be8     	add	x8, sp, #0x2, lsl #12   // =0x2000
+ 42405a8: aa0003ea     	mov	x10, x0
+ 42405ac: 910f4108     	add	x8, x8, #0x3d0
+ 42405b0: 91400be1     	add	x1, sp, #0x2, lsl #12   // =0x2000
+ 42405b4: 92407920     	and	x0, x9, #0x7fffffff
+ 42405b8: 390bf11f     	strb	wzr, [x8, #0x2fc]
+ 42405bc: 911b3021     	add	x1, x1, #0x6cc
+ 42405c0: 528007e8     	mov	w8, #0x3f               // =63
+ 42405c4: 52800022     	mov	w2, #0x1                // =1
+ 42405c8: aa1f03e3     	mov	x3, xzr
+ 42405cc: d4000001     	svc	#0
+ 42405d0: aa0003eb     	mov	x11, x0
+ 42405d4: 92407920     	and	x0, x9, #0x7fffffff
+ 42405d8: 52800728     	mov	w8, #0x39               // =57
+ 42405dc: aa1f03e1     	mov	x1, xzr
+ 42405e0: aa1f03e2     	mov	x2, xzr
+ 42405e4: aa1f03e3     	mov	x3, xzr
+ 42405e8: d4000001     	svc	#0
+ 42405ec: f100055f     	cmp	x10, #0x1
+ 42405f0: 54002acb     	b.lt	0x4240b48 <iq4_f1_firmware_initialize_01+0xac8>
+ 42405f4: b5002aab     	cbnz	x11, 0x4240b48 <iq4_f1_firmware_initialize_01+0xac8>
+ 42405f8: 91400be8     	add	x8, sp, #0x2, lsl #12   // =0x2000
+ 42405fc: 91400be0     	add	x0, sp, #0x2, lsl #12   // =0x2000
+ 4240600: 91400bfa     	add	x26, sp, #0x2, lsl #12  // =0x2000
+ 4240604: 911b4108     	add	x8, x8, #0x6d0
+ 4240608: 91126000     	add	x0, x0, #0x498
+ 424060c: 2a1f03e1     	mov	w1, wzr
+ 4240610: 528045a2     	mov	w2, #0x22d              // =557
+ 4240614: 382a691f     	strb	wzr, [x8, x10]
+ 4240618: 9112635a     	add	x26, x26, #0x498
+ 424061c: 970726e1     	bl	0x40a1a0 <memset@plt>
+ 4240620: 91400be8     	add	x8, sp, #0x2, lsl #12   // =0x2000
+ 4240624: 910f4108     	add	x8, x8, #0x3d0
+ 4240628: 394c0108     	ldrb	w8, [x8, #0x300]
+ 424062c: 340028e8     	cbz	w8, 0x4240b48 <iq4_f1_firmware_initialize_01+0xac8>
+ 4240630: 914007fb     	add	x27, sp, #0x1, lsl #12  // =0x1000
+ 4240634: 91400bf6     	add	x22, sp, #0x2, lsl #12  // =0x2000
+ 4240638: 2a1f03fc     	mov	w28, wzr
+ 424063c: aa1f03f7     	mov	x23, xzr
+ 4240640: 9101437b     	add	x27, x27, #0x50
+ 4240644: 911b42d6     	add	x22, x22, #0x6d0
+ 4240648: d0000014     	adrp	x20, 0x4242000
+ 424064c: 91279a94     	add	x20, x20, #0x9e6
+ 4240650: 1400002c     	b	0x4240700 <iq4_f1_firmware_initialize_01+0x680>
+ 4240654: 92407a80     	and	x0, x20, #0x7fffffff
+ 4240658: 52800728     	mov	w8, #0x39               // =57
+ 424065c: aa1f03e1     	mov	x1, xzr
+ 4240660: aa1f03e2     	mov	x2, xzr
+ 4240664: aa1f03e3     	mov	x3, xzr
+ 4240668: d4000001     	svc	#0
+ 424066c: aa1803ec     	mov	x12, x24
+ 4240670: 2a1303ed     	mov	w13, w19
+ 4240674: 90000316     	adrp	x22, 0x42a0000 <iq4_f1_state_01>
+ 4240678: 90000317     	adrp	x23, 0x42a0000 <iq4_f1_state_01>
+ 424067c: aa1903ee     	mov	x14, x25
+ 4240680: 390112df     	strb	wzr, [x22, #0x44]
+ 4240684: 390116ff     	strb	wzr, [x23, #0x45]
+ 4240688: 90000308     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 424068c: 3901191f     	strb	wzr, [x8, #0x46]
+ 4240690: 90000308     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 4240694: 91003108     	add	x8, x8, #0xc
+ 4240698: 52800049     	mov	w9, #0x2                // =2
+ 424069c: b94041c0     	ldr	w0, [x14, #0x40]
+ 42406a0: b9000109     	str	w9, [x8]
+ 42406a4: 52800029     	mov	w9, #0x1                // =1
+ 42406a8: b9000909     	str	w9, [x8, #0x8]
+ 42406ac: 37f800c0     	tbnz	w0, #0x1f, 0x42406c4 <iq4_f1_firmware_initialize_01+0x644>
+ 42406b0: 52800728     	mov	w8, #0x39               // =57
+ 42406b4: aa1f03e1     	mov	x1, xzr
+ 42406b8: aa1f03e2     	mov	x2, xzr
+ 42406bc: aa1f03e3     	mov	x3, xzr
+ 42406c0: d4000001     	svc	#0
+ 42406c4: 12800008     	mov	w8, #-0x1               // =-1
+ 42406c8: b90041c8     	str	w8, [x14, #0x40]
+ 42406cc: b900018d     	str	w13, [x12]
+ 42406d0: 91404bff     	add	sp, sp, #0x12, lsl #12  // =0x12000
+ 42406d4: 911b83ff     	add	sp, sp, #0x6e0
+ 42406d8: a9454ff4     	ldp	x20, x19, [sp, #0x50]
+ 42406dc: a94457f6     	ldp	x22, x21, [sp, #0x40]
+ 42406e0: a9435ff8     	ldp	x24, x23, [sp, #0x30]
+ 42406e4: a94267fa     	ldp	x26, x25, [sp, #0x20]
+ 42406e8: a9416ffc     	ldp	x28, x27, [sp, #0x10]
+ 42406ec: a8c67bfd     	ldp	x29, x30, [sp], #0x60
+ 42406f0: d65f03c0     	ret
+ 42406f4: 38401ea8     	ldrb	w8, [x21, #0x1]!
+ 42406f8: aa1503f6     	mov	x22, x21
+ 42406fc: 34000668     	cbz	w8, 0x42407c8 <iq4_f1_firmware_initialize_01+0x748>
+ 4240700: aa1603e0     	mov	x0, x22
+ 4240704: 52800141     	mov	w1, #0xa                // =10
+ 4240708: 970727d2     	bl	0x40a650 <strchr@plt>
+ 424070c: b40021e0     	cbz	x0, 0x4240b48 <iq4_f1_firmware_initialize_01+0xac8>
+ 4240710: aa0003f5     	mov	x21, x0
+ 4240714: 3900001f     	strb	wzr, [x0]
+ 4240718: 914007e0     	add	x0, sp, #0x1, lsl #12   // =0x1000
+ 424071c: 91014000     	add	x0, x0, #0x50
+ 4240720: 2a1f03e1     	mov	w1, wzr
+ 4240724: 528045a2     	mov	w2, #0x22d              // =557
+ 4240728: 9707269e     	bl	0x40a1a0 <memset@plt>
+ 424072c: 914007e1     	add	x1, sp, #0x1, lsl #12   // =0x1000
+ 4240730: aa1603e0     	mov	x0, x22
+ 4240734: 91014021     	add	x1, x1, #0x50
+ 4240738: 940003bd     	bl	0x424162c
+ 424073c: 36002060     	tbz	w0, #0x0, 0x4240b48 <iq4_f1_firmware_initialize_01+0xac8>
+ 4240740: 9100b760     	add	x0, x27, #0x2d
+ 4240744: 528005e1     	mov	w1, #0x2f               // =47
+ 4240748: 9707291e     	bl	0x40abc0 <strrchr@plt>
+ 424074c: b4fffd40     	cbz	x0, 0x42406f4 <iq4_f1_firmware_initialize_01+0x674>
+ 4240750: 91000400     	add	x0, x0, #0x1
+ 4240754: aa1403e1     	mov	x1, x20
+ 4240758: 970728fa     	bl	0x40ab40 <strcmp@plt>
+ 424075c: 35fffcc0     	cbnz	w0, 0x42406f4 <iq4_f1_firmware_initialize_01+0x674>
+ 4240760: f94833e8     	ldr	x8, [sp, #0x1060]
+ 4240764: b5fffc88     	cbnz	x8, 0x42406f4 <iq4_f1_firmware_initialize_01+0x674>
+ 4240768: 914007e8     	add	x8, sp, #0x1, lsl #12   // =0x1000
+ 424076c: 91014108     	add	x8, x8, #0x50
+ 4240770: 3940a108     	ldrb	w8, [x8, #0x28]
+ 4240774: 7101c91f     	cmp	w8, #0x72
+ 4240778: 54fffbe1     	b.ne	0x42406f4 <iq4_f1_firmware_initialize_01+0x674>
+ 424077c: 914007e8     	add	x8, sp, #0x1, lsl #12   // =0x1000
+ 4240780: 91014108     	add	x8, x8, #0x50
+ 4240784: 3940a508     	ldrb	w8, [x8, #0x29]
+ 4240788: 7100b51f     	cmp	w8, #0x2d
+ 424078c: 54fffb41     	b.ne	0x42406f4 <iq4_f1_firmware_initialize_01+0x674>
+ 4240790: 914007e8     	add	x8, sp, #0x1, lsl #12   // =0x1000
+ 4240794: 91014108     	add	x8, x8, #0x50
+ 4240798: 3940a908     	ldrb	w8, [x8, #0x2a]
+ 424079c: 7101e11f     	cmp	w8, #0x78
+ 42407a0: 54fffaa1     	b.ne	0x42406f4 <iq4_f1_firmware_initialize_01+0x674>
+ 42407a4: 91400be0     	add	x0, sp, #0x2, lsl #12   // =0x2000
+ 42407a8: 914007e1     	add	x1, sp, #0x1, lsl #12   // =0x1000
+ 42407ac: 528045a2     	mov	w2, #0x22d              // =557
+ 42407b0: 91126000     	add	x0, x0, #0x498
+ 42407b4: 91014021     	add	x1, x1, #0x50
+ 42407b8: 9707275e     	bl	0x40a530 <memcpy@plt>
+ 42407bc: f9482bf7     	ldr	x23, [sp, #0x1050]
+ 42407c0: 1100079c     	add	w28, w28, #0x1
+ 42407c4: 17ffffcc     	b	0x42406f4 <iq4_f1_firmware_initialize_01+0x674>
+ 42407c8: 7100079f     	cmp	w28, #0x1
+ 42407cc: 54001be1     	b.ne	0x4240b48 <iq4_f1_firmware_initialize_01+0xac8>
+ 42407d0: 92a00048     	mov	x8, #-0x20001           // =-131073
+ 42407d4: eb0802ff     	cmp	x23, x8
+ 42407d8: 54001b88     	b.hi	0x4240b48 <iq4_f1_firmware_initialize_01+0xac8>
+ 42407dc: 6f00e400     	movi	v0.2d, #0000000000000000
+ 42407e0: 92800c60     	mov	x0, #-0x64              // =-100
+ 42407e4: aa1f03e3     	mov	x3, xzr
+ 42407e8: 9100b741     	add	x1, x26, #0x2d
+ 42407ec: 52800708     	mov	w8, #0x38               // =56
+ 42407f0: 52a00102     	mov	w2, #0x80000            // =524288
+ 42407f4: d4000001     	svc	#0
+ 42407f8: aa0003f4     	mov	x20, x0
+ 42407fc: 3d8923e0     	str	q0, [sp, #0x2480]
+ 4240800: 3d891fe0     	str	q0, [sp, #0x2470]
+ 4240804: 3d891be0     	str	q0, [sp, #0x2460]
+ 4240808: 3d8917e0     	str	q0, [sp, #0x2450]
+ 424080c: 3d8913e0     	str	q0, [sp, #0x2440]
+ 4240810: 3d890fe0     	str	q0, [sp, #0x2430]
+ 4240814: 3d890be0     	str	q0, [sp, #0x2420]
+ 4240818: 3d8907e0     	str	q0, [sp, #0x2410]
+ 424081c: 37f81974     	tbnz	w20, #0x1f, 0x4240b48 <iq4_f1_firmware_initialize_01+0xac8>
+ 4240820: 91400be1     	add	x1, sp, #0x2, lsl #12   // =0x2000
+ 4240824: 92407a80     	and	x0, x20, #0x7fffffff
+ 4240828: 52800a08     	mov	w8, #0x50               // =80
+ 424082c: 91104021     	add	x1, x1, #0x410
+ 4240830: aa1f03e2     	mov	x2, xzr
+ 4240834: aa1f03e3     	mov	x3, xzr
+ 4240838: d4000001     	svc	#0
+ 424083c: b4000ee0     	cbz	x0, 0x4240a18 <iq4_f1_firmware_initialize_01+0x998>
+ 4240840: 91400be0     	add	x0, sp, #0x2, lsl #12   // =0x2000
+ 4240844: 2a1f03e1     	mov	w1, wzr
+ 4240848: 52807002     	mov	w2, #0x380              // =896
+ 424084c: 91014000     	add	x0, x0, #0x50
+ 4240850: 3d8903e0     	str	q0, [sp, #0x2400]
+ 4240854: 3d88ffe0     	str	q0, [sp, #0x23f0]
+ 4240858: 3d88fbe0     	str	q0, [sp, #0x23e0]
+ 424085c: 3d88f7e0     	str	q0, [sp, #0x23d0]
+ 4240860: 97072650     	bl	0x40a1a0 <memset@plt>
+ 4240864: 2a1f03e9     	mov	w9, wzr
+ 4240868: 92800c60     	mov	x0, #-0x64              // =-100
+ 424086c: aa1f03e3     	mov	x3, xzr
+ 4240870: d0000001     	adrp	x1, 0x4242000
+ 4240874: 911f8021     	add	x1, x1, #0x7e0
+ 4240878: 52800708     	mov	w8, #0x38               // =56
+ 424087c: 52a00102     	mov	w2, #0x80000            // =524288
+ 4240880: d4000001     	svc	#0
+ 4240884: aa0003f5     	mov	x21, x0
+ 4240888: 5280002a     	mov	w10, #0x1               // =1
+ 424088c: 36001429     	tbz	w9, #0x0, 0x4240b10 <iq4_f1_firmware_initialize_01+0xa90>
+ 4240890: 37f81415     	tbnz	w21, #0x1f, 0x4240b10 <iq4_f1_firmware_initialize_01+0xa90>
+ 4240894: 91400be8     	add	x8, sp, #0x2, lsl #12   // =0x2000
+ 4240898: 910f4108     	add	x8, x8, #0x3d0
+ 424089c: 79407108     	ldrh	w8, [x8, #0x38]
+ 42408a0: 34001308     	cbz	w8, 0x4240b00 <iq4_f1_firmware_initialize_01+0xa80>
+ 42408a4: 914007fb     	add	x27, sp, #0x1, lsl #12  // =0x1000
+ 42408a8: aa1f03fa     	mov	x26, xzr
+ 42408ac: b9004bff     	str	wzr, [sp, #0x48]
+ 42408b0: 9101437b     	add	x27, x27, #0x50
+ 42408b4: 14000004     	b	0x42408c4 <iq4_f1_firmware_initialize_01+0x844>
+ 42408b8: 9100075a     	add	x26, x26, #0x1
+ 42408bc: eb28435f     	cmp	x26, w8, uxtw
+ 42408c0: 54002482     	b.hs	0x4240d50 <iq4_f1_firmware_initialize_01+0xcd0>
+ 42408c4: 52800709     	mov	w9, #0x38               // =56
+ 42408c8: 91400bea     	add	x10, sp, #0x2, lsl #12  // =0x2000
+ 42408cc: 9101414a     	add	x10, x10, #0x50
+ 42408d0: 9b092b5c     	madd	x28, x26, x9, x10
+ 42408d4: b9400389     	ldr	w9, [x28]
+ 42408d8: 7100053f     	cmp	w9, #0x1
+ 42408dc: 54fffee1     	b.ne	0x42408b8 <iq4_f1_firmware_initialize_01+0x838>
+ 42408e0: 39401389     	ldrb	w9, [x28, #0x4]
+ 42408e4: 3607fea9     	tbz	w9, #0x0, 0x42408b8 <iq4_f1_firmware_initialize_01+0x838>
+ 42408e8: a940ab89     	ldp	x9, x10, [x28, #0x8]
+ 42408ec: eb09015f     	cmp	x10, x9
+ 42408f0: 54001041     	b.ne	0x4240af8 <iq4_f1_firmware_initialize_01+0xa78>
+ 42408f4: f9401389     	ldr	x9, [x28, #0x20]
+ 42408f8: 5293a10b     	mov	w11, #0x9d08            // =40200
+ 42408fc: 72a0002b     	movk	w11, #0x1, lsl #16
+ 4240900: eb09016b     	subs	x11, x11, x9
+ 4240904: fa4b2142     	ccmp	x10, x11, #0x2, hs
+ 4240908: 54000f88     	b.hi	0x4240af8 <iq4_f1_firmware_initialize_01+0xa78>
+ 424090c: b9404bea     	ldr	w10, [sp, #0x48]
+ 4240910: 1100054a     	add	w10, w10, #0x1
+ 4240914: b9004bea     	str	w10, [sp, #0x48]
+ 4240918: b4fffd09     	cbz	x9, 0x42408b8 <iq4_f1_firmware_initialize_01+0x838>
+ 424091c: f90023ff     	str	xzr, [sp, #0x40]
+ 4240920: f94023eb     	ldr	x11, [sp, #0x40]
+ 4240924: 5282000a     	mov	w10, #0x1000            // =4096
+ 4240928: cb0b0128     	sub	x8, x9, x11
+ 424092c: f9400789     	ldr	x9, [x28, #0x8]
+ 4240930: f140051f     	cmp	x8, #0x1, lsl #12       // =0x1000
+ 4240934: 9a8a3116     	csel	x22, x8, x10, lo
+ 4240938: ab0b012a     	adds	x10, x9, x11
+ 424093c: 52800028     	mov	w8, #0x1                // =1
+ 4240940: 54000e24     	b.mi	0x4240b04 <iq4_f1_firmware_initialize_01+0xa84>
+ 4240944: d240fac9     	eor	x9, x22, #0x7fffffffffffffff
+ 4240948: eb09015f     	cmp	x10, x9
+ 424094c: 54000dc8     	b.hi	0x4240b04 <iq4_f1_firmware_initialize_01+0xa84>
+ 4240950: aa1f03eb     	mov	x11, xzr
+ 4240954: eb0b02c2     	subs	x2, x22, x11
+ 4240958: 54000149     	b.ls	0x4240980 <iq4_f1_firmware_initialize_01+0x900>
+ 424095c: 92407a80     	and	x0, x20, #0x7fffffff
+ 4240960: 8b0b0361     	add	x1, x27, x11
+ 4240964: 8b0a0163     	add	x3, x11, x10
+ 4240968: 52800868     	mov	w8, #0x43               // =67
+ 424096c: d4000001     	svc	#0
+ 4240970: 8b0b000b     	add	x11, x0, x11
+ 4240974: f100001f     	cmp	x0, #0x0
+ 4240978: 54fffeec     	b.gt	0x4240954 <iq4_f1_firmware_initialize_01+0x8d4>
+ 424097c: 1400005f     	b	0x4240af8 <iq4_f1_firmware_initialize_01+0xa78>
+ 4240980: 52800028     	mov	w8, #0x1                // =1
+ 4240984: 37f80c15     	tbnz	w21, #0x1f, 0x4240b04 <iq4_f1_firmware_initialize_01+0xa84>
+ 4240988: f94023eb     	ldr	x11, [sp, #0x40]
+ 424098c: f9400b8a     	ldr	x10, [x28, #0x10]
+ 4240990: 8b17016b     	add	x11, x11, x23
+ 4240994: 8b0a016a     	add	x10, x11, x10
+ 4240998: b7f80b6a     	tbnz	x10, #0x3f, 0x4240b04 <iq4_f1_firmware_initialize_01+0xa84>
+ 424099c: eb09015f     	cmp	x10, x9
+ 42409a0: 54000b28     	b.hi	0x4240b04 <iq4_f1_firmware_initialize_01+0xa84>
+ 42409a4: aa1f03e9     	mov	x9, xzr
+ 42409a8: eb0902c2     	subs	x2, x22, x9
+ 42409ac: 54000169     	b.ls	0x42409d8 <iq4_f1_firmware_initialize_01+0x958>
+ 42409b0: 910143e8     	add	x8, sp, #0x50
+ 42409b4: 92407aa0     	and	x0, x21, #0x7fffffff
+ 42409b8: 8b0a0123     	add	x3, x9, x10
+ 42409bc: 8b090101     	add	x1, x8, x9
+ 42409c0: 52800868     	mov	w8, #0x43               // =67
+ 42409c4: d4000001     	svc	#0
+ 42409c8: f100001f     	cmp	x0, #0x0
+ 42409cc: 8b090009     	add	x9, x0, x9
+ 42409d0: 54fffecc     	b.gt	0x42409a8 <iq4_f1_firmware_initialize_01+0x928>
+ 42409d4: 14000049     	b	0x4240af8 <iq4_f1_firmware_initialize_01+0xa78>
+ 42409d8: 914007e0     	add	x0, sp, #0x1, lsl #12   // =0x1000
+ 42409dc: 910143e1     	add	x1, sp, #0x50
+ 42409e0: aa1603e2     	mov	x2, x22
+ 42409e4: 91014000     	add	x0, x0, #0x50
+ 42409e8: 94002dce     	bl	0x424c120 <bcmp>
+ 42409ec: 35000860     	cbnz	w0, 0x4240af8 <iq4_f1_firmware_initialize_01+0xa78>
+ 42409f0: f94023e8     	ldr	x8, [sp, #0x40]
+ 42409f4: f9401389     	ldr	x9, [x28, #0x20]
+ 42409f8: 8b0802c8     	add	x8, x22, x8
+ 42409fc: eb09011f     	cmp	x8, x9
+ 4240a00: f90023e8     	str	x8, [sp, #0x40]
+ 4240a04: 54fff8e3     	b.lo	0x4240920 <iq4_f1_firmware_initialize_01+0x8a0>
+ 4240a08: 91400be8     	add	x8, sp, #0x2, lsl #12   // =0x2000
+ 4240a0c: 910f4108     	add	x8, x8, #0x3d0
+ 4240a10: 79407108     	ldrh	w8, [x8, #0x38]
+ 4240a14: 17ffffa9     	b	0x42408b8 <iq4_f1_firmware_initialize_01+0x838>
+ 4240a18: b96423e8     	ldr	w8, [sp, #0x2420]
+ 4240a1c: 12140d08     	and	w8, w8, #0xf000
+ 4240a20: 7140211f     	cmp	w8, #0x8, lsl #12       // =0x8000
+ 4240a24: 54fff0e1     	b.ne	0x4240840 <iq4_f1_firmware_initialize_01+0x7c0>
+ 4240a28: f95223e8     	ldr	x8, [sp, #0x2440]
+ 4240a2c: d1406508     	sub	x8, x8, #0x19, lsl #12  // =0x19000
+ 4240a30: f134211f     	cmp	x8, #0xd08
+ 4240a34: 54fff061     	b.ne	0x4240840 <iq4_f1_firmware_initialize_01+0x7c0>
+ 4240a38: f9525fe8     	ldr	x8, [sp, #0x24b8]
+ 4240a3c: f9520fe9     	ldr	x9, [sp, #0x2418]
+ 4240a40: eb09011f     	cmp	x8, x9
+ 4240a44: 54ffefe1     	b.ne	0x4240840 <iq4_f1_firmware_initialize_01+0x7c0>
+ 4240a48: f9520be8     	ldr	x8, [sp, #0x2410]
+ 4240a4c: b964b3ea     	ldr	w10, [sp, #0x24b0]
+ 4240a50: d360fd09     	lsr	x9, x8, #32
+ 4240a54: 92744d29     	and	x9, x9, #0xfffff000
+ 4240a58: b3484d09     	bfxil	x9, x8, #8, #12
+ 4240a5c: eb0a013f     	cmp	x9, x10
+ 4240a60: 54ffef01     	b.ne	0x4240840 <iq4_f1_firmware_initialize_01+0x7c0>
+ 4240a64: d354ad09     	ubfx	x9, x8, #20, #24
+ 4240a68: 92401d08     	and	x8, x8, #0xff
+ 4240a6c: aa092108     	orr	x8, x8, x9, lsl #8
+ 4240a70: b964b7e9     	ldr	w9, [sp, #0x24b4]
+ 4240a74: eb09011f     	cmp	x8, x9
+ 4240a78: 54ffee41     	b.ne	0x4240840 <iq4_f1_firmware_initialize_01+0x7c0>
+ 4240a7c: 2a1403e0     	mov	w0, w20
+ 4240a80: 94000492     	bl	0x4241cc8
+ 4240a84: 6f00e400     	movi	v0.2d, #0000000000000000
+ 4240a88: 2a0003f5     	mov	w21, w0
+ 4240a8c: 91400be0     	add	x0, sp, #0x2, lsl #12   // =0x2000
+ 4240a90: 91014000     	add	x0, x0, #0x50
+ 4240a94: 2a1f03e1     	mov	w1, wzr
+ 4240a98: 52807002     	mov	w2, #0x380              // =896
+ 4240a9c: 3d8903e0     	str	q0, [sp, #0x2400]
+ 4240aa0: 3d88ffe0     	str	q0, [sp, #0x23f0]
+ 4240aa4: 3d88fbe0     	str	q0, [sp, #0x23e0]
+ 4240aa8: 3d88f7e0     	str	q0, [sp, #0x23d0]
+ 4240aac: 970725bd     	bl	0x40a1a0 <memset@plt>
+ 4240ab0: 2a1f03e9     	mov	w9, wzr
+ 4240ab4: 3607edb5     	tbz	w21, #0x0, 0x4240868 <iq4_f1_firmware_initialize_01+0x7e8>
+ 4240ab8: 91400bea     	add	x10, sp, #0x2, lsl #12  // =0x2000
+ 4240abc: aa1f03e3     	mov	x3, xzr
+ 4240ac0: 5280080b     	mov	w11, #0x40              // =64
+ 4240ac4: 910f414a     	add	x10, x10, #0x3d0
+ 4240ac8: f100fc7f     	cmp	x3, #0x3f
+ 4240acc: 54001468     	b.hi	0x4240d58 <iq4_f1_firmware_initialize_01+0xcd8>
+ 4240ad0: 92407a80     	and	x0, x20, #0x7fffffff
+ 4240ad4: cb030162     	sub	x2, x11, x3
+ 4240ad8: 8b030141     	add	x1, x10, x3
+ 4240adc: 52800868     	mov	w8, #0x43               // =67
+ 4240ae0: d4000001     	svc	#0
+ 4240ae4: 2a1f03e9     	mov	w9, wzr
+ 4240ae8: f100001f     	cmp	x0, #0x0
+ 4240aec: 8b030003     	add	x3, x0, x3
+ 4240af0: 54fffecc     	b.gt	0x4240ac8 <iq4_f1_firmware_initialize_01+0xa48>
+ 4240af4: 17ffff5d     	b	0x4240868 <iq4_f1_firmware_initialize_01+0x7e8>
+ 4240af8: 52800028     	mov	w8, #0x1                // =1
+ 4240afc: 14000002     	b	0x4240b04 <iq4_f1_firmware_initialize_01+0xa84>
+ 4240b00: b9004bff     	str	wzr, [sp, #0x48]
+ 4240b04: b9404be9     	ldr	w9, [sp, #0x48]
+ 4240b08: 7100053f     	cmp	w9, #0x1
+ 4240b0c: 1a9f050a     	csinc	w10, w8, wzr, eq
+ 4240b10: 92407a80     	and	x0, x20, #0x7fffffff
+ 4240b14: 52800728     	mov	w8, #0x39               // =57
+ 4240b18: aa1f03e1     	mov	x1, xzr
+ 4240b1c: aa1f03e2     	mov	x2, xzr
+ 4240b20: aa1f03e3     	mov	x3, xzr
+ 4240b24: d4000001     	svc	#0
+ 4240b28: 37f800f5     	tbnz	w21, #0x1f, 0x4240b44 <iq4_f1_firmware_initialize_01+0xac4>
+ 4240b2c: 92407aa0     	and	x0, x21, #0x7fffffff
+ 4240b30: 52800728     	mov	w8, #0x39               // =57
+ 4240b34: aa1f03e1     	mov	x1, xzr
+ 4240b38: aa1f03e2     	mov	x2, xzr
+ 4240b3c: aa1f03e3     	mov	x3, xzr
+ 4240b40: d4000001     	svc	#0
+ 4240b44: 340000aa     	cbz	w10, 0x4240b58 <iq4_f1_firmware_initialize_01+0xad8>
+ 4240b48: aa1803ec     	mov	x12, x24
+ 4240b4c: 2a1303ed     	mov	w13, w19
+ 4240b50: aa1903ee     	mov	x14, x25
+ 4240b54: 17fffecd     	b	0x4240688 <iq4_f1_firmware_initialize_01+0x608>
+ 4240b58: 5293b108     	mov	w8, #0x9d88             // =40328
+ 4240b5c: 52964909     	mov	w9, #0xb248             // =45640
+ 4240b60: b000031a     	adrp	x26, 0x42a1000
+ 4240b64: 9121e35a     	add	x26, x26, #0x878
+ 4240b68: 8b0802e8     	add	x8, x23, x8
+ 4240b6c: 8b0902e9     	add	x9, x23, x9
+ 4240b70: b0000316     	adrp	x22, 0x42a1000
+ 4240b74: 912202d6     	add	x22, x22, #0x880
+ 4240b78: c89fff48     	stlr	x8, [x26]
+ 4240b7c: c89ffec9     	stlr	x9, [x22]
+ 4240b80: 90000308     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 4240b84: 90000317     	adrp	x23, 0x42a0000 <iq4_f1_state_01>
+ 4240b88: 39411108     	ldrb	w8, [x8, #0x44]
+ 4240b8c: 52800029     	mov	w9, #0x1                // =1
+ 4240b90: aa1803ec     	mov	x12, x24
+ 4240b94: 2a1303ed     	mov	w13, w19
+ 4240b98: aa1903ee     	mov	x14, x25
+ 4240b9c: 39011ae9     	strb	w9, [x23, #0x46]
+ 4240ba0: 3607d788     	tbz	w8, #0x0, 0x4240690 <iq4_f1_firmware_initialize_01+0x610>
+ 4240ba4: 6f00e400     	movi	v0.2d, #0000000000000000
+ 4240ba8: 90000314     	adrp	x20, 0x42a0000 <iq4_f1_state_01>
+ 4240bac: 91014294     	add	x20, x20, #0x50
+ 4240bb0: aa1403e8     	mov	x8, x20
+ 4240bb4: 91050280     	add	x0, x20, #0x140
+ 4240bb8: a9007e9f     	stp	xzr, xzr, [x20]
+ 4240bbc: b900129f     	str	wzr, [x20, #0x10]
+ 4240bc0: f9009e9f     	str	xzr, [x20, #0x138]
+ 4240bc4: 3c828280     	stur	q0, [x20, #0x28]
+ 4240bc8: 3c838280     	stur	q0, [x20, #0x38]
+ 4240bcc: 3c848280     	stur	q0, [x20, #0x48]
+ 4240bd0: 3c858280     	stur	q0, [x20, #0x58]
+ 4240bd4: 3c868280     	stur	q0, [x20, #0x68]
+ 4240bd8: 3c878280     	stur	q0, [x20, #0x78]
+ 4240bdc: 3c888280     	stur	q0, [x20, #0x88]
+ 4240be0: 3c898280     	stur	q0, [x20, #0x98]
+ 4240be4: 3c8a8280     	stur	q0, [x20, #0xa8]
+ 4240be8: 3c8b8280     	stur	q0, [x20, #0xb8]
+ 4240bec: 3c8c8280     	stur	q0, [x20, #0xc8]
+ 4240bf0: 3c8d8280     	stur	q0, [x20, #0xd8]
+ 4240bf4: 3c8e8280     	stur	q0, [x20, #0xe8]
+ 4240bf8: 3c8f8280     	stur	q0, [x20, #0xf8]
+ 4240bfc: 3c818d00     	str	q0, [x8, #0x18]!
+ 4240c00: ad078100     	stp	q0, q0, [x8, #0xf0]
+ 4240c04: 3d804500     	str	q0, [x8, #0x110]
+ 4240c08: 94002298     	bl	0x4249668 <_ZN3iq42f49bootstrap9BootstrapC2Ev>
+ 4240c0c: 6f00e401     	movi	v1.2d, #0000000000000000
+ 4240c10: 90000008     	adrp	x8, 0x4240000 <iq4_f1_publish_ctor_on_return_01>
+ 4240c14: 90000315     	adrp	x21, 0x42a0000 <iq4_f1_state_01>
+ 4240c18: 911842b5     	add	x21, x21, #0x610
+ 4240c1c: fd403500     	ldr	d0, [x8, #0x68]
+ 4240c20: 90000308     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 4240c24: aa1503e0     	mov	x0, x21
+ 4240c28: 7908029f     	strh	wzr, [x20, #0x400]
+ 4240c2c: fd020680     	str	d0, [x20, #0x408]
+ 4240c30: 3d810681     	str	q1, [x20, #0x410]
+ 4240c34: 3d810a81     	str	q1, [x20, #0x420]
+ 4240c38: 3d810e81     	str	q1, [x20, #0x430]
+ 4240c3c: 3d811281     	str	q1, [x20, #0x440]
+ 4240c40: 3d811681     	str	q1, [x20, #0x450]
+ 4240c44: 3d811a81     	str	q1, [x20, #0x460]
+ 4240c48: 3d811e81     	str	q1, [x20, #0x470]
+ 4240c4c: 3d812281     	str	q1, [x20, #0x480]
+ 4240c50: 3d812681     	str	q1, [x20, #0x490]
+ 4240c54: 3d812a81     	str	q1, [x20, #0x4a0]
+ 4240c58: 3d812e81     	str	q1, [x20, #0x4b0]
+ 4240c5c: 3d813281     	str	q1, [x20, #0x4c0]
+ 4240c60: 3d813681     	str	q1, [x20, #0x4d0]
+ 4240c64: 3d813a81     	str	q1, [x20, #0x4e0]
+ 4240c68: 3d813e81     	str	q1, [x20, #0x4f0]
+ 4240c6c: 3d814281     	str	q1, [x20, #0x500]
+ 4240c70: 3d814681     	str	q1, [x20, #0x510]
+ 4240c74: 3d814a81     	str	q1, [x20, #0x520]
+ 4240c78: 3d814e81     	str	q1, [x20, #0x530]
+ 4240c7c: 3d815281     	str	q1, [x20, #0x540]
+ 4240c80: 3d815681     	str	q1, [x20, #0x550]
+ 4240c84: 3d815a81     	str	q1, [x20, #0x560]
+ 4240c88: 3d815e81     	str	q1, [x20, #0x570]
+ 4240c8c: 3d816281     	str	q1, [x20, #0x580]
+ 4240c90: 3d816681     	str	q1, [x20, #0x590]
+ 4240c94: 3d816a81     	str	q1, [x20, #0x5a0]
+ 4240c98: f9030114     	str	x20, [x8, #0x600]
+ 4240c9c: 94000cf1     	bl	0x4244060 <_ZN3iq42f17entry107BindingC2Ev>
+ 4240ca0: b0000308     	adrp	x8, 0x42a1000
+ 4240ca4: 39411ae9     	ldrb	w9, [x23, #0x46]
+ 4240ca8: 9000030a     	adrp	x10, 0x42a0000 <iq4_f1_state_01>
+ 4240cac: f9043915     	str	x21, [x8, #0x870]
+ 4240cb0: 90000308     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 4240cb4: 3941114a     	ldrb	w10, [x10, #0x44]
+ 4240cb8: 39411508     	ldrb	w8, [x8, #0x45]
+ 4240cbc: 7100013f     	cmp	w9, #0x0
+ 4240cc0: 52a02009     	mov	w9, #0x1000000          // =16777216
+ 4240cc4: 9a9f1129     	csel	x9, x9, xzr, ne
+ 4240cc8: 5280200b     	mov	w11, #0x100             // =256
+ 4240ccc: c8dfff45     	ldar	x5, [x26]
+ 4240cd0: 7100011f     	cmp	w8, #0x0
+ 4240cd4: 52a00028     	mov	w8, #0x10000            // =65536
+ 4240cd8: c8dffec6     	ldar	x6, [x22]
+ 4240cdc: 9a9f1108     	csel	x8, x8, xzr, ne
+ 4240ce0: 7100015f     	cmp	w10, #0x0
+ 4240ce4: aa0a0129     	orr	x9, x9, x10
+ 4240ce8: 9a9f116b     	csel	x11, x11, xzr, ne
+ 4240cec: 90000002     	adrp	x2, 0x4240000 <iq4_f1_publish_ctor_on_return_01>
+ 4240cf0: 91380042     	add	x2, x2, #0xe00
+ 4240cf4: aa080168     	orr	x8, x11, x8
+ 4240cf8: aa1403e0     	mov	x0, x20
+ 4240cfc: aa1f03e1     	mov	x1, xzr
+ 4240d00: aa090103     	orr	x3, x8, x9
+ 4240d04: aa1f03e4     	mov	x4, xzr
+ 4240d08: 940009b2     	bl	0x42433d0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_>
+ 4240d0c: 36000120     	tbz	w0, #0x0, 0x4240d30 <iq4_f1_firmware_initialize_01+0xcb0>
+ 4240d10: 52800028     	mov	w8, #0x1                // =1
+ 4240d14: 90000309     	adrp	x9, 0x42a0000 <iq4_f1_state_01>
+ 4240d18: 5280006a     	mov	w10, #0x3               // =3
+ 4240d1c: b000030b     	adrp	x11, 0x42a1000
+ 4240d20: 9122216b     	add	x11, x11, #0x888
+ 4240d24: 089ffd68     	stlrb	w8, [x11]
+ 4240d28: b9000d2a     	str	w10, [x9, #0xc]
+ 4240d2c: 14000006     	b	0x4240d44 <iq4_f1_firmware_initialize_01+0xcc4>
+ 4240d30: 52800048     	mov	w8, #0x2                // =2
+ 4240d34: 90000309     	adrp	x9, 0x42a0000 <iq4_f1_state_01>
+ 4240d38: 91003129     	add	x9, x9, #0xc
+ 4240d3c: b9000128     	str	w8, [x9]
+ 4240d40: b9000928     	str	w8, [x9, #0x8]
+ 4240d44: aa1803ec     	mov	x12, x24
+ 4240d48: 2a1303ed     	mov	w13, w19
+ 4240d4c: 17fffe60     	b	0x42406cc <iq4_f1_firmware_initialize_01+0x64c>
+ 4240d50: 2a1f03e8     	mov	w8, wzr
+ 4240d54: 17ffff6c     	b	0x4240b04 <iq4_f1_firmware_initialize_01+0xa84>
+ 4240d58: b963d3e8     	ldr	w8, [sp, #0x23d0]
+ 4240d5c: 91400be9     	add	x9, sp, #0x2, lsl #12   // =0x2000
+ 4240d60: 5288afea     	mov	w10, #0x457f            // =17791
+ 4240d64: 910f4129     	add	x9, x9, #0x3d0
+ 4240d68: 72a8c98a     	movk	w10, #0x464c, lsl #16
+ 4240d6c: b8403129     	ldur	w9, [x9, #0x3]
+ 4240d70: 6b0a011f     	cmp	w8, w10
+ 4240d74: 528048c8     	mov	w8, #0x246              // =582
+ 4240d78: 72a02028     	movk	w8, #0x101, lsl #16
+ 4240d7c: 7a480120     	ccmp	w9, w8, #0x0, eq
+ 4240d80: 2a1f03e9     	mov	w9, wzr
+ 4240d84: 54ffd721     	b.ne	0x4240868 <iq4_f1_firmware_initialize_01+0x7e8>
+ 4240d88: 91400be8     	add	x8, sp, #0x2, lsl #12   // =0x2000
+ 4240d8c: 910f4108     	add	x8, x8, #0x3d0
+ 4240d90: 79402508     	ldrh	w8, [x8, #0x12]
+ 4240d94: 7102dd1f     	cmp	w8, #0xb7
+ 4240d98: 54ffd681     	b.ne	0x4240868 <iq4_f1_firmware_initialize_01+0x7e8>
+ 4240d9c: 91400be8     	add	x8, sp, #0x2, lsl #12   // =0x2000
+ 4240da0: 910f4108     	add	x8, x8, #0x3d0
+ 4240da4: 79402108     	ldrh	w8, [x8, #0x10]
+ 4240da8: 71000d1f     	cmp	w8, #0x3
+ 4240dac: 54ffd5e1     	b.ne	0x4240868 <iq4_f1_firmware_initialize_01+0x7e8>
+ 4240db0: 91400be8     	add	x8, sp, #0x2, lsl #12   // =0x2000
+ 4240db4: 910f4108     	add	x8, x8, #0x3d0
+ 4240db8: 79406d08     	ldrh	w8, [x8, #0x36]
+ 4240dbc: 7100e11f     	cmp	w8, #0x38
+ 4240dc0: 54ffd541     	b.ne	0x4240868 <iq4_f1_firmware_initialize_01+0x7e8>
+ 4240dc4: 91400be8     	add	x8, sp, #0x2, lsl #12   // =0x2000
+ 4240dc8: 910f4108     	add	x8, x8, #0x3d0
+ 4240dcc: 79407108     	ldrh	w8, [x8, #0x38]
+ 4240dd0: 5100050a     	sub	w10, w8, #0x1
+ 4240dd4: 71003d5f     	cmp	w10, #0xf
+ 4240dd8: 54ffd488     	b.hi	0x4240868 <iq4_f1_firmware_initialize_01+0x7e8>
+ 4240ddc: d37ae509     	lsl	x9, x8, #6
+ 4240de0: f951fbe3     	ldr	x3, [sp, #0x23f0]
+ 4240de4: 91400be1     	add	x1, sp, #0x2, lsl #12   // =0x2000
+ 4240de8: 91014021     	add	x1, x1, #0x50
+ 4240dec: 2a1403e0     	mov	w0, w20
+ 4240df0: cb080d22     	sub	x2, x9, x8, lsl #3
+ 4240df4: 940002af     	bl	0x42418b0
+ 4240df8: 2a0003e9     	mov	w9, w0
+ 4240dfc: 17fffe9b     	b	0x4240868 <iq4_f1_firmware_initialize_01+0x7e8>
+
+iq4_f1_firmware_unlock_01
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin:	file format elf64-littleaarch64
+
+Disassembly of section .f1.0.10.text.iq4_f1_firmware_unlock_01:
+
+0000000004240e78 <iq4_f1_firmware_unlock_01>:
+ 4240e78: a9ba7bfd     	stp	x29, x30, [sp, #-0x60]!
+ 4240e7c: a9016ffc     	stp	x28, x27, [sp, #0x10]
+ 4240e80: a90267fa     	stp	x26, x25, [sp, #0x20]
+ 4240e84: a9035ff8     	stp	x24, x23, [sp, #0x30]
+ 4240e88: a90457f6     	stp	x22, x21, [sp, #0x40]
+ 4240e8c: a9054ff4     	stp	x20, x19, [sp, #0x50]
+ 4240e90: 910003fd     	mov	x29, sp
+ 4240e94: d10843ff     	sub	sp, sp, #0x210
+ 4240e98: aa1e03f3     	mov	x19, x30
+ 4240e9c: aa0003f4     	mov	x20, x0
+ 4240ea0: 97072590     	bl	0x40a4e0 <__errno_location@plt>
+ 4240ea4: aa1303fe     	mov	x30, x19
+ 4240ea8: aa0003f3     	mov	x19, x0
+ 4240eac: aa1403e0     	mov	x0, x20
+ 4240eb0: d50320ff     	xpaclri
+ 4240eb4: aa1e03f5     	mov	x21, x30
+ 4240eb8: 9707261e     	bl	0x40a730 <pthread_mutex_unlock@plt>
+ 4240ebc: b9400276     	ldr	w22, [x19]
+ 4240ec0: 35001960     	cbnz	w0, 0x42411ec <iq4_f1_firmware_unlock_01+0x374>
+ 4240ec4: 529d1588     	mov	w8, #0xe8ac             // =59564
+ 4240ec8: 72a00d68     	movk	w8, #0x6b, lsl #16
+ 4240ecc: eb0802bf     	cmp	x21, x8
+ 4240ed0: 540018e1     	b.ne	0x42411ec <iq4_f1_firmware_unlock_01+0x374>
+ 4240ed4: d53bd049     	mrs	x9, TPIDR_EL0
+ 4240ed8: a902f7e8     	stp	x8, x29, [sp, #0x28]
+ 4240edc: b0000318     	adrp	x24, 0x42a1000
+ 4240ee0: 91222318     	add	x24, x24, #0x888
+ 4240ee4: a903d3e9     	stp	x9, x20, [sp, #0x38]
+ 4240ee8: b9004bff     	str	wzr, [sp, #0x48]
+ 4240eec: 08dfff09     	ldarb	w9, [x24]
+ 4240ef0: 360017e9     	tbz	w9, #0x0, 0x42411ec <iq4_f1_firmware_unlock_01+0x374>
+ 4240ef4: 90000314     	adrp	x20, 0x42a0000 <iq4_f1_state_01>
+ 4240ef8: f9430289     	ldr	x9, [x20, #0x600]
+ 4240efc: b4001789     	cbz	x9, 0x42411ec <iq4_f1_firmware_unlock_01+0x374>
+ 4240f00: b000031a     	adrp	x26, 0x42a1000
+ 4240f04: f9443b49     	ldr	x9, [x26, #0x870]
+ 4240f08: b4001729     	cbz	x9, 0x42411ec <iq4_f1_firmware_unlock_01+0x374>
+ 4240f0c: f94017e9     	ldr	x9, [sp, #0x28]
+ 4240f10: eb08013f     	cmp	x9, x8
+ 4240f14: 540016c1     	b.ne	0x42411ec <iq4_f1_firmware_unlock_01+0x374>
+ 4240f18: b9404be8     	ldr	w8, [sp, #0x48]
+ 4240f1c: 35001688     	cbnz	w8, 0x42411ec <iq4_f1_firmware_unlock_01+0x374>
+ 4240f20: 90000319     	adrp	x25, 0x42a0000 <iq4_f1_state_01>
+ 4240f24: b9401328     	ldr	w8, [x25, #0x10]
+ 4240f28: 7100211f     	cmp	w8, #0x8
+ 4240f2c: 54001600     	b.eq	0x42411ec <iq4_f1_firmware_unlock_01+0x374>
+ 4240f30: 910163fb     	add	x27, sp, #0x58
+ 4240f34: b0000315     	adrp	x21, 0x42a1000
+ 4240f38: 912502b5     	add	x21, x21, #0x940
+ 4240f3c: 52800028     	mov	w8, #0x1                // =1
+ 4240f40: 085ffea9     	ldaxrb	w9, [x21]
+ 4240f44: 080a7ea8     	stxrb	w10, w8, [x21]
+ 4240f48: 35ffffca     	cbnz	w10, 0x4240f40 <iq4_f1_firmware_unlock_01+0xc8>
+ 4240f4c: 37001509     	tbnz	w9, #0x0, 0x42411ec <iq4_f1_firmware_unlock_01+0x374>
+ 4240f50: 2a0003f7     	mov	w23, w0
+ 4240f54: f9430280     	ldr	x0, [x20, #0x600]
+ 4240f58: 9100a3e1     	add	x1, sp, #0x28
+ 4240f5c: 94000a6f     	bl	0x4243918 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE>
+ 4240f60: b0000308     	adrp	x8, 0x42a1000
+ 4240f64: 91251108     	add	x8, x8, #0x944
+ 4240f68: 08dffd08     	ldarb	w8, [x8]
+ 4240f6c: 360001c8     	tbz	w8, #0x0, 0x4240fa4 <iq4_f1_firmware_unlock_01+0x12c>
+ 4240f70: b0000308     	adrp	x8, 0x42a1000
+ 4240f74: f9449d09     	ldr	x9, [x8, #0x938]
+ 4240f78: b100053f     	cmn	x9, #0x1
+ 4240f7c: 540000c0     	b.eq	0x4240f94 <iq4_f1_firmware_unlock_01+0x11c>
+ 4240f80: f9443b40     	ldr	x0, [x26, #0x870]
+ 4240f84: 91000522     	add	x2, x9, #0x1
+ 4240f88: 9100a3e1     	add	x1, sp, #0x28
+ 4240f8c: f9049d02     	str	x2, [x8, #0x938]
+ 4240f90: 940018cf     	bl	0x42472cc <_ZN3iq42f17entry107Binding21after_actual_boundaryERKNS0_11native_ui0213BoundaryInputEm>
+ 4240f94: 90000308     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 4240f98: b9477908     	ldr	w8, [x8, #0x778]
+ 4240f9c: b9001328     	str	w8, [x25, #0x10]
+ 4240fa0: 14000050     	b	0x42410e0 <iq4_f1_firmware_unlock_01+0x268>
+ 4240fa4: 6f00e400     	movi	v0.2d, #0000000000000000
+ 4240fa8: 90000008     	adrp	x8, 0x4240000 <iq4_f1_publish_ctor_on_return_01>
+ 4240fac: f9430280     	ldr	x0, [x20, #0x600]
+ 4240fb0: fd403901     	ldr	d1, [x8, #0x70]
+ 4240fb4: 910163e8     	add	x8, sp, #0x58
+ 4240fb8: 910163e1     	add	x1, sp, #0x58
+ 4240fbc: 91002108     	add	x8, x8, #0x8
+ 4240fc0: fd002fe1     	str	d1, [sp, #0x58]
+ 4240fc4: ad080100     	stp	q0, q0, [x8, #0x100]
+ 4240fc8: ad090100     	stp	q0, q0, [x8, #0x120]
+ 4240fcc: ad0a0100     	stp	q0, q0, [x8, #0x140]
+ 4240fd0: ad0b0100     	stp	q0, q0, [x8, #0x160]
+ 4240fd4: ad0c0100     	stp	q0, q0, [x8, #0x180]
+ 4240fd8: ad0303e0     	stp	q0, q0, [sp, #0x60]
+ 4240fdc: ad0403e0     	stp	q0, q0, [sp, #0x80]
+ 4240fe0: 3c8a03e0     	stur	q0, [sp, #0xa0]
+ 4240fe4: 3c858360     	stur	q0, [x27, #0x58]
+ 4240fe8: 3c868360     	stur	q0, [x27, #0x68]
+ 4240fec: 3c878360     	stur	q0, [x27, #0x78]
+ 4240ff0: 3c888360     	stur	q0, [x27, #0x88]
+ 4240ff4: 3c898360     	stur	q0, [x27, #0x98]
+ 4240ff8: 3c8a8360     	stur	q0, [x27, #0xa8]
+ 4240ffc: 3c8b8360     	stur	q0, [x27, #0xb8]
+ 4241000: 3c8c8360     	stur	q0, [x27, #0xc8]
+ 4241004: 3c8d8360     	stur	q0, [x27, #0xd8]
+ 4241008: 3c8e8360     	stur	q0, [x27, #0xe8]
+ 424100c: 3c8f8360     	stur	q0, [x27, #0xf8]
+ 4241010: 94000b33     	bl	0x4243cdc <_ZNK3iq42f17entry016Module8snapshotERNS1_11ObservationE>
+ 4241014: 36000600     	tbz	w0, #0x0, 0x42410d4 <iq4_f1_firmware_unlock_01+0x25c>
+ 4241018: f9403be8     	ldr	x8, [sp, #0x70]
+ 424101c: b40005c8     	cbz	x8, 0x42410d4 <iq4_f1_firmware_unlock_01+0x25c>
+ 4241020: f00002e8     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 4241024: f943028a     	ldr	x10, [x20, #0x600]
+ 4241028: 2a1703e0     	mov	w0, w23
+ 424102c: b9401908     	ldr	w8, [x8, #0x18]
+ 4241030: f9002bff     	str	xzr, [sp, #0x50]
+ 4241034: a93f7fbf     	stp	xzr, xzr, [x29, #-0x10]
+ 4241038: 7100051f     	cmp	w8, #0x1
+ 424103c: 54000d01     	b.ne	0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 4241040: f00002e8     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 4241044: f00002ec     	adrp	x12, 0x42a0000 <iq4_f1_state_01>
+ 4241048: f940190d     	ldr	x13, [x8, #0x30]
+ 424104c: f9407588     	ldr	x8, [x12, #0xe8]
+ 4241050: eb0801bf     	cmp	x13, x8
+ 4241054: 54000c41     	b.ne	0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 4241058: f00002e8     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 424105c: f00002eb     	adrp	x11, 0x42a0000 <iq4_f1_state_01>
+ 4241060: f9401508     	ldr	x8, [x8, #0x28]
+ 4241064: f9406d69     	ldr	x9, [x11, #0xd8]
+ 4241068: eb09011f     	cmp	x8, x9
+ 424106c: 54000b81     	b.ne	0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 4241070: b7f80b6d     	tbnz	x13, #0x3f, 0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 4241074: f00002f9     	adrp	x25, 0x42a0000 <iq4_f1_state_01>
+ 4241078: b9404329     	ldr	w9, [x25, #0x40]
+ 424107c: 37f80b09     	tbnz	w9, #0x1f, 0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 4241080: 9280010e     	mov	x14, #-0x9              // =-9
+ 4241084: f2efffee     	movk	x14, #0x7fff, lsl #48
+ 4241088: eb0e01bf     	cmp	x13, x14
+ 424108c: 54000a88     	b.hi	0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 4241090: aa1f03ef     	mov	x15, xzr
+ 4241094: d10023b0     	sub	x16, x29, #0x8
+ 4241098: 52800111     	mov	w17, #0x8               // =8
+ 424109c: f1001dff     	cmp	x15, #0x7
+ 42410a0: 54000268     	b.hi	0x42410ec <iq4_f1_firmware_unlock_01+0x274>
+ 42410a4: 52800868     	mov	w8, #0x43               // =67
+ 42410a8: aa0903e0     	mov	x0, x9
+ 42410ac: cb0f0222     	sub	x2, x17, x15
+ 42410b0: 8b0f0201     	add	x1, x16, x15
+ 42410b4: 8b0d01e3     	add	x3, x15, x13
+ 42410b8: d4000001     	svc	#0
+ 42410bc: aa0003e8     	mov	x8, x0
+ 42410c0: 2a1703e0     	mov	w0, w23
+ 42410c4: f100011f     	cmp	x8, #0x0
+ 42410c8: 8b0f010f     	add	x15, x8, x15
+ 42410cc: 54fffe8c     	b.gt	0x424109c <iq4_f1_firmware_unlock_01+0x224>
+ 42410d0: 14000043     	b	0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 42410d4: f00002e8     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 42410d8: 52800149     	mov	w9, #0xa                // =10
+ 42410dc: b9001509     	str	w9, [x8, #0x14]
+ 42410e0: 089ffebf     	stlrb	wzr, [x21]
+ 42410e4: 2a1703e0     	mov	w0, w23
+ 42410e8: 14000041     	b	0x42411ec <iq4_f1_firmware_unlock_01+0x374>
+ 42410ec: f85f83a8     	ldur	x8, [x29, #-0x8]
+ 42410f0: d16e6908     	sub	x8, x8, #0xb9a, lsl #12 // =0xb9a000
+ 42410f4: f127611f     	cmp	x8, #0x9d8
+ 42410f8: 54000721     	b.ne	0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 42410fc: f9407588     	ldr	x8, [x12, #0xe8]
+ 4241100: b102c10c     	adds	x12, x8, #0xb0
+ 4241104: 540006c4     	b.mi	0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 4241108: b9404329     	ldr	w9, [x25, #0x40]
+ 424110c: 37f80689     	tbnz	w9, #0x1f, 0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 4241110: eb0e019f     	cmp	x12, x14
+ 4241114: 54000648     	b.hi	0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 4241118: aa1f03ed     	mov	x13, xzr
+ 424111c: d10043ae     	sub	x14, x29, #0x10
+ 4241120: 5280010f     	mov	w15, #0x8               // =8
+ 4241124: f1001dbf     	cmp	x13, #0x7
+ 4241128: 540001a8     	b.hi	0x424115c <iq4_f1_firmware_unlock_01+0x2e4>
+ 424112c: 52800868     	mov	w8, #0x43               // =67
+ 4241130: aa0903e0     	mov	x0, x9
+ 4241134: cb0d01e2     	sub	x2, x15, x13
+ 4241138: 8b0d01c1     	add	x1, x14, x13
+ 424113c: 8b0c01a3     	add	x3, x13, x12
+ 4241140: d4000001     	svc	#0
+ 4241144: aa0003e8     	mov	x8, x0
+ 4241148: 2a1703e0     	mov	w0, w23
+ 424114c: f100011f     	cmp	x8, #0x0
+ 4241150: 8b0d010d     	add	x13, x8, x13
+ 4241154: 54fffe8c     	b.gt	0x4241124 <iq4_f1_firmware_unlock_01+0x2ac>
+ 4241158: 14000021     	b	0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 424115c: f85f03a8     	ldur	x8, [x29, #-0x10]
+ 4241160: f9406d69     	ldr	x9, [x11, #0xd8]
+ 4241164: eb09011f     	cmp	x8, x9
+ 4241168: 540003a1     	b.ne	0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 424116c: 91020140     	add	x0, x10, #0x80
+ 4241170: 910143e1     	add	x1, sp, #0x50
+ 4241174: 94000343     	bl	0x4241e80
+ 4241178: 2a0003e8     	mov	w8, w0
+ 424117c: 2a1703e0     	mov	w0, w23
+ 4241180: 360002e8     	tbz	w8, #0x0, 0x42411dc <iq4_f1_firmware_unlock_01+0x364>
+ 4241184: b9404329     	ldr	w9, [x25, #0x40]
+ 4241188: b81f03bf     	stur	wzr, [x29, #-0x10]
+ 424118c: f81f83bf     	stur	xzr, [x29, #-0x8]
+ 4241190: 37f80669     	tbnz	w9, #0x1f, 0x424125c <iq4_f1_firmware_unlock_01+0x3e4>
+ 4241194: 528a750a     	mov	w10, #0x53a8            // =21416
+ 4241198: aa1f03eb     	mov	x11, xzr
+ 424119c: d10043ac     	sub	x12, x29, #0x10
+ 42411a0: 72a01eaa     	movk	w10, #0xf5, lsl #16
+ 42411a4: 5280008d     	mov	w13, #0x4               // =4
+ 42411a8: f1000d7f     	cmp	x11, #0x3
+ 42411ac: 54000328     	b.hi	0x4241210 <iq4_f1_firmware_unlock_01+0x398>
+ 42411b0: 8b0b0148     	add	x8, x10, x11
+ 42411b4: aa0903e0     	mov	x0, x9
+ 42411b8: cb0b01a2     	sub	x2, x13, x11
+ 42411bc: 8b0b0181     	add	x1, x12, x11
+ 42411c0: 9100a103     	add	x3, x8, #0x28
+ 42411c4: 52800868     	mov	w8, #0x43               // =67
+ 42411c8: d4000001     	svc	#0
+ 42411cc: 8b0b000b     	add	x11, x0, x11
+ 42411d0: f100001f     	cmp	x0, #0x0
+ 42411d4: 54fffeac     	b.gt	0x42411a8 <iq4_f1_firmware_unlock_01+0x330>
+ 42411d8: 14000021     	b	0x424125c <iq4_f1_firmware_unlock_01+0x3e4>
+ 42411dc: f00002e8     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 42411e0: 52800169     	mov	w9, #0xb                // =11
+ 42411e4: b9001509     	str	w9, [x8, #0x14]
+ 42411e8: 089ffebf     	stlrb	wzr, [x21]
+ 42411ec: b9000276     	str	w22, [x19]
+ 42411f0: 910843ff     	add	sp, sp, #0x210
+ 42411f4: a9454ff4     	ldp	x20, x19, [sp, #0x50]
+ 42411f8: a94457f6     	ldp	x22, x21, [sp, #0x40]
+ 42411fc: a9435ff8     	ldp	x24, x23, [sp, #0x30]
+ 4241200: a94267fa     	ldp	x26, x25, [sp, #0x20]
+ 4241204: a9416ffc     	ldp	x28, x27, [sp, #0x10]
+ 4241208: a8c67bfd     	ldp	x29, x30, [sp], #0x60
+ 424120c: d65f03c0     	ret
+ 4241210: b85f03a8     	ldur	w8, [x29, #-0x10]
+ 4241214: 7100051f     	cmp	w8, #0x1
+ 4241218: 54000221     	b.ne	0x424125c <iq4_f1_firmware_unlock_01+0x3e4>
+ 424121c: b9404329     	ldr	w9, [x25, #0x40]
+ 4241220: 37f801e9     	tbnz	w9, #0x1f, 0x424125c <iq4_f1_firmware_unlock_01+0x3e4>
+ 4241224: aa1f03eb     	mov	x11, xzr
+ 4241228: d10023ac     	sub	x12, x29, #0x8
+ 424122c: 5280010d     	mov	w13, #0x8               // =8
+ 4241230: f1001d7f     	cmp	x11, #0x7
+ 4241234: 54000268     	b.hi	0x4241280 <iq4_f1_firmware_unlock_01+0x408>
+ 4241238: aa0903e0     	mov	x0, x9
+ 424123c: cb0b01a2     	sub	x2, x13, x11
+ 4241240: 8b0b0181     	add	x1, x12, x11
+ 4241244: aa0a0163     	orr	x3, x11, x10
+ 4241248: 52800868     	mov	w8, #0x43               // =67
+ 424124c: d4000001     	svc	#0
+ 4241250: f100001f     	cmp	x0, #0x0
+ 4241254: 8b0b000b     	add	x11, x0, x11
+ 4241258: 54fffecc     	b.gt	0x4241230 <iq4_f1_firmware_unlock_01+0x3b8>
+ 424125c: 90000308     	adrp	x8, 0x42a1000
+ 4241260: 9121e108     	add	x8, x8, #0x878
+ 4241264: c8dffd1f     	ldar	xzr, [x8]
+ 4241268: 90000308     	adrp	x8, 0x42a1000
+ 424126c: 91220108     	add	x8, x8, #0x880
+ 4241270: c8dffd1f     	ldar	xzr, [x8]
+ 4241274: f00002e8     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 4241278: 52800189     	mov	w9, #0xc                // =12
+ 424127c: 17ffff98     	b	0x42410dc <iq4_f1_firmware_unlock_01+0x264>
+ 4241280: 90000309     	adrp	x9, 0x42a1000
+ 4241284: 9121e129     	add	x9, x9, #0x878
+ 4241288: f85f83a8     	ldur	x8, [x29, #-0x8]
+ 424128c: c8dffd3a     	ldar	x26, [x9]
+ 4241290: 90000309     	adrp	x9, 0x42a1000
+ 4241294: 91220129     	add	x9, x9, #0x880
+ 4241298: c8dffd39     	ldar	x25, [x9]
+ 424129c: b4fffec8     	cbz	x8, 0x4241274 <iq4_f1_firmware_unlock_01+0x3fc>
+ 42412a0: b4fffeba     	cbz	x26, 0x4241274 <iq4_f1_firmware_unlock_01+0x3fc>
+ 42412a4: b4fffe99     	cbz	x25, 0x4241274 <iq4_f1_firmware_unlock_01+0x3fc>
+ 42412a8: 528a7800     	mov	w0, #0x53c0             // =21440
+ 42412ac: 72a01ea0     	movk	w0, #0xf5, lsl #16
+ 42412b0: d63f0340     	blr	x26
+ 42412b4: 35fffe00     	cbnz	w0, 0x4241274 <iq4_f1_firmware_unlock_01+0x3fc>
+ 42412b8: f00002e8     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 42412bc: 39411108     	ldrb	w8, [x8, #0x44]
+ 42412c0: 7100051f     	cmp	w8, #0x1
+ 42412c4: 54000121     	b.ne	0x42412e8 <iq4_f1_firmware_unlock_01+0x470>
+ 42412c8: f00002e8     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 42412cc: 39411508     	ldrb	w8, [x8, #0x45]
+ 42412d0: 7100051f     	cmp	w8, #0x1
+ 42412d4: 540000a1     	b.ne	0x42412e8 <iq4_f1_firmware_unlock_01+0x470>
+ 42412d8: f00002e8     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 42412dc: 39411908     	ldrb	w8, [x8, #0x46]
+ 42412e0: b2780108     	orr	x8, x8, #0x100
+ 42412e4: 14000002     	b	0x42412ec <iq4_f1_firmware_unlock_01+0x474>
+ 42412e8: 52802008     	mov	w8, #0x100              // =256
+ 42412ec: 08dfff0a     	ldarb	w10, [x24]
+ 42412f0: 08dfff0b     	ldarb	w11, [x24]
+ 42412f4: 90000309     	adrp	x9, 0x42a1000
+ 42412f8: f9443920     	ldr	x0, [x9, #0x870]
+ 42412fc: 52a02009     	mov	w9, #0x1000000          // =16777216
+ 4241300: f9430283     	ldr	x3, [x20, #0x600]
+ 4241304: 7200017f     	tst	w11, #0x1
+ 4241308: f9402be6     	ldr	x6, [sp, #0x50]
+ 424130c: aa1f03e1     	mov	x1, xzr
+ 4241310: 9a9f1129     	csel	x9, x9, xzr, ne
+ 4241314: 7200015f     	tst	w10, #0x1
+ 4241318: 52a0002a     	mov	w10, #0x10000           // =65536
+ 424131c: 9a9f114a     	csel	x10, x10, xzr, ne
+ 4241320: f0ffffe2     	adrp	x2, 0x4240000 <iq4_f1_publish_ctor_on_return_01>
+ 4241324: 91380042     	add	x2, x2, #0xe00
+ 4241328: aa080148     	orr	x8, x10, x8
+ 424132c: b000000a     	adrp	x10, 0x4242000
+ 4241330: 9108c14a     	add	x10, x10, #0x230
+ 4241334: 9100a3e4     	add	x4, sp, #0x28
+ 4241338: aa090105     	orr	x5, x8, x9
+ 424133c: a90167fa     	stp	x26, x25, [sp, #0x10]
+ 4241340: a9002bff     	stp	xzr, x10, [sp]
+ 4241344: 940010bb     	bl	0x4245630 <_ZN3iq42f17entry107Binding23bind_on_actual_boundaryENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS0_11native_ui0213BoundaryInputENS1_9AdmissionENS1_9PlacementENS1_9SelectionENS1_15SynchronizationE>
+ 4241348: 360000c0     	tbz	w0, #0x0, 0x4241360 <iq4_f1_firmware_unlock_01+0x4e8>
+ 424134c: 90000308     	adrp	x8, 0x42a1000
+ 4241350: f9443900     	ldr	x0, [x8, #0x870]
+ 4241354: 94001468     	bl	0x42464f4 <_ZN3iq42f17entry107Binding11build_on_uiEv>
+ 4241358: 2a0003f4     	mov	w20, w0
+ 424135c: 14000002     	b	0x4241364 <iq4_f1_firmware_unlock_01+0x4ec>
+ 4241360: 2a1f03f4     	mov	w20, wzr
+ 4241364: 528a7800     	mov	w0, #0x53c0             // =21440
+ 4241368: 72a01ea0     	movk	w0, #0xf5, lsl #16
+ 424136c: d63f0320     	blr	x25
+ 4241370: 7100001f     	cmp	w0, #0x0
+ 4241374: 1a9f17e8     	cset	w8, eq
+ 4241378: 0a080288     	and	w8, w20, w8
+ 424137c: 36000188     	tbz	w8, #0x0, 0x42413ac <iq4_f1_firmware_unlock_01+0x534>
+ 4241380: f00002e8     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 4241384: f00002e9     	adrp	x9, 0x42a0000 <iq4_f1_state_01>
+ 4241388: 5280002a     	mov	w10, #0x1               // =1
+ 424138c: f9406908     	ldr	x8, [x8, #0xd0]
+ 4241390: f00002f9     	adrp	x25, 0x42a0000 <iq4_f1_state_01>
+ 4241394: 9000031a     	adrp	x26, 0x42a1000
+ 4241398: f9001128     	str	x8, [x9, #0x20]
+ 424139c: 90000308     	adrp	x8, 0x42a1000
+ 42413a0: 91251108     	add	x8, x8, #0x944
+ 42413a4: 089ffd0a     	stlrb	w10, [x8]
+ 42413a8: 17fffef2     	b	0x4240f70 <iq4_f1_firmware_unlock_01+0xf8>
+ 42413ac: f0ffffe8     	adrp	x8, 0x4240000 <iq4_f1_publish_ctor_on_return_01>
+ 42413b0: fd403d00     	ldr	d0, [x8, #0x78]
+ 42413b4: f00002e8     	adrp	x8, 0x42a0000 <iq4_f1_state_01>
+ 42413b8: fd000900     	str	d0, [x8, #0x10]
+ 42413bc: 17ffff49     	b	0x42410e0 <iq4_f1_firmware_unlock_01+0x268>
+ 42413c0: 94000138     	bl	0x42418a0 <__clang_call_terminate>
+
+iq4_f1_lv_ctor_wrapper_01
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin:	file format elf64-littleaarch64
+
+Disassembly of section .f1.7.2.text:
+
+000000000424c060 <iq4_f1_lv_ctor_wrapper_01>:
+ 424c060: d10403ff     	sub	sp, sp, #0x100
+ 424c064: a9017bfd     	stp	x29, x30, [sp, #0x10]
+ 424c068: 910003fd     	mov	x29, sp
+ 424c06c: a9020be0     	stp	x0, x2, [sp, #0x20]
+ 424c070: f94083e9     	ldr	x9, [sp, #0x100]
+ 424c074: f90003e9     	str	x9, [sp]
+ 424c078: 970b2d50     	bl	0x5175b8 <.text+0x10c388>
+ 424c07c: a90307e0     	stp	x0, x1, [sp, #0x30]
+ 424c080: a9040fe2     	stp	x2, x3, [sp, #0x40]
+ 424c084: a90517e4     	stp	x4, x5, [sp, #0x50]
+ 424c088: a9061fe6     	stp	x6, x7, [sp, #0x60]
+ 424c08c: f9003be8     	str	x8, [sp, #0x70]
+ 424c090: ad0407e0     	stp	q0, q1, [sp, #0x80]
+ 424c094: ad050fe2     	stp	q2, q3, [sp, #0xa0]
+ 424c098: d53b4409     	mrs	x9, FPCR
+ 424c09c: d53b442a     	mrs	x10, FPSR
+ 424c0a0: a90c2be9     	stp	x9, x10, [sp, #0xc0]
+ 424c0a4: a94207e0     	ldp	x0, x1, [sp, #0x20]
+ 424c0a8: f9400fe2     	ldr	x2, [sp, #0x18]
+ 424c0ac: 97ffcfd5     	bl	0x4240000 <iq4_f1_publish_ctor_on_return_01>
+ 424c0b0: a94c2be9     	ldp	x9, x10, [sp, #0xc0]
+ 424c0b4: d51b4409     	msr	FPCR, x9
+ 424c0b8: d51b442a     	msr	FPSR, x10
+ 424c0bc: ad4407e0     	ldp	q0, q1, [sp, #0x80]
+ 424c0c0: ad450fe2     	ldp	q2, q3, [sp, #0xa0]
+ 424c0c4: a94307e0     	ldp	x0, x1, [sp, #0x30]
+ 424c0c8: a9440fe2     	ldp	x2, x3, [sp, #0x40]
+ 424c0cc: a94517e4     	ldp	x4, x5, [sp, #0x50]
+ 424c0d0: a9461fe6     	ldp	x6, x7, [sp, #0x60]
+ 424c0d4: f9403be8     	ldr	x8, [sp, #0x70]
+ 424c0d8: a9417bfd     	ldp	x29, x30, [sp, #0x10]
+ 424c0dc: 910403ff     	add	sp, sp, #0x100
+ 424c0e0: d65f03c0     	ret
+
+iq4_f1_lv_draw_wrapper_13
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin:	file format elf64-littleaarch64
+
+Disassembly of section .f1.10.2.text:
+
+000000000424cec0 <iq4_f1_lv_draw_wrapper_13>:
+ 424cec0: d10c83ff     	sub	sp, sp, #0x320
+ 424cec4: a90007e0     	stp	x0, x1, [sp]
+ 424cec8: a9010fe2     	stp	x2, x3, [sp, #0x10]
+ 424cecc: a90217e4     	stp	x4, x5, [sp, #0x20]
+ 424ced0: a9031fe6     	stp	x6, x7, [sp, #0x30]
+ 424ced4: f90023e8     	str	x8, [sp, #0x40]
+ 424ced8: 910c83f0     	add	x16, sp, #0x320
+ 424cedc: f90027f0     	str	x16, [sp, #0x48]
+ 424cee0: f9002bfd     	str	x29, [sp, #0x50]
+ 424cee4: f9002ffe     	str	x30, [sp, #0x58]
+ 424cee8: f9018bfd     	str	x29, [sp, #0x310]
+ 424ceec: f9018ffe     	str	x30, [sp, #0x318]
+ 424cef0: 910003fd     	mov	x29, sp
+ 424cef4: d28e0710     	mov	x16, #0x7038            // =28728
+ 424cef8: f2a008f0     	movk	x16, #0x47, lsl #16
+ 424cefc: d63f0200     	blr	x16
+ 424cf00: a90607e0     	stp	x0, x1, [sp, #0x60]
+ 424cf04: a9070fe2     	stp	x2, x3, [sp, #0x70]
+ 424cf08: a90817e4     	stp	x4, x5, [sp, #0x80]
+ 424cf0c: a9091fe6     	stp	x6, x7, [sp, #0x90]
+ 424cf10: a90a27e8     	stp	x8, x9, [sp, #0xa0]
+ 424cf14: a90b2fea     	stp	x10, x11, [sp, #0xb0]
+ 424cf18: a90c37ec     	stp	x12, x13, [sp, #0xc0]
+ 424cf1c: a90d3fee     	stp	x14, x15, [sp, #0xd0]
+ 424cf20: a90e47f0     	stp	x16, x17, [sp, #0xe0]
+ 424cf24: f9007bf2     	str	x18, [sp, #0xf0]
+ 424cf28: d53b4210     	mrs	x16, NZCV
+ 424cf2c: f9007ff0     	str	x16, [sp, #0xf8]
+ 424cf30: d53b4410     	mrs	x16, FPCR
+ 424cf34: f90083f0     	str	x16, [sp, #0x100]
+ 424cf38: d53b4430     	mrs	x16, FPSR
+ 424cf3c: f90087f0     	str	x16, [sp, #0x108]
+ 424cf40: ad0887e0     	stp	q0, q1, [sp, #0x110]
+ 424cf44: ad098fe2     	stp	q2, q3, [sp, #0x130]
+ 424cf48: ad0a97e4     	stp	q4, q5, [sp, #0x150]
+ 424cf4c: ad0b9fe6     	stp	q6, q7, [sp, #0x170]
+ 424cf50: ad0ca7e8     	stp	q8, q9, [sp, #0x190]
+ 424cf54: ad0dafea     	stp	q10, q11, [sp, #0x1b0]
+ 424cf58: ad0eb7ec     	stp	q12, q13, [sp, #0x1d0]
+ 424cf5c: ad0fbfee     	stp	q14, q15, [sp, #0x1f0]
+ 424cf60: ad10c7f0     	stp	q16, q17, [sp, #0x210]
+ 424cf64: ad11cff2     	stp	q18, q19, [sp, #0x230]
+ 424cf68: ad12d7f4     	stp	q20, q21, [sp, #0x250]
+ 424cf6c: ad13dff6     	stp	q22, q23, [sp, #0x270]
+ 424cf70: ad14e7f8     	stp	q24, q25, [sp, #0x290]
+ 424cf74: ad15effa     	stp	q26, q27, [sp, #0x2b0]
+ 424cf78: ad16f7fc     	stp	q28, q29, [sp, #0x2d0]
+ 424cf7c: ad17fffe     	stp	q30, q31, [sp, #0x2f0]
+ 424cf80: 910003e0     	mov	x0, sp
+ 424cf84: 97fffe93     	bl	0x424c9d0 <iq4_f1_after_stock_draw_13>
+ 424cf88: ad4887e0     	ldp	q0, q1, [sp, #0x110]
+ 424cf8c: ad498fe2     	ldp	q2, q3, [sp, #0x130]
+ 424cf90: ad4a97e4     	ldp	q4, q5, [sp, #0x150]
+ 424cf94: ad4b9fe6     	ldp	q6, q7, [sp, #0x170]
+ 424cf98: ad4ca7e8     	ldp	q8, q9, [sp, #0x190]
+ 424cf9c: ad4dafea     	ldp	q10, q11, [sp, #0x1b0]
+ 424cfa0: ad4eb7ec     	ldp	q12, q13, [sp, #0x1d0]
+ 424cfa4: ad4fbfee     	ldp	q14, q15, [sp, #0x1f0]
+ 424cfa8: ad50c7f0     	ldp	q16, q17, [sp, #0x210]
+ 424cfac: ad51cff2     	ldp	q18, q19, [sp, #0x230]
+ 424cfb0: ad52d7f4     	ldp	q20, q21, [sp, #0x250]
+ 424cfb4: ad53dff6     	ldp	q22, q23, [sp, #0x270]
+ 424cfb8: ad54e7f8     	ldp	q24, q25, [sp, #0x290]
+ 424cfbc: ad55effa     	ldp	q26, q27, [sp, #0x2b0]
+ 424cfc0: ad56f7fc     	ldp	q28, q29, [sp, #0x2d0]
+ 424cfc4: ad57fffe     	ldp	q30, q31, [sp, #0x2f0]
+ 424cfc8: f94083f0     	ldr	x16, [sp, #0x100]
+ 424cfcc: d51b4410     	msr	FPCR, x16
+ 424cfd0: f94087f0     	ldr	x16, [sp, #0x108]
+ 424cfd4: d51b4430     	msr	FPSR, x16
+ 424cfd8: f9407ff0     	ldr	x16, [sp, #0xf8]
+ 424cfdc: d51b4210     	msr	NZCV, x16
+ 424cfe0: a94607e0     	ldp	x0, x1, [sp, #0x60]
+ 424cfe4: a9470fe2     	ldp	x2, x3, [sp, #0x70]
+ 424cfe8: a94817e4     	ldp	x4, x5, [sp, #0x80]
+ 424cfec: a9491fe6     	ldp	x6, x7, [sp, #0x90]
+ 424cff0: a94a27e8     	ldp	x8, x9, [sp, #0xa0]
+ 424cff4: a94b2fea     	ldp	x10, x11, [sp, #0xb0]
+ 424cff8: a94c37ec     	ldp	x12, x13, [sp, #0xc0]
+ 424cffc: a94d3fee     	ldp	x14, x15, [sp, #0xd0]
+ 424d000: a94e47f0     	ldp	x16, x17, [sp, #0xe0]
+ 424d004: f9407bf2     	ldr	x18, [sp, #0xf0]
+ 424d008: f9418bfd     	ldr	x29, [sp, #0x310]
+ 424d00c: f9418ffe     	ldr	x30, [sp, #0x318]
+ 424d010: 910c83ff     	add	sp, sp, #0x320
+ 424d014: d65f03c0     	ret

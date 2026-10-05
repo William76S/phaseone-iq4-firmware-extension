@@ -1,0 +1,273 @@
+[
+  {
+    "argv": [
+      "/usr/bin/xcrun",
+      "--show-sdk-path"
+    ],
+    "exit": 0,
+    "stdout": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/old_menu_test.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_06/policy.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/old_menu"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/old_menu",
+      "--backend-unavailable"
+    ],
+    "exit": -6,
+    "stdout": "",
+    "stderr": "Assertion failed: (bound_parent==(uintptr_t)root&&!held&&!building&&append_count==23&&present((uintptr_t)root,(uintptr_t)format_menu)==1), function main, file old_menu_test.c, line 51.\n"
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_07/test_menu.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_06/policy.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_normal"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_normal",
+      "--backend-unavailable"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_normal",
+      "--append-failure"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_normal",
+      "1"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_normal",
+      "--sd-cap-only"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_normal",
+      "--xqd-cap-only"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_normal",
+      "--bad-cap"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_normal",
+      "--submit-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_normal",
+      "--notify-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_07/test_menu.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_06/policy.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_asan_ubsan"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_asan_ubsan"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_asan_ubsan",
+      "--backend-unavailable"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_asan_ubsan",
+      "--append-failure"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_asan_ubsan",
+      "1"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_asan_ubsan",
+      "--sd-cap-only"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_asan_ubsan",
+      "--xqd-cap-only"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_asan_ubsan",
+      "--bad-cap"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_asan_ubsan",
+      "--submit-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu_asan_ubsan",
+      "--notify-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fPIC",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-omit-frame-pointer",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_07/runtime.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_07/menu.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

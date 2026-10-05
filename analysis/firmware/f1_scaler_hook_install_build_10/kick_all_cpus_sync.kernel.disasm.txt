@@ -1,0 +1,18 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_scaler_hook_install_build_10/kernel_narrow.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+ffffff8008119ae0 <kick_all_cpus_sync>:
+ffffff8008119ae0: a9bf7bfd     	stp	x29, x30, [sp, #-0x10]!
+ffffff8008119ae4: 910003fd     	mov	x29, sp
+ffffff8008119ae8: d5033bbf     	dmb	ish
+ffffff8008119aec: 52800023     	mov	w3, #0x1        // =1
+ffffff8008119af0: d2800002     	mov	x2, #0x0        // =0
+ffffff8008119af4: 90000001     	adrp	x1, 0xffffff8008119000 <__arm64_compat_sys_get_robust_list+0xf8>
+ffffff8008119af8: 90006100     	adrp	x0, 0xffffff8008d39000 <_einittext+0x87784>
+ffffff8008119afc: 9105c021     	add	x1, x1, #0x170
+ffffff8008119b00: 9117c000     	add	x0, x0, #0x5f0
+ffffff8008119b04: 97ffff01     	bl	0xffffff8008119708 <smp_call_function_many>
+ffffff8008119b08: a8c17bfd     	ldp	x29, x30, [sp], #0x10
+ffffff8008119b0c: d65f03c0     	ret

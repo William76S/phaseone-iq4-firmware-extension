@@ -1,0 +1,51 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_scaler_hook_install_build_11/libiq4_f1_normal_fit_hook_11_authenticated_candidate.so:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000002a918 <__clear_cache>:
+   2a918: d53b0028     	mrs	x8, CTR_EL0
+   2a91c: 37e00188     	tbnz	w8, #0x1c, 0x2a94c <__clear_cache+0x34>
+   2a920: d3504d09     	ubfx	x9, x8, #16, #4
+   2a924: 5280008a     	mov	w10, #0x4               // =4
+   2a928: 9ac92149     	lsl	x9, x10, x9
+   2a92c: cb0903ea     	neg	x10, x9
+   2a930: 8a0a000a     	and	x10, x0, x10
+   2a934: eb01015f     	cmp	x10, x1
+   2a938: 540000a2     	b.hs	0x2a94c <__clear_cache+0x34>
+   2a93c: d50b7b2a     	dc	cvau, x10
+   2a940: 8b09014a     	add	x10, x10, x9
+   2a944: eb01015f     	cmp	x10, x1
+   2a948: 54ffffa3     	b.lo	0x2a93c <__clear_cache+0x24>
+   2a94c: d5033b9f     	dsb	ish
+   2a950: 37e80188     	tbnz	w8, #0x1d, 0x2a980 <__clear_cache+0x68>
+   2a954: 92400d08     	and	x8, x8, #0xf
+   2a958: 52800089     	mov	w9, #0x4                // =4
+   2a95c: 9ac82128     	lsl	x8, x9, x8
+   2a960: cb0803e9     	neg	x9, x8
+   2a964: 8a090009     	and	x9, x0, x9
+   2a968: eb01013f     	cmp	x9, x1
+   2a96c: 540000a2     	b.hs	0x2a980 <__clear_cache+0x68>
+   2a970: d50b7529     	ic	ivau, x9
+   2a974: 8b080129     	add	x9, x9, x8
+   2a978: eb01013f     	cmp	x9, x1
+   2a97c: 54ffffa3     	b.lo	0x2a970 <__clear_cache+0x58>
+   2a980: d10103ff     	sub	sp, sp, #0x40
+   2a984: a9037bfd     	stp	x29, x30, [sp, #0x30]
+   2a988: 9100c3fd     	add	x29, sp, #0x30
+   2a98c: 52820048     	mov	w8, #0x1002             // =4098
+   2a990: d5033fdf     	isb
+   2a994: aa1f03e3     	mov	x3, xzr
+   2a998: a90003e8     	stp	x8, x0, [sp]
+   2a99c: cb000028     	sub	x8, x1, x0
+   2a9a0: 910003e4     	mov	x4, sp
+   2a9a4: a9017fe8     	stp	x8, xzr, [sp, #0x10]
+   2a9a8: a9027fff     	stp	xzr, xzr, [sp, #0x20]
+   2a9ac: 93cc0d8c     	ror	x12, x12, #0x3
+   2a9b0: 93cc358c     	ror	x12, x12, #0xd
+   2a9b4: 93cccd8c     	ror	x12, x12, #0x33
+   2a9b8: 93ccf58c     	ror	x12, x12, #0x3d
+   2a9bc: aa0a014a     	orr	x10, x10, x10
+   2a9c0: a9437bfd     	ldp	x29, x30, [sp, #0x30]
+   2a9c4: 910103ff     	add	sp, sp, #0x40
+   2a9c8: d65f03c0     	ret

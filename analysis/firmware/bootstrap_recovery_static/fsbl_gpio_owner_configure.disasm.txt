@@ -1,0 +1,56 @@
+STATIC ONLY; synthetic section view, not a target executable.
+SOURCE BOOT SHA256 7a3a3d6f62c61e7d627a9f55d844d74be9111b26eb7a7fa42f5bdd7be7dabe9e
+analysis/firmware/bootstrap_recovery_static/fsbl_view.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000fffc0000 <.text>:
+fffc381c: a9bf7bfd     	stp	x29, x30, [sp, #-0x10]!
+fffc3820: 910003fd     	mov	x29, sp
+fffc3824: b4000081     	cbz	x1, 0xfffc3834 <.text+0x3834>
+fffc3828: 350000e2     	cbnz	w2, 0xfffc3844 <.text+0x3844>
+fffc382c: 52800d41     	mov	w1, #0x6a               // =106
+fffc3830: 14000002     	b	0xfffc3838 <.text+0x3838>
+fffc3834: 52800d21     	mov	w1, #0x69               // =105
+fffc3838: f0000060     	adrp	x0, 0xfffd2000 <.text+0x12000>
+fffc383c: 913c6800     	add	x0, x0, #0xf1a
+fffc3840: 97fff9fe     	bl	0xfffc2038 <.text+0x2038>
+fffc3844: 79400021     	ldrh	w1, [x1]
+fffc3848: 12800003     	mov	w3, #-0x1               // =-1
+fffc384c: 79000001     	strh	w1, [x0]
+fffc3850: 90000001     	adrp	x1, 0xfffc3000 <.text+0x3000>
+fffc3854: 911b1021     	add	x1, x1, #0x6c4
+fffc3858: f9000801     	str	x1, [x0, #0x10]
+fffc385c: d2800021     	mov	x1, #0x1                // =1
+fffc3860: f2c015c1     	movk	x1, #0xae, lsl #32
+fffc3864: f9001001     	str	x1, [x0, #0x20]
+fffc3868: 528000c1     	mov	w1, #0x6                // =6
+fffc386c: 2900fc02     	stp	w2, wzr, [x0, #0x4]
+fffc3870: 3900a001     	strb	w1, [x0, #0x28]
+fffc3874: 52800001     	mov	w1, #0x0                // =0
+fffc3878: b9402002     	ldr	w2, [x0, #0x20]
+fffc387c: 7100185f     	cmp	w2, #0x6
+fffc3880: 540000e1     	b.ne	0xfffc389c <.text+0x389c>
+fffc3884: b9402c02     	ldr	w2, [x0, #0x2c]
+fffc3888: 35000142     	cbnz	w2, 0xfffc38b0 <.text+0x38b0>
+fffc388c: 51000422     	sub	w2, w1, #0x1
+fffc3890: 12001c42     	and	w2, w2, #0xff
+fffc3894: 7100045f     	cmp	w2, #0x1
+fffc3898: 54000109     	b.ls	0xfffc38b8 <.text+0x38b8>
+fffc389c: b9400402     	ldr	w2, [x0, #0x4]
+fffc38a0: 11085042     	add	w2, w2, #0x214
+fffc38a4: 0b011842     	add	w2, w2, w1, lsl #6
+fffc38a8: b9000043     	str	w3, [x2]
+fffc38ac: 14000003     	b	0xfffc38b8 <.text+0x38b8>
+fffc38b0: 7100083f     	cmp	w1, #0x2
+fffc38b4: 54ffff41     	b.ne	0xfffc389c <.text+0x389c>
+fffc38b8: 11000421     	add	w1, w1, #0x1
+fffc38bc: 3940a002     	ldrb	w2, [x0, #0x28]
+fffc38c0: 12001c21     	and	w1, w1, #0xff
+fffc38c4: 6b01005f     	cmp	w2, w1
+fffc38c8: 54fffd88     	b.hi	0xfffc3878 <.text+0x3878>
+fffc38cc: 3200e3e1     	mov	w1, #0x11111111         // =286331153
+fffc38d0: b9000801     	str	w1, [x0, #0x8]
+fffc38d4: 52800000     	mov	w0, #0x0                // =0
+fffc38d8: a8c17bfd     	ldp	x29, x30, [sp], #0x10
+fffc38dc: d65f03c0     	ret

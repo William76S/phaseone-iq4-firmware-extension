@@ -1,0 +1,23 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual owner/lease/fresh/mapping proof.
+  464578: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  46457c: 910003fd     	mov	x29, sp
+  464580: f9000fe0     	str	x0, [sp, #0x18]
+  464584: f9000be1     	str	x1, [sp, #0x10]
+  464588: f9400fe0     	ldr	x0, [sp, #0x18]
+  46458c: b9400001     	ldr	w1, [x0]
+  464590: f9400be0     	ldr	x0, [sp, #0x10]
+  464594: b9400000     	ldr	w0, [x0]
+  464598: 0b000023     	add	w3, w1, w0
+  46459c: f9400fe0     	ldr	x0, [sp, #0x18]
+  4645a0: b9400401     	ldr	w1, [x0, #0x4]
+  4645a4: f9400be0     	ldr	x0, [sp, #0x10]
+  4645a8: b9400400     	ldr	w0, [x0, #0x4]
+  4645ac: 0b000021     	add	w1, w1, w0
+  4645b0: 9100a3e0     	add	x0, sp, #0x28
+  4645b4: 2a0103e2     	mov	w2, w1
+  4645b8: 2a0303e1     	mov	w1, w3
+  4645bc: 97ff3469     	bl	0x431760
+  4645c0: f94017e0     	ldr	x0, [sp, #0x28]
+  4645c4: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  4645c8: d65f03c0     	ret

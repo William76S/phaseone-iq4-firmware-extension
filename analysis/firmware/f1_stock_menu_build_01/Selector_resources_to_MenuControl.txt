@@ -1,0 +1,68 @@
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:
+  4fae20: f9402be0     	ldr	x0, [sp, #0x50]
+  4fae24: 97ffeec5     	bl	0x4f6938 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0xc098c>
+  4fae28: aa0003e1     	mov	x1, x0
+  4fae2c: f9402fe0     	ldr	x0, [sp, #0x58]
+  4fae30: f9024401     	str	x1, [x0, #0x488]
+  4fae34: f9402fe0     	ldr	x0, [sp, #0x58]
+  4fae38: f9024c1f     	str	xzr, [x0, #0x498]
+  4fae3c: f9402fe0     	ldr	x0, [sp, #0x58]
+  4fae40: f902501f     	str	xzr, [x0, #0x4a0]
+  4fae44: f9402fe0     	ldr	x0, [sp, #0x58]
+  4fae48: f902541f     	str	xzr, [x0, #0x4a8]
+  4fae4c: f9402fe0     	ldr	x0, [sp, #0x58]
+  4fae50: 39410fe1     	ldrb	w1, [sp, #0x43]
+  4fae54: 3912c001     	strb	w1, [x0, #0x4b0]
+  4fae58: f9402fe0     	ldr	x0, [sp, #0x58]
+  4fae5c: f9424400     	ldr	x0, [x0, #0x488]
+  4fae60: 91046001     	add	x1, x0, #0x118
+  4fae64: 910183e0     	add	x0, sp, #0x60
+  4fae68: 97fd72b6     	bl	0x457940 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21994>
+  4fae6c: 910183f4     	add	x20, sp, #0x60
+  4fae70: d2801400     	mov	x0, #0xa0               // =160
+  4fae74: 97fc3bfb     	bl	0x409e60 <_Znwm@plt>
+  4fae78: aa0003f3     	mov	x19, x0
+  4fae7c: aa1403e3     	mov	x3, x20
+  4fae80: 52800002     	mov	w2, #0x0                // =0
+  4fae84: 52800001     	mov	w1, #0x0                // =0
+  4fae88: aa1303e0     	mov	x0, x19
+  4fae8c: 97fecde6     	bl	0x4ae624 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x78678>
+  4fae90: f9003ff3     	str	x19, [sp, #0x78]
+  4fae94: f9402fe0     	ldr	x0, [sp, #0x58]
+  4fae98: f9406c07     	ldr	x7, [x0, #0xd8]
+  4fae9c: f9402fe0     	ldr	x0, [sp, #0x58]
+  4faea0: f9406c00     	ldr	x0, [x0, #0xd8]
+  4faea4: f9400000     	ldr	x0, [x0]
+  4faea8: 91032000     	add	x0, x0, #0xc8
+  4faeac: f9400006     	ldr	x6, [x0]
+  4faeb0: 52800005     	mov	w5, #0x0                // =0
+  4faeb4: 528001e4     	mov	w4, #0xf                // =15
+  4faeb8: 52800003     	mov	w3, #0x0                // =0
+  4faebc: 52800002     	mov	w2, #0x0                // =0
+  4faec0: f9403fe1     	ldr	x1, [sp, #0x78]
+  4faec4: aa0703e0     	mov	x0, x7
+  4faec8: d63f00c0     	blr	x6
+  4faecc: f9402be0     	ldr	x0, [sp, #0x50]
+  4faed0: 97ffee93     	bl	0x4f691c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0xc0970>
+  4faed4: aa0003f4     	mov	x20, x0
+  4faed8: d2803900     	mov	x0, #0x1c8              // =456
+  4faedc: 97fc3be1     	bl	0x409e60 <_Znwm@plt>
+  4faee0: aa0003f3     	mov	x19, x0
+  4faee4: f9402fe0     	ldr	x0, [sp, #0x58]
+  4faee8: 9104a001     	add	x1, x0, #0x128
+  4faeec: f9402fe0     	ldr	x0, [sp, #0x58]
+  4faef0: f9424400     	ldr	x0, [x0, #0x488]
+  4faef4: aa0003e5     	mov	x5, x0
+  4faef8: aa0103e4     	mov	x4, x1
+  4faefc: 52800143     	mov	w3, #0xa                // =10
+  4faf00: b94047e2     	ldr	w2, [sp, #0x44]
+  4faf04: aa1403e1     	mov	x1, x20
+  4faf08: aa1303e0     	mov	x0, x19
+  4faf0c: 97ff1225     	bl	0x4bf7a0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x897f4>
+  4faf10: f9402fe0     	ldr	x0, [sp, #0x58]
+  4faf14: f9024013     	str	x19, [x0, #0x480]

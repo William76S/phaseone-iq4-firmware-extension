@@ -1,0 +1,37 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  75a568:      	stp	x29, x30, [sp, #-0x30]!
+  75a56c:      	mov	x29, sp
+  75a570:      	str	x0, [sp, #0x18]
+  75a574:      	str	x1, [sp, #0x10]
+  75a578:      	ldr	x0, [sp, #0x10]
+  75a57c:      	ldr	w0, [x0, #0xc]
+  75a580:      	cmn	w0, #0x1
+  75a584:      	b.eq	0x75a598 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4086c>
+  75a588:      	ldr	x0, [sp, #0x10]
+  75a58c:      	ldr	w0, [x0, #0xc]
+  75a590:      	bl	0x74df84 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x34258>
+  75a594:      	b	0x75a5a0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x40874>
+  75a598:      	ldr	x0, [sp, #0x10]
+  75a59c:      	add	x0, x0, #0x450
+  75a5a0:      	str	x0, [sp, #0x28]
+  75a5a4:      	ldr	x0, [sp, #0x10]
+  75a5a8:      	ldr	w0, [x0, #0x14]
+  75a5ac:      	bl	0x74e260 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x34534>
+  75a5b0:      	str	x0, [sp, #0x20]
+  75a5b4:      	ldr	x4, [sp, #0x28]
+  75a5b8:      	ldr	x3, [sp, #0x20]
+  75a5bc:      	adrp	x0, 0xc39000
+  75a5c0:      	add	x2, x0, #0x790
+  75a5c4:      	mov	w1, #0x984              // =2436
+  75a5c8:      	adrp	x0, 0xc38000
+  75a5cc:      	add	x0, x0, #0x460
+  75a5d0:      	bl	0x74649c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c770>
+  75a5d4:      	nop
+  75a5d8:      	ldp	x29, x30, [sp], #0x30
+  75a5dc:      	ret

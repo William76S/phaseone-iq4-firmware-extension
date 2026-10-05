@@ -1,0 +1,418 @@
+{
+  "schema": "iq4_no_lock_post_volatile_source_references_v1",
+  "input": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+    "build_id": "1f451370d713ae1f341e9d5de5615717f9fb36ed"
+  },
+  "manifests": [
+    {
+      "path": "analysis/firmware/security_no_lock_candidate_01/manifest.json",
+      "sha256": "8c6b82611e5d6a10acb57ac4d534c8936793d94eb5d6cea1593bb3c785b8f969",
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json"
+    },
+    {
+      "path": "analysis/firmware/security_recovery_ui_static/manifest.json",
+      "sha256": "8389672830c5fba796892b9a94ba9022969def8fbddb2500b13d3163a1a35f92",
+      "exact_path": "analysis/firmware/security_recovery_ui_static/exact_bytes.json"
+    },
+    {
+      "path": "analysis/firmware/security_config_binding_static/manifest.json",
+      "sha256": "9e776218ccb6ef07f643f1c9c10a8fa11a7d046e52f9d28633207facc398a8de",
+      "exact_path": "analysis/firmware/security_config_binding_static/exact_bytes.json"
+    },
+    {
+      "path": "analysis/firmware/volatile_lock_command_static/manifest.json",
+      "sha256": "df13f2222abb25c6c2e31835b1fc862fa44d9fd0df5bd9741ff6a17a029fdf50",
+      "exact_path": "analysis/firmware/volatile_lock_command_static/exact_bytes.json"
+    },
+    {
+      "path": "analysis/firmware/security_host_code_binding_static/manifest.json",
+      "sha256": "9c77d19ce6fbc40ccc13cdebb4d6ae6936c4d4a0c8a4c5db3af01926614d1764",
+      "exact_path": "analysis/firmware/security_host_code_binding_static/exact_bytes.json"
+    },
+    {
+      "path": "analysis/firmware/security_environment_static/manifest.json",
+      "sha256": "d9bcc0c13d4222de6f81cd3d8f112808348c917b124e1e145f8d34ffab3e6400",
+      "exact_path": "analysis/firmware/security_environment_static/exact_bytes.json"
+    },
+    {
+      "path": "analysis/firmware/security_causal_write_map_static/manifest.json",
+      "sha256": "8d9e24cff7dcf2e637f99cfe6350916503ba53c6916e8376340a2ce2cf0dfc89",
+      "exact_path": "analysis/firmware/security_causal_write_map_static/exact_bytes.json"
+    },
+    {
+      "path": "analysis/firmware/save_setup_security_static/manifest.json",
+      "sha256": "93a2d3666ecf5f0a4a88980835bd200cd8879e98232afc27a44ea51c4660f39d",
+      "exact_path": "analysis/firmware/save_setup_security_static/exact_bytes.json"
+    },
+    {
+      "path": "analysis/firmware/security_eeprom_structure_static/manifest.json",
+      "sha256": "17caf3399728af1053a061a4fbdb8c44c3d89bc6125f3f142f8d2a2da5a9f857",
+      "exact_path": "analysis/firmware/security_eeprom_structure_static/exact_bytes.json"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "analysis/firmware/NOLOCK_POST_VOLATILE_RECOVERY_REVIEW_01.md",
+      "sha256": "91246b615c92bb5dc7b34839b4f61de34368b805763da2aad7a53b7fe52bd685"
+    },
+    {
+      "path": "tools/sdk/volatile_lock_stage3/identity.py",
+      "sha256": "3e06aa432752020c1c6cf39a7da030aaa599b4e3e505ac1204c0bda72918002b"
+    },
+    {
+      "path": "tools/sdk/volatile_lock_stage3/profiles.hpp",
+      "sha256": "d2b86e4f3ec63ed73365d3c0ed15e252d3d0311f8eaac161be58afe42c853c85"
+    },
+    {
+      "path": "tools/firmware/security_no_lock_candidate_01/host_contract.py",
+      "sha256": "c087e8661ad7cfe4f16dedb03fe93e24bf3293efb83686c3c24729f72069f8e6"
+    }
+  ],
+  "selected_records": [
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "ranges",
+      "name": "PinGroup_original_Locked_and_Level_defaults"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "ranges",
+      "name": "SecurityLevel_U8_constructor_complete"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "ranges",
+      "name": "SecurityLevel_serialize_and_load_complete"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "ranges",
+      "name": "SecurityLevel_RTTI_name_and_thunk"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "ranges",
+      "name": "SecurityLevel_formatter_and_thunk"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "ranges",
+      "name": "SecurityLevel_text_decoder_and_thunk"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "ranges",
+      "name": "Native_enum_DTO_selected_value_set_complete"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "ranges",
+      "name": "Native_U8_setter_notify_complete"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "ranges",
+      "name": "SecurityHandler_only_Locked_subscription_and_initial_recompute"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "ranges",
+      "name": "SecurityHandler_Locked_and_Level_NoLock_dispatch"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "ranges",
+      "name": "PinHandler_load_and_nonundefined_preserves_Locked"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "ranges",
+      "name": "OsEvent_set_decode_notify_and_reply_boundary"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "ranges",
+      "name": "UI_SecurityLevel_menu_direct_Locked_guard"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "data_records",
+      "name": "SecurityLevel_owner_vtable"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "data_records",
+      "name": "SecurityLevel_interior_event_vtable"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "data_records",
+      "name": "SecurityLevel_DTO_vtable_value_set_slot"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "data_records",
+      "name": "SecurityLevel_UI_enum_records"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "data_records",
+      "name": "SecurityLevel_name"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "data_records",
+      "name": "U8_formatter_unsigned_decimal"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "data_records",
+      "name": "U8_decoder_unsigned_decimal"
+    },
+    {
+      "exact_path": "analysis/firmware/security_no_lock_candidate_01/exact_bytes.json",
+      "collection": "data_records",
+      "name": "unsigned_char_RTTI_COPY_relocation"
+    },
+    {
+      "exact_path": "analysis/firmware/security_recovery_ui_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "security_level_menu_ctor_and_locked_gate"
+    },
+    {
+      "exact_path": "analysis/firmware/security_recovery_ui_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "guard_bind"
+    },
+    {
+      "exact_path": "analysis/firmware/security_recovery_ui_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "guard_denial_predicate"
+    },
+    {
+      "exact_path": "analysis/firmware/security_recovery_ui_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "menu_dispatch_guard_before_activation"
+    },
+    {
+      "exact_path": "analysis/firmware/security_recovery_ui_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "security_level_dto"
+    },
+    {
+      "exact_path": "analysis/firmware/security_recovery_ui_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "enum_child_activation"
+    },
+    {
+      "exact_path": "analysis/firmware/security_recovery_ui_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "enum_dto_index_setter"
+    },
+    {
+      "exact_path": "analysis/firmware/security_recovery_ui_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "save_restore_parent_permission_binding"
+    },
+    {
+      "exact_path": "analysis/firmware/security_recovery_ui_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "edit_pin_menu_gate"
+    },
+    {
+      "exact_path": "analysis/firmware/security_recovery_ui_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "host_code_menu_gate"
+    },
+    {
+      "exact_path": "analysis/firmware/security_config_binding_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "pin_fails_security_level_registration"
+    },
+    {
+      "exact_path": "analysis/firmware/security_config_binding_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "registration_skips_setup_list_but_binds_storage"
+    },
+    {
+      "exact_path": "analysis/firmware/security_config_binding_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "os_data_object_storage_register_load_subscribe"
+    },
+    {
+      "exact_path": "analysis/firmware/security_config_binding_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "os_data_object_storage_event_compare_conditional_write"
+    },
+    {
+      "exact_path": "analysis/firmware/security_config_binding_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "os_data_object_storage_write_rate_guard"
+    },
+    {
+      "exact_path": "analysis/firmware/security_config_binding_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "storage_handler_base_record_binding"
+    },
+    {
+      "exact_path": "analysis/firmware/security_config_binding_static/exact_bytes.json",
+      "collection": "data_records",
+      "name": "storage_Create_Open_Write_Read_slots"
+    },
+    {
+      "exact_path": "analysis/firmware/volatile_lock_command_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "OsCommands_actual_directory_registration"
+    },
+    {
+      "exact_path": "analysis/firmware/volatile_lock_command_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "OsCommands_ctor_complete"
+    },
+    {
+      "exact_path": "analysis/firmware/volatile_lock_command_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "OsCommands_id2_dispatch"
+    },
+    {
+      "exact_path": "analysis/firmware/volatile_lock_command_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "DevelopmentShell_execute_complete"
+    },
+    {
+      "exact_path": "analysis/firmware/volatile_lock_command_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "OsEvent_registry_register_complete"
+    },
+    {
+      "exact_path": "analysis/firmware/volatile_lock_command_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "OsEvent_command_complete"
+    },
+    {
+      "exact_path": "analysis/firmware/volatile_lock_command_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "CommandLine_whole_token_compare"
+    },
+    {
+      "exact_path": "analysis/firmware/volatile_lock_command_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "OsEvent_prefix_pattern_match"
+    },
+    {
+      "exact_path": "analysis/firmware/volatile_lock_command_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "SecurityHandler_recompute_complete"
+    },
+    {
+      "exact_path": "analysis/firmware/security_host_code_binding_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "property12_registry_binding"
+    },
+    {
+      "exact_path": "analysis/firmware/security_host_code_binding_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "system_group_name_binding"
+    },
+    {
+      "exact_path": "analysis/firmware/security_host_code_binding_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "host_code_ui_core_event_to_auth_groups"
+    },
+    {
+      "exact_path": "analysis/firmware/security_host_code_binding_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "host_code_ui_completion_core_setter"
+    },
+    {
+      "exact_path": "analysis/firmware/security_host_code_binding_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "authentication_setup_event"
+    },
+    {
+      "exact_path": "analysis/firmware/security_environment_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "environment_configurator_complete_noop"
+    },
+    {
+      "exact_path": "analysis/firmware/security_environment_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "Main_environment_unlock_and_prior_handlers"
+    },
+    {
+      "exact_path": "analysis/firmware/security_environment_static/exact_bytes.json",
+      "collection": "data_records",
+      "name": "package_environment_defaults_and_pointer_fields"
+    },
+    {
+      "exact_path": "analysis/firmware/security_causal_write_map_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "pin_handler_event_dispatch"
+    },
+    {
+      "exact_path": "analysis/firmware/security_causal_write_map_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "settings_control_class_and_type_dispatch"
+    },
+    {
+      "exact_path": "analysis/firmware/security_causal_write_map_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "settings_control_enable_events_dispatch"
+    },
+    {
+      "exact_path": "analysis/firmware/security_causal_write_map_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "settings_control_enable_events_store"
+    },
+    {
+      "exact_path": "analysis/firmware/save_setup_security_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "permission_no_lock"
+    },
+    {
+      "exact_path": "analysis/firmware/save_setup_security_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "permission_basic"
+    },
+    {
+      "exact_path": "analysis/firmware/save_setup_security_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "permission_unlocked"
+    },
+    {
+      "exact_path": "analysis/firmware/save_setup_security_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "save_restore_parent_binding"
+    },
+    {
+      "exact_path": "analysis/firmware/save_setup_security_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "menu_reject_before_activate"
+    },
+    {
+      "exact_path": "analysis/firmware/security_eeprom_structure_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "main_system_partition_offset_and_size"
+    },
+    {
+      "exact_path": "analysis/firmware/security_eeprom_structure_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "bank_sequential_record_scan"
+    },
+    {
+      "exact_path": "analysis/firmware/security_eeprom_structure_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "record_open_cached_length_and_key"
+    },
+    {
+      "exact_path": "analysis/firmware/security_eeprom_structure_static/exact_bytes.json",
+      "collection": "ranges",
+      "name": "record_write_payload_only"
+    }
+  ],
+  "existing_device_command_tool_added": false,
+  "evidence_level": "offline_static_source_review_only"
+}

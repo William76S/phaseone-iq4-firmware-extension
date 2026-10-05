@@ -1,0 +1,54 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  863bd0: a9bb7bfd     	stp	x29, x30, [sp, #-0x50]!
+  863bd4: 910003fd     	mov	x29, sp
+  863bd8: 39007fe0     	strb	w0, [sp, #0x1f]
+  863bdc: 39007be1     	strb	w1, [sp, #0x1e]
+  863be0: 9100c3e0     	add	x0, sp, #0x30
+  863be4: 39407be2     	ldrb	w2, [sp, #0x1e]
+  863be8: 39407fe1     	ldrb	w1, [sp, #0x1f]
+  863bec: 97ff9ea8     	bl	0x84b68c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x72c8>
+  863bf0: 9100e3e0     	add	x0, sp, #0x38
+  863bf4: aa0003e8     	mov	x8, x0
+  863bf8: b0002a00     	adrp	x0, 0xda4000
+  863bfc: 91054000     	add	x0, x0, #0x150
+  863c00: 97ffa42e     	bl	0x84ccb8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x88f4>
+  863c04: 910103e0     	add	x0, sp, #0x40
+  863c08: aa0003e8     	mov	x8, x0
+  863c0c: b0002a00     	adrp	x0, 0xda4000
+  863c10: 91054000     	add	x0, x0, #0x150
+  863c14: 97ffa1e3     	bl	0x84c3a0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x7fdc>
+  863c18: 9100c3e0     	add	x0, sp, #0x30
+  863c1c: aa0003e3     	mov	x3, x0
+  863c20: 910103e1     	add	x1, sp, #0x40
+  863c24: 9100e3e0     	add	x0, sp, #0x38
+  863c28: 9100a3e2     	add	x2, sp, #0x28
+  863c2c: aa0203e8     	mov	x8, x2
+  863c30: aa0303e2     	mov	x2, x3
+  863c34: 94000016     	bl	0x863c8c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x1f8c8>
+  863c38: 910123e0     	add	x0, sp, #0x48
+  863c3c: aa0003e8     	mov	x8, x0
+  863c40: b0002a00     	adrp	x0, 0xda4000
+  863c44: 91054000     	add	x0, x0, #0x150
+  863c48: 97ffa1d6     	bl	0x84c3a0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x7fdc>
+  863c4c: 910123e1     	add	x1, sp, #0x48
+  863c50: 9100a3e0     	add	x0, sp, #0x28
+  863c54: 97ffa1fc     	bl	0x84c444 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x8080>
+  863c58: 12001c00     	and	w0, w0, #0xff
+  863c5c: 7100001f     	cmp	w0, #0x0
+  863c60: 540000c0     	b.eq	0x863c78 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x1f8b4>
+  863c64: b0002a00     	adrp	x0, 0xda4000
+  863c68: 91054000     	add	x0, x0, #0x150
+  863c6c: 97ffa43b     	bl	0x84cd58 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x8994>
+  863c70: 79400400     	ldrh	w0, [x0, #0x2]
+  863c74: 14000004     	b	0x863c84 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x1f8c0>
+  863c78: 9100a3e0     	add	x0, sp, #0x28
+  863c7c: 97ffa43f     	bl	0x84cd78 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x89b4>
+  863c80: 79400400     	ldrh	w0, [x0, #0x2]
+  863c84: a8c57bfd     	ldp	x29, x30, [sp], #0x50
+  863c88: d65f03c0     	ret

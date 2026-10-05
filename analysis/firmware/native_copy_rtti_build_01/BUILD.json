@@ -1,0 +1,140 @@
+{
+  "commands": [
+    {
+      "label": "collect_exact_graph",
+      "argv": [
+        "python3",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_copy_rtti_01/collect.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"spans\": 31, \"immutable\": 11, \"functions\": 18, \"copy\": 3, \"all_body_bytes\": 1906, \"graph_sha256\": \"6a6af4b96f4f53877b13a8132f11ab0e4a133690d1f9e8804054cbbdbd798a92\", \"target_executed\": false}\n",
+      "stderr": ""
+    },
+    {
+      "label": "host_compile_normal",
+      "argv": [
+        "/usr/bin/clang++",
+        "-std=c++17",
+        "-isysroot",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-isystem",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_copy_rtti_01/test_rtti.cpp",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_copy_rtti_01/rtti.cpp",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_copy_rtti_build_01/test_normal"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "host_16_normal",
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_copy_rtti_build_01/test_normal"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"cases\":16,\"passed\":true,\"synthetic_loaded_memory\":true,\"library_loaded\":false,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "label": "host_compile_san",
+      "argv": [
+        "/usr/bin/clang++",
+        "-std=c++17",
+        "-isysroot",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-isystem",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_copy_rtti_01/test_rtti.cpp",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_copy_rtti_01/rtti.cpp",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_copy_rtti_build_01/test_san"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "host_16_san",
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_copy_rtti_build_01/test_san"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"cases\":16,\"passed\":true,\"synthetic_loaded_memory\":true,\"library_loaded\":false,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "label": "target_compile_rtti",
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "c++",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-std=c++17",
+        "-O2",
+        "-g0",
+        "-ffreestanding",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-stack-protector",
+        "-mno-outline-atomics",
+        "-funwind-tables",
+        "-fno-omit-frame-pointer",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_copy_rtti_build_01/rtti.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_copy_rtti_01/rtti.cpp",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_copy_rtti_build_01/rtti.o"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "target_U_rtti",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+        "-u",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_copy_rtti_build_01/rtti.o"
+      ],
+      "exit_code": 0,
+      "stdout": "                 U memcmp\n                 U memcpy\n",
+      "stderr": ""
+    },
+    {
+      "label": "target_inspect_rtti",
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-r",
+        "-t",
+        "-d",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_copy_rtti_build_01/rtti.o"
+      ],
+      "exit_code": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_copy_rtti_build_01/rtti.o:\tfile format elf64-littleaarch64\n\nSYMBOL TABLE:\n0000000000000000 l    df *ABS*\t0000000000000000 rtti.cpp\n0000000000000000 l    d  .text\t0000000000000000 .text\n0000000000000000 l       .text\t0000000000000000 $x\n0000000000000000 l     O .data.rel.ro\t0000000000000690 _ZL11RttiSpans01\n0000000000000000 l    d  .data.rel.ro\t0000000000000000 .data.rel.ro\n0000000000000000 l       .data.rel.ro\t0000000000000000 $d\n0000000000000000 l     O .rodata\t0000000000000058 _ZL5Data0\n0000000000000058 l     O .rodata\t00000000000000f0 _ZL4Rel0\n0000000000000148 l     O .rodata\t0000000000000010 _ZL5Data1\n0000000000000158 l     O .rodata\t0000000000000030 _ZL4Rel1\n0000000000000188 l     O .rodata\t0000000000000008 _ZL5Data2\n0000000000000190 l     O .rodata\t0000000000000008 _ZL5Data3\n0000000000000198 l     O .rodata\t0000000000000018 _ZL5Data4\n00000000000001b0 l     O .rodata\t0000000000000048 _ZL4Rel4\n00000000000001f8 l     O .rodata\t0000000000000014 _ZL5Data5\n000000000000020c l     O .rodata\t0000000000000028 _ZL5Data6\n0000000000000234 l     O .rodata\t00000000000000a8 _ZL5Data7\n00000000000002dc l     O .rodata\t000000000000006c _ZL5Data8\n0000000000000348 l     O .rodata\t0000000000000068 _ZL5Data9\n00000000000003b0 l     O .rodata\t00000000000000d4 _ZL6Data10\n0000000000000484 l     O .rodata\t0000000000000010 _ZL6Data11\n0000000000000494 l     O .rodata\t0000000000000040 _ZL6Data12\n00000000000004d8 l     O .rodata\t00000000000000a8 _ZL5Rel12\n0000000000000580 l     O .rodata\t0000000000000002 _ZL6Data13\n0000000000000582 l     O .rodata\t0000000000000058 _ZL6Data14\n00000000000005e0 l     O .rodata\t00000000000000f0 _ZL5Rel14\n00000000000006d0 l     O .rodata\t0000000000000010 _ZL6Data15\n00000000000006e0 l     O .rodata\t0000000000000030 _ZL5Rel15\n0000000000000710 l     O .rodata\t0000000000000022 _ZL6Data16\n0000000000000732 l     O .rodata\t000000000000004c _ZL6Data17\n000000000000077e l     O .rodata\t0000000000000008 _ZL6Data18\n0000000000000786 l     O .rodata\t0000000000000018 _ZL6Data19\n00000000000007a0 l     O .rodata\t0000000000000048 _ZL5Rel19\n00000000000007e8 l     O .rodata\t0000000000000014 _ZL6Data20\n00000000000007fc l     O .rodata\t0000000000000028 _ZL6Data21\n0000000000000824 l     O .rodata\t0000000000000018 _ZL6Data22\n0000000000000840 l     O .rodata\t0000000000000048 _ZL5Rel22\n0000000000000888 l     O .rodata\t0000000000000014 _ZL6Data23\n000000000000089c l     O .rodata\t0000000000000028 _ZL6Data24\n00000000000008c4 l     O .rodata\t0000000000000068 _ZL6Data25\n000000000000092c l     O .rodata\t000000000000013c _ZL6Data26\n0000000000000a68 l     O .rodata\t0000000000000080 _ZL6Data27\n0000000000000ae8 l     O .rodata\t000000000000000d _ZL6Data28\n0000000000000af5 l     O .rodata\t0000000000000028 _ZL6Data29\n0000000000000b1d l     O .rodata\t0000000000000025 _ZL6Data30\n0000000000000b42 l     O .rodata\t0000000000000040 _ZL6Data31\n0000000000000b82 l     O .rodata\t00000000000001c0 _ZL6Data32\n0000000000000d42 l     O .rodata\t0000000000000018 _ZL6Data33\n0000000000000d5a l     O .rodata\t0000000000000002 _ZL6Data34\n0000000000000d90 l     O .rodata\t0000000000000018 _ZL6Data35\n0000000000000d5c l     O .rodata\t0000000000000018 _ZL6Data36\n0000000000000d74 l     O .rodata\t0000000000000002 _ZL6Data37\n0000000000000da8 l     O .rodata\t0000000000000018 _ZL6Data38\n0000000000000d76 l     O .rodata\t0000000000000018 _ZL6Data39\n0000000000000d8e l     O .rodata\t0000000000000002 _ZL6Data40\n0000000000000dc0 l     O .rodata\t0000000000000018 _ZL6Data41\n0000000000000000 l    d  .rodata\t0000000000000000 .rodata\n0000000000000000 l       .rodata\t0000000000000000 $d\n0000000000000000 l       .comment\t0000000000000000 $d\n0000000000000000 l       .eh_frame\t0000000000000000 $d\n0000000000000000 g     F .text\t00000000000002ec iq4_native_copy_rtti_current_01\n0000000000000000         *UND*\t0000000000000000 memcmp\n0000000000000000         *UND*\t0000000000000000 memcpy\n\nDisassembly of section .text:\n\n0000000000000000 <iq4_native_copy_rtti_current_01>:\n       0: b40006a1     \tcbz\tx1, 0xd4 <iq4_native_copy_rtti_current_01+0xd4>\n       4: a9ba7bfd     \tstp\tx29, x30, [sp, #-0x60]!\n       8: a9016ffc     \tstp\tx28, x27, [sp, #0x10]\n       c: 910003fd     \tmov\tx29, sp\n      10: a90267fa     \tstp\tx26, x25, [sp, #0x20]\n      14: a9035ff8     \tstp\tx24, x23, [sp, #0x30]\n      18: a90457f6     \tstp\tx22, x21, [sp, #0x40]\n      1c: a9054ff4     \tstp\tx20, x19, [sp, #0x50]\n      20: d11883ff     \tsub\tsp, sp, #0x620\n      24: aa0103f3     \tmov\tx19, x1\n      28: 52853b01     \tmov\tw1, #0x29d8             // =10712\n      2c: 911043e2     \tadd\tx2, sp, #0x410\n      30: 72a01e81     \tmovk\tw1, #0xf4, lsl #16\n      34: 52800103     \tmov\tw3, #0x8                // =8\n      38: aa0003f4     \tmov\tx20, x0\n      3c: f9020bff     \tstr\txzr, [sp, #0x410]\n      40: d63f0260     \tblr\tx19\n      44: 7100041f     \tcmp\tw0, #0x1\n      48: 54000341     \tb.ne\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n      4c: 52853b01     \tmov\tw1, #0x29d8             // =10712\n      50: 911063e2     \tadd\tx2, sp, #0x418\n      54: aa1403e0     \tmov\tx0, x20\n      58: 72a01e81     \tmovk\tw1, #0xf4, lsl #16\n      5c: 52800103     \tmov\tw3, #0x8                // =8\n      60: d63f0260     \tblr\tx19\n      64: 7100041f     \tcmp\tw0, #0x1\n      68: 54000241     \tb.ne\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n      6c: 911043e0     \tadd\tx0, sp, #0x410\n      70: 911063e1     \tadd\tx1, sp, #0x418\n      74: 52800102     \tmov\tw2, #0x8                // =8\n      78: 94000000     \tbl\t0x78 <iq4_native_copy_rtti_current_01+0x78>\n\t\t0000000000000078:  R_AARCH64_CALL26\tmemcmp\n      7c: 2a0003e8     \tmov\tw8, w0\n      80: 2a1f03e0     \tmov\tw0, wzr\n      84: 35000188     \tcbnz\tw8, 0xb4 <iq4_native_copy_rtti_current_01+0xb4>\n      88: 529dc6e8     \tmov\tw8, #0xee37             // =60983\n      8c: f9420be9     \tldr\tx9, [sp, #0x410]\n      90: 72a00108     \tmovk\tw8, #0x8, lsl #16\n      94: 9100050a     \tadd\tx10, x8, #0x1\n      98: eb0a013f     \tcmp\tx9, x10\n      9c: 540000c9     \tb.ls\t0xb4 <iq4_native_copy_rtti_current_01+0xb4>\n      a0: d142392a     \tsub\tx10, x9, #0x8e, lsl #12 // =0x8e000\n      a4: d138e157     \tsub\tx23, x10, #0xe38\n      a8: f2403eff     \ttst\tx23, #0xffff\n      ac: 54000180     \tb.eq\t0xdc <iq4_native_copy_rtti_current_01+0xdc>\n      b0: 2a1f03e0     \tmov\tw0, wzr\n      b4: 911883ff     \tadd\tsp, sp, #0x620\n      b8: a9454ff4     \tldp\tx20, x19, [sp, #0x50]\n      bc: a94457f6     \tldp\tx22, x21, [sp, #0x40]\n      c0: a9435ff8     \tldp\tx24, x23, [sp, #0x30]\n      c4: a94267fa     \tldp\tx26, x25, [sp, #0x20]\n      c8: a9416ffc     \tldp\tx28, x27, [sp, #0x10]\n      cc: a8c67bfd     \tldp\tx29, x30, [sp], #0x60\n      d0: d65f03c0     \tret\n      d4: 2a1f03e0     \tmov\tw0, wzr\n      d8: d65f03c0     \tret\n      dc: aa1f03f8     \tmov\tx24, xzr\n      e0: cb090119     \tsub\tx25, x8, x9\n      e4: 90000008     \tadrp\tx8, 0x0 <iq4_native_copy_rtti_current_01>\n\t\t00000000000000e4:  R_AARCH64_ADR_PREL_PG_HI21\t.data.rel.ro\n      e8: 91000108     \tadd\tx8, x8, #0x0\n\t\t00000000000000e8:  R_AARCH64_ADD_ABS_LO12_NC\t.data.rel.ro\n      ec: 910843fb     \tadd\tx27, sp, #0x210\n      f0: 8b18011a     \tadd\tx26, x8, x24\n      f4: b9400349     \tldr\tw9, [x26]\n      f8: 7100053f     \tcmp\tw9, #0x1\n      fc: 54fffda8     \tb.hi\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     100: f9400748     \tldr\tx8, [x26, #0x8]\n     104: 340000a9     \tcbz\tw9, 0x118 <iq4_native_copy_rtti_current_01+0x118>\n     108: eb19011f     \tcmp\tx8, x25\n     10c: aa1703e9     \tmov\tx9, x23\n     110: 54000069     \tb.ls\t0x11c <iq4_native_copy_rtti_current_01+0x11c>\n     114: 17ffffe7     \tb\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     118: aa1f03e9     \tmov\tx9, xzr\n     11c: ab080136     \tadds\tx22, x9, x8\n     120: 54fffc80     \tb.eq\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     124: b9400755     \tldr\tw21, [x26, #0x4]\n     128: 2a1f03e0     \tmov\tw0, wzr\n     12c: ab1602bf     \tcmn\tx21, x22\n     130: 1a9f37e8     \tcset\tw8, hs\n     134: 710802bf     \tcmp\tw21, #0x200\n     138: 54fffbe8     \tb.hi\t0xb4 <iq4_native_copy_rtti_current_01+0xb4>\n     13c: 3707fbc8     \ttbnz\tw8, #0x0, 0xb4 <iq4_native_copy_rtti_current_01+0xb4>\n     140: f9400b41     \tldr\tx1, [x26, #0x10]\n     144: 910843e0     \tadd\tx0, sp, #0x210\n     148: aa1503e2     \tmov\tx2, x21\n     14c: 94000000     \tbl\t0x14c <iq4_native_copy_rtti_current_01+0x14c>\n\t\t000000000000014c:  R_AARCH64_CALL26\tmemcpy\n     150: b940235c     \tldr\tw28, [x26, #0x20]\n     154: 3400051c     \tcbz\tw28, 0x1f4 <iq4_native_copy_rtti_current_01+0x1f4>\n     158: f9400f48     \tldr\tx8, [x26, #0x18]\n     15c: 9100211a     \tadd\tx26, x8, #0x8\n     160: 1400000d     \tb\t0x194 <iq4_native_copy_rtti_current_01+0x194>\n     164: cb0a03eb     \tneg\tx11, x10\n     168: eb0b013f     \tcmp\tx9, x11\n     16c: 54fffa29     \tb.ls\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     170: 8b0a0129     \tadd\tx9, x9, x10\n     174: 8b080360     \tadd\tx0, x27, x8\n     178: 911063e1     \tadd\tx1, sp, #0x418\n     17c: 52800102     \tmov\tw2, #0x8                // =8\n     180: f9020fe9     \tstr\tx9, [sp, #0x418]\n     184: 94000000     \tbl\t0x184 <iq4_native_copy_rtti_current_01+0x184>\n\t\t0000000000000184:  R_AARCH64_CALL26\tmemcpy\n     188: f100079c     \tsubs\tx28, x28, #0x1\n     18c: 9100635a     \tadd\tx26, x26, #0x18\n     190: 54000320     \tb.eq\t0x1f4 <iq4_native_copy_rtti_current_01+0x1f4>\n     194: f9020fff     \tstr\txzr, [sp, #0x418]\n     198: b85f8348     \tldur\tw8, [x26, #-0x8]\n     19c: 6b0802a9     \tsubs\tw9, w21, w8\n     1a0: 54fff883     \tb.lo\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     1a4: 7100213f     \tcmp\tw9, #0x8\n     1a8: 54fff843     \tb.lo\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     1ac: b85fc34a     \tldur\tw10, [x26, #-0x4]\n     1b0: 7100055f     \tcmp\tw10, #0x1\n     1b4: 54fff7e8     \tb.hi\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     1b8: f9400349     \tldr\tx9, [x26]\n     1bc: 340000aa     \tcbz\tw10, 0x1d0 <iq4_native_copy_rtti_current_01+0x1d0>\n     1c0: eb19013f     \tcmp\tx9, x25\n     1c4: aa1703ea     \tmov\tx10, x23\n     1c8: 54000069     \tb.ls\t0x1d4 <iq4_native_copy_rtti_current_01+0x1d4>\n     1cc: 17ffffb9     \tb\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     1d0: aa1f03ea     \tmov\tx10, xzr\n     1d4: ab090149     \tadds\tx9, x10, x9\n     1d8: f9020fe9     \tstr\tx9, [sp, #0x418]\n     1dc: 54fff6a0     \tb.eq\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     1e0: f940074a     \tldr\tx10, [x26, #0x8]\n     1e4: b7fffc0a     \ttbnz\tx10, #0x3f, 0x164 <iq4_native_copy_rtti_current_01+0x164>\n     1e8: ab0a013f     \tcmn\tx9, x10\n     1ec: 54fffc23     \tb.lo\t0x170 <iq4_native_copy_rtti_current_01+0x170>\n     1f0: 17ffffb0     \tb\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     1f4: 510806a8     \tsub\tw8, w21, #0x201\n     1f8: 3108011f     \tcmn\tw8, #0x200\n     1fc: 54fff5a3     \tb.lo\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     200: 910043e2     \tadd\tx2, sp, #0x10\n     204: aa1403e0     \tmov\tx0, x20\n     208: aa1603e1     \tmov\tx1, x22\n     20c: aa1503e3     \tmov\tx3, x21\n     210: d63f0260     \tblr\tx19\n     214: 7100041f     \tcmp\tw0, #0x1\n     218: 54fff4c1     \tb.ne\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     21c: 911063e2     \tadd\tx2, sp, #0x418\n     220: aa1403e0     \tmov\tx0, x20\n     224: aa1603e1     \tmov\tx1, x22\n     228: aa1503e3     \tmov\tx3, x21\n     22c: d63f0260     \tblr\tx19\n     230: 7100041f     \tcmp\tw0, #0x1\n     234: 54fff3e1     \tb.ne\t0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     238: 910043e0     \tadd\tx0, sp, #0x10\n     23c: 911063e1     \tadd\tx1, sp, #0x418\n     240: aa1503e2     \tmov\tx2, x21\n     244: 94000000     \tbl\t0x244 <iq4_native_copy_rtti_current_01+0x244>\n\t\t0000000000000244:  R_AARCH64_CALL26\tmemcmp\n     248: 35fff340     \tcbnz\tw0, 0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     24c: 910043e0     \tadd\tx0, sp, #0x10\n     250: 910843e1     \tadd\tx1, sp, #0x210\n     254: aa1503e2     \tmov\tx2, x21\n     258: 94000000     \tbl\t0x258 <iq4_native_copy_rtti_current_01+0x258>\n\t\t0000000000000258:  R_AARCH64_CALL26\tmemcmp\n     25c: 35fff2a0     \tcbnz\tw0, 0xb0 <iq4_native_copy_rtti_current_01+0xb0>\n     260: 9100a318     \tadd\tx24, x24, #0x28\n     264: 90000008     \tadrp\tx8, 0x0 <iq4_native_copy_rtti_current_01>\n\t\t0000000000000264:  R_AARCH64_ADR_PREL_PG_HI21\t.data.rel.ro\n     268: 91000108     \tadd\tx8, x8, #0x0\n\t\t0000000000000268:  R_AARCH64_ADD_ABS_LO12_NC\t.data.rel.ro\n     26c: f11a431f     \tcmp\tx24, #0x690\n     270: 54fff401     \tb.ne\t0xf0 <iq4_native_copy_rtti_current_01+0xf0>\n     274: 52853b01     \tmov\tw1, #0x29d8             // =10712\n     278: 910023e2     \tadd\tx2, sp, #0x8\n     27c: aa1403e0     \tmov\tx0, x20\n     280: 72a01e81     \tmovk\tw1, #0xf4, lsl #16\n     284: 52800103     \tmov\tw3, #0x8                // =8\n     288: f90007ff     \tstr\txzr, [sp, #0x8]\n     28c: d63f0260     \tblr\tx19\n     290: 7100041f     \tcmp\tw0, #0x1\n     294: 54000201     \tb.ne\t0x2d4 <iq4_native_copy_rtti_current_01+0x2d4>\n     298: 52853b01     \tmov\tw1, #0x29d8             // =10712\n     29c: 911063e2     \tadd\tx2, sp, #0x418\n     2a0: aa1403e0     \tmov\tx0, x20\n     2a4: 72a01e81     \tmovk\tw1, #0xf4, lsl #16\n     2a8: 52800103     \tmov\tw3, #0x8                // =8\n     2ac: d63f0260     \tblr\tx19\n     2b0: 7100041f     \tcmp\tw0, #0x1\n     2b4: 54000101     \tb.ne\t0x2d4 <iq4_native_copy_rtti_current_01+0x2d4>\n     2b8: 910023e0     \tadd\tx0, sp, #0x8\n     2bc: 911063e1     \tadd\tx1, sp, #0x418\n     2c0: 52800102     \tmov\tw2, #0x8                // =8\n     2c4: 94000000     \tbl\t0x2c4 <iq4_native_copy_rtti_current_01+0x2c4>\n\t\t00000000000002c4:  R_AARCH64_CALL26\tmemcmp\n     2c8: 7100001f     \tcmp\tw0, #0x0\n     2cc: 1a9f17e8     \tcset\tw8, eq\n     2d0: 14000002     \tb\t0x2d8 <iq4_native_copy_rtti_current_01+0x2d8>\n     2d4: 2a1f03e8     \tmov\tw8, wzr\n     2d8: f94007e9     \tldr\tx9, [sp, #0x8]\n     2dc: f9420bea     \tldr\tx10, [sp, #0x410]\n     2e0: eb0a013f     \tcmp\tx9, x10\n     2e4: 1a8813e0     \tcsel\tw0, wzr, w8, ne\n     2e8: 17ffff73     \tb\t0xb4 <iq4_native_copy_rtti_current_01+0xb4>\n",
+      "stderr": ""
+    }
+  ],
+  "normal_cases": 16,
+  "san_cases": 16,
+  "target_objects": 1,
+  "target_executed": false,
+  "library_loaded": false,
+  "sdk_loaded": false
+}

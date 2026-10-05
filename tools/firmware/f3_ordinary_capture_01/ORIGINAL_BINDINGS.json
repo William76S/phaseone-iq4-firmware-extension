@@ -1,0 +1,58 @@
+{
+  "schema": "iq4_f3_ordinary_capture_bindings_01",
+  "input_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "bindings": [
+    {
+      "symbol": "iq4_f3_original_calibration_enqueue_01",
+      "va": 9197800,
+      "bytes": 52,
+      "sha256": "e0fbf9bac4b3c044edc7e68d0e0fd4031aa8c5830b037c24aeb77e3913f6edd3",
+      "hex": "fd7bbea9fd030091e00f00f9e10b00f9e00f40f902600291e00b40f900e00191e10300aae00302aae30500941f2003d5fd7bc2a8"
+    },
+    {
+      "symbol": "iq4_f3_original_node_reset_01",
+      "va": 9188056,
+      "bytes": 256,
+      "sha256": "ed7060828d26700224b1826abefa7ed4cd2ec2edb2c636b3f34f25c74489c23f",
+      "hex": "fd7bbea9fd030091e00f00f9c0c901b000a00991000040f9e10f40f9bd0a00941f2003d5fd7bc2a8c0035fd6fd7bbea9fd030091e01f00b9e11b00b9e01f40b91f040071e1130054e11b40b9e0ff9f523f00006b6113005404008052030080520200805201008012c0c901b000e00991213ced9704008012030080120200801201008012c0c901b000000a911a3ced9704008052030080520200801201008012c0c901b000200a91133ced9704008012030080520200801201008012c0c901b000400a910c3ced97e40f801203008052e20f801201008012c0c901b000600a91053ced9704008052030080120200805201008012c0c901b000800a91fe3bed97"
+    },
+    {
+      "symbol": "iq4_f3_original_queue_guard_release_01",
+      "va": 4266996,
+      "bytes": 36,
+      "sha256": "c9964769ead6e7369a061d7de117b762bb6ca59c102e0d670ecee6c5a210c540",
+      "hex": "fd7bbea9fd030091e00f00f9e00f40f9000040f97f010c941f2003d5fd7bc2a8c0035fd6"
+    }
+  ],
+  "hooks": [
+    {
+      "va": 7983872,
+      "kind": "BL",
+      "target_symbol": "iq4_f3_ordinary_enqueue_thunk_01",
+      "original_target": 9197800,
+      "old_hex": "7aa10494"
+    },
+    {
+      "va": 9204100,
+      "kind": "BL",
+      "target_symbol": "iq4_f3_ordinary_queue_unlock_thunk_01",
+      "original_target": 4266996,
+      "old_hex": "9c2aed97"
+    },
+    {
+      "va": 9197636,
+      "kind": "BL",
+      "target_symbol": "iq4_f3_ordinary_node_reset_wrapper_01",
+      "original_target": 9188056,
+      "old_hex": "a5f6ff97"
+    },
+    {
+      "va": 9198676,
+      "kind": "BL",
+      "target_symbol": "iq4_f3_ordinary_node_reset_wrapper_01",
+      "original_target": 9188056,
+      "old_hex": "a1f5ff97"
+    }
+  ],
+  "target_executed": false
+}

@@ -1,0 +1,43 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  7a5334:      	stp	x29, x30, [sp, #-0x30]!
+  7a5338:      	mov	x29, sp
+  7a533c:      	str	x0, [sp, #0x18]
+  7a5340:      	str	x1, [sp, #0x10]
+  7a5344:      	str	wzr, [sp, #0x2c]
+  7a5348:      	str	wzr, [sp, #0x28]
+  7a534c:      	ldr	w0, [sp, #0x28]
+  7a5350:      	cmp	w0, #0xf
+  7a5354:      	b.gt	0x7a53ac <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x8b680>
+  7a5358:      	ldr	w0, [sp, #0x2c]
+  7a535c:      	ldr	x1, [sp, #0x10]
+  7a5360:      	add	x4, x1, x0
+  7a5364:      	ldrsw	x0, [sp, #0x28]
+  7a5368:      	ldr	x1, [sp, #0x18]
+  7a536c:      	add	x0, x1, x0
+  7a5370:      	ldrb	w0, [x0]
+  7a5374:      	mov	w3, w0
+  7a5378:      	adrp	x0, 0xd75000
+  7a537c:      	add	x2, x0, #0x8a8
+  7a5380:      	mov	x1, #0x3                // =3
+  7a5384:      	mov	x0, x4
+  7a5388:      	bl	0x409f30 <snprintf@plt>
+  7a538c:      	mov	w1, w0
+  7a5390:      	ldr	w0, [sp, #0x2c]
+  7a5394:      	add	w0, w0, w1
+  7a5398:      	str	w0, [sp, #0x2c]
+  7a539c:      	ldr	w0, [sp, #0x28]
+  7a53a0:      	add	w0, w0, #0x1
+  7a53a4:      	str	w0, [sp, #0x28]
+  7a53a8:      	b	0x7a534c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x8b620>
+  7a53ac:      	ldr	x0, [sp, #0x10]
+  7a53b0:      	add	x0, x0, #0x20
+  7a53b4:      	strb	wzr, [x0]
+  7a53b8:      	nop
+  7a53bc:      	ldp	x29, x30, [sp], #0x30
+  7a53c0:      	ret

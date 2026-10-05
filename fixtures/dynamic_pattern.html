@@ -1,0 +1,6 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>IQ4 dynamic diagnostic</title>
+<style>html,body{margin:0;background:#111;color:#fff;overflow:hidden}canvas{display:block}#info{position:absolute;left:20px;top:20px;font:24px monospace;background:#000b;padding:10px}</style>
+<canvas id="c"></canvas><div id="info"></div><script>
+const c=document.getElementById('c'),ctx=c.getContext('2d'),info=document.getElementById('info');let count=0,start=performance.now(),prev=start;
+function frame(t){c.width=innerWidth;c.height=innerHeight;ctx.fillStyle='#ddd';ctx.fillRect(0,0,c.width,c.height);const x=((t-start)*0.25)%c.width;ctx.fillStyle='#111';ctx.fillRect(x,0,55,c.height);ctx.fillStyle='#e00';ctx.beginPath();ctx.arc(c.width/2,c.height/2,Math.max(20,Math.min(c.width,c.height)*.25),0,Math.PI*2);ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=20;ctx.beginPath();ctx.moveTo(c.width/2,c.height/2);ctx.lineTo(c.width/2+Math.cos((t-start)/500)*c.height*.22,c.height/2+Math.sin((t-start)/500)*c.height*.22);ctx.stroke();count++;info.textContent='Elapsed '+((t-start)/1000).toFixed(3)+' s | RAF '+count+' | last interval '+(t-prev).toFixed(2)+' ms | display timing is NOT camera FPS';prev=t;requestAnimationFrame(frame)}requestAnimationFrame(frame);
+</script></html>

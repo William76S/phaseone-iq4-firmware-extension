@@ -1,0 +1,154 @@
+{
+  "schema": "iq4_f3_stock_FileSettings_construction_review_01",
+  "stock_User": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "windows": [
+    {
+      "name": "start_libc_main_csu_arguments",
+      "start": 4240268,
+      "end": 4240348,
+      "file_offset": 45964,
+      "bytes_hex": "1d0080d21e0080d2e50300aae10340f9e2230091e60300910000e0d20000c0f20008a0f2009d96f20300e0d20300c0f2c313a0f203169ef20400e0d20400c0f2c413a0f204269ef21bfdff97d2fcff97",
+      "sha256": "8aff6edeeaff858311c19e71ce967945748349cd52a96bb6aef7c810db532db1",
+      "assembly": {
+        "path": "analysis/firmware/f3_capture_construction_review_01/start_libc_main_csu_arguments.asm",
+        "bytes": 1122,
+        "sha256": "2bbea19a86b18822e41e9ebc70e99045568659a6a1cea76d75cfe766631009bd"
+      }
+    },
+    {
+      "name": "Main_call_from_main",
+      "start": 4242808,
+      "end": 4242876,
+      "file_offset": 48504,
+      "bytes_hex": "e0c801d000a03591000040f905c00091e0c801d000003791010040f9e01f40f9021040b9e01f40f903604039e0c801d000203791000040f9e40300aae00305aa12340094",
+      "sha256": "712c0b201c7c997121b0ca267964317d46413d2cff76f1747baed19e214262f0",
+      "assembly": {
+        "path": "analysis/firmware/f3_capture_construction_review_01/Main_call_from_main.asm",
+        "bytes": 1003,
+        "sha256": "22b37c40e4d2abe04a104e200d9917291a38866818f196a91c749596588132f5"
+      }
+    },
+    {
+      "name": "Main_creates_starts_UI",
+      "start": 4354236,
+      "end": 4354284,
+      "file_offset": 159932,
+      "bytes_hex": "e70303aae60302aae57f4bf9e48346f9e33342f9e20301aae1f34ef9e00313aa26190394f37b06f9e07b46f9a4aaff97",
+      "sha256": "cfe3856248a2d535f935a49ac7af268ce8158bcfed82d35a2004e99d5db58fb3",
+      "assembly": {
+        "path": "analysis/firmware/f3_capture_construction_review_01/Main_creates_starts_UI.asm",
+        "bytes": 790,
+        "sha256": "615d6e230f43faf05654d9f19dab489afc3a2617596c247162ebd8435c936f30"
+      }
+    },
+    {
+      "name": "UI_constructor_vtable",
+      "start": 5166452,
+      "end": 5166532,
+      "file_offset": 972148,
+      "bytes_hex": "fd7bb9a9fd030091f35301a9e02f00f9e12b00f9e22700f9e32300f9e41f00f9e51b00f9e61700f9e71300f9e42f40f903008252420080522035009001c01d91e00304aa608a08942035009001203d91",
+      "sha256": "b79f396e05b3d64a98ec56c1b19ca53972b556230c686ad2b59a4ea52e762b1c",
+      "assembly": {
+        "path": "analysis/firmware/f3_capture_construction_review_01/UI_constructor_vtable.asm",
+        "bytes": 1291,
+        "sha256": "1ef0b3c3e2d93dfa541bf94022e516b563a27862a4763880ad41f5447b235666"
+      }
+    },
+    {
+      "name": "UI_run_builds_menu",
+      "start": 5174000,
+      "end": 5174020,
+      "file_offset": 979696,
+      "bytes_hex": "e03740f900402d91e10300aae03740f9b5030094",
+      "sha256": "a84a5805dd3a5aa0966bbc2b61df0f3592f734f2e4a24600c6ac85e1c0fa684f",
+      "assembly": {
+        "path": "analysis/firmware/f3_capture_construction_review_01/UI_run_builds_menu.asm",
+        "bytes": 563,
+        "sha256": "4f4dabe0aaed3d681588c142cbe37644f490a5d2a48821e93651298e94ab5847"
+      }
+    },
+    {
+      "name": "menu_build_owner_args",
+      "start": 5177812,
+      "end": 5177864,
+      "file_offset": 983508,
+      "bytes_hex": "ff8308d1fd7b01a9fd430091f35302a9f51b00f9e02700f9e12300f9e02740f900c07439e07f0839e02740f900e440f90ac6ff97",
+      "sha256": "ccb9530468765254800b111f1b92a231cd2228ecb22817d8c61168012254c699",
+      "assembly": {
+        "path": "analysis/firmware/f3_capture_construction_review_01/menu_build_owner_args.asm",
+        "bytes": 941,
+        "sha256": "8d1da4c5b9a39bf05a35d4e196c7e3b0b42f833f12122ac65d2acee513454a43"
+      }
+    },
+    {
+      "name": "FileSettings_title_root_append",
+      "start": 5180096,
+      "end": 5180148,
+      "file_offset": 985792,
+      "bytes_hex": "002380d2e764fc97f30300aa030080d2020080d2e1308052e00313aa1ad3ff97f3bf00f9e0bf40f9e10300aae02340f972d3ff97",
+      "sha256": "5523a12658a2af684dc7792c7e6d1861b4cd78bbd7642fb69f6546e4a74d6e9b",
+      "assembly": {
+        "path": "analysis/firmware/f3_capture_construction_review_01/FileSettings_title_root_append.asm",
+        "bytes": 1047,
+        "sha256": "ec7b0e790d3ea4251b2170ae751219e6e5852f00a18441298e958a6cbec3b3b9"
+      }
+    },
+    {
+      "name": "FileSettings_final_append",
+      "start": 5180704,
+      "end": 5180728,
+      "file_offset": 986400,
+      "bytes_hex": "e00313aa8dedff97e00313aae10300aae0bf40f9e1d2ff97",
+      "sha256": "5243092b4b581bde5c1f18c23645eef6258b6c297c0416d0f0229da670c3dea3",
+      "assembly": {
+        "path": "analysis/firmware/f3_capture_construction_review_01/FileSettings_final_append.asm",
+        "bytes": 673,
+        "sha256": "89edeea2c0a56a2121d78b4e35305478c618be0c7663b106af570715ecb8b23c"
+      }
+    },
+    {
+      "name": "UI_vtable_Run",
+      "start": 12132152,
+      "end": 12132192,
+      "file_offset": 7937848,
+      "bytes_hex": "0000000000000000c820b9000000000028d84e000000000088d84e000000000060d94e0000000000",
+      "sha256": "e664ae16afe518bafffe3687b0f849e13165b546cf8867a43c80416836a20633",
+      "assembly": {
+        "path": "analysis/firmware/f3_capture_construction_review_01/UI_vtable_Run.asm",
+        "bytes": 143,
+        "sha256": "46c21b4ddb9d1232402e4947fcbfbbe7c67315b050c11a1bf7e3a5e325a5eaca"
+      }
+    }
+  ],
+  "original_init_array": {
+    "va": 15998368,
+    "bytes": 2720,
+    "count": 340,
+    "entries_sha256": "1aa6645e0bef5d8fa96f0a99cfc37a951d2aa74d2c55968e6bcdef66a742f71e"
+  },
+  "original_start_main": 4240616,
+  "original_csu": 10416304,
+  "FileSettings_build_function": [
+    5177812,
+    5189684
+  ],
+  "direct_BL_callers": [
+    5174016
+  ],
+  "call_search_scope": "all original executable ELF sections; does not assert all indirect callers absent",
+  "UI_Run_vtable_slot": 5167456,
+  "coordinator_object": {
+    "path": "analysis/firmware/f3_save_coordinator_build_06/coordinator.o",
+    "bytes": 523792,
+    "sha256": "c7a417f7ae1e4efa1227eb152869b7b3321a5fc8dc2aa983757a7b59870c9c95"
+  },
+  "coordinator_has_INIT_or_PREINIT_sections": false,
+  "conclusion": "normal stock Main->CThread.Start->UI.Run->FileSettings runs after libc csu constructors; no wrapper05 necessary for this timing",
+  "factory_registration_failure": "actual ready remains false; not upgraded by static timing; failed factory is not blindly retried",
+  "target_executed": false,
+  "camera_access": false
+}

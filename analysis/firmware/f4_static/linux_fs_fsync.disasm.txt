@@ -1,0 +1,36 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest private-function symbol labels are not authoritative.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000007bbfc8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_>:
+  82721c: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  827220: 910003fd     	mov	x29, sp
+  827224: f9000fe0     	str	x0, [sp, #0x18]
+  827228: f9000be1     	str	x1, [sp, #0x10]
+  82722c: f9400fe0     	ldr	x0, [sp, #0x18]
+  827230: 940002f2     	bl	0x827df8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_+0x6be30>
+  827234: f9400be0     	ldr	x0, [sp, #0x10]
+  827238: 97f10fc9     	bl	0x46b15c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x351b0>
+  82723c: 97ef8ed5     	bl	0x40ad90 <fsync@plt>
+  827240: 7100001f     	cmp	w0, #0x0
+  827244: 1a9f07e0     	cset	w0, ne
+  827248: 12001c00     	and	w0, w0, #0xff
+  82724c: 7100001f     	cmp	w0, #0x0
+  827250: 54000140     	b.eq	0x827278 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_+0x6b2b0>
+  827254: b0002b40     	adrp	x0, 0xd90000
+  827258: 913f8003     	add	x3, x0, #0xfe0
+  82725c: 52805262     	mov	w2, #0x293              // =659
+  827260: b0002b40     	adrp	x0, 0xd90000
+  827264: 911ee001     	add	x1, x0, #0x7b8
+  827268: 52800080     	mov	w0, #0x4                // =4
+  82726c: 97fc7cb8     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  827270: 52800000     	mov	w0, #0x0                // =0
+  827274: 14000004     	b	0x827284 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_+0x6b2bc>
+  827278: f9400fe0     	ldr	x0, [sp, #0x18]
+  82727c: 940002f6     	bl	0x827e54 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_+0x6be8c>
+  827280: 52800020     	mov	w0, #0x1                // =1
+  827284: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  827288: d65f03c0     	ret

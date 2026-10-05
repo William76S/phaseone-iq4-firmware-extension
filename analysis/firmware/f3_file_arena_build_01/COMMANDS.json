@@ -1,0 +1,146 @@
+[
+  {
+    "kind": "host_sdk",
+    "argv": [
+      "/usr/bin/xcrun",
+      "--show-sdk-path"
+    ],
+    "exit": 0,
+    "stdout": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk\n",
+    "stderr": ""
+  },
+  {
+    "kind": "cross_compiler_identity",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "version"
+    ],
+    "exit": 0,
+    "stdout": "0.15.2\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_file_arena_01/test_arena.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_file_arena_01/arena.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_file_arena_build_01/arena_normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_file_arena_build_01/arena_normal"
+    ],
+    "exit": 0,
+    "stdout": "{\"actual_host_file_groups\":10,\"target_executed\":false}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_file_arena_01/test_arena.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_file_arena_01/arena.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_file_arena_build_01/arena_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_file_arena_build_01/arena_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "{\"actual_host_file_groups\":10,\"target_executed\":false}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "target_compile_only",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-fPIC",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_file_arena_01/arena.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_file_arena_build_01/arena.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "target_compile_only",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-fPIC",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_file_arena_01/native_linux.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_file_arena_build_01/native_linux.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

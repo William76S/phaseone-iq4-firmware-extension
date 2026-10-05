@@ -1,0 +1,53 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  741628: a9bb7bfd     	stp	x29, x30, [sp, #-0x50]!
+  74162c: 910003fd     	mov	x29, sp
+  741630: f9000bf3     	str	x19, [sp, #0x10]
+  741634: f90027e0     	str	x0, [sp, #0x48]
+  741638: f90023e1     	str	x1, [sp, #0x40]
+  74163c: f9001fe2     	str	x2, [sp, #0x38]
+  741640: 3900dfe3     	strb	w3, [sp, #0x37]
+  741644: f90017e4     	str	x4, [sp, #0x28]
+  741648: b90033e5     	str	w5, [sp, #0x30]
+  74164c: f94027e2     	ldr	x2, [sp, #0x48]
+  741650: d0002780     	adrp	x0, 0xc33000
+  741654: 9102e001     	add	x1, x0, #0xb8
+  741658: aa0203e0     	mov	x0, x2
+  74165c: 97fff4e8     	bl	0x73e9fc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x24cd0>
+  741660: f94027e0     	ldr	x0, [sp, #0x48]
+  741664: 9100c000     	add	x0, x0, #0x30
+  741668: 52800023     	mov	w3, #0x1                // =1
+  74166c: d2800002     	mov	x2, #0x0                // =0
+  741670: f9401fe1     	ldr	x1, [sp, #0x38]
+  741674: 97fff187     	bl	0x73dc90 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x23f64>
+  741678: d0002780     	adrp	x0, 0xc33000
+  74167c: 9104c001     	add	x1, x0, #0x130
+  741680: f94027e0     	ldr	x0, [sp, #0x48]
+  741684: f9000001     	str	x1, [x0]
+  741688: d0002780     	adrp	x0, 0xc33000
+  74168c: 91078001     	add	x1, x0, #0x1e0
+  741690: f94027e0     	ldr	x0, [sp, #0x48]
+  741694: f9001801     	str	x1, [x0, #0x30]
+  741698: f94027e0     	ldr	x0, [sp, #0x48]
+  74169c: 91062002     	add	x2, x0, #0x188
+  7416a0: b0002780     	adrp	x0, 0xc32000
+  7416a4: 912de001     	add	x1, x0, #0xb78
+  7416a8: aa0203e0     	mov	x0, x2
+  7416ac: 97ff36a0     	bl	0x70f12c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x210ac>
+  7416b0: f94027e0     	ldr	x0, [sp, #0x48]
+  7416b4: b902501f     	str	wzr, [x0, #0x250]
+  7416b8: f94027e0     	ldr	x0, [sp, #0x48]
+  7416bc: b902541f     	str	wzr, [x0, #0x254]
+  7416c0: f94027e0     	ldr	x0, [sp, #0x48]
+  7416c4: 3940dfe1     	ldrb	w1, [sp, #0x37]
+  7416c8: 39096001     	strb	w1, [x0, #0x258]
+  7416cc: f94027e0     	ldr	x0, [sp, #0x48]
+  7416d0: f94023e1     	ldr	x1, [sp, #0x40]
+  7416d4: f9013001     	str	x1, [x0, #0x260]
+  7416d8: f94027e0     	ldr	x0, [sp, #0x48]
+  7416dc: b902681f     	str	wzr, [x0, #0x268]

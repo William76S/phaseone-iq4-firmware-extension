@@ -1,0 +1,64 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  871d40: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  871d44: 910003fd     	mov	x29, sp
+  871d48: f9000fe0     	str	x0, [sp, #0x18]
+  871d4c: f9000be1     	str	x1, [sp, #0x10]
+  871d50: f9400fe0     	ldr	x0, [sp, #0x18]
+  871d54: 97ee691f     	bl	0x40c1d0 <.text+0xfa0>
+  871d58: d00029a0     	adrp	x0, 0xda7000
+  871d5c: 912c6001     	add	x1, x0, #0xb18
+  871d60: f9400fe0     	ldr	x0, [sp, #0x18]
+  871d64: f9000001     	str	x1, [x0]
+  871d68: f9400fe0     	ldr	x0, [sp, #0x18]
+  871d6c: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871d70: b9000c1f     	str	wzr, [x0, #0xc]
+  871d74: f9400fe0     	ldr	x0, [sp, #0x18]
+  871d78: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871d7c: b900101f     	str	wzr, [x0, #0x10]
+  871d80: f9400fe0     	ldr	x0, [sp, #0x18]
+  871d84: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871d88: f9000c1f     	str	xzr, [x0, #0x18]
+  871d8c: f9400fe0     	ldr	x0, [sp, #0x18]
+  871d90: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871d94: 3900801f     	strb	wzr, [x0, #0x20]
+  871d98: f9400fe0     	ldr	x0, [sp, #0x18]
+  871d9c: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871da0: 3900841f     	strb	wzr, [x0, #0x21]
+  871da4: f9400fe0     	ldr	x0, [sp, #0x18]
+  871da8: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871dac: f9400be1     	ldr	x1, [sp, #0x10]
+  871db0: f9001401     	str	x1, [x0, #0x28]
+  871db4: f9400fe0     	ldr	x0, [sp, #0x18]
+  871db8: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871dbc: f900181f     	str	xzr, [x0, #0x30]
+  871dc0: f9400fe0     	ldr	x0, [sp, #0x18]
+  871dc4: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871dc8: b900381f     	str	wzr, [x0, #0x38]
+  871dcc: f9400fe0     	ldr	x0, [sp, #0x18]
+  871dd0: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871dd4: b9003c1f     	str	wzr, [x0, #0x3c]
+  871dd8: f9400fe0     	ldr	x0, [sp, #0x18]
+  871ddc: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871de0: f900201f     	str	xzr, [x0, #0x40]
+  871de4: f9400fe0     	ldr	x0, [sp, #0x18]
+  871de8: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871dec: b900481f     	str	wzr, [x0, #0x48]
+  871df0: f9400fe0     	ldr	x0, [sp, #0x18]
+  871df4: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871df8: b9004c1f     	str	wzr, [x0, #0x4c]
+  871dfc: f9400fe0     	ldr	x0, [sp, #0x18]
+  871e00: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871e04: 3901401f     	strb	wzr, [x0, #0x50]
+  871e08: f9400fe0     	ldr	x0, [sp, #0x18]
+  871e0c: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871e10: 52800021     	mov	w1, #0x1                // =1
+  871e14: 39014401     	strb	w1, [x0, #0x51]
+  871e18: d503201f     	nop
+  871e1c: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  871e20: d65f03c0     	ret

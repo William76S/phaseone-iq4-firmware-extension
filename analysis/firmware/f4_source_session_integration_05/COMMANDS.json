@@ -1,0 +1,62 @@
+[
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DIQ4_F4_SOURCE_SYNTHETIC_HOST",
+      "tools/firmware/f4_native_source_04/source.c",
+      "tools/firmware/f4_native_session_05/session.c",
+      "tools/firmware/f4_native_session_05/test_source_session.c",
+      "-o",
+      "analysis/firmware/f4_source_session_integration_05/normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f4_source_session_integration_05/normal"
+    ],
+    "exit": 0,
+    "stdout": "actual source04 + session05: finite retained-frame refusal, reattach, three unique owned copies, stop, release, join PASS; native/card/codec are fixtures\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DIQ4_F4_SOURCE_SYNTHETIC_HOST",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "tools/firmware/f4_native_source_04/source.c",
+      "tools/firmware/f4_native_session_05/session.c",
+      "tools/firmware/f4_native_session_05/test_source_session.c",
+      "-o",
+      "analysis/firmware/f4_source_session_integration_05/asan_ubsan"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f4_source_session_integration_05/asan_ubsan"
+    ],
+    "exit": 0,
+    "stdout": "actual source04 + session05: finite retained-frame refusal, reattach, three unique owned copies, stop, release, join PASS; native/card/codec are fixtures\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,16 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual owner/lease/fresh/mapping proof.
+  47e450: d10043ff     	sub	sp, sp, #0x10
+  47e454: f90007e0     	str	x0, [sp, #0x8]
+  47e458: f90003e1     	str	x1, [sp]
+  47e45c: f94007e0     	ldr	x0, [sp, #0x8]
+  47e460: bd400001     	ldr	s1, [x0]
+  47e464: f94003e0     	ldr	x0, [sp]
+  47e468: bd400000     	ldr	s0, [x0]
+  47e46c: 1e202030     	fcmpe	s1, s0
+  47e470: 5400006d     	b.le	0x47e47c
+  47e474: f94003e0     	ldr	x0, [sp]
+  47e478: 14000002     	b	0x47e480
+  47e47c: f94007e0     	ldr	x0, [sp, #0x8]
+  47e480: 910043ff     	add	sp, sp, #0x10
+  47e484: d65f03c0     	ret

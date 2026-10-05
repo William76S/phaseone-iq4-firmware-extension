@@ -1,0 +1,96 @@
+{
+  "commands": [
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-p",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-d",
+      "--start-address=0x40b38c",
+      "--stop-address=0x40b3dc",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-d",
+      "--start-address=0x9ef0b0",
+      "--stop-address=0x9ef12c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-d",
+      "--start-address=0x4240080",
+      "--stop-address=0x4240e00",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-d",
+      "--start-address=0x4240e78",
+      "--stop-address=0x42413c4",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-d",
+      "--start-address=0x424c060",
+      "--stop-address=0x424c0e4",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-d",
+      "--start-address=0x424cec0",
+      "--stop-address=0x424d018",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin"
+    ]
+  ],
+  "full_function_windows": [
+    {
+      "name": "original_entry",
+      "va": "0x40b38c",
+      "bytes": 80,
+      "file_offset": "0xb38c",
+      "exact_bytes_sha256": "8aff6edeeaff858311c19e71ce967945748349cd52a96bb6aef7c810db532db1"
+    },
+    {
+      "name": "repaired_CSU_loop",
+      "va": "0x9ef0b0",
+      "bytes": 124,
+      "file_offset": "0x5ef0b0",
+      "exact_bytes_sha256": "d9e73be095446dd1b8080ee2798dabe7d6fc75f601784b3e47bc35cd8fd1180b"
+    },
+    {
+      "name": "iq4_f1_firmware_initialize_01",
+      "va": "0x4240080",
+      "bytes": 3456,
+      "file_offset": "0xb60080",
+      "exact_bytes_sha256": "92475d6249a5721140de115ce42f28f32dd4383b971acf6928697a1a71610d0c"
+    },
+    {
+      "name": "iq4_f1_firmware_unlock_01",
+      "va": "0x4240e78",
+      "bytes": 1356,
+      "file_offset": "0xb60e78",
+      "exact_bytes_sha256": "4c01bdadc99fecfa3ce2f37b1c5619aaccd564e7257e25c63f965b9d73f76383"
+    },
+    {
+      "name": "iq4_f1_lv_ctor_wrapper_01",
+      "va": "0x424c060",
+      "bytes": 132,
+      "file_offset": "0xb6c060",
+      "exact_bytes_sha256": "9dde2e0ee5f18cd2b4578fad644505198d0325cdcbc36add0526ef546117177b"
+    },
+    {
+      "name": "iq4_f1_lv_draw_wrapper_13",
+      "va": "0x424cec0",
+      "bytes": 344,
+      "file_offset": "0xb6cec0",
+      "exact_bytes_sha256": "c8a3dd3a16321198fff5045f4b3febd0e160013d9b04de5acabd1e9473f34084"
+    }
+  ],
+  "target_executed": false
+}

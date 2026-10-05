@@ -1,0 +1,32 @@
+{
+  "original_User_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "Language_RTTI": "0xc13098",
+  "Language_vtable": "0xc13048",
+  "GetText_slot": "0x18",
+  "GetText_implementation": "0x6b98a8",
+  "invalid_id_analysis": "The signed w1 <= 0 branch returns x0 = 0 before any lookup. UINT32_MAX is -1 here.",
+  "evidence": [
+    {
+      "path": "analysis/firmware/f1_stock_menu_build_01/Language_GetText_invalid_id.txt",
+      "start_va": "0x6b98a8",
+      "end_va": "0x6b9908",
+      "original_bytes_sha256": "f34775500c48dca65006cc2c427b4a14687aa6656126114b956023714a53ed13",
+      "evidence_sha256": "71cfa511a0a26c873449b6df6231fa04771c6b066dae454da354da8e8f64e93d"
+    },
+    {
+      "path": "analysis/firmware/f1_stock_menu_build_01/Selector_resources_to_MenuControl.txt",
+      "start_va": "0x4fae20",
+      "end_va": "0x4faf18",
+      "original_bytes_sha256": "7a4e603034c32884f354cb40ebdc3f843b3bda66c5b9744fa1c47b26082bc8a6",
+      "evidence_sha256": "6c6eca42462a1735614502730b694f359f6e3c9e3d4e58a0bf751cb8ec2d17c6"
+    },
+    {
+      "path": "analysis/firmware/f1_stock_menu_build_01/MenuControl_name_and_value_fallback.txt",
+      "start_va": "0x4c0504",
+      "end_va": "0x4c0720",
+      "original_bytes_sha256": "1b04bd10231d80c39a34d3dbe5c2147bd2bba5d3c7ccc30c5b520b469e5bc9ed",
+      "evidence_sha256": "342a7e0a3bebd55dd1548f1fafd41e107240be1e2089fc7f370d58dea792aeed"
+    }
+  ],
+  "hardware_executed": false
+}

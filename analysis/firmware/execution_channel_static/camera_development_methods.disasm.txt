@@ -1,0 +1,323 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPCamera.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000005570 <P1::IQP::Camera::IsDevelopmentSupported() const>:
+    5570: 41 55                        	pushq	%r13
+    5572: 41 54                        	pushq	%r12
+    5574: 4c 8d a7 b0 04 00 00         	leaq	0x4b0(%rdi), %r12
+    557b: 55                           	pushq	%rbp
+    557c: 53                           	pushq	%rbx
+    557d: 48 89 fb                     	movq	%rdi, %rbx
+    5580: 48 83 ec 08                  	subq	$0x8, %rsp
+    5584: 48 8b 2d 00 00 00 00         	movq	(%rip), %rbp            # 0x558b <P1::IQP::Camera::IsDevelopmentSupported() const+0x1b>
+		0000000000005587:  R_X86_64_REX_GOTPCRELX	__pthread_key_create-0x4
+    558b: 48 85 ed                     	testq	%rbp, %rbp
+    558e: 74 0c                        	je	0x559c <P1::IQP::Camera::IsDevelopmentSupported() const+0x2c>
+    5590: 4c 89 e7                     	movq	%r12, %rdi
+    5593: e8 00 00 00 00               	callq	0x5598 <P1::IQP::Camera::IsDevelopmentSupported() const+0x28>
+		0000000000005594:  R_X86_64_PLT32	pthread_mutex_lock-0x4
+    5598: 85 c0                        	testl	%eax, %eax
+    559a: 75 27                        	jne	0x55c3 <P1::IQP::Camera::IsDevelopmentSupported() const+0x53>
+    559c: 48 83 bb d8 04 00 00 00      	cmpq	$0x0, 0x4d8(%rbx)
+    55a4: 41 0f 95 c5                  	setne	%r13b
+    55a8: 48 85 ed                     	testq	%rbp, %rbp
+    55ab: 74 08                        	je	0x55b5 <P1::IQP::Camera::IsDevelopmentSupported() const+0x45>
+    55ad: 4c 89 e7                     	movq	%r12, %rdi
+    55b0: e8 00 00 00 00               	callq	0x55b5 <P1::IQP::Camera::IsDevelopmentSupported() const+0x45>
+		00000000000055b1:  R_X86_64_PLT32	pthread_mutex_unlock-0x4
+    55b5: 48 83 c4 08                  	addq	$0x8, %rsp
+    55b9: 44 89 e8                     	movl	%r13d, %eax
+    55bc: 5b                           	popq	%rbx
+    55bd: 5d                           	popq	%rbp
+    55be: 41 5c                        	popq	%r12
+    55c0: 41 5d                        	popq	%r13
+    55c2: c3                           	retq
+    55c3: 89 c7                        	movl	%eax, %edi
+    55c5: e8 00 00 00 00               	callq	0x55ca <P1::IQP::Camera::IsDevelopmentSupported() const+0x5a>
+		00000000000055c6:  R_X86_64_PLT32	std::__throw_system_error(int)-0x4
+    55ca: 66 0f 1f 44 00 00            	nopw	(%rax,%rax)
+
+00000000000055d0 <P1::IQP::Camera::StartDevelopment()>:
+    55d0: 55                           	pushq	%rbp
+    55d1: 53                           	pushq	%rbx
+    55d2: 48 89 fb                     	movq	%rdi, %rbx
+    55d5: 48 81 c7 b0 04 00 00         	addq	$0x4b0, %rdi            # imm = 0x4B0
+    55dc: 48 83 ec 18                  	subq	$0x18, %rsp
+    55e0: 48 8b 2d 00 00 00 00         	movq	(%rip), %rbp            # 0x55e7 <P1::IQP::Camera::StartDevelopment()+0x17>
+		00000000000055e3:  R_X86_64_REX_GOTPCRELX	__pthread_key_create-0x4
+    55e7: 48 89 3c 24                  	movq	%rdi, (%rsp)
+    55eb: c6 44 24 08 00               	movb	$0x0, 0x8(%rsp)
+    55f0: 48 85 ed                     	testq	%rbp, %rbp
+    55f3: 74 09                        	je	0x55fe <P1::IQP::Camera::StartDevelopment()+0x2e>
+    55f5: e8 00 00 00 00               	callq	0x55fa <P1::IQP::Camera::StartDevelopment()+0x2a>
+		00000000000055f6:  R_X86_64_PLT32	pthread_mutex_lock-0x4
+    55fa: 85 c0                        	testl	%eax, %eax
+    55fc: 75 44                        	jne	0x5642 <P1::IQP::Camera::StartDevelopment()+0x72>
+    55fe: 48 8b bb d8 04 00 00         	movq	0x4d8(%rbx), %rdi
+    5605: c6 44 24 08 01               	movb	$0x1, 0x8(%rsp)
+    560a: 48 85 ff                     	testq	%rdi, %rdi
+    560d: 74 19                        	je	0x5628 <P1::IQP::Camera::StartDevelopment()+0x58>
+    560f: e8 00 00 00 00               	callq	0x5614 <P1::IQP::Camera::StartDevelopment()+0x44>
+		0000000000005610:  R_X86_64_PLT32	P1::IQP::DevelopmentAgent::Start()-0x4
+    5614: 80 7c 24 08 00               	cmpb	$0x0, 0x8(%rsp)
+    5619: 75 0d                        	jne	0x5628 <P1::IQP::Camera::StartDevelopment()+0x58>
+    561b: 48 83 c4 18                  	addq	$0x18, %rsp
+    561f: 5b                           	popq	%rbx
+    5620: 5d                           	popq	%rbp
+    5621: c3                           	retq
+    5622: 66 0f 1f 44 00 00            	nopw	(%rax,%rax)
+    5628: 48 8b 3c 24                  	movq	(%rsp), %rdi
+    562c: 48 85 ff                     	testq	%rdi, %rdi
+    562f: 74 ea                        	je	0x561b <P1::IQP::Camera::StartDevelopment()+0x4b>
+    5631: 48 85 ed                     	testq	%rbp, %rbp
+    5634: 74 e5                        	je	0x561b <P1::IQP::Camera::StartDevelopment()+0x4b>
+    5636: e8 00 00 00 00               	callq	0x563b <P1::IQP::Camera::StartDevelopment()+0x6b>
+		0000000000005637:  R_X86_64_PLT32	pthread_mutex_unlock-0x4
+    563b: 48 83 c4 18                  	addq	$0x18, %rsp
+    563f: 5b                           	popq	%rbx
+    5640: 5d                           	popq	%rbp
+    5641: c3                           	retq
+    5642: 89 c7                        	movl	%eax, %edi
+    5644: e8 00 00 00 00               	callq	0x5649 <P1::IQP::Camera::StartDevelopment()+0x79>
+		0000000000005645:  R_X86_64_PLT32	std::__throw_system_error(int)-0x4
+    5649: 48 89 c5                     	movq	%rax, %rbp
+    564c: e9 00 00 00 00               	jmp	0x5651 <P1::IQP::Camera::StartDevelopment()+0x81>
+		000000000000564d:  R_X86_64_PC32	.text.unlikely+0xbf2
+    5651: 90                           	nop
+    5652: 66 66 2e 0f 1f 84 00 00 00 00 00     	nopw	%cs:(%rax,%rax)
+    565d: 0f 1f 00                     	nopl	(%rax)
+
+0000000000005660 <P1::IQP::Camera::StopDevelopment()>:
+    5660: 41 54                        	pushq	%r12
+    5662: 4c 8d a7 b0 04 00 00         	leaq	0x4b0(%rdi), %r12
+    5669: 55                           	pushq	%rbp
+    566a: 48 8b 2d 00 00 00 00         	movq	(%rip), %rbp            # 0x5671 <P1::IQP::Camera::StopDevelopment()+0x11>
+		000000000000566d:  R_X86_64_REX_GOTPCRELX	__pthread_key_create-0x4
+    5671: 53                           	pushq	%rbx
+    5672: 48 89 fb                     	movq	%rdi, %rbx
+    5675: 48 85 ed                     	testq	%rbp, %rbp
+    5678: 74 0c                        	je	0x5686 <P1::IQP::Camera::StopDevelopment()+0x26>
+    567a: 4c 89 e7                     	movq	%r12, %rdi
+    567d: e8 00 00 00 00               	callq	0x5682 <P1::IQP::Camera::StopDevelopment()+0x22>
+		000000000000567e:  R_X86_64_PLT32	pthread_mutex_lock-0x4
+    5682: 85 c0                        	testl	%eax, %eax
+    5684: 75 2f                        	jne	0x56b5 <P1::IQP::Camera::StopDevelopment()+0x55>
+    5686: 48 8b bb d8 04 00 00         	movq	0x4d8(%rbx), %rdi
+    568d: 48 85 ff                     	testq	%rdi, %rdi
+    5690: 74 05                        	je	0x5697 <P1::IQP::Camera::StopDevelopment()+0x37>
+    5692: e8 00 00 00 00               	callq	0x5697 <P1::IQP::Camera::StopDevelopment()+0x37>
+		0000000000005693:  R_X86_64_PLT32	P1::IQP::DevelopmentAgent::Stop()-0x4
+    5697: 48 85 ed                     	testq	%rbp, %rbp
+    569a: 74 14                        	je	0x56b0 <P1::IQP::Camera::StopDevelopment()+0x50>
+    569c: 5b                           	popq	%rbx
+    569d: 4c 89 e7                     	movq	%r12, %rdi
+    56a0: 5d                           	popq	%rbp
+    56a1: 41 5c                        	popq	%r12
+    56a3: e9 00 00 00 00               	jmp	0x56a8 <P1::IQP::Camera::StopDevelopment()+0x48>
+		00000000000056a4:  R_X86_64_PLT32	pthread_mutex_unlock-0x4
+    56a8: 0f 1f 84 00 00 00 00 00      	nopl	(%rax,%rax)
+    56b0: 5b                           	popq	%rbx
+    56b1: 5d                           	popq	%rbp
+    56b2: 41 5c                        	popq	%r12
+    56b4: c3                           	retq
+    56b5: 89 c7                        	movl	%eax, %edi
+    56b7: e8 00 00 00 00               	callq	0x56bc <P1::IQP::Camera::StopDevelopment()+0x5c>
+		00000000000056b8:  R_X86_64_PLT32	std::__throw_system_error(int)-0x4
+    56bc: 0f 1f 40 00                  	nopl	(%rax)
+
+00000000000056c0 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)>:
+    56c0: 41 55                        	pushq	%r13
+    56c2: 41 54                        	pushq	%r12
+    56c4: 55                           	pushq	%rbp
+    56c5: 48 89 f5                     	movq	%rsi, %rbp
+    56c8: 53                           	pushq	%rbx
+    56c9: 48 89 fb                     	movq	%rdi, %rbx
+    56cc: 48 81 c7 58 02 00 00         	addq	$0x258, %rdi            # imm = 0x258
+    56d3: 48 83 ec 18                  	subq	$0x18, %rsp
+    56d7: 4c 8b 2d 00 00 00 00         	movq	(%rip), %r13            # 0x56de <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x1e>
+		00000000000056da:  R_X86_64_REX_GOTPCRELX	__pthread_key_create-0x4
+    56de: 48 89 3c 24                  	movq	%rdi, (%rsp)
+    56e2: c6 44 24 08 00               	movb	$0x0, 0x8(%rsp)
+    56e7: 4d 85 ed                     	testq	%r13, %r13
+    56ea: 74 0d                        	je	0x56f9 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x39>
+    56ec: e8 00 00 00 00               	callq	0x56f1 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x31>
+		00000000000056ed:  R_X86_64_PLT32	pthread_mutex_lock-0x4
+    56f1: 85 c0                        	testl	%eax, %eax
+    56f3: 0f 85 16 01 00 00            	jne	0x580f <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x14f>
+    56f9: 48 8d 83 80 02 00 00         	leaq	0x280(%rbx), %rax
+    5700: c6 44 24 08 01               	movb	$0x1, 0x8(%rsp)
+    5705: 48 39 c5                     	cmpq	%rax, %rbp
+    5708: 0f 84 c2 00 00 00            	je	0x57d0 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x110>
+    570e: 48 8b bb 80 02 00 00         	movq	0x280(%rbx), %rdi
+    5715: 48 c7 83 80 02 00 00 00 00 00 00     	movq	$0x0, 0x280(%rbx)
+    5720: 48 85 ff                     	testq	%rdi, %rdi
+    5723: 0f 84 97 00 00 00            	je	0x57c0 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x100>
+    5729: 48 8b 07                     	movq	(%rdi), %rax
+    572c: ff 50 08                     	callq	*0x8(%rax)
+    572f: 4c 8b 65 00                  	movq	(%rbp), %r12
+    5733: 4d 85 e4                     	testq	%r12, %r12
+    5736: 74 6f                        	je	0x57a7 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0xe7>
+    5738: 49 8b 04 24                  	movq	(%r12), %rax
+    573c: 48 8d 15 00 00 00 00         	leaq	(%rip), %rdx            # 0x5743 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x83>
+		000000000000573f:  R_X86_64_PC32	P1::Universal::MemberFunctionObject3<P1::IQP::Camera, void, unsigned char, void const*, unsigned int>::IsNull() const-0x4
+    5743: 48 8b 40 18                  	movq	0x18(%rax), %rax
+    5747: 48 39 d0                     	cmpq	%rdx, %rax
+    574a: 0f 85 a0 00 00 00            	jne	0x57f0 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x130>
+    5750: 49 83 7c 24 08 00            	cmpq	$0x0, 0x8(%r12)
+    5756: 74 4f                        	je	0x57a7 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0xe7>
+    5758: 49 83 7c 24 10 00            	cmpq	$0x0, 0x10(%r12)
+    575e: 74 47                        	je	0x57a7 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0xe7>
+    5760: 49 8b 04 24                  	movq	(%r12), %rax
+    5764: 48 8d 15 00 00 00 00         	leaq	(%rip), %rdx            # 0x576b <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0xab>
+		0000000000005767:  R_X86_64_PC32	P1::Universal::MemberFunctionObject3<P1::IQP::Camera, void, unsigned char, void const*, unsigned int>::Copy() const-0x4
+    576b: 48 8b 40 28                  	movq	0x28(%rax), %rax
+    576f: 48 39 d0                     	cmpq	%rdx, %rax
+    5772: 0f 85 90 00 00 00            	jne	0x5808 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x148>
+    5778: bf 20 00 00 00               	movl	$0x20, %edi
+    577d: e8 00 00 00 00               	callq	0x5782 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0xc2>
+		000000000000577e:  R_X86_64_PLT32	operator new(unsigned long)-0x4
+    5782: 49 8b 54 24 08               	movq	0x8(%r12), %rdx
+    5787: 48 8d 0d 00 00 00 00         	leaq	(%rip), %rcx            # 0x578e <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0xce>
+		000000000000578a:  R_X86_64_PC32	vtable for P1::Universal::MemberFunctionObject3<P1::IQP::Camera, void, unsigned char, void const*, unsigned int>+0xc
+    578e: f3 41 0f 6f 44 24 10         	movdqu	0x10(%r12), %xmm0
+    5795: 48 89 08                     	movq	%rcx, (%rax)
+    5798: 48 89 50 08                  	movq	%rdx, 0x8(%rax)
+    579c: 0f 11 40 10                  	movups	%xmm0, 0x10(%rax)
+    57a0: 48 89 83 80 02 00 00         	movq	%rax, 0x280(%rbx)
+    57a7: 80 7c 24 08 00               	cmpb	$0x0, 0x8(%rsp)
+    57ac: 75 22                        	jne	0x57d0 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x110>
+    57ae: 48 83 c4 18                  	addq	$0x18, %rsp
+    57b2: 5b                           	popq	%rbx
+    57b3: 5d                           	popq	%rbp
+    57b4: 41 5c                        	popq	%r12
+    57b6: 41 5d                        	popq	%r13
+    57b8: c3                           	retq
+    57b9: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+    57c0: 4c 8b 65 00                  	movq	(%rbp), %r12
+    57c4: 4d 85 e4                     	testq	%r12, %r12
+    57c7: 0f 85 6b ff ff ff            	jne	0x5738 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x78>
+    57cd: 0f 1f 00                     	nopl	(%rax)
+    57d0: 48 8b 3c 24                  	movq	(%rsp), %rdi
+    57d4: 48 85 ff                     	testq	%rdi, %rdi
+    57d7: 74 d5                        	je	0x57ae <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0xee>
+    57d9: 4d 85 ed                     	testq	%r13, %r13
+    57dc: 74 d0                        	je	0x57ae <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0xee>
+    57de: e8 00 00 00 00               	callq	0x57e3 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x123>
+		00000000000057df:  R_X86_64_PLT32	pthread_mutex_unlock-0x4
+    57e3: 48 83 c4 18                  	addq	$0x18, %rsp
+    57e7: 5b                           	popq	%rbx
+    57e8: 5d                           	popq	%rbp
+    57e9: 41 5c                        	popq	%r12
+    57eb: 41 5d                        	popq	%r13
+    57ed: c3                           	retq
+    57ee: 66 90                        	nop
+    57f0: 4c 89 e7                     	movq	%r12, %rdi
+    57f3: ff d0                        	callq	*%rax
+    57f5: 84 c0                        	testb	%al, %al
+    57f7: 75 ae                        	jne	0x57a7 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0xe7>
+    57f9: 4c 8b 65 00                  	movq	(%rbp), %r12
+    57fd: e9 5e ff ff ff               	jmp	0x5760 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0xa0>
+    5802: 66 0f 1f 44 00 00            	nopw	(%rax,%rax)
+    5808: 4c 89 e7                     	movq	%r12, %rdi
+    580b: ff d0                        	callq	*%rax
+    580d: eb 91                        	jmp	0x57a0 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0xe0>
+    580f: 89 c7                        	movl	%eax, %edi
+    5811: e8 00 00 00 00               	callq	0x5816 <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x156>
+		0000000000005812:  R_X86_64_PLT32	std::__throw_system_error(int)-0x4
+    5816: 48 89 c5                     	movq	%rax, %rbp
+    5819: e9 00 00 00 00               	jmp	0x581e <P1::IQP::Camera::SetDevelopmentReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)+0x15e>
+		000000000000581a:  R_X86_64_PC32	.text.unlikely+0xc10
+    581e: 66 90                        	nop
+
+0000000000005820 <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)>:
+    5820: 41 57                        	pushq	%r15
+    5822: 41 89 cf                     	movl	%ecx, %r15d
+    5825: 41 56                        	pushq	%r14
+    5827: 49 89 d6                     	movq	%rdx, %r14
+    582a: 41 55                        	pushq	%r13
+    582c: 4c 8d af b0 04 00 00         	leaq	0x4b0(%rdi), %r13
+    5833: 41 54                        	pushq	%r12
+    5835: 55                           	pushq	%rbp
+    5836: 89 f5                        	movl	%esi, %ebp
+    5838: 53                           	pushq	%rbx
+    5839: 48 89 fb                     	movq	%rdi, %rbx
+    583c: 48 83 ec 28                  	subq	$0x28, %rsp
+    5840: 4c 8b 25 00 00 00 00         	movq	(%rip), %r12            # 0x5847 <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0x27>
+		0000000000005843:  R_X86_64_REX_GOTPCRELX	__pthread_key_create-0x4
+    5847: 4d 85 e4                     	testq	%r12, %r12
+    584a: 74 10                        	je	0x585c <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0x3c>
+    584c: 4c 89 ef                     	movq	%r13, %rdi
+    584f: e8 00 00 00 00               	callq	0x5854 <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0x34>
+		0000000000005850:  R_X86_64_PLT32	pthread_mutex_lock-0x4
+    5854: 85 c0                        	testl	%eax, %eax
+    5856: 0f 85 a7 00 00 00            	jne	0x5903 <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0xe3>
+    585c: 48 8b 93 d8 04 00 00         	movq	0x4d8(%rbx), %rdx
+    5863: 4d 85 e4                     	testq	%r12, %r12
+    5866: 74 12                        	je	0x587a <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0x5a>
+    5868: 4c 89 ef                     	movq	%r13, %rdi
+    586b: 48 89 54 24 08               	movq	%rdx, 0x8(%rsp)
+    5870: e8 00 00 00 00               	callq	0x5875 <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0x55>
+		0000000000005871:  R_X86_64_PLT32	pthread_mutex_unlock-0x4
+    5875: 48 8b 54 24 08               	movq	0x8(%rsp), %rdx
+    587a: 48 85 d2                     	testq	%rdx, %rdx
+    587d: 0f 84 00 00 00 00            	je	0x5883 <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0x63>
+		000000000000587f:  R_X86_64_PC32	.text.unlikely+0xc2e
+    5883: 4c 89 6c 24 10               	movq	%r13, 0x10(%rsp)
+    5888: c6 44 24 18 00               	movb	$0x0, 0x18(%rsp)
+    588d: 4d 85 e4                     	testq	%r12, %r12
+    5890: 74 0c                        	je	0x589e <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0x7e>
+    5892: 4c 89 ef                     	movq	%r13, %rdi
+    5895: e8 00 00 00 00               	callq	0x589a <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0x7a>
+		0000000000005896:  R_X86_64_PLT32	pthread_mutex_lock-0x4
+    589a: 85 c0                        	testl	%eax, %eax
+    589c: 75 6c                        	jne	0x590a <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0xea>
+    589e: 48 8b bb d8 04 00 00         	movq	0x4d8(%rbx), %rdi
+    58a5: c6 44 24 18 01               	movb	$0x1, 0x18(%rsp)
+    58aa: 48 85 ff                     	testq	%rdi, %rdi
+    58ad: 74 31                        	je	0x58e0 <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0xc0>
+    58af: 40 0f b6 f5                  	movzbl	%bpl, %esi
+    58b3: 41 b8 ff ff ff ff            	movl	$0xffffffff, %r8d       # imm = 0xFFFFFFFF
+    58b9: 44 89 f9                     	movl	%r15d, %ecx
+    58bc: 4c 89 f2                     	movq	%r14, %rdx
+    58bf: e8 00 00 00 00               	callq	0x58c4 <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0xa4>
+		00000000000058c0:  R_X86_64_PLT32	P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)-0x4
+    58c4: 80 7c 24 18 00               	cmpb	$0x0, 0x18(%rsp)
+    58c9: 75 15                        	jne	0x58e0 <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0xc0>
+    58cb: 48 83 c4 28                  	addq	$0x28, %rsp
+    58cf: 5b                           	popq	%rbx
+    58d0: 5d                           	popq	%rbp
+    58d1: 41 5c                        	popq	%r12
+    58d3: 41 5d                        	popq	%r13
+    58d5: 41 5e                        	popq	%r14
+    58d7: 41 5f                        	popq	%r15
+    58d9: c3                           	retq
+    58da: 66 0f 1f 44 00 00            	nopw	(%rax,%rax)
+    58e0: 48 8b 7c 24 10               	movq	0x10(%rsp), %rdi
+    58e5: 48 85 ff                     	testq	%rdi, %rdi
+    58e8: 74 e1                        	je	0x58cb <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0xab>
+    58ea: 4d 85 e4                     	testq	%r12, %r12
+    58ed: 74 dc                        	je	0x58cb <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0xab>
+    58ef: e8 00 00 00 00               	callq	0x58f4 <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0xd4>
+		00000000000058f0:  R_X86_64_PLT32	pthread_mutex_unlock-0x4
+    58f4: 48 83 c4 28                  	addq	$0x28, %rsp
+    58f8: 5b                           	popq	%rbx
+    58f9: 5d                           	popq	%rbp
+    58fa: 41 5c                        	popq	%r12
+    58fc: 41 5d                        	popq	%r13
+    58fe: 41 5e                        	popq	%r14
+    5900: 41 5f                        	popq	%r15
+    5902: c3                           	retq
+    5903: 89 c7                        	movl	%eax, %edi
+    5905: e8 00 00 00 00               	callq	0x590a <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0xea>
+		0000000000005906:  R_X86_64_PLT32	std::__throw_system_error(int)-0x4
+    590a: 89 c7                        	movl	%eax, %edi
+    590c: e8 00 00 00 00               	callq	0x5911 <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0xf1>
+		000000000000590d:  R_X86_64_PLT32	std::__throw_system_error(int)-0x4
+    5911: 48 89 c5                     	movq	%rax, %rbp
+    5914: e9 00 00 00 00               	jmp	0x5919 <P1::IQP::Camera::SendDevelopmentMessage(unsigned char, void const*, unsigned int)+0xf9>
+		0000000000005915:  R_X86_64_PC32	.text.unlikely+0xc33
+    5919: 90                           	nop
+    591a: 66 0f 1f 44 00 00            	nopw	(%rax,%rax)

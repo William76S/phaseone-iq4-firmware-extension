@@ -1,0 +1,47 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  872828: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  87282c: 910003fd     	mov	x29, sp
+  872830: f9000bf3     	str	x19, [sp, #0x10]
+  872834: f9001fe0     	str	x0, [sp, #0x38]
+  872838: f9001be1     	str	x1, [sp, #0x30]
+  87283c: f90017e2     	str	x2, [sp, #0x28]
+  872840: f90013e3     	str	x3, [sp, #0x20]
+  872844: f9401fe2     	ldr	x2, [sp, #0x38]
+  872848: b00029a0     	adrp	x0, 0xda7000
+  87284c: 912f6001     	add	x1, x0, #0xbd8
+  872850: aa0203e0     	mov	x0, x2
+  872854: 97fb306a     	bl	0x73e9fc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x24cd0>
+  872858: b00029a0     	adrp	x0, 0xda7000
+  87285c: 91352001     	add	x1, x0, #0xd48
+  872860: f9401fe0     	ldr	x0, [sp, #0x38]
+  872864: f9000001     	str	x1, [x0]
+  872868: f9401fe0     	ldr	x0, [sp, #0x38]
+  87286c: f94017e1     	ldr	x1, [sp, #0x28]
+  872870: f9001801     	str	x1, [x0, #0x30]
+  872874: f9401fe0     	ldr	x0, [sp, #0x38]
+  872878: f94013e1     	ldr	x1, [sp, #0x20]
+  87287c: f9001c01     	str	x1, [x0, #0x38]
+  872880: f9401fe5     	ldr	x5, [sp, #0x38]
+  872884: b00029a0     	adrp	x0, 0xda7000
+  872888: 912fe004     	add	x4, x0, #0xbf8
+  87288c: b00029a0     	adrp	x0, 0xda7000
+  872890: 9130c003     	add	x3, x0, #0xc30
+  872894: f9401be2     	ldr	x2, [sp, #0x30]
+  872898: d2800001     	mov	x1, #0x0                // =0
+  87289c: aa0503e0     	mov	x0, x5
+  8728a0: 97fb3081     	bl	0x73eaa4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x24d78>
+  8728a4: 14000006     	b	0x8728bc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2e4f8>
+  8728a8: aa0003f3     	mov	x19, x0
+  8728ac: f9401fe0     	ldr	x0, [sp, #0x38]
+  8728b0: 97fb3067     	bl	0x73ea4c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x24d20>
+  8728b4: aa1303e0     	mov	x0, x19
+  8728b8: 97ee5fa6     	bl	0x40a750 <_Unwind_Resume@plt>
+  8728bc: f9400bf3     	ldr	x19, [sp, #0x10]
+  8728c0: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  8728c4: d65f03c0     	ret

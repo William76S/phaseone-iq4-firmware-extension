@@ -1,0 +1,30 @@
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6b98a8: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  6b98ac: 910003fd     	mov	x29, sp
+  6b98b0: f9000fe0     	str	x0, [sp, #0x18]
+  6b98b4: b90017e1     	str	w1, [sp, #0x14]
+  6b98b8: b94017e0     	ldr	w0, [sp, #0x14]
+  6b98bc: 7100001f     	cmp	w0, #0x0
+  6b98c0: 5400006c     	b.gt	0x6b98cc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1950c>
+  6b98c4: d2800000     	mov	x0, #0x0                // =0
+  6b98c8: 1400000e     	b	0x6b9900 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x19540>
+  6b98cc: b94017e0     	ldr	w0, [sp, #0x14]
+  6b98d0: 3100041f     	cmn	w0, #0x1
+  6b98d4: 54000061     	b.ne	0x6b98e0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x19520>
+  6b98d8: d2800000     	mov	x0, #0x0                // =0
+  6b98dc: 14000009     	b	0x6b9900 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x19540>
+  6b98e0: f9400fe0     	ldr	x0, [sp, #0x18]
+  6b98e4: f9400000     	ldr	x0, [x0]
+  6b98e8: 91004000     	add	x0, x0, #0x10
+  6b98ec: f9400002     	ldr	x2, [x0]
+  6b98f0: b94017e1     	ldr	w1, [sp, #0x14]
+  6b98f4: f9400fe0     	ldr	x0, [sp, #0x18]
+  6b98f8: d63f0040     	blr	x2
+  6b98fc: d503201f     	nop
+  6b9900: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  6b9904: d65f03c0     	ret

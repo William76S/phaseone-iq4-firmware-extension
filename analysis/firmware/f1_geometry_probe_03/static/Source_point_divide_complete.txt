@@ -1,0 +1,25 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual owner/lease/fresh/mapping proof.
+  4ded40: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  4ded44: 910003fd     	mov	x29, sp
+  4ded48: f9000fe0     	str	x0, [sp, #0x18]
+  4ded4c: bd0017e0     	str	s0, [sp, #0x14]
+  4ded50: f9400fe0     	ldr	x0, [sp, #0x18]
+  4ded54: b9400000     	ldr	w0, [x0]
+  4ded58: 1e220001     	scvtf	s1, w0
+  4ded5c: bd4017e0     	ldr	s0, [sp, #0x14]
+  4ded60: 1e201820     	fdiv	s0, s1, s0
+  4ded64: 5ea1b802     	fcvtzs	s2, s0
+  4ded68: f9400fe0     	ldr	x0, [sp, #0x18]
+  4ded6c: b9400400     	ldr	w0, [x0, #0x4]
+  4ded70: 1e220001     	scvtf	s1, w0
+  4ded74: bd4017e0     	ldr	s0, [sp, #0x14]
+  4ded78: 1e201820     	fdiv	s0, s1, s0
+  4ded7c: 5ea1b800     	fcvtzs	s0, s0
+  4ded80: 9100a3e0     	add	x0, sp, #0x28
+  4ded84: 1e260002     	fmov	w2, s0
+  4ded88: 1e260041     	fmov	w1, s2
+  4ded8c: 97fd4a75     	bl	0x431760
+  4ded90: f94017e0     	ldr	x0, [sp, #0x28]
+  4ded94: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  4ded98: d65f03c0     	ret

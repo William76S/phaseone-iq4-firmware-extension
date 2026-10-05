@@ -1,0 +1,33 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+SCOPE partial_instruction_window
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  869810: aa1303e0     	mov	x0, x19
+  869814: 94000e98     	bl	0x86d274 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x28eb0>
+  869818: f94037e0     	ldr	x0, [sp, #0x68]
+  86981c: f943ec13     	ldr	x19, [x0, #0x7d8]
+  869820: f94037e0     	ldr	x0, [sp, #0x68]
+  869824: 97eea0fd     	bl	0x411c18 <.text+0x69e8>
+  869828: aa0003e1     	mov	x1, x0
+  86982c: aa1303e0     	mov	x0, x19
+  869830: 97f9302c     	bl	0x6b58e0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15520>
+  869834: 2a0003e1     	mov	w1, w0
+  869838: f94037e0     	ldr	x0, [sp, #0x68]
+  86983c: b907e001     	str	w1, [x0, #0x7e0]
+  869840: f94037f3     	ldr	x19, [sp, #0x68]
+  869844: f94037e0     	ldr	x0, [sp, #0x68]
+  869848: f943ec00     	ldr	x0, [x0, #0x7d8]
+  86984c: 97f93238     	bl	0x6b612c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15d6c>
+  869850: aa0003e2     	mov	x2, x0
+  869854: f9400040     	ldr	x0, [x2]
+  869858: 91004000     	add	x0, x0, #0x10
+  86985c: f9400001     	ldr	x1, [x0]
+  869860: aa0203e0     	mov	x0, x2
+  869864: d63f0020     	blr	x1
+  869868: aa0003e1     	mov	x1, x0
+  86986c: aa1303e0     	mov	x0, x19
+  869870: 97fa999a     	bl	0x70fed8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x21e58>

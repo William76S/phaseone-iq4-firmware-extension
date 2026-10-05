@@ -1,0 +1,18 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/sdk_reference/vendor_downloads/dest/lib/libCameraSdkCpp.so.3.2.5:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+00000000000825f0 <P1::CameraSdkC::Test(int)>:
+   825f0: 48 8d 15 d6 d5 0b 00         	leaq	0xbd5d6(%rip), %rdx     # 0x13fbcd <std::piecewise_construct+0x48d>
+   825f7: 85 ff                        	testl	%edi, %edi
+   825f9: 75 15                        	jne	0x82610 <P1::CameraSdkC::Test(int)+0x20>
+   825fb: 48 8d 35 d0 d5 0b 00         	leaq	0xbd5d0(%rip), %rsi     # 0x13fbd2 <std::piecewise_construct+0x492>
+   82602: e9 19 90 fc ff               	jmp	0x4b620 <_ZN14CameraSdkError5ErrorEN2P19CameraSdk9ErrorCodeEPKcS4_@plt>
+   82607: 66 0f 1f 84 00 00 00 00 00   	nopw	(%rax,%rax)
+   82610: 48 8d 35 c7 d5 0b 00         	leaq	0xbd5c7(%rip), %rsi     # 0x13fbde <std::piecewise_construct+0x49e>
+   82617: bf ff ff ff ff               	movl	$0xffffffff, %edi       # imm = 0xFFFFFFFF
+   8261c: e9 ff 8f fc ff               	jmp	0x4b620 <_ZN14CameraSdkError5ErrorEN2P19CameraSdk9ErrorCodeEPKcS4_@plt>
+   82621: 66 66 2e 0f 1f 84 00 00 00 00 00     	nopw	%cs:(%rax,%rax)
+   8262c: 0f 1f 40 00                  	nopl	(%rax)

@@ -1,0 +1,835 @@
+{
+  "schema": "iq4_frozen_target_objects_fresh_recompile_01",
+  "spec": {
+    "path": "tools/firmware/f1_f3_f4_user_integration_05/INPUTS_JPEG_DEV_02.json",
+    "bytes": 44864,
+    "sha256": "51af5167f3ff9a63c15adf0bac3c58f224668bb7c7ef9c88374f07cb056e1c6f"
+  },
+  "remap": {
+    "analysis/firmware/dual_exposure_build_01_fixed_fixture/dual.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/01_dual.o",
+    "analysis/firmware/f1_f4_user_integration_build_02_attempt02/f1_menu.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/02_f1_menu.o",
+    "analysis/firmware/f1_f4_user_integration_build_02_attempt02/f1_display.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/03_f1_display.o",
+    "analysis/firmware/f1_f4_user_integration_build_02_attempt02/f1_display_wrapper.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/04_f1_display_wrapper.o",
+    "analysis/firmware/f1_f4_user_integration_build_02_attempt02/self_read.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/05_self_read.o",
+    "analysis/firmware/f1_f4_user_integration_build_02_attempt02/card.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/06_card.o",
+    "analysis/firmware/f1_f4_user_integration_build_02_attempt02/card_linux.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/07_card_linux.o",
+    "analysis/firmware/f1_f4_user_integration_build_02_attempt02/fdinfo.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/08_fdinfo.o",
+    "analysis/firmware/f1_f4_user_integration_build_02_attempt02/card_native_calls.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/09_card_native_calls.o",
+    "analysis/firmware/f1_f4_user_integration_build_02_attempt02/fs_native_linux.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/10_fs_native_linux.o",
+    "analysis/firmware/f1_f4_user_integration_build_02_attempt02/movie.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/11_movie.o",
+    "analysis/firmware/f1_f4_user_integration_build_02_attempt02/movie_linux.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/12_movie_linux.o",
+    "analysis/firmware/f1_f4_user_integration_build_02_attempt02/native_jpeg82.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/13_native_jpeg82.o",
+    "analysis/firmware/f1_f4_user_integration_build_02_attempt02/checked_stream02.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/14_checked_stream02.o",
+    "analysis/firmware/f3_capture_menu_build_04/wrapper.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/15_wrapper.o",
+    "analysis/firmware/f3_capture_menu_build_08_quality100/policy.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/16_policy.o",
+    "analysis/firmware/f3_capture_menu_build_09_native_size/menu.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/17_menu.o",
+    "analysis/firmware/f3_core_native_receipt_build_01_combined_decode/receipt.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/18_receipt.o",
+    "analysis/firmware/f3_core_native_receipt_build_01_combined_decode/wrappers.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/19_wrappers.o",
+    "analysis/firmware/f3_file_arena_build_01/native_linux.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/20_native_linux.o",
+    "analysis/firmware/f3_file_arena_unique_build_02/arena02.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/21_arena02.o",
+    "analysis/firmware/f3_gallery_source_snapshot_build_01/gallery.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/22_gallery.o",
+    "analysis/firmware/f3_gallery_source_snapshot_build_01/native_factory.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/23_native_factory.o",
+    "analysis/firmware/f3_init_repair_01/build/rtti.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/24_rtti.o",
+    "analysis/firmware/f3_native_executor_build_01_final/native_calls.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/25_native_calls.o",
+    "analysis/firmware/f3_native_executor_build_01_final/wait_wrapper.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/26_wait_wrapper.o",
+    "analysis/firmware/f3_native_executor_build_03_attempt04/executor.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/27_executor.o",
+    "analysis/firmware/f3_native_fs_unique_build_06/fs06.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/28_fs06.o",
+    "analysis/firmware/f3_native_size_menu_01/build/size_menu.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/29_size_menu.o",
+    "analysis/firmware/f3_save_coordinator_build_06/public_raw.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/30_public_raw.o",
+    "analysis/firmware/f3_save_coordinator_build_08_attempt04/coordinator.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/31_coordinator.o",
+    "analysis/firmware/f3_saved_raw_capture_build_01/directories_linux.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/32_directories_linux.o",
+    "analysis/firmware/f3_saved_raw_capture_build_01/acquired_wrapper.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/33_acquired_wrapper.o",
+    "analysis/firmware/f3_saved_raw_capture_build_03/capture.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/34_capture.o",
+    "analysis/firmware/f3_saved_raw_capture_build_03/runtime.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/35_runtime.o",
+    "analysis/firmware/f3_saved_raw_capture_build_03/native_factory.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/36_native_factory.o",
+    "analysis/firmware/f3_source_dependencies_build_02/dependencies.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/37_dependencies.o",
+    "analysis/firmware/f3_stream_export_build_04_attempt01/export_pixels.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/38_export_pixels.o",
+    "analysis/firmware/f3_stream_export_build_04_attempt01/export_geometry.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/39_export_geometry.o",
+    "analysis/firmware/f3_stream_export_build_04_attempt01/jpeg_export.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/40_jpeg_export.o",
+    "analysis/firmware/f3_stream_export_build_04_attempt01/stream_export.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/41_stream_export.o",
+    "analysis/firmware/f4_codec_cleanup_build_01/bounded_jpeg_1.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/42_bounded_jpeg_1.o",
+    "analysis/firmware/f4_codec_cleanup_build_01/worker_1.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/43_worker_1.o",
+    "analysis/firmware/f4_mkv_software_zero_build_01/native_mkv_1.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/44_native_mkv_1.o",
+    "analysis/firmware/f4_native_diagnostics_build_04_final/entry.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/45_entry.o",
+    "analysis/firmware/f4_native_diagnostics_build_04_final/menu.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/46_menu.o",
+    "analysis/firmware/f4_native_session_build_05/session.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/47_session.o",
+    "analysis/firmware/f4_native_source_build_02_release_complete/thread_calls.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/48_thread_calls.o",
+    "analysis/firmware/f4_native_source_build_02_release_complete/menu_native_calls.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/49_menu_native_calls.o",
+    "analysis/firmware/f4_native_source_build_05_final02/source.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/50_source.o",
+    "analysis/firmware/f4_native_source_build_05_final02/native_calls.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/51_native_calls.o",
+    "analysis/firmware/f4_start_repair_build_05/movie_binding.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/52_movie_binding.o",
+    "analysis/firmware/f4_xqd_default_build_01/lv_settings_wrapper.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/53_lv_settings_wrapper.o",
+    "analysis/firmware/native_activity_build_01/activity.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/54_activity.o",
+    "evidence/f3_native_render_02/check07/adapter_aarch64_1.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/55_adapter_aarch64_1.o",
+    "evidence/f3_native_render_02/check07/completion_aarch64_1.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/56_completion_aarch64_1.o",
+    "evidence/f3_native_render_02/check07/decode_receipt_aarch64_1.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/57_decode_receipt_aarch64_1.o",
+    "evidence/f3_native_render_02/check07/wrappers_aarch64_1.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/58_wrappers_aarch64_1.o",
+    "evidence/f3_native_render_02/check07/native_binding_aarch64_1.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/59_native_binding_aarch64_1.o",
+    "evidence/f3_native_render_02/check07/native_file_ops_aarch64_1.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/60_native_file_ops_aarch64_1.o",
+    "evidence/f3_native_render_02/check07/persistent_pool_aarch64_1.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/61_persistent_pool_aarch64_1.o",
+    "evidence/f3_raw_file_source_01/reader_stage_aarch64_1.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/62_reader_stage_aarch64_1.o",
+    "evidence/f3_raw_file_source_01/source_builder_aarch64_1.o": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/63_source_builder_aarch64_1.o"
+  },
+  "objects": [
+    {
+      "original": {
+        "path": "analysis/firmware/dual_exposure_build_01_fixed_fixture/dual.o",
+        "bytes": 15560,
+        "sha256": "cd26146f29f60f26a481d64c2b917e0b404c967f8ebef1b026561c13a4e2abb9"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/01_dual.o",
+        "bytes": 15560,
+        "sha256": "cd26146f29f60f26a481d64c2b917e0b404c967f8ebef1b026561c13a4e2abb9"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f1_f4_user_integration_build_02_attempt02/f1_menu.o",
+        "bytes": 24264,
+        "sha256": "b84da88e65009d79b51430bf969893e6a195dc8a398f49e3b865c5478720dd9d"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/02_f1_menu.o",
+        "bytes": 24264,
+        "sha256": "b84da88e65009d79b51430bf969893e6a195dc8a398f49e3b865c5478720dd9d"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f1_f4_user_integration_build_02_attempt02/f1_display.o",
+        "bytes": 7736,
+        "sha256": "291c7c149a800d044c53cc03101f0625fea477a2aab207552e91341dae647d89"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/03_f1_display.o",
+        "bytes": 7736,
+        "sha256": "291c7c149a800d044c53cc03101f0625fea477a2aab207552e91341dae647d89"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f1_f4_user_integration_build_02_attempt02/f1_display_wrapper.o",
+        "bytes": 1416,
+        "sha256": "dbd1cb17935beb04ddf68e338e2bed7a20347e244bd3ca982fbe21c2081e9610"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/04_f1_display_wrapper.o",
+        "bytes": 1416,
+        "sha256": "dbd1cb17935beb04ddf68e338e2bed7a20347e244bd3ca982fbe21c2081e9610"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f1_f4_user_integration_build_02_attempt02/self_read.o",
+        "bytes": 2192,
+        "sha256": "9459ad604826ae7c70dfb99fc879efa93828c015484bd05cf091cdea457d2953"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/05_self_read.o",
+        "bytes": 2192,
+        "sha256": "9459ad604826ae7c70dfb99fc879efa93828c015484bd05cf091cdea457d2953"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f1_f4_user_integration_build_02_attempt02/card.o",
+        "bytes": 27296,
+        "sha256": "449906eacc9ec64ec7116b46d5427f665f78cd33b03abe98d57e4bbb33288ff6"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/06_card.o",
+        "bytes": 27296,
+        "sha256": "449906eacc9ec64ec7116b46d5427f665f78cd33b03abe98d57e4bbb33288ff6"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f1_f4_user_integration_build_02_attempt02/card_linux.o",
+        "bytes": 4936,
+        "sha256": "b47276082ece13106de178e02a2862fe40d2334305d39f0557e1cf779f9b6c38"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/07_card_linux.o",
+        "bytes": 4936,
+        "sha256": "b47276082ece13106de178e02a2862fe40d2334305d39f0557e1cf779f9b6c38"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f1_f4_user_integration_build_02_attempt02/fdinfo.o",
+        "bytes": 2256,
+        "sha256": "09b6af9b5fa82ae8723b51d83244c85cd7b7f0a34ee0c4912fe29e19f2819ef0"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/08_fdinfo.o",
+        "bytes": 2256,
+        "sha256": "09b6af9b5fa82ae8723b51d83244c85cd7b7f0a34ee0c4912fe29e19f2819ef0"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f1_f4_user_integration_build_02_attempt02/card_native_calls.o",
+        "bytes": 6552,
+        "sha256": "91ab2f3e156a229bbe48bdb374ff77f8d7a6b08e593f9a760d39fcc51867a550"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/09_card_native_calls.o",
+        "bytes": 6552,
+        "sha256": "91ab2f3e156a229bbe48bdb374ff77f8d7a6b08e593f9a760d39fcc51867a550"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f1_f4_user_integration_build_02_attempt02/fs_native_linux.o",
+        "bytes": 6368,
+        "sha256": "3954f803ad8d02dbef8b3c690d5b12abb6480ae188ac113e5b9406f20c310dd3"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/10_fs_native_linux.o",
+        "bytes": 6368,
+        "sha256": "3954f803ad8d02dbef8b3c690d5b12abb6480ae188ac113e5b9406f20c310dd3"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f1_f4_user_integration_build_02_attempt02/movie.o",
+        "bytes": 14752,
+        "sha256": "2f4ea9f41b5ad8e17c9a7174ef1c43ae7be6d2ffb2b3b884373ac048f086c664"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/11_movie.o",
+        "bytes": 14752,
+        "sha256": "2f4ea9f41b5ad8e17c9a7174ef1c43ae7be6d2ffb2b3b884373ac048f086c664"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f1_f4_user_integration_build_02_attempt02/movie_linux.o",
+        "bytes": 2200,
+        "sha256": "4bbcffd60700bbcdc21cfb10e3de5af207b8be207d172c62c927d52d7c0e9f21"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/12_movie_linux.o",
+        "bytes": 2200,
+        "sha256": "4bbcffd60700bbcdc21cfb10e3de5af207b8be207d172c62c927d52d7c0e9f21"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f1_f4_user_integration_build_02_attempt02/native_jpeg82.o",
+        "bytes": 7192,
+        "sha256": "6b5d8ca176ea1fb9baedc40c5169e113ab70c934b9b16757cdebf7cd60af4fee"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/13_native_jpeg82.o",
+        "bytes": 7192,
+        "sha256": "6b5d8ca176ea1fb9baedc40c5169e113ab70c934b9b16757cdebf7cd60af4fee"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f1_f4_user_integration_build_02_attempt02/checked_stream02.o",
+        "bytes": 15928,
+        "sha256": "e8f6ce6d936585b27937bda041d2692b439748d355f4bcad320516d2365c7aaf"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/14_checked_stream02.o",
+        "bytes": 15928,
+        "sha256": "e8f6ce6d936585b27937bda041d2692b439748d355f4bcad320516d2365c7aaf"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_capture_menu_build_04/wrapper.o",
+        "bytes": 1120,
+        "sha256": "d68a9c9980a80601469ad5c65ed1bf7f580fdeabe58e8747dfe85ff7c02e2385"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/15_wrapper.o",
+        "bytes": 1120,
+        "sha256": "d68a9c9980a80601469ad5c65ed1bf7f580fdeabe58e8747dfe85ff7c02e2385"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_capture_menu_build_08_quality100/policy.o",
+        "bytes": 4688,
+        "sha256": "4ad53a81261b0f67924a3a0a8d313b16441b88415015d90c4997b5433deb94b1"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/16_policy.o",
+        "bytes": 4688,
+        "sha256": "4ad53a81261b0f67924a3a0a8d313b16441b88415015d90c4997b5433deb94b1"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_capture_menu_build_09_native_size/menu.o",
+        "bytes": 29736,
+        "sha256": "08e26be3923aafccd5d71f8142a824d5512e1c30a5292cba3a7112e816bbb6a1"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/17_menu.o",
+        "bytes": 29736,
+        "sha256": "08e26be3923aafccd5d71f8142a824d5512e1c30a5292cba3a7112e816bbb6a1"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_core_native_receipt_build_01_combined_decode/receipt.o",
+        "bytes": 24856,
+        "sha256": "9e43fd9332193d0bcbf6b0e2a1d6403295c4dc4cdc4e50f773ed9979ef10ae53"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/18_receipt.o",
+        "bytes": 24856,
+        "sha256": "9e43fd9332193d0bcbf6b0e2a1d6403295c4dc4cdc4e50f773ed9979ef10ae53"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_core_native_receipt_build_01_combined_decode/wrappers.o",
+        "bytes": 2424,
+        "sha256": "30e96b9a6fc672d87aa649bf9675076f935bd54002bb4cfedee35f1e9b0c7662"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/19_wrappers.o",
+        "bytes": 2424,
+        "sha256": "30e96b9a6fc672d87aa649bf9675076f935bd54002bb4cfedee35f1e9b0c7662"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_file_arena_build_01/native_linux.o",
+        "bytes": 4096,
+        "sha256": "7c9dd6489f2569341ec12dbbd09df9c53caa2404c66b74a79e1813724a0edc8b"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/20_native_linux.o",
+        "bytes": 4096,
+        "sha256": "7c9dd6489f2569341ec12dbbd09df9c53caa2404c66b74a79e1813724a0edc8b"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_file_arena_unique_build_02/arena02.o",
+        "bytes": 7872,
+        "sha256": "6e8283f8be6d2c6ddfbb07a8e8ddc70ca805d4d54dfb549402732f7350c7f83b"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/21_arena02.o",
+        "bytes": 7872,
+        "sha256": "6e8283f8be6d2c6ddfbb07a8e8ddc70ca805d4d54dfb549402732f7350c7f83b"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_gallery_source_snapshot_build_01/gallery.o",
+        "bytes": 9944,
+        "sha256": "8d7623195bf455569528c918ecf41a33b9cce4858a1842f2933e21ae5262defd"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/22_gallery.o",
+        "bytes": 9944,
+        "sha256": "8d7623195bf455569528c918ecf41a33b9cce4858a1842f2933e21ae5262defd"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_gallery_source_snapshot_build_01/native_factory.o",
+        "bytes": 3896,
+        "sha256": "101f6e78919464ea52abf20f11a8dc9acff671c10bf221121f9bca79f2de588c"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/23_native_factory.o",
+        "bytes": 3896,
+        "sha256": "101f6e78919464ea52abf20f11a8dc9acff671c10bf221121f9bca79f2de588c"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_init_repair_01/build/rtti.o",
+        "bytes": 11016,
+        "sha256": "0eae89a2b42f8822c470cbc9e7fcf5f2af5079f6de859fea96eb5c24ac63a22c"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/24_rtti.o",
+        "bytes": 11016,
+        "sha256": "0eae89a2b42f8822c470cbc9e7fcf5f2af5079f6de859fea96eb5c24ac63a22c"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_native_executor_build_01_final/native_calls.o",
+        "bytes": 4600,
+        "sha256": "07c3fefc4ede3977b97ef3a573ad504237c8ae25419a421120ed080e50f371f2"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/25_native_calls.o",
+        "bytes": 4600,
+        "sha256": "07c3fefc4ede3977b97ef3a573ad504237c8ae25419a421120ed080e50f371f2"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_native_executor_build_01_final/wait_wrapper.o",
+        "bytes": 936,
+        "sha256": "f7c422a502fab1d9f3ec3852f0b234497b4ea6786a9f11b6b35f62ab7b4d058b"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/26_wait_wrapper.o",
+        "bytes": 936,
+        "sha256": "f7c422a502fab1d9f3ec3852f0b234497b4ea6786a9f11b6b35f62ab7b4d058b"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_native_executor_build_03_attempt04/executor.o",
+        "bytes": 21744,
+        "sha256": "8e706214f800eab7be69f6e0841b007bcac0de890e1a8b129bbfadce9b4078e7"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/27_executor.o",
+        "bytes": 21744,
+        "sha256": "8e706214f800eab7be69f6e0841b007bcac0de890e1a8b129bbfadce9b4078e7"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_native_fs_unique_build_06/fs06.o",
+        "bytes": 21224,
+        "sha256": "3ae1c43101ae1f86a6ca5a3a4c1c1b94134c02acfb10274ababf09347df309cc"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/28_fs06.o",
+        "bytes": 21224,
+        "sha256": "3ae1c43101ae1f86a6ca5a3a4c1c1b94134c02acfb10274ababf09347df309cc"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_native_size_menu_01/build/size_menu.o",
+        "bytes": 13736,
+        "sha256": "23a99f83169e20f51b55e173cd85afcaa27f69bba994412dd9590aed5718784b"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/29_size_menu.o",
+        "bytes": 13736,
+        "sha256": "23a99f83169e20f51b55e173cd85afcaa27f69bba994412dd9590aed5718784b"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_save_coordinator_build_06/public_raw.o",
+        "bytes": 6320,
+        "sha256": "acb365497f2d62fa2287d950849dbc4c3be16c2dc2e7805f7f004bfa12594d66"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/30_public_raw.o",
+        "bytes": 6320,
+        "sha256": "acb365497f2d62fa2287d950849dbc4c3be16c2dc2e7805f7f004bfa12594d66"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_save_coordinator_build_08_attempt04/coordinator.o",
+        "bytes": 525976,
+        "sha256": "de4afb7d5a976c445ae79ab072db05a27d3a846c35be86ef7a26deb51a52d43b"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/31_coordinator.o",
+        "bytes": 525976,
+        "sha256": "de4afb7d5a976c445ae79ab072db05a27d3a846c35be86ef7a26deb51a52d43b"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_saved_raw_capture_build_01/directories_linux.o",
+        "bytes": 1576,
+        "sha256": "13e57aefcacd745e8d6ba1fd0881cf9485662c9812815a8d016f1dcbd90a5234"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/32_directories_linux.o",
+        "bytes": 1576,
+        "sha256": "13e57aefcacd745e8d6ba1fd0881cf9485662c9812815a8d016f1dcbd90a5234"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_saved_raw_capture_build_01/acquired_wrapper.o",
+        "bytes": 1320,
+        "sha256": "3f3364ab033edc9b21b917636cd90d6cc5a18600f45ff0048c7d5edd72071f47"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/33_acquired_wrapper.o",
+        "bytes": 1320,
+        "sha256": "3f3364ab033edc9b21b917636cd90d6cc5a18600f45ff0048c7d5edd72071f47"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_saved_raw_capture_build_03/capture.o",
+        "bytes": 9504,
+        "sha256": "9b4736c5d4deca564e6d81d48daf907a0f55abe6e6e4c95d80308832a621fc93"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/34_capture.o",
+        "bytes": 9504,
+        "sha256": "9b4736c5d4deca564e6d81d48daf907a0f55abe6e6e4c95d80308832a621fc93"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_saved_raw_capture_build_03/runtime.o",
+        "bytes": 28016,
+        "sha256": "615317389d189a52e12aabda7b81f99dbca75a54d242ce2b08d9f374b2373bbc"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/35_runtime.o",
+        "bytes": 28016,
+        "sha256": "615317389d189a52e12aabda7b81f99dbca75a54d242ce2b08d9f374b2373bbc"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_saved_raw_capture_build_03/native_factory.o",
+        "bytes": 6520,
+        "sha256": "183d601545de16ebc4e8f835452dc49a03916a19366d0d5674d74b0e612da2b1"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/36_native_factory.o",
+        "bytes": 6520,
+        "sha256": "183d601545de16ebc4e8f835452dc49a03916a19366d0d5674d74b0e612da2b1"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_source_dependencies_build_02/dependencies.o",
+        "bytes": 37288,
+        "sha256": "c97a270d635f15757b9eb9f9ee2c58b5d117bca7563d3fe92eb4818e7385c12b"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/37_dependencies.o",
+        "bytes": 37288,
+        "sha256": "c97a270d635f15757b9eb9f9ee2c58b5d117bca7563d3fe92eb4818e7385c12b"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_stream_export_build_04_attempt01/export_pixels.o",
+        "bytes": 2920,
+        "sha256": "942ebfb2f63806edfbd1839620b6fcbb7658bf38029cedab5ed424818532d481"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/38_export_pixels.o",
+        "bytes": 2920,
+        "sha256": "942ebfb2f63806edfbd1839620b6fcbb7658bf38029cedab5ed424818532d481"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_stream_export_build_04_attempt01/export_geometry.o",
+        "bytes": 2008,
+        "sha256": "faae3f7683fee14cc167540418f16c21b95b83501a606e39402fade7d5ef89b8"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/39_export_geometry.o",
+        "bytes": 2008,
+        "sha256": "faae3f7683fee14cc167540418f16c21b95b83501a606e39402fade7d5ef89b8"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_stream_export_build_04_attempt01/jpeg_export.o",
+        "bytes": 6360,
+        "sha256": "08f223e037ccc8e10f7cc268f7ba58da8d9e1ca9a82edf10241ce0184bf1be07"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/40_jpeg_export.o",
+        "bytes": 6360,
+        "sha256": "08f223e037ccc8e10f7cc268f7ba58da8d9e1ca9a82edf10241ce0184bf1be07"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f3_stream_export_build_04_attempt01/stream_export.o",
+        "bytes": 17912,
+        "sha256": "1ca79bffecbf3da333d28bffe26bab1276882ecd3c4bd87721e6afc3c016e23d"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/41_stream_export.o",
+        "bytes": 17912,
+        "sha256": "1ca79bffecbf3da333d28bffe26bab1276882ecd3c4bd87721e6afc3c016e23d"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f4_codec_cleanup_build_01/bounded_jpeg_1.o",
+        "bytes": 7136,
+        "sha256": "eb42e9623fdf2db40db6dfdefe7fada03a6e83598f75c2130ccaf000b278fc56"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/42_bounded_jpeg_1.o",
+        "bytes": 7136,
+        "sha256": "eb42e9623fdf2db40db6dfdefe7fada03a6e83598f75c2130ccaf000b278fc56"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f4_codec_cleanup_build_01/worker_1.o",
+        "bytes": 4384,
+        "sha256": "a386d27c866b8a9c0fa44aed35af12c83ec633277bfbf91343d7917111e798bb"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/43_worker_1.o",
+        "bytes": 4384,
+        "sha256": "a386d27c866b8a9c0fa44aed35af12c83ec633277bfbf91343d7917111e798bb"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f4_mkv_software_zero_build_01/native_mkv_1.o",
+        "bytes": 15584,
+        "sha256": "76e2a9a0b0fe124ef58ac0eab96d80fcba0e147391a2d6212c2cbf4073875b6a"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/44_native_mkv_1.o",
+        "bytes": 15584,
+        "sha256": "76e2a9a0b0fe124ef58ac0eab96d80fcba0e147391a2d6212c2cbf4073875b6a"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f4_native_diagnostics_build_04_final/entry.o",
+        "bytes": 11496,
+        "sha256": "ad3bd5a4d54b3b3fa6509bedc3d42ffb13965db7c574f5121d52333143acd670"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/45_entry.o",
+        "bytes": 11496,
+        "sha256": "ad3bd5a4d54b3b3fa6509bedc3d42ffb13965db7c574f5121d52333143acd670"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f4_native_diagnostics_build_04_final/menu.o",
+        "bytes": 30072,
+        "sha256": "b111f4cfbe930ae351466c93dacb9549d60d47737d945fb49ccb7fd07bf36a8c"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/46_menu.o",
+        "bytes": 30072,
+        "sha256": "b111f4cfbe930ae351466c93dacb9549d60d47737d945fb49ccb7fd07bf36a8c"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f4_native_session_build_05/session.o",
+        "bytes": 11232,
+        "sha256": "c59febd0982fb97a222ee1747fae77cebdadaf4580e7246cab941aa528942199"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/47_session.o",
+        "bytes": 11232,
+        "sha256": "c59febd0982fb97a222ee1747fae77cebdadaf4580e7246cab941aa528942199"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f4_native_source_build_02_release_complete/thread_calls.o",
+        "bytes": 3488,
+        "sha256": "174ebee0de855dd76b90077f5e8c9c19aab739da08997355fc5ad66446039ce8"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/48_thread_calls.o",
+        "bytes": 3488,
+        "sha256": "174ebee0de855dd76b90077f5e8c9c19aab739da08997355fc5ad66446039ce8"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f4_native_source_build_02_release_complete/menu_native_calls.o",
+        "bytes": 3408,
+        "sha256": "b8927630133120ed4e2dabc7b73eccab78570bb5904ee979f1aec5c4de369fee"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/49_menu_native_calls.o",
+        "bytes": 3408,
+        "sha256": "b8927630133120ed4e2dabc7b73eccab78570bb5904ee979f1aec5c4de369fee"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f4_native_source_build_05_final02/source.o",
+        "bytes": 22480,
+        "sha256": "b2993d3c4207b469ad89e39e2649869e1f8300ca380092eb6bc529a3f0a7d8c3"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/50_source.o",
+        "bytes": 22480,
+        "sha256": "b2993d3c4207b469ad89e39e2649869e1f8300ca380092eb6bc529a3f0a7d8c3"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f4_native_source_build_05_final02/native_calls.o",
+        "bytes": 6032,
+        "sha256": "dffe33acf1c43f24be20a79cf675316f4e101b392992e1cf9d9c8bebb9380f2a"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/51_native_calls.o",
+        "bytes": 6032,
+        "sha256": "dffe33acf1c43f24be20a79cf675316f4e101b392992e1cf9d9c8bebb9380f2a"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f4_start_repair_build_05/movie_binding.o",
+        "bytes": 7176,
+        "sha256": "f28f8dd6c53cfbe5d532049adbb45554154311bf84944884625ffda3c9393c2a"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/52_movie_binding.o",
+        "bytes": 7176,
+        "sha256": "f28f8dd6c53cfbe5d532049adbb45554154311bf84944884625ffda3c9393c2a"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/f4_xqd_default_build_01/lv_settings_wrapper.o",
+        "bytes": 1360,
+        "sha256": "354e590b1972cdd9456d24c7c86cbee5938ada19aaffcd32a936d8930485e357"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/53_lv_settings_wrapper.o",
+        "bytes": 1360,
+        "sha256": "354e590b1972cdd9456d24c7c86cbee5938ada19aaffcd32a936d8930485e357"
+      }
+    },
+    {
+      "original": {
+        "path": "analysis/firmware/native_activity_build_01/activity.o",
+        "bytes": 3688,
+        "sha256": "48e61243242abd2b78534581f9e6d6a19d3fa377b90bdaff1774f1a11d4cec3d"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/54_activity.o",
+        "bytes": 3688,
+        "sha256": "48e61243242abd2b78534581f9e6d6a19d3fa377b90bdaff1774f1a11d4cec3d"
+      }
+    },
+    {
+      "original": {
+        "path": "evidence/f3_native_render_02/check07/adapter_aarch64_1.o",
+        "bytes": 9152,
+        "sha256": "ecca32cddd946f020eec5a7587061d65ff44e9c442a6e558ac4119464b01d885"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/55_adapter_aarch64_1.o",
+        "bytes": 9152,
+        "sha256": "ecca32cddd946f020eec5a7587061d65ff44e9c442a6e558ac4119464b01d885"
+      }
+    },
+    {
+      "original": {
+        "path": "evidence/f3_native_render_02/check07/completion_aarch64_1.o",
+        "bytes": 4704,
+        "sha256": "4d2fd728119e8e3eb9a56f44c5a4697d631e3b8d757632e69feac384cc9bedc9"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/56_completion_aarch64_1.o",
+        "bytes": 4704,
+        "sha256": "4d2fd728119e8e3eb9a56f44c5a4697d631e3b8d757632e69feac384cc9bedc9"
+      }
+    },
+    {
+      "original": {
+        "path": "evidence/f3_native_render_02/check07/decode_receipt_aarch64_1.o",
+        "bytes": 25760,
+        "sha256": "5073cb064ad2673522b509fdd32cf7718e07818c46ccd148b4e7cff229661ba4"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/57_decode_receipt_aarch64_1.o",
+        "bytes": 25760,
+        "sha256": "5073cb064ad2673522b509fdd32cf7718e07818c46ccd148b4e7cff229661ba4"
+      }
+    },
+    {
+      "original": {
+        "path": "evidence/f3_native_render_02/check07/wrappers_aarch64_1.o",
+        "bytes": 2776,
+        "sha256": "7173eec1fc83a764047134e9a0a9e4794f8ab8e8179eacf9e73923b6bddd9a81"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/58_wrappers_aarch64_1.o",
+        "bytes": 2776,
+        "sha256": "7173eec1fc83a764047134e9a0a9e4794f8ab8e8179eacf9e73923b6bddd9a81"
+      }
+    },
+    {
+      "original": {
+        "path": "evidence/f3_native_render_02/check07/native_binding_aarch64_1.o",
+        "bytes": 9000,
+        "sha256": "1315713e7b620bbb19be63dd95504b9bad6848dacfd73a8addb2b95a05219012"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/59_native_binding_aarch64_1.o",
+        "bytes": 9000,
+        "sha256": "1315713e7b620bbb19be63dd95504b9bad6848dacfd73a8addb2b95a05219012"
+      }
+    },
+    {
+      "original": {
+        "path": "evidence/f3_native_render_02/check07/native_file_ops_aarch64_1.o",
+        "bytes": 5624,
+        "sha256": "802b98d8ba747af2d684e85110a441fb2b74e5c57ac727bb366f54e9a0a742f9"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/60_native_file_ops_aarch64_1.o",
+        "bytes": 5624,
+        "sha256": "802b98d8ba747af2d684e85110a441fb2b74e5c57ac727bb366f54e9a0a742f9"
+      }
+    },
+    {
+      "original": {
+        "path": "evidence/f3_native_render_02/check07/persistent_pool_aarch64_1.o",
+        "bytes": 8240,
+        "sha256": "849b90300ee338a4d383d3649999687b6e7087e3cfb999e0b17e93cf122032bf"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/61_persistent_pool_aarch64_1.o",
+        "bytes": 8240,
+        "sha256": "849b90300ee338a4d383d3649999687b6e7087e3cfb999e0b17e93cf122032bf"
+      }
+    },
+    {
+      "original": {
+        "path": "evidence/f3_raw_file_source_01/reader_stage_aarch64_1.o",
+        "bytes": 30552,
+        "sha256": "708a129a32d40bbc77daa0b012b018ef999b89fb7451ed15b9188ba5b98caac4"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/62_reader_stage_aarch64_1.o",
+        "bytes": 30552,
+        "sha256": "708a129a32d40bbc77daa0b012b018ef999b89fb7451ed15b9188ba5b98caac4"
+      }
+    },
+    {
+      "original": {
+        "path": "evidence/f3_raw_file_source_01/source_builder_aarch64_1.o",
+        "bytes": 91472,
+        "sha256": "8477fd03f8fd629194d3b84eb15552efa2a8bc032b4daaff5bab1253beb142c3"
+      },
+      "fresh": {
+        "path": "analysis/firmware/jpeg_repair_reproduce_dev_02/inputs/63_source_builder_aarch64_1.o",
+        "bytes": 91472,
+        "sha256": "8477fd03f8fd629194d3b84eb15552efa2a8bc032b4daaff5bab1253beb142c3"
+      }
+    }
+  ],
+  "fresh_matching_object_count": 63,
+  "all_fresh_objects_match_frozen_bytes": true,
+  "target_executed": false,
+  "camera_accessed": false
+}

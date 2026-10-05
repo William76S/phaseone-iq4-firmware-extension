@@ -1,0 +1,75 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPChannel.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000000990 <P1::IQP::Channel::SendOpenRequest()>:
+     990: 55                           	pushq	%rbp
+     991: 31 c0                        	xorl	%eax, %eax
+     993: 48 89 fd                     	movq	%rdi, %rbp
+     996: b9 1f 00 00 00               	movl	$0x1f, %ecx
+     99b: 48 81 ec 40 01 00 00         	subq	$0x140, %rsp            # imm = 0x140
+     9a2: 0f b7 b7 a0 00 00 00         	movzwl	0xa0(%rdi), %esi
+     9a9: 48 8d 54 24 48               	leaq	0x48(%rsp), %rdx
+     9ae: c7 44 24 40 aa bb cc dd      	movl	$0xddccbbaa, 0x40(%rsp) # imm = 0xDDCCBBAA
+     9b6: 48 89 d7                     	movq	%rdx, %rdi
+     9b9: ba 32 00 00 00               	movl	$0x32, %edx
+     9be: 66 89 74 24 46               	movw	%si, 0x46(%rsp)
+     9c3: 48 8d b5 b6 00 00 00         	leaq	0xb6(%rbp), %rsi
+     9ca: f3 48 ab                     	rep		stosq	%rax, %es:(%rdi)
+     9cd: b8 00 10 00 00               	movl	$0x1000, %eax           # imm = 0x1000
+     9d2: 66 89 54 24 48               	movw	%dx, 0x48(%rsp)
+     9d7: b9 05 00 00 00               	movl	$0x5, %ecx
+     9dc: 66 89 44 24 44               	movw	%ax, 0x44(%rsp)
+     9e1: 48 8d 54 24 20               	leaq	0x20(%rsp), %rdx
+     9e6: bf 20 00 00 00               	movl	$0x20, %edi
+     9eb: 48 b8 00 00 00 00 ff ff 01 00	movabsq	$0x1ffff00000000, %rax  # imm = 0x1FFFF00000000
+     9f5: 48 89 44 24 50               	movq	%rax, 0x50(%rsp)
+     9fa: 48 b8 10 27 00 00 d0 07 00 00	movabsq	$0x7d000002710, %rax    # imm = 0x7D000002710
+     a04: 48 89 44 24 58               	movq	%rax, 0x58(%rsp)
+     a09: 0f b7 45 38                  	movzwl	0x38(%rbp), %eax
+     a0d: c6 44 24 4a be               	movb	$-0x42, 0x4a(%rsp)
+     a12: 66 89 44 24 60               	movw	%ax, 0x60(%rsp)
+     a17: e8 00 00 00 00               	callq	0xa1c <P1::IQP::Channel::SendOpenRequest()+0x8c>
+		0000000000000a18:  R_X86_64_PLT32	__atomic_load-0x4
+     a1c: 66 0f 6f 4c 24 20            	movdqa	0x20(%rsp), %xmm1
+     a22: 66 0f 6f 44 24 30            	movdqa	0x30(%rsp), %xmm0
+     a28: 0f b6 85 b1 00 00 00         	movzbl	0xb1(%rbp), %eax
+     a2f: 0f 29 0c 24                  	movaps	%xmm1, (%rsp)
+     a33: 0f 29 44 24 10               	movaps	%xmm0, 0x10(%rsp)
+     a38: 0f 11 4c 24 62               	movups	%xmm1, 0x62(%rsp)
+     a3d: 0f 11 44 24 72               	movups	%xmm0, 0x72(%rsp)
+     a42: 84 c0                        	testb	%al, %al
+     a44: 74 05                        	je	0xa4b <P1::IQP::Channel::SendOpenRequest()+0xbb>
+     a46: 83 4c 24 50 01               	orl	$0x1, 0x50(%rsp)
+     a4b: 0f b6 7c 24 44               	movzbl	0x44(%rsp), %edi
+     a50: e8 00 00 00 00               	callq	0xa55 <P1::IQP::Channel::SendOpenRequest()+0xc5>
+		0000000000000a51:  R_X86_64_PLT32	P1::IQP::ChannelTransport::GetPacketTypeString(P1::IQP::ChannelProtocol::EnumChannelPacket)-0x4
+     a55: 0f b6 b5 a0 00 00 00         	movzbl	0xa0(%rbp), %esi
+     a5c: 0f b6 95 a1 00 00 00         	movzbl	0xa1(%rbp), %edx
+     a63: 48 8d 3d 00 00 00 00         	leaq	(%rip), %rdi            # 0xa6a <P1::IQP::Channel::SendOpenRequest()+0xda>
+		0000000000000a66:  R_X86_64_PC32	.LC21-0x4
+     a6a: 48 89 c1                     	movq	%rax, %rcx
+     a6d: 31 c0                        	xorl	%eax, %eax
+     a6f: e8 00 00 00 00               	callq	0xa74 <P1::IQP::Channel::SendOpenRequest()+0xe4>
+		0000000000000a70:  R_X86_64_PLT32	P1::Universal::LogMsgInfo(wchar_t const*, ...)-0x4
+     a74: 48 8b bd a8 00 00 00         	movq	0xa8(%rbp), %rdi
+     a7b: 48 8d 74 24 40               	leaq	0x40(%rsp), %rsi
+     a80: e8 00 00 00 00               	callq	0xa85 <P1::IQP::Channel::SendOpenRequest()+0xf5>
+		0000000000000a81:  R_X86_64_PLT32	P1::IQP::ChannelTransport::WritePacket(P1::IQP::ChannelProtocol::CommonPacketHeader const&)-0x4
+     a85: 85 c0                        	testl	%eax, %eax
+     a87: 75 1f                        	jne	0xaa8 <P1::IQP::Channel::SendOpenRequest()+0x118>
+     a89: 48 89 ef                     	movq	%rbp, %rdi
+     a8c: be 02 00 00 00               	movl	$0x2, %esi
+     a91: e8 00 00 00 00               	callq	0xa96 <P1::IQP::Channel::SendOpenRequest()+0x106>
+		0000000000000a92:  R_X86_64_PLT32	P1::IQP::Channel::SetState(P1::IQP::ChannelProtocol::EnumChannelState)-0x4
+     a96: 48 81 c4 40 01 00 00         	addq	$0x140, %rsp            # imm = 0x140
+     a9d: b8 01 00 00 00               	movl	$0x1, %eax
+     aa2: 5d                           	popq	%rbp
+     aa3: c3                           	retq
+     aa4: 0f 1f 40 00                  	nopl	(%rax)
+     aa8: 48 89 ef                     	movq	%rbp, %rdi
+     aab: 31 f6                        	xorl	%esi, %esi
+     aad: e8 00 00 00 00               	callq	0xab2 <P1::IQP::Channel::SendOpenRequest()+0x122>
+		0000000000000aae:  R_X86_64_PLT32	P1::IQP::Channel::SetState(P1::IQP::ChannelProtocol::EnumChannelState)-0x4

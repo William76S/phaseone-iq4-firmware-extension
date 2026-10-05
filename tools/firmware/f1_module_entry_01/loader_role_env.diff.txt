@@ -1,0 +1,33 @@
+--- frozen/f4_ram_entry_02/entry.c
++++ candidate/RAM_F1_observe_role/entry.c
+@@ -220,7 +220,7 @@
+  if(!status("armed_waiting_for_separately_verified_native_user_exit"))return fail("armed_status_failed_supervisor_deadline_still_active");
+  puts("{\"ram_entry\":2,\"result\":\"armed\",\"user_signals\":0,\"native_exit_requested\":false}");return 0;
+ }
+-static int load_environment(char bytes[16384],char *env[258],size_t *count){
++static int load_environment(char bytes[16384],char *env[259],size_t *count){
+  struct stat a,b;if(lstat(S_PATH("env.1"),&a)||lstat(S_PATH("env.2"),&b)||!S_ISREG(a.st_mode)||!S_ISREG(b.st_mode)||a.st_uid!=0||a.st_gid!=0||b.st_uid!=0||b.st_gid!=0||(a.st_mode&07777)!=0600||(b.st_mode&07777)!=0600||a.st_nlink!=1||b.st_nlink!=1)return 0;
+  char second[16384];size_t n,z;if(!read_bounded(S_PATH("env.1"),bytes,16384,&n)||!read_bounded(S_PATH("env.2"),second,sizeof(second),&z)||n!=z||memcmp(bytes,second,n)||!env_valid(bytes,n))return 0;
+  size_t off=0,i=0;while(off<n){env[i++]=bytes+off;off+=strlen(bytes+off)+1;}env[i]=NULL;*count=i;return 1;
+@@ -229,17 +229,19 @@
+  /* No source/owner identity condition may move this restoration below exec. */
+  if(!restore())return fail("launch_restore_failed_no_user_exec");
+  if(!runner_parent_gate()||!old_user_gone()||!flags_gate()||!user_file_gate())return fail("launch_owner_or_old_user_still_alive_refused");
+- char bytes[16384];char *env[258];size_t count;if(!load_environment(bytes,env,&count))return fail("private_environment_snapshot_refused_no_user_exec");
++ char bytes[16384];char *env[259];size_t count;if(!load_environment(bytes,env,&count))return fail("private_environment_snapshot_refused_no_user_exec");
+  char *argv[]={(char*)F4_ARGV0,NULL};
+  int fd=-1;int preload=absent(S_PATH("disabled"))&&module_gate()&&tool_gate()&&fcntl(198,F_GETFD)<0&&errno==EBADF;
++ for(size_t i=0;i<count;i++)if(!strncmp(env[i],"IQ4_F1_MODULE_ENTRY_01=",sizeof("IQ4_F1_MODULE_ENTRY_01=")-1))preload=0;
+  if(preload){fd=connect_control();if(fd<0||!ack(fd,"F4L2\n"))preload=0;}
+  int owned_198=0;
+  if(preload){if(dup2(fd,198)<0)preload=0;else{owned_198=1;if(fcntl(198,F_SETFD,0)<0)preload=0;}}
+  if(fd>=0&&fd!=198)close(fd);
+  if(!preload&&owned_198){close(198);owned_198=0;}
+  static char setting[]="LD_PRELOAD=" F4_MODULE;
++ static char observe_setting[]="IQ4_F1_MODULE_ENTRY_01=OBSERVE";
+  umask(F4_USER_UMASK);
+- if(preload){env[count]=setting;env[count+1]=NULL;execve(F4_ARGV0,argv,env);env[count]=NULL;if(owned_198)close(198);}
++ if(preload){env[count]=setting;env[count+1]=observe_setting;env[count+2]=NULL;execve(F4_ARGV0,argv,env);env[count]=NULL;if(owned_198)close(198);}
+  /* Module/handshake/loader exec syscall failure: same untouched User, original
+   * environment. A fatal loader/constructor then falls back via original init.
+   */

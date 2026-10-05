@@ -1,0 +1,90 @@
+analysis/firmware/f4_ram_loader_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   85594:      	adrp	x1, 0xbe000
+   85598:      	stp	x19, x20, [sp, #-0x40]!
+   8559c:      	mov	x19, x0
+   855a0:      	ldr	x1, [x1, #0xf68]
+   855a4:      	stp	x21, x30, [sp, #0x10]
+   855a8:      	ldr	x2, [x1]
+   855ac:      	str	x2, [sp, #0x38]
+   855b0:      	mov	x2, #0x0                // =0
+   855b4:      	str	x0, [sp, #0x28]
+   855b8:      	mov	w0, #0x0                // =0
+   855bc:      	bl	0xe5f8 <.text+0x2e58>
+   855c0:      	ldrb	w0, [x19, #0xc]
+   855c4:      	tbz	w0, #0x4, 0x85618 <.text+0x79e78>
+   855c8:      	bl	0xa700 <fork@plt>
+   855cc:      	mov	w19, w0
+   855d0:      	tbz	w19, #0x1f, 0x855e4 <.text+0x79e44>
+   855d4:      	adrp	x1, 0xa3000
+   855d8:      	mov	w0, #0x3                // =3
+   855dc:      	add	x1, x1, #0x2c0
+   855e0:      	bl	0x85064 <.text+0x798c4>
+   855e4:      	cbz	w19, 0x85628 <.text+0x79e88>
+   855e8:      	mov	w0, #0x1                // =1
+   855ec:      	bl	0xe5f8 <.text+0x2e58>
+   855f0:      	adrp	x1, 0xbe000
+   855f4:      	mov	w0, w19
+   855f8:      	ldr	x1, [x1, #0xf68]
+   855fc:      	ldr	x2, [sp, #0x38]
+   85600:      	ldr	x1, [x1]
+   85604:      	eor	x1, x2, x1
+   85608:      	cbnz	x1, 0x856e4 <.text+0x79f44>
+   8560c:      	ldp	x21, x30, [sp, #0x10]
+   85610:      	ldp	x19, x20, [sp], #0x40
+   85614:      	ret
+   85618:      	bl	0xaab0 <vfork@plt>
+   8561c:      	mov	w19, w0
+   85620:      	tbnz	w19, #0x1f, 0x855d4 <.text+0x79e34>
+   85624:      	b	0x855e4 <.text+0x79e44>
+   85628:      	mov	x1, #0x0                // =0
+   8562c:      	mov	w0, #0x940e             // =37902
+   85630:      	movk	w0, #0x18, lsl #16
+   85634:      	bl	0xe654 <.text+0x2eb4>
+   85638:      	mov	w0, #0x1                // =1
+   8563c:      	bl	0xe5f8 <.text+0x2e58>
+   85640:      	bl	0xb400 <setsid@plt>
+   85644:      	ldr	x0, [sp, #0x28]
+   85648:      	add	x20, x0, #0xd
+   8564c:      	mov	x0, x20
+   85650:      	bl	0x853ac <.text+0x79c0c>
+   85654:      	cbnz	w0, 0x85660 <.text+0x79ec0>
+   85658:      	mov	w0, #0x1                // =1
+   8565c:      	bl	0xa2d0 <_exit@plt>
+   85660:      	ldr	x0, [sp, #0x28]
+   85664:      	ldrb	w0, [x0, #0xc]
+   85668:      	tbz	w0, #0x4, 0x856ac <.text+0x79f0c>
+   8566c:      	adrp	x1, 0xab000
+   85670:      	add	x21, sp, #0x37
+   85674:      	mov	x19, #0x1               // =1
+   85678:      	mov	x2, #0x2e               // =46
+   8567c:      	add	x1, x1, #0x80e
+   85680:      	mov	w0, #0x1                // =1
+   85684:      	bl	0xe3e0 <.text+0x2c40>
+   85688:      	mov	x2, x19
+   8568c:      	mov	x1, x21
+   85690:      	mov	w0, #0x0                // =0
+   85694:      	bl	0xe458 <.text+0x2cb8>
+   85698:      	cmp	x0, #0x1
+   8569c:      	b.ne	0x856ac <.text+0x79f0c>
+   856a0:      	ldrb	w0, [sp, #0x37]
+   856a4:      	cmp	w0, #0xa
+   856a8:      	b.ne	0x85688 <.text+0x79ee8>
+   856ac:      	ldr	x0, [sp, #0x28]
+   856b0:      	add	x19, x0, #0x2d
+   856b4:      	bl	0xa870 <getpid@plt>
+   856b8:      	mov	w2, w0
+   856bc:      	mov	x3, x20
+   856c0:      	mov	x4, x19
+   856c4:      	adrp	x1, 0xa3000
+   856c8:      	add	x1, x1, #0x2d0
+   856cc:      	mov	w0, #0x1                // =1
+   856d0:      	bl	0x85064 <.text+0x798c4>
+   856d4:      	mov	x0, x19
+   856d8:      	bl	0x8541c <.text+0x79c7c>
+   856dc:      	mov	w0, #-0x1               // =-1
+   856e0:      	bl	0xa2d0 <_exit@plt>
+   856e4:      	bl	0xac80 <__stack_chk_fail@plt>

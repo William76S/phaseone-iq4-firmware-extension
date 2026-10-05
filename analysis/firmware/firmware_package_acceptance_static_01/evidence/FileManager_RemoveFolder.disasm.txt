@@ -1,0 +1,48 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  74f74c:      	stp	x29, x30, [sp, #-0x40]!
+  74f750:      	mov	x29, sp
+  74f754:      	str	x0, [sp, #0x18]
+  74f758:      	str	w1, [sp, #0x14]
+  74f75c:      	ldr	w0, [sp, #0x14]
+  74f760:      	cmn	w0, #0x1
+  74f764:      	b.ne	0x74f770 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x35a44>
+  74f768:      	mov	w0, #0x0                // =0
+  74f76c:      	b	0x74f7e8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x35abc>
+  74f770:      	ldr	w1, [sp, #0x14]
+  74f774:      	ldr	x0, [sp, #0x18]
+  74f778:      	bl	0x74f5dc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x358b0>
+  74f77c:      	and	w0, w0, #0xff
+  74f780:      	strb	w0, [sp, #0x3f]
+  74f784:      	ldrb	w0, [sp, #0x3f]
+  74f788:      	eor	w0, w0, #0x1
+  74f78c:      	and	w0, w0, #0xff
+  74f790:      	cmp	w0, #0x0
+  74f794:      	b.eq	0x74f7a0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x35a74>
+  74f798:      	mov	w0, #0x0                // =0
+  74f79c:      	b	0x74f7e8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x35abc>
+  74f7a0:      	mov	w2, #0x1                // =1
+  74f7a4:      	mov	w1, #0x0                // =0
+  74f7a8:      	ldr	x0, [sp, #0x18]
+  74f7ac:      	bl	0x74e454 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x34728>
+  74f7b0:      	str	x0, [sp, #0x30]
+  74f7b4:      	ldr	w0, [sp, #0x14]
+  74f7b8:      	bl	0x74e260 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x34534>
+  74f7bc:      	str	x0, [sp, #0x28]
+  74f7c0:      	ldr	x0, [sp, #0x30]
+  74f7c4:      	ldr	x0, [x0]
+  74f7c8:      	add	x0, x0, #0x58
+  74f7cc:      	ldr	x2, [x0]
+  74f7d0:      	ldr	x1, [sp, #0x28]
+  74f7d4:      	ldr	x0, [sp, #0x30]
+  74f7d8:      	blr	x2
+  74f7dc:      	and	w0, w0, #0xff
+  74f7e0:      	strb	w0, [sp, #0x3f]
+  74f7e4:      	ldrb	w0, [sp, #0x3f]
+  74f7e8:      	ldp	x29, x30, [sp], #0x40
+  74f7ec:      	ret

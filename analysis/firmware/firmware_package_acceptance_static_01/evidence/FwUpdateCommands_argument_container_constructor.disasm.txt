@@ -1,0 +1,192 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006ee080 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_>:
+  6f7794:      	stp	x29, x30, [sp, #-0xd0]!
+  6f7798:      	mov	x29, sp
+  6f779c:      	str	x0, [sp, #0x38]
+  6f77a0:      	str	w1, [sp, #0x34]
+  6f77a4:      	str	x2, [sp, #0x28]
+  6f77a8:      	str	w3, [sp, #0x30]
+  6f77ac:      	str	x4, [sp, #0x20]
+  6f77b0:      	str	x5, [sp, #0x18]
+  6f77b4:      	str	w6, [sp, #0x14]
+  6f77b8:      	str	w7, [sp, #0x10]
+  6f77bc:      	ldr	w0, [sp, #0x34]
+  6f77c0:      	cmp	w0, #0x3
+  6f77c4:      	b.eq	0x6f7a60 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x99e0>
+  6f77c8:      	ldr	w0, [sp, #0x34]
+  6f77cc:      	cmp	w0, #0x3
+  6f77d0:      	b.hi	0x6f77f0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x9770>
+  6f77d4:      	ldr	w0, [sp, #0x34]
+  6f77d8:      	cmp	w0, #0x1
+  6f77dc:      	b.eq	0x6f7854 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x97d4>
+  6f77e0:      	ldr	w0, [sp, #0x34]
+  6f77e4:      	cmp	w0, #0x1
+  6f77e8:      	b.hi	0x6f7958 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x98d8>
+  6f77ec:      	b	0x6f7818 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x9798>
+  6f77f0:      	ldr	w0, [sp, #0x34]
+  6f77f4:      	cmp	w0, #0x5
+  6f77f8:      	b.eq	0x6f79d8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x9958>
+  6f77fc:      	ldr	w0, [sp, #0x34]
+  6f7800:      	cmp	w0, #0x5
+  6f7804:      	b.lo	0x6f7994 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x9914>
+  6f7808:      	ldr	w0, [sp, #0x34]
+  6f780c:      	cmp	w0, #0x6
+  6f7810:      	b.eq	0x6f7a1c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x999c>
+  6f7814:      	b	0x6f7a6c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x99ec>
+  6f7818:      	adrp	x0, 0xc1b000
+  6f781c:      	add	x0, x0, #0x178
+  6f7820:      	str	x0, [sp, #0xc0]
+  6f7824:      	adrp	x0, 0xc1b000
+  6f7828:      	add	x0, x0, #0x180
+  6f782c:      	str	x0, [sp, #0xc8]
+  6f7830:      	ldr	x0, [sp, #0x38]
+  6f7834:      	add	x1, sp, #0xc0
+  6f7838:      	ldr	w6, [sp, #0x10]
+  6f783c:      	ldr	x5, [sp, #0x20]
+  6f7840:      	ldr	w4, [sp, #0x14]
+  6f7844:      	ldr	x3, [sp, #0x18]
+  6f7848:      	mov	w2, #0x2                // =2
+  6f784c:      	bl	0x73f4bc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x25790>
+  6f7850:      	b	0x6f7a6c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x99ec>
+  6f7854:      	ldr	w0, [sp, #0x30]
+  6f7858:      	cmp	w0, #0x1
+  6f785c:      	b.ne	0x6f78a4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x9824>
+  6f7860:      	adrp	x0, 0xc1b000
+  6f7864:      	add	x0, x0, #0x1d8
+  6f7868:      	add	x2, sp, #0xa8
+  6f786c:      	mov	x3, x0
+  6f7870:      	ldp	x0, x1, [x3]
+  6f7874:      	stp	x0, x1, [x2]
+  6f7878:      	ldr	x0, [x3, #0x10]
+  6f787c:      	str	x0, [x2, #0x10]
+  6f7880:      	ldr	x0, [sp, #0x38]
+  6f7884:      	add	x1, sp, #0xa8
+  6f7888:      	ldr	w6, [sp, #0x10]
+  6f788c:      	ldr	x5, [sp, #0x20]
+  6f7890:      	ldr	w4, [sp, #0x14]
+  6f7894:      	ldr	x3, [sp, #0x18]
+  6f7898:      	mov	w2, #0x3                // =3
+  6f789c:      	bl	0x73f4bc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x25790>
+  6f78a0:      	b	0x6f7a68 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x99e8>
+  6f78a4:      	ldr	w0, [sp, #0x30]
+  6f78a8:      	cmp	w0, #0x2
+  6f78ac:      	b.ne	0x6f7a68 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x99e8>
+  6f78b0:      	ldr	x4, [sp, #0x28]
+  6f78b4:      	ldr	w0, [sp, #0x30]
+  6f78b8:      	sub	w1, w0, #0x1
+  6f78bc:      	mov	w3, #0x0                // =0
+  6f78c0:      	adrp	x0, 0xc1b000
+  6f78c4:      	add	x2, x0, #0x188
+  6f78c8:      	mov	x0, x4
+  6f78cc:      	bl	0x7408d4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x26ba8>
+  6f78d0:      	and	w0, w0, #0xff
+  6f78d4:      	cmp	w0, #0x0
+  6f78d8:      	b.ne	0x6f7908 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x9888>
+  6f78dc:      	ldr	x4, [sp, #0x28]
+  6f78e0:      	ldr	w0, [sp, #0x30]
+  6f78e4:      	sub	w1, w0, #0x1
+  6f78e8:      	mov	w3, #0x0                // =0
+  6f78ec:      	adrp	x0, 0xc1b000
+  6f78f0:      	add	x2, x0, #0x190
+  6f78f4:      	mov	x0, x4
+  6f78f8:      	bl	0x7408d4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x26ba8>
+  6f78fc:      	and	w0, w0, #0xff
+  6f7900:      	cmp	w0, #0x0
+  6f7904:      	b.eq	0x6f7910 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x9890>
+  6f7908:      	mov	w0, #0x1                // =1
+  6f790c:      	b	0x6f7914 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x9894>
+  6f7910:      	mov	w0, #0x0                // =0
+  6f7914:      	cmp	w0, #0x0
+  6f7918:      	b.eq	0x6f7a68 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x99e8>
+  6f791c:      	adrp	x0, 0xc1b000
+  6f7920:      	add	x0, x0, #0x198
+  6f7924:      	str	x0, [sp, #0x98]
+  6f7928:      	adrp	x0, 0xc1b000
+  6f792c:      	add	x0, x0, #0x1a0
+  6f7930:      	str	x0, [sp, #0xa0]
+  6f7934:      	ldr	x0, [sp, #0x38]
+  6f7938:      	add	x1, sp, #0x98
+  6f793c:      	ldr	w6, [sp, #0x10]
+  6f7940:      	ldr	x5, [sp, #0x20]
+  6f7944:      	ldr	w4, [sp, #0x14]
+  6f7948:      	ldr	x3, [sp, #0x18]
+  6f794c:      	mov	w2, #0x2                // =2
+  6f7950:      	bl	0x73f4bc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x25790>
+  6f7954:      	b	0x6f7a68 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x99e8>
+  6f7958:      	adrp	x0, 0xc1b000
+  6f795c:      	add	x0, x0, #0x1a8
+  6f7960:      	str	x0, [sp, #0x88]
+  6f7964:      	adrp	x0, 0xc1b000
+  6f7968:      	add	x0, x0, #0x180
+  6f796c:      	str	x0, [sp, #0x90]
+  6f7970:      	ldr	x0, [sp, #0x38]
+  6f7974:      	add	x1, sp, #0x88
+  6f7978:      	ldr	w6, [sp, #0x10]
+  6f797c:      	ldr	x5, [sp, #0x20]
+  6f7980:      	ldr	w4, [sp, #0x14]
+  6f7984:      	ldr	x3, [sp, #0x18]
+  6f7988:      	mov	w2, #0x2                // =2
+  6f798c:      	bl	0x73f4bc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x25790>
+  6f7990:      	b	0x6f7a6c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x99ec>
+  6f7994:      	adrp	x0, 0xc1b000
+  6f7998:      	add	x0, x0, #0x200
+  6f799c:      	add	x2, sp, #0x70
+  6f79a0:      	mov	x3, x0
+  6f79a4:      	ldp	x0, x1, [x3]
+  6f79a8:      	stp	x0, x1, [x2]
+  6f79ac:      	ldr	x0, [x3, #0x10]
+  6f79b0:      	str	x0, [x2, #0x10]
+  6f79b4:      	ldr	x0, [sp, #0x38]
+  6f79b8:      	add	x1, sp, #0x70
+  6f79bc:      	ldr	w6, [sp, #0x10]
+  6f79c0:      	ldr	x5, [sp, #0x20]
+  6f79c4:      	ldr	w4, [sp, #0x14]
+  6f79c8:      	ldr	x3, [sp, #0x18]
+  6f79cc:      	mov	w2, #0x3                // =3
+  6f79d0:      	bl	0x73f4bc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x25790>
+  6f79d4:      	b	0x6f7a6c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x99ec>
+  6f79d8:      	adrp	x0, 0xc1b000
+  6f79dc:      	add	x0, x0, #0x288
+  6f79e0:      	add	x2, sp, #0x58
+  6f79e4:      	mov	x3, x0
+  6f79e8:      	ldp	x0, x1, [x3]
+  6f79ec:      	stp	x0, x1, [x2]
+  6f79f0:      	ldr	x0, [x3, #0x10]
+  6f79f4:      	str	x0, [x2, #0x10]
+  6f79f8:      	ldr	x0, [sp, #0x38]
+  6f79fc:      	add	x1, sp, #0x58
+  6f7a00:      	ldr	w6, [sp, #0x10]
+  6f7a04:      	ldr	x5, [sp, #0x20]
+  6f7a08:      	ldr	w4, [sp, #0x14]
+  6f7a0c:      	ldr	x3, [sp, #0x18]
+  6f7a10:      	mov	w2, #0x3                // =3
+  6f7a14:      	bl	0x73f4bc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x25790>
+  6f7a18:      	b	0x6f7a6c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x99ec>
+  6f7a1c:      	adrp	x0, 0xc1b000
+  6f7a20:      	add	x0, x0, #0x2b0
+  6f7a24:      	add	x2, sp, #0x40
+  6f7a28:      	mov	x3, x0
+  6f7a2c:      	ldp	x0, x1, [x3]
+  6f7a30:      	stp	x0, x1, [x2]
+  6f7a34:      	ldr	x0, [x3, #0x10]
+  6f7a38:      	str	x0, [x2, #0x10]
+  6f7a3c:      	ldr	x0, [sp, #0x38]
+  6f7a40:      	add	x1, sp, #0x40
+  6f7a44:      	ldr	w6, [sp, #0x10]
+  6f7a48:      	ldr	x5, [sp, #0x20]
+  6f7a4c:      	ldr	w4, [sp, #0x14]
+  6f7a50:      	ldr	x3, [sp, #0x18]
+  6f7a54:      	mov	w2, #0x3                // =3
+  6f7a58:      	bl	0x73f4bc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x25790>
+  6f7a5c:      	b	0x6f7a6c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x99ec>
+  6f7a60:      	nop
+  6f7a64:      	b	0x6f7a6c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x99ec>
+  6f7a68:      	nop
+  6f7a6c:      	nop
+  6f7a70:      	ldp	x29, x30, [sp], #0xd0
+  6f7a74:      	ret

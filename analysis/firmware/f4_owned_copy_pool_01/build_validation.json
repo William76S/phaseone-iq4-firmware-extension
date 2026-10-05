@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "evidence_level": "host_fault_concurrency_sanitizers_and_cross_compile",
+  "source_sha256": {
+    "analysis/firmware/f4_frame_adapter_increment_01/adapter_contract.json": "8434f831ad1a0c5273923983b00589de57512a7d1fd0fe74e68ac2291f4f8017",
+    "src/codec/bounded_jpeg.h": "1be26d8743655280bd507e86f973810b32df568a811f619976f6a3e1adf8a18e",
+    "src/codec/vendor/libjpeg-turbo-1.5.3/jconfig.h": "8d818d1693a7feaac054fe5c0ac9b1167d96372a5f7045b3440bfa3789947154",
+    "src/codec/vendor/libjpeg-turbo-1.5.3/jerror.h": "d60cd4ee3d2bb3f67d74885899bee6da1f28df2f3bbcfbff1e99af6483606ce0",
+    "src/codec/vendor/libjpeg-turbo-1.5.3/jmorecfg.h": "8e75f16e1baa8b0797485d5b5ee6a0a4b6b48be47f0217488e857c62fb380351",
+    "src/codec/vendor/libjpeg-turbo-1.5.3/jpeglib.h": "e63b27b40fb779d5c65a206ce81a256a4e08f173bcc29890134dad4fbdf3dea0",
+    "src/recording/rgb_jpeg_backend.cpp": "867102a62f550adf9e56d6857d6593c39f0283c135cb140e42f6e9d89e1db13c",
+    "src/recording/rgb_jpeg_backend.hpp": "fa966353519f5a40a26d589d91f81d8bc3a9282c31c4d8b1581015ec2afd6281",
+    "src/runtime/recording.cpp": "8c105341e5413de729c86832109f6135adc7a1f63ca44bab4b1ff73c6674d975",
+    "src/runtime/recording.hpp": "5d709bb5fd8bb7536512e6692e7a5934ac8ca14dd5d587104e34ee3f5b7f2914",
+    "tools/firmware/f4_owned_copy_pool_01/CMakeLists.txt": "13af665b756dca4b45b743640429803fb7b591215896378f284d84489003a810",
+    "tools/firmware/f4_owned_copy_pool_01/README.md": "8317540e4c897c91612190c329f7dc23b1517a905379fd9344985b72ab4f928e",
+    "tools/firmware/f4_owned_copy_pool_01/build_validate.py": "5c5ab170a75b0620cdf7231673a3df32c58ab56753e52fe4421cd41fa6451d51",
+    "tools/firmware/f4_owned_copy_pool_01/owned_copy_pool.cpp": "b70462f3525e7cf46a52e67c41d0b95f70deeafdb8f2bb4c3006f1007f244b5e",
+    "tools/firmware/f4_owned_copy_pool_01/owned_copy_pool.hpp": "0bebf2587eca3d28355d34c02915039c34d44f70905fbc8effd934b9d0169858",
+    "tools/firmware/f4_owned_copy_pool_01/recorder_worker.cpp": "3e6c42c895d2b7d68562d8d787cc3f6f3eb1ae3f89ce6044d7398b99fd6540f0",
+    "tools/firmware/f4_owned_copy_pool_01/recorder_worker.hpp": "ff4e991a4825f29c7d5a5b2c200e8a55c840371737ee9c95bf8850c0a771d755",
+    "tools/firmware/f4_owned_copy_pool_01/test_owned_copy_pool.cpp": "5abbffed3c244ca90cb9ac745c02717f9bcf1486045066c6879ae3c4b6c100ae",
+    "tools/target/toolchain.lock.json": "593159dcbcf5c8ff39055432ae90b675311ac719c57f4dec47669fbbb1885d78"
+  },
+  "compiler_lock": {
+    "schema_version": 1,
+    "version": "0.15.2",
+    "host": "aarch64-macos",
+    "url": "https://ziglang.org/download/0.15.2/zig-aarch64-macos-0.15.2.tar.xz",
+    "archive_sha256": "3cc2bab367e185cdfb27501c4b30b1b0653c28d9f73df8dc91488e66ece5fa6b",
+    "zig_binary_sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c",
+    "target": "aarch64-linux-gnu.2.28",
+    "target_scope": "matches architecture and glibc from local factory package; device loader not yet verified",
+    "source": "https://ziglang.org/download/index.json",
+    "acquired_at": "2026-10-04",
+    "camera_operations": false
+  },
+  "host_cxx_version": "Apple clang version 17.0.0 (clang-1700.0.13.3)\nTarget: arm64-apple-darwin24.6.0\nThread model: posix\nInstalledDir: /Library/Developer/CommandLineTools/usr/bin",
+  "host_results": {
+    "normal": {
+      "passed": true,
+      "exit_code": 0,
+      "binary": {
+        "sha256": "7e7f788ef2fe3ca710210994c5fd2796a0b6f61d4ca6261f60538dad39435726",
+        "bytes": 122632
+      },
+      "receipt": {
+        "sha256": "2ca391502393ffb83287f3324427da397b68bda722f77b52b98c2078c081666d",
+        "bytes": 93
+      },
+      "output": "12 host test groups passed; 20000 concurrent synthetic completions; source C++ allocations 0"
+    },
+    "asan_ubsan": {
+      "passed": true,
+      "exit_code": 0,
+      "binary": {
+        "sha256": "f8999b9b7aecda2482dfd32cd0fd23b82a861e66c2ef2953ec330e0bccb2d663",
+        "bytes": 515072
+      },
+      "receipt": {
+        "sha256": "2ca391502393ffb83287f3324427da397b68bda722f77b52b98c2078c081666d",
+        "bytes": 93
+      },
+      "output": "12 host test groups passed; 20000 concurrent synthetic completions; source C++ allocations 0"
+    },
+    "tsan": {
+      "passed": true,
+      "exit_code": 0,
+      "binary": {
+        "sha256": "7ecdf4118eab7f5e64659decada1ab51d987ab35c06fbbb175d85d41e9e52439",
+        "bytes": 141448
+      },
+      "receipt": {
+        "sha256": "2ca391502393ffb83287f3324427da397b68bda722f77b52b98c2078c081666d",
+        "bytes": 93
+      },
+      "output": "12 host test groups passed; 20000 concurrent synthetic completions; source C++ allocations 0"
+    }
+  },
+  "target_artifacts": {
+    "owned_copy_pool.aarch64.o": {
+      "sha256": "4ee1da9b4ed0780911abf98c8f7ee89458a097551cd179a016849bb665887a96",
+      "bytes": 18864
+    },
+    "recorder_worker.aarch64.o": {
+      "sha256": "228f7f34f6bd0cc1bb371f0122d0de66e222295e6349fed1b2869e61dc485949",
+      "bytes": 11704
+    },
+    "recording.aarch64.o": {
+      "sha256": "b6d37428229b15ddcb7edf2d51213ae11e41eac900661c03feb92e745abcc9c6",
+      "bytes": 32544
+    },
+    "rgb_jpeg_backend.compatibility.aarch64.o": {
+      "sha256": "d8db558e9836ddddd97f54d992692218da2e8ebe3f796cf3e0152eb30a032e2c",
+      "bytes": 17712
+    },
+    "libiq4_f4_owned_copy.a": {
+      "sha256": "e11cac6f640d642b7216807b11f91b9d02a81c71a8147a25ac1ce9a3023dcb00",
+      "bytes": 33400
+    },
+    "iq4_f4_owned_copy_validation.aarch64": {
+      "sha256": "f25da1190577eadcc611da6efb1045a24b76f06fe39bde46273d51a1e34cadab",
+      "bytes": 5312800
+    }
+  },
+  "archive_members": [
+    "owned_copy_pool.aarch64.o",
+    "recorder_worker.aarch64.o"
+  ],
+  "target_validation_glibc_versions": [
+    "GLIBC_2.17"
+  ],
+  "target_validation_executed": false,
+  "camera_operations_performed": false,
+  "native_source_binding_verified": false,
+  "native_mode_rgb_color_clock_card_ui_verified": false,
+  "software_completion_ids_are_sensor_frames": false,
+  "measured_source_fps": null,
+  "commands": [
+    [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O2",
+      "-g0",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-UNDEBUG",
+      "-pthread",
+      "-ffile-prefix-map=/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2=.",
+      "-isystem",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/owned_copy_pool.cpp",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/recorder_worker.cpp",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/runtime/recording.cpp",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/test_owned_copy_pool.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/host_normal"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/host_normal"
+    ],
+    [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O2",
+      "-g0",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-UNDEBUG",
+      "-pthread",
+      "-ffile-prefix-map=/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2=.",
+      "-isystem",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/owned_copy_pool.cpp",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/recorder_worker.cpp",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/runtime/recording.cpp",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/test_owned_copy_pool.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/host_asan_ubsan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/host_asan_ubsan"
+    ],
+    [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O2",
+      "-g0",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-UNDEBUG",
+      "-pthread",
+      "-ffile-prefix-map=/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2=.",
+      "-isystem",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+      "-fsanitize=thread",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/owned_copy_pool.cpp",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/recorder_worker.cpp",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/runtime/recording.cpp",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/test_owned_copy_pool.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/host_tsan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/host_tsan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-g0",
+      "-fPIC",
+      "-pthread",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-ffile-prefix-map=/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2=.",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/owned_copy_pool.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/owned_copy_pool.aarch64.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-g0",
+      "-fPIC",
+      "-pthread",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-ffile-prefix-map=/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2=.",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/recorder_worker.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/recorder_worker.aarch64.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-g0",
+      "-fPIC",
+      "-pthread",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-ffile-prefix-map=/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2=.",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/runtime/recording.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/recording.aarch64.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-g0",
+      "-fPIC",
+      "-pthread",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-ffile-prefix-map=/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2=.",
+      "-DIQ4_JPEG_API_VERSION=82",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/recording/rgb_jpeg_backend.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/rgb_jpeg_backend.compatibility.aarch64.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "ar",
+      "rcsD",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/libiq4_f4_owned_copy.a",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/owned_copy_pool.aarch64.o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/recorder_worker.aarch64.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-g0",
+      "-fPIC",
+      "-pthread",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-ffile-prefix-map=/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2=.",
+      "-UNDEBUG",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/owned_copy_pool.aarch64.o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/recorder_worker.aarch64.o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/recording.aarch64.o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/test_owned_copy_pool.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_owned_copy_pool_01/build/iq4_f4_owned_copy_validation.aarch64"
+    ]
+  ]
+}

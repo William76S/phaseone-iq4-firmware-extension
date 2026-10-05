@@ -1,0 +1,74 @@
+{
+  "schema": "iq4_unwind02_actual_ELF_host_C_readback_01",
+  "User": {
+    "path": "analysis/firmware/f1_f3_f4_user_integration_build_01_final01/P1Linux_RatioMask_JPEG_LVRecording_6.03.30.bin",
+    "bytes": 13221224,
+    "sha256": "b3479e4bff7cc320ab3a172cf9bccf578e622303e646e22542f61e7ba45bcb03"
+  },
+  "library": {
+    "path": "analysis/firmware/native_linked_contract_User_host_validation_02/contract.dylib",
+    "bytes": 166016,
+    "sha256": "50a403b640bd8a32c7a37346f34400cb2398e0b2539bb35ff3909cbe4bfd9f70"
+  },
+  "cases": [
+    {
+      "case": "actual_sealed_ELF",
+      "result": 1,
+      "expected": 1,
+      "mutated_va": null
+    },
+    {
+      "case": "actual_RW_personality_cell_mutation_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": 70189872
+    },
+    {
+      "case": "actual_type_indirection_cell_mutation_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": 70678208
+    },
+    {
+      "case": "actual_own_immutable_RTTI_mutation_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": 70197872
+    },
+    {
+      "case": "actual_RX_mutation_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": 69468160
+    },
+    {
+      "case": "actual_FDE_mutation_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": 69479996
+    },
+    {
+      "case": "actual_unsealed_manifest_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": null
+    },
+    {
+      "case": "nonexact_reader_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": null
+    },
+    {
+      "case": "ordinary_mutable_data_excluded_from_unwind_seal",
+      "result": 1,
+      "expected": 1,
+      "mutated_va": 70191124
+    }
+  ],
+  "host_C_verifier_executed": true,
+  "loader_guard_executed": false,
+  "actual_target_process": false,
+  "target_executed": false,
+  "camera_accessed": false
+}

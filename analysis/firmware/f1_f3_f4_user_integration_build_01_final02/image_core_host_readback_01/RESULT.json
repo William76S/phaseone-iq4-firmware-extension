@@ -1,0 +1,94 @@
+{
+  "schema": "iq4_actual_final02_ELF_host_C_mutation_readback_01",
+  "User": {
+    "path": "analysis/firmware/f1_f3_f4_user_integration_build_01_final02/P1Linux_RatioMask_JPEG_LVRecording_6.03.30.bin",
+    "bytes": 13221320,
+    "sha256": "912e9e28cd685693a6481d3d4b63afa376a75dd93a58b519f69134bfaef2d398"
+  },
+  "actual_ELF_result": {
+    "path": "analysis/firmware/f1_f3_f4_user_integration_build_01_final02/ACTUAL_ELF_HOST_READBACK.json",
+    "bytes": 2196,
+    "sha256": "e03cb6f9efd8a506558318e6ab5584b3ccd7565adca6d531cb49c35a9a8835e7"
+  },
+  "cases": [
+    {
+      "case": "actual_sealed_ELF",
+      "result": 1,
+      "expected": 1,
+      "mutated_va": null
+    },
+    {
+      "case": "actual_RW_personality_cell_mutation_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": 70189872
+    },
+    {
+      "case": "actual_type_indirection_cell_mutation_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": 70678208
+    },
+    {
+      "case": "actual_own_immutable_RTTI_mutation_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": 70197872
+    },
+    {
+      "case": "actual_active_dynamic_selector_mutation_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": 16002704
+    },
+    {
+      "case": "actual_loader_COPY_binding_metadata_mutation_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": 4224240
+    },
+    {
+      "case": "actual_RX_mutation_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": 69468160
+    },
+    {
+      "case": "actual_FDE_mutation_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": 69479996
+    },
+    {
+      "case": "actual_unsealed_manifest_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": null
+    },
+    {
+      "case": "nonexact_reader_rejected",
+      "result": 0,
+      "expected": 0,
+      "mutated_va": null
+    },
+    {
+      "case": "ordinary_mutable_data_excluded_from_unwind_seal",
+      "result": 1,
+      "expected": 1,
+      "mutated_va": 70191124
+    }
+  ],
+  "count": 11,
+  "all_cases_passed": true,
+  "User_full_bytes_unchanged": true,
+  "source_manifest": {
+    "path": "tools/firmware/native_linked_unwind_02/SOURCE_SHA256.json",
+    "bytes": 2705,
+    "sha256": "a957617d264e169b82cd5908427806a56c3bb7f93033146c0b307bccdaf24f61"
+  },
+  "host_C_verifier_executed": true,
+  "loader_guard_executed": false,
+  "target_executed": false,
+  "camera_accessed": false,
+  "sdk_loaded": false
+}

@@ -1,0 +1,57 @@
+#include "../../src/codec/bounded_jpeg.h"
+#include <algorithm>
+#include <cstring>
+#include <filesystem>
+#include <fstream>
+#include <functional>
+#include <iostream>
+#include <limits>
+#include <stdexcept>
+#include <vector>
+namespace {
+unsigned passed=0,failed=0,createCalls=0,destroyCalls=0;
+void check(bool v,const char* m="check failed"){if(!v)throw std::runtime_error(m);}
+void test(const std::string& n,const std::function<void()>& f){try{f();++passed;std::cout<<"PASS "<<n<<'\n';}catch(const std::exception& e){++failed;std::cerr<<"FAIL "<<n<<": "<<e.what()<<'\n';}}
+void create(j_compress_ptr p,int v,size_t s){++createCalls;jpeg_CreateCompress(p,v,s);}
+void destroy(j_compress_ptr p){++destroyCalls;jpeg_destroy_compress(p);}
+void invalidDefaults(j_compress_ptr p){jpeg_set_defaults(p);p->image_width=0;}
+JDIMENSION suspend(j_compress_ptr,JSAMPARRAY,JDIMENSION){return 0;}
+JDIMENSION falseProgress(j_compress_ptr,JSAMPARRAY,JDIMENSION){return 1;}
+void finishFatal(j_compress_ptr p){p->err->msg_code=1;p->err->error_exit(reinterpret_cast<j_common_ptr>(p));}
+void falseFinish(j_compress_ptr){}
+void destroyThenFatal(j_compress_ptr p){++destroyCalls;jpeg_destroy_compress(p);p->err->msg_code=1;p->err->error_exit(reinterpret_cast<j_common_ptr>(p));}
+Iq4JpegApi api(){return {jpeg_std_error,create,jpeg_set_defaults,jpeg_set_quality,jpeg_start_compress,jpeg_write_scanlines,jpeg_finish_compress,destroy,80,sizeof(jpeg_compress_struct),1};}
+struct Fixture {
+    unsigned width=96,height=64;
+    size_t stride=96*3+17;
+    std::vector<uint8_t> rgb;
+    Fixture(){rgb.resize(stride*height,0xdd);for(unsigned y=0;y<height;++y)for(unsigned x=0;x<width;++x){const auto at=y*stride+x*3;rgb[at]=uint8_t(x*255/(width-1));rgb[at+1]=uint8_t(y*255/(height-1));rgb[at+2]=uint8_t((x+y)%2?40:220);}}
+    Iq4JpegInput input(int quality=90)const{return {rgb.data(),rgb.size(),width,height,stride,quality};}
+};
+void save(const std::filesystem::path& path,const uint8_t* data,size_t size){std::ofstream out(path,std::ios::binary);out.write(reinterpret_cast<const char*>(data),size);check(bool(out));}
+}
+int main(int argc,char** argv){if(argc!=2)return 2;std::filesystem::path outputDir(argv[1]);std::filesystem::create_directories(outputDir);Fixture fixture;const auto original=fixture.rgb;auto functions=api();std::vector<uint8_t> output(100000);Iq4JpegResult result{};size_t completeSize=0;
+    test("stock public JPEG8 API encodes strided RGB24 to complete baseline packet",[&]{const auto input=fixture.input();check(iq4_jpeg_encode_bounded(&functions,&input,output.data(),output.size(),&result)==IQ4_JPEG_OK);completeSize=result.jpeg_bytes;check(completeSize>100&&completeSize<output.size());check(result.destroy_calls==1);check(output[0]==0xff&&output[1]==0xd8&&output[completeSize-2]==0xff&&output[completeSize-1]==0xd9);check(fixture.rgb==original);save(outputDir/"strided_rgb.jpg",output.data(),completeSize);});
+    test("packed and strided input generate byte-identical packets without input mutation",[&]{std::vector<uint8_t> packed(fixture.width*fixture.height*3);for(unsigned y=0;y<fixture.height;++y)std::copy_n(fixture.rgb.data()+y*fixture.stride,fixture.width*3,packed.data()+y*fixture.width*3);const auto before=packed;Iq4JpegInput input{packed.data(),packed.size(),fixture.width,fixture.height,fixture.width*3,90};std::vector<uint8_t> packet(100000);Iq4JpegResult r;check(iq4_jpeg_encode_bounded(&functions,&input,packet.data(),packet.size(),&r)==IQ4_JPEG_OK);check(r.jpeg_bytes==completeSize&&std::equal(packet.begin(),packet.begin()+r.jpeg_bytes,output.begin()));check(packed==before);});
+    for(size_t cap:{size_t(1),size_t(2),size_t(16),size_t(64),size_t(256),size_t(1024)})test("hard output capacity and guard bytes "+std::to_string(cap),[&]{std::vector<uint8_t> guarded(cap+64,0xa5);const auto input=fixture.input();Iq4JpegResult r;check(iq4_jpeg_encode_bounded(&functions,&input,guarded.data()+32,cap,&r)==IQ4_JPEG_OUTPUT_CAPACITY);check(!r.jpeg_bytes&&r.destroy_calls==1);check(std::all_of(guarded.begin(),guarded.begin()+32,[](uint8_t v){return v==0xa5;})&&std::all_of(guarded.end()-32,guarded.end(),[](uint8_t v){return v==0xa5;}));check(fixture.rgb==original);});
+    test("one-byte-below-complete capacity fails with no packet and no overrun",[&]{check(completeSize>2);std::vector<uint8_t> guarded(completeSize+63,0xa5);const auto input=fixture.input();Iq4JpegResult r;check(iq4_jpeg_encode_bounded(&functions,&input,guarded.data()+32,completeSize-1,&r)==IQ4_JPEG_OUTPUT_CAPACITY);check(!r.jpeg_bytes&&guarded[32+completeSize-1]==0xa5);});
+    test("post-capacity-error successful call proves local cleanup",[&]{const auto input=fixture.input();Iq4JpegResult r;check(iq4_jpeg_encode_bounded(&functions,&input,output.data(),output.size(),&r)==IQ4_JPEG_OK);check(r.jpeg_bytes==completeSize&&r.destroy_calls==1);});
+    test("unverified API binding refuses before any library call",[&]{auto a=functions;a.binding_abi_verified=0;const auto input=fixture.input();Iq4JpegResult r;const auto before=createCalls;check(iq4_jpeg_encode_bounded(&a,&input,output.data(),output.size(),&r)==IQ4_JPEG_UNBOUND_OR_ABI_MISMATCH);check(!r.jpeg_bytes&&createCalls==before);});
+    test("missing function or struct bytes reject before library call",[&]{const auto input=fixture.input();Iq4JpegResult r;auto a=functions;a.write_scanlines=nullptr;check(iq4_jpeg_encode_bounded(&a,&input,output.data(),output.size(),&r)==IQ4_JPEG_UNBOUND_OR_ABI_MISMATCH);a=functions;a.compressor_struct_bytes=520;check(iq4_jpeg_encode_bounded(&a,&input,output.data(),output.size(),&r)==IQ4_JPEG_UNBOUND_OR_ABI_MISMATCH);});
+    test("API82 cannot silently bind stock API80 library fatal check",[&]{auto a=functions;a.api_version=82;const auto input=fixture.input();Iq4JpegResult r;check(iq4_jpeg_encode_bounded(&a,&input,output.data(),output.size(),&r)==IQ4_JPEG_LIBRARY_ERROR);check(!r.jpeg_bytes&&r.library_message_code&&r.destroy_calls==0);});
+    test("libjpeg fatal after allocation jumps only through C and destroys once",[&]{auto a=functions;a.set_defaults=invalidDefaults;const auto input=fixture.input();Iq4JpegResult r;const auto before=destroyCalls;check(iq4_jpeg_encode_bounded(&a,&input,output.data(),output.size(),&r)==IQ4_JPEG_LIBRARY_ERROR);check(r.destroy_calls==1&&destroyCalls==before+1&&!r.jpeg_bytes);check(fixture.rgb==original);});
+    test("unexpected suspension is explicit failure with resource cleanup",[&]{auto a=functions;a.write_scanlines=suspend;const auto input=fixture.input();Iq4JpegResult r;check(iq4_jpeg_encode_bounded(&a,&input,output.data(),output.size(),&r)==IQ4_JPEG_SUSPENDED);check(!r.jpeg_bytes&&r.destroy_calls==1);});
+    test("a lying scanline count cannot loop forever",[&]{auto a=functions;a.write_scanlines=falseProgress;const auto input=fixture.input();Iq4JpegResult r;check(iq4_jpeg_encode_bounded(&a,&input,output.data(),output.size(),&r)==IQ4_JPEG_SUSPENDED);check(!r.jpeg_bytes&&r.destroy_calls==1);});
+    test("finish error suppresses partial packet and destroys allocated encoder",[&]{auto a=functions;a.finish_compress=finishFatal;const auto input=fixture.input();Iq4JpegResult r;check(iq4_jpeg_encode_bounded(&a,&input,output.data(),output.size(),&r)==IQ4_JPEG_LIBRARY_ERROR);check(!r.jpeg_bytes&&r.destroy_calls==1);});
+    test("finish without terminating destination cannot return empty success",[&]{auto a=functions;a.finish_compress=falseFinish;const auto input=fixture.input();Iq4JpegResult r;check(iq4_jpeg_encode_bounded(&a,&input,output.data(),output.size(),&r)==IQ4_JPEG_LIBRARY_ERROR);check(!r.jpeg_bytes&&r.destroy_calls==1);});
+    test("cleanup error is reported without recursively destroying",[&]{auto a=functions;a.destroy_compress=destroyThenFatal;const auto input=fixture.input();Iq4JpegResult r;const auto before=destroyCalls;check(iq4_jpeg_encode_bounded(&a,&input,output.data(),output.size(),&r)==IQ4_JPEG_CLEANUP_ERROR);check(!r.jpeg_bytes&&r.destroy_calls==1&&destroyCalls==before+1);});
+    test("input/output overlap rejected without modifying RGB",[&]{const auto input=fixture.input();Iq4JpegResult r;check(iq4_jpeg_encode_bounded(&functions,&input,fixture.rgb.data()+16,100,&r)==IQ4_JPEG_INVALID_ARGUMENT);check(fixture.rgb==original);});
+    test("last-row padding belongs to input and cannot be output",[&]{const auto input=fixture.input();Iq4JpegResult r;check(iq4_jpeg_encode_bounded(&functions,&input,fixture.rgb.data()+fixture.rgb.size()-16,8,&r)==IQ4_JPEG_INVALID_ARGUMENT);check(fixture.rgb==original);});
+    test("result alias cannot silently zero source pixels or descriptors",[&]{auto input=fixture.input();check(iq4_jpeg_encode_bounded(&functions,&input,output.data(),output.size(),reinterpret_cast<Iq4JpegResult*>(fixture.rgb.data()))==IQ4_JPEG_INVALID_ARGUMENT);check(fixture.rgb==original);const auto descriptor=input;check(iq4_jpeg_encode_bounded(&functions,&input,output.data(),output.size(),reinterpret_cast<Iq4JpegResult*>(&input))==IQ4_JPEG_INVALID_ARGUMENT);check(std::memcmp(&input,&descriptor,sizeof(input))==0);});
+    test("output alias cannot overwrite callback table/input descriptor/result",[&]{auto input=fixture.input();Iq4JpegResult r;const auto originalFunctions=functions;check(iq4_jpeg_encode_bounded(&functions,&input,reinterpret_cast<uint8_t*>(&functions),sizeof(functions),&r)==IQ4_JPEG_INVALID_ARGUMENT);check(std::memcmp(&functions,&originalFunctions,sizeof(functions))==0);check(iq4_jpeg_encode_bounded(&functions,&input,reinterpret_cast<uint8_t*>(&input),sizeof(input),&r)==IQ4_JPEG_INVALID_ARGUMENT);check(iq4_jpeg_encode_bounded(&functions,&input,reinterpret_cast<uint8_t*>(&r),sizeof(r),&r)==IQ4_JPEG_INVALID_ARGUMENT);});
+    test("stride overflow/input truncation/invalid dimensions rejected",[&]{Iq4JpegResult r;for(unsigned c=0;c<4;++c){auto input=fixture.input();if(c==0)input.stride=1;if(c==1)input.stride=std::numeric_limits<size_t>::max();if(c==2)input.bytes=100;if(c==3)input.width=0;check(iq4_jpeg_encode_bounded(&functions,&input,output.data(),output.size(),&r)==IQ4_JPEG_INVALID_ARGUMENT);check(!r.jpeg_bytes);}});
+    test("quality/capacity argument bounds and null result reject",[&]{Iq4JpegResult r;for(int q:{0,101}){auto input=fixture.input(q);check(iq4_jpeg_encode_bounded(&functions,&input,output.data(),output.size(),&r)==IQ4_JPEG_INVALID_ARGUMENT);}const auto input=fixture.input();check(iq4_jpeg_encode_bounded(&functions,&input,output.data(),0,&r)==IQ4_JPEG_INVALID_ARGUMENT);check(iq4_jpeg_encode_bounded(&functions,&input,output.data(),output.size(),nullptr)==IQ4_JPEG_INVALID_ARGUMENT);});
+    test("quality endpoints both produce complete decodable packets",[&]{for(int q:{1,100}){const auto input=fixture.input(q);Iq4JpegResult r;check(iq4_jpeg_encode_bounded(&functions,&input,output.data(),output.size(),&r)==IQ4_JPEG_OK);save(outputDir/("quality_"+std::to_string(q)+".jpg"),output.data(),r.jpeg_bytes);check(fixture.rgb==original);}});
+    std::vector<uint8_t> packed;for(unsigned y=0;y<fixture.height;++y)packed.insert(packed.end(),fixture.rgb.begin()+y*fixture.stride,fixture.rgb.begin()+y*fixture.stride+fixture.width*3);save(outputDir/"input_rgb24.raw",packed.data(),packed.size());
+    std::cout<<"RESULT_JSON {\"evidence_level\":\"host_validation\",\"camera_control\":false,\"target_api82\":\"unbound\",\"host_library_api\":80,\"host_header_source\":\"libjpeg-turbo_1.5.3\",\"passed\":"<<passed<<",\"failed\":"<<failed<<",\"input_unchanged\":"<<(fixture.rgb==original?"true":"false")<<"}\n";return failed?1:0;
+}

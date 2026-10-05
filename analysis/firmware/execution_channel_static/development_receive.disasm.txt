@@ -1,0 +1,240 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPDevelopment.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000000340 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)>:
+     340: 41 57                        	pushq	%r15
+     342: 41 56                        	pushq	%r14
+     344: 41 55                        	pushq	%r13
+     346: 49 89 cd                     	movq	%rcx, %r13
+     349: 41 54                        	pushq	%r12
+     34b: 49 89 f4                     	movq	%rsi, %r12
+     34e: 55                           	pushq	%rbp
+     34f: 48 89 d5                     	movq	%rdx, %rbp
+     352: 53                           	pushq	%rbx
+     353: 48 89 fb                     	movq	%rdi, %rbx
+     356: 48 81 ec 98 00 00 00         	subq	$0x98, %rsp
+     35d: 80 7e 04 ff                  	cmpb	$-0x1, 0x4(%rsi)
+     361: 74 64                        	je	0x3c7 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x87>
+     363: 4c 8d 74 24 50               	leaq	0x50(%rsp), %r14
+     368: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x36f <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x2f>
+		000000000000036b:  R_X86_64_PC32	.LC12-0x4
+     36f: ba f4 01 00 00               	movl	$0x1f4, %edx            # imm = 0x1F4
+     374: 4c 89 f7                     	movq	%r14, %rdi
+     377: 48 8d 0d 00 00 00 00         	leaq	(%rip), %rcx            # 0x37e <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x3e>
+		000000000000037a:  R_X86_64_PC32	.LC1-0x4
+     37e: e8 00 00 00 00               	callq	0x383 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x43>
+		000000000000037f:  R_X86_64_PLT32	P1::Universal::LogMsgLineInfo::LogMsgLineInfo(wchar_t const*, unsigned int, wchar_t const*)-0x4
+     383: 4c 89 f6                     	movq	%r14, %rsi
+     386: 48 8d 3d 00 00 00 00         	leaq	(%rip), %rdi            # 0x38d <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x4d>
+		0000000000000389:  R_X86_64_PC32	.LC14-0x4
+     38d: e8 00 00 00 00               	callq	0x392 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x52>
+		000000000000038e:  R_X86_64_PLT32	P1::Universal::_LogMsgAssertFailed(wchar_t const*, P1::Universal::LogMsgLineInfo const&)-0x4
+     392: 84 c0                        	testb	%al, %al
+     394: 0f 84 00 00 00 00            	je	0x39a <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x5a>
+		0000000000000396:  R_X86_64_PC32	.text.unlikely+0x1db
+     39a: 48 8b 7c 24 60               	movq	0x60(%rsp), %rdi
+     39f: 48 85 ff                     	testq	%rdi, %rdi
+     3a2: 74 05                        	je	0x3a9 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x69>
+     3a4: e8 00 00 00 00               	callq	0x3a9 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x69>
+		00000000000003a5:  R_X86_64_PLT32	operator delete[](void*)-0x4
+     3a9: 48 8b 7c 24 58               	movq	0x58(%rsp), %rdi
+     3ae: 48 85 ff                     	testq	%rdi, %rdi
+     3b1: 74 05                        	je	0x3b8 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x78>
+     3b3: e8 00 00 00 00               	callq	0x3b8 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x78>
+		00000000000003b4:  R_X86_64_PLT32	operator delete[](void*)-0x4
+     3b8: 48 8b 7c 24 50               	movq	0x50(%rsp), %rdi
+     3bd: 48 85 ff                     	testq	%rdi, %rdi
+     3c0: 74 05                        	je	0x3c7 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x87>
+     3c2: e8 00 00 00 00               	callq	0x3c7 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x87>
+		00000000000003c3:  R_X86_64_PLT32	operator delete[](void*)-0x4
+     3c7: 48 8d 7b 78                  	leaq	0x78(%rbx), %rdi
+     3cb: e8 00 00 00 00               	callq	0x3d0 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x90>
+		00000000000003cc:  R_X86_64_PLT32	P1::IQP::IQPMessageProtocolInfo::GetNegotiatedMessageProtocolVersion() const-0x4
+     3d0: 66 89 44 24 20               	movw	%ax, 0x20(%rsp)
+     3d5: 4c 8d 74 24 20               	leaq	0x20(%rsp), %r14
+     3da: 4c 8d 7c 24 30               	leaq	0x30(%rsp), %r15
+     3df: 48 8d 05 00 00 00 00         	leaq	(%rip), %rax            # 0x3e6 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0xa6>
+		00000000000003e2:  R_X86_64_PC32	P1::IQP::DevelopmentProtocol::MessageHeader::versionHeaderSizes-0x4
+     3e6: 48 8d 74 24 50               	leaq	0x50(%rsp), %rsi
+     3eb: 4c 89 f1                     	movq	%r14, %rcx
+     3ee: 4c 89 ff                     	movq	%r15, %rdi
+     3f1: 48 89 44 24 70               	movq	%rax, 0x70(%rsp)
+     3f6: 48 83 c0 04                  	addq	$0x4, %rax
+     3fa: 48 89 44 24 50               	movq	%rax, 0x50(%rsp)
+     3ff: 48 8d 44 24 70               	leaq	0x70(%rsp), %rax
+     404: 48 89 c2                     	movq	%rax, %rdx
+     407: 48 89 44 24 08               	movq	%rax, 0x8(%rsp)
+     40c: e8 00 00 00 00               	callq	0x411 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0xd1>
+		000000000000040d:  R_X86_64_PLT32	auto std::__find_if<std::reverse_iterator<std::pair<P1::IQP::MessageProtocolVersion, unsigned short> const*>, __gnu_cxx::__ops::_Iter_pred<unsigned short P1::IQP::GetIqpVersionSizeConst<P1::IQP::DevelopmentProtocol::MessageHeader::versionHeaderSizes>(unsigned char, unsigned char)::'lambda'(auto const&)>>(auto, auto, __gnu_cxx::__ops::_Iter_pred<unsigned short P1::IQP::GetIqpVersionSizeConst<P1::IQP::DevelopmentProtocol::MessageHeader::versionHeaderSizes>(unsigned char, unsigned char)::'lambda'(auto const&)>, std::random_access_iterator_tag)-0x4
+     411: 48 8b 54 24 30               	movq	0x30(%rsp), %rdx
+     416: 48 8d 05 00 00 00 00         	leaq	(%rip), %rax            # 0x41d <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0xdd>
+		0000000000000419:  R_X86_64_PC32	P1::IQP::DevelopmentProtocol::MessageHeader::versionHeaderSizes-0x4
+     41d: 48 39 c2                     	cmpq	%rax, %rdx
+     420: 0f 84 5a 01 00 00            	je	0x580 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x240>
+     426: 0f b7 52 fe                  	movzwl	-0x2(%rdx), %edx
+     42a: 89 d0                        	movl	%edx, %eax
+     42c: b9 ff 00 00 00               	movl	$0xff, %ecx
+     431: 89 54 24 18                  	movl	%edx, 0x18(%rsp)
+     435: 66 0f ef c0                  	pxor	%xmm0, %xmm0
+     439: 4d 89 e8                     	movq	%r13, %r8
+     43c: 66 89 4c 24 14               	movw	%cx, 0x14(%rsp)
+     441: 48 8d 7c 24 10               	leaq	0x10(%rsp), %rdi
+     446: 48 89 e9                     	movq	%rbp, %rcx
+     449: 4c 89 e2                     	movq	%r12, %rdx
+     44c: be 10 00 00 00               	movl	$0x10, %esi
+     451: c7 44 24 10 11 22 33 44      	movl	$0x44332211, 0x10(%rsp) # imm = 0x44332211
+     459: 66 89 44 24 16               	movw	%ax, 0x16(%rsp)
+     45e: c7 44 24 1c 00 00 00 00      	movl	$0x0, 0x1c(%rsp)
+     466: 48 c7 44 24 40 00 00 00 00   	movq	$0x0, 0x40(%rsp)
+     46f: 0f 29 44 24 30               	movaps	%xmm0, 0x30(%rsp)
+     474: e8 00 00 00 00               	callq	0x479 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x139>
+		0000000000000475:  R_X86_64_PLT32	P1::IQP::ReadMessageHeader(P1::IQP::CommonMessageHeader*, unsigned int, P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)-0x4
+     479: 85 c0                        	testl	%eax, %eax
+     47b: 0f 85 f7 00 00 00            	jne	0x578 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x238>
+     481: 0f b7 44 24 16               	movzwl	0x16(%rsp), %eax
+     486: 8b 74 24 18                  	movl	0x18(%rsp), %esi
+     48a: 29 c6                        	subl	%eax, %esi
+     48c: 74 4d                        	je	0x4db <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x19b>
+     48e: 48 8b 44 24 38               	movq	0x38(%rsp), %rax
+     493: 4c 8b 54 24 30               	movq	0x30(%rsp), %r10
+     498: 89 f6                        	movl	%esi, %esi
+     49a: 48 89 c2                     	movq	%rax, %rdx
+     49d: 4c 29 d2                     	subq	%r10, %rdx
+     4a0: 48 39 d6                     	cmpq	%rdx, %rsi
+     4a3: 0f 87 e7 00 00 00            	ja	0x590 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x250>
+     4a9: 73 11                        	jae	0x4bc <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x17c>
+     4ab: 49 8d 0c 32                  	leaq	(%r10,%rsi), %rcx
+     4af: 48 39 c8                     	cmpq	%rcx, %rax
+     4b2: 74 08                        	je	0x4bc <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x17c>
+     4b4: 48 89 4c 24 38               	movq	%rcx, 0x38(%rsp)
+     4b9: 48 89 f2                     	movq	%rsi, %rdx
+     4bc: 41 b9 ff ff ff ff            	movl	$0xffffffff, %r9d       # imm = 0xFFFFFFFF
+     4c2: 45 31 c0                     	xorl	%r8d, %r8d
+     4c5: 4c 89 e9                     	movq	%r13, %rcx
+     4c8: 4c 89 d6                     	movq	%r10, %rsi
+     4cb: 48 89 ef                     	movq	%rbp, %rdi
+     4ce: e8 00 00 00 00               	callq	0x4d3 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x193>
+		00000000000004cf:  R_X86_64_PLT32	P1::IQP::Channel::Read(void*, unsigned int, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&, unsigned int*, unsigned int)-0x4
+     4d3: 85 c0                        	testl	%eax, %eax
+     4d5: 0f 85 9d 00 00 00            	jne	0x578 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x238>
+     4db: 4c 89 f7                     	movq	%r14, %rdi
+     4de: 48 8d b3 e0 09 00 00         	leaq	0x9e0(%rbx), %rsi
+     4e5: ba ff ff ff ff               	movl	$0xffffffff, %edx       # imm = 0xFFFFFFFF
+     4ea: e8 00 00 00 00               	callq	0x4ef <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x1af>
+		00000000000004eb:  R_X86_64_PLT32	P1::Platform::MutexAutoLock::MutexAutoLock(P1::Platform::Mutex_Cpp&, unsigned int)-0x4
+     4ef: 48 8b bb 10 0a 00 00         	movq	0xa10(%rbx), %rdi
+     4f6: 48 85 ff                     	testq	%rdi, %rdi
+     4f9: 74 45                        	je	0x540 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x200>
+     4fb: 48 8b 07                     	movq	(%rdi), %rax
+     4fe: ff 50 18                     	callq	*0x18(%rax)
+     501: 84 c0                        	testb	%al, %al
+     503: 75 3b                        	jne	0x540 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x200>
+     505: 48 8b 44 24 38               	movq	0x38(%rsp), %rax
+     50a: 4c 8b 64 24 30               	movq	0x30(%rsp), %r12
+     50f: 48 8b bb 10 0a 00 00         	movq	0xa10(%rbx), %rdi
+     516: 0f b6 6c 24 15               	movzbl	0x15(%rsp), %ebp
+     51b: 49 89 c5                     	movq	%rax, %r13
+     51e: 4d 29 e5                     	subq	%r12, %r13
+     521: 49 39 c4                     	cmpq	%rax, %r12
+     524: b8 00 00 00 00               	movl	$0x0, %eax
+     529: 4c 0f 44 e0                  	cmoveq	%rax, %r12
+     52d: 48 85 ff                     	testq	%rdi, %rdi
+     530: 74 7e                        	je	0x5b0 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x270>
+     532: 48 8b 07                     	movq	(%rdi), %rax
+     535: 44 89 e9                     	movl	%r13d, %ecx
+     538: 4c 89 e2                     	movq	%r12, %rdx
+     53b: 89 ee                        	movl	%ebp, %esi
+     53d: ff 50 10                     	callq	*0x10(%rax)
+     540: 4c 89 f7                     	movq	%r14, %rdi
+     543: 41 bc 01 00 00 00            	movl	$0x1, %r12d
+     549: e8 00 00 00 00               	callq	0x54e <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x20e>
+		000000000000054a:  R_X86_64_PLT32	P1::Platform::MutexAutoLock::~MutexAutoLock()-0x4
+     54e: 48 8b 7c 24 30               	movq	0x30(%rsp), %rdi
+     553: 48 85 ff                     	testq	%rdi, %rdi
+     556: 74 05                        	je	0x55d <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x21d>
+     558: e8 00 00 00 00               	callq	0x55d <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x21d>
+		0000000000000559:  R_X86_64_PLT32	operator delete(void*)-0x4
+     55d: 48 81 c4 98 00 00 00         	addq	$0x98, %rsp
+     564: 44 89 e0                     	movl	%r12d, %eax
+     567: 5b                           	popq	%rbx
+     568: 5d                           	popq	%rbp
+     569: 41 5c                        	popq	%r12
+     56b: 41 5d                        	popq	%r13
+     56d: 41 5e                        	popq	%r14
+     56f: 41 5f                        	popq	%r15
+     571: c3                           	retq
+     572: 66 0f 1f 44 00 00            	nopw	(%rax,%rax)
+     578: 45 31 e4                     	xorl	%r12d, %r12d
+     57b: eb d1                        	jmp	0x54e <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x20e>
+     57d: 0f 1f 00                     	nopl	(%rax)
+     580: ba 10 00 00 00               	movl	$0x10, %edx
+     585: b8 10 00 00 00               	movl	$0x10, %eax
+     58a: e9 9d fe ff ff               	jmp	0x42c <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0xec>
+     58f: 90                           	nop
+     590: 48 29 d6                     	subq	%rdx, %rsi
+     593: 4c 89 ff                     	movq	%r15, %rdi
+     596: e8 00 00 00 00               	callq	0x59b <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x25b>
+		0000000000000597:  R_X86_64_PLT32	std::vector<unsigned char, std::allocator<unsigned char>>::_M_default_append(unsigned long)-0x4
+     59b: 4c 8b 54 24 30               	movq	0x30(%rsp), %r10
+     5a0: 48 8b 54 24 38               	movq	0x38(%rsp), %rdx
+     5a5: 4c 29 d2                     	subq	%r10, %rdx
+     5a8: e9 0f ff ff ff               	jmp	0x4bc <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x17c>
+     5ad: 0f 1f 00                     	nopl	(%rax)
+     5b0: 4c 8b 7c 24 08               	movq	0x8(%rsp), %r15
+     5b5: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x5bc <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x27c>
+		00000000000005b8:  R_X86_64_PC32	.LC2-0x4
+     5bc: ba c7 02 00 00               	movl	$0x2c7, %edx            # imm = 0x2C7
+     5c1: 48 8d 0d 00 00 00 00         	leaq	(%rip), %rcx            # 0x5c8 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x288>
+		00000000000005c4:  R_X86_64_PC32	.LC1-0x4
+     5c8: 4c 89 ff                     	movq	%r15, %rdi
+     5cb: e8 00 00 00 00               	callq	0x5d0 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x290>
+		00000000000005cc:  R_X86_64_PLT32	P1::Universal::LogMsgLineInfo::LogMsgLineInfo(wchar_t const*, unsigned int, wchar_t const*)-0x4
+     5d0: 4c 89 fe                     	movq	%r15, %rsi
+     5d3: 48 8d 3d 00 00 00 00         	leaq	(%rip), %rdi            # 0x5da <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x29a>
+		00000000000005d6:  R_X86_64_PC32	.LC15-0x4
+     5da: e8 00 00 00 00               	callq	0x5df <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x29f>
+		00000000000005db:  R_X86_64_PLT32	P1::Universal::_LogMsgAssertFailed(wchar_t const*, P1::Universal::LogMsgLineInfo const&)-0x4
+     5df: 84 c0                        	testb	%al, %al
+     5e1: 0f 84 00 00 00 00            	je	0x5e7 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x2a7>
+		00000000000005e3:  R_X86_64_PC32	.text.unlikely+0x1db
+     5e7: 48 8b bc 24 80 00 00 00      	movq	0x80(%rsp), %rdi
+     5ef: 48 85 ff                     	testq	%rdi, %rdi
+     5f2: 74 05                        	je	0x5f9 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x2b9>
+     5f4: e8 00 00 00 00               	callq	0x5f9 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x2b9>
+		00000000000005f5:  R_X86_64_PLT32	operator delete[](void*)-0x4
+     5f9: 48 8b 7c 24 78               	movq	0x78(%rsp), %rdi
+     5fe: 48 85 ff                     	testq	%rdi, %rdi
+     601: 74 05                        	je	0x608 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x2c8>
+     603: e8 00 00 00 00               	callq	0x608 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x2c8>
+		0000000000000604:  R_X86_64_PLT32	operator delete[](void*)-0x4
+     608: 48 8b 7c 24 70               	movq	0x70(%rsp), %rdi
+     60d: 48 85 ff                     	testq	%rdi, %rdi
+     610: 74 05                        	je	0x617 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x2d7>
+     612: e8 00 00 00 00               	callq	0x617 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x2d7>
+		0000000000000613:  R_X86_64_PLT32	operator delete[](void*)-0x4
+     617: 48 8b bb 10 0a 00 00         	movq	0xa10(%rbx), %rdi
+     61e: e9 0f ff ff ff               	jmp	0x532 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x1f2>
+     623: 48 89 c3                     	movq	%rax, %rbx
+     626: 48 89 d5                     	movq	%rdx, %rbp
+     629: e9 00 00 00 00               	jmp	0x62e <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x2ee>
+		000000000000062a:  R_X86_64_PC32	.text.unlikely+0x104
+     62e: 48 89 c7                     	movq	%rax, %rdi
+     631: 48 89 d5                     	movq	%rdx, %rbp
+     634: e9 00 00 00 00               	jmp	0x639 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x2f9>
+		0000000000000635:  R_X86_64_PC32	.text.unlikely+0x128
+     639: 48 89 c3                     	movq	%rax, %rbx
+     63c: 48 89 d5                     	movq	%rdx, %rbp
+     63f: e9 00 00 00 00               	jmp	0x644 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x304>
+		0000000000000640:  R_X86_64_PC32	.text.unlikely+0x116
+     644: 48 89 c5                     	movq	%rax, %rbp
+     647: e9 00 00 00 00               	jmp	0x64c <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x30c>
+		0000000000000648:  R_X86_64_PC32	.text.unlikely+0x1e0
+     64c: 48 89 c3                     	movq	%rax, %rbx
+     64f: 48 89 d5                     	movq	%rdx, %rbp
+     652: e9 00 00 00 00               	jmp	0x657 <P1::IQP::DevelopmentAgent::ReceiveDevelopmentMessage(P1::IQP::CommonMessageHeader const&, P1::IQP::Channel&, std::vector<P1::Platform::BaseWaitObject*, std::allocator<P1::Platform::BaseWaitObject*>> const&)+0x317>
+		0000000000000653:  R_X86_64_PC32	.text.unlikely+0x10e
+     657: 90                           	nop
+     658: 0f 1f 84 00 00 00 00 00      	nopl	(%rax,%rax)

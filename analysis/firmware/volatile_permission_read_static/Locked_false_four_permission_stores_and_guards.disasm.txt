@@ -1,0 +1,70 @@
+STATIC ONLY; linked VAs; nearest exported labels are not recovered private names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6ab140: f9400fe0     	ldr	x0, [sp, #0x18]
+  6ab144: f9400c00     	ldr	x0, [x0, #0x18]
+  6ab148: 91210000     	add	x0, x0, #0x840
+  6ab14c: 52800021     	mov	w1, #0x1                // =1
+  6ab150: 97f5a618     	bl	0x4149b0 <.text+0x9780>
+  6ab154: f9400fe0     	ldr	x0, [sp, #0x18]
+  6ab158: f9400c00     	ldr	x0, [x0, #0x18]
+  6ab15c: 91246000     	add	x0, x0, #0x918
+  6ab160: 52800021     	mov	w1, #0x1                // =1
+  6ab164: 97f5a613     	bl	0x4149b0 <.text+0x9780>
+  6ab168: f9400fe0     	ldr	x0, [sp, #0x18]
+  6ab16c: f9400c00     	ldr	x0, [x0, #0x18]
+  6ab170: 9127c000     	add	x0, x0, #0x9f0
+  6ab174: 52800021     	mov	w1, #0x1                // =1
+  6ab178: 97f5a60e     	bl	0x4149b0 <.text+0x9780>
+  6ab17c: f9400fe0     	ldr	x0, [sp, #0x18]
+  6ab180: f9400c00     	ldr	x0, [x0, #0x18]
+  6ab184: 912b2000     	add	x0, x0, #0xac8
+  6ab188: 52800021     	mov	w1, #0x1                // =1
+  6ab18c: 97f5a609     	bl	0x4149b0 <.text+0x9780>
+  6ab190: f9400fe0     	ldr	x0, [sp, #0x18]
+  6ab194: f9401803     	ldr	x3, [x0, #0x30]
+  6ab198: f9400fe0     	ldr	x0, [sp, #0x18]
+  6ab19c: f9401800     	ldr	x0, [x0, #0x30]
+  6ab1a0: f9400000     	ldr	x0, [x0]
+  6ab1a4: 91012000     	add	x0, x0, #0x48
+  6ab1a8: f9400002     	ldr	x2, [x0]
+  6ab1ac: 52800001     	mov	w1, #0x0                // =0
+  6ab1b0: aa0303e0     	mov	x0, x3
+  6ab1b4: d63f0040     	blr	x2
+  6ab1b8: f9400fe0     	ldr	x0, [sp, #0x18]
+  6ab1bc: f9401c03     	ldr	x3, [x0, #0x38]
+  6ab1c0: f9400fe0     	ldr	x0, [sp, #0x18]
+  6ab1c4: f9401c00     	ldr	x0, [x0, #0x38]
+  6ab1c8: f9400000     	ldr	x0, [x0]
+  6ab1cc: 91012000     	add	x0, x0, #0x48
+  6ab1d0: f9400002     	ldr	x2, [x0]
+  6ab1d4: 52800001     	mov	w1, #0x0                // =0
+  6ab1d8: aa0303e0     	mov	x0, x3
+  6ab1dc: d63f0040     	blr	x2
+  6ab1e0: f9400fe0     	ldr	x0, [sp, #0x18]
+  6ab1e4: f9402003     	ldr	x3, [x0, #0x40]
+  6ab1e8: f9400fe0     	ldr	x0, [sp, #0x18]
+  6ab1ec: f9402000     	ldr	x0, [x0, #0x40]
+  6ab1f0: f9400000     	ldr	x0, [x0]
+  6ab1f4: 91012000     	add	x0, x0, #0x48
+  6ab1f8: f9400002     	ldr	x2, [x0]
+  6ab1fc: 52800001     	mov	w1, #0x0                // =0
+  6ab200: aa0303e0     	mov	x0, x3
+  6ab204: d63f0040     	blr	x2
+  6ab208: f9400fe0     	ldr	x0, [sp, #0x18]
+  6ab20c: f9402403     	ldr	x3, [x0, #0x48]
+  6ab210: f9400fe0     	ldr	x0, [sp, #0x18]
+  6ab214: f9402400     	ldr	x0, [x0, #0x48]
+  6ab218: f9400000     	ldr	x0, [x0]
+  6ab21c: 91012000     	add	x0, x0, #0x48
+  6ab220: f9400002     	ldr	x2, [x0]
+  6ab224: 52800001     	mov	w1, #0x0                // =0
+  6ab228: aa0303e0     	mov	x0, x3
+  6ab22c: d63f0040     	blr	x2
+  6ab230: d503201f     	nop
+  6ab234: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  6ab238: d65f03c0     	ret

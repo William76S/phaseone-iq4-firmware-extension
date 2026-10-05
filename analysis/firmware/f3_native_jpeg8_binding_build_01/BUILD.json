@@ -1,0 +1,97 @@
+{
+  "schema": "iq4_f3_native_jpeg82_binding_build_01",
+  "compiler": {
+    "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+    "bytes": 188226560,
+    "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c"
+  },
+  "source_files": [
+    {
+      "path": "tools/firmware/f3_native_jpeg8_binding_01/native_jpeg82.c",
+      "bytes": 4207,
+      "sha256": "2ad56ac97c295b5da5271e58e5c91cab44a421f9c64f96a9a3ea6261e1b75390"
+    },
+    {
+      "path": "tools/firmware/f3_native_jpeg8_binding_01/native_jpeg82.h",
+      "bytes": 1767,
+      "sha256": "dd76b3ec2285bbfd369b910e97760d64f5a5008f11a75371c6fbf87628e28a77"
+    },
+    {
+      "path": "tools/firmware/f3_native_jpeg8_binding_01/code_pins.h",
+      "bytes": 12232,
+      "sha256": "f76bb43ed8e18c046532f633ac5eeff9c5b2994cbf8834d7e70ce2f9f720a0e4"
+    },
+    {
+      "path": "tools/firmware/f3_native_jpeg8_binding_01/test_binding.c",
+      "bytes": 3398,
+      "sha256": "2648ed0244bfa9e42d077dad0dc70a3401ef3f863918bf6e555b0659db46b9da"
+    }
+  ],
+  "codec_sources": [
+    {
+      "path": "src/codec/bounded_jpeg.h",
+      "bytes": 2418,
+      "sha256": "1be26d8743655280bd507e86f973810b32df568a811f619976f6a3e1adf8a18e"
+    },
+    {
+      "path": "src/codec/stream_rgb32.c",
+      "bytes": 6454,
+      "sha256": "a32167334c549d8e5099682e70a81e80472979ac1c7e66ab21b7a4f5a6f6e7dd"
+    }
+  ],
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_native_jpeg8_binding_build_01/native_jpeg82.o",
+      "bytes": 5376,
+      "sha256": "48505f36510d745ca3a29011d26db3e33e20d686491525379ba9299636134b80",
+      "type": "ET_REL",
+      "machine": 183,
+      "undefined_symbols": [],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f3_native_jpeg8_binding_build_01/stream_rgb32.o",
+      "bytes": 4152,
+      "sha256": "3a4020a9e4cd43ed5b87361f4060f19cf9df7d6c2d46f184a5e7896830f0f8c2",
+      "type": "ET_REL",
+      "machine": 183,
+      "undefined_symbols": [
+        "_setjmp",
+        "calloc",
+        "free",
+        "longjmp",
+        "malloc",
+        "memset"
+      ],
+      "executed": false
+    }
+  ],
+  "host_results": [
+    {
+      "name": "unadmitted_host",
+      "result": {
+        "host_synthetic_groups": 4,
+        "native_functions_invoked": 0
+      }
+    },
+    {
+      "name": "synthetic",
+      "result": {
+        "host_synthetic_groups": 22,
+        "native_functions_invoked": 0
+      }
+    },
+    {
+      "name": "synthetic_asan_ubsan",
+      "result": {
+        "host_synthetic_groups": 22,
+        "native_functions_invoked": 0
+      }
+    }
+  ],
+  "native_functions_executed": false,
+  "target_encoder_executed": false,
+  "sdk_loaded": false,
+  "device_access": false,
+  "firmware_produced": false
+}

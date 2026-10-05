@@ -1,0 +1,13 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPDevelopment.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000000950 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)>:
+     bc0: 48 8b 74 24 18               	movq	0x18(%rsp), %rsi
+     bc5: 48 8d 7d 10                  	leaq	0x10(%rbp), %rdi
+     bc9: 44 89 e2                     	movl	%r12d, %edx
+     bcc: e8 00 00 00 00               	callq	0xbd1 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x281>
+		0000000000000bcd:  R_X86_64_PLT32	memcpy-0x4
+     bd1: e9 5d fe ff ff               	jmp	0xa33 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0xe3>

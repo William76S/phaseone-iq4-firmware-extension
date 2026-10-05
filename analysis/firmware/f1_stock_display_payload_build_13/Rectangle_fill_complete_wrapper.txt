@@ -1,0 +1,54 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000435fac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_>:
+  46f370: a9b97bfd     	stp	x29, x30, [sp, #-0x70]!
+  46f374: 910003fd     	mov	x29, sp
+  46f378: a90153f3     	stp	x19, x20, [sp, #0x10]
+  46f37c: a9025bf5     	stp	x21, x22, [sp, #0x20]
+  46f380: f90027e0     	str	x0, [sp, #0x48]
+  46f384: f90023e1     	str	x1, [sp, #0x40]
+  46f388: f9001fe2     	str	x2, [sp, #0x38]
+  46f38c: f9001be3     	str	x3, [sp, #0x30]
+  46f390: f94023e0     	ldr	x0, [sp, #0x40]
+  46f394: 94003c0d     	bl	0x47e3c8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x4841c>
+  46f398: 2a0003f3     	mov	w19, w0
+  46f39c: f94023e0     	ldr	x0, [sp, #0x40]
+  46f3a0: 94003c10     	bl	0x47e3e0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x48434>
+  46f3a4: 2a0003f4     	mov	w20, w0
+  46f3a8: f94023e0     	ldr	x0, [sp, #0x40]
+  46f3ac: 97ffd436     	bl	0x464484 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x2e4d8>
+  46f3b0: 2a0003f5     	mov	w21, w0
+  46f3b4: f94023e0     	ldr	x0, [sp, #0x40]
+  46f3b8: 97ffd43d     	bl	0x4644ac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x2e500>
+  46f3bc: 2a0003f6     	mov	w22, w0
+  46f3c0: 910143e0     	add	x0, sp, #0x50
+  46f3c4: f9401fe1     	ldr	x1, [sp, #0x38]
+  46f3c8: 97ffa263     	bl	0x457d54 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21da8>
+  46f3cc: 9101a3e0     	add	x0, sp, #0x68
+  46f3d0: f9401be1     	ldr	x1, [sp, #0x30]
+  46f3d4: 97ffa15b     	bl	0x457940 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21994>
+  46f3d8: 9101a3e1     	add	x1, sp, #0x68
+  46f3dc: 910143e0     	add	x0, sp, #0x50
+  46f3e0: aa0103e6     	mov	x6, x1
+  46f3e4: aa0003e5     	mov	x5, x0
+  46f3e8: 2a1603e4     	mov	w4, w22
+  46f3ec: 2a1503e3     	mov	w3, w21
+  46f3f0: 2a1403e2     	mov	w2, w20
+  46f3f4: 2a1303e1     	mov	w1, w19
+  46f3f8: f94027e0     	ldr	x0, [sp, #0x48]
+  46f3fc: 9400000d     	bl	0x46f430 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x39484>
+  46f400: 910143e0     	add	x0, sp, #0x50
+  46f404: 97ffa228     	bl	0x457ca4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21cf8>
+  46f408: 14000006     	b	0x46f420 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x39474>
+  46f40c: aa0003f3     	mov	x19, x0
+  46f410: 910143e0     	add	x0, sp, #0x50
+  46f414: 97ffa224     	bl	0x457ca4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21cf8>
+  46f418: aa1303e0     	mov	x0, x19
+  46f41c: 97fe6ccd     	bl	0x40a750 <_Unwind_Resume@plt>
+  46f420: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  46f424: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+  46f428: a8c77bfd     	ldp	x29, x30, [sp], #0x70
+  46f42c: d65f03c0     	ret

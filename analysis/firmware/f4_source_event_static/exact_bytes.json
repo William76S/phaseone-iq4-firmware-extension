@@ -1,0 +1,289 @@
+{
+  "input_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "evidence_level": "static_instruction_and_bytes",
+  "target_code_executed": false,
+  "address_model": "linked AArch64 ET_EXEC; code/rodata file offset=VA-0x400000",
+  "ranges": [
+    {
+      "name": "main_irq_setup_and_lv_registration",
+      "start_va": "0x422578",
+      "end_va_exclusive": "0x422640",
+      "file_offset": "0x22578",
+      "bytes_hex": "3a9eff97f30300aa802e00f001201c91e00313aa4d300d94f3ab09f9001180d2329eff97f30300aae1ab49f9e0474ff900200091e20300aae00313aa489c0d94f3a709f9e00f43f9703500941f0000f1600000540020009102000014000080d2e20300aa01008052e0a749f92a9d0d94e00f43f96e3500941f0000f1600000540020009102000014000080d2e20300aa21008052e0a749f91f9d0d94e00f43f96c3500941f0000f1600000540020009102000014000080d2e20300aa41008052e0a749f9149d0d94",
+      "bytes_sha256": "452b3ea157e5aa2125a5d840f5967dcd5289f62ce4d309b688bd59ffc280220d",
+      "disassembly": "analysis/firmware/f4_source_event_static/main_irq_setup_and_lv_registration.disasm.txt",
+      "disassembly_sha256": "0be0da8d81b6cd1cda02abeb1bffa3703becbaabafa9248c7cfad766b91f376d"
+    },
+    {
+      "name": "main_irq_thread",
+      "start_va": "0x422758",
+      "end_va_exclusive": "0x4227d8",
+      "file_offset": "0x22758",
+      "bytes_hex": "000480d2c19dff97f30300aa201b00f000a01c91e09b01f9ff9f01f9e0031091020c73a9e1a749f9e00313aa6c410094f3a309f920008052e10740912140019120bc0b39003780d2b09dff97f30300aae0a349f9a400805223008052e20300aa802e00f001601c91e00313aab1cbff97f39b09f9e09b49f9eabcff97e0a749f9",
+      "bytes_sha256": "5e34dc095b1e2e9d4326a9bf3f6f0eaffd28fa1634eb25377634d6cb486a7fd6",
+      "disassembly": "analysis/firmware/f4_source_event_static/main_irq_thread.disasm.txt",
+      "disassembly_sha256": "2ff674a9a4aa68077dfc2f3befaa8e55d2e063a3a0e5dc2f600909d64441fc58"
+    },
+    {
+      "name": "lv_event_member_getter",
+      "start_va": "0x42fa84",
+      "end_va_exclusive": "0x42fa9c",
+      "file_offset": "0x2fa84",
+      "bytes_hex": "ff4300d1e00700f9e00740f900a00691ff430091c0035fd6",
+      "bytes_sha256": "11edacd602182b6a5c6a95419b0e18ba24d34ce76de063058ea5abee67eb4120",
+      "disassembly": "analysis/firmware/f4_source_event_static/lv_event_member_getter.disasm.txt",
+      "disassembly_sha256": "a0338f636743d022c40ddb1d1a7a4e5b82a47f539d9febef9182b13d1a4ae589"
+    },
+    {
+      "name": "lv_event_engine_getter",
+      "start_va": "0x42fbc8",
+      "end_va_exclusive": "0x42fbec",
+      "file_offset": "0x2fbc8",
+      "bytes_hex": "fd7bbea9fd030091e00f00f9e00f40f900204091009040f9a9ffff97fd7bc2a8c0035fd6",
+      "bytes_sha256": "5148b26ddf86f37f3b57c3be420f0e8b43ddaab1291c0d4d0db64292df40d696",
+      "disassembly": "analysis/firmware/f4_source_event_static/lv_event_engine_getter.disasm.txt",
+      "disassembly_sha256": "e73146e392fc0a65d536135fd3d659b65d00243653afb38df98c5ddb6fcfaf54"
+    },
+    {
+      "name": "lv_manager_constructor",
+      "start_va": "0x798038",
+      "end_va_exclusive": "0x798164",
+      "file_offset": "0x398038",
+      "bytes_hex": "fd7bbaa9040080d203008252fd030091f35301a9f30300aaf55b02a9f50301aac12e00f021802791f96b04a9fa0302aa820080525becfd97c12e00f0c01200b02180019100a02791610200f979c2069160d600f9c12e00f0e00319aa21c0279125dcfd9774a20691f76303a9d81200b0fb2b00f91883239178d600f9d71200b0d61200b0f7222691d6222791970600f9961200f9600080527fd2047921008052801a00b9bb42129181c600b9001180d29ffe0ca9754201f97a4601f95bc7f197fa0300aae20313aae1031baa08e1fd977a4a01f9b5a21591001180d253c7f197fa0300aae20313aae10315aa00e1fd977a4e01f9001180d24cc7f197f50300aae20313aae10319aaf9e0fd97f76343a9f96b44a9fb2b40f9755201f9f35341a9f55b42a9fd7bc6a8c0035fd6",
+      "bytes_sha256": "5ca0416fa471f9e2fafb811b1b73f0b240a2cbb852e826646f94da6108d9642a",
+      "disassembly": "analysis/firmware/f4_source_event_static/lv_manager_constructor.disasm.txt",
+      "disassembly_sha256": "05f9e58999516817530f90a98cc1dbd04ba1d9ba98779cc34410ad40e2842e50"
+    },
+    {
+      "name": "lv_manager_engine_binding",
+      "start_va": "0x7995b4",
+      "end_va_exclusive": "0x7995e0",
+      "file_offset": "0x3995b4",
+      "bytes_hex": "e00318aa53e8fd97005680d228c2f1970201669ef80300aae10313aa9afaff97989200f9e00318aa4ae8fd97",
+      "bytes_sha256": "10e9b20acd3c9a5e4dcc20dff8b558a749a7266d41ca9ea299f473e33ce6ae45",
+      "disassembly": "analysis/firmware/f4_source_event_static/lv_manager_engine_binding.disasm.txt",
+      "disassembly_sha256": "6507413df9c32bfa2eec415bf50ed12ada1dcf561b7da6232227e7e6ab71575b"
+    },
+    {
+      "name": "lv_manager_wait_filter",
+      "start_va": "0x79e240",
+      "end_va_exclusive": "0x79e314",
+      "file_offset": "0x39e240",
+      "bytes_hex": "01008052e00313aa81d5fd97614241f9f50300aa20000891220041f9422040f95f0014eb0113005400004339a0feff3420401c91218843f9212040f93f0014eb411300540000433900040034614241f920201291214442f9212040f93f0014ebc12100540000433900030034614241f92080159121b042f9212040f93f0014eb2122005400004339615241f900020035bf0201ebe0210054dde3fd9761aa42b902e284520100014b3f00026ba9faff54614241f90c0189d260aa02b921000c8b3f0400b9cfffff17615241f9bf0201eb80f9ff54",
+      "bytes_sha256": "b9e3ed49ad42be22b42e547b252044c56b5a92506516a3ecc91394759756f153",
+      "disassembly": "analysis/firmware/f4_source_event_static/lv_manager_wait_filter.disasm.txt",
+      "disassembly_sha256": "af8afa0a596ed2d0a70cb53043ec39ee123d398a709bb2e868c9aa6daf8bcd6b"
+    },
+    {
+      "name": "lv_manager_producer_gate",
+      "start_va": "0x79e710",
+      "end_va_exclusive": "0x79e738",
+      "file_offset": "0x39e710",
+      "bytes_hex": "604241f90210409103204091410c48b921040011410c08b9614c443961ddff34d2e2ff97e9feff17",
+      "bytes_sha256": "d4f7f0ff266ce018bf1f573bb10e8cea2b05fe9aa8ac174a475d40115c1a9e72",
+      "disassembly": "analysis/firmware/f4_source_event_static/lv_manager_producer_gate.disasm.txt",
+      "disassembly_sha256": "3780bcd2fe9d1c97e1184f69df8f0eee14ae1846c845cda96a3b5cba0e9b088e"
+    },
+    {
+      "name": "pl_irq_constructor",
+      "start_va": "0x7896d4",
+      "end_va_exclusive": "0x789728",
+      "file_offset": "0x3896d4",
+      "bytes_hex": "fd7bbda9fd030091e01700f9e11300f9e20f00f9e02500b001602691e01740f9010000f9e01740f9e11340f9010400f9e01740f9e10f40f9010800f9e01740f900600091420100941f2003d5fd7bc3a8c0035fd6",
+      "bytes_sha256": "d56d7114832008f4c11dbc760e8aef87ae442803700ab12d22d841d6459f7797",
+      "disassembly": "analysis/firmware/f4_source_event_static/pl_irq_constructor.disasm.txt",
+      "disassembly_sha256": "19543629844cc211886d4b97461a41019f44000e8beb0e934845a6882db5ee30"
+    },
+    {
+      "name": "pl_irq_dispatch",
+      "start_va": "0x789728",
+      "end_va_exclusive": "0x789918",
+      "file_offset": "0x389728",
+      "bytes_hex": "fd7bbba9fd030091f30b00f9e01700f9e11300f9e01740f9020440f9e01740f9000440f9000040f9010040f9e00302aa20003fd6e01740f9040840f9e01740f9000840f9000040f900200091030040f9c200805201018052e00304aa60003fd6e04b00b9e04b40b91f000071000b0054e01740f9050840f9e01740f9000840f9000040f9040040f9e34b40b9c200805201018052e00305aa80003fd6ff4f00b9e04f40b91f3400712c090054e14f40b9e01740f94f000094e103002ae04b40b92000000a1f000071e0079f1ae01f0139e01f41391f00007120070054e01740f900600091e14f40b915010094000040f9e01f00f9e01f40f91f0000f1e0079f1ae0df0039e0df40391f00007180050054e04f40b91f200071c10000549036fe97e103002aa0c1019000e02491010000b9e04f40b91f100071c10000548836fe97e103002aa0c1019000f02491010000b9e04f40b91f180071c10000548036fe97e103002aa0c1019000002591010000b9e04f40b91f080071e1010054e0c0019000400491130040b97536fe97e303002a00c1019002e02491e103132ae00301aa00f47ed30000018b00f07dd34000008b032400b9e01f40f98616fe97e04f40b9a4000094e04f00b9b6ffff17e01340f9000040391f000071400000548effff171f2003d5f30b40f9fd7bc5a8c0035fd6",
+      "bytes_sha256": "c61527862892964ec0f0a154b9e0c4048adbbc2370043e2a4e1871d9cfa98272",
+      "disassembly": "analysis/firmware/f4_source_event_static/pl_irq_dispatch.disasm.txt",
+      "disassembly_sha256": "e6f9f8cc0158ca926f8f2c2dd44d7e338e6f2d485a1406e4bd094357db3a50b6"
+    },
+    {
+      "name": "pl_irq_mask",
+      "start_va": "0x789918",
+      "end_va_exclusive": "0x789a8c",
+      "file_offset": "0x389918",
+      "bytes_hex": "fd7bbea9fd030091e00f00f9e11700b9e01740b91f18007160070054e01740b91f180071ac020054e01740b91f080071a0050054e01740b91f0800710c010054e01740b91f00007160040054e01740b91f040071400400543b000014e01740b91f10007180040054e01740b91f1000716c0400541e000014e01740b91f280071e0050054e01740b91f2800710c010054e01740b91f200071e0030054e01740b91f200071cc03005419000014e01740b91f300071c0030054e01740b91f3000712b030054e01740b91f340071400300541d000014200080522500001440008052230000148000805221000014000180521f000014000280521d000014000480521b00001400088052190000140010805217000014002080521500001400408052130000140080805211000014000081520f000014000082520d0000140000b0520b000014430c8052e02500b002602291e02500b001002391e02500b000202391c202f297238bff9700008052fd7bc2a8c0035fd6",
+      "bytes_sha256": "68152d97c7ab2b7875862beb19d7d542f57d7a2519a5fbc57b2b472e6bda8e03",
+      "disassembly": "analysis/firmware/f4_source_event_static/pl_irq_mask.disasm.txt",
+      "disassembly_sha256": "6ddabaee469057b963c31708a305d6a2c21065fa0f13419ec4a941dc16d0520b"
+    },
+    {
+      "name": "pl_irq_registration",
+      "start_va": "0x789a8c",
+      "end_va_exclusive": "0x789acc",
+      "file_offset": "0x389a8c",
+      "bytes_hex": "fd7bbca9fd030091f30b00f9e01f00f9e13700b9e21700f9f31740f9e01f40f900600091e13740b96c000094130000f91f2003d5f30b40f9fd7bc4a8c0035fd6",
+      "bytes_sha256": "4fe87ea3bf86181f948364bd6c4c3e0679ab2915a22ba72beacb3890f9da4bd6",
+      "disassembly": "analysis/firmware/f4_source_event_static/pl_irq_registration.disasm.txt",
+      "disassembly_sha256": "254712027eed962c9e40e88a9ac100b3ec36329a4e7f754df3bb67e695fd6b60"
+    },
+    {
+      "name": "uio_constructor",
+      "start_va": "0x76e6c0",
+      "end_va_exclusive": "0x76e75c",
+      "file_offset": "0x36e6c0",
+      "bytes_hex": "fd7bbda9fd030091f30b00f9e01700f9e11300f9e01740f999000094802600d001602d91e01740f9010000f9410080520101a072e01340f9766ff297e103002ae01740f9010800b9e01740f9000840b91f000071ca010054802600d003c0279182018052802600d001002a9140008052875fff9706000014f30300aae01740f96c000094e00313aa0270f2971f2003d5f30b40f9fd7bc3a8c0035fd6",
+      "bytes_sha256": "bbd4923420154315e7eb126e68673e6cc9555f3fdacf8009b0d1f0e1b80c0dd0",
+      "disassembly": "analysis/firmware/f4_source_event_static/uio_constructor.disasm.txt",
+      "disassembly_sha256": "01905cefaa65de41e15ef90c861ff361df813a5f11690c51086df46907a4621e"
+    },
+    {
+      "name": "uio_wait",
+      "start_va": "0x76e7c0",
+      "end_va_exclusive": "0x76e8bc",
+      "file_offset": "0x36e7c0",
+      "bytes_hex": "fd7bbca9fd030091e00f00f9e00f40f9000840b91f0000716a000054e00f40f93700009420008052e02f00b9e00f40f9000840b9e1b30091820080d24d70f297e01f00f9800080d2e01b00f9e01f40f91f0c00f14c020054e51f40f9e41f40f9802600d003e02a9122058052802600d001002a9180008052455fff97e00f40f9000840b99370f297e00f40f901008012010800b9e00f40f919000094e00f40f9000840b9e1b30091820080d23d6ff297e01f00f9e01f40f91f1000f1a0010054e51f40f9e41f40f9802600d003c02b9142068052802600d001002a91800080522b5fff97e00f40f9050000941f2003d51f2003d5fd7bc4a8c0035fd6",
+      "bytes_sha256": "d828cb733d7809fbcea708755e428d5f7446502f06b52a8d8d6a967828129744",
+      "disassembly": "analysis/firmware/f4_source_event_static/uio_wait.disasm.txt",
+      "disassembly_sha256": "3f1f424687b861449d095845560287ac52fb657e4a37d2989cc69a286a93d8b4"
+    },
+    {
+      "name": "event_observer_notify",
+      "start_va": "0x70f474",
+      "end_va_exclusive": "0x70f4b8",
+      "file_offset": "0x30f474",
+      "bytes_hex": "e04340f953befe97e03f00f9e03f40f9000040f900400091010040f9e03f40f920003fd6e04340f9000040f900000191010040f9e04340f920003fd6e04300f9e7ffff17",
+      "bytes_sha256": "0d3b4e3fd0313da339114de5b9a34a284e85fb7d0a9d5f6c82308c124187185d",
+      "disassembly": "analysis/firmware/f4_source_event_static/event_observer_notify.disasm.txt",
+      "disassembly_sha256": "21e819800f79b55040bff72aa61d0881d7531fb468248852b77eb64c19ce1179"
+    },
+    {
+      "name": "listener_constructor_owner",
+      "start_va": "0x710548",
+      "end_va_exclusive": "0x710588",
+      "file_offset": "0x310548",
+      "bytes_hex": "802800f001403291e01f40f9010000f9e01740f91f0000f1610000546a01009402000014e01740f9e11f40f9201800f9e01f40f91fe00039e01f40f91f2000f9",
+      "bytes_sha256": "a1af04c2d2860443ce7eb00cced46e1128fcdbe18c5849ece98a692df01d0af7",
+      "disassembly": "analysis/firmware/f4_source_event_static/listener_constructor_owner.disasm.txt",
+      "disassembly_sha256": "a19a8b5750d729eb7801b37b0312b0c7384736a71bfac2457f0a9af991cfabd4"
+    },
+    {
+      "name": "listener_notify_and_pending_clear",
+      "start_va": "0x710820",
+      "end_va_exclusive": "0x710880",
+      "file_offset": "0x310820",
+      "bytes_hex": "fd7bbea9fd030091e00f00f9e00f40f9001840f91f0000f100010054e00f40f9021840f9e00f40f900200191e10300aae00302aa060d00941f2003d5fd7bc2a8c0035fd6ff4300d1e00700f9e00740f91fe000391f2003d5ff430091c0035fd6",
+      "bytes_sha256": "3ac145b90ff4d44a3b03c013f106a9b69b6d99853b5bc228522cc4f5c17dbb42",
+      "disassembly": "analysis/firmware/f4_source_event_static/listener_notify_and_pending_clear.disasm.txt",
+      "disassembly_sha256": "68c2ac9e709be873d45650e8d1a8fc40714ed16177cbccb826c7b2f95fb84c96"
+    },
+    {
+      "name": "queue_post",
+      "start_va": "0x713c6c",
+      "end_va_exclusive": "0x713d40",
+      "file_offset": "0x313c6c",
+      "bytes_hex": "fd7bbca9fd030091f30b00f9e01700f9e11300f9e01740f901e00391e0c300910bacfe97e01740f9134840f9e01340f9cbabfe977f0200ebe0179f1a001c00121f000071e0000054e01340f9c4abfe97e10300aae01740f9014c00f90d000014e01340f9beabfe97f5010094001c001200000052001c00121f000071a0000054e01740f900000191e11340f9f8f1ff97e0c3009101acfe97e01740f92100805201000339e01740f9002003911adcf39706000014f30300aae0c30091f7abfe97e00313aa88daf397f30b40f9fd7bc4a8c0035fd6",
+      "bytes_sha256": "cbda9486e79ee617538ffc4b070abca05b04b3ffae62c23c1db6bd4292de17c5",
+      "disassembly": "analysis/firmware/f4_source_event_static/queue_post.disasm.txt",
+      "disassembly_sha256": "df6e87ab69ea55044e23f2b1986dda26d6324bd119cea9637645e8983b7604bf"
+    },
+    {
+      "name": "pending_test_set",
+      "start_va": "0x714490",
+      "end_va_exclusive": "0x7144d4",
+      "file_offset": "0x314490",
+      "bytes_hex": "ff4300d1e00700f9e00740f900e04039ff430091c0035fd6ff8300d1e00700f9e00740f900e04039e07f0039e00740f92100805201e00039e07f4039ff830091c0035fd6",
+      "bytes_sha256": "d7da25649aba868a87d171eae223bf66668c397be4674a7c29dbd82013158dd9",
+      "disassembly": "analysis/firmware/f4_source_event_static/pending_test_set.disasm.txt",
+      "disassembly_sha256": "53f3f22734d1a40230eb339e15aaca8a0bf45cf6f88910eb584a3089b7d77933"
+    },
+    {
+      "name": "queue_pop_clear",
+      "start_va": "0x713918",
+      "end_va_exclusive": "0x713978",
+      "file_offset": "0x313918",
+      "bytes_hex": "e01740f91f000339e01740f90000019121008052b1f2ff97e03700f9e03740f9d6020094001c001200000052001c00121f00007180faff54ff3700f9d2ffff17e03740f9c2f3ff97f33740f9e0e30091e7acfe97e02301912d030094e00313aa",
+      "bytes_sha256": "9585eeb9cce12e50bcab29da349a841c31c8617d54b65025e9dfa3b34dc3fb1b",
+      "disassembly": "analysis/firmware/f4_source_event_static/queue_pop_clear.disasm.txt",
+      "disassembly_sha256": "e70445e05897a7802447a29bb054633b0d541160abe84394839df9bd11ddd62e"
+    },
+    {
+      "name": "producer_dispatch_clock",
+      "start_va": "0x797278",
+      "end_va_exclusive": "0x79738c",
+      "file_offset": "0x397278",
+      "bytes_hex": "fd7bbca9010189d2fd030091f76303a977c001d01800018bf35301a993c001d0f41241b9f55b02a9f50300aaf8fffd97e203142a76e22491e10318aa4208028bc20e028b400400b9e00315aae5fcff97a05650f9042e84d2e30318aaa102048b02ec88d2a202028ba6c0ff97e8fffd97f403002aa012409100d047b960020034f31241b9600a138bc00e008b1f0c00b9dffffd97730a138be11241b9d30e138b210400113ffc1f7121909f1ae11201b9f55b42a9f76343a9601600b9f35341a9fd7bc4a8c0035fd6e00315aa05feff97a0e2189101c440b93f0400716100005401004339a10000352100805201000339a0021991e3dffd97c5fffd97f31241b90000144b610a138bc10e018b200c00b9e0ffff17",
+      "bytes_sha256": "28e95a916087d7e29bb6a1f03fe17427504507b130ccc5ec44d3ad6b9ee922bc",
+      "disassembly": "analysis/firmware/f4_source_event_static/producer_dispatch_clock.disasm.txt",
+      "disassembly_sha256": "65fc40b83f3cac308a85be2397ca3b780b301165c0fb1f24b187ae6cde97263c"
+    }
+  ],
+  "tables": [
+    {
+      "name": "uio_vtable_and_type",
+      "va": "0xc40b48",
+      "file_offset": "0x840b48",
+      "size": 168,
+      "bytes_hex": "0000000000000000980bc40000000000c0e77600000000005ce776000000000098e77600000000000000000000000000c80bc4000000000030ad40000000000000000000000000000000000000000000f02af40000000000b00bc40000000000c80bc40000000000313555696f4576656e7448616e646c657200000000000000d829f40000000000d80bc40000000000313749557365727370616365496f4576656e740000000000",
+      "sha256": "80307dd86fe6b9ba983ba60cb90baaaf6ae7c2f198d5b491416181261698ec6b"
+    },
+    {
+      "name": "pl_irq_vtable_and_type",
+      "va": "0xc46988",
+      "file_offset": "0x846988",
+      "size": 80,
+      "bytes_hex": "0000000000000000a869c40000000000d49b780000000000f89b780000000000d829f40000000000b869c400000000003138506c496e7465727275707448616e646c6572000000000004000000001000",
+      "sha256": "7300958917693182f0f1d51c988485414d4891095fe5fbf2ad2d554938019b2f"
+    },
+    {
+      "name": "lv_manager_vtable",
+      "va": "0xd73050",
+      "file_offset": "0x973050",
+      "size": 40,
+      "bytes_hex": "0000000000000000b02fd7000000000058e9790000000000b0e979000000000008e2790000000000",
+      "sha256": "8a6bf0badb371a6eba2f597a6ddfeeb7b6f2f48694cf4d8110f9ded40576e014"
+    },
+    {
+      "name": "lv_manager_typeinfo",
+      "va": "0xd72fb0",
+      "file_offset": "0x972fb0",
+      "size": 16,
+      "bytes_hex": "f02af40000000000982fd70000000000",
+      "sha256": "e55ebb482276fda7667a4f01587e44a72c5627b98bbf6ac55ec787b4a79a8347"
+    },
+    {
+      "name": "lv_manager_type_name",
+      "va": "0xd72f98",
+      "file_offset": "0x972f98",
+      "size": 24,
+      "bytes_hex": "31354c697665566965774d616e6167657200000000000000",
+      "sha256": "cc1c3072a1188a8158cb22a228a78d814fd3035f3c5bb96865e0ccffa97386ca"
+    },
+    {
+      "name": "event_listener_vtable",
+      "va": "0xc23c80",
+      "file_offset": "0x823c80",
+      "size": 40,
+      "bytes_hex": "0000000000000000083dc20000000000140671000000000064067100000000002008710000000000",
+      "sha256": "9ae2f5ce66cf14a602ddc03665e7f9984415117e0ea14dba5b2d307377a060eb"
+    },
+    {
+      "name": "uio_device_and_thread_names",
+      "va": "0x9f5708",
+      "file_offset": "0x5f5708",
+      "size": 40,
+      "bytes_hex": "2f6465762f75696f3000000000000000506c496e7465727275707448616e646c6572000000000000",
+      "sha256": "d8a2a4c23b92374c289da5b53a33f788711a8376d9d9002e11df9482563ccdbf"
+    },
+    {
+      "name": "lv_manager_and_event_names",
+      "va": "0xd739e0",
+      "file_offset": "0x9739e0",
+      "size": 32,
+      "bytes_hex": "4c697665566965774d616e61676572004c697665566965774672616d65000000",
+      "sha256": "71783d9c30970f0e5cdd203a2876b2376e1a163b0a1cc1f016b392946ff3cda1"
+    }
+  ],
+  "unchanged_frozen_references": {
+    "analysis/firmware/f4_static/frame_producer.disasm.txt": "643a1bb1b09ae9d9096f3b57d5db480d3182c80152f6aaa4e69ea7660cf45722",
+    "analysis/firmware/f4_static/video_buffer_lock_metadata.disasm.txt": "884a2f0e15de7715bdf906f9db72235eca1546e94a9f590ed22d1221e4da5310",
+    "analysis/firmware/f4_static/native_clock.disasm.txt": "cec15460e1ec510de9a6f81d47990015fe39d8e089e8ba09c8086cb007639351"
+  }
+}

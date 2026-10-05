@@ -1,0 +1,66 @@
+{
+  "schema": "iq4_actual_F1_F3_F4_User_link_01",
+  "spec": {
+    "path": "tools/firmware/f1_f3_f4_user_integration_04/INPUTS_RECORDING_REPAIR_01.json",
+    "bytes": 40714,
+    "sha256": "e05125a63239d91b0a637c3d749d4812736c0b6ac44219d19572b5c5399d288d"
+  },
+  "stock": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "compiler": {
+    "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+    "bytes": 188226560,
+    "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c"
+  },
+  "compiled": [
+    {
+      "source": {
+        "path": "tools/firmware/f1_f3_f4_user_integration_04/initialize.c",
+        "bytes": 2146,
+        "sha256": "fc3a15e269fb835b8b83ae2520a118737d3b68c424bb7b8d5d55b267df8b2860"
+      },
+      "object": {
+        "path": "analysis/firmware/f1_f3_f4_user_integration_build_04_recording_repair_01/initialize.o",
+        "bytes": 4856,
+        "sha256": "1dc40af5372094bb6ab412216c2c4311ee88958ca3acffb06533a4d737444310"
+      }
+    },
+    {
+      "source": {
+        "path": "tools/firmware/native_linked_contract_01/contract.c",
+        "bytes": 2309,
+        "sha256": "2e263730f30e6599301113a8e6eb2b0bcba38e392d7136bf17c3995de8622b58"
+      },
+      "object": {
+        "path": "analysis/firmware/f1_f3_f4_user_integration_build_04_recording_repair_01/contract.o",
+        "bytes": 137536,
+        "sha256": "f082417891ffe3638c263afdf764a05a3c71d91b55c4e28835d2c18f6ac7cdd4"
+      }
+    }
+  ],
+  "User": {
+    "path": "analysis/firmware/f1_f3_f4_user_integration_build_04_recording_repair_01/P1Linux_RatioMask_JPEG_LVRecording_6.03.33.bin",
+    "bytes": 13224552,
+    "sha256": "1500c38530ff3fe1f9ae0befaae5a7ee3a091e8b7994cd281e548184f6618e3a"
+  },
+  "link_report": {
+    "path": "analysis/firmware/f1_f3_f4_user_integration_build_04_recording_repair_01/LINK_REPORT.json",
+    "bytes": 126812,
+    "sha256": "cfa3585724c14d98acf4b9a52c156ae4444af0409a3e014e0b54d25408deec60"
+  },
+  "object_count": 63,
+  "linked_contract_sealed": true,
+  "F3_manual_full_RAW_implementation_linked": true,
+  "F3_SD_automatic_implementation_linked": true,
+  "F3_XQD_automatic_implementation_linked": true,
+  "F3_XQD_automatic_accepted": false,
+  "target_executed": false,
+  "camera_accessed": false,
+  "full_RAW_native_execution_accepted": false,
+  "in_camera_recording_accepted": false,
+  "persistent_recovery_verified": false,
+  "persistent_installation_safe": false
+}

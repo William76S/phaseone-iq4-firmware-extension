@@ -1,0 +1,27 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest private-function symbol labels are not authoritative.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000009770a0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm>:
+  98cf48: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  98cf4c: 910003fd     	mov	x29, sp
+  98cf50: a90153f3     	stp	x19, x20, [sp, #0x10]
+  98cf54: d2809000     	mov	x0, #0x480              // =1152
+  98cf58: 97e9f3c2     	bl	0x409e60 <_Znwm@plt>
+  98cf5c: aa0003f3     	mov	x19, x0
+  98cf60: aa1303e0     	mov	x0, x19
+  98cf64: 9400005d     	bl	0x98d0d8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x16038>
+  98cf68: aa1303e0     	mov	x0, x19
+  98cf6c: 14000007     	b	0x98cf88 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x15ee8>
+  98cf70: aa0003f4     	mov	x20, x0
+  98cf74: d2809001     	mov	x1, #0x480              // =1152
+  98cf78: aa1303e0     	mov	x0, x19
+  98cf7c: 97e9f399     	bl	0x409de0 <_ZdlPvm@plt>
+  98cf80: aa1403e0     	mov	x0, x20
+  98cf84: 97e9f5f3     	bl	0x40a750 <_Unwind_Resume@plt>
+  98cf88: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  98cf8c: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  98cf90: d65f03c0     	ret

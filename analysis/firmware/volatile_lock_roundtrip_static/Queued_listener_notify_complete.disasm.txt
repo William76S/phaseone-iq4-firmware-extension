@@ -1,0 +1,24 @@
+STATIC ONLY; linked VAs; nearest exported labels are not recovered private names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006ee080 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_>:
+  710820: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  710824: 910003fd     	mov	x29, sp
+  710828: f9000fe0     	str	x0, [sp, #0x18]
+  71082c: f9400fe0     	ldr	x0, [sp, #0x18]
+  710830: f9401800     	ldr	x0, [x0, #0x30]
+  710834: f100001f     	cmp	x0, #0x0
+  710838: 54000100     	b.eq	0x710858 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x227d8>
+  71083c: f9400fe0     	ldr	x0, [sp, #0x18]
+  710840: f9401802     	ldr	x2, [x0, #0x30]
+  710844: f9400fe0     	ldr	x0, [sp, #0x18]
+  710848: 91012000     	add	x0, x0, #0x48
+  71084c: aa0003e1     	mov	x1, x0
+  710850: aa0203e0     	mov	x0, x2
+  710854: 94000d06     	bl	0x713c6c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x25bec>
+  710858: d503201f     	nop
+  71085c: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  710860: d65f03c0     	ret

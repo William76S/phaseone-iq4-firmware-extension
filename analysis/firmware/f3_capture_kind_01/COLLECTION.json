@@ -1,0 +1,488 @@
+{
+  "schema": "iq4_capture_kind_static_01",
+  "source_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "source_bytes": 11874544,
+  "level": "static_analysis",
+  "ranges": [
+    {
+      "name": "native_save_gate",
+      "va": 7982472,
+      "bytes": 352,
+      "file_offset": 3788168,
+      "sha256": "4ac16ee85fea430048c17a0ce6e837a449482cca8ca5ebe1162fa34fec05a41b",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/native_save_gate.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x79cd88",
+        "--stop-address=0x79cee8",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "native_save_gate_alternate",
+      "va": 7982996,
+      "bytes": 20,
+      "file_offset": 3788692,
+      "sha256": "bebbd71567142b207cd7eaf66672437589e2b7837f27005df92e9ce9feb80434",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/native_save_gate_alternate.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x79cf94",
+        "--stop-address=0x79cfa8",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "native_black_control_five_gate",
+      "va": 7983420,
+      "bytes": 24,
+      "file_offset": 3789116,
+      "sha256": "68d722829ff624878700e1bb4b25f91cf739ba0895cae650fdf00d5b5ac2cfc5",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/native_black_control_five_gate.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x79d13c",
+        "--stop-address=0x79d154",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "native_ordinary_enqueue",
+      "va": 7983776,
+      "bytes": 264,
+      "file_offset": 3789472,
+      "sha256": "e884f06407ccbbd1592f699cdf2f2ee24934491ca23d469852593269c66c00a4",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/native_ordinary_enqueue.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x79d2a0",
+        "--stop-address=0x79d3a8",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "timelapse_first_black",
+      "va": 8002044,
+      "bytes": 1512,
+      "file_offset": 3807740,
+      "sha256": "1a1364c914572ae0c1240e90b86b09ef5d938cff24cd9424bd889a1e483aa576",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/timelapse_first_black.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x7a19fc",
+        "--stop-address=0x7a1fe4",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "parameterized_black_start",
+      "va": 8007148,
+      "bytes": 1220,
+      "file_offset": 3812844,
+      "sha256": "02450ae507f1cf29e1b9bd0cf47124d14fdabe310f3211d90a4860e8620041cd",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/parameterized_black_start.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x7a2dec",
+        "--stop-address=0x7a32b0",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "production_defaults",
+      "va": 6124060,
+      "bytes": 3540,
+      "file_offset": 1929756,
+      "sha256": "f9dda0970b6e94901381db3519ce26b171fdadfeaa536faef11013ce92c417e0",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/production_defaults.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x5d721c",
+        "--stop-address=0x5d7ff0",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "parameters_copy",
+      "va": 8559348,
+      "bytes": 152,
+      "file_offset": 4365044,
+      "sha256": "64970c8e4d937b52a34123c6bb9acbea3f930ce6d031092ae024054fc2d70d0d",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/parameters_copy.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x829af4",
+        "--stop-address=0x829b8c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "parameters_black_control",
+      "va": 8561672,
+      "bytes": 140,
+      "file_offset": 4367368,
+      "sha256": "2330306037956082f6c9c4c402c05e1fea79a3391080ecdf2fd5a7b99d4d0a4f",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/parameters_black_control.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x82a408",
+        "--stop-address=0x82a494",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "black_control_settings",
+      "va": 6984876,
+      "bytes": 268,
+      "file_offset": 2790572,
+      "sha256": "5df5e0a3415b4d60c4f28ae771ae5cde0f8d013d767cb4e520391b8e68242dc5",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/black_control_settings.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x6a94ac",
+        "--stop-address=0x6a95b8",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "node_reset",
+      "va": 9188056,
+      "bytes": 268,
+      "file_offset": 4993752,
+      "sha256": "455dc90ba55028d2426d7fdbb1cc6142ecf52c427319dd728d975d4efa23ee07",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/node_reset.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x8c32d8",
+        "--stop-address=0x8c33e4",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "reserve_and_recycle",
+      "va": 9197424,
+      "bytes": 1392,
+      "file_offset": 5003120,
+      "sha256": "aafb34f495713850dfa25a62d9979e9c10f25ca2031028972f66ec2bb0a99b61",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/reserve_and_recycle.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x8c5770",
+        "--stop-address=0x8c5ce0",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "capture_compare_only",
+      "va": 7961048,
+      "bytes": 856,
+      "file_offset": 3766744,
+      "sha256": "0f1d6408e0e8bc1d5dedc4f133a29be68a710747d39e77b9febdf5b8f09a0f3e",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/capture_compare_only.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x7979d8",
+        "--stop-address=0x797d30",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "diagnostic_queue_override",
+      "va": 7268892,
+      "bytes": 1908,
+      "file_offset": 3074588,
+      "sha256": "ed04141ee416c498888d31410d2d88bda37ae0ec176b5f35c351a1737be8eff3",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/diagnostic_queue_override.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x6eea1c",
+        "--stop-address=0x6ef190",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "raw_fanout",
+      "va": 9290360,
+      "bytes": 1212,
+      "file_offset": 5096056,
+      "sha256": "9f3968e673499f1d138a5dda0200229db3951a703ac2e1a33505d4224bd44896",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/raw_fanout.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x8dc278",
+        "--stop-address=0x8dc734",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "queue_push_under_mutex",
+      "va": 9203868,
+      "bytes": 276,
+      "file_offset": 5009564,
+      "sha256": "bebaae9d7d705177f9302b39ddcfc677e39054823e27031c5eddd00d061fe5b5",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/queue_push_under_mutex.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x8c709c",
+        "--stop-address=0x8c71b0",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "queue_actual_link",
+      "va": 9205764,
+      "bytes": 236,
+      "file_offset": 5011460,
+      "sha256": "04df368006fa334f24b0c86edecf13fdcc9468ae242f4ccb87347735752546b6",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/queue_actual_link.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x8c7804",
+        "--stop-address=0x8c78f0",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "queue_mutex_guard",
+      "va": 4266944,
+      "bytes": 88,
+      "file_offset": 72640,
+      "sha256": "a0ffcf61e5276b26a9c2314e0c94c5c311e212cd8dc53740b9f7a54737bcdce2",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/queue_mutex_guard.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x411bc0",
+        "--stop-address=0x411c18",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "queue_consumer",
+      "va": 9208512,
+      "bytes": 192,
+      "file_offset": 5014208,
+      "sha256": "1f18ef2c29d9b3e55ad32ecbccff14ebb400855d16041904f32928542adf6c3e",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/queue_consumer.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x8c82c0",
+        "--stop-address=0x8c8380",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "ice_same_node_to_ui",
+      "va": 8094736,
+      "bytes": 5872,
+      "file_offset": 3900432,
+      "sha256": "accb564cb27275eb7d0dd8d601a4ade45960edb93c6ec0a8ed1fec577208317a",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/ice_same_node_to_ui.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x7b8410",
+        "--stop-address=0x7b9b00",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "ui_same_node_to_store",
+      "va": 4793752,
+      "bytes": 1816,
+      "file_offset": 599448,
+      "sha256": "ca89ba97eb81f4749f086f651c865e3e445bc6a92b1630edc38961e03490d5c8",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/ui_same_node_to_store.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x492598",
+        "--stop-address=0x492cb0",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "raw_metadata_lease",
+      "va": 4804840,
+      "bytes": 488,
+      "file_offset": 610536,
+      "sha256": "ddd77ab7ca9c58ab73a06227df2cb3c7eaf43b0d64821d7bf6a62a4c28e1d2bf",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/raw_metadata_lease.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x4950e8",
+        "--stop-address=0x4952d0",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "node_resource_get_release",
+      "va": 9184572,
+      "bytes": 908,
+      "file_offset": 4990268,
+      "sha256": "6ce5b07d5bbbc38937f3943e53aecd8f78129beb62df362d80a0f91fa1c86f80",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/node_resource_get_release.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x8c253c",
+        "--stop-address=0x8c28c8",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "raw_existing_resource_retain",
+      "va": 7276492,
+      "bytes": 444,
+      "file_offset": 3082188,
+      "sha256": "87be8656e77129eaeb7200bd37d4724b1bb821e2c3eb94768b67d391170c343f",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/raw_existing_resource_retain.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x6f07cc",
+        "--stop-address=0x6f0988",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "metadata_existing_resource_retain",
+      "va": 9189056,
+      "bytes": 444,
+      "file_offset": 4994752,
+      "sha256": "ed10d6b9227c1b1aed5d1a08f45dfbf8258a8eabd2273a2fc85afce5d0a349da",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/metadata_existing_resource_retain.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x8c36c0",
+        "--stop-address=0x8c387c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "node_link_constructor",
+      "va": 9188800,
+      "bytes": 80,
+      "file_offset": 4994496,
+      "sha256": "88410731f7585bad94e19e2cea621dfe1217fc51fabf1ade574cb9d87c9867f7",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/node_link_constructor.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x8c35c0",
+        "--stop-address=0x8c3610",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "capture_mode_black_registration",
+      "va": 4336148,
+      "bytes": 160,
+      "file_offset": 141844,
+      "sha256": "f5af367eac132806a66b7b089dd2ac450655f063b7d25f9ccd6ded63304297c4",
+      "disassembly": "analysis/firmware/f3_capture_kind_01/capture_mode_black_registration.asm",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x422a14",
+        "--stop-address=0x422ab4",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    }
+  ],
+  "direct_queue_and_reset_branches": [
+    {
+      "pc": 4794860,
+      "target": 9197912,
+      "instruction": "BL"
+    },
+    {
+      "pc": 7269208,
+      "target": 9197800,
+      "instruction": "BL"
+    },
+    {
+      "pc": 7269380,
+      "target": 9197856,
+      "instruction": "BL"
+    },
+    {
+      "pc": 7269552,
+      "target": 9197912,
+      "instruction": "BL"
+    },
+    {
+      "pc": 7961620,
+      "target": 9197800,
+      "instruction": "BL"
+    },
+    {
+      "pc": 7983872,
+      "target": 9197800,
+      "instruction": "BL"
+    },
+    {
+      "pc": 8099244,
+      "target": 9197856,
+      "instruction": "BL"
+    },
+    {
+      "pc": 9197636,
+      "target": 9188056,
+      "instruction": "BL"
+    },
+    {
+      "pc": 9198676,
+      "target": 9188056,
+      "instruction": "BL"
+    }
+  ],
+  "byte_offset_candidates": [
+    {
+      "pc": 7982492,
+      "word": 962339680,
+      "offset": 1800
+    },
+    {
+      "pc": 8002900,
+      "word": 957497375,
+      "offset": 1168
+    },
+    {
+      "pc": 8002940,
+      "word": 957497345,
+      "offset": 1168
+    },
+    {
+      "pc": 8561628,
+      "word": 957521951,
+      "offset": 1192
+    },
+    {
+      "pc": 9848436,
+      "word": 958145535,
+      "offset": 1800
+    }
+  ],
+  "warning": "Direct branch/offset scans are not whole-program pointer/control-flow proof. No device execution."
+}

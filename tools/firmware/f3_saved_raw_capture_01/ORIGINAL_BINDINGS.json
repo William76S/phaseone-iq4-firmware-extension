@@ -1,0 +1,76 @@
+{
+  "schema": "iq4_f3_saved_raw_capture_native_01",
+  "input_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "input_bytes": 11874544,
+  "bindings": [
+    {
+      "symbol": "iq4_f3_original_file_bind_capture_01",
+      "va": 8541988,
+      "bytes": 76,
+      "sha256": "2c84997c8850f7d98c56e8d242b7ff2343c75e4181e399782d4b7c796b62e52c",
+      "hex": "ff8300d1e00f00f9e10b00f9e20f00b9e32f0039e00b40f9e10f40f9010400f9e10f40b9e00b40f9011000b9e00b40f9e12f403901500039e00b40f91f5400391f2003d5ff830091c0035fd6"
+    },
+    {
+      "symbol": "iq4_f3_original_writer_close_capture_01",
+      "va": 8227384,
+      "bytes": 64,
+      "sha256": "6feee9b3d6078a5a5dc3cb70caaed65a28ffb1c61e23841a391a7a237713d31e",
+      "hex": "fd7bbea9fd030091f30b00f9f30300aa73a2409100600091dfb9ff9761d255f9f30b40f9e00301aa210040f9fd7bc2a8210840f920001fd60060009136d4ff17"
+    },
+    {
+      "symbol": "iq4_f3_original_pthread_self_capture_01",
+      "va": 4239824,
+      "bytes": 16,
+      "sha256": "59073e46723bd4af0a68b715c5fc594dea54014cb8b9301acbdc4de6f1d20ecb",
+      "hex": "d0590090118245f910022c9120021fd6"
+    },
+    {
+      "symbol": "iq4_f3_raw_acquired_continue_01",
+      "va": 9290948,
+      "bytes": 4,
+      "sha256": "460f2bca845f00666f7fb464658ea0578bde8e755115550aeeeff735d6944562",
+      "hex": "ffff0039"
+    },
+    {
+      "symbol": "iq4_f3_original_syscall_03",
+      "va": 4238912,
+      "bytes": 16,
+      "sha256": "0cc51ec789db50f20ec52457bb384252add5b99eaf2326a501b8ea947b218bff",
+      "hex": "d05900b0119e44f910e2249120021fd6"
+    },
+    {
+      "symbol": "iq4_f3_original_errno_location_03",
+      "va": 4236512,
+      "bytes": 16,
+      "sha256": "4e8837bd53cecd28b01df16b9767653c794c5515207dd56caf103e8c4a90fb54",
+      "hex": "d05900b0114642f91022129120021fd6"
+    }
+  ],
+  "hooks": [
+    {
+      "va": 9290944,
+      "branch_kind": "B",
+      "target_symbol": "iq4_f3_raw_acquired_wrapper_01",
+      "old_hex": "012400f9"
+    },
+    {
+      "va": 9307672,
+      "branch_kind": "BL",
+      "target_symbol": "iq4_f3_sd_store_wrapper_01",
+      "old_hex": "e0003fd6"
+    },
+    {
+      "va": 8227220,
+      "branch_kind": "BL",
+      "target_symbol": "iq4_f3_raw_open_wrapper_01",
+      "old_hex": "c0003fd6"
+    },
+    {
+      "va": 9294912,
+      "branch_kind": "BL",
+      "target_symbol": "iq4_f3_raw_close_wrapper_01",
+      "old_hex": "7eedfb97"
+    }
+  ],
+  "target_executed": false
+}

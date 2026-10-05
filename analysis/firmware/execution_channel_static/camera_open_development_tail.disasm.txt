@@ -1,0 +1,79 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPCamera.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000006580 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)>:
+    75a0: e8 00 00 00 00               	callq	0x75a5 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x1025>
+		00000000000075a1:  R_X86_64_PLT32	P1::IQP::DevelopmentAgent::SetMessageReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)-0x4
+    75a5: 48 8b 7c 24 50               	movq	0x50(%rsp), %rdi
+    75aa: 48 c7 44 24 50 00 00 00 00   	movq	$0x0, 0x50(%rsp)
+    75b3: 48 85 ff                     	testq	%rdi, %rdi
+    75b6: 74 06                        	je	0x75be <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x103e>
+    75b8: 48 8b 07                     	movq	(%rdi), %rax
+    75bb: ff 50 08                     	callq	*0x8(%rax)
+    75be: 48 8b 7c 24 30               	movq	0x30(%rsp), %rdi
+    75c3: 48 c7 44 24 30 00 00 00 00   	movq	$0x0, 0x30(%rsp)
+    75cc: 48 85 ff                     	testq	%rdi, %rdi
+    75cf: 74 06                        	je	0x75d7 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x1057>
+    75d1: 48 8b 07                     	movq	(%rdi), %rax
+    75d4: ff 50 08                     	callq	*0x8(%rax)
+    75d7: 80 7c 24 28 00               	cmpb	$0x0, 0x28(%rsp)
+    75dc: 0f 85 90 01 00 00            	jne	0x7772 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x11f2>
+    75e2: 4c 89 f7                     	movq	%r14, %rdi
+    75e5: 45 31 ed                     	xorl	%r13d, %r13d
+    75e8: e8 00 00 00 00               	callq	0x75ed <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x106d>
+		00000000000075e9:  R_X86_64_PLT32	P1::Platform::EventCondition_Cpp::Reset()-0x4
+    75ed: 80 7c 24 18 00               	cmpb	$0x0, 0x18(%rsp)
+    75f2: 0f 84 6a f0 ff ff            	je	0x6662 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xe2>
+    75f8: 48 8b 7c 24 10               	movq	0x10(%rsp), %rdi
+    75fd: 48 85 ff                     	testq	%rdi, %rdi
+    7600: 0f 84 5c f0 ff ff            	je	0x6662 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xe2>
+    7606: 48 83 3d 00 00 00 00 00      	cmpq	$0x0, (%rip)            # 0x760e <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x108e>
+		0000000000007609:  R_X86_64_GOTPCREL	__pthread_key_create-0x5
+    760e: 0f 84 4e f0 ff ff            	je	0x6662 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xe2>
+    7614: e8 00 00 00 00               	callq	0x7619 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x1099>
+		0000000000007615:  R_X86_64_PLT32	pthread_mutex_unlock-0x4
+    7619: e9 44 f0 ff ff               	jmp	0x6662 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xe2>
+    761e: 66 90                        	nop
+    7620: 48 8b 3f                     	movq	(%rdi), %rdi
+    7623: 48 39 fb                     	cmpq	%rdi, %rbx
+    7626: 0f 85 d8 f7 ff ff            	jne	0x6e04 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x884>
+    762c: e9 fc fa ff ff               	jmp	0x712d <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xbad>
+    7631: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+    7638: 48 8b 3f                     	movq	(%rdi), %rdi
+    763b: 48 39 fb                     	cmpq	%rdi, %rbx
+    763e: 0f 85 f8 fa ff ff            	jne	0x713c <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xbbc>
+    7644: e9 74 fd ff ff               	jmp	0x73bd <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xe3d>
+    7649: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+    7650: 48 8b 3f                     	movq	(%rdi), %rdi
+    7653: 48 39 fb                     	cmpq	%rdi, %rbx
+    7656: 0f 85 6d f5 ff ff            	jne	0x6bc9 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x649>
+    765c: e9 94 f7 ff ff               	jmp	0x6df5 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x875>
+    7661: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+    7668: 48 8b 3f                     	movq	(%rdi), %rdi
+    766b: 48 39 fb                     	cmpq	%rdi, %rbx
+    766e: 0f 85 1c f3 ff ff            	jne	0x6990 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x410>
+    7674: e9 44 f5 ff ff               	jmp	0x6bbd <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x63d>
+    7679: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+    7680: 4d 8b 00                     	movq	(%r8), %r8
+    7683: 4c 39 c3                     	cmpq	%r8, %rbx
+    7686: 0f 85 ad f0 ff ff            	jne	0x6739 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x1b9>
+    768c: e9 ff f2 ff ff               	jmp	0x6990 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x410>
+    7691: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+    7698: 48 8b 09                     	movq	(%rcx), %rcx
+    769b: 48 39 cb                     	cmpq	%rcx, %rbx
+    769e: 0f 85 2c fd ff ff            	jne	0x73d0 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xe50>
+    76a4: e9 39 ff ff ff               	jmp	0x75e2 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x1062>
+    76a9: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+    76b0: 4d 8b 00                     	movq	(%r8), %r8
+    76b3: 4c 39 c3                     	cmpq	%r8, %rbx
+    76b6: 0f 85 bd fa ff ff            	jne	0x7179 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xbf9>
+    76bc: e9 fc fc ff ff               	jmp	0x73bd <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xe3d>
+    76c1: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+    76c8: 4d 8b 00                     	movq	(%r8), %r8
+    76cb: 4c 39 c3                     	cmpq	%r8, %rbx
+    76ce: 0f 85 75 f7 ff ff            	jne	0x6e49 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x8c9>
+    76d4: e9 54 fa ff ff               	jmp	0x712d <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xbad>
+    76d9: 0f 1f 80 00 00 00 00         	nopl	(%rax)

@@ -1,0 +1,160 @@
+{
+  "schema": 11,
+  "public_ABI": 10,
+  "golden_vectors": [
+    {
+      "label": "loader11_preflight",
+      "flag": "--preflight",
+      "scope": "readonly_fixed_publication_or_preflight",
+      "source_bytes": 108,
+      "plan_sha256": "f65194c2c6749717c0caba8062bfd4847082c5fe9c567fa73bdd8e922967a833",
+      "host_text": "\"Sys printf IQ4B_0123456789ab; /run/iq4_f1_observe02/entrytool --preflight 2>&1 && printf IQ4E_0123456789ab\""
+    },
+    {
+      "label": "loader11_entry_read",
+      "flag": "--entry-read",
+      "scope": "readonly_fixed_publication_or_preflight",
+      "source_bytes": 109,
+      "plan_sha256": "0bf07fe2c39409a43d76ed09adedb7e93ee91e68be0f226b0dc8c814bac2dfcc",
+      "host_text": "\"Sys printf IQ4B_0123456789ab; /run/iq4_f1_observe02/entrytool --entry-read 2>&1 && printf IQ4E_0123456789ab\""
+    },
+    {
+      "label": "loader11_hook_read",
+      "flag": "--hook-read",
+      "scope": "readonly_fixed_publication_or_preflight",
+      "source_bytes": 108,
+      "plan_sha256": "bcb2e4f61ae06b7497760010ed254e9a5de8949eae47291b50930eccefba48ba",
+      "host_text": "\"Sys printf IQ4B_0123456789ab; /run/iq4_f1_observe02/entrytool --hook-read 2>&1 && printf IQ4E_0123456789ab\""
+    },
+    {
+      "label": "loader11_stage_ui_marker",
+      "flag": "--stage-ui-marker",
+      "scope": "new_owned_RAM_only_no_runner_or_User_exit",
+      "source_bytes": 114,
+      "plan_sha256": "1935760db305118fd9a94ea7b8ca09c20afca70dca3e4e8bb1b7b39b269cfbe7",
+      "host_text": "\"Sys printf IQ4B_0123456789ab; /run/iq4_f1_observe02/entrytool --stage-ui-marker 2>&1 && printf IQ4E_0123456789ab\""
+    },
+    {
+      "label": "loader11_stage_launcher",
+      "flag": "--stage-launcher",
+      "scope": "new_owned_RAM_only_no_runner_or_User_exit",
+      "source_bytes": 113,
+      "plan_sha256": "b6fdcec42849acf1547509d6a1ae1ba38a5792bc4b61ea2c4a7e09d660027e6b",
+      "host_text": "\"Sys printf IQ4B_0123456789ab; /run/iq4_f1_observe02/entrytool --stage-launcher 2>&1 && printf IQ4E_0123456789ab\""
+    },
+    {
+      "label": "loader11_arm",
+      "flag": "--arm",
+      "scope": "RAM_runner_one_load_requires_actual_originals_and_verified_restore_no_User_exit_sent",
+      "source_bytes": 102,
+      "plan_sha256": "87148dc6ce87f11225bdacea85754dc201e7742d0023e8afee273f0701510e72",
+      "host_text": "\"Sys printf IQ4B_0123456789ab; /run/iq4_f1_observe02/entrytool --arm 2>&1 && printf IQ4E_0123456789ab\""
+    },
+    {
+      "label": "loader11_disable",
+      "flag": "--disable",
+      "scope": "restore_RAM_runner_retained_module_not_unloaded",
+      "source_bytes": 106,
+      "plan_sha256": "848eab8728120f968f433d284a5a8d1ed684e3afe86cf04b0ebfa96744faa12e",
+      "host_text": "\"Sys printf IQ4B_0123456789ab; /run/iq4_f1_observe02/entrytool --disable 2>&1 && printf IQ4E_0123456789ab\""
+    },
+    {
+      "label": "loader11_hook_install",
+      "flag": "--hook-install",
+      "scope": "native_text_transaction_requires_actual_protected_contract_and_kernel_recovery_review",
+      "source_bytes": 111,
+      "plan_sha256": "6579498e12c2180dad3e5ebb448bfcb05c9da5a6e5dd395077cd2404250e02a0",
+      "host_text": "\"Sys printf IQ4B_0123456789ab; /run/iq4_f1_observe02/entrytool --hook-install 2>&1 && printf IQ4E_0123456789ab\""
+    },
+    {
+      "label": "loader11_hook_restore",
+      "flag": "--hook-restore",
+      "scope": "native_text_transaction_requires_actual_protected_contract_and_kernel_recovery_review",
+      "source_bytes": 111,
+      "plan_sha256": "cf67972b8cefb9ee3dacd0417166f7e638dce297e22ac5a266a786b7bc1f0032",
+      "host_text": "\"Sys printf IQ4B_0123456789ab; /run/iq4_f1_observe02/entrytool --hook-restore 2>&1 && printf IQ4E_0123456789ab\""
+    }
+  ],
+  "python_cpp_equal": true,
+  "negative_per_cpp_vector": 4,
+  "arbitrary_path_PID_shell_refused": true,
+  "SDK_loaded": false,
+  "Windows_device_network_used": false,
+  "target_program_executed": false,
+  "deployment_authorized": false,
+  "source_closure": {
+    "tools/firmware/f1_entry_loader_binding_11/formatter_test.cpp": "da0998d9d901cade5668d9d4e84944d05e03eaf0c201fbf907ea85508e0bef67",
+    "tools/firmware/f1_entry_loader_binding_11/fixed_profiles.hpp": "f88043c8331e08aa25b6d3a318ce1fa10a3ba101771cb559711da316ecd1664d",
+    "tools/sdk/shell_guard_242/profiles_stage2.hpp": "e988acd2334263ec90041ea3403181096e01f818bf6fe3b2e2ea4d29248d1bea",
+    "tools/sdk/shell_guard_242/raw_codec.hpp": "217fdec6bb928b79640be9f6b2eddb27be0da95335149424ea4508aae8d02c41",
+    "tools/sdk/shell_guard_242/shell_input_guard.hpp": "fca1ebbb849282c77ba64ddddc6ac5cc65ce826ccde7fa5c263c5639d5691e62",
+    "tools/sdk/readonly_backup_stage2/workflow.py": "7172bc6ca65fac68f29c3ba78a4c950b174c106b7c48f58b6460accbc733d24c",
+    "tools/sdk/read_hex_octets_01/contract.py": "ae11a95d8db81e0ac2de47a056ef5f8abde75f308884bca29c58185b43621b65"
+  },
+  "commands": [
+    [
+      "xcrun",
+      "--show-sdk-path"
+    ],
+    [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-isystem",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_entry_loader_binding_11/formatter_test.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/host_formatter"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/host_formatter",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/loader11_preflight.plan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/host_formatter",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/loader11_entry_read.plan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/host_formatter",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/loader11_hook_read.plan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/host_formatter",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/loader11_stage_ui_marker.plan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/host_formatter",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/loader11_stage_launcher.plan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/host_formatter",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/loader11_arm.plan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/host_formatter",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/loader11_disable.plan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/host_formatter",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/loader11_hook_install.plan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/host_formatter",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_entry_loader_build_11/loader11_hook_restore.plan"
+    ],
+    [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-isystem",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+      "-MM",
+      "-MT",
+      "owned_formatter",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_entry_loader_binding_11/formatter_test.cpp"
+    ]
+  ]
+}

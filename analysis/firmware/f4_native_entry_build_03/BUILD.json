@@ -1,0 +1,276 @@
+{
+  "schema": "iq4_f4_native_entry_build_03",
+  "source_inputs": [
+    {
+      "path": "tools/firmware/f4_native_entry_03/build.py",
+      "bytes": 3571,
+      "sha256": "2a01584d46bd03190f2b751d36a20998a2c01dde36ce109dabd319934ad13f5d"
+    },
+    {
+      "path": "tools/firmware/f4_native_entry_03/entry.c",
+      "bytes": 5331,
+      "sha256": "9ec863a62cd029ef67be539a3f1eccf3ee117b75541cef6836586f6242253ddd"
+    },
+    {
+      "path": "tools/firmware/f4_native_entry_03/test_entry.c",
+      "bytes": 5998,
+      "sha256": "0c03959e44e283dc621ab4b22e807ceb2a771b467769f6ca5ff99ef9d49d1b96"
+    }
+  ],
+  "frozen_compatibility_inputs": [
+    {
+      "path": "tools/firmware/f4_native_source_02/entry.c",
+      "bytes": 3118,
+      "sha256": "a9ba48326cbc3ad9c61932468ace12b98960c08507a11112752efe614e804df9"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/SOURCE_SHA256.json",
+      "bytes": 16039,
+      "sha256": "d2e4cff35e7e524f30c56bd8881fc57b4eb96ee309aee2c66b0de214a8fb3c9a"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/LINK_INPUT.json",
+      "bytes": 19244,
+      "sha256": "3c0587eec78ff08abec9eead777d2fa2a652357844cb88eda45e6f67bd856871"
+    },
+    {
+      "path": "tools/firmware/native_activity_01/SOURCE_SHA256.json",
+      "bytes": 1812,
+      "sha256": "414cbd9bde689ec1c493491e18dadd3c4ef7ef916103ccf95bd865d8b22b9665"
+    }
+  ],
+  "objects": [
+    {
+      "path": "analysis/firmware/f4_native_entry_build_03/entry.o",
+      "bytes": 8576,
+      "sha256": "6545e0a5326e066d537160235630a40234f884538d5da490eeaf16aad6d7ae40",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 1720
+        },
+        {
+          "name": ".bss",
+          "type": 8,
+          "flags": 3,
+          "bytes": 128
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 160
+        }
+      ],
+      "relocation_types": [
+        261,
+        275,
+        277,
+        278,
+        283,
+        285,
+        286,
+        311,
+        312
+      ],
+      "undefined_symbols": [
+        "iq4_activity_hold_01",
+        "iq4_activity_release_01",
+        "iq4_activity_try_01",
+        "iq4_activity_valid_01",
+        "iq4_f4_menu_bind_ports_on_ui_03",
+        "iq4_f4_menu_connect_on_ui_03",
+        "iq4_f4_menu_install_03",
+        "iq4_f4_menu_new_03",
+        "iq4_f4_movie_binding_init_on_ui_02",
+        "iq4_f4_movie_binding_ports_02",
+        "iq4_f4_session_init_on_ui_02",
+        "iq4_f4_session_menu_ports_02",
+        "iq4_f4_session_storage_bytes_02",
+        "iq4_f4_source_fence_02",
+        "iq4_f4_source_init_02",
+        "iq4_f4_source_storage_bytes_02",
+        "iq4_native_self_read_01",
+        "memset"
+      ],
+      "executed": false
+    }
+  ],
+  "tests": [
+    {
+      "variant": "normal",
+      "case": "normal",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "normal",
+      "case": "jpeg-busy",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "normal",
+      "case": "alloc-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "normal",
+      "case": "init-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "normal",
+      "case": "control-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "normal",
+      "case": "read-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "normal",
+      "case": "session-hold",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "normal",
+      "case": "idle-with-card",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "normal",
+      "case": "idle-no-fence",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "normal",
+      "case": "source-fence-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "normal",
+      "case": "empty-cancel",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "case": "normal",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "case": "jpeg-busy",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "case": "alloc-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "case": "init-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "case": "control-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "case": "read-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "case": "session-hold",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "case": "idle-with-card",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "case": "idle-no-fence",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "case": "source-fence-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "case": "empty-cancel",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "case": "normal",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "case": "jpeg-busy",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "case": "alloc-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "case": "init-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "case": "control-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "case": "read-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "case": "session-hold",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "case": "idle-with-card",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "case": "idle-no-fence",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "case": "source-fence-unknown",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "case": "empty-cancel",
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    }
+  ],
+  "ABI02_preserved": true,
+  "only_entry_object_replaced": true,
+  "camera_access": false,
+  "target_executed": false,
+  "sdk_loaded": false,
+  "actual_activity_acceptance": false
+}

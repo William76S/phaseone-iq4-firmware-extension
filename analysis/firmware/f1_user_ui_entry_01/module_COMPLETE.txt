@@ -1,0 +1,963 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/module.o:	file format elf64-littleaarch64
+
+Disassembly of section .text._ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE:
+
+0000000000000000 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE>:
+       0: d10703ff     	sub	sp, sp, #0x1c0
+       4: a9167bfd     	stp	x29, x30, [sp, #0x160]
+       8: a9176ffc     	stp	x28, x27, [sp, #0x170]
+       c: a91867fa     	stp	x26, x25, [sp, #0x180]
+      10: a9195ff8     	stp	x24, x23, [sp, #0x190]
+      14: a91a57f6     	stp	x22, x21, [sp, #0x1a0]
+      18: a91b4ff4     	stp	x20, x19, [sp, #0x1b0]
+      1c: 910583fd     	add	x29, sp, #0x160
+      20: 6f00e400     	movi	v0.2d, #0000000000000000
+      24: f9400468     	ldr	x8, [x3, #0x8]
+      28: aa0203f5     	mov	x21, x2
+      2c: a93d87a0     	stp	x0, x1, [x29, #-0x28]
+      30: 9100c3f6     	add	x22, sp, #0x30
+      34: d100a3a0     	sub	x0, x29, #0x28
+      38: f81e83a2     	stur	x2, [x29, #-0x18]
+      3c: 91032101     	add	x1, x8, #0xc8
+      40: d100c3a2     	sub	x2, x29, #0x30
+      44: aa0403f3     	mov	x19, x4
+      48: aa0303f4     	mov	x20, x3
+      4c: f81d03bf     	stur	xzr, [x29, #-0x30]
+      50: 381cc3bf     	sturb	wzr, [x29, #-0x34]
+      54: ad0382c0     	stp	q0, q0, [x22, #0x70]
+      58: ad0482c0     	stp	q0, q0, [x22, #0x90]
+      5c: ad0582c0     	stp	q0, q0, [x22, #0xb0]
+      60: ad0682c0     	stp	q0, q0, [x22, #0xd0]
+      64: 3d801ac0     	str	q0, [x22, #0x60]
+      68: ad0183e0     	stp	q0, q0, [sp, #0x30]
+      6c: ad0283e0     	stp	q0, q0, [sp, #0x50]
+      70: ad0383e0     	stp	q0, q0, [sp, #0x70]
+      74: 94000000     	bl	0x74 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x74>
+		0000000000000074:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+      78: 2a0003e8     	mov	w8, w0
+      7c: 2a1f03e0     	mov	w0, wzr
+      80: 36001d28     	tbz	w8, #0x0, 0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+      84: f85d03a8     	ldur	x8, [x29, #-0x30]
+      88: b5001ce8     	cbnz	x8, 0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+      8c: f9400688     	ldr	x8, [x20, #0x8]
+      90: d100a3a0     	sub	x0, x29, #0x28
+      94: d100c3a2     	sub	x2, x29, #0x30
+      98: 91036101     	add	x1, x8, #0xd8
+      9c: 94000000     	bl	0x9c <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x9c>
+		000000000000009c:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+      a0: 2a0003e8     	mov	w8, w0
+      a4: 2a1f03e0     	mov	w0, wzr
+      a8: 36001be8     	tbz	w8, #0x0, 0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+      ac: f85d03a8     	ldur	x8, [x29, #-0x30]
+      b0: b5001ba8     	cbnz	x8, 0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+      b4: f9400688     	ldr	x8, [x20, #0x8]
+      b8: d100a3a0     	sub	x0, x29, #0x28
+      bc: d100d3a2     	sub	x2, x29, #0x34
+      c0: 52800023     	mov	w3, #0x1                // =1
+      c4: 91038101     	add	x1, x8, #0xe0
+      c8: 94000000     	bl	0xc8 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0xc8>
+		00000000000000c8:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4readEmPvm
+      cc: 2a0003e8     	mov	w8, w0
+      d0: 2a1f03e0     	mov	w0, wzr
+      d4: 36001a88     	tbz	w8, #0x0, 0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+      d8: 385cc3a8     	ldurb	w8, [x29, #-0x34]
+      dc: 35001a48     	cbnz	w8, 0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+      e0: f9400697     	ldr	x23, [x20, #0x8]
+      e4: d100a3a0     	sub	x0, x29, #0x28
+      e8: d100c3a2     	sub	x2, x29, #0x30
+      ec: 910102e1     	add	x1, x23, #0x40
+      f0: 94000000     	bl	0xf0 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0xf0>
+		00000000000000f0:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+      f4: 2a0003e8     	mov	w8, w0
+      f8: 2a1f03e0     	mov	w0, wzr
+      fc: 36001948     	tbz	w8, #0x0, 0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     100: 916e3ea8     	add	x8, x21, #0xb8f, lsl #12 // =0xb8f000
+     104: f85d03a9     	ldur	x9, [x29, #-0x30]
+     108: 9113a118     	add	x24, x8, #0x4e8
+     10c: eb18013f     	cmp	x9, x24
+     110: 540018a1     	b.ne	0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     114: d100a3a0     	sub	x0, x29, #0x28
+     118: 910122e1     	add	x1, x23, #0x48
+     11c: d100c3a2     	sub	x2, x29, #0x30
+     120: 94000000     	bl	0x120 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x120>
+		0000000000000120:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+     124: 2a0003e8     	mov	w8, w0
+     128: 2a1f03e0     	mov	w0, wzr
+     12c: 360017c8     	tbz	w8, #0x0, 0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     130: 91708aa8     	add	x8, x21, #0xc22, lsl #12 // =0xc22000
+     134: f85d03a9     	ldur	x9, [x29, #-0x30]
+     138: 91242115     	add	x21, x8, #0x908
+     13c: eb15013f     	cmp	x9, x21
+     140: 54001721     	b.ne	0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     144: d100a3a0     	sub	x0, x29, #0x28
+     148: 910142e1     	add	x1, x23, #0x50
+     14c: d100c3a2     	sub	x2, x29, #0x30
+     150: 94000000     	bl	0x150 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x150>
+		0000000000000150:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+     154: 2a0003e8     	mov	w8, w0
+     158: 2a1f03e0     	mov	w0, wzr
+     15c: 36001648     	tbz	w8, #0x0, 0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     160: f85d03a8     	ldur	x8, [x29, #-0x30]
+     164: 910162b9     	add	x25, x21, #0x58
+     168: eb19011f     	cmp	x8, x25
+     16c: 540015c1     	b.ne	0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     170: d100a3a0     	sub	x0, x29, #0x28
+     174: 9101a2e1     	add	x1, x23, #0x68
+     178: d100c3a2     	sub	x2, x29, #0x30
+     17c: 94000000     	bl	0x17c <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x17c>
+		000000000000017c:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+     180: 2a0003e8     	mov	w8, w0
+     184: 2a1f03e0     	mov	w0, wzr
+     188: 360014e8     	tbz	w8, #0x0, 0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     18c: f85d03a8     	ldur	x8, [x29, #-0x30]
+     190: eb18011f     	cmp	x8, x24
+     194: 54001481     	b.ne	0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     198: d100a3a0     	sub	x0, x29, #0x28
+     19c: 9101c2e1     	add	x1, x23, #0x70
+     1a0: d100c3a2     	sub	x2, x29, #0x30
+     1a4: 94000000     	bl	0x1a4 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x1a4>
+		00000000000001a4:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+     1a8: 2a0003e8     	mov	w8, w0
+     1ac: 2a1f03e0     	mov	w0, wzr
+     1b0: 360013a8     	tbz	w8, #0x0, 0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     1b4: f85d03a8     	ldur	x8, [x29, #-0x30]
+     1b8: eb15011f     	cmp	x8, x21
+     1bc: 54001341     	b.ne	0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     1c0: d100a3a0     	sub	x0, x29, #0x28
+     1c4: 9101e2e1     	add	x1, x23, #0x78
+     1c8: d100c3a2     	sub	x2, x29, #0x30
+     1cc: 94000000     	bl	0x1cc <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x1cc>
+		00000000000001cc:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+     1d0: 2a0003e8     	mov	w8, w0
+     1d4: 2a1f03e0     	mov	w0, wzr
+     1d8: 36001268     	tbz	w8, #0x0, 0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     1dc: f85d03a8     	ldur	x8, [x29, #-0x30]
+     1e0: eb19011f     	cmp	x8, x25
+     1e4: 54001201     	b.ne	0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     1e8: f9400695     	ldr	x21, [x20, #0x8]
+     1ec: d100a3a0     	sub	x0, x29, #0x28
+     1f0: 9100c3e2     	add	x2, sp, #0x30
+     1f4: 910162a1     	add	x1, x21, #0x58
+     1f8: 94000000     	bl	0x1f8 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x1f8>
+		00000000000001f8:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+     1fc: 36001120     	tbz	w0, #0x0, 0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     200: d100a3a0     	sub	x0, x29, #0x28
+     204: 910182a1     	add	x1, x21, #0x60
+     208: b27d02c2     	orr	x2, x22, #0x8
+     20c: 94000000     	bl	0x20c <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x20c>
+		000000000000020c:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+     210: 36001080     	tbz	w0, #0x0, 0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     214: d100a3a0     	sub	x0, x29, #0x28
+     218: 910202a1     	add	x1, x21, #0x80
+     21c: 910042c2     	add	x2, x22, #0x10
+     220: 94000000     	bl	0x220 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x220>
+		0000000000000220:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+     224: 36000fe0     	tbz	w0, #0x0, 0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     228: d100a3a0     	sub	x0, x29, #0x28
+     22c: 910222a1     	add	x1, x21, #0x88
+     230: 910062c2     	add	x2, x22, #0x18
+     234: 94000000     	bl	0x234 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x234>
+		0000000000000234:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+     238: 36000f40     	tbz	w0, #0x0, 0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     23c: a9432be8     	ldp	x8, x10, [sp, #0x30]
+     240: 910142a9     	add	x9, x21, #0x50
+     244: 9101e2b8     	add	x24, x21, #0x78
+     248: 9101c2d7     	add	x23, x22, #0x70
+     24c: f90003f5     	str	x21, [sp]
+     250: eb09011f     	cmp	x8, x9
+     254: f94023e8     	ldr	x8, [sp, #0x40]
+     258: fa490140     	ccmp	x10, x9, #0x0, eq
+     25c: 1a9f17e9     	cset	w9, eq
+     260: eb18011f     	cmp	x8, x24
+     264: b9005fe9     	str	w9, [sp, #0x5c]
+     268: 540006c1     	b.ne	0x340 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x340>
+     26c: aa1803f5     	mov	x21, x24
+     270: f94027e8     	ldr	x8, [sp, #0x48]
+     274: a900ffff     	stp	xzr, xzr, [sp, #0x8]
+     278: eb0802bf     	cmp	x21, x8
+     27c: 54000d21     	b.ne	0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     280: f94003e8     	ldr	x8, [sp]
+     284: d100a3a0     	sub	x0, x29, #0x28
+     288: 910043e2     	add	x2, sp, #0x10
+     28c: 91020101     	add	x1, x8, #0x80
+     290: 94000000     	bl	0x290 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x290>
+		0000000000000290:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+     294: 36000c60     	tbz	w0, #0x0, 0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     298: f9400be8     	ldr	x8, [sp, #0x10]
+     29c: f94023e9     	ldr	x9, [sp, #0x40]
+     2a0: eb09011f     	cmp	x8, x9
+     2a4: 54000be1     	b.ne	0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     2a8: f94003e8     	ldr	x8, [sp]
+     2ac: d100a3a0     	sub	x0, x29, #0x28
+     2b0: 910023e2     	add	x2, sp, #0x8
+     2b4: 91022101     	add	x1, x8, #0x88
+     2b8: 94000000     	bl	0x2b8 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x2b8>
+		00000000000002b8:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+     2bc: 36000b20     	tbz	w0, #0x0, 0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     2c0: f94007e8     	ldr	x8, [sp, #0x8]
+     2c4: f94027e9     	ldr	x9, [sp, #0x48]
+     2c8: eb09011f     	cmp	x8, x9
+     2cc: 54000aa1     	b.ne	0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     2d0: b94053e8     	ldr	w8, [sp, #0x50]
+     2d4: 52800029     	mov	w9, #0x1                // =1
+     2d8: b90057e9     	str	w9, [sp, #0x54]
+     2dc: 340000c8     	cbz	w8, 0x2f4 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x2f4>
+     2e0: 51000508     	sub	w8, w8, #0x1
+     2e4: f9400e89     	ldr	x9, [x20, #0x18]
+     2e8: f8685ae8     	ldr	x8, [x23, w8, uxtw #3]
+     2ec: eb09011f     	cmp	x8, x9
+     2f0: 1a9f17e8     	cset	w8, eq
+     2f4: b9005be8     	str	w8, [sp, #0x58]
+     2f8: 52800020     	mov	w0, #0x1                // =1
+     2fc: ad4606c0     	ldp	q0, q1, [x22, #0xc0]
+     300: 3dc03ac2     	ldr	q2, [x22, #0xe0]
+     304: 3d803a62     	str	q2, [x19, #0xe0]
+     308: ad060660     	stp	q0, q1, [x19, #0xc0]
+     30c: ad4406c0     	ldp	q0, q1, [x22, #0x80]
+     310: ad040660     	stp	q0, q1, [x19, #0x80]
+     314: ad450ac0     	ldp	q0, q2, [x22, #0xa0]
+     318: ad050a60     	stp	q0, q2, [x19, #0xa0]
+     31c: ad4383e1     	ldp	q1, q0, [sp, #0x70]
+     320: ad020261     	stp	q1, q0, [x19, #0x40]
+     324: ad430ac0     	ldp	q0, q2, [x22, #0x60]
+     328: ad030a60     	stp	q0, q2, [x19, #0x60]
+     32c: ad4183e1     	ldp	q1, q0, [sp, #0x30]
+     330: ad000261     	stp	q1, q0, [x19]
+     334: ad428be0     	ldp	q0, q2, [sp, #0x50]
+     338: ad010a60     	stp	q0, q2, [x19, #0x20]
+     33c: 1400003a     	b	0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     340: b94053e9     	ldr	w9, [sp, #0x50]
+     344: 9100c2d9     	add	x25, x22, #0x30
+     348: 9102c2da     	add	x26, x22, #0xb0
+     34c: 9284001b     	mov	x27, #-0x2001           // =-8193
+     350: aa1803fc     	mov	x28, x24
+     354: f240091f     	tst	x8, #0x7
+     358: 2a1f03e0     	mov	w0, wzr
+     35c: 54000641     	b.ne	0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     360: aa0803f5     	mov	x21, x8
+     364: f140051f     	cmp	x8, #0x1, lsl #12       // =0x1000
+     368: 540005e3     	b.lo	0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     36c: 7100213f     	cmp	w9, #0x8
+     370: 540005a0     	b.eq	0x424 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x424>
+     374: 6f00e400     	movi	v0.2d, #0000000000000000
+     378: d100a3a0     	sub	x0, x29, #0x28
+     37c: 910043e2     	add	x2, sp, #0x10
+     380: aa1503e1     	mov	x1, x21
+     384: 52800403     	mov	w3, #0x20               // =32
+     388: f90007ff     	str	xzr, [sp, #0x8]
+     38c: ad0083e0     	stp	q0, q0, [sp, #0x10]
+     390: 94000000     	bl	0x390 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x390>
+		0000000000000390:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4readEmPvm
+     394: 36000460     	tbz	w0, #0x0, 0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     398: f94013e8     	ldr	x8, [sp, #0x20]
+     39c: eb1c011f     	cmp	x8, x28
+     3a0: 54000401     	b.ne	0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     3a4: f94017e8     	ldr	x8, [sp, #0x28]
+     3a8: f140051f     	cmp	x8, #0x1, lsl #12       // =0x1000
+     3ac: 540003a3     	b.lo	0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     3b0: eb1b011f     	cmp	x8, x27
+     3b4: 54000368     	b.hi	0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     3b8: 92400909     	and	x9, x8, #0x7
+     3bc: b5000329     	cbnz	x9, 0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     3c0: 91022109     	add	x9, x8, #0x88
+     3c4: eb15013f     	cmp	x9, x21
+     3c8: 540002c1     	b.ne	0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     3cc: d100a3a0     	sub	x0, x29, #0x28
+     3d0: 9102c101     	add	x1, x8, #0xb0
+     3d4: 910023e2     	add	x2, sp, #0x8
+     3d8: 94000000     	bl	0x3d8 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x3d8>
+		00000000000003d8:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4wordEmRm
+     3dc: 36000220     	tbz	w0, #0x0, 0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     3e0: f94007e8     	ldr	x8, [sp, #0x8]
+     3e4: f9400689     	ldr	x9, [x20, #0x8]
+     3e8: eb09011f     	cmp	x8, x9
+     3ec: 540001a1     	b.ne	0x420 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x420>
+     3f0: b94053ea     	ldr	w10, [sp, #0x50]
+     3f4: f94017eb     	ldr	x11, [sp, #0x28]
+     3f8: aa1503fc     	mov	x28, x21
+     3fc: f82a7aeb     	str	x11, [x23, x10, lsl #3]
+     400: a94123eb     	ldp	x11, x8, [sp, #0x10]
+     404: 11000549     	add	w9, w10, #0x1
+     408: f82a7b35     	str	x21, [x25, x10, lsl #3]
+     40c: b90053e9     	str	w9, [sp, #0x50]
+     410: eb18011f     	cmp	x8, x24
+     414: f82a7b4b     	str	x11, [x26, x10, lsl #3]
+     418: 54fff9e1     	b.ne	0x354 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x354>
+     41c: 17ffff95     	b	0x270 <_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE+0x270>
+     420: 2a1f03e0     	mov	w0, wzr
+     424: a95b4ff4     	ldp	x20, x19, [sp, #0x1b0]
+     428: a95a57f6     	ldp	x22, x21, [sp, #0x1a0]
+     42c: a9595ff8     	ldp	x24, x23, [sp, #0x190]
+     430: a95867fa     	ldp	x26, x25, [sp, #0x180]
+     434: a9576ffc     	ldp	x28, x27, [sp, #0x170]
+     438: a9567bfd     	ldp	x29, x30, [sp, #0x160]
+     43c: 910703ff     	add	sp, sp, #0x1c0
+     440: d65f03c0     	ret
+
+Disassembly of section .text._ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_:
+
+0000000000000000 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_>:
+       0: 39500408     	ldrb	w8, [x0, #0x401]
+       4: 36000068     	tbz	w8, #0x0, 0x10 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x10>
+       8: 2a1f03e0     	mov	w0, wzr
+       c: d65f03c0     	ret
+      10: d10283ff     	sub	sp, sp, #0xa0
+      14: a9057bfd     	stp	x29, x30, [sp, #0x50]
+      18: a90667fa     	stp	x26, x25, [sp, #0x60]
+      1c: a9075ff8     	stp	x24, x23, [sp, #0x70]
+      20: a90857f6     	stp	x22, x21, [sp, #0x80]
+      24: a9094ff4     	stp	x20, x19, [sp, #0x90]
+      28: 910143fd     	add	x29, sp, #0x50
+      2c: aa0403f3     	mov	x19, x4
+      30: aa0203f4     	mov	x20, x2
+      34: aa0103f5     	mov	x21, x1
+      38: 52800028     	mov	w8, #0x1                // =1
+      3c: a9000801     	stp	x1, x2, [x0]
+      40: 39100408     	strb	w8, [x0, #0x401]
+      44: a9011003     	stp	x3, x4, [x0, #0x10]
+      48: 36000c43     	tbz	w3, #0x0, 0x1d0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x1d0>
+      4c: 52802009     	mov	w9, #0x100              // =256
+      50: 2a2303e8     	mvn	w8, w3
+      54: 72a00029     	movk	w9, #0x1, lsl #16
+      58: ea09011f     	tst	x8, x9
+      5c: 54000b41     	b.ne	0x1c4 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x1c4>
+      60: b4000b26     	cbz	x6, 0x1c4 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x1c4>
+      64: b4000b05     	cbz	x5, 0x1c4 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x1c4>
+      68: 36c00ae3     	tbz	w3, #0x18, 0x1c4 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x1c4>
+      6c: b4000ad4     	cbz	x20, 0x1c4 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x1c4>
+      70: 91008003     	add	x3, x0, #0x20
+      74: aa0003f6     	mov	x22, x0
+      78: aa1503e0     	mov	x0, x21
+      7c: aa1403e1     	mov	x1, x20
+      80: aa1303e2     	mov	x2, x19
+      84: aa0603f7     	mov	x23, x6
+      88: aa0503f8     	mov	x24, x5
+      8c: 94000000     	bl	0x8c <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x8c>
+		000000000000008c:  R_AARCH64_CALL26	_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE
+      90: 2a0003e8     	mov	w8, w0
+      94: aa1603e0     	mov	x0, x22
+      98: 36000968     	tbz	w8, #0x0, 0x1c4 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x1c4>
+      9c: 90000019     	adrp	x25, 0x0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_>
+		000000000000009c:  R_AARCH64_ADR_PREL_PG_HI21	_ZN3iq42f113entry_ports017EntriesE+0x10
+      a0: 91000339     	add	x25, x25, #0x0
+		00000000000000a0:  R_AARCH64_ADD_ABS_LO12_NC	_ZN3iq42f113entry_ports017EntriesE+0x10
+      a4: 52804c1a     	mov	w26, #0x260             // =608
+      a8: f85f8328     	ldur	x8, [x25, #-0x8]
+      ac: d10043a2     	sub	x2, x29, #0x10
+      b0: aa1503e0     	mov	x0, x21
+      b4: 52800203     	mov	w3, #0x10               // =16
+      b8: a93f7fbf     	stp	xzr, xzr, [x29, #-0x10]
+      bc: 8b130101     	add	x1, x8, x19
+      c0: d63f0280     	blr	x20
+      c4: 36000960     	tbz	w0, #0x0, 0x1f0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x1f0>
+      c8: a9402f28     	ldp	x8, x11, [x25]
+      cc: a97f2ba9     	ldp	x9, x10, [x29, #-0x10]
+      d0: eb08013f     	cmp	x9, x8
+      d4: fa4b0140     	ccmp	x10, x11, #0x0, eq
+      d8: 540008c1     	b.ne	0x1f0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x1f0>
+      dc: f100835a     	subs	x26, x26, #0x20
+      e0: 91008339     	add	x25, x25, #0x20
+      e4: 54fffe21     	b.ne	0xa8 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0xa8>
+      e8: 4e080e60     	dup	v0.2d, x19
+      ec: 90000008     	adrp	x8, 0x0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_>
+		00000000000000ec:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16
+      f0: 90000009     	adrp	x9, 0x0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_>
+		00000000000000f0:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16+0x20
+      f4: 3dc00101     	ldr	q1, [x8]
+		00000000000000f4:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16
+      f8: 90000008     	adrp	x8, 0x0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_>
+		00000000000000f8:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16+0x10
+      fc: 3dc00123     	ldr	q3, [x9]
+		00000000000000fc:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16+0x20
+     100: 3dc00102     	ldr	q2, [x8]
+		0000000000000100:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16+0x10
+     104: 90000008     	adrp	x8, 0x0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_>
+		0000000000000104:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16+0x30
+     108: 52802004     	mov	w4, #0x100              // =256
+     10c: 4ee18401     	add	v1.2d, v0.2d, v1.2d
+     110: 3dc00104     	ldr	q4, [x8]
+		0000000000000110:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16+0x30
+     114: 90000008     	adrp	x8, 0x0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_>
+		0000000000000114:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16+0x40
+     118: 3dc00105     	ldr	q5, [x8]
+		0000000000000118:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16+0x40
+     11c: 90000008     	adrp	x8, 0x0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_>
+		000000000000011c:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16+0x50
+     120: 4ee28402     	add	v2.2d, v0.2d, v2.2d
+     124: 4ee38403     	add	v3.2d, v0.2d, v3.2d
+     128: 4ee48404     	add	v4.2d, v0.2d, v4.2d
+     12c: 910502c0     	add	x0, x22, #0x140
+     130: 3c8a82c1     	stur	q1, [x22, #0xa8]
+     134: 3dc00101     	ldr	q1, [x8]
+		0000000000000134:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16+0x50
+     138: 90000008     	adrp	x8, 0x0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_>
+		0000000000000138:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16+0x60
+     13c: 3c8b82c2     	stur	q2, [x22, #0xb8]
+     140: 3dc00102     	ldr	q2, [x8]
+		0000000000000140:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16+0x60
+     144: 90000008     	adrp	x8, 0x0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_>
+		0000000000000144:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16+0x70
+     148: 4ee18401     	add	v1.2d, v0.2d, v1.2d
+     14c: 3c8c82c3     	stur	q3, [x22, #0xc8]
+     150: 3dc00103     	ldr	q3, [x8]
+		0000000000000150:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16+0x70
+     154: 90000008     	adrp	x8, 0x0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_>
+		0000000000000154:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16+0x80
+     158: 3c8d82c4     	stur	q4, [x22, #0xd8]
+     15c: 4ee58405     	add	v5.2d, v0.2d, v5.2d
+     160: 3dc00104     	ldr	q4, [x8]
+		0000000000000160:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16+0x80
+     164: 4ee28402     	add	v2.2d, v0.2d, v2.2d
+     168: 4ee38403     	add	v3.2d, v0.2d, v3.2d
+     16c: 3c8f82c1     	stur	q1, [x22, #0xf8]
+     170: 6f00e401     	movi	v1.2d, #0000000000000000
+     174: 91538668     	add	x8, x19, #0x4e1, lsl #12 // =0x4e1000
+     178: 4ee48400     	add	v0.2d, v0.2d, v4.2d
+     17c: 910b2108     	add	x8, x8, #0x2c8
+     180: 910003e3     	mov	x3, sp
+     184: aa1503e1     	mov	x1, x21
+     188: aa1403e2     	mov	x2, x20
+     18c: 72a02024     	movk	w4, #0x101, lsl #16
+     190: aa1303e5     	mov	x5, x19
+     194: 3c8e82c5     	stur	q5, [x22, #0xe8]
+     198: ad088ec2     	stp	q2, q3, [x22, #0x110]
+     19c: f90086c8     	str	x8, [x22, #0x108]
+     1a0: 3d804ec0     	str	q0, [x22, #0x130]
+     1a4: ad0007e1     	stp	q1, q1, [sp]
+     1a8: 3d800be1     	str	q1, [sp, #0x20]
+     1ac: a9035ff8     	stp	x24, x23, [sp, #0x30]
+     1b0: 94000000     	bl	0x1b0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x1b0>
+		00000000000001b0:  R_AARCH64_CALL26	_ZN3iq42f49bootstrap9Bootstrap9configureENS1_6MemoryENS1_6NativeENS1_9ImageGateE
+     1b4: 360001e0     	tbz	w0, #0x0, 0x1f0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x1f0>
+     1b8: 52800028     	mov	w8, #0x1                // =1
+     1bc: b90416c8     	str	w8, [x22, #0x414]
+     1c0: 14000004     	b	0x1d0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x1d0>
+     1c4: 2a1f03e8     	mov	w8, wzr
+     1c8: 528000a9     	mov	w9, #0x5                // =5
+     1cc: b9041409     	str	w9, [x0, #0x414]
+     1d0: a9494ff4     	ldp	x20, x19, [sp, #0x90]
+     1d4: a94857f6     	ldp	x22, x21, [sp, #0x80]
+     1d8: a9475ff8     	ldp	x24, x23, [sp, #0x70]
+     1dc: a94667fa     	ldp	x26, x25, [sp, #0x60]
+     1e0: a9457bfd     	ldp	x29, x30, [sp, #0x50]
+     1e4: 910283ff     	add	sp, sp, #0xa0
+     1e8: 2a0803e0     	mov	w0, w8
+     1ec: d65f03c0     	ret
+     1f0: 528000a9     	mov	w9, #0x5                // =5
+     1f4: 2a1f03e8     	mov	w8, wzr
+     1f8: b90416c9     	str	w9, [x22, #0x414]
+     1fc: 17fffff5     	b	0x1d0 <_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_+0x1d0>
+
+Disassembly of section .text._ZN3iq42f17entry016Module7currentEPv:
+
+0000000000000000 <_ZN3iq42f17entry016Module7currentEPv>:
+       0: a9bf7bfd     	stp	x29, x30, [sp, #-0x10]!
+       4: 910003fd     	mov	x29, sp
+       8: 39500408     	ldrb	w8, [x0, #0x401]
+       c: 7100051f     	cmp	w8, #0x1
+      10: 540001c1     	b.ne	0x48 <_ZN3iq42f17entry016Module7currentEPv+0x48>
+      14: 39404008     	ldrb	w8, [x0, #0x10]
+      18: 7100051f     	cmp	w8, #0x1
+      1c: 54000161     	b.ne	0x48 <_ZN3iq42f17entry016Module7currentEPv+0x48>
+      20: f9403c08     	ldr	x8, [x0, #0x78]
+      24: b4000128     	cbz	x8, 0x48 <_ZN3iq42f17entry016Module7currentEPv+0x48>
+      28: b944b409     	ldr	w9, [x0, #0x4b4]
+      2c: 11000529     	add	w9, w9, #0x1
+      30: b904b409     	str	w9, [x0, #0x4b4]
+      34: d63f0100     	blr	x8
+      38: a8c17bfd     	ldp	x29, x30, [sp], #0x10
+      3c: d65f03c0     	ret
+      40: 94000000     	bl	0x40 <_ZN3iq42f17entry016Module7currentEPv+0x40>
+		0000000000000040:  R_AARCH64_CALL26	__cxa_begin_catch
+      44: 94000000     	bl	0x44 <_ZN3iq42f17entry016Module7currentEPv+0x44>
+		0000000000000044:  R_AARCH64_CALL26	__cxa_end_catch
+      48: aa1f03e0     	mov	x0, xzr
+      4c: a8c17bfd     	ldp	x29, x30, [sp], #0x10
+      50: d65f03c0     	ret
+      54: 94000000     	bl	0x54 <_ZN3iq42f17entry016Module7currentEPv+0x54>
+		0000000000000054:  R_AARCH64_CALL26	__clang_call_terminate
+
+Disassembly of section .text.__clang_call_terminate:
+
+0000000000000000 <__clang_call_terminate>:
+       0: a9bf7bfd     	stp	x29, x30, [sp, #-0x10]!
+       4: 910003fd     	mov	x29, sp
+       8: 94000000     	bl	0x8 <__clang_call_terminate+0x8>
+		0000000000000008:  R_AARCH64_CALL26	__cxa_begin_catch
+       c: 94000000     	bl	0xc <__clang_call_terminate+0xc>
+		000000000000000c:  R_AARCH64_CALL26	_ZSt9terminatev
+
+Disassembly of section .text._ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE:
+
+0000000000000000 <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE>:
+       0: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+       4: a90157f6     	stp	x22, x21, [sp, #0x10]
+       8: a9024ff4     	stp	x20, x19, [sp, #0x20]
+       c: 910003fd     	mov	x29, sp
+      10: 39500408     	ldrb	w8, [x0, #0x401]
+      14: aa0303f3     	mov	x19, x3
+      18: aa0203f4     	mov	x20, x2
+      1c: aa0103f5     	mov	x21, x1
+      20: 7100051f     	cmp	w8, #0x1
+      24: 54000201     	b.ne	0x64 <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0x64>
+      28: 39404008     	ldrb	w8, [x0, #0x10]
+      2c: 7100051f     	cmp	w8, #0x1
+      30: 540003c1     	b.ne	0xa8 <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0xa8>
+      34: f9403c08     	ldr	x8, [x0, #0x78]
+      38: b4000188     	cbz	x8, 0x68 <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0x68>
+      3c: b944b409     	ldr	w9, [x0, #0x4b4]
+      40: aa0003f6     	mov	x22, x0
+      44: 11000529     	add	w9, w9, #0x1
+      48: b904b409     	str	w9, [x0, #0x4b4]
+      4c: d63f0100     	blr	x8
+      50: aa0003e8     	mov	x8, x0
+      54: aa1603e0     	mov	x0, x22
+      58: eb15011f     	cmp	x8, x21
+      5c: 540000a0     	b.eq	0x70 <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0x70>
+      60: 14000015     	b	0xb4 <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0xb4>
+      64: aa1f03e8     	mov	x8, xzr
+      68: eb15011f     	cmp	x8, x21
+      6c: 54000241     	b.ne	0xb4 <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0xb4>
+      70: f9404008     	ldr	x8, [x0, #0x80]
+      74: eb0802bf     	cmp	x21, x8
+      78: 540001e1     	b.ne	0xb4 <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0xb4>
+      7c: 91050000     	add	x0, x0, #0x140
+      80: aa1503e1     	mov	x1, x21
+      84: aa1403e2     	mov	x2, x20
+      88: aa1303e3     	mov	x3, x19
+      8c: 94000000     	bl	0x8c <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0x8c>
+		000000000000008c:  R_AARCH64_CALL26	_ZN3iq42f49bootstrap9Bootstrap7inspectEmmPKNS0_10ui_counter8ObserverE
+      90: 52800028     	mov	w8, #0x1                // =1
+      94: 7100041f     	cmp	w0, #0x1
+      98: 1a880508     	cinc	w8, w8, ne
+      9c: 7100001f     	cmp	w0, #0x0
+      a0: 1a8803e0     	csel	w0, wzr, w8, eq
+      a4: 14000005     	b	0xb8 <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0xb8>
+      a8: aa1f03e8     	mov	x8, xzr
+      ac: eb15011f     	cmp	x8, x21
+      b0: 54fffe00     	b.eq	0x70 <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0x70>
+      b4: 52800040     	mov	w0, #0x2                // =2
+      b8: a9424ff4     	ldp	x20, x19, [sp, #0x20]
+      bc: a94157f6     	ldp	x22, x21, [sp, #0x10]
+      c0: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+      c4: d65f03c0     	ret
+      c8: 94000000     	bl	0xc8 <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0xc8>
+		00000000000000c8:  R_AARCH64_CALL26	__cxa_begin_catch
+      cc: 94000000     	bl	0xcc <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0xcc>
+		00000000000000cc:  R_AARCH64_CALL26	__cxa_end_catch
+      d0: aa1f03e8     	mov	x8, xzr
+      d4: 17ffffe0     	b	0x54 <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0x54>
+      d8: 94000000     	bl	0xd8 <_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE+0xd8>
+		00000000000000d8:  R_AARCH64_CALL26	__clang_call_terminate
+
+Disassembly of section .text._ZN3iq42f17entry016Module14selector_portsEv:
+
+0000000000000000 <_ZN3iq42f17entry016Module14selector_portsEv>:
+       0: ad410400     	ldp	q0, q1, [x0, #0x20]
+       4: 9000000a     	adrp	x10, 0x0 <_ZN3iq42f17entry016Module14selector_portsEv>
+		0000000000000004:  R_AARCH64_ADR_PREL_PG_HI21	_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE
+       8: 9100014a     	add	x10, x10, #0x0
+		0000000000000008:  R_AARCH64_ADD_ABS_LO12_NC	_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE
+       c: f9403809     	ldr	x9, [x0, #0x70]
+      10: ad000500     	stp	q0, q1, [x8]
+      14: ad420800     	ldp	q0, q2, [x0, #0x40]
+      18: 3dc01801     	ldr	q1, [x0, #0x60]
+      1c: a9050109     	stp	x9, x0, [x8, #0x50]
+      20: 90000009     	adrp	x9, 0x0 <_ZN3iq42f17entry016Module14selector_portsEv>
+		0000000000000020:  R_AARCH64_ADR_PREL_PG_HI21	_ZN3iq42f17entry016Module7currentEPv
+      24: 91000129     	add	x9, x9, #0x0
+		0000000000000024:  R_AARCH64_ADD_ABS_LO12_NC	_ZN3iq42f17entry016Module7currentEPv
+      28: ad010900     	stp	q0, q2, [x8, #0x20]
+      2c: 3d801101     	str	q1, [x8, #0x40]
+      30: a9062909     	stp	x9, x10, [x8, #0x60]
+      34: d65f03c0     	ret
+
+Disassembly of section .text._ZN3iq42f17entry016Module7repaintEPvm:
+
+0000000000000000 <_ZN3iq42f17entry016Module7repaintEPvm>:
+       0: d10143ff     	sub	sp, sp, #0x50
+       4: a9027bfd     	stp	x29, x30, [sp, #0x20]
+       8: f9001bf5     	str	x21, [sp, #0x30]
+       c: a9044ff4     	stp	x20, x19, [sp, #0x40]
+      10: 910083fd     	add	x29, sp, #0x20
+      14: aa0003f4     	mov	x20, x0
+      18: 3dc00000     	ldr	q0, [x0]
+      1c: f9400c08     	ldr	x8, [x0, #0x18]
+      20: f8480e89     	ldr	x9, [x20, #0x80]!
+      24: 390073bf     	strb	wzr, [x29, #0x1c]
+      28: 3d8003e0     	str	q0, [sp]
+      2c: f9000be8     	str	x8, [sp, #0x10]
+      30: b4000749     	cbz	x9, 0x118 <_ZN3iq42f17entry016Module7repaintEPvm+0x118>
+      34: f9404c08     	ldr	x8, [x0, #0x98]
+      38: aa0103f5     	mov	x21, x1
+      3c: aa0003f3     	mov	x19, x0
+      40: eb08003f     	cmp	x1, x8
+      44: 540006a1     	b.ne	0x118 <_ZN3iq42f17entry016Module7repaintEPvm+0x118>
+      48: 39500668     	ldrb	w8, [x19, #0x401]
+      4c: 7100051f     	cmp	w8, #0x1
+      50: 540001a1     	b.ne	0x84 <_ZN3iq42f17entry016Module7repaintEPvm+0x84>
+      54: 39404268     	ldrb	w8, [x19, #0x10]
+      58: 7100051f     	cmp	w8, #0x1
+      5c: 54000141     	b.ne	0x84 <_ZN3iq42f17entry016Module7repaintEPvm+0x84>
+      60: f9403e68     	ldr	x8, [x19, #0x78]
+      64: b4000108     	cbz	x8, 0x84 <_ZN3iq42f17entry016Module7repaintEPvm+0x84>
+      68: b944b669     	ldr	w9, [x19, #0x4b4]
+      6c: 11000529     	add	w9, w9, #0x1
+      70: b904b669     	str	w9, [x19, #0x4b4]
+      74: d63f0100     	blr	x8
+      78: 14000004     	b	0x88 <_ZN3iq42f17entry016Module7repaintEPvm+0x88>
+      7c: 94000000     	bl	0x7c <_ZN3iq42f17entry016Module7repaintEPvm+0x7c>
+		000000000000007c:  R_AARCH64_CALL26	__cxa_begin_catch
+      80: 94000000     	bl	0x80 <_ZN3iq42f17entry016Module7repaintEPvm+0x80>
+		0000000000000080:  R_AARCH64_CALL26	__cxa_end_catch
+      84: aa1f03e0     	mov	x0, xzr
+      88: f9400288     	ldr	x8, [x20]
+      8c: eb08001f     	cmp	x0, x8
+      90: 54000441     	b.ne	0x118 <_ZN3iq42f17entry016Module7repaintEPvm+0x118>
+      94: 910003e0     	mov	x0, sp
+      98: aa1403e1     	mov	x1, x20
+      9c: 2a1f03e2     	mov	w2, wzr
+      a0: 94000000     	bl	0xa0 <_ZN3iq42f17entry016Module7repaintEPvm+0xa0>
+		00000000000000a0:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector7currentERKNS1_5OwnerEb
+      a4: 360003a0     	tbz	w0, #0x0, 0x118 <_ZN3iq42f17entry016Module7repaintEPvm+0x118>
+      a8: 910003e0     	mov	x0, sp
+      ac: 9102a2a1     	add	x1, x21, #0xa8
+      b0: 910073a2     	add	x2, x29, #0x1c
+      b4: 52800023     	mov	w3, #0x1                // =1
+      b8: 94000000     	bl	0xb8 <_ZN3iq42f17entry016Module7repaintEPvm+0xb8>
+		00000000000000b8:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4readEmPvm
+      bc: 2a0003e8     	mov	w8, w0
+      c0: 2a1f03e0     	mov	w0, wzr
+      c4: 360002c8     	tbz	w8, #0x0, 0x11c <_ZN3iq42f17entry016Module7repaintEPvm+0x11c>
+      c8: 394073a8     	ldrb	w8, [x29, #0x1c]
+      cc: 35000288     	cbnz	w8, 0x11c <_ZN3iq42f17entry016Module7repaintEPvm+0x11c>
+      d0: f9403a68     	ldr	x8, [x19, #0x70]
+      d4: b4000228     	cbz	x8, 0x118 <_ZN3iq42f17entry016Module7repaintEPvm+0x118>
+      d8: aa1503e0     	mov	x0, x21
+      dc: 2a1f03e1     	mov	w1, wzr
+      e0: d63f0100     	blr	x8
+      e4: b944ba68     	ldr	w8, [x19, #0x4b8]
+      e8: 910003e0     	mov	x0, sp
+      ec: aa1403e1     	mov	x1, x20
+      f0: 2a1f03e2     	mov	w2, wzr
+      f4: 11000508     	add	w8, w8, #0x1
+      f8: b904ba68     	str	w8, [x19, #0x4b8]
+      fc: 94000000     	bl	0xfc <_ZN3iq42f17entry016Module7repaintEPvm+0xfc>
+		00000000000000fc:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector7currentERKNS1_5OwnerEb
+     100: 14000007     	b	0x11c <_ZN3iq42f17entry016Module7repaintEPvm+0x11c>
+     104: 94000000     	bl	0x104 <_ZN3iq42f17entry016Module7repaintEPvm+0x104>
+		0000000000000104:  R_AARCH64_CALL26	__clang_call_terminate
+     108: 94000000     	bl	0x108 <_ZN3iq42f17entry016Module7repaintEPvm+0x108>
+		0000000000000108:  R_AARCH64_CALL26	__cxa_begin_catch
+     10c: 528000a8     	mov	w8, #0x5                // =5
+     110: b9041668     	str	w8, [x19, #0x414]
+     114: 94000000     	bl	0x114 <_ZN3iq42f17entry016Module7repaintEPvm+0x114>
+		0000000000000114:  R_AARCH64_CALL26	__cxa_end_catch
+     118: 2a1f03e0     	mov	w0, wzr
+     11c: 12000000     	and	w0, w0, #0x1
+     120: a9444ff4     	ldp	x20, x19, [sp, #0x40]
+     124: f9401bf5     	ldr	x21, [sp, #0x30]
+     128: a9427bfd     	ldp	x29, x30, [sp, #0x20]
+     12c: 910143ff     	add	sp, sp, #0x50
+     130: d65f03c0     	ret
+     134: 94000000     	bl	0x134 <_ZN3iq42f17entry016Module7repaintEPvm+0x134>
+		0000000000000134:  R_AARCH64_CALL26	__clang_call_terminate
+
+Disassembly of section .text._ZN3iq42f17entry016Module13overlay_portsEv:
+
+0000000000000000 <_ZN3iq42f17entry016Module13overlay_portsEv>:
+       0: f9400c09     	ldr	x9, [x0, #0x18]
+       4: 9000000a     	adrp	x10, 0x0 <_ZN3iq42f17entry016Module13overlay_portsEv>
+		0000000000000004:  R_AARCH64_ADR_PREL_PG_HI21	_ZN3iq42f17entry016Module7repaintEPvm
+       8: 9100014a     	add	x10, x10, #0x0
+		0000000000000008:  R_AARCH64_ADD_ABS_LO12_NC	_ZN3iq42f17entry016Module7repaintEPvm
+       c: 9151bd29     	add	x9, x9, #0x46f, lsl #12 // =0x46f000
+      10: 910dc129     	add	x9, x9, #0x370
+      14: a9000109     	stp	x9, x0, [x8]
+      18: 90000009     	adrp	x9, 0x0 <_ZN3iq42f17entry016Module13overlay_portsEv>
+		0000000000000018:  R_AARCH64_ADR_PREL_PG_HI21	_ZN3iq42f17entry016Module7currentEPv
+      1c: 91000129     	add	x9, x9, #0x0
+		000000000000001c:  R_AARCH64_ADD_ABS_LO12_NC	_ZN3iq42f17entry016Module7currentEPv
+      20: a9012909     	stp	x9, x10, [x8, #0x10]
+      24: d65f03c0     	ret
+
+Disassembly of section .text._ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE:
+
+0000000000000000 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE>:
+       0: 39500408     	ldrb	w8, [x0, #0x401]
+       4: 7100051f     	cmp	w8, #0x1
+       8: 54001c01     	b.ne	0x388 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x388>
+       c: 39404008     	ldrb	w8, [x0, #0x10]
+      10: 7100051f     	cmp	w8, #0x1
+      14: 54001ba1     	b.ne	0x388 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x388>
+      18: b9402028     	ldr	w8, [x1, #0x20]
+      1c: 35001b68     	cbnz	w8, 0x388 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x388>
+      20: f9400c08     	ldr	x8, [x0, #0x18]
+      24: f9400029     	ldr	x9, [x1]
+      28: 915af908     	add	x8, x8, #0x6be, lsl #12 // =0x6be000
+      2c: 9122b108     	add	x8, x8, #0x8ac
+      30: eb08013f     	cmp	x9, x8
+      34: 54001aa1     	b.ne	0x388 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x388>
+      38: b9441408     	ldr	w8, [x0, #0x414]
+      3c: 121f7908     	and	w8, w8, #0xfffffffe
+      40: 7100111f     	cmp	w8, #0x4
+      44: 54001a20     	b.eq	0x388 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x388>
+      48: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+      4c: a9015ffc     	stp	x28, x23, [sp, #0x10]
+      50: a90257f6     	stp	x22, x21, [sp, #0x20]
+      54: a9034ff4     	stp	x20, x19, [sp, #0x30]
+      58: 910003fd     	mov	x29, sp
+      5c: d10a03ff     	sub	sp, sp, #0x280
+      60: 910103f6     	add	x22, sp, #0x40
+      64: 91100015     	add	x21, x0, #0x400
+      68: 52800028     	mov	w8, #0x1                // =1
+      6c: 085ffea9     	ldaxrb	w9, [x21]
+      70: 080a7ea8     	stxrb	w10, w8, [x21]
+      74: 35ffffca     	cbnz	w10, 0x6c <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x6c>
+      78: 370017e9     	tbnz	w9, #0x0, 0x374 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x374>
+      7c: 6f00e401     	movi	v1.2d, #0000000000000000
+      80: 3dc00000     	ldr	q0, [x0]
+      84: f9400c08     	ldr	x8, [x0, #0x18]
+      88: aa0003f4     	mov	x20, x0
+      8c: d10083a0     	sub	x0, x29, #0x20
+      90: d10183a2     	sub	x2, x29, #0x60
+      94: f81f03a8     	stur	x8, [x29, #-0x10]
+      98: aa0103f7     	mov	x23, x1
+      9c: ad0f86c1     	stp	q1, q1, [x22, #0x1f0]
+      a0: ad1082c1     	stp	q1, q0, [x22, #0x210]
+      a4: 3d807ac1     	str	q1, [x22, #0x1e0]
+      a8: 94000000     	bl	0xa8 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0xa8>
+		00000000000000a8:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector8boundaryERKNS1_13BoundaryInputERNS1_8BoundaryE
+      ac: 360014a0     	tbz	w0, #0x0, 0x340 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x340>
+      b0: f9421289     	ldr	x9, [x20, #0x420]
+      b4: aa1403e8     	mov	x8, x20
+      b8: f100fd3f     	cmp	x9, #0x3f
+      bc: 540014e8     	b.hi	0x358 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x358>
+      c0: f9420d09     	ldr	x9, [x8, #0x418]
+      c4: b100053f     	cmn	x9, #0x1
+      c8: 54001480     	b.eq	0x358 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x358>
+      cc: aa0803f3     	mov	x19, x8
+      d0: f8480e69     	ldr	x9, [x19, #0x80]!
+      d4: b4000289     	cbz	x9, 0x124 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x124>
+      d8: f85a03aa     	ldur	x10, [x29, #-0x60]
+      dc: eb0a013f     	cmp	x9, x10
+      e0: 54001421     	b.ne	0x364 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x364>
+      e4: f9404509     	ldr	x9, [x8, #0x88]
+      e8: f85a83aa     	ldur	x10, [x29, #-0x58]
+      ec: eb0a013f     	cmp	x9, x10
+      f0: 540013a1     	b.ne	0x364 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x364>
+      f4: f9404909     	ldr	x9, [x8, #0x90]
+      f8: f85b03aa     	ldur	x10, [x29, #-0x50]
+      fc: eb0a013f     	cmp	x9, x10
+     100: 54001321     	b.ne	0x364 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x364>
+     104: f9404d09     	ldr	x9, [x8, #0x98]
+     108: f85b83aa     	ldur	x10, [x29, #-0x48]
+     10c: eb0a013f     	cmp	x9, x10
+     110: 540012a1     	b.ne	0x364 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x364>
+     114: f9405109     	ldr	x9, [x8, #0xa0]
+     118: f85c03aa     	ldur	x10, [x29, #-0x40]
+     11c: eb0a013f     	cmp	x9, x10
+     120: 54001221     	b.ne	0x364 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x364>
+     124: 6f00e400     	movi	v0.2d, #0000000000000000
+     128: a9400500     	ldp	x0, x1, [x8]
+     12c: f9400d02     	ldr	x2, [x8, #0x18]
+     130: d10183a3     	sub	x3, x29, #0x60
+     134: 9104c3e4     	add	x4, sp, #0x130
+     138: ad0302c0     	stp	q0, q0, [x22, #0x60]
+     13c: ad0402c0     	stp	q0, q0, [x22, #0x80]
+     140: ad0502c0     	stp	q0, q0, [x22, #0xa0]
+     144: ad0602c0     	stp	q0, q0, [x22, #0xc0]
+     148: ad0702c0     	stp	q0, q0, [x22, #0xe0]
+     14c: ad0802c0     	stp	q0, q0, [x22, #0x100]
+     150: ad0902c0     	stp	q0, q0, [x22, #0x120]
+     154: ad0a02c0     	stp	q0, q0, [x22, #0x140]
+     158: ad0b02c0     	stp	q0, q0, [x22, #0x160]
+     15c: ad0c02c0     	stp	q0, q0, [x22, #0x180]
+     160: ad0d02c0     	stp	q0, q0, [x22, #0x1a0]
+     164: ad0e02c0     	stp	q0, q0, [x22, #0x1c0]
+     168: 3d8016c0     	str	q0, [x22, #0x50]
+     16c: ad0283e0     	stp	q0, q0, [sp, #0x50]
+     170: ad0383e0     	stp	q0, q0, [sp, #0x70]
+     174: 3d8013e0     	str	q0, [sp, #0x40]
+     178: 94000000     	bl	0x178 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x178>
+		0000000000000178:  R_AARCH64_CALL26	_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE
+     17c: 36000e20     	tbz	w0, #0x0, 0x340 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x340>
+     180: a9400680     	ldp	x0, x1, [x20]
+     184: d10183a3     	sub	x3, x29, #0x60
+     188: f9400e82     	ldr	x2, [x20, #0x18]
+     18c: 910103e4     	add	x4, sp, #0x40
+     190: 94000000     	bl	0x190 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x190>
+		0000000000000190:  R_AARCH64_CALL26	_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE
+     194: 36000d60     	tbz	w0, #0x0, 0x340 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x340>
+     198: 9104c3e0     	add	x0, sp, #0x130
+     19c: 910103e1     	add	x1, sp, #0x40
+     1a0: 52801e02     	mov	w2, #0xf0               // =240
+     1a4: 94000000     	bl	0x1a4 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x1a4>
+		00000000000001a4:  R_AARCH64_CALL26	bcmp
+     1a8: 35000cc0     	cbnz	w0, 0x340 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x340>
+     1ac: b9415fe8     	ldr	w8, [sp, #0x15c]
+     1b0: 34000c88     	cbz	w8, 0x340 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x340>
+     1b4: b9415be8     	ldr	w8, [sp, #0x158]
+     1b8: 34000c48     	cbz	w8, 0x340 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x340>
+     1bc: aa1403e0     	mov	x0, x20
+     1c0: 94000000     	bl	0x1c0 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x1c0>
+		00000000000001c0:  R_AARCH64_CALL26	_ZN3iq42f17entry016Module7currentEPv
+     1c4: f85a03a8     	ldur	x8, [x29, #-0x60]
+     1c8: eb08001f     	cmp	x0, x8
+     1cc: 54000e01     	b.ne	0x38c <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x38c>
+     1d0: 6f00e400     	movi	v0.2d, #0000000000000000
+     1d4: d10083a0     	sub	x0, x29, #0x20
+     1d8: d10183a1     	sub	x1, x29, #0x60
+     1dc: 910043e2     	add	x2, sp, #0x10
+     1e0: f90007ff     	str	xzr, [sp, #0x8]
+     1e4: 3c82e3e0     	stur	q0, [sp, #0x2e]
+     1e8: ad0083e0     	stp	q0, q0, [sp, #0x10]
+     1ec: 94000000     	bl	0x1ec <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x1ec>
+		00000000000001ec:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector17layout_candidatesERKNS1_5OwnerERNS1_14LayoutSnapshotE
+     1f0: 36000d80     	tbz	w0, #0x0, 0x3a0 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x3a0>
+     1f4: f85b83a8     	ldur	x8, [x29, #-0x48]
+     1f8: d10083a0     	sub	x0, x29, #0x20
+     1fc: 910023e2     	add	x2, sp, #0x8
+     200: 52800103     	mov	w3, #0x8                // =8
+     204: 91046101     	add	x1, x8, #0x118
+     208: 94000000     	bl	0x208 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x208>
+		0000000000000208:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector4readEmPvm
+     20c: 36000ca0     	tbz	w0, #0x0, 0x3a0 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x3a0>
+     210: ad4f06c0     	ldp	q0, q1, [x22, #0x1e0]
+     214: d10083a0     	sub	x0, x29, #0x20
+     218: b9441289     	ldr	w9, [x20, #0x410]
+     21c: f85c03a8     	ldur	x8, [x29, #-0x40]
+     220: aa1303e1     	mov	x1, x19
+     224: 2a1f03e2     	mov	w2, wzr
+     228: 11000529     	add	w9, w9, #0x1
+     22c: ad000660     	stp	q0, q1, [x19]
+     230: f9001268     	str	x8, [x19, #0x20]
+     234: 52800028     	mov	w8, #0x1                // =1
+     238: b9041289     	str	w9, [x20, #0x410]
+     23c: 91106289     	add	x9, x20, #0x418
+     240: 4e080d00     	dup	v0.2d, x8
+     244: d5033bbf     	dmb	ish
+     248: 3dc00121     	ldr	q1, [x9]
+     24c: f9405288     	ldr	x8, [x20, #0xa0]
+     250: ad440e82     	ldp	q2, q3, [x20, #0x80]
+     254: 4ee08420     	add	v0.2d, v1.2d, v0.2d
+     258: f9022a88     	str	x8, [x20, #0x450]
+     25c: f85c83a8     	ldur	x8, [x29, #-0x38]
+     260: fd4007e1     	ldr	d1, [sp, #0x8]
+     264: 3d810e82     	str	q2, [x20, #0x430]
+     268: bd4033e2     	ldr	s2, [sp, #0x30]
+     26c: 3d811283     	str	q3, [x20, #0x440]
+     270: f9022e88     	str	x8, [x20, #0x458]
+     274: 3d800120     	str	q0, [x9]
+     278: 3dc002e0     	ldr	q0, [x23]
+     27c: fd024e81     	str	d1, [x20, #0x498]
+     280: 3dc007e1     	ldr	q1, [sp, #0x10]
+     284: 2946a7e8     	ldp	w8, w9, [sp, #0x34]
+     288: 3d811a80     	str	q0, [x20, #0x460]
+     28c: 3dc006e0     	ldr	q0, [x23, #0x10]
+     290: 3d812281     	str	q1, [x20, #0x480]
+     294: bd04a682     	str	s2, [x20, #0x4a4]
+     298: 3dc03ec2     	ldr	q2, [x22, #0xf0]
+     29c: 3d811e80     	str	q0, [x20, #0x470]
+     2a0: ad4806c0     	ldp	q0, q1, [x22, #0x100]
+     2a4: b904a288     	str	w8, [x20, #0x4a0]
+     2a8: f94013e8     	ldr	x8, [sp, #0x20]
+     2ac: 3d813282     	str	q2, [x20, #0x4c0]
+     2b0: 3d813a81     	str	q1, [x20, #0x4e0]
+     2b4: 3d813680     	str	q0, [x20, #0x4d0]
+     2b8: ad4a02c1     	ldp	q1, q0, [x22, #0x140]
+     2bc: f9024a88     	str	x8, [x20, #0x490]
+     2c0: 3940f3e8     	ldrb	w8, [sp, #0x3c]
+     2c4: b904aa89     	str	w9, [x20, #0x4a8]
+     2c8: 3d814a80     	str	q0, [x20, #0x520]
+     2cc: ad4902c3     	ldp	q3, q0, [x22, #0x120]
+     2d0: 3d814681     	str	q1, [x20, #0x510]
+     2d4: b904ae88     	str	w8, [x20, #0x4ac]
+     2d8: 3940f7e8     	ldrb	w8, [sp, #0x3d]
+     2dc: 3d814280     	str	q0, [x20, #0x500]
+     2e0: ad4c02c1     	ldp	q1, q0, [x22, #0x180]
+     2e4: 3d813e83     	str	q3, [x20, #0x4f0]
+     2e8: b904b288     	str	w8, [x20, #0x4b0]
+     2ec: 3d815a80     	str	q0, [x20, #0x560]
+     2f0: ad4b02c2     	ldp	q2, q0, [x22, #0x160]
+     2f4: 3d815681     	str	q1, [x20, #0x550]
+     2f8: 3d815280     	str	q0, [x20, #0x540]
+     2fc: ad4e02c1     	ldp	q1, q0, [x22, #0x1c0]
+     300: 3d814e82     	str	q2, [x20, #0x530]
+     304: ad4d0ac3     	ldp	q3, q2, [x22, #0x1a0]
+     308: 3d816a80     	str	q0, [x20, #0x5a0]
+     30c: 3d816681     	str	q1, [x20, #0x590]
+     310: 3d816282     	str	q2, [x20, #0x580]
+     314: 3d815e83     	str	q3, [x20, #0x570]
+     318: 94000000     	bl	0x318 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x318>
+		0000000000000318:  R_AARCH64_CALL26	_ZNK3iq42f111native_ui029Inspector7currentERKNS1_5OwnerEb
+     31c: 52800048     	mov	w8, #0x2                // =2
+     320: 7200001f     	tst	w0, #0x1
+     324: 1a881508     	cinc	w8, w8, eq
+     328: b9041688     	str	w8, [x20, #0x414]
+     32c: d5033bbf     	dmb	ish
+     330: b9441288     	ldr	w8, [x20, #0x410]
+     334: 11000508     	add	w8, w8, #0x1
+     338: b9041288     	str	w8, [x20, #0x410]
+     33c: 1400001c     	b	0x3ac <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x3ac>
+     340: f9421688     	ldr	x8, [x20, #0x428]
+     344: 91100289     	add	x9, x20, #0x400
+     348: 91000508     	add	x8, x8, #0x1
+     34c: f9021688     	str	x8, [x20, #0x428]
+     350: 089ffd3f     	stlrb	wzr, [x9]
+     354: 14000008     	b	0x374 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x374>
+     358: 52800089     	mov	w9, #0x4                // =4
+     35c: 3900411f     	strb	wzr, [x8, #0x10]
+     360: 14000002     	b	0x368 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x368>
+     364: 528000a9     	mov	w9, #0x5                // =5
+     368: 9110010a     	add	x10, x8, #0x400
+     36c: b9041509     	str	w9, [x8, #0x414]
+     370: 089ffd5f     	stlrb	wzr, [x10]
+     374: 910a03ff     	add	sp, sp, #0x280
+     378: a9434ff4     	ldp	x20, x19, [sp, #0x30]
+     37c: a94257f6     	ldp	x22, x21, [sp, #0x20]
+     380: a9415ffc     	ldp	x28, x23, [sp, #0x10]
+     384: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+     388: d65f03c0     	ret
+     38c: 528000a8     	mov	w8, #0x5                // =5
+     390: 91100289     	add	x9, x20, #0x400
+     394: b9041688     	str	w8, [x20, #0x414]
+     398: 089ffd3f     	stlrb	wzr, [x9]
+     39c: 17fffff6     	b	0x374 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x374>
+     3a0: f9421688     	ldr	x8, [x20, #0x428]
+     3a4: 91000508     	add	x8, x8, #0x1
+     3a8: f9021688     	str	x8, [x20, #0x428]
+     3ac: 089ffebf     	stlrb	wzr, [x21]
+     3b0: 17fffff1     	b	0x374 <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE+0x374>
+
+Disassembly of section .text._ZN3iq42f17entry016Module14stop_observingEv:
+
+0000000000000000 <_ZN3iq42f17entry016Module14stop_observingEv>:
+       0: 52800088     	mov	w8, #0x4                // =4
+       4: 3900401f     	strb	wzr, [x0, #0x10]
+       8: b9041408     	str	w8, [x0, #0x414]
+       c: d65f03c0     	ret
+
+Disassembly of section .text._ZNK3iq42f17entry016Module8snapshotERNS1_11ObservationE:
+
+0000000000000000 <_ZNK3iq42f17entry016Module8snapshotERNS1_11ObservationE>:
+       0: 39504008     	ldrb	w8, [x0, #0x410]
+       4: 370001e8     	tbnz	w8, #0x0, 0x40 <_ZNK3iq42f17entry016Module8snapshotERNS1_11ObservationE+0x40>
+       8: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+       c: f9000bf3     	str	x19, [sp, #0x10]
+      10: 910003fd     	mov	x29, sp
+      14: aa0103f3     	mov	x19, x1
+      18: 91102001     	add	x1, x0, #0x408
+      1c: 52803502     	mov	w2, #0x1a8              // =424
+      20: aa1303e0     	mov	x0, x19
+      24: 94000000     	bl	0x24 <_ZNK3iq42f17entry016Module8snapshotERNS1_11ObservationE+0x24>
+		0000000000000024:  R_AARCH64_CALL26	memcpy
+      28: 39402268     	ldrb	w8, [x19, #0x8]
+      2c: 7200011f     	tst	w8, #0x1
+      30: 1a9f17e0     	cset	w0, eq
+      34: f9400bf3     	ldr	x19, [sp, #0x10]
+      38: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+      3c: d65f03c0     	ret
+      40: 2a1f03e0     	mov	w0, wzr
+      44: d65f03c0     	ret

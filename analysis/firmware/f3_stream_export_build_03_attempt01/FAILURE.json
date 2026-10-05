@@ -1,0 +1,10 @@
+{
+  "actual_failure": true,
+  "source": "Root command before build.py SDK selection",
+  "exit": 127,
+  "compile_stderr": "fatal error: assert.h / string.h file not found (missing host SDK -isysroot)",
+  "run_stderr": "no such file or directory: pixels_normal",
+  "fixed_by": "builder obtains xcrun --show-sdk-path and sets -isysroot",
+  "target_executed": false,
+  "device_accessed": false
+}

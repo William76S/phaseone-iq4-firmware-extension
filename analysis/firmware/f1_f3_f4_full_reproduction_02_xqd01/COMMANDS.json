@@ -1,0 +1,116 @@
+[
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_f3_f4_user_integration_02/rebuild_inputs.py",
+      "--spec",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_f3_f4_user_integration_02/INPUTS_XQD_01.json",
+      "--spec-sha256",
+      "b75536c84d4c95966f3f765e10eb93447676e5a694bf84614b0330708ac49627",
+      "--output",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_f3_f4_full_reproduction_02_xqd01/inputs"
+    ],
+    "exit": 0,
+    "stdout": "61 fresh target objects from exact recorded source compiles; no target execution\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_f3_f4_user_integration_02/build.py",
+      "--spec",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_f3_f4_user_integration_02/INPUTS_XQD_01.json",
+      "--spec-sha256",
+      "b75536c84d4c95966f3f765e10eb93447676e5a694bf84614b0330708ac49627",
+      "--output",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_f3_f4_full_reproduction_02_xqd01/user",
+      "--object-map",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_f3_f4_full_reproduction_02_xqd01/inputs/ARTIFACT_MAP.json",
+      "--app-version",
+      "6.03.31"
+    ],
+    "exit": 0,
+    "stdout": "13223960 actual linked User bytes, 63 objects; seal and review still required\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_linked_unwind_02/verify.py",
+      "--build",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_f3_f4_full_reproduction_02_xqd01/user"
+    ],
+    "exit": 0,
+    "stdout": "519 own FDEs, 60 LSDAs; 4603 CFI operations; static only PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_linked_contract_01/seal.py",
+      "--build",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_f3_f4_full_reproduction_02_xqd01/user",
+      "--loader-proof",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_copy_rtti_01/ABI_PROOF.json"
+    ],
+    "exit": 0,
+    "stdout": "130 actual immutable regions sealed; no target acceptance\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_linked_unwind_02/verify.py",
+      "--build",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_f3_f4_full_reproduction_02_xqd01/user"
+    ],
+    "exit": 0,
+    "stdout": "519 own FDEs, 60 LSDAs; 4603 CFI operations; static only PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_f3_f4_user_integration_02/verify_user.py",
+      "--build",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_f3_f4_full_reproduction_02_xqd01/user"
+    ],
+    "exit": 0,
+    "stdout": "22 actual branches; 63 exact objects; finite inspection PASS; no target acceptance\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/user_only_package_stock_wrapper_02/package.py",
+      "--user-payload",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_f3_f4_full_reproduction_02_xqd01/user/P1Linux_RatioMask_JPEG_LVRecording_6.03.31.bin",
+      "--expected-user-sha256",
+      "9e0be7385194415a3aa178c1d46c35a3ba0b3dfd3135ac26615ea6f8c0c3b105",
+      "--release-version",
+      "6.03.28",
+      "--app-version",
+      "6.03.31",
+      "--system-version",
+      "8.02.10",
+      "--emit-candidate-directory",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_f3_f4_full_reproduction_02_xqd01/candidate"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"schema\": \"iq4_offline_user_only_stock_wrapper_candidate_v2\",\n  \"evidence_level\": \"host_container_validation_only\",\n  \"original_fwr_sha256\": \"a52758ffb163023e5323297e450450f91002175b69bed7590fe2cd037c2ab300\",\n  \"original_user_sha256\": \"9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb\",\n  \"payload_sha256\": \"9e0be7385194415a3aa178c1d46c35a3ba0b3dfd3135ac26615ea6f8c0c3b105\",\n  \"payload_size\": 13223960,\n  \"payload_elf_host_review\": {\n    \"entry\": 4240268,\n    \"program_count\": 12,\n    \"section_count\": 661,\n    \"loads\": [\n      {\n        \"flags\": 5,\n        \"offset\": 0,\n        \"va\": 4194304,\n        \"file_size\": 11737592,\n        \"memory_size\": 11737592,\n        \"alignment\": 65536\n      },\n      {\n        \"flags\": 6,\n        \"offset\": 11738528,\n        \"va\": 15998368,\n        \"file_size\": 133716,\n        \"memory_size\": 53459488,\n        \"alignment\": 65536\n      },\n      {\n        \"flags\": 5,\n        \"offset\": 11927552,\n        \"va\": 69468160,\n        \"file_size\": 686308,\n        \"memory_size\": 686308,\n        \"alignment\": 65536\n      },\n      {\n        \"flags\": 6,\n        \"offset\": 12648448,\n        \"va\": 70189056,\n        \"file_size\": 495488,\n        \"memory_size\": 495488,\n        \"alignment\": 65536\n      }\n    ],\n    \"interpreter\": \"/lib/ld-linux-aarch64.so.1\",\n    \"image_header_offset\": 10332272,\n    \"image_header_va\": 14526576,\n    \"image_header_size\": 180,\n    \"header_version\": [\n      6,\n      3,\n      31\n    ],\n    \"host_elf_review_only\": true,\n    \"target_memory_capacity_or_boot_verified\": false\n  },\n  \"candidate_extent_differs_from_stock\": true,\n  \"candidate_elf_layout_differs_from_stock\": true,\n  \"added_loads_or_growth_is_not_a_device_acceptance_claim\": true,\n  \"release_version\": \"6.03.28\",\n  \"component_version\": \"6.03.31\",\n  \"original_release_date_retained_as_candidate_base\": \"2022-07-18\",\n  \"payload_modified_from_stock\": true,\n  \"payload_changes_limited_to_image_header_version\": false,\n  \"both_versions_strictly_newer_than_fixed_baseline\": true,\n  \"offline_candidate_generation_scope_passed\": true,\n  \"fwr\": {\n    \"size\": 13224532,\n    \"sha256\": \"062ed9382a2e88a474cf68e3ebe9a66354786d323ae19d606942ee2b6b03de8d\",\n    \"entries\": [\n      {\n        \"name\": \"manifest.xml\",\n        \"size\": 336,\n        \"sha256\": \"cd738a28b423cd01e7526c3038181fdf68b1bbaefafe03d51c7aef4d2be43122\",\n        \"crc32\": \"7d49aa73\"\n      },\n      {\n        \"name\": \"P1Linux_6.03.31.bin\",\n        \"size\": 13223960,\n        \"sha256\": \"9e0be7385194415a3aa178c1d46c35a3ba0b3dfd3135ac26615ea6f8c0c3b105\",\n        \"crc32\": \"b5a2b8ff\"\n      }\n    ]\n  },\n  \"fwp\": {\n    \"size\": 13225035,\n    \"sha256\": \"fa751bde29a16a9534bd45e063e39e841ee609de2c40696d8739a8fc5de9f4cf\",\n    \"entries\": [\n      {\n        \"name\": \"manifest.xml\",\n        \"size\": 271,\n        \"sha256\": \"c10f611f2e332e5424c1e8cb581b4fb5deeedd90ccd58a66d67118fb6e8f7410\",\n        \"crc32\": \"c6d22caa\"\n      },\n      {\n        \"name\": \"IQ4-user-only.fwr\",\n        \"size\": 13224532,\n        \"sha256\": \"062ed9382a2e88a474cf68e3ebe9a66354786d323ae19d606942ee2b6b03de8d\",\n        \"crc32\": \"68a063be\"\n      }\n    ]\n  },\n  \"fwp_outer_schema_reconstructed_from_static_consumer_not_stock_sample\": false,\n  \"static_target_files\": [\n    \"User/manifest.xml\",\n    \"User/p1linux.bin\"\n  ],\n  \"additional_fwp_package_manifest_state_requires_independent_closure\": true,\n  \"static_other_side_effects\": [\n    \"FileManager component signature events\",\n    \"firmware flags\",\n    \"User boot image marker clear/reestablish through /dev/mtd0 erase-block read/erase/write\",\n    \"upgrade-mode state\",\n    \"reboot/runner consumes p1linux.bin\"\n  ],\n  \"required_install_mode\": \"actual running User and install-as-User, partial update\",\n  \"contains_boot_fpga_igloo_sensorprofile_language_calibration_or_keys\": false,\n  \"device_acceptance_observed\": false,\n  \"device_recovery_verified\": false,\n  \"f1_feature_implementation_or_acceptance_proven\": false,\n  \"camera_or_sdk_access_performed\": false,\n  \"installation_authorized_by_this_tool\": false,\n  \"original_stock_fwp_sha256\": \"3dfb12c9417d60a0838a5abbfe3adccba2f242a79bab5f9ffa312be097571252\",\n  \"stock_outer_manifest_sha256\": \"29081a1b7be5753e91648f00abe2b478e3c040ced65b11c963361d296e96f575\",\n  \"system_version\": \"8.02.10\",\n  \"original_system_version\": \"8.02.0\",\n  \"system_version_strictly_newer_host_policy\": true,\n  \"stock_outer_attributes_and_back_selectors_preserved_except_explicit_versions_and_filename\": true,\n  \"outer_XF_and_XT_components_removed\": true,\n  \"outer_stock_date_retained_as_candidate_base\": true,\n  \"minimum_update_version_not_added_to_stock_outer_or_child\": true\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_f3_f4_user_integration_02/inspect_package.py",
+      "--build",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_f3_f4_full_reproduction_02_xqd01/user",
+      "--package",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_f3_f4_full_reproduction_02_xqd01/candidate"
+    ],
+    "exit": 0,
+    "stdout": "Actual nested User, both manifests, CRC, complete fresh FWP/FWR identity PASS; no device acceptance\n",
+    "stderr": ""
+  }
+]

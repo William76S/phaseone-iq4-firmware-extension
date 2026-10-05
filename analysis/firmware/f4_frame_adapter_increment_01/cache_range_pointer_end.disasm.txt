@@ -1,0 +1,22 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+SCOPE complete_unwind_function
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  78bdb4: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  78bdb8: 910003fd     	mov	x29, sp
+  78bdbc: f9000fe0     	str	x0, [sp, #0x18]
+  78bdc0: b90017e1     	str	w1, [sp, #0x14]
+  78bdc4: f9400fe2     	ldr	x2, [sp, #0x18]
+  78bdc8: b94017e0     	ldr	w0, [sp, #0x14]
+  78bdcc: f9400fe1     	ldr	x1, [sp, #0x18]
+  78bdd0: 8b000020     	add	x0, x1, x0
+  78bdd4: aa0003e1     	mov	x1, x0
+  78bdd8: aa0203e0     	mov	x0, x2
+  78bddc: 94098c9f     	bl	0x9ef058 <zError+0x136dc>
+  78bde0: d503201f     	nop
+  78bde4: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  78bde8: d65f03c0     	ret

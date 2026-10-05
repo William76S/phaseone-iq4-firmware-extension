@@ -1,0 +1,58 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution or camera access.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:
+  5175b8: d10a43ff     	sub	sp, sp, #0x290
+  5175bc: a9037bfd     	stp	x29, x30, [sp, #0x30]
+  5175c0: 9100c3fd     	add	x29, sp, #0x30
+  5175c4: a90453f3     	stp	x19, x20, [sp, #0x40]
+  5175c8: a9055bf5     	stp	x21, x22, [sp, #0x50]
+  5175cc: a90663f7     	stp	x23, x24, [sp, #0x60]
+  5175d0: f9003bf9     	str	x25, [sp, #0x70]
+  5175d4: f9005fe0     	str	x0, [sp, #0xb8]
+  5175d8: f9005be1     	str	x1, [sp, #0xb0]
+  5175dc: f90057e2     	str	x2, [sp, #0xa8]
+  5175e0: f90053e3     	str	x3, [sp, #0xa0]
+  5175e4: f9004fe4     	str	x4, [sp, #0x98]
+  5175e8: f9004be5     	str	x5, [sp, #0x90]
+  5175ec: f90047e6     	str	x6, [sp, #0x88]
+  5175f0: f90043e7     	str	x7, [sp, #0x80]
+  5175f4: f9405fe0     	ldr	x0, [sp, #0xb8]
+  5175f8: f94057e2     	ldr	x2, [sp, #0xa8]
+  5175fc: f9405be1     	ldr	x1, [sp, #0xb0]
+  517600: 97ff26b1     	bl	0x4e10c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0xab118>
+  517604: f9405fe0     	ldr	x0, [sp, #0xb8]
+  517608: 91034013     	add	x19, x0, #0xd0
+  51760c: f94057e0     	ldr	x0, [sp, #0xa8]
+  517610: 97ff7c85     	bl	0x4f6824 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0xc0878>
+  517614: aa0003e2     	mov	x2, x0
+  517618: f9405be1     	ldr	x1, [sp, #0xb0]
+  51761c: aa1303e0     	mov	x0, x19
+  517620: 9407e207     	bl	0x70fe3c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x21dbc>
+  517624: f9405fe0     	ldr	x0, [sp, #0xb8]
+  517628: 9103a000     	add	x0, x0, #0xe8
+  51762c: 97feb3d7     	bl	0x4c4588 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x8e5dc>
+  517630: f0003400     	adrp	x0, 0xb9a000
+  517634: 91276001     	add	x1, x0, #0x9d8
+  517638: f9405fe0     	ldr	x0, [sp, #0xb8]
+  51763c: f9000001     	str	x1, [x0]
+  517640: f0003400     	adrp	x0, 0xb9a000
+  517644: 912f0001     	add	x1, x0, #0xbc0
+  517648: f9405fe0     	ldr	x0, [sp, #0xb8]
+  51764c: f9004001     	str	x1, [x0, #0x80]
+  517650: f0003400     	adrp	x0, 0xb9a000
+  517654: 912fe001     	add	x1, x0, #0xbf8
+  517658: f9405fe0     	ldr	x0, [sp, #0xb8]
+  51765c: f9004401     	str	x1, [x0, #0x88]
+  517660: f0003400     	adrp	x0, 0xb9a000
+  517664: 91316001     	add	x1, x0, #0xc58
+  517668: f9405fe0     	ldr	x0, [sp, #0xb8]
+  51766c: f9006801     	str	x1, [x0, #0xd0]
+  517670: f0003400     	adrp	x0, 0xb9a000
+  517674: 91320001     	add	x1, x0, #0xc80
+  517678: f9405fe0     	ldr	x0, [sp, #0xb8]
+  51767c: f9007401     	str	x1, [x0, #0xe8]

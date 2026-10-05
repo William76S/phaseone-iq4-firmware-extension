@@ -1,0 +1,91 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000004f90b0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::c_str() const>:
+  663fc8: a9b97bfd     	stp	x29, x30, [sp, #-0x70]!
+  663fcc: 910003fd     	mov	x29, sp
+  663fd0: a90153f3     	stp	x19, x20, [sp, #0x10]
+  663fd4: f90027e0     	str	x0, [sp, #0x48]
+  663fd8: f90023e1     	str	x1, [sp, #0x40]
+  663fdc: b0002c40     	adrp	x0, 0xbec000
+  663fe0: 91100001     	add	x1, x0, #0x400
+  663fe4: f94027e0     	ldr	x0, [sp, #0x48]
+  663fe8: f9000001     	str	x1, [x0]
+  663fec: f94027e0     	ldr	x0, [sp, #0x48]
+  663ff0: 91002013     	add	x19, x0, #0x8
+  663ff4: f94023e1     	ldr	x1, [sp, #0x40]
+  663ff8: b0002c40     	adrp	x0, 0xbec000
+  663ffc: 9108c000     	add	x0, x0, #0x230
+  664000: 94029acf     	bl	0x70ab3c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x1cabc>
+  664004: 52800023     	mov	w3, #0x1                // =1
+  664008: 52800002     	mov	w2, #0x0                // =0
+  66400c: aa0003e1     	mov	x1, x0
+  664010: aa1303e0     	mov	x0, x19
+  664014: 97f6c4d0     	bl	0x415354 <.text+0xa124>
+  664018: f94027e0     	ldr	x0, [sp, #0x48]
+  66401c: 91038013     	add	x19, x0, #0xe0
+  664020: f94023e1     	ldr	x1, [sp, #0x40]
+  664024: 90002c40     	adrp	x0, 0xbec000
+  664028: 91092000     	add	x0, x0, #0x248
+  66402c: 94029ac4     	bl	0x70ab3c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x1cabc>
+  664030: aa0003f4     	mov	x20, x0
+  664034: 910143e0     	add	x0, sp, #0x50
+  664038: 9400004e     	bl	0x664170 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::c_str() const+0x16b0c0>
+  66403c: 910083e2     	add	x2, sp, #0x20
+  664040: 910143e3     	add	x3, sp, #0x50
+  664044: a9400460     	ldp	x0, x1, [x3]
+  664048: a9000440     	stp	x0, x1, [x2]
+  66404c: a9410460     	ldp	x0, x1, [x3, #0x10]
+  664050: a9010440     	stp	x0, x1, [x2, #0x10]
+  664054: 910083e0     	add	x0, sp, #0x20
+  664058: 52800023     	mov	w3, #0x1                // =1
+  66405c: aa0003e2     	mov	x2, x0
+  664060: aa1403e1     	mov	x1, x20
+  664064: aa1303e0     	mov	x0, x19
+  664068: 940000a7     	bl	0x664304 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::c_str() const+0x16b254>
+  66406c: f94027e0     	ldr	x0, [sp, #0x48]
+  664070: 9107e013     	add	x19, x0, #0x1f8
+  664074: f94023e1     	ldr	x1, [sp, #0x40]
+  664078: 90002c40     	adrp	x0, 0xbec000
+  66407c: 91096000     	add	x0, x0, #0x258
+  664080: 94029aaf     	bl	0x70ab3c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x1cabc>
+  664084: aa0003e1     	mov	x1, x0
+  664088: 52800024     	mov	w4, #0x1                // =1
+  66408c: 90002c40     	adrp	x0, 0xbec000
+  664090: 9109a003     	add	x3, x0, #0x268
+  664094: 52800422     	mov	w2, #0x21               // =33
+  664098: aa1303e0     	mov	x0, x19
+  66409c: 9402b9e5     	bl	0x712830 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x247b0>
+  6640a0: f94027e0     	ldr	x0, [sp, #0x48]
+  6640a4: 91038013     	add	x19, x0, #0xe0
+  6640a8: d2800100     	mov	x0, #0x8                // =8
+  6640ac: 97f6976d     	bl	0x409e60 <_Znwm@plt>
+  6640b0: aa0003f4     	mov	x20, x0
+  6640b4: aa1403e0     	mov	x0, x20
+  6640b8: 97ffffb8     	bl	0x663f98 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::c_str() const+0x16aee8>
+  6640bc: aa1403e1     	mov	x1, x20
+  6640c0: aa1303e0     	mov	x0, x19
+  6640c4: 940000df     	bl	0x664440 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::c_str() const+0x16b390>
+  6640c8: 14000011     	b	0x66410c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::c_str() const+0x16b05c>
+  6640cc: aa0003f3     	mov	x19, x0
+  6640d0: f94027e0     	ldr	x0, [sp, #0x48]
+  6640d4: 9107e000     	add	x0, x0, #0x1f8
+  6640d8: 9402bbf5     	bl	0x7130ac <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_S_copy_chars(char*, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, __gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>)+0x2502c>
+  6640dc: 14000002     	b	0x6640e4 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::c_str() const+0x16b034>
+  6640e0: aa0003f3     	mov	x19, x0
+  6640e4: f94027e0     	ldr	x0, [sp, #0x48]
+  6640e8: 91038000     	add	x0, x0, #0xe0
+  6640ec: 940000de     	bl	0x664464 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::c_str() const+0x16b3b4>
+  6640f0: 14000002     	b	0x6640f8 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::c_str() const+0x16b048>
+  6640f4: aa0003f3     	mov	x19, x0
+  6640f8: f94027e0     	ldr	x0, [sp, #0x48]
+  6640fc: 91002000     	add	x0, x0, #0x8
+  664100: 97f6c80a     	bl	0x416128 <.text+0xaef8>
+  664104: aa1303e0     	mov	x0, x19
+  664108: 97f69992     	bl	0x40a750 <_Unwind_Resume@plt>
+  66410c: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  664110: a8c77bfd     	ldp	x29, x30, [sp], #0x70
+  664114: d65f03c0     	ret

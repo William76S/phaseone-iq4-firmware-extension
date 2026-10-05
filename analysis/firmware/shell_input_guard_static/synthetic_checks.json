@@ -1,0 +1,21 @@
+{
+  "level": "host_synthetic_only",
+  "tests": 26,
+  "passed": true,
+  "command": "python3 -B tools/firmware/sys_exact16_argv_01/test_native_lexer_model.py",
+  "no_device_no_sdk_no_camera_packet": true,
+  "fixtures_have_no_actual_eeprom_or_credential": true,
+  "guard": {
+    "prefix_length": 11,
+    "separator_length": 1,
+    "max_text_bytes_excluding_appended_NUL": 242,
+    "max_completed_line_bytes": 254,
+    "line_capacity": 256,
+    "max_owned_index_read_at_boundary": 255,
+    "per_readline_stale_nonzero_tail_fixture": true,
+    "tested_payload_counts_0_through_231": true,
+    "text_243_rejected_before_parse": true
+  },
+  "minimal_owned_fixture_counterexample_is_not_actual_Shell_allocation": true,
+  "host_printf_sink_checks_do_not_validate_target_printf_or_write_route": true
+}

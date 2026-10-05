@@ -1,0 +1,458 @@
+[
+  {
+    "kind": "toolchain_identity",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "version"
+    ],
+    "exit": 0,
+    "stdout": "0.15.2\n",
+    "stderr": ""
+  },
+  {
+    "kind": "host_sdk_identity",
+    "argv": [
+      "/usr/bin/xcrun",
+      "--show-sdk-path"
+    ],
+    "exit": 0,
+    "stdout": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_entry_03/test_entry.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_activity_01/activity.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_normal",
+      "normal"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_normal",
+      "jpeg-busy"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_normal",
+      "alloc-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_normal",
+      "init-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_normal",
+      "control-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_normal",
+      "read-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_normal",
+      "session-hold"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_normal",
+      "idle-with-card"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_normal",
+      "idle-no-fence"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_normal",
+      "source-fence-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_normal",
+      "empty-cancel"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_entry_03/test_entry.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_activity_01/activity.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_asan_ubsan"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_asan_ubsan",
+      "normal"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_asan_ubsan",
+      "jpeg-busy"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_asan_ubsan",
+      "alloc-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_asan_ubsan",
+      "init-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_asan_ubsan",
+      "control-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_asan_ubsan",
+      "read-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_asan_ubsan",
+      "session-hold"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_asan_ubsan",
+      "idle-with-card"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_asan_ubsan",
+      "idle-no-fence"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_asan_ubsan",
+      "source-fence-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_asan_ubsan",
+      "empty-cancel"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=thread",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_entry_03/test_entry.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_activity_01/activity.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_tsan"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_tsan",
+      "normal"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_tsan",
+      "jpeg-busy"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_tsan",
+      "alloc-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_tsan",
+      "init-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_tsan",
+      "control-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_tsan",
+      "read-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_tsan",
+      "session-hold"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_tsan",
+      "idle-with-card"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_tsan",
+      "idle-no-fence"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_tsan",
+      "source-fence-unknown"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry_tsan",
+      "empty-cancel"
+    ],
+    "exit": 0,
+    "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n",
+    "stderr": ""
+  },
+  {
+    "kind": "cross_compile_only",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fPIC",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-omit-frame-pointer",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry.o.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_entry_03/entry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "static_disassembly_only",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-dr",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry.o"
+    ],
+    "exit": 0,
+    "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_entry_build_03/entry.o:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n0000000000000000 <iq4_f4_native_menu_entry_02>:\n       0: 51003068     \tsub\tw8, w3, #0xc\n       4: 3100091f     \tcmn\tw8, #0x2\n       8: 54000062     \tb.hs\t0x14 <iq4_f4_native_menu_entry_02+0x14>\n       c: 2a1f03e0     \tmov\tw0, wzr\n      10: d65f03c0     \tret\n      14: a9be7bfd     \tstp\tx29, x30, [sp, #-0x20]!\n      18: a9014ff4     \tstp\tx20, x19, [sp, #0x10]\n      1c: 910003fd     \tmov\tx29, sp\n      20: 90000013     \tadrp\tx19, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000020:  R_AARCH64_ADR_PREL_PG_HI21\t.bss\n      24: aa0003e8     \tmov\tx8, x0\n      28: b9400269     \tldr\tw9, [x19]\n\t\t0000000000000028:  R_AARCH64_LDST32_ABS_LO12_NC\t.bss\n      2c: 34000109     \tcbz\tw9, 0x4c <iq4_f4_native_menu_entry_02+0x4c>\n      30: 6b03013f     \tcmp\tw9, w3\n      34: 2a1f03e0     \tmov\tw0, wzr\n      38: 54000481     \tb.ne\t0xc8 <iq4_f4_native_menu_entry_02+0xc8>\n      3c: 90000009     \tadrp\tx9, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000003c:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x4\n      40: 39400129     \tldrb\tw9, [x9]\n\t\t0000000000000040:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x4\n      44: 360000e9     \ttbz\tw9, #0x0, 0x60 <iq4_f4_native_menu_entry_02+0x60>\n      48: 14000020     \tb\t0xc8 <iq4_f4_native_menu_entry_02+0xc8>\n      4c: 90000009     \tadrp\tx9, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000004c:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x4\n      50: 39400129     \tldrb\tw9, [x9]\n\t\t0000000000000050:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x4\n      54: 36000069     \ttbz\tw9, #0x0, 0x60 <iq4_f4_native_menu_entry_02+0x60>\n      58: 2a1f03e0     \tmov\tw0, wzr\n      5c: 1400001b     \tb\t0xc8 <iq4_f4_native_menu_entry_02+0xc8>\n      60: 2a0303f4     \tmov\tw20, w3\n      64: 90000003     \tadrp\tx3, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000064:  R_AARCH64_ADR_GOT_PAGE\tiq4_native_self_read_01\n      68: aa0803e0     \tmov\tx0, x8\n      6c: f9400063     \tldr\tx3, [x3]\n\t\t000000000000006c:  R_AARCH64_LD64_GOT_LO12_NC\tiq4_native_self_read_01\n      70: aa1f03e4     \tmov\tx4, xzr\n      74: 94000000     \tbl\t0x74 <iq4_f4_native_menu_entry_02+0x74>\n\t\t0000000000000074:  R_AARCH64_CALL26\tiq4_f4_menu_install_03\n      78: 34000280     \tcbz\tw0, 0xc8 <iq4_f4_native_menu_entry_02+0xc8>\n      7c: b9400268     \tldr\tw8, [x19]\n\t\t000000000000007c:  R_AARCH64_LDST32_ABS_LO12_NC\t.bss\n      80: 34000068     \tcbz\tw8, 0x8c <iq4_f4_native_menu_entry_02+0x8c>\n      84: 52800020     \tmov\tw0, #0x1                // =1\n      88: 14000010     \tb\t0xc8 <iq4_f4_native_menu_entry_02+0xc8>\n      8c: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000008c:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x8\n      90: 90000000     \tadrp\tx0, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000090:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x10\n      94: 91000000     \tadd\tx0, x0, #0x0\n\t\t0000000000000094:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x10\n      98: b9000114     \tstr\tw20, [x8]\n\t\t0000000000000098:  R_AARCH64_LDST32_ABS_LO12_NC\t.bss+0x8\n      9c: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000009c:  R_AARCH64_ADR_PREL_PG_HI21\t.text+0xe0\n      a0: 91000108     \tadd\tx8, x8, #0x0\n\t\t00000000000000a0:  R_AARCH64_ADD_ABS_LO12_NC\t.text+0xe0\n      a4: a900201f     \tstp\txzr, x8, [x0]\n      a8: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000000a8:  R_AARCH64_ADR_PREL_PG_HI21\t.text+0x4d4\n      ac: 91000108     \tadd\tx8, x8, #0x0\n\t\t00000000000000ac:  R_AARCH64_ADD_ABS_LO12_NC\t.text+0x4d4\n      b0: b9000274     \tstr\tw20, [x19]\n\t\t00000000000000b0:  R_AARCH64_LDST32_ABS_LO12_NC\t.bss\n      b4: f9000808     \tstr\tx8, [x0, #0x10]\n      b8: 94000000     \tbl\t0xb8 <iq4_f4_native_menu_entry_02+0xb8>\n\t\t00000000000000b8:  R_AARCH64_CALL26\tiq4_f4_menu_bind_ports_on_ui_03\n      bc: 2a0003e8     \tmov\tw8, w0\n      c0: 52800020     \tmov\tw0, #0x1                // =1\n      c4: 34000088     \tcbz\tw8, 0xd4 <iq4_f4_native_menu_entry_02+0xd4>\n      c8: a9414ff4     \tldp\tx20, x19, [sp, #0x10]\n      cc: a8c27bfd     \tldp\tx29, x30, [sp], #0x20\n      d0: d65f03c0     \tret\n      d4: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000000d4:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x4\n      d8: 39000100     \tstrb\tw0, [x8]\n\t\t00000000000000d8:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x4\n      dc: 17ffffdf     \tb\t0x58 <iq4_f4_native_menu_entry_02+0x58>\n\n00000000000000e0 <lazy_action>:\n      e0: d10383ff     \tsub\tsp, sp, #0xe0\n      e4: a9087bfd     \tstp\tx29, x30, [sp, #0x80]\n      e8: a9096ffc     \tstp\tx28, x27, [sp, #0x90]\n      ec: a90a67fa     \tstp\tx26, x25, [sp, #0xa0]\n      f0: a90b5ff8     \tstp\tx24, x23, [sp, #0xb0]\n      f4: a90c57f6     \tstp\tx22, x21, [sp, #0xc0]\n      f8: a90d4ff4     \tstp\tx20, x19, [sp, #0xd0]\n      fc: 910203fd     \tadd\tx29, sp, #0x80\n     100: 90000015     \tadrp\tx21, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000100:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x4\n     104: 394002a8     \tldrb\tw8, [x21]\n\t\t0000000000000104:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x4\n     108: 36000148     \ttbz\tw8, #0x0, 0x130 <lazy_action+0x50>\n     10c: 52800060     \tmov\tw0, #0x3                // =3\n     110: a94d4ff4     \tldp\tx20, x19, [sp, #0xd0]\n     114: a94c57f6     \tldp\tx22, x21, [sp, #0xc0]\n     118: a94b5ff8     \tldp\tx24, x23, [sp, #0xb0]\n     11c: a94a67fa     \tldp\tx26, x25, [sp, #0xa0]\n     120: a9496ffc     \tldp\tx28, x27, [sp, #0x90]\n     124: a9487bfd     \tldp\tx29, x30, [sp, #0x80]\n     128: 910383ff     \tadd\tsp, sp, #0xe0\n     12c: d65f03c0     \tret\n     130: 90000016     \tadrp\tx22, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000130:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x28\n     134: 2a0103f3     \tmov\tw19, w1\n     138: 394002c8     \tldrb\tw8, [x22]\n\t\t0000000000000138:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x28\n     13c: 7100051f     \tcmp\tw8, #0x1\n     140: 54000101     \tb.ne\t0x160 <lazy_action+0x80>\n     144: 9100e3e1     \tadd\tx1, sp, #0x38\n     148: 940000e3     \tbl\t0x4d4 <lazy_view>\n     14c: 2a0003e8     \tmov\tw8, w0\n     150: 52800060     \tmov\tw0, #0x3                // =3\n     154: 34fffde8     \tcbz\tw8, 0x110 <lazy_action+0x30>\n     158: 394002a8     \tldrb\tw8, [x21]\n\t\t0000000000000158:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x4\n     15c: 3707fda8     \ttbnz\tw8, #0x0, 0x110 <lazy_action+0x30>\n     160: 340001b3     \tcbz\tw19, 0x194 <lazy_action+0xb4>\n     164: 394002c8     \tldrb\tw8, [x22]\n\t\t0000000000000164:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x28\n     168: 71000e7f     \tcmp\tw19, #0x3\n     16c: 540002c1     \tb.ne\t0x1c4 <lazy_action+0xe4>\n     170: 370002a8     \ttbnz\tw8, #0x0, 0x1c4 <lazy_action+0xe4>\n     174: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000174:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x8\n     178: 52800040     \tmov\tw0, #0x2                // =2\n     17c: b9400109     \tldr\tw9, [x8]\n\t\t000000000000017c:  R_AARCH64_LDST32_ABS_LO12_NC\t.bss+0x8\n     180: 7100293f     \tcmp\tw9, #0xa\n     184: 52800149     \tmov\tw9, #0xa                // =10\n     188: 1a891529     \tcinc\tw9, w9, eq\n     18c: b9000109     \tstr\tw9, [x8]\n\t\t000000000000018c:  R_AARCH64_LDST32_ABS_LO12_NC\t.bss+0x8\n     190: 17ffffe0     \tb\t0x110 <lazy_action+0x30>\n     194: 90000017     \tadrp\tx23, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000194:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x38\n     198: 394002e8     \tldrb\tw8, [x23]\n\t\t0000000000000198:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x38\n     19c: 7100051f     \tcmp\tw8, #0x1\n     1a0: 54000181     \tb.ne\t0x1d0 <lazy_action+0xf0>\n     1a4: 90000000     \tadrp\tx0, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000001a4:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x40\n     1a8: 91000000     \tadd\tx0, x0, #0x0\n\t\t00000000000001a8:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x40\n     1ac: 94000000     \tbl\t0x1ac <lazy_action+0xcc>\n\t\t00000000000001ac:  R_AARCH64_CALL26\tiq4_activity_valid_01\n     1b0: 34000320     \tcbz\tw0, 0x214 <lazy_action+0x134>\n     1b4: 394002e8     \tldrb\tw8, [x23]\n\t\t00000000000001b4:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x38\n     1b8: 7100051f     \tcmp\tw8, #0x1\n     1bc: 54000620     \tb.eq\t0x280 <lazy_action+0x1a0>\n     1c0: 14000033     \tb\t0x28c <lazy_action+0x1ac>\n     1c4: 370002c8     \ttbnz\tw8, #0x0, 0x21c <lazy_action+0x13c>\n     1c8: 2a1f03e0     \tmov\tw0, wzr\n     1cc: 17ffffd1     \tb\t0x110 <lazy_action+0x30>\n     1d0: 90000014     \tadrp\tx20, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000001d0:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x40\n     1d4: 91000294     \tadd\tx20, x20, #0x0\n\t\t00000000000001d4:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x40\n     1d8: 9100e3e2     \tadd\tx2, sp, #0x38\n     1dc: 52800080     \tmov\tw0, #0x4                // =4\n     1e0: aa1403e1     \tmov\tx1, x20\n     1e4: a903ffff     \tstp\txzr, xzr, [sp, #0x38]\n     1e8: 94000000     \tbl\t0x1e8 <lazy_action+0x108>\n\t\t00000000000001e8:  R_AARCH64_CALL26\tiq4_activity_try_01\n     1ec: 340000c0     \tcbz\tw0, 0x204 <lazy_action+0x124>\n     1f0: 394002a8     \tldrb\tw8, [x21]\n\t\t00000000000001f0:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x4\n     1f4: 7100011f     \tcmp\tw8, #0x0\n     1f8: 52800068     \tmov\tw8, #0x3                // =3\n     1fc: 1a9f1100     \tcsel\tw0, w8, wzr, ne\n     200: 17ffffc4     \tb\t0x110 <lazy_action+0x30>\n     204: 3cc383e0     \tldur\tq0, [sp, #0x38]\n     208: 52800028     \tmov\tw8, #0x1                // =1\n     20c: 390002e8     \tstrb\tw8, [x23]\n\t\t000000000000020c:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x38\n     210: 3d800280     \tstr\tq0, [x20]\n     214: 394002c8     \tldrb\tw8, [x22]\n\t\t0000000000000214:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x28\n     218: 36000428     \ttbz\tw8, #0x0, 0x29c <lazy_action+0x1bc>\n     21c: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000021c:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x30\n     220: f9400100     \tldr\tx0, [x8]\n\t\t0000000000000220:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x30\n     224: 910083e8     \tadd\tx8, sp, #0x20\n     228: 94000000     \tbl\t0x228 <lazy_action+0x148>\n\t\t0000000000000228:  R_AARCH64_CALL26\tiq4_f4_session_menu_ports_02\n     22c: a94223e0     \tldp\tx0, x8, [sp, #0x20]\n     230: 2a1303e1     \tmov\tw1, w19\n     234: d63f0100     \tblr\tx8\n     238: 71000c1f     \tcmp\tw0, #0x3\n     23c: 540001a0     \tb.eq\t0x270 <lazy_action+0x190>\n     240: 2a0003f3     \tmov\tw19, w0\n     244: f9401be8     \tldr\tx8, [sp, #0x30]\n     248: f94013e0     \tldr\tx0, [sp, #0x20]\n     24c: 9100e3e1     \tadd\tx1, sp, #0x38\n     250: d63f0100     \tblr\tx8\n     254: 340000e0     \tcbz\tw0, 0x270 <lazy_action+0x190>\n     258: 9100e3e0     \tadd\tx0, sp, #0x38\n     25c: 940000e4     \tbl\t0x5ec <ended_activity>\n     260: 52800068     \tmov\tw8, #0x3                // =3\n     264: 7100001f     \tcmp\tw0, #0x0\n     268: 1a930100     \tcsel\tw0, w8, w19, eq\n     26c: 17ffffa9     \tb\t0x110 <lazy_action+0x30>\n     270: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000270:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x38\n     274: 39400108     \tldrb\tw8, [x8]\n\t\t0000000000000274:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x38\n     278: 7100051f     \tcmp\tw8, #0x1\n     27c: 54000081     \tb.ne\t0x28c <lazy_action+0x1ac>\n     280: 90000000     \tadrp\tx0, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000280:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x40\n     284: 91000000     \tadd\tx0, x0, #0x0\n\t\t0000000000000284:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x40\n     288: 94000000     \tbl\t0x288 <lazy_action+0x1a8>\n\t\t0000000000000288:  R_AARCH64_CALL26\tiq4_activity_hold_01\n     28c: 52800028     \tmov\tw8, #0x1                // =1\n     290: 52800060     \tmov\tw0, #0x3                // =3\n     294: 390002a8     \tstrb\tw8, [x21]\n\t\t0000000000000294:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x4\n     298: 17ffff9e     \tb\t0x110 <lazy_action+0x30>\n     29c: 394002a8     \tldrb\tw8, [x21]\n\t\t000000000000029c:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x4\n     2a0: 3707f368     \ttbnz\tw8, #0x0, 0x10c <lazy_action+0x2c>\n     2a4: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000002a4:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x50\n     2a8: 39400109     \tldrb\tw9, [x8]\n\t\t00000000000002a8:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x50\n     2ac: 3707f309     \ttbnz\tw9, #0x0, 0x10c <lazy_action+0x2c>\n     2b0: 52800029     \tmov\tw9, #0x1                // =1\n     2b4: 39000109     \tstrb\tw9, [x8]\n\t\t00000000000002b4:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x50\n     2b8: 94000000     \tbl\t0x2b8 <lazy_action+0x1d8>\n\t\t00000000000002b8:  R_AARCH64_CALL26\tiq4_f4_source_storage_bytes_02\n     2bc: 90000001     \tadrp\tx1, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000002bc:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x58\n     2c0: 91000021     \tadd\tx1, x1, #0x0\n\t\t00000000000002c0:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x58\n     2c4: 94000000     \tbl\t0x2c4 <lazy_action+0x1e4>\n\t\t00000000000002c4:  R_AARCH64_CALL26\tiq4_f4_menu_new_03\n     2c8: 34000940     \tcbz\tw0, 0x3f0 <lazy_action+0x310>\n     2cc: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000002cc:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x58\n     2d0: f9400108     \tldr\tx8, [x8]\n\t\t00000000000002d0:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x58\n     2d4: b40008e8     \tcbz\tx8, 0x3f0 <lazy_action+0x310>\n     2d8: 92400d08     \tand\tx8, x8, #0xf\n     2dc: b50008a8     \tcbnz\tx8, 0x3f0 <lazy_action+0x310>\n     2e0: 94000000     \tbl\t0x2e0 <lazy_action+0x200>\n\t\t00000000000002e0:  R_AARCH64_CALL26\tiq4_f4_session_storage_bytes_02\n     2e4: 90000001     \tadrp\tx1, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000002e4:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x30\n     2e8: 91000021     \tadd\tx1, x1, #0x0\n\t\t00000000000002e8:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x30\n     2ec: 94000000     \tbl\t0x2ec <lazy_action+0x20c>\n\t\t00000000000002ec:  R_AARCH64_CALL26\tiq4_f4_menu_new_03\n     2f0: 34000800     \tcbz\tw0, 0x3f0 <lazy_action+0x310>\n     2f4: 9000001a     \tadrp\tx26, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000002f4:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x30\n     2f8: f9400348     \tldr\tx8, [x26]\n\t\t00000000000002f8:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x30\n     2fc: b40007a8     \tcbz\tx8, 0x3f0 <lazy_action+0x310>\n     300: 92400d08     \tand\tx8, x8, #0xf\n     304: b5000768     \tcbnz\tx8, 0x3f0 <lazy_action+0x310>\n     308: 90000001     \tadrp\tx1, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000308:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x60\n     30c: 91000021     \tadd\tx1, x1, #0x0\n\t\t000000000000030c:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x60\n     310: 52a02000     \tmov\tw0, #0x1000000          // =16777216\n     314: 94000000     \tbl\t0x314 <lazy_action+0x234>\n\t\t0000000000000314:  R_AARCH64_CALL26\tiq4_f4_menu_new_03\n     318: 340006c0     \tcbz\tw0, 0x3f0 <lazy_action+0x310>\n     31c: 90000014     \tadrp\tx20, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000031c:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x60\n     320: f9400288     \tldr\tx8, [x20]\n\t\t0000000000000320:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x60\n     324: b4000668     \tcbz\tx8, 0x3f0 <lazy_action+0x310>\n     328: 92400d08     \tand\tx8, x8, #0xf\n     32c: b5000628     \tcbnz\tx8, 0x3f0 <lazy_action+0x310>\n     330: 90000001     \tadrp\tx1, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000330:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x68\n     334: 91000021     \tadd\tx1, x1, #0x0\n\t\t0000000000000334:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x68\n     338: 52a02000     \tmov\tw0, #0x1000000          // =16777216\n     33c: 94000000     \tbl\t0x33c <lazy_action+0x25c>\n\t\t000000000000033c:  R_AARCH64_CALL26\tiq4_f4_menu_new_03\n     340: 34000580     \tcbz\tw0, 0x3f0 <lazy_action+0x310>\n     344: 90000018     \tadrp\tx24, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000344:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x68\n     348: f9400308     \tldr\tx8, [x24]\n\t\t0000000000000348:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x68\n     34c: b4000528     \tcbz\tx8, 0x3f0 <lazy_action+0x310>\n     350: 92400d08     \tand\tx8, x8, #0xf\n     354: b50004e8     \tcbnz\tx8, 0x3f0 <lazy_action+0x310>\n     358: 90000001     \tadrp\tx1, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000358:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x70\n     35c: 91000021     \tadd\tx1, x1, #0x0\n\t\t000000000000035c:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x70\n     360: 52a00020     \tmov\tw0, #0x10000            // =65536\n     364: 94000000     \tbl\t0x364 <lazy_action+0x284>\n\t\t0000000000000364:  R_AARCH64_CALL26\tiq4_f4_menu_new_03\n     368: 34000440     \tcbz\tw0, 0x3f0 <lazy_action+0x310>\n     36c: 9000001c     \tadrp\tx28, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000036c:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x70\n     370: f9400388     \tldr\tx8, [x28]\n\t\t0000000000000370:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x70\n     374: b40003e8     \tcbz\tx8, 0x3f0 <lazy_action+0x310>\n     378: 92400d08     \tand\tx8, x8, #0xf\n     37c: b50003a8     \tcbnz\tx8, 0x3f0 <lazy_action+0x310>\n     380: 90000001     \tadrp\tx1, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000380:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x78\n     384: 91000021     \tadd\tx1, x1, #0x0\n\t\t0000000000000384:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x78\n     388: 5280cf00     \tmov\tw0, #0x678              // =1656\n     38c: 94000000     \tbl\t0x38c <lazy_action+0x2ac>\n\t\t000000000000038c:  R_AARCH64_CALL26\tiq4_f4_menu_new_03\n     390: 34000300     \tcbz\tw0, 0x3f0 <lazy_action+0x310>\n     394: 9000001b     \tadrp\tx27, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000394:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x78\n     398: f9400368     \tldr\tx8, [x27]\n\t\t0000000000000398:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x78\n     39c: b40002a8     \tcbz\tx8, 0x3f0 <lazy_action+0x310>\n     3a0: 92400d08     \tand\tx8, x8, #0xf\n     3a4: b5000268     \tcbnz\tx8, 0x3f0 <lazy_action+0x310>\n     3a8: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000003a8:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x58\n     3ac: aa1403f9     \tmov\tx25, x20\n     3b0: f9400114     \tldr\tx20, [x8]\n\t\t00000000000003b0:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x58\n     3b4: 94000000     \tbl\t0x3b4 <lazy_action+0x2d4>\n\t\t00000000000003b4:  R_AARCH64_CALL26\tiq4_f4_source_storage_bytes_02\n     3b8: 90000002     \tadrp\tx2, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000003b8:  R_AARCH64_ADR_GOT_PAGE\tiq4_native_self_read_01\n     3bc: f9400324     \tldr\tx4, [x25]\n\t\t00000000000003bc:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x60\n     3c0: aa0003e1     \tmov\tx1, x0\n     3c4: f9400042     \tldr\tx2, [x2]\n\t\t00000000000003c4:  R_AARCH64_LD64_GOT_LO12_NC\tiq4_native_self_read_01\n     3c8: aa1403e0     \tmov\tx0, x20\n     3cc: aa1f03e3     \tmov\tx3, xzr\n     3d0: 52a02005     \tmov\tw5, #0x1000000          // =16777216\n     3d4: 52800046     \tmov\tw6, #0x2                // =2\n     3d8: 52a01007     \tmov\tw7, #0x800000           // =8388608\n     3dc: aa1a03f4     \tmov\tx20, x26\n     3e0: 90000019     \tadrp\tx25, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000003e0:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x58\n     3e4: 52a0201a     \tmov\tw26, #0x1000000         // =16777216\n     3e8: 94000000     \tbl\t0x3e8 <lazy_action+0x308>\n\t\t00000000000003e8:  R_AARCH64_CALL26\tiq4_f4_source_init_02\n     3ec: 34000140     \tcbz\tw0, 0x414 <lazy_action+0x334>\n     3f0: 394002e8     \tldrb\tw8, [x23]\n\t\t00000000000003f0:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x38\n     3f4: 7100051f     \tcmp\tw8, #0x1\n     3f8: 54000081     \tb.ne\t0x408 <lazy_action+0x328>\n     3fc: 90000000     \tadrp\tx0, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000003fc:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x40\n     400: 91000000     \tadd\tx0, x0, #0x0\n\t\t0000000000000400:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x40\n     404: 94000000     \tbl\t0x404 <lazy_action+0x324>\n\t\t0000000000000404:  R_AARCH64_CALL26\tiq4_activity_hold_01\n     408: 52800028     \tmov\tw8, #0x1                // =1\n     40c: 390002a8     \tstrb\tw8, [x21]\n\t\t000000000000040c:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x4\n     410: 17ffff3f     \tb\t0x10c <lazy_action+0x2c>\n     414: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000414:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x8\n     418: 90000002     \tadrp\tx2, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000418:  R_AARCH64_ADR_GOT_PAGE\tiq4_native_self_read_01\n     41c: f9400360     \tldr\tx0, [x27]\n\t\t000000000000041c:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x78\n     420: f9400321     \tldr\tx1, [x25]\n\t\t0000000000000420:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x58\n     424: b9400104     \tldr\tw4, [x8]\n\t\t0000000000000424:  R_AARCH64_LDST32_ABS_LO12_NC\t.bss+0x8\n     428: f9400385     \tldr\tx5, [x28]\n\t\t0000000000000428:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x70\n     42c: f9400307     \tldr\tx7, [x24]\n\t\t000000000000042c:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x68\n     430: 52884808     \tmov\tw8, #0x4240             // =16960\n     434: f9400042     \tldr\tx2, [x2]\n\t\t0000000000000434:  R_AARCH64_LD64_GOT_LO12_NC\tiq4_native_self_read_01\n     438: aa1f03e3     \tmov\tx3, xzr\n     43c: 72a001e8     \tmovk\tw8, #0xf, lsl #16\n     440: 12800009     \tmov\tw9, #-0x1               // =-1\n     444: 52a00026     \tmov\tw6, #0x10000            // =65536\n     448: b90013e8     \tstr\tw8, [sp, #0x10]\n     44c: f90007e9     \tstr\tx9, [sp, #0x8]\n     450: b90003fa     \tstr\tw26, [sp]\n     454: 94000000     \tbl\t0x454 <lazy_action+0x374>\n\t\t0000000000000454:  R_AARCH64_CALL26\tiq4_f4_movie_binding_init_on_ui_02\n     458: 34fffcc0     \tcbz\tw0, 0x3f0 <lazy_action+0x310>\n     45c: f9400360     \tldr\tx0, [x27]\n\t\t000000000000045c:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x78\n     460: 9100e3e8     \tadd\tx8, sp, #0x38\n     464: 9100e3fa     \tadd\tx26, sp, #0x38\n     468: 94000000     \tbl\t0x468 <lazy_action+0x388>\n\t\t0000000000000468:  R_AARCH64_CALL26\tiq4_f4_movie_binding_ports_02\n     46c: f9400294     \tldr\tx20, [x20]\n\t\t000000000000046c:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x30\n     470: 94000000     \tbl\t0x470 <lazy_action+0x390>\n\t\t0000000000000470:  R_AARCH64_CALL26\tiq4_f4_session_storage_bytes_02\n     474: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000474:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x58\n     478: 90000003     \tadrp\tx3, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000478:  R_AARCH64_ADR_GOT_PAGE\tiq4_native_self_read_01\n     47c: f9400305     \tldr\tx5, [x24]\n\t\t000000000000047c:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x68\n     480: f9400102     \tldr\tx2, [x8]\n\t\t0000000000000480:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x58\n     484: f9400063     \tldr\tx3, [x3]\n\t\t0000000000000484:  R_AARCH64_LD64_GOT_LO12_NC\tiq4_native_self_read_01\n     488: aa0003e1     \tmov\tx1, x0\n     48c: aa1403e0     \tmov\tx0, x20\n     490: aa1f03e4     \tmov\tx4, xzr\n     494: 52a02006     \tmov\tw6, #0x1000000          // =16777216\n     498: 52800b47     \tmov\tw7, #0x5a               // =90\n     49c: 90000014     \tadrp\tx20, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000049c:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x50\n     4a0: f90003fa     \tstr\tx26, [sp]\n     4a4: 94000000     \tbl\t0x4a4 <lazy_action+0x3c4>\n\t\t00000000000004a4:  R_AARCH64_CALL26\tiq4_f4_session_init_on_ui_02\n     4a8: 7100081f     \tcmp\tw0, #0x2\n     4ac: 54fffa21     \tb.ne\t0x3f0 <lazy_action+0x310>\n     4b0: f9400320     \tldr\tx0, [x25]\n\t\t00000000000004b0:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x58\n     4b4: 90000001     \tadrp\tx1, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000004b4:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x10\n     4b8: 91000021     \tadd\tx1, x1, #0x0\n\t\t00000000000004b8:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x10\n     4bc: 94000000     \tbl\t0x4bc <lazy_action+0x3dc>\n\t\t00000000000004bc:  R_AARCH64_CALL26\tiq4_f4_menu_connect_on_ui_03\n     4c0: 34fff980     \tcbz\tw0, 0x3f0 <lazy_action+0x310>\n     4c4: 52800028     \tmov\tw8, #0x1                // =1\n     4c8: 3900029f     \tstrb\twzr, [x20]\n\t\t00000000000004c8:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x50\n     4cc: 390002c8     \tstrb\tw8, [x22]\n\t\t00000000000004cc:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x28\n     4d0: 17ffff53     \tb\t0x21c <lazy_action+0x13c>\n\n00000000000004d4 <lazy_view>:\n     4d4: b4000201     \tcbz\tx1, 0x514 <lazy_view+0x40>\n     4d8: d10103ff     \tsub\tsp, sp, #0x40\n     4dc: a9027bfd     \tstp\tx29, x30, [sp, #0x20]\n     4e0: a9034ff4     \tstp\tx20, x19, [sp, #0x30]\n     4e4: 910083fd     \tadd\tx29, sp, #0x20\n     4e8: 90000014     \tadrp\tx20, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000004e8:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x4\n     4ec: aa0103f3     \tmov\tx19, x1\n     4f0: 39400288     \tldrb\tw8, [x20]\n\t\t00000000000004f0:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x4\n     4f4: 7100051f     \tcmp\tw8, #0x1\n     4f8: 54000121     \tb.ne\t0x51c <lazy_view+0x48>\n     4fc: aa1303e0     \tmov\tx0, x19\n     500: 2a1f03e1     \tmov\tw1, wzr\n     504: 52800702     \tmov\tw2, #0x38               // =56\n     508: 94000000     \tbl\t0x508 <lazy_view+0x34>\n\t\t0000000000000508:  R_AARCH64_CALL26\tmemset\n     50c: 528000c8     \tmov\tw8, #0x6                // =6\n     510: 14000021     \tb\t0x594 <lazy_view+0xc0>\n     514: 2a1f03e0     \tmov\tw0, wzr\n     518: d65f03c0     \tret\n     51c: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000051c:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x28\n     520: 39400108     \tldrb\tw8, [x8]\n\t\t0000000000000520:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x28\n     524: 7100051f     \tcmp\tw8, #0x1\n     528: 54000261     \tb.ne\t0x574 <lazy_view+0xa0>\n     52c: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000052c:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x30\n     530: f9400100     \tldr\tx0, [x8]\n\t\t0000000000000530:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x30\n     534: 910023e8     \tadd\tx8, sp, #0x8\n     538: 94000000     \tbl\t0x538 <lazy_view+0x64>\n\t\t0000000000000538:  R_AARCH64_CALL26\tiq4_f4_session_menu_ports_02\n     53c: f9400fe8     \tldr\tx8, [sp, #0x18]\n     540: f94007e0     \tldr\tx0, [sp, #0x8]\n     544: aa1303e1     \tmov\tx1, x19\n     548: d63f0100     \tblr\tx8\n     54c: 34000360     \tcbz\tw0, 0x5b8 <lazy_view+0xe4>\n     550: 2a0003f4     \tmov\tw20, w0\n     554: aa1303e0     \tmov\tx0, x19\n     558: 94000025     \tbl\t0x5ec <ended_activity>\n     55c: 2a0003e8     \tmov\tw8, w0\n     560: 2a1403e0     \tmov\tw0, w20\n     564: 35000228     \tcbnz\tw8, 0x5a8 <lazy_view+0xd4>\n     568: 528000c8     \tmov\tw8, #0x6                // =6\n     56c: b9000268     \tstr\tw8, [x19]\n     570: 1400000e     \tb\t0x5a8 <lazy_view+0xd4>\n     574: aa1303e0     \tmov\tx0, x19\n     578: 2a1f03e1     \tmov\tw1, wzr\n     57c: 52800702     \tmov\tw2, #0x38               // =56\n     580: 94000000     \tbl\t0x580 <lazy_view+0xac>\n\t\t0000000000000580:  R_AARCH64_CALL26\tmemset\n     584: 39400288     \tldrb\tw8, [x20]\n\t\t0000000000000584:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x4\n     588: 7100011f     \tcmp\tw8, #0x0\n     58c: 528000c8     \tmov\tw8, #0x6                // =6\n     590: 1a9f1108     \tcsel\tw8, w8, wzr, ne\n     594: b9000268     \tstr\tw8, [x19]\n     598: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000598:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x8\n     59c: 52800020     \tmov\tw0, #0x1                // =1\n     5a0: b9400108     \tldr\tw8, [x8]\n\t\t00000000000005a0:  R_AARCH64_LDST32_ABS_LO12_NC\t.bss+0x8\n     5a4: b9003268     \tstr\tw8, [x19, #0x30]\n     5a8: a9434ff4     \tldp\tx20, x19, [sp, #0x30]\n     5ac: a9427bfd     \tldp\tx29, x30, [sp, #0x20]\n     5b0: 910103ff     \tadd\tsp, sp, #0x40\n     5b4: d65f03c0     \tret\n     5b8: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000005b8:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x38\n     5bc: 39400108     \tldrb\tw8, [x8]\n\t\t00000000000005bc:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x38\n     5c0: 7100051f     \tcmp\tw8, #0x1\n     5c4: 54ffff21     \tb.ne\t0x5a8 <lazy_view+0xd4>\n     5c8: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000005c8:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x40\n     5cc: 91000108     \tadd\tx8, x8, #0x0\n\t\t00000000000005cc:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x40\n     5d0: 2a0003f3     \tmov\tw19, w0\n     5d4: aa0803e0     \tmov\tx0, x8\n     5d8: 94000000     \tbl\t0x5d8 <lazy_view+0x104>\n\t\t00000000000005d8:  R_AARCH64_CALL26\tiq4_activity_hold_01\n     5dc: 52800028     \tmov\tw8, #0x1                // =1\n     5e0: 2a1303e0     \tmov\tw0, w19\n     5e4: 39000288     \tstrb\tw8, [x20]\n\t\t00000000000005e4:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x4\n     5e8: 17fffff0     \tb\t0x5a8 <lazy_view+0xd4>\n\n00000000000005ec <ended_activity>:\n     5ec: a9be7bfd     \tstp\tx29, x30, [sp, #-0x20]!\n     5f0: f9000bf3     \tstr\tx19, [sp, #0x10]\n     5f4: 910003fd     \tmov\tx29, sp\n     5f8: 90000013     \tadrp\tx19, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t00000000000005f8:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x38\n     5fc: 39400268     \tldrb\tw8, [x19]\n\t\t00000000000005fc:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x38\n     600: 7100051f     \tcmp\tw8, #0x1\n     604: 54000201     \tb.ne\t0x644 <ended_activity+0x58>\n     608: b9400008     \tldr\tw8, [x0]\n     60c: 7100051f     \tcmp\tw8, #0x1\n     610: 54000160     \tb.eq\t0x63c <ended_activity+0x50>\n     614: 7100191f     \tcmp\tw8, #0x6\n     618: 54000161     \tb.ne\t0x644 <ended_activity+0x58>\n     61c: 90000000     \tadrp\tx0, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000061c:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x40\n     620: 91000000     \tadd\tx0, x0, #0x0\n\t\t0000000000000620:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x40\n     624: 94000000     \tbl\t0x624 <ended_activity+0x38>\n\t\t0000000000000624:  R_AARCH64_CALL26\tiq4_activity_hold_01\n     628: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t0000000000000628:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x4\n     62c: 52800029     \tmov\tw9, #0x1                // =1\n     630: 2a1f03e0     \tmov\tw0, wzr\n     634: 39000109     \tstrb\tw9, [x8]\n\t\t0000000000000634:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x4\n     638: 14000004     \tb\t0x648 <ended_activity+0x5c>\n     63c: b9403408     \tldr\tw8, [x0, #0x34]\n     640: 340000a8     \tcbz\tw8, 0x654 <ended_activity+0x68>\n     644: 52800020     \tmov\tw0, #0x1                // =1\n     648: f9400bf3     \tldr\tx19, [sp, #0x10]\n     64c: a8c27bfd     \tldp\tx29, x30, [sp], #0x20\n     650: d65f03c0     \tret\n     654: b9402808     \tldr\tw8, [x0, #0x28]\n     658: 7100051f     \tcmp\tw8, #0x1\n     65c: 54000080     \tb.eq\t0x66c <ended_activity+0x80>\n     660: b9402c08     \tldr\tw8, [x0, #0x2c]\n     664: 7100051f     \tcmp\tw8, #0x1\n     668: 54fffee1     \tb.ne\t0x644 <ended_activity+0x58>\n     66c: 90000008     \tadrp\tx8, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000066c:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x58\n     670: f9400100     \tldr\tx0, [x8]\n\t\t0000000000000670:  R_AARCH64_LDST64_ABS_LO12_NC\t.bss+0x58\n     674: 94000000     \tbl\t0x674 <ended_activity+0x88>\n\t\t0000000000000674:  R_AARCH64_CALL26\tiq4_f4_source_fence_02\n     678: 350000a0     \tcbnz\tw0, 0x68c <ended_activity+0xa0>\n     67c: 90000000     \tadrp\tx0, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000067c:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x40\n     680: 91000000     \tadd\tx0, x0, #0x0\n\t\t0000000000000680:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x40\n     684: 94000000     \tbl\t0x684 <ended_activity+0x98>\n\t\t0000000000000684:  R_AARCH64_CALL26\tiq4_activity_release_01\n     688: 340000a0     \tcbz\tw0, 0x69c <ended_activity+0xb0>\n     68c: 39400268     \tldrb\tw8, [x19]\n\t\t000000000000068c:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x38\n     690: 7100051f     \tcmp\tw8, #0x1\n     694: 54fffc40     \tb.eq\t0x61c <ended_activity+0x30>\n     698: 17ffffe4     \tb\t0x628 <ended_activity+0x3c>\n     69c: 90000000     \tadrp\tx0, 0x0 <iq4_f4_native_menu_entry_02>\n\t\t000000000000069c:  R_AARCH64_ADR_PREL_PG_HI21\t.bss+0x40\n     6a0: 91000000     \tadd\tx0, x0, #0x0\n\t\t00000000000006a0:  R_AARCH64_ADD_ABS_LO12_NC\t.bss+0x40\n     6a4: 2a1f03e1     \tmov\tw1, wzr\n     6a8: 52800202     \tmov\tw2, #0x10               // =16\n     6ac: 94000000     \tbl\t0x6ac <ended_activity+0xc0>\n\t\t00000000000006ac:  R_AARCH64_CALL26\tmemset\n     6b0: 3900027f     \tstrb\twzr, [x19]\n\t\t00000000000006b0:  R_AARCH64_LDST8_ABS_LO12_NC\t.bss+0x38\n     6b4: 17ffffe4     \tb\t0x644 <ended_activity+0x58>\n",
+    "stderr": ""
+  }
+]

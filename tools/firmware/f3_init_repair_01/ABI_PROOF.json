@@ -1,0 +1,77 @@
+{
+  "schema": "iq4_native_COPY_RTTI_exact_static_ABI_01",
+  "runtime_verifier_symbol": "iq4_native_copy_rtti_current_01",
+  "runtime_verifier_object": {
+    "path": "analysis/firmware/f3_init_repair_01/build/rtti.o",
+    "bytes": 11016,
+    "sha256": "0eae89a2b42f8822c470cbc9e7fcf5f2af5079f6de859fea96eb5c24ac63a22c"
+  },
+  "bindings": [
+    {
+      "symbol": "_ZTVN10__cxxabiv117__class_type_infoE",
+      "va": 16001480,
+      "bytes": 88,
+      "dynsym_index": 377,
+      "version_index": 8,
+      "needed_library": "libstdc++.so.6",
+      "version_name": "CXXABI_1.3"
+    },
+    {
+      "symbol": "_ZTIi",
+      "va": 16001648,
+      "bytes": 16,
+      "dynsym_index": 522,
+      "version_index": 8,
+      "needed_library": "libstdc++.so.6",
+      "version_name": "CXXABI_1.3"
+    },
+    {
+      "symbol": "_ZTVN10__cxxabiv120__si_class_type_infoE",
+      "va": 16001760,
+      "bytes": 88,
+      "dynsym_index": 493,
+      "version_index": 8,
+      "needed_library": "libstdc++.so.6",
+      "version_name": "CXXABI_1.3"
+    }
+  ],
+  "actual_libstdcxx": {
+    "path": "analysis/firmware/f1_user_ui_entry_01/libstdcxx_original_ANALYSIS_ONLY.elf",
+    "bytes": 1538432,
+    "sha256": "5876c5861ffae1b3f6a5fc091be8f1d601edf602ebeed6a4aa3bf5c3cfbe11aa"
+  },
+  "original_user": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "source_manifest": {
+    "path": "tools/firmware/f3_init_repair_01/SOURCE_SHA256.json",
+    "bytes": 6372,
+    "sha256": "f41d4bcb07d69af69bf4c34a587f5660232dea0d65234c298832dc8d365eea7e"
+  },
+  "static_graph": {
+    "path": "analysis/firmware/f3_init_repair_01/GRAPH.json",
+    "bytes": 34223,
+    "sha256": "862f3f8c37c7e17661615cb3d249fcf7c8eb8a7b309775b953c722eabb9a0a88"
+  },
+  "reader_maximum_bytes": 448,
+  "library_bias_derived_from_actual_copy_function_slot": {
+    "user_copy_slot": 16001496,
+    "library_function_va": 585272,
+    "name": "_ZN10__cxxabiv117__class_type_infoD1Ev"
+  },
+  "base_alignment": 4096,
+  "finite_runtime_spans": 42,
+  "complete_function_bodies": 18,
+  "active_final_elf_copy_metadata_requires_root_seal": true,
+  "target_executed": false,
+  "library_loaded": false,
+  "sdk_loaded": false,
+  "ELF_PT_LOAD_p_align": 65536,
+  "bias_alignment_evidence": {
+    "path": "analysis/firmware/f3_init_repair_01/LOADER_STATIC.json",
+    "bytes": 3020,
+    "sha256": "5d8d874df931163b0687ddd8fd9681cbb370c031fe21e3f01953ddb750c624b4"
+  }
+}

@@ -1,0 +1,62 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual callable binding.
+  4ab9d8: a9b87bfd     	stp	x29, x30, [sp, #-0x80]!
+  4ab9dc: 910003fd     	mov	x29, sp
+  4ab9e0: a90153f3     	stp	x19, x20, [sp, #0x10]
+  4ab9e4: aa0803f4     	mov	x20, x8
+  4ab9e8: f90017e0     	str	x0, [sp, #0x28]
+  4ab9ec: f94017e0     	ldr	x0, [sp, #0x28]
+  4ab9f0: 94000583     	bl	0x4acffc
+  4ab9f4: f9003fe0     	str	x0, [sp, #0x78]
+  4ab9f8: f9403fe0     	ldr	x0, [sp, #0x78]
+  4ab9fc: f100001f     	cmp	x0, #0x0
+  4aba00: 540000e1     	b.ne	0x4aba1c
+  4aba04: f94017e0     	ldr	x0, [sp, #0x28]
+  4aba08: 9100a000     	add	x0, x0, #0x28
+  4aba0c: aa0003e1     	mov	x1, x0
+  4aba10: aa1403e0     	mov	x0, x20
+  4aba14: 97feb0d0     	bl	0x457d54
+  4aba18: 14000028     	b	0x4abab8
+  4aba1c: f9403fe0     	ldr	x0, [sp, #0x78]
+  4aba20: f9400000     	ldr	x0, [x0]
+  4aba24: 9102e000     	add	x0, x0, #0xb8
+  4aba28: f9400001     	ldr	x1, [x0]
+  4aba2c: 910123e0     	add	x0, sp, #0x48
+  4aba30: aa0003e8     	mov	x8, x0
+  4aba34: f9403fe0     	ldr	x0, [sp, #0x78]
+  4aba38: d63f0020     	blr	x1
+  4aba3c: f94017e0     	ldr	x0, [sp, #0x28]
+  4aba40: f9400000     	ldr	x0, [x0]
+  4aba44: 9104c000     	add	x0, x0, #0x130
+  4aba48: f9400013     	ldr	x19, [x0]
+  4aba4c: 910123e1     	add	x1, sp, #0x48
+  4aba50: 910183e0     	add	x0, sp, #0x60
+  4aba54: 97feb0c0     	bl	0x457d54
+  4aba58: 910183e0     	add	x0, sp, #0x60
+  4aba5c: 9100c3e1     	add	x1, sp, #0x30
+  4aba60: aa0103e8     	mov	x8, x1
+  4aba64: aa0003e1     	mov	x1, x0
+  4aba68: f94017e0     	ldr	x0, [sp, #0x28]
+  4aba6c: d63f0260     	blr	x19
+  4aba70: 910183e0     	add	x0, sp, #0x60
+  4aba74: 97feb08c     	bl	0x457ca4
+  4aba78: 9100c3e0     	add	x0, sp, #0x30
+  4aba7c: aa0003e1     	mov	x1, x0
+  4aba80: aa1403e0     	mov	x0, x20
+  4aba84: 97feb0b4     	bl	0x457d54
+  4aba88: 9100c3e0     	add	x0, sp, #0x30
+  4aba8c: 97feb086     	bl	0x457ca4
+  4aba90: 910123e0     	add	x0, sp, #0x48
+  4aba94: 97feb084     	bl	0x457ca4
+  4aba98: 14000008     	b	0x4abab8
+  4aba9c: aa0003f3     	mov	x19, x0
+  4abaa0: 910183e0     	add	x0, sp, #0x60
+  4abaa4: 97feb080     	bl	0x457ca4
+  4abaa8: 910123e0     	add	x0, sp, #0x48
+  4abaac: 97feb07e     	bl	0x457ca4
+  4abab0: aa1303e0     	mov	x0, x19
+  4abab4: 97fd7b27     	bl	0x40a750
+  4abab8: aa1403e0     	mov	x0, x20
+  4ababc: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  4abac0: a8c87bfd     	ldp	x29, x30, [sp], #0x80
+  4abac4: d65f03c0     	ret

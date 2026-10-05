@@ -1,0 +1,692 @@
+{
+  "schema": "iq4_f4_source02_menu03_link_inputs",
+  "original_user": {
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "menu_source": {
+    "path": "tools/firmware/f4_native_menu_03/SOURCE_SHA256.json",
+    "bytes": 4546,
+    "sha256": "eb108284d431a8f03d2456fcd74b788924d1c703ebb3f137727a5f4c3c9c72b4"
+  },
+  "entry": {
+    "symbol": "iq4_f4_native_menu_entry_02",
+    "arguments": "original selector x0, original root x1, returnPC4eea5c, explicit defaultSD10",
+    "callsite": "0x4eea58",
+    "old_bytes_le": "43320094",
+    "original_target": "0x4fb364",
+    "shared_with_F1": true,
+    "original_called_exactly_once_by_Root_wrapper": true
+  },
+  "back": {
+    "symbol": "iq4_f4_menu_native_pop_wrapper_03",
+    "callsite": "0x4fb454",
+    "old_bytes_le": "14b2ff97",
+    "original_target": "0x4e7ca4",
+    "unowned_native_exception_passthrough": true
+  },
+  "objects": [
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/source.o",
+      "bytes": 19760,
+      "sha256": "83cfa411cd2d2f7cfc8a07a7b3ce4d5f0a544e56a04e9f80204cb7cb60f43197",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 8184
+        },
+        {
+          "name": ".rodata.cst16",
+          "type": 1,
+          "flags": 18,
+          "bytes": 16
+        },
+        {
+          "name": ".rodata.str1.1",
+          "type": 1,
+          "flags": 50,
+          "bytes": 77
+        },
+        {
+          "name": ".data.rel.ro",
+          "type": 1,
+          "flags": 3,
+          "bytes": 720
+        },
+        {
+          "name": ".rodata",
+          "type": 1,
+          "flags": 2,
+          "bytes": 3000
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 768
+        }
+      ],
+      "relocation_types": [
+        257,
+        261,
+        275,
+        277,
+        282,
+        283,
+        299
+      ],
+      "undefined_symbols": [
+        "iq4_f4_native_clock_02",
+        "iq4_f4_native_construct_observer_02",
+        "iq4_f4_native_current_02",
+        "iq4_f4_native_event_construct_02",
+        "iq4_f4_native_event_notify_02",
+        "iq4_f4_native_id_02",
+        "iq4_f4_native_lock_02",
+        "iq4_f4_native_mutex_unlock_02",
+        "iq4_f4_native_size_02",
+        "iq4_f4_native_subscribe_02",
+        "iq4_f4_native_tid_02",
+        "iq4_f4_native_trylock_02",
+        "iq4_f4_native_unlock_02",
+        "iq4_f4_native_unsubscribe_02",
+        "memcmp",
+        "memcpy",
+        "memset"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/native_calls.o",
+      "bytes": 5704,
+      "sha256": "f851567b4ee54275984e613c6a8b83a0dd8f3bfa3e54ea684a2528c675c4fdfd",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 812
+        },
+        {
+          "name": ".gcc_except_table",
+          "type": 1,
+          "flags": 2,
+          "bytes": 288
+        },
+        {
+          "name": ".data.DW.ref.__gxx_personality_v0",
+          "type": 1,
+          "flags": 515,
+          "bytes": 8
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 528
+        }
+      ],
+      "relocation_types": [
+        257,
+        260,
+        261,
+        283
+      ],
+      "undefined_symbols": [
+        "__cxa_begin_catch",
+        "__cxa_end_catch",
+        "__gxx_personality_v0"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/worker.o",
+      "bytes": 3456,
+      "sha256": "2611e25199d29d4d62174ffc7d99c67edd7c4ea6f1a5f6408ac2addfe8a79799",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 1000
+        },
+        {
+          "name": ".rodata",
+          "type": 1,
+          "flags": 2,
+          "bytes": 32
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 144
+        }
+      ],
+      "relocation_types": [
+        261,
+        275,
+        277,
+        283
+      ],
+      "undefined_symbols": [
+        "iq4_f4_native_tid_02",
+        "iq4_f4_source_fence_02",
+        "iq4_f4_source_worker_claim_02",
+        "iq4_f4_source_worker_release_02",
+        "iq4_jpeg_encode_bounded",
+        "iq4_mkv_packet",
+        "iq4_mkv_seal",
+        "iq4_native_jpeg82_bind_01",
+        "memset"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/session.o",
+      "bytes": 9880,
+      "sha256": "ae51fc05cefb5a32cf5a49b19a0327852fdb761a185f2123eab8dd047dc3f416",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 4560
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 400
+        }
+      ],
+      "relocation_types": [
+        261,
+        275,
+        277,
+        282,
+        283
+      ],
+      "undefined_symbols": [
+        "iq4_f4_menu_finish_exit_on_ui_03",
+        "iq4_f4_menu_page_guard_03",
+        "iq4_f4_menu_refresh_on_ui_03",
+        "iq4_f4_native_clock_02",
+        "iq4_f4_source_attach_on_ui_02",
+        "iq4_f4_source_bind_handoff_on_ui_02",
+        "iq4_f4_source_fence_02",
+        "iq4_f4_source_is_ui_02",
+        "iq4_f4_source_measure_on_ui_02",
+        "iq4_f4_source_post_control_02",
+        "iq4_f4_source_request_stop_02",
+        "iq4_f4_source_start_on_ui_02",
+        "iq4_f4_source_status_on_ui_02",
+        "iq4_f4_source_stop_on_ui_02",
+        "iq4_f4_source_worker_claim_02",
+        "iq4_f4_source_worker_release_02",
+        "iq4_f4_thread_create_02",
+        "iq4_f4_thread_join_02",
+        "iq4_f4_thread_pins_02",
+        "iq4_f4_thread_wait_02",
+        "iq4_f4_thread_wake_02",
+        "iq4_f4_worker_init_02",
+        "iq4_f4_worker_pump_one_02",
+        "memcmp",
+        "memset"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/thread_calls.o",
+      "bytes": 3488,
+      "sha256": "174ebee0de855dd76b90077f5e8c9c19aab739da08997355fc5ad66446039ce8",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 424
+        },
+        {
+          "name": ".gcc_except_table",
+          "type": 1,
+          "flags": 2,
+          "bytes": 48
+        },
+        {
+          "name": ".rodata",
+          "type": 1,
+          "flags": 2,
+          "bytes": 32
+        },
+        {
+          "name": ".rodata.cst16",
+          "type": 1,
+          "flags": 18,
+          "bytes": 16
+        },
+        {
+          "name": ".data.DW.ref.__gxx_personality_v0",
+          "type": 1,
+          "flags": 515,
+          "bytes": 8
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 200
+        }
+      ],
+      "relocation_types": [
+        257,
+        260,
+        261,
+        275,
+        277,
+        283
+      ],
+      "undefined_symbols": [
+        "__cxa_begin_catch",
+        "__cxa_end_catch",
+        "__gxx_personality_v0",
+        "memcmp"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/movie_binding.o",
+      "bytes": 6056,
+      "sha256": "5677b4440141998e70d40a53229251f68e63ef65cc64b23ac8b4a826040a33fe",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 1912
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 344
+        }
+      ],
+      "relocation_types": [
+        261,
+        275,
+        277,
+        283
+      ],
+      "undefined_symbols": [
+        "f3_card_cancel_pending_06",
+        "f3_card_close_dirs_05",
+        "f3_card_hold_05",
+        "f3_card_linux_io_05",
+        "f3_card_native_calls_05",
+        "f3_card_native_try_calls_06",
+        "f3_card_poll_06",
+        "f3_card_release_requests_05",
+        "f3_card_request_06",
+        "f3_card_valid_05",
+        "f4_movie_abort_01",
+        "f4_movie_begin_01",
+        "f4_movie_finish_01",
+        "f4_movie_linux_api_01",
+        "iq4_f4_native_clock_02",
+        "iq4_f4_native_tid_02",
+        "iq4_f4_source_fence_02",
+        "iq4_f4_source_is_ui_02",
+        "memset"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/entry.o",
+      "bytes": 6336,
+      "sha256": "b8cf224ee856d58591cc34591acac892431a220047b7b0ebb52493947d379563",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 1100
+        },
+        {
+          "name": ".bss",
+          "type": 8,
+          "flags": 3,
+          "bytes": 104
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 128
+        }
+      ],
+      "relocation_types": [
+        261,
+        275,
+        277,
+        278,
+        283,
+        285,
+        286,
+        311,
+        312
+      ],
+      "undefined_symbols": [
+        "iq4_f4_menu_bind_ports_on_ui_03",
+        "iq4_f4_menu_connect_on_ui_03",
+        "iq4_f4_menu_install_03",
+        "iq4_f4_menu_new_03",
+        "iq4_f4_movie_binding_init_on_ui_02",
+        "iq4_f4_movie_binding_ports_02",
+        "iq4_f4_session_init_on_ui_02",
+        "iq4_f4_session_menu_ports_02",
+        "iq4_f4_session_storage_bytes_02",
+        "iq4_f4_source_init_02",
+        "iq4_f4_source_storage_bytes_02",
+        "iq4_native_self_read_01",
+        "memset"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/menu.o",
+      "bytes": 26600,
+      "sha256": "34d8a868bc149b44e175cd0056fdbc1ea34e9601f9f446abe7afa587f89172e9",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 8808
+        },
+        {
+          "name": ".rodata.cst8",
+          "type": 1,
+          "flags": 18,
+          "bytes": 8
+        },
+        {
+          "name": ".bss",
+          "type": 8,
+          "flags": 3,
+          "bytes": 553
+        },
+        {
+          "name": ".data.rel.ro",
+          "type": 1,
+          "flags": 3,
+          "bytes": 416
+        },
+        {
+          "name": ".rodata",
+          "type": 1,
+          "flags": 2,
+          "bytes": 2124
+        },
+        {
+          "name": ".rodata.str1.1",
+          "type": 1,
+          "flags": 50,
+          "bytes": 190
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 504
+        }
+      ],
+      "relocation_types": [
+        257,
+        261,
+        275,
+        277,
+        278,
+        282,
+        283,
+        286,
+        311,
+        312
+      ],
+      "undefined_symbols": [
+        "iq4_f4_menu_append_03",
+        "iq4_f4_menu_close_03",
+        "iq4_f4_menu_ctor_03",
+        "iq4_f4_menu_new_03",
+        "iq4_f4_menu_pop_03",
+        "iq4_f4_menu_pop_passthrough_03",
+        "iq4_f4_native_current_02",
+        "iq4_f4_native_event_notify_02",
+        "iq4_f4_source_bind_page_guard_on_ui_02",
+        "iq4_f4_source_fence_02",
+        "iq4_f4_source_request_stop_02",
+        "memcmp",
+        "memcpy",
+        "memset"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/menu_native_calls.o",
+      "bytes": 3408,
+      "sha256": "b8927630133120ed4e2dabc7b73eccab78570bb5904ee979f1aec5c4de369fee",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 368
+        },
+        {
+          "name": ".gcc_except_table",
+          "type": 1,
+          "flags": 2,
+          "bytes": 120
+        },
+        {
+          "name": ".data.DW.ref.__gxx_personality_v0",
+          "type": 1,
+          "flags": 515,
+          "bytes": 8
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 264
+        }
+      ],
+      "relocation_types": [
+        257,
+        260,
+        261,
+        283
+      ],
+      "undefined_symbols": [
+        "__cxa_begin_catch",
+        "__cxa_end_catch",
+        "__gxx_personality_v0"
+      ],
+      "executed": false
+    }
+  ],
+  "original_aliases": [
+    {
+      "symbol": "memcpy",
+      "va": "0x40a530",
+      "original_first16_le": "d05900b0115a42f910c2129120021fd6",
+      "original_first16_sha256": "3ec623f42254724c282aed9feb73a5b5c3cbe2cf77ba5cefc4beb3c616f2840d"
+    },
+    {
+      "symbol": "memset",
+      "va": "0x40a1a0",
+      "original_first16_le": "d05900b0117641f910a20b9120021fd6",
+      "original_first16_sha256": "ce2d5cf323f62450f5585fbd0f90076f12dcdeecb565b014fa01a0b651518907"
+    },
+    {
+      "symbol": "memcmp",
+      "va": "0x40b160",
+      "original_first16_le": "d0590090116645f910222b9120021fd6",
+      "original_first16_sha256": "691db1a54382eadabf79cda87f5d62d589e73ee2b262aaf06eec929495feee2c"
+    },
+    {
+      "symbol": "__cxa_begin_catch",
+      "va": "0x409d00",
+      "original_first16_le": "d05900d0114e40f91062029120021fd6",
+      "original_first16_sha256": "c59f0f7ee1b931420624b8aed45c78f863a7635715651300e92a0fea1d9c4f9c"
+    },
+    {
+      "symbol": "__cxa_end_catch",
+      "va": "0x40aa00",
+      "original_first16_le": "d05900b0118e43f910621c9120021fd6",
+      "original_first16_sha256": "c962bddc36d2aa8aa01c3f79ea9b1200f120286e8c3d64cf85d68ca5f9aeaf4c"
+    },
+    {
+      "symbol": "__gxx_personality_v0",
+      "va": "0x40a640",
+      "original_first16_le": "d05900b0119e42f910e2149120021fd6",
+      "original_first16_sha256": "bcef03e8ff73d75903412ae6b28d64cb55be7020e2acedcc21113a2775ce80f9"
+    },
+    {
+      "symbol": "iq4_native_original_syscall_01",
+      "va": "0x40ae40",
+      "original_first16_le": "d05900b0119e44f910e2249120021fd6",
+      "original_first16_sha256": "0cc51ec789db50f20ec52457bb384252add5b99eaf2326a501b8ea947b218bff"
+    },
+    {
+      "symbol": "iq4_f3_original_syscall_03",
+      "va": "0x40ae40",
+      "original_first16_le": "d05900b0119e44f910e2249120021fd6",
+      "original_first16_sha256": "0cc51ec789db50f20ec52457bb384252add5b99eaf2326a501b8ea947b218bff"
+    },
+    {
+      "symbol": "iq4_f3_original_errno_location_03",
+      "va": "0x40a4e0",
+      "original_first16_le": "d05900b0114642f91022129120021fd6",
+      "original_first16_sha256": "4e8837bd53cecd28b01df16b9767653c794c5515207dd56caf103e8c4a90fb54"
+    },
+    {
+      "symbol": "iq4_f3_register_client_05",
+      "va": "0x8ca3ec",
+      "original_first16_le": "fd7bbca9fd030091f30b00f9e01700f9",
+      "original_first16_sha256": "2bd944b3dd720acea8597c56924a21fc0a6f01ef6f9c49196736e22c1c18a50a"
+    },
+    {
+      "symbol": "iq4_f3_wait_request_05",
+      "va": "0x8ca888",
+      "original_first16_le": "fd7bbca9fd030091f30b00f9e01700f9",
+      "original_first16_sha256": "2bd944b3dd720acea8597c56924a21fc0a6f01ef6f9c49196736e22c1c18a50a"
+    },
+    {
+      "symbol": "iq4_f3_release_request_05",
+      "va": "0x8ca708",
+      "original_first16_le": "fd7bbca9fd030091f30b00f9e01700f9",
+      "original_first16_sha256": "2bd944b3dd720acea8597c56924a21fc0a6f01ef6f9c49196736e22c1c18a50a"
+    },
+    {
+      "symbol": "iq4_f3_request_device_06",
+      "va": "0x8ca598",
+      "original_first16_le": "fd7bbca9fd030091f30b00f9e01700f9",
+      "original_first16_sha256": "2bd944b3dd720acea8597c56924a21fc0a6f01ef6f9c49196736e22c1c18a50a"
+    },
+    {
+      "symbol": "iq4_f3_current_native_thread_06",
+      "va": "0x710b0c",
+      "original_first16_le": "fd7bbfa9fd030091130d0094fd7bc1a8",
+      "original_first16_sha256": "0550a1609ae113028a095c8977fc1e4c498e6670f7cbc8b7cc3b6922ffba81d7"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "tools/firmware/f3_native_jpeg8_binding_01/SOURCE_SHA256.json",
+      "bytes": 9722,
+      "sha256": "c87d4d490b6e64bb06af786438430a030b1d3e8fb98b4b99a67e916a87207705"
+    },
+    {
+      "path": "tools/firmware/f3_native_card_bridge_06/SOURCE_SHA256.json",
+      "bytes": 7421,
+      "sha256": "483b9cf229389eec68ee900a1a6879f8cafa67d92156fed434feea9fdf83196a"
+    },
+    {
+      "path": "tools/firmware/movie_card_01/SOURCE_SHA256.json",
+      "bytes": 5668,
+      "sha256": "f39d54d92756d1260f1c52cf4c8541e4930e102b1817045319982b6f8984fb1d"
+    },
+    {
+      "path": "src/codec/bounded_jpeg.c",
+      "bytes": 8197,
+      "sha256": "18acd993d7c671979e2108b61ea3b148c2912f319fc00a374c94408e18540cca"
+    },
+    {
+      "path": "src/codec/bounded_jpeg.h",
+      "bytes": 2418,
+      "sha256": "1be26d8743655280bd507e86f973810b32df568a811f619976f6a3e1adf8a18e"
+    },
+    {
+      "path": "src/recording/native_mkv.c",
+      "bytes": 9226,
+      "sha256": "aed2a78b229c83cb17e94763bffb72c377022038fa5618b9a04d8c6b15737f51"
+    },
+    {
+      "path": "src/recording/native_mkv.h",
+      "bytes": 2507,
+      "sha256": "021a12114e426aceae9838579cd903f26054da45557ce5b3bc405dc02e4f56b0"
+    },
+    {
+      "path": "tools/firmware/native_runtime_01/self_read.c",
+      "bytes": 1105,
+      "sha256": "a9484faa791466566925e59078e76ceacd51d238de800023620f67743fad1be7"
+    },
+    {
+      "path": "tools/firmware/native_runtime_01/self_read.h",
+      "bytes": 436,
+      "sha256": "c63a805a5b698bf1795be51dffdaf2315f77ab3bb07f4dcd828d7a0418b12f77"
+    }
+  ],
+  "required_link_source_groups": [
+    "own nine objects once",
+    "native_runtime_01/self_read.c",
+    "f3_native_jpeg8_binding_01/native_jpeg82.c",
+    "src/codec/bounded_jpeg.c",
+    "src/recording/native_mkv.c",
+    "Card06 superset only: card.c native_calls.cpp card_linux.c fdinfo.c fs05.c",
+    "Movie01: movie.c native_linux.c and their frozen FS/SHA dependencies"
+  ],
+  "do_not_link": [
+    "Card05 card.c together with Card06 card.c",
+    "old F4 EN0/backend/desktop UI",
+    "raw SO or raw ET_REL without relocation/unwind merge"
+  ],
+  "production_guard": "exact original bytes, actualUI/current owner, registeredtriple/native liveclient/bank/pairedunlock/page, async selectedcard mounted root; no evidence booleans",
+  "source_metadata": "nativeRGB24 W/H/3W capacity; original U32softwareID, observerMonotonicNS notsensorclock",
+  "publication": "Movie01 seals once/sync/wholeSHA/nativeScanner/JPEG/CRC/noreplace/dirsync; UI native release last",
+  "actual_recording_tested": false,
+  "actual_mode_or_fps_verified": false,
+  "camera_access": false,
+  "target_executed": false
+}

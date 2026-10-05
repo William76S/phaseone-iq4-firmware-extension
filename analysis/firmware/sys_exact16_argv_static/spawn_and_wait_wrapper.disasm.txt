@@ -1,0 +1,12 @@
+STATIC ONLY; exported proximity is not a private function identity.
+
+analysis/firmware/sys_exact16_argv_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   94064: f81f0ffe     	str	x30, [sp, #-0x10]!
+   94068: 97ffffdd     	bl	0x93fdc <.text+0x8883c>
+   9406c: f84107fe     	ldr	x30, [sp], #0x10
+   94070: 17fde57e     	b	0xd668 <.text+0x1ec8>
+   94074: a9be53f3     	stp	x19, x20, [sp, #-0x20]!

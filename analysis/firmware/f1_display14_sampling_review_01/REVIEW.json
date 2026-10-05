@@ -1,0 +1,279 @@
+{
+  "schema": "iq4_f1_display14_sampling_review_01",
+  "actual_values": {
+    "source": "root_device_receipt",
+    "independently_read_by_this_agent": false,
+    "reason": "E34",
+    "hook_count": 775,
+    "fill_count": 0,
+    "image": [
+      640,
+      480
+    ],
+    "config": [
+      14204,
+      10652
+    ],
+    "roi": [
+      0,
+      0,
+      14204,
+      10652
+    ],
+    "rotation": 0,
+    "animation": 0,
+    "countdown": 0
+  },
+  "native_executed": false,
+  "camera_access": false,
+  "frozen_inputs_unchanged": true,
+  "findings": [
+    {
+      "id": "EXACT_ASPECT_REJECTS_ACTUAL",
+      "status": "proved_integer_predicate_for_reported_values",
+      "source_file": "tools/firmware/f1_stock_display_payload_14/payload.c",
+      "line": 64,
+      "products": [
+        6817920,
+        6817280
+      ],
+      "delta": 640,
+      "height_prediction": 479.95494226978315,
+      "height_error_pixels": 0.045057730216854
+    },
+    {
+      "id": "LOCAL_OUTPUT_PAIR_IS_INDEPENDENT",
+      "status": "original_byte_proof",
+      "configured_pair_location": "metadata+58/+5c = engine+47b8/+47bc",
+      "local_request": [
+        640,
+        480
+      ],
+      "write_va": "0x5203a4",
+      "write_hex": "012c00f9",
+      "bool1_skips_output_pair_truncation_alignment_arm": true,
+      "universal_rounding_rule_proved": false
+    }
+  ],
+  "preferred_contract": {
+    "actual_locked_equals_image": "preserve",
+    "format_packed_stride": "preserve",
+    "full_roi_equals_config": "preserve",
+    "configured_output_dimensions": "metadata+58/+5c positive <=65535, equal actual locked/image W/H",
+    "exact_config_image_aspect_equality": "remove",
+    "all_other_guards": "preserve",
+    "unknown_output_mismatch": "hide",
+    "actual_device_pass_after_fix": null
+  },
+  "fallback_contract": {
+    "meaning": "existence of common positive floor scale, finite admission policy only",
+    "formula": [
+      "int64(PW)*CH < int64(PH+1)*CW",
+      "int64(PH)*CW < int64(PW+1)*CH"
+    ],
+    "upper_endpoint": "exclusive",
+    "quantization_bound": "less than one output pixel per dimension",
+    "native_round_rule_claim": null
+  },
+  "host_case_count_each": 19,
+  "host_builds": 2,
+  "geometry_fields_not_received": [
+    "scale_bits",
+    "normal_scale_bits",
+    "destination",
+    "projected",
+    "clip"
+  ],
+  "exact_words": [
+    {
+      "va": "0x520364",
+      "file_offset": 1180516,
+      "bytes": 4,
+      "hex": "e0430191"
+    },
+    {
+      "va": "0x520378",
+      "file_offset": 1180536,
+      "bytes": 4,
+      "hex": "5edefc97"
+    },
+    {
+      "va": "0x520384",
+      "file_offset": 1180548,
+      "bytes": 4,
+      "hex": "72570694"
+    },
+    {
+      "va": "0x52038c",
+      "file_offset": 1180556,
+      "bytes": 4,
+      "hex": "e16340b9"
+    },
+    {
+      "va": "0x520390",
+      "file_offset": 1180560,
+      "bytes": 4,
+      "hex": "e26740b9"
+    },
+    {
+      "va": "0x52039c",
+      "file_offset": 1180572,
+      "bytes": 4,
+      "hex": "e04f40f9"
+    },
+    {
+      "va": "0x5203a4",
+      "file_offset": 1180580,
+      "bytes": 4,
+      "hex": "012c00f9"
+    },
+    {
+      "va": "0x52040c",
+      "file_offset": 1180684,
+      "bytes": 4,
+      "hex": "e4570694"
+    },
+    {
+      "va": "0x797640",
+      "file_offset": 3765824,
+      "bytes": 4,
+      "hex": "1500391e"
+    },
+    {
+      "va": "0x7976c8",
+      "file_offset": 3765960,
+      "bytes": 4,
+      "hex": "0000381e"
+    },
+    {
+      "va": "0x7976cc",
+      "file_offset": 3765964,
+      "bytes": 4,
+      "hex": "6400381e"
+    },
+    {
+      "va": "0x7976d0",
+      "file_offset": 3765968,
+      "bytes": 4,
+      "hex": "2300381e"
+    },
+    {
+      "va": "0x7976d4",
+      "file_offset": 3765972,
+      "bytes": 4,
+      "hex": "4200381e"
+    },
+    {
+      "va": "0x7976f4",
+      "file_offset": 3766004,
+      "bytes": 4,
+      "hex": "81525f39"
+    },
+    {
+      "va": "0x7976fc",
+      "file_offset": 3766012,
+      "bytes": 4,
+      "hex": "41020034"
+    },
+    {
+      "va": "0x79772c",
+      "file_offset": 3766060,
+      "bytes": 4,
+      "hex": "6fffff97"
+    },
+    {
+      "va": "0x797740",
+      "file_offset": 3766080,
+      "bytes": 4,
+      "hex": "09000014"
+    },
+    {
+      "va": "0x797754",
+      "file_offset": 3766100,
+      "bytes": 4,
+      "hex": "f7361e12"
+    },
+    {
+      "va": "0x797758",
+      "file_offset": 3766104,
+      "bytes": 4,
+      "hex": "b5361e12"
+    },
+    {
+      "va": "0x7977c0",
+      "file_offset": 3766208,
+      "bytes": 4,
+      "hex": "1700391e"
+    },
+    {
+      "va": "0x787840",
+      "file_offset": 3700800,
+      "bytes": 4,
+      "hex": "e55e40b9"
+    },
+    {
+      "va": "0x78785c",
+      "file_offset": 3700828,
+      "bytes": 4,
+      "hex": "bad09a1a"
+    },
+    {
+      "va": "0x787868",
+      "file_offset": 3700840,
+      "bytes": 4,
+      "hex": "066b24b8"
+    },
+    {
+      "va": "0x78786c",
+      "file_offset": 3700844,
+      "bytes": 4,
+      "hex": "ba0400b9"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "bytes": 11874544,
+      "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+    },
+    {
+      "path": "tools/firmware/f1_stock_display_payload_14/payload.c",
+      "bytes": 11133,
+      "sha256": "ee5c61099eccf9b6d137c536a9e72200b13872a003dcf1ad0493baa9f2ff79ee"
+    },
+    {
+      "path": "tools/firmware/f1_stock_display_payload_14/payload.h",
+      "bytes": 1738,
+      "sha256": "f711707350aa164c9f1edef32d5dd2ebc851fc2e7c87ec835b6d6bc56fc3f2da"
+    }
+  ],
+  "windows": [
+    {
+      "start_va": "0x520350",
+      "end_va_exclusive": "0x520418",
+      "identity": {
+        "path": "analysis/firmware/f1_display14_sampling_review_01/Native_local_fixed_output_pair.txt",
+        "bytes": 3073,
+        "sha256": "e2c070ab9b1e91271a1274f664637d6eb52610a7245f9a0f02a5aca6ff03e2ed"
+      }
+    },
+    {
+      "start_va": "0x7973c0",
+      "end_va_exclusive": "0x7977c8",
+      "identity": {
+        "path": "analysis/firmware/f1_display14_sampling_review_01/Native_mode_selection_and_integer_rounding.txt",
+        "bytes": 13475,
+        "sha256": "5ba4ae9958eb820f0cd8b9d32f31e81589cf60e47cf31deade84024374a9ed79"
+      }
+    },
+    {
+      "start_va": "0x787838",
+      "end_va_exclusive": "0x787884",
+      "identity": {
+        "path": "analysis/firmware/f1_display14_sampling_review_01/Producer_locked_dimensions_roi.txt",
+        "bytes": 1078,
+        "sha256": "ac8efd9665536190dbf0b38b56c1ca391a08958e5362067e5f3706b6a33d069c"
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  74edbc:      	stp	x29, x30, [sp, #-0x30]!
+  74edc0:      	mov	x29, sp
+  74edc4:      	str	x0, [sp, #0x18]
+  74edc8:      	str	wzr, [sp, #0x2c]
+  74edcc:      	ldrsw	x0, [sp, #0x2c]
+  74edd0:      	cmp	x0, #0x55
+  74edd4:      	b.hi	0x74ee90 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x35164>
+  74edd8:      	adrp	x0, 0xf55000
+  74eddc:      	add	x2, x0, #0xf18
+  74ede0:      	ldrsw	x1, [sp, #0x2c]
+  74ede4:      	mov	x0, x1
+  74ede8:      	lsl	x0, x0, #2
+  74edec:      	add	x0, x0, x1
+  74edf0:      	lsl	x0, x0, #3
+  74edf4:      	add	x0, x2, x0
+  74edf8:      	ldr	w0, [x0]
+  74edfc:      	mov	w1, w0
+  74ee00:      	ldr	x0, [sp, #0x18]
+  74ee04:      	bl	0x74f414 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x356e8>
+  74ee08:      	and	w0, w0, #0xff
+  74ee0c:      	cmp	w0, #0x0
+  74ee10:      	b.eq	0x74ee80 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x35154>
+  74ee14:      	adrp	x0, 0xf55000
+  74ee18:      	add	x2, x0, #0xf18
+  74ee1c:      	ldrsw	x1, [sp, #0x2c]
+  74ee20:      	mov	x0, x1
+  74ee24:      	lsl	x0, x0, #2
+  74ee28:      	add	x0, x0, x1
+  74ee2c:      	lsl	x0, x0, #3
+  74ee30:      	add	x0, x2, x0
+  74ee34:      	ldr	w0, [x0]
+  74ee38:      	mov	w1, w0
+  74ee3c:      	ldr	x0, [sp, #0x18]
+  74ee40:      	bl	0x74eaec <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x34dc0>
+  74ee44:      	and	w0, w0, #0xff
+  74ee48:      	cmp	w0, #0x0
+  74ee4c:      	b.eq	0x74ee80 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x35154>
+  74ee50:      	adrp	x0, 0xf55000
+  74ee54:      	add	x2, x0, #0xf18
+  74ee58:      	ldrsw	x1, [sp, #0x2c]
+  74ee5c:      	mov	x0, x1
+  74ee60:      	lsl	x0, x0, #2
+  74ee64:      	add	x0, x0, x1
+  74ee68:      	lsl	x0, x0, #3
+  74ee6c:      	add	x0, x2, x0
+  74ee70:      	ldr	w0, [x0]
+  74ee74:      	mov	w1, w0
+  74ee78:      	ldr	x0, [sp, #0x18]
+  74ee7c:      	bl	0x74ed78 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x3504c>
+  74ee80:      	ldr	w0, [sp, #0x2c]
+  74ee84:      	add	w0, w0, #0x1
+  74ee88:      	str	w0, [sp, #0x2c]
+  74ee8c:      	b	0x74edcc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x350a0>
+  74ee90:      	nop
+  74ee94:      	ldp	x29, x30, [sp], #0x30
+  74ee98:      	ret

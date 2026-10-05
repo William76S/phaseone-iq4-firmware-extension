@@ -1,0 +1,124 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_card_boot_failure_review_01/libc-2.28.so.analysis_only:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000020c00 <__libc_start_main>:
+   20c00: a9ac7bfd     	stp	x29, x30, [sp, #-0x140]!
+   20c04: 90000a24     	adrp	x4, 0x164000 <sys_sigabbrev+0x2b8>
+   20c08: 910003fd     	mov	x29, sp
+   20c0c: b90057e1     	str	w1, [sp, #0x54]
+   20c10: f9479081     	ldr	x1, [x4, #0xf20]
+   20c14: a90153f3     	stp	x19, x20, [sp, #0x10]
+   20c18: aa0303f3     	mov	x19, x3
+   20c1c: a9025bf5     	stp	x21, x22, [sp, #0x20]
+   20c20: f9001bf7     	str	x23, [sp, #0x30]
+   20c24: f90027e2     	str	x2, [sp, #0x48]
+   20c28: f9002fe0     	str	x0, [sp, #0x58]
+   20c2c: 52800000     	mov	w0, #0x0                // =0
+   20c30: b4000081     	cbz	x1, 0x20c40 <__libc_start_main+0x40>
+   20c34: b9400020     	ldr	w0, [x1]
+   20c38: 7100001f     	cmp	w0, #0x0
+   20c3c: 1a9f17e0     	cset	w0, eq
+   20c40: b0000a21     	adrp	x1, 0x165000
+   20c44: b9005820     	str	w0, [x1, #0x58]
+   20c48: b40000a5     	cbz	x5, 0x20c5c <__libc_start_main+0x5c>
+   20c4c: aa0503e0     	mov	x0, x5
+   20c50: d2800002     	mov	x2, #0x0                // =0
+   20c54: d2800001     	mov	x1, #0x0                // =0
+   20c58: 94004ec0     	bl	0x34758 <__cxa_atexit>
+   20c5c: 90000a22     	adrp	x2, 0x164000 <sys_sigabbrev+0x2b8>
+   20c60: f9470442     	ldr	x2, [x2, #0xe08]
+   20c64: b9400040     	ldr	w0, [x2]
+   20c68: 121f0014     	and	w20, w0, #0x2
+   20c6c: 370803e0     	tbnz	w0, #0x1, 0x20ce8 <__libc_start_main+0xe8>
+   20c70: b40000f3     	cbz	x19, 0x20c8c <__libc_start_main+0x8c>
+   20c74: 90000a22     	adrp	x2, 0x164000 <sys_sigabbrev+0x2b8>
+   20c78: b94057e0     	ldr	w0, [sp, #0x54]
+   20c7c: f94027e1     	ldr	x1, [sp, #0x48]
+   20c80: f9473042     	ldr	x2, [x2, #0xe60]
+   20c84: f9400042     	ldr	x2, [x2]
+   20c88: d63f0260     	blr	x19
+   20c8c: 90000a20     	adrp	x0, 0x164000 <sys_sigabbrev+0x2b8>
+   20c90: f9470400     	ldr	x0, [x0, #0xe08]
+   20c94: b9422817     	ldr	w23, [x0, #0x228]
+   20c98: 350006b7     	cbnz	w23, 0x20d6c <__libc_start_main+0x16c>
+   20c9c: 35000894     	cbnz	w20, 0x20dac <__libc_start_main+0x1ac>
+   20ca0: 9101a3e0     	add	x0, sp, #0x68
+   20ca4: 9400443b     	bl	0x31d90 <_setjmp>
+   20ca8: 35000300     	cbnz	w0, 0x20d08 <__libc_start_main+0x108>
+   20cac: 90000a20     	adrp	x0, 0x164000 <sys_sigabbrev+0x2b8>
+   20cb0: d53bd043     	mrs	x3, TPIDR_EL0
+   20cb4: d11c0063     	sub	x3, x3, #0x700
+   20cb8: 9101a3e2     	add	x2, sp, #0x68
+   20cbc: f9473000     	ldr	x0, [x0, #0xe60]
+   20cc0: f9408064     	ldr	x4, [x3, #0x100]
+   20cc4: f9008062     	str	x2, [x3, #0x100]
+   20cc8: f9407c63     	ldr	x3, [x3, #0xf8]
+   20ccc: a9120fe4     	stp	x4, x3, [sp, #0x120]
+   20cd0: f9400002     	ldr	x2, [x0]
+   20cd4: b94057e0     	ldr	w0, [sp, #0x54]
+   20cd8: f94027e1     	ldr	x1, [sp, #0x48]
+   20cdc: f9402fe3     	ldr	x3, [sp, #0x58]
+   20ce0: d63f0060     	blr	x3
+   20ce4: 94004dcd     	bl	0x34418 <exit>
+   20ce8: f94027e0     	ldr	x0, [sp, #0x48]
+   20cec: f940f442     	ldr	x2, [x2, #0x1e8]
+   20cf0: f9400001     	ldr	x1, [x0]
+   20cf4: 900007e0     	adrp	x0, 0x11c000 <in6addr_any+0xf90>
+   20cf8: 911de000     	add	x0, x0, #0x778
+   20cfc: d63f0040     	blr	x2
+   20d00: b5fffbb3     	cbnz	x19, 0x20c74 <__libc_start_main+0x74>
+   20d04: 17ffffe2     	b	0x20c8c <__libc_start_main+0x8c>
+   20d08: 90000a34     	adrp	x20, 0x164000 <sys_sigabbrev+0x2b8>
+   20d0c: b0000a53     	adrp	x19, 0x169000 <loc1+0x1028>
+   20d10: 9136e273     	add	x19, x19, #0xdb8
+   20d14: f9470a94     	ldr	x20, [x20, #0xe10]
+   20d18: f940c660     	ldr	x0, [x19, #0x188]
+   20d1c: f9400281     	ldr	x1, [x20]
+   20d20: ca010000     	eor	x0, x0, x1
+   20d24: d63f0000     	blr	x0
+   20d28: f9400281     	ldr	x1, [x20]
+   20d2c: f940be60     	ldr	x0, [x19, #0x178]
+   20d30: ca010000     	eor	x0, x0, x1
+   20d34: 885ffc01     	ldaxr	w1, [x0]
+   20d38: 51000422     	sub	w2, w1, #0x1
+   20d3c: 88037c02     	stxr	w3, w2, [x0]
+   20d40: 35ffffa3     	cbnz	w3, 0x20d34 <__libc_start_main+0x134>
+   20d44: 7100043f     	cmp	w1, #0x1
+   20d48: 54000440     	b.eq	0x20dd0 <__libc_start_main+0x1d0>
+   20d4c: d2800ba1     	mov	x1, #0x5d               // =93
+   20d50: d2800000     	mov	x0, #0x0                // =0
+   20d54: aa0103e8     	mov	x8, x1
+   20d58: d4000001     	svc	#0
+   20d5c: d2800000     	mov	x0, #0x0                // =0
+   20d60: aa0103e8     	mov	x8, x1
+   20d64: d4000001     	svc	#0
+   20d68: 17fffffa     	b	0x20d50 <__libc_start_main+0x150>
+   20d6c: 90000a21     	adrp	x1, 0x164000 <sys_sigabbrev+0x2b8>
+   20d70: 52800016     	mov	w22, #0x0               // =0
+   20d74: f9411015     	ldr	x21, [x0, #0x220]
+   20d78: f946c420     	ldr	x0, [x1, #0xd88]
+   20d7c: f9400013     	ldr	x19, [x0]
+   20d80: 9111c273     	add	x19, x19, #0x470
+   20d84: f9400ea1     	ldr	x1, [x21, #0x18]
+   20d88: b4000061     	cbz	x1, 0x20d94 <__libc_start_main+0x194>
+   20d8c: aa1303e0     	mov	x0, x19
+   20d90: d63f0020     	blr	x1
+   20d94: 110006d6     	add	w22, w22, #0x1
+   20d98: 91004273     	add	x19, x19, #0x10
+   20d9c: 6b1602ff     	cmp	w23, w22
+   20da0: f94022b5     	ldr	x21, [x21, #0x40]
+   20da4: 54ffff01     	b.ne	0x20d84 <__libc_start_main+0x184>
+   20da8: 17ffffbd     	b	0x20c9c <__libc_start_main+0x9c>
+   20dac: 90000a22     	adrp	x2, 0x164000 <sys_sigabbrev+0x2b8>
+   20db0: 900007e0     	adrp	x0, 0x11c000 <in6addr_any+0xf90>
+   20db4: f94027e1     	ldr	x1, [sp, #0x48]
+   20db8: 911e6000     	add	x0, x0, #0x798
+   20dbc: f9470442     	ldr	x2, [x2, #0xe08]
+   20dc0: f9400021     	ldr	x1, [x1]
+   20dc4: f940f442     	ldr	x2, [x2, #0x1e8]
+   20dc8: d63f0040     	blr	x2
+   20dcc: 17ffffb5     	b	0x20ca0 <__libc_start_main+0xa0>
+   20dd0: 52800000     	mov	w0, #0x0                // =0
+   20dd4: 94004d91     	bl	0x34418 <exit>

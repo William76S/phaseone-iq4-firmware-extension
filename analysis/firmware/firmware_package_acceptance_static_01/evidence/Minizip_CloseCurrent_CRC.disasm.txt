@@ -1,0 +1,70 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000009d6948 <uncompress>:
+  9d909c:      	stp	x29, x30, [sp, #-0x40]!
+  9d90a0:      	mov	x29, sp
+  9d90a4:      	str	x0, [sp, #0x18]
+  9d90a8:      	str	wzr, [sp, #0x3c]
+  9d90ac:      	ldr	x0, [sp, #0x18]
+  9d90b0:      	cmp	x0, #0x0
+  9d90b4:      	b.ne	0x9d90c0 <uncompress+0x2778>
+  9d90b8:      	mov	w0, #-0x66              // =-102
+  9d90bc:      	b	0x9d9190 <uncompress+0x2848>
+  9d90c0:      	ldr	x0, [sp, #0x18]
+  9d90c4:      	str	x0, [sp, #0x30]
+  9d90c8:      	ldr	x0, [sp, #0x30]
+  9d90cc:      	ldr	x0, [x0, #0x120]
+  9d90d0:      	str	x0, [sp, #0x28]
+  9d90d4:      	ldr	x0, [sp, #0x28]
+  9d90d8:      	cmp	x0, #0x0
+  9d90dc:      	b.ne	0x9d90e8 <uncompress+0x27a0>
+  9d90e0:      	mov	w0, #-0x66              // =-102
+  9d90e4:      	b	0x9d9190 <uncompress+0x2848>
+  9d90e8:      	ldr	x0, [sp, #0x28]
+  9d90ec:      	ldr	x0, [x0, #0xb8]
+  9d90f0:      	cmp	x0, #0x0
+  9d90f4:      	b.ne	0x9d9128 <uncompress+0x27e0>
+  9d90f8:      	ldr	x0, [sp, #0x28]
+  9d90fc:      	ldr	w0, [x0, #0x118]
+  9d9100:      	cmp	w0, #0x0
+  9d9104:      	b.ne	0x9d9128 <uncompress+0x27e0>
+  9d9108:      	ldr	x0, [sp, #0x28]
+  9d910c:      	ldr	x1, [x0, #0xa0]
+  9d9110:      	ldr	x0, [sp, #0x28]
+  9d9114:      	ldr	x0, [x0, #0xa8]
+  9d9118:      	cmp	x1, x0
+  9d911c:      	b.eq	0x9d9128 <uncompress+0x27e0>
+  9d9120:      	mov	w0, #-0x69              // =-105
+  9d9124:      	str	w0, [sp, #0x3c]
+  9d9128:      	ldr	x0, [sp, #0x28]
+  9d912c:      	ldr	x0, [x0]
+  9d9130:      	cmp	x0, #0x0
+  9d9134:      	b.eq	0x9d9144 <uncompress+0x27fc>
+  9d9138:      	ldr	x0, [sp, #0x28]
+  9d913c:      	ldr	x0, [x0]
+  9d9140:      	bl	0x40b120 <free@plt>
+  9d9144:      	ldr	x0, [sp, #0x28]
+  9d9148:      	str	xzr, [x0]
+  9d914c:      	ldr	x0, [sp, #0x28]
+  9d9150:      	ldr	x0, [x0, #0x80]
+  9d9154:      	cmp	x0, #0x0
+  9d9158:      	b.eq	0x9d9168 <uncompress+0x2820>
+  9d915c:      	ldr	x0, [sp, #0x28]
+  9d9160:      	add	x0, x0, #0x8
+  9d9164:      	bl	0x9d129c <inflateEnd>
+  9d9168:      	ldr	x0, [sp, #0x28]
+  9d916c:      	str	xzr, [x0, #0x80]
+  9d9170:      	ldr	x0, [sp, #0x28]
+  9d9174:      	cmp	x0, #0x0
+  9d9178:      	b.eq	0x9d9184 <uncompress+0x283c>
+  9d917c:      	ldr	x0, [sp, #0x28]
+  9d9180:      	bl	0x40b120 <free@plt>
+  9d9184:      	ldr	x0, [sp, #0x30]
+  9d9188:      	str	xzr, [x0, #0x120]
+  9d918c:      	ldr	w0, [sp, #0x3c]
+  9d9190:      	ldp	x29, x30, [sp], #0x40
+  9d9194:      	ret

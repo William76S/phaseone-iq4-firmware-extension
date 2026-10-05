@@ -1,0 +1,503 @@
+{
+  "schema": "iq4_f1_display13_no_effect_static_review_01",
+  "inputs": [
+    {
+      "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "bytes": 11874544,
+      "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+    },
+    {
+      "path": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "bytes": 12264480,
+      "sha256": "c2ee83dcad9529e1fb61af5a989b8a1f8f3f6c07c1ec2d2742a662d032404443"
+    },
+    {
+      "path": "tools/firmware/f1_stock_display_payload_13/payload.c",
+      "bytes": 10348,
+      "sha256": "115588af448dec17816b35c53cbe3432f4dd4ef2003f081e2ec99cf1ddcdca92"
+    },
+    {
+      "path": "tools/firmware/f1_stock_display_payload_13/payload.h",
+      "bytes": 1738,
+      "sha256": "acc6473d181d2758115c8feb3a88e2565888a65ff6ec39503784e12e9ceab8a9"
+    },
+    {
+      "path": "tools/firmware/f1_stock_display_payload_13/wrapper.S",
+      "bytes": 3181,
+      "sha256": "613a60a6ea498da6fd1fa0f79421929ea1c3824f990e187a3af378de9a87e0a7"
+    },
+    {
+      "path": "tools/firmware/f1_stock_menu_01/runtime.c",
+      "bytes": 6293,
+      "sha256": "0678519df94b107a9956c11c3d2828e8153d47a08ab785da5f27dda888581b0d"
+    }
+  ],
+  "review_kind": [
+    "static_original_bytes",
+    "actual_candidate_linkage",
+    "host_formula_and_frozen_plan"
+  ],
+  "camera_access": false,
+  "native_executed": false,
+  "frozen_inputs_unchanged": true,
+  "actual_camera_field_values_observed": false,
+  "actual_camera_no_effect_cause_confirmed": false,
+  "findings": [
+    {
+      "id": "SOURCE_DOMAIN_CONFLATION",
+      "priority": 1,
+      "status": "confirmed_static_logic_defect",
+      "source_path": "tools/firmware/f1_stock_display_payload_13/payload.c",
+      "lines": [
+        57,
+        62
+      ],
+      "claim": "The mandatory equality of config/ROI dimensions and actual sampled RGB dimensions is not supplied by the original producer/paint contract; a full-config ROI can map to a complete sampled RGB projection and be rejected.",
+      "native_producer": {
+        "dimensions": "VideoBuffer+50+8*writeidx gets FPGA width and min(FPGA height,pending+5c)",
+        "roi": "VideoBuffer+70+24*writeidx gets pending/config x,y,w,h from +18",
+        "metadata": "LiveViewAccess getter returns backend+4760 independently"
+      },
+      "host_hypothesis": {
+        "config": [
+          1280,
+          960
+        ],
+        "roi": [
+          0,
+          0,
+          1280,
+          960
+        ],
+        "locked_rgb": [
+          640,
+          480
+        ],
+        "normal_scale": 2,
+        "actual_scale": 2,
+        "destination": [
+          80,
+          0,
+          640,
+          480
+        ],
+        "projected": [
+          80,
+          0,
+          640,
+          480
+        ],
+        "actual_source_full_rectangle": [
+          0,
+          0,
+          640,
+          480
+        ],
+        "display13_reason": 4,
+        "display13_bands": 0
+      },
+      "hardware_state_claim": null
+    },
+    {
+      "id": "MODE_SAME_STATE",
+      "status": "verified_actual_link_bytes",
+      "getter_va": "0x4240000",
+      "state_va": "0x4290000",
+      "setter_va": "0x424000c",
+      "leaf_activate_va": "0x424092c",
+      "after_getter_bl_va": "0x424145c",
+      "target": "0x4240000",
+      "separate_UI03_state_linked": false
+    },
+    {
+      "id": "NO_PROVEN_ALWAYS_REJECT",
+      "status": "bounded_review",
+      "claim": "No mandatory caller/LCD/scale/animation offset failure was proved. Actual hook admission and plan reason remain unobserved."
+    }
+  ],
+  "proposed_domain_contract_review": {
+    "acceptable": true,
+    "locked_equals_rgb": "preserve",
+    "engine_dimensions": "independently positive and <=65535",
+    "roi": "origin zero, dimensions equal engine config domain",
+    "aspect": "int64(configW)*rgbH == int64(configH)*rgbW",
+    "other_guards": "preserve native projection, normal scale, fresh coverage, rotation0, exact LCD, source/destination disjoint",
+    "device_acceptance": false
+  },
+  "required_regressions": [
+    "same-domain all 4 ratios",
+    "full config1280x960 RGB640x480 normalScale2 all4 DRAW with same bands as same-domain baseline",
+    "ROI is partial config, or nonzero origin => SOURCE",
+    "config/RGB aspect mismatch => SOURCE",
+    "engine zero, negative,65536 => SOURCE",
+    "int64 cross product boundary",
+    "locked/Image mismatch and unpacked stride reject",
+    "partial clip, rotation, zoom, unknown LCD and source/display overlap still reject"
+  ],
+  "exact_instruction_bytes": [
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x51db58",
+      "file_offset": 1170264,
+      "bytes": 4,
+      "hex": "a9610694"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x51db5c",
+      "file_offset": 1170268,
+      "bytes": 4,
+      "hex": "e05f00f9"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x51db68",
+      "file_offset": 1170280,
+      "bytes": 4,
+      "hex": "79610694"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x51db6c",
+      "file_offset": 1170284,
+      "bytes": 4,
+      "hex": "e0b700f9"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x51db80",
+      "file_offset": 1170304,
+      "bytes": 4,
+      "hex": "a7610694"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x51db84",
+      "file_offset": 1170308,
+      "bytes": 4,
+      "hex": "e1bb40b9"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x51db88",
+      "file_offset": 1170312,
+      "bytes": 4,
+      "hex": "e2bf40b9"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x51dbac",
+      "file_offset": 1170348,
+      "bytes": 4,
+      "hex": "b808fd97"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x51dbd0",
+      "file_offset": 1170384,
+      "bytes": 4,
+      "hex": "e0b340b9"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x51dbdc",
+      "file_offset": 1170396,
+      "bytes": 4,
+      "hex": "009041bd"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x51dbf4",
+      "file_offset": 1170420,
+      "bytes": 4,
+      "hex": "009041bd"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x51ddcc",
+      "file_offset": 1170892,
+      "bytes": 4,
+      "hex": "9b64fd97"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x787840",
+      "file_offset": 3700800,
+      "bytes": 4,
+      "hex": "e55e40b9"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x78784c",
+      "file_offset": 3700812,
+      "bytes": 4,
+      "hex": "e66f40b9"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x78785c",
+      "file_offset": 3700828,
+      "bytes": 4,
+      "hex": "bad09a1a"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x787868",
+      "file_offset": 3700840,
+      "bytes": 4,
+      "hex": "066b24b8"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x78786c",
+      "file_offset": 3700844,
+      "bytes": 4,
+      "hex": "ba0400b9"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x787874",
+      "file_offset": 3700852,
+      "bytes": 4,
+      "hex": "e082c13c"
+    },
+    {
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "va": "0x787880",
+      "file_offset": 3700864,
+      "bytes": 4,
+      "hex": "c080873c"
+    },
+    {
+      "source": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "va": "0x4240000",
+      "file_offset": 11927552,
+      "bytes": 4,
+      "hex": "88020090"
+    },
+    {
+      "source": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "va": "0x4240004",
+      "file_offset": 11927556,
+      "bytes": 4,
+      "hex": "000140b9"
+    },
+    {
+      "source": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "va": "0x424001c",
+      "file_offset": 11927580,
+      "bytes": 4,
+      "hex": "88020090"
+    },
+    {
+      "source": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "va": "0x4240020",
+      "file_offset": 11927584,
+      "bytes": 4,
+      "hex": "000100b9"
+    },
+    {
+      "source": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "va": "0x42409fc",
+      "file_offset": 11930108,
+      "bytes": 4,
+      "hex": "89020090"
+    },
+    {
+      "source": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "va": "0x4240a04",
+      "file_offset": 11930116,
+      "bytes": 4,
+      "hex": "280100b9"
+    },
+    {
+      "source": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "va": "0x424145c",
+      "file_offset": 11932764,
+      "bytes": 4,
+      "hex": "e9faff97"
+    }
+  ],
+  "host_results": [
+    {
+      "name": "normal",
+      "executable": {
+        "path": "build/f1_display13_no_effect_static_review_01/normal",
+        "bytes": 34056,
+        "sha256": "86671c50eb28e7fe02e894d55e6cddbbe9c81f02c52f6c44194b1a6995c3c010"
+      },
+      "case_count": 11,
+      "passed": 11,
+      "native_executed": false,
+      "camera_access": false
+    },
+    {
+      "name": "asan_ubsan",
+      "executable": {
+        "path": "build/f1_display13_no_effect_static_review_01/asan_ubsan",
+        "bytes": 91144,
+        "sha256": "2fbd9ede8337964601200cb4a256a11820116d9667232356ef0572578f094a8f"
+      },
+      "case_count": 11,
+      "passed": 11,
+      "native_executed": false,
+      "camera_access": false
+    }
+  ],
+  "windows": [
+    {
+      "name": "LV_lock_dimensions_metadata_roi",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x51db50",
+      "end_va_exclusive": "0x51dc10",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_lock_dimensions_metadata_roi.txt",
+        "bytes": 2826,
+        "sha256": "22d98cade9cb797b4a672e6938932d61e5e7634ade537a1da88e5a431df1a08d"
+      }
+    },
+    {
+      "name": "LV_actual_draw_call",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x51dd78",
+      "end_va_exclusive": "0x51de30",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_actual_draw_call.txt",
+        "bytes": 2866,
+        "sha256": "c1610921d6456c898b5828718d2e063a799c569bf86886e49f3e425ee94f95cb"
+      }
+    },
+    {
+      "name": "LV_access_methods",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x6b614c",
+      "end_va_exclusive": "0x6b6244",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_access_methods.txt",
+        "bytes": 3582,
+        "sha256": "76a84f4b20599c12bdb714bc2acf79171a4eca8b6a17eb2051d6c795d582e95d"
+      }
+    },
+    {
+      "name": "VideoBuffer_locked_dimensions_roi_metadata",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x6b6b70",
+      "end_va_exclusive": "0x6b6e10",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/VideoBuffer_locked_dimensions_roi_metadata.txt",
+        "bytes": 8837,
+        "sha256": "cf80879584007424bdd41d649d6d2363783d0e7a2f955dfa5ee22d3d512d6e1d"
+      }
+    },
+    {
+      "name": "PlFunctions_actual_FPGA_dimensions",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x787578",
+      "end_va_exclusive": "0x787708",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/PlFunctions_actual_FPGA_dimensions.txt",
+        "bytes": 6127,
+        "sha256": "6fba535fbb77fac12d89df34fb1975addaf6fa00a9809b6565506c94525d6dca"
+      }
+    },
+    {
+      "name": "PlFunctions_publish_slot_dimensions_roi",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x787820",
+      "end_va_exclusive": "0x78789c",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/PlFunctions_publish_slot_dimensions_roi.txt",
+        "bytes": 1909,
+        "sha256": "aafe337c0a7bcc59d654746e8716435f0ed75ebd6331b22bc9b56adff0ad1035"
+      }
+    },
+    {
+      "name": "LV_metadata_provider_writes",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x7995e0",
+      "end_va_exclusive": "0x799698",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_metadata_provider_writes.txt",
+        "bytes": 2427,
+        "sha256": "bc30a3d9e572be0241740909fa3c6f1c80ed121689f931db803fe2b192603215"
+      }
+    },
+    {
+      "name": "LV_config_coordinate_projection",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x51f50c",
+      "end_va_exclusive": "0x51f5ec",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_config_coordinate_projection.txt",
+        "bytes": 3147,
+        "sha256": "45612121f8833c13e5b08c33690a640a2456e497785b922e5b11bd85a42b64c3"
+      }
+    },
+    {
+      "name": "LV_normal_scale_setup",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x520488",
+      "end_va_exclusive": "0x520504",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_normal_scale_setup.txt",
+        "bytes": 1924,
+        "sha256": "a3fe70a4e049fcfea013ba1ac7c270726eaa5a81d631f10c2de33f6cfa072ce8"
+      }
+    },
+    {
+      "name": "LV_scale_setter",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x520814",
+      "end_va_exclusive": "0x5208a0",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_scale_setter.txt",
+        "bytes": 2063,
+        "sha256": "9ab23bb08e962f25ebc788861976c4dd7daba94a95f0709218365255bf7beaf4"
+      }
+    },
+    {
+      "name": "Native_image_full_source_and_projection",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x477038",
+      "end_va_exclusive": "0x477158",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/Native_image_full_source_and_projection.txt",
+        "bytes": 4425,
+        "sha256": "3dd27a5901a64df4e75d9b3909379b07f4933a4502c450609304dd2ed0e3761f"
+      }
+    },
+    {
+      "name": "Linked_mode_get_set",
+      "source": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "start_va": "0x4240000",
+      "end_va_exclusive": "0x4240038",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/Linked_mode_get_set.txt",
+        "bytes": 1035,
+        "sha256": "3c819e871fd628b3560bef21b7ab7eb8558adb63d44a8a2ba1da9f829e021796"
+      }
+    },
+    {
+      "name": "Linked_native_leaf_activate",
+      "source": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "start_va": "0x424092c",
+      "end_va_exclusive": "0x4240a30",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/Linked_native_leaf_activate.txt",
+        "bytes": 3009,
+        "sha256": "2ca9696a64332b2e91a75836a3814952bc385ecb2e7bd6542b40b8eae93667ad"
+      }
+    },
+    {
+      "name": "Linked_after_stock_getter_call",
+      "source": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "start_va": "0x4241440",
+      "end_va_exclusive": "0x4241470",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/Linked_after_stock_getter_call.txt",
+        "bytes": 877,
+        "sha256": "e87f303e154931e949d6eb4dafa3b7901ddc5ebd2249c37c76f59bed481f4017"
+      }
+    }
+  ]
+}

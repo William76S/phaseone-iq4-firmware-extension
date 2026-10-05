@@ -1,0 +1,99 @@
+analysis/firmware/f4_ram_loader_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   25700:      	ldr	w22, [x19, #0x70]
+   25704:      	ldr	x2, [x1]
+   25708:      	str	x2, [sp, #0x58]
+   2570c:      	mov	x2, #0x0                // =0
+   25710:      	str	x30, [sp, #0x40]
+   25714:      	bl	0xa9c0 <fileno_unlocked@plt>
+   25718:      	str	w0, [sp, #0x50]
+   2571c:      	mov	w1, #0x3                // =3
+   25720:      	mov	w0, #-0x1               // =-1
+   25724:      	strh	w1, [sp, #0x54]
+   25728:      	bl	0x255fc <.text+0x19e5c>
+   2572c:      	ldr	w0, [x19, #0x80]
+   25730:      	adrp	x1, 0xbf000
+   25734:      	ldr	x24, [x1, #0x4f8]
+   25738:      	cbnz	w0, 0x257d8 <.text+0x1a038>
+   2573c:      	ldr	w0, [sp, #0x50]
+   25740:      	add	x25, x19, #0x90
+   25744:      	add	x26, sp, #0x50
+   25748:      	bl	0xceb8 <.text+0x1718>
+   2574c:      	mov	x0, x20
+   25750:      	bl	0xb1f0 <clearerr@plt>
+   25754:      	str	wzr, [x24]
+   25758:      	ldr	w0, [x19, #0x84]
+   2575c:      	cbnz	w0, 0x258f8 <.text+0x1a158>
+   25760:      	mov	x2, #0x1000             // =4096
+   25764:      	mov	x3, x20
+   25768:      	mov	x1, #0x1                // =1
+   2576c:      	mov	x0, x25
+   25770:      	bl	0xaef0 <fread@plt>
+   25774:      	cmp	w0, #0x0
+   25778:      	b.le	0x25814 <.text+0x1a074>
+   2577c:      	sxtw	x21, w0
+   25780:      	ldr	w0, [x19, #0x78]
+   25784:      	mov	x1, x25
+   25788:      	mov	x2, x21
+   2578c:      	bl	0xda00 <.text+0x2260>
+   25790:      	ldr	x0, [x19, #0x10]
+   25794:      	ldr	w1, [x19, #0x84]
+   25798:      	add	x0, x0, x21
+   2579c:      	str	x0, [x19, #0x10]
+   257a0:      	cbz	w1, 0x2586c <.text+0x1a0cc>
+   257a4:      	ldr	x0, [x19]
+   257a8:      	sub	x21, x0, x21
+   257ac:      	str	x21, [x19]
+   257b0:      	cbnz	x21, 0x2586c <.text+0x1a0cc>
+   257b4:      	mov	x0, x20
+   257b8:      	bl	0xb1f0 <clearerr@plt>
+   257bc:      	ldr	w0, [sp, #0x50]
+   257c0:      	bl	0xcef4 <.text+0x1754>
+   257c4:      	ldr	w0, [x19, #0x80]
+   257c8:      	cbz	w0, 0x25888 <.text+0x1a0e8>
+   257cc:      	mov	x1, #0x0                // =0
+   257d0:      	mov	x0, x20
+   257d4:      	bl	0x25220 <.text+0x19a80>
+   257d8:      	mov	x1, #0x0                // =0
+   257dc:      	mov	x0, x20
+   257e0:      	bl	0x25220 <.text+0x19a80>
+   257e4:      	str	wzr, [x24]
+   257e8:      	add	x21, x19, #0x90
+   257ec:      	mov	w2, #0x10               // =16
+   257f0:      	mov	x0, x21
+   257f4:      	mov	x1, #0x0                // =0
+   257f8:      	bl	0xa340 <strtoul@plt>
+   257fc:      	str	x0, [x19]
+   25800:      	tbz	x0, #0x3f, 0x2587c <.text+0x1a0dc>
+   25804:      	adrp	x0, 0x99000
+   25808:      	mov	x1, x21
+   2580c:      	add	x0, x0, #0x8c0
+   25810:      	bl	0xcccc <.text+0x152c>
+   25814:      	ldr	w0, [x24]
+   25818:      	cmp	w0, #0xb
+   2581c:      	b.eq	0x2583c <.text+0x1a09c>
+   25820:      	ldr	w0, [x20]
+   25824:      	tbz	w0, #0x5, 0x257b4 <.text+0x1a014>
+   25828:      	mov	w0, #0x0                // =0
+   2582c:      	bl	0x255fc <.text+0x19e5c>
+   25830:      	adrp	x0, 0x95000 <.text+0x89860>
+   25834:      	add	x0, x0, #0xd90
+   25838:      	bl	0xc8d0 <.text+0x1130>
+   2583c:      	mov	w2, #0x3e8              // =1000
+   25840:      	mov	x1, #0x1                // =1
+   25844:      	mov	x0, x26
+   25848:      	bl	0x928c4 <.text+0x87124>
+   2584c:      	cbnz	w0, 0x25870 <.text+0x1a0d0>
+   25850:      	cbz	w22, 0x25870 <.text+0x1a0d0>
+   25854:      	subs	w22, w22, #0x1
+   25858:      	b.ne	0x25870 <.text+0x1a0d0>
+   2585c:      	bl	0x255fc <.text+0x19e5c>
+   25860:      	adrp	x0, 0x99000
+   25864:      	add	x0, x0, #0x828
+   25868:      	bl	0xcccc <.text+0x152c>
+   2586c:      	ldr	w22, [x19, #0x70]
+   25870:      	mov	w0, #0x1                // =1
+   25874:      	bl	0x255fc <.text+0x19e5c>

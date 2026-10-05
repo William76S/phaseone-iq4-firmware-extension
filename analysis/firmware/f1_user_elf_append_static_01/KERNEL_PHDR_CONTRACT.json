@@ -1,0 +1,75 @@
+{
+  "Boot_SHA256": "7a3a3d6f62c61e7d627a9f55d844d74be9111b26eb7a7fa42f5bdd7be7dabe9e",
+  "ELF_executed": false,
+  "PHDR_table_bytes": 672,
+  "User_SHA256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "exact_functions_and_windows": [
+    {
+      "Boot_file_offset": 2217056,
+      "bytes": 4752,
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=18446743524090077280",
+        "--stop-address=18446743524090082032",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/sys_eeprom_range_restore_static/kernel_symbolized.analysis.elf"
+      ],
+      "end_va": 18446743524090082032,
+      "file": "load_elf_binary64.txt",
+      "linked_va": 18446743524090077280,
+      "name": "load_elf_binary64",
+      "sha256": "539bc31fe01bb18f10cf1a9863b1d3951e0ba092f57e1fd64dfbfb196a4665ff"
+    },
+    {
+      "Boot_file_offset": 2211632,
+      "bytes": 240,
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=18446743524090071856",
+        "--stop-address=18446743524090072096",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/sys_eeprom_range_restore_static/kernel_symbolized.analysis.elf"
+      ],
+      "end_va": 18446743524090072096,
+      "file": "load_elf_phdrs64.txt",
+      "linked_va": 18446743524090071856,
+      "name": "load_elf_phdrs64",
+      "sha256": "0be7f3803b362de3af9866264fd43b855be1d2d54a431f8425734bb89d03e1c7"
+    },
+    {
+      "Boot_file_offset": 2217204,
+      "bytes": 12,
+      "end_va": 18446743524090077440,
+      "hex": "012440793fdc027141090054",
+      "linked_va": 18446743524090077428,
+      "name": "machine_AARCH64",
+      "sha256": "8aaa2718b41d94748e2384d4f9966721b2c1194da2edae88303173d7d7f593c1"
+    },
+    {
+      "Boot_file_offset": 2218300,
+      "bytes": 60,
+      "end_va": 18446743524090078584,
+      "hex": "c10a40f9d3010035c30640f942224079230003cbe34700f95f0c007101010054e23f40f9c6cc74924000008b000006cbe03f00f96000008be04700f9",
+      "linked_va": 18446743524090078524,
+      "name": "first_LOAD_bias",
+      "sha256": "e4b85d4ffa86c6e534108be393e51da699a32f3080b1ee95e601b722d8383150"
+    },
+    {
+      "Boot_file_offset": 2219872,
+      "bytes": 60,
+      "end_va": 18446743524090080156,
+      "hex": "610080d201c800f9020780d2e50080d2611240f903081aa9a20080d2e34740f902d800f9220180d22100038b01cc00f9030180d26172407901941ba9",
+      "linked_va": 18446743524090080096,
+      "name": "AT_PHDR",
+      "sha256": "0154ba388bbba1a3725e349e7a59bcb477449f2db39242adaf4aa0ec5884a976"
+    }
+  ],
+  "first_LOAD_bias": 4194304,
+  "kernel_AT_PHDR_expected": 15931224,
+  "kernel_running_identity_proved": false,
+  "kernel_source_URL": "https://raw.githubusercontent.com/torvalds/linux/v4.19/fs/binfmt_elf.c",
+  "new_e_phoff": 11736920,
+  "primary_source_SHA256": "c26710394b619a11645d9da48b11db82786459cf695dd70fc2e9ad04edc454df",
+  "schema": "iq4_f1_packaged_kernel_PHDR_static_01",
+  "stock_gap_original_zero_bytes": 1614
+}

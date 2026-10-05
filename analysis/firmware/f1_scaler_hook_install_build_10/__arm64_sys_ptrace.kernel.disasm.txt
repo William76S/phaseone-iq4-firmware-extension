@@ -1,0 +1,80 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_scaler_hook_install_build_10/kernel_narrow.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+ffffff80080acd08 <__arm64_sys_ptrace>:
+ffffff80080acd08: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+ffffff80080acd0c: 910003fd     	mov	x29, sp
+ffffff80080acd10: a90153f3     	stp	x19, x20, [sp, #0x10]
+ffffff80080acd14: a9025bf5     	stp	x21, x22, [sp, #0x20]
+ffffff80080acd18: f9400013     	ldr	x19, [x0]
+ffffff80080acd1c: b40005f3     	cbz	x19, 0xffffff80080acdd8 <__arm64_sys_ptrace+0xd0>
+ffffff80080acd20: f9001bf7     	str	x23, [sp, #0x30]
+ffffff80080acd24: aa0003e1     	mov	x1, x0
+ffffff80080acd28: b9400800     	ldr	w0, [x0, #0x8]
+ffffff80080acd2c: a9415c36     	ldp	x22, x23, [x1, #0x10]
+ffffff80080acd30: 94004b0e     	bl	0xffffff80080bf968 <find_get_task_by_vpid>
+ffffff80080acd34: aa0003f4     	mov	x20, x0
+ffffff80080acd38: b4000740     	cbz	x0, 0xffffff80080ace20 <__arm64_sys_ptrace+0x118>
+ffffff80080acd3c: f100427f     	cmp	x19, #0x10
+ffffff80080acd40: d28840c1     	mov	x1, #0x4206     // =16902
+ffffff80080acd44: fa411264     	ccmp	x19, x1, #0x4, ne
+ffffff80080acd48: 54000260     	b.eq	0xffffff80080acd94 <__arm64_sys_ptrace+0x8c>
+ffffff80080acd4c: f100227f     	cmp	x19, #0x8
+ffffff80080acd50: d28840e1     	mov	x1, #0x4207     // =16903
+ffffff80080acd54: fa411264     	ccmp	x19, x1, #0x4, ne
+ffffff80080acd58: 1a9f17e1     	cset	w1, eq
+ffffff80080acd5c: 97fffbd1     	bl	0xffffff80080abca0 <ptrace_check_attach>
+ffffff80080acd60: 93407c15     	sxtw	x21, w0
+ffffff80080acd64: b7f80235     	tbnz	x21, #0x3f, 0xffffff80080acda8 <__arm64_sys_ptrace+0xa0>
+ffffff80080acd68: aa1703e3     	mov	x3, x23
+ffffff80080acd6c: aa1603e2     	mov	x2, x22
+ffffff80080acd70: aa1303e1     	mov	x1, x19
+ffffff80080acd74: aa1403e0     	mov	x0, x20
+ffffff80080acd78: 97ff702a     	bl	0xffffff8008088e20 <arch_ptrace>
+ffffff80080acd7c: f100001f     	cmp	x0, #0x0
+ffffff80080acd80: aa0003f5     	mov	x21, x0
+ffffff80080acd84: fa510a60     	ccmp	x19, #0x11, #0x0, eq
+ffffff80080acd88: 54000461     	b.ne	0xffffff80080ace14 <__arm64_sys_ptrace+0x10c>
+ffffff80080acd8c: d2800015     	mov	x21, #0x0       // =0
+ffffff80080acd90: 14000006     	b	0xffffff80080acda8 <__arm64_sys_ptrace+0xa0>
+ffffff80080acd94: aa1703e3     	mov	x3, x23
+ffffff80080acd98: aa1603e2     	mov	x2, x22
+ffffff80080acd9c: aa1303e1     	mov	x1, x19
+ffffff80080acda0: 97fffdd0     	bl	0xffffff80080ac4e0 <ptrace_attach>
+ffffff80080acda4: 93407c15     	sxtw	x21, w0
+ffffff80080acda8: 52800020     	mov	w0, #0x1        // =1
+ffffff80080acdac: 9100a281     	add	x1, x20, #0x28
+ffffff80080acdb0: 941e652e     	bl	0xffffff8008846268 <__ll_sc_atomic_sub_return>
+ffffff80080acdb4: d503201f     	nop
+ffffff80080acdb8: d503201f     	nop
+ffffff80080acdbc: 340001c0     	cbz	w0, 0xffffff80080acdf4 <__arm64_sys_ptrace+0xec>
+ffffff80080acdc0: f9401bf7     	ldr	x23, [sp, #0x30]
+ffffff80080acdc4: aa1503e0     	mov	x0, x21
+ffffff80080acdc8: a94153f3     	ldp	x19, x20, [sp, #0x10]
+ffffff80080acdcc: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+ffffff80080acdd0: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+ffffff80080acdd4: d65f03c0     	ret
+ffffff80080acdd8: 97fffd90     	bl	0xffffff80080ac418 <ptrace_traceme>
+ffffff80080acddc: 93407c15     	sxtw	x21, w0
+ffffff80080acde0: aa1503e0     	mov	x0, x21
+ffffff80080acde4: a94153f3     	ldp	x19, x20, [sp, #0x10]
+ffffff80080acde8: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+ffffff80080acdec: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+ffffff80080acdf0: d65f03c0     	ret
+ffffff80080acdf4: aa1403e0     	mov	x0, x20
+ffffff80080acdf8: 97ffc68e     	bl	0xffffff800809e830 <__put_task_struct>
+ffffff80080acdfc: aa1503e0     	mov	x0, x21
+ffffff80080ace00: a94153f3     	ldp	x19, x20, [sp, #0x10]
+ffffff80080ace04: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+ffffff80080ace08: f9401bf7     	ldr	x23, [sp, #0x30]
+ffffff80080ace0c: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+ffffff80080ace10: d65f03c0     	ret
+ffffff80080ace14: aa1403e0     	mov	x0, x20
+ffffff80080ace18: 97fffcb4     	bl	0xffffff80080ac0e8 <ptrace_unfreeze_traced>
+ffffff80080ace1c: 17ffffe3     	b	0xffffff80080acda8 <__arm64_sys_ptrace+0xa0>
+ffffff80080ace20: 92800055     	mov	x21, #-0x3      // =-3
+ffffff80080ace24: f9401bf7     	ldr	x23, [sp, #0x30]
+ffffff80080ace28: 17ffffe7     	b	0xffffff80080acdc4 <__arm64_sys_ptrace+0xbc>
+ffffff80080ace2c: d503201f     	nop

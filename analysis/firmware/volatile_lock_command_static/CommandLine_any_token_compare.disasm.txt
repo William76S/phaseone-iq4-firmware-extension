@@ -1,0 +1,35 @@
+STATIC ONLY; linked VAs; exported nearest labels are not recovered private names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  740b08: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  740b0c: 910003fd     	mov	x29, sp
+  740b10: f90017e0     	str	x0, [sp, #0x28]
+  740b14: f90013e1     	str	x1, [sp, #0x20]
+  740b18: 39007fe2     	strb	w2, [sp, #0x1f]
+  740b1c: b9003fff     	str	wzr, [sp, #0x3c]
+  740b20: f94017e0     	ldr	x0, [sp, #0x28]
+  740b24: b9401400     	ldr	w0, [x0, #0x14]
+  740b28: b9403fe1     	ldr	w1, [sp, #0x3c]
+  740b2c: 6b00003f     	cmp	w1, w0
+  740b30: 540001ea     	b.ge	0x740b6c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x26e40>
+  740b34: 39407fe3     	ldrb	w3, [sp, #0x1f]
+  740b38: f94013e2     	ldr	x2, [sp, #0x20]
+  740b3c: b9403fe1     	ldr	w1, [sp, #0x3c]
+  740b40: f94017e0     	ldr	x0, [sp, #0x28]
+  740b44: 97ffff64     	bl	0x7408d4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x26ba8>
+  740b48: 12001c00     	and	w0, w0, #0xff
+  740b4c: 7100001f     	cmp	w0, #0x0
+  740b50: 54000060     	b.eq	0x740b5c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x26e30>
+  740b54: 52800020     	mov	w0, #0x1                // =1
+  740b58: 14000006     	b	0x740b70 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x26e44>
+  740b5c: b9403fe0     	ldr	w0, [sp, #0x3c]
+  740b60: 11000400     	add	w0, w0, #0x1
+  740b64: b9003fe0     	str	w0, [sp, #0x3c]
+  740b68: 17ffffee     	b	0x740b20 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x26df4>
+  740b6c: 52800000     	mov	w0, #0x0                // =0
+  740b70: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  740b74: d65f03c0     	ret

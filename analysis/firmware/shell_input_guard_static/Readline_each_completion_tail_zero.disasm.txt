@@ -1,0 +1,62 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  7442d4: b94387e0     	ldr	w0, [sp, #0x384]
+  7442d8: 7100001f     	cmp	w0, #0x0
+  7442dc: 5400046d     	b.le	0x744368 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2a63c>
+  7442e0: b94387e0     	ldr	w0, [sp, #0x384]
+  7442e4: 51000400     	sub	w0, w0, #0x1
+  7442e8: b90387e0     	str	w0, [sp, #0x384]
+  7442ec: 9001c2e0     	adrp	x0, 0x3fa0000 <_ZNSt5ctypeIcE2idE+0x303ced8>
+  7442f0: 9139e000     	add	x0, x0, #0xe78
+  7442f4: 97f31aeb     	bl	0x40aea0 <strlen@plt>
+  7442f8: b90307e0     	str	w0, [sp, #0x304]
+  7442fc: b9032fff     	str	wzr, [sp, #0x32c]
+  744300: b94307e1     	ldr	w1, [sp, #0x304]
+  744304: b9432fe0     	ldr	w0, [sp, #0x32c]
+  744308: 6b00003f     	cmp	w1, w0
+  74430c: 5400022b     	b.lt	0x744350 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2a624>
+  744310: 9001c2e0     	adrp	x0, 0x3fa0000 <_ZNSt5ctypeIcE2idE+0x303ced8>
+  744314: 9139e001     	add	x1, x0, #0xe78
+  744318: b9832fe0     	ldrsw	x0, [sp, #0x32c]
+  74431c: 38606822     	ldrb	w2, [x1, x0]
+  744320: b94387e0     	ldr	w0, [sp, #0x384]
+  744324: 11000401     	add	w1, w0, #0x1
+  744328: b90387e1     	str	w1, [sp, #0x384]
+  74432c: 93407c00     	sxtw	x0, w0
+  744330: f9401be1     	ldr	x1, [sp, #0x30]
+  744334: 8b000020     	add	x0, x1, x0
+  744338: 2a0203e1     	mov	w1, w2
+  74433c: 39000001     	strb	w1, [x0]
+  744340: b9432fe0     	ldr	w0, [sp, #0x32c]
+  744344: 11000400     	add	w0, w0, #0x1
+  744348: b9032fe0     	str	w0, [sp, #0x32c]
+  74434c: 17ffffed     	b	0x744300 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2a5d4>
+  744350: b98387e0     	ldrsw	x0, [sp, #0x384]
+  744354: d1000400     	sub	x0, x0, #0x1
+  744358: f9401be1     	ldr	x1, [sp, #0x30]
+  74435c: 8b000020     	add	x0, x1, x0
+  744360: 3900001f     	strb	wzr, [x0]
+  744364: 14000005     	b	0x744378 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2a64c>
+  744368: b98387e0     	ldrsw	x0, [sp, #0x384]
+  74436c: f9401be1     	ldr	x1, [sp, #0x30]
+  744370: 8b000020     	add	x0, x1, x0
+  744374: 3900001f     	strb	wzr, [x0]
+  744378: b94387e0     	ldr	w0, [sp, #0x384]
+  74437c: b9032be0     	str	w0, [sp, #0x328]
+  744380: b9432be1     	ldr	w1, [sp, #0x328]
+  744384: b9402fe0     	ldr	w0, [sp, #0x2c]
+  744388: 6b00003f     	cmp	w1, w0
+  74438c: 5400012a     	b.ge	0x7443b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2a684>
+  744390: b9832be0     	ldrsw	x0, [sp, #0x328]
+  744394: f9401be1     	ldr	x1, [sp, #0x30]
+  744398: 8b000020     	add	x0, x1, x0
+  74439c: 3900001f     	strb	wzr, [x0]
+  7443a0: b9432be0     	ldr	w0, [sp, #0x328]
+  7443a4: 11000400     	add	w0, w0, #0x1
+  7443a8: b9032be0     	str	w0, [sp, #0x328]
+  7443ac: 17fffff5     	b	0x744380 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2a654>

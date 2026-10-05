@@ -1,0 +1,105 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual callable binding.
+  4ea188: d10083ff     	sub	sp, sp, #0x20
+  4ea18c: f9000fe0     	str	x0, [sp, #0x18]
+  4ea190: f9000be1     	str	x1, [sp, #0x10]
+  4ea194: f90007e2     	str	x2, [sp, #0x8]
+  4ea198: f90003e3     	str	x3, [sp]
+  4ea19c: d503201f     	nop
+  4ea1a0: 910083ff     	add	sp, sp, #0x20
+  4ea1a4: d65f03c0     	ret
+  4ea1a8: d10043ff     	sub	sp, sp, #0x10
+  4ea1ac: f90007e0     	str	x0, [sp, #0x8]
+  4ea1b0: f94007e0     	ldr	x0, [sp, #0x8]
+  4ea1b4: b9401400     	ldr	w0, [x0, #0x14]
+  4ea1b8: 910043ff     	add	sp, sp, #0x10
+  4ea1bc: d65f03c0     	ret
+  4ea1c0: d10043ff     	sub	sp, sp, #0x10
+  4ea1c4: f90007e0     	str	x0, [sp, #0x8]
+  4ea1c8: 12800000     	mov	w0, #-0x1
+  4ea1cc: 910043ff     	add	sp, sp, #0x10
+  4ea1d0: d65f03c0     	ret
+  4ea1d4: d10043ff     	sub	sp, sp, #0x10
+  4ea1d8: f90007e0     	str	x0, [sp, #0x8]
+  4ea1dc: 52800000     	mov	w0, #0x0
+  4ea1e0: 910043ff     	add	sp, sp, #0x10
+  4ea1e4: d65f03c0     	ret
+  4ea1e8: d10043ff     	sub	sp, sp, #0x10
+  4ea1ec: f90007e0     	str	x0, [sp, #0x8]
+  4ea1f0: 39001fe1     	strb	w1, [sp, #0x7]
+  4ea1f4: d503201f     	nop
+  4ea1f8: 910043ff     	add	sp, sp, #0x10
+  4ea1fc: d65f03c0     	ret
+  4ea200: d10083ff     	sub	sp, sp, #0x20
+  4ea204: f9000fe0     	str	x0, [sp, #0x18]
+  4ea208: f9000be1     	str	x1, [sp, #0x10]
+  4ea20c: b9000fe2     	str	w2, [sp, #0xc]
+  4ea210: d0003520     	adrp	x0, 0xb90000
+  4ea214: 911b2000     	add	x0, x0, #0x6c8
+  4ea218: 910083ff     	add	sp, sp, #0x20
+  4ea21c: d65f03c0     	ret
+  4ea220: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  4ea224: 910003fd     	mov	x29, sp
+  4ea228: f90017e0     	str	x0, [sp, #0x28]
+  4ea22c: f90013e1     	str	x1, [sp, #0x20]
+  4ea230: b9001fe2     	str	w2, [sp, #0x1c]
+  4ea234: b9401fe0     	ldr	w0, [sp, #0x1c]
+  4ea238: 71000c1f     	cmp	w0, #0x3
+  4ea23c: 5400014c     	b.gt	0x4ea264
+  4ea240: 52800303     	mov	w3, #0x18
+  4ea244: d0003520     	adrp	x0, 0xb90000
+  4ea248: 911b4002     	add	x2, x0, #0x6d0
+  4ea24c: d0003520     	adrp	x0, 0xb90000
+  4ea250: 911be001     	add	x1, x0, #0x6f8
+  4ea254: d0003520     	adrp	x0, 0xb90000
+  4ea258: 911c2000     	add	x0, x0, #0x708
+  4ea25c: 97fc80c9     	bl	0x40a580
+  4ea260: 940a092a     	bl	0x76c708
+  4ea264: f94017e0     	ldr	x0, [sp, #0x28]
+  4ea268: f9401800     	ldr	x0, [x0, #0x30]
+  4ea26c: b9801fe1     	ldrsw	x1, [sp, #0x1c]
+  4ea270: aa0103e2     	mov	x2, x1
+  4ea274: aa0003e1     	mov	x1, x0
+  4ea278: f94013e0     	ldr	x0, [sp, #0x20]
+  4ea27c: 97fc81d1     	bl	0x40a9c0
+  4ea280: b9801fe0     	ldrsw	x0, [sp, #0x1c]
+  4ea284: f94013e1     	ldr	x1, [sp, #0x20]
+  4ea288: 8b000020     	add	x0, x1, x0
+  4ea28c: 3900001f     	strb	wzr, [x0]
+  4ea290: f94013e0     	ldr	x0, [sp, #0x20]
+  4ea294: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  4ea298: d65f03c0     	ret
+  4ea29c: d10043ff     	sub	sp, sp, #0x10
+  4ea2a0: f90007e0     	str	x0, [sp, #0x8]
+  4ea2a4: 12800000     	mov	w0, #-0x1
+  4ea2a8: 910043ff     	add	sp, sp, #0x10
+  4ea2ac: d65f03c0     	ret
+  4ea2b0: d10043ff     	sub	sp, sp, #0x10
+  4ea2b4: f90007e0     	str	x0, [sp, #0x8]
+  4ea2b8: d2800000     	mov	x0, #0x0
+  4ea2bc: 910043ff     	add	sp, sp, #0x10
+  4ea2c0: d65f03c0     	ret
+  4ea2c4: d10043ff     	sub	sp, sp, #0x10
+  4ea2c8: f90007e0     	str	x0, [sp, #0x8]
+  4ea2cc: d2800000     	mov	x0, #0x0
+  4ea2d0: 910043ff     	add	sp, sp, #0x10
+  4ea2d4: d65f03c0     	ret
+  4ea2d8: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  4ea2dc: 910003fd     	mov	x29, sp
+  4ea2e0: f9000fe0     	str	x0, [sp, #0x18]
+  4ea2e4: f9400fe0     	ldr	x0, [sp, #0x18]
+  4ea2e8: f9400c00     	ldr	x0, [x0, #0x18]
+  4ea2ec: 94089403     	bl	0x70f2f8
+  4ea2f0: 52800000     	mov	w0, #0x0
+  4ea2f4: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  4ea2f8: d65f03c0     	ret
+  4ea2fc: d10043ff     	sub	sp, sp, #0x10
+  4ea300: f90007e0     	str	x0, [sp, #0x8]
+  4ea304: d2800000     	mov	x0, #0x0
+  4ea308: 910043ff     	add	sp, sp, #0x10
+  4ea30c: d65f03c0     	ret
+  4ea310: d10043ff     	sub	sp, sp, #0x10
+  4ea314: f90007e0     	str	x0, [sp, #0x8]
+  4ea318: 52800000     	mov	w0, #0x0
+  4ea31c: 910043ff     	add	sp, sp, #0x10
+  4ea320: d65f03c0     	ret

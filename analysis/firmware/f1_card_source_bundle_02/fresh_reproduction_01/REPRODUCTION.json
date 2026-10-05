@@ -1,0 +1,236 @@
+{
+  "schema": "iq4_f1_source02_fresh_reproduction_01",
+  "source_zip": {
+    "path": "deploy/f1_card_candidate_02/IQ4_F1_Mask_Source_02.zip",
+    "bytes": 713491,
+    "sha256": "2a1eef64f27fc4c1f85d392e732b818cd67f6087dab0f142eb4aff417d3eb98a"
+  },
+  "bundle_tool_source": {
+    "path": "tools/firmware/f1_card_source_bundle_02/SOURCE_SHA256.json",
+    "bytes": 2402,
+    "sha256": "e57f929765c74fce1dc75f9b19048ebb7b7d0508457df5c4ef5821e9a222a642"
+  },
+  "source_project": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card_source_bundle_repro_02/project",
+  "source_members_verified": 146,
+  "copied_OEM_inputs": [
+    {
+      "source": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "destination": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card_source_bundle_repro_02/project/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "bytes": 11874544,
+      "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+    },
+    {
+      "source": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_01/libstdcxx_original_ANALYSIS_ONLY.elf",
+      "destination": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card_source_bundle_repro_02/project/analysis/firmware/f1_user_ui_entry_01/libstdcxx_original_ANALYSIS_ONLY.elf",
+      "bytes": 1538432,
+      "sha256": "5876c5861ffae1b3f6a5fc091be8f1d601edf602ebeed6a4aa3bf5c3cfbe11aa"
+    }
+  ],
+  "actual_toolchain_files_verified": 722,
+  "top_level_returncodes": [
+    {
+      "label": "verify_bundle",
+      "exit": 0,
+      "observed_from": "original tool result; complete146 members rechecked in evidence writer"
+    },
+    {
+      "label": "replay_preflight",
+      "exit": 0,
+      "compile_commands": 11,
+      "exact_toolchain_files_verified": 722,
+      "observed_from": "original tool result before .o outputs existed"
+    },
+    {
+      "label": "replay_compile",
+      "exit": 0,
+      "compiler_returncodes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "observed_from": "original tool result and actual REPLAY.json"
+    },
+    {
+      "label": "make_actual_payload_lock",
+      "exit": 0,
+      "payload_lock_sha256": "bb8de0b0fd4f5de47013466584502a7949801fa291d3e5821ade8eed40272d7a",
+      "observed_from": "original tool result and actual new lock"
+    },
+    {
+      "label": "link",
+      "exit": 0,
+      "execution_record": {
+        "path": "build/f1_card_source_bundle_repro_02/project/build/f1_card_source_replay_02/LINK_EXECUTION.json",
+        "bytes": 928,
+        "sha256": "b382e897d6642c33d4dedb0cce0c33351d20f77daff9108a52e1e0874bf0cda0"
+      }
+    },
+    {
+      "label": "stock_wrapper_package",
+      "exit": 0,
+      "execution_record": {
+        "path": "build/f1_card_source_bundle_repro_02/project/build/f1_card_source_replay_02/PACKAGE_EXECUTION.json",
+        "bytes": 5911,
+        "sha256": "daf60b686c48adf4701205296a6b5f98abe03e86b70f6152e297029ff4072b2b"
+      }
+    }
+  ],
+  "compiler_commands_executed": 11,
+  "compiler_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "original_frozen_derivation_scripts_executed": [],
+  "new_lock": {
+    "path": "build/f1_card_source_bundle_repro_02/project/analysis/firmware/f1_card_source_replay_02/ACTUAL_INPUT_LOCK.json",
+    "bytes": 3428,
+    "sha256": "bb8de0b0fd4f5de47013466584502a7949801fa291d3e5821ade8eed40272d7a"
+  },
+  "replay_receipt": {
+    "path": "build/f1_card_source_bundle_repro_02/project/analysis/firmware/f1_card_source_replay_02/REPLAY.json",
+    "bytes": 17355,
+    "sha256": "979c652630d446f36683aec8b09ec81e21d875decd5dbd6021bef752887ecfd6"
+  },
+  "products": [
+    {
+      "role": "User",
+      "original": {
+        "path": "build/f1_user_elf_candidate_03/P1Linux_IQ4_F1_6.03.23.bin",
+        "bytes": 12366016,
+        "sha256": "b1904a4946fd3479adf4e22809e44b44004d6217239f05f7e36cc1f0c349b00a"
+      },
+      "fresh": {
+        "path": "build/f1_card_source_bundle_repro_02/project/build/f1_card_source_replay_02/FRESH_User.bin",
+        "bytes": 12366016,
+        "sha256": "b1904a4946fd3479adf4e22809e44b44004d6217239f05f7e36cc1f0c349b00a"
+      },
+      "complete_bytes_equal": true
+    },
+    {
+      "role": "FWR",
+      "original": {
+        "path": "deploy/f1_card_candidate_02/IQ4-user-only.fwr",
+        "bytes": 12366588,
+        "sha256": "ef1da0381f2c3711daaab5a2705ff154a9ab79ac2ae338a9c74beac6658690d0"
+      },
+      "fresh": {
+        "path": "build/f1_card_source_bundle_repro_02/project/build/FRESH_CARD_REPRO_02/IQ4-user-only.fwr",
+        "bytes": 12366588,
+        "sha256": "ef1da0381f2c3711daaab5a2705ff154a9ab79ac2ae338a9c74beac6658690d0"
+      },
+      "complete_bytes_equal": true
+    },
+    {
+      "role": "FWP",
+      "original": {
+        "path": "deploy/f1_card_candidate_02/IQ4_F1_Mask_6.03.20_CANDIDATE.fwp",
+        "bytes": 12367090,
+        "sha256": "12bb5d8d7e41905971962ce156e3afdf6eb51e1e2188ef79992985ded5b7a333"
+      },
+      "fresh": {
+        "path": "build/f1_card_source_bundle_repro_02/project/build/FRESH_CARD_REPRO_02/IQ4-user-only-candidate.fwp",
+        "bytes": 12367090,
+        "sha256": "12bb5d8d7e41905971962ce156e3afdf6eb51e1e2188ef79992985ded5b7a333"
+      },
+      "complete_bytes_equal": true
+    }
+  ],
+  "object_hash_comparison": [
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_03/runtime.o",
+      "fresh_sha256": "281c0e84a0c04bf8760a964875777a83861be2356f311f77570ac4776547e75b",
+      "original_sha256": "afeab75ff88e0bf7e619e8f69b11e1bdd71c9bab7053224a0129153b3fb1c34c",
+      "whole_object_hash_equal": false
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_03/module.o",
+      "fresh_sha256": "fdbc1c21db9bd85deec580f5506a359d8b5c219cd8ddae8b2ef0c7bd93921aaa",
+      "original_sha256": "d4938ae03e39d73b1331850e317d1be558d5685583aab8afb6469c2bd840c147",
+      "whole_object_hash_equal": false
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_03/entry_binding_10.o",
+      "fresh_sha256": "412d663397ec4cb63d20fd3e36d1f3a4b9ee2c0166a091d11cb26f4b83d679b8",
+      "original_sha256": "edce33518102032543f3cdd86998b91c68fb3cd1b8104591f37fe896deab38bc",
+      "whole_object_hash_equal": false
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_03/inspector.o",
+      "fresh_sha256": "66a9a20d6333c113ed6880cac4411524ff61e6de68077d7efdc306d318df360d",
+      "original_sha256": "426a21d9e153d4d531553f204a0533b6a4ba2d302929b7a9f849c6cd211be6ce",
+      "whole_object_hash_equal": false
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_03/candidates.o",
+      "fresh_sha256": "3dc3b1797f3c9881dae050e0313c3d367de21e14fd564c471f5861b524772153",
+      "original_sha256": "fff3b45086b73d188ca7d1c33694a7ea617df8a907889d187e2e9eed10a6ab5f",
+      "whole_object_hash_equal": false
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_03/bootstrap.o",
+      "fresh_sha256": "fb5a9d64c6f5193b91ab5325a3ac133fa09ea3598cfe0a70be9804b99175ba4c",
+      "original_sha256": "d39a77ee3a6370a045e150cd5a5f952421b7bebced0353f9c6ffbe23752f8cb5",
+      "whole_object_hash_equal": false
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_03/counter.o",
+      "fresh_sha256": "28ce2dd5956e5f6d7a4e93cb5325f886e01e41709696d1c6d0a97b8b85d19293",
+      "original_sha256": "1314d5b4e013dfab72651ba4797b06945e93a8e727122467e4014d18febfa048",
+      "whole_object_hash_equal": false
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_03/ctor_wrapper.o",
+      "fresh_sha256": "8f3d2c333c2d1f11489b7985aaf093c362632e25d20d69ee31dab33b349b342e",
+      "original_sha256": "d8c00c09c699480d1fdd512c24e50ba944c497e0f1fb022111e1d9c208d8a48a",
+      "whole_object_hash_equal": false
+    },
+    {
+      "path": "analysis/firmware/f1_user_ui_entry_03/compare.o",
+      "fresh_sha256": "cbbb9cf8b76594b8d604088fcb58d3a837f4ccf0f2ffe37e6849c62ece8ba02d",
+      "original_sha256": "6c5a525d0394e2f18830bd0d3d951cfdf56436614f94450e9aaee2cf7a6562e6",
+      "whole_object_hash_equal": false
+    },
+    {
+      "path": "analysis/firmware/f1_stock_display_payload_build_13/payload.o",
+      "fresh_sha256": "02b73b6eecfdfa0ffe7a20acfdf3e20c9dafb4a6770b2986a2a9292f5540fd8c",
+      "original_sha256": "02b73b6eecfdfa0ffe7a20acfdf3e20c9dafb4a6770b2986a2a9292f5540fd8c",
+      "whole_object_hash_equal": true
+    },
+    {
+      "path": "analysis/firmware/f1_stock_display_payload_build_13/wrapper.o",
+      "fresh_sha256": "d5dc48a15ea46935fe94fdea4cb590840d685b1f7b2b86035cfb588c0f1958d2",
+      "original_sha256": "d5dc48a15ea46935fe94fdea4cb590840d685b1f7b2b86035cfb588c0f1958d2",
+      "whole_object_hash_equal": true
+    }
+  ],
+  "seven_UI03_runtime_RX_windows_match_fresh_candidate": true,
+  "actual_CSU_startup": {
+    "count": 341,
+    "dynamic_array_matches_actual_CSU": true,
+    "end": 69871232,
+    "main_startup_init_callback_va": 10416304,
+    "provided_by_executable_entry": true,
+    "start": 69868504,
+    "target_executed": false
+  },
+  "target_ELF_or_SDK_or_camera_or_remote_execution": false,
+  "new_candidate_device_acceptance": false,
+  "old_candidate01_failure_preserved": true
+}

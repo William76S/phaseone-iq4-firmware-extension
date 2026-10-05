@@ -1,0 +1,117 @@
+{
+  "schema": "iq4_f3_menu05_single_object_overlay",
+  "frozen_source04": {
+    "path": "tools/firmware/f3_capture_menu_04/SOURCE_SHA256.json",
+    "bytes": 5584,
+    "sha256": "ace424331f55fd434a8b528992b9b9a8e44b574899d7459f6554370bd8e95989"
+  },
+  "frozen_link04": {
+    "path": "tools/firmware/f3_capture_menu_04/LINK_INPUT.json",
+    "bytes": 1370,
+    "sha256": "ea74ed190555331afe77a77b3337dbf70d67a3019419a2385e140155a5ec7bd1"
+  },
+  "replace_only": {
+    "path": "analysis/firmware/f3_capture_menu_build_04/menu.o",
+    "bytes": 29288,
+    "sha256": "650f86eb43467730269bafaeffa225f3e9635251a62dac77e1c86d24caf4bf6b"
+  },
+  "replacement": {
+    "path": "analysis/firmware/f3_capture_menu_build_05/menu.o",
+    "bytes": 28360,
+    "sha256": "c32653443af58ce0c51d8fd53e4cc1c42cfa6d8e5d54e6babb9b2533b9e74091",
+    "type": "ET_REL",
+    "machine": 183,
+    "alloc_sections": [
+      {
+        "name": ".text",
+        "type": 1,
+        "flags": 6,
+        "bytes": 10000
+      },
+      {
+        "name": ".rodata.cst8",
+        "type": 1,
+        "flags": 18,
+        "bytes": 16
+      },
+      {
+        "name": ".bss",
+        "type": 8,
+        "flags": 3,
+        "bytes": 548
+      },
+      {
+        "name": ".data.rel.ro",
+        "type": 1,
+        "flags": 3,
+        "bytes": 288
+      },
+      {
+        "name": ".rodata",
+        "type": 1,
+        "flags": 2,
+        "bytes": 592
+      },
+      {
+        "name": ".rodata.str1.1",
+        "type": 1,
+        "flags": 50,
+        "bytes": 290
+      },
+      {
+        "name": ".eh_frame",
+        "type": 1,
+        "flags": 2,
+        "bytes": 400
+      }
+    ],
+    "relocation_types": [
+      257,
+      261,
+      275,
+      277,
+      278,
+      282,
+      283,
+      285,
+      286,
+      311,
+      312
+    ],
+    "undefined_symbols": [
+      "f3_coordinator_manual_prepare_06",
+      "f3_coordinator_ready_06",
+      "f3_coordinator_view_06",
+      "f3_coordinator_worker_run_06",
+      "iq4_activity_snapshot_01",
+      "iq4_f3_executor_begin_on_ui_01",
+      "iq4_f3_executor_cancel_on_ui_01",
+      "iq4_f3_executor_finish_on_ui_01",
+      "iq4_f3_executor_hold_01",
+      "iq4_f3_executor_selection_on_ui_01",
+      "iq4_f3_executor_submit_on_ui_01",
+      "iq4_f3_executor_view_on_ui_01",
+      "iq4_f3_mode_set_on_ui_01",
+      "iq4_f3_quality_set_on_ui_03",
+      "iq4_f3_scale_set_on_ui_01",
+      "iq4_f3_settings_snapshot_04",
+      "iq4_f4_menu_append_03",
+      "iq4_f4_menu_ctor_03",
+      "iq4_f4_menu_new_03",
+      "iq4_f4_native_current_02",
+      "iq4_f4_native_event_notify_02",
+      "iq4_native_self_read_01",
+      "memcmp",
+      "memcpy"
+    ],
+    "executed": false
+  },
+  "policy_and_wrapper04_unchanged": true,
+  "ABI04_unchanged": true,
+  "new_BL": [],
+  "additional_aliases": [],
+  "automatic_JPEG_scope": "SD only; XQD unsupported",
+  "manual_existing_RAW_always_retained": true,
+  "target_executed": false,
+  "camera_access": false
+}

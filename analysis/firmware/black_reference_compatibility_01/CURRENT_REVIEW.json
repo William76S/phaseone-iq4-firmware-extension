@@ -1,0 +1,52 @@
+{
+  "schema": "iq4_blackref_in_progress_review01",
+  "User": {
+    "path": "analysis/firmware/jpeg_repair_link_dev_02/P1Linux_RatioMask_JPEG_LVRecording_6.03.34.bin",
+    "bytes": 13227688,
+    "sha256": "54d39029452f61b93ad24b25ca9e9103c92a6dbd6260c821191217fb35d37bda"
+  },
+  "native_regions": [
+    {
+      "name": "BlackRef_file_manager_region",
+      "va": 8310476,
+      "bytes": 10292,
+      "sha256": "356a2c9d6e4dd6de86381b87018a34b15209c1d8f42d6f35ff347759985488f5",
+      "unchanged": true,
+      "range_is_conservative_region_not_claimed_exact_function_extent": true
+    },
+    {
+      "name": "BlackRef_settings_handler_region",
+      "va": 6984648,
+      "bytes": 1080,
+      "sha256": "647193fc3a739c633eb434a50fd0ab8928b19b1e136bda50fe9f964374a3db89",
+      "unchanged": true,
+      "range_is_conservative_region_not_claimed_exact_function_extent": true
+    },
+    {
+      "name": "BlackRef_native_dialog_region",
+      "va": 5648896,
+      "bytes": 5632,
+      "sha256": "71249b4dbb8c9b949fb6320eff5c608e0b9d8eec40e1f1526cf0c2a27ddf2027",
+      "unchanged": true,
+      "range_is_conservative_region_not_claimed_exact_function_extent": true
+    }
+  ],
+  "source_review": {
+    "source": {
+      "path": "tools/firmware/f3_raw_file_source_01/source_builder.cpp",
+      "bytes": 18041,
+      "sha256": "38ca862686d2665a3a9c41ee01ae14a526a0b5d51e01d8d2977cfc81ec4e5d95"
+    },
+    "observation": "Reader copies black rows, black columns and calibration tag from held IIQ into private nonoverlapping buffers; review only, no new hardware execution"
+  },
+  "F4_no_frame_stop_existing_test": "tools/firmware/f4_native_session_05/test_session.c",
+  "remaining": [
+    "ordinary capture node classification before auto export",
+    "native calibration busy behavior versus Dual adjustment",
+    "native storage override must not reopen a card deliberately disabled by native protection",
+    "hardware BlackRef regression"
+  ],
+  "compatibility_accepted": false,
+  "calibration_files_written": false,
+  "camera_accessed": false
+}

@@ -1,0 +1,898 @@
+{
+  "schema": "iq4_f3_capture_menu_build_04",
+  "compiler": {
+    "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+    "bytes": 188226560,
+    "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c"
+  },
+  "original_user": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "source_inputs": [
+    {
+      "path": "tools/firmware/f3_capture_menu_04/NATIVE_CONTRACT.json",
+      "bytes": 4025,
+      "sha256": "f6f84427d71ef462764b211e75746218799fb15efccd833744cee7689bae9b5d"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/build.py",
+      "bytes": 4468,
+      "sha256": "0f5089ef3dc4888e27ca6ae8c0690f0e2f270b5092d3fad6d92afb8df2f686d9"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/code_pins.h",
+      "bytes": 3434,
+      "sha256": "6efedcdccce5426904917520324f14e6ffb57df30fe8993c452e0c4823107d31"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/menu.h",
+      "bytes": 469,
+      "sha256": "e578c769be91fc66dbc2560a66ae680dcc03fe7ac61aa65ba7b9ab994095373c"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/policy.c",
+      "bytes": 4376,
+      "sha256": "dc4218ac400d08c4641011dca5d1fe80a18bc3ebb583701f90c3c015589e6a42"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/policy.h",
+      "bytes": 2319,
+      "sha256": "0b650b8efd69f04c343a3a2d876cd95b8ab386062905d1ad55cf49add8d7f666"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/runtime.c",
+      "bytes": 10702,
+      "sha256": "b639726f585000e70142aaa0449edcba93ec1d4a4a79bc7310c7f82ae150ebc3"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/test_menu.c",
+      "bytes": 10350,
+      "sha256": "05f8633fecce2e6597782d1778895b7bf91ae5db6e203651c4a7bb344a44fda3"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/test_policy.c",
+      "bytes": 5559,
+      "sha256": "71793862a5d2a658c138dea2b6db3bdbc608e94563ef1a713af8782f09914bb2"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/wrapper.S",
+      "bytes": 1573,
+      "sha256": "a8bf797543490ac922547a169ef399b6d6a9c5f6336d43f0badf56c0e506d691"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "tools/firmware/f3_native_executor_01/SOURCE_SHA256.json",
+      "bytes": 8595,
+      "sha256": "cbf40dbf7deab77f4d1c4ed858755e942549d2a24896d9d3c60b23e2b4d9f475"
+    },
+    {
+      "path": "tools/firmware/f4_native_menu_03/SOURCE_SHA256.json",
+      "bytes": 4546,
+      "sha256": "eb108284d431a8f03d2456fcd74b788924d1c703ebb3f137727a5f4c3c9c72b4"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/SOURCE_SHA256.json",
+      "bytes": 16039,
+      "sha256": "d2e4cff35e7e524f30c56bd8881fc57b4eb96ee309aee2c66b0de214a8fb3c9a"
+    },
+    {
+      "path": "tools/firmware/native_activity_01/SOURCE_SHA256.json",
+      "bytes": 1812,
+      "sha256": "414cbd9bde689ec1c493491e18dadd3c4ef7ef916103ccf95bd865d8b22b9665"
+    },
+    {
+      "path": "tools/firmware/f3_save_coordinator_06/coordinator.h",
+      "bytes": 2731,
+      "sha256": "af33decbdfd77723611ca4cbe5aa84e40394fce8e3c271e9eacf75317c5aab51"
+    }
+  ],
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_04/policy.o",
+      "bytes": 3872,
+      "sha256": "d272ce9dc423401c763a0c2c93e6d88cc795afacd9a6e02962c91f1b2146cb97",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 1088
+        },
+        {
+          "name": ".bss",
+          "type": 8,
+          "flags": 3,
+          "bytes": 4
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 248
+        }
+      ],
+      "relocation_types": [
+        261,
+        275,
+        277,
+        283,
+        285
+      ],
+      "undefined_symbols": [
+        "iq4_export_geometry"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_04/menu.o",
+      "bytes": 29288,
+      "sha256": "650f86eb43467730269bafaeffa225f3e9635251a62dac77e1c86d24caf4bf6b",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 10932
+        },
+        {
+          "name": ".rodata.cst8",
+          "type": 1,
+          "flags": 18,
+          "bytes": 16
+        },
+        {
+          "name": ".bss",
+          "type": 8,
+          "flags": 3,
+          "bytes": 548
+        },
+        {
+          "name": ".data.rel.ro",
+          "type": 1,
+          "flags": 3,
+          "bytes": 288
+        },
+        {
+          "name": ".rodata",
+          "type": 1,
+          "flags": 2,
+          "bytes": 592
+        },
+        {
+          "name": ".rodata.str1.1",
+          "type": 1,
+          "flags": 50,
+          "bytes": 238
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 400
+        }
+      ],
+      "relocation_types": [
+        257,
+        261,
+        275,
+        277,
+        278,
+        282,
+        283,
+        285,
+        286,
+        311,
+        312
+      ],
+      "undefined_symbols": [
+        "f3_coordinator_manual_prepare_06",
+        "f3_coordinator_ready_06",
+        "f3_coordinator_view_06",
+        "f3_coordinator_worker_run_06",
+        "iq4_activity_snapshot_01",
+        "iq4_f3_executor_begin_on_ui_01",
+        "iq4_f3_executor_cancel_on_ui_01",
+        "iq4_f3_executor_finish_on_ui_01",
+        "iq4_f3_executor_hold_01",
+        "iq4_f3_executor_selection_on_ui_01",
+        "iq4_f3_executor_submit_on_ui_01",
+        "iq4_f3_executor_view_on_ui_01",
+        "iq4_f3_mode_set_on_ui_01",
+        "iq4_f3_quality_set_on_ui_03",
+        "iq4_f3_scale_set_on_ui_01",
+        "iq4_f3_settings_snapshot_04",
+        "iq4_f4_menu_append_03",
+        "iq4_f4_menu_ctor_03",
+        "iq4_f4_menu_new_03",
+        "iq4_f4_native_current_02",
+        "iq4_f4_native_event_notify_02",
+        "iq4_native_self_read_01",
+        "memcmp",
+        "memcpy"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_04/wrapper.o",
+      "bytes": 1120,
+      "sha256": "d68a9c9980a80601469ad5c65ed1bf7f580fdeabe58e8747dfe85ff7c02e2385",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 140
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 64
+        }
+      ],
+      "relocation_types": [
+        261,
+        283
+      ],
+      "undefined_symbols": [
+        "iq4_f3_after_file_settings_append_04"
+      ],
+      "executed": false
+    }
+  ],
+  "tests": [
+    {
+      "variant": "normal",
+      "args": [],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "1"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "2"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "3"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "4"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "5"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "6"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "7"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "8"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "9"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "10"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "11"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "12"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "13"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "14"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "15"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "16"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "17"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "18"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "--submit-unknown"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "--submit-reject-after-prepare"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "--cancel-unknown"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "--notify-unknown"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "--begin-unknown"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "--wrong-ui-action"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [
+        "--completed-callback-fence"
+      ],
+      "program": "menu_normal",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "args": [],
+      "program": "policy_normal",
+      "stdout": "PASS: immutable once-per-node policy/unknown owner/CAS concurrency; own UI snapshot is not actual source ownership\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "1"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "2"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "3"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "4"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "5"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "6"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "7"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "8"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "9"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "10"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "11"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "12"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "13"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "14"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "15"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "16"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "17"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "18"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "--submit-unknown"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "--submit-reject-after-prepare"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "--cancel-unknown"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "--notify-unknown"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "--begin-unknown"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "--wrong-ui-action"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [
+        "--completed-callback-fence"
+      ],
+      "program": "menu_asan_ubsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "args": [],
+      "program": "policy_asan_ubsan",
+      "stdout": "PASS: immutable once-per-node policy/unknown owner/CAS concurrency; own UI snapshot is not actual source ownership\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "1"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "2"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "3"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "4"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "5"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "6"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "7"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "8"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "9"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "10"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "11"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "12"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "13"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "14"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "15"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "16"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "17"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "18"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "--submit-unknown"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "--submit-reject-after-prepare"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "--cancel-unknown"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "--notify-unknown"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "--begin-unknown"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "--wrong-ui-action"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [
+        "--completed-callback-fence"
+      ],
+      "program": "menu_tsan",
+      "stdout": "PASS native menu ABI/actual request/no-owner refusal/immutable snapshot/Hold fixture\n"
+    },
+    {
+      "variant": "tsan",
+      "args": [],
+      "program": "policy_tsan",
+      "stdout": "PASS: immutable once-per-node policy/unknown owner/CAS concurrency; own UI snapshot is not actual source ownership\n"
+    }
+  ],
+  "direct_linked_coordinator_consumer": true,
+  "default_production_EN0": false,
+  "actual_coordinator_ready_required": true,
+  "target_executed": false,
+  "camera_access": false,
+  "sdk_loaded": false,
+  "actual_manual_export_tested": false,
+  "actual_capture_format_tested": false
+}

@@ -1,0 +1,88 @@
+{
+  "schema": "iq4_f4_start_repair_card_pins_05",
+  "stock": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "actual_User": {
+    "path": "analysis/firmware/f1_f3_f4_user_integration_build_03_diag_date_01/P1Linux_RatioMask_JPEG_LVRecording_6.03.32.bin",
+    "bytes": 13224296,
+    "sha256": "49e99546629f14f5111109fd6f49e8bc55a43de96bcc3d552483f7838154dd60"
+  },
+  "signatures": {
+    "path": "tools/firmware/f3_native_card_bridge_06/signatures.inc",
+    "bytes": 12577,
+    "sha256": "b9060069a0082bd5ec95677150834bfd240a5d39d663d90e037e9a5d713d45ce"
+  },
+  "regions": [
+    {
+      "name": "sig_DeviceRequest_register_client",
+      "va": "0x8ca3ec",
+      "bytes": 216,
+      "expected_sha256": "9584d144cf9ac7909cdb3e2dc042044d47779018c6d4757089941740470b1e24",
+      "actual_matches": true
+    },
+    {
+      "name": "sig_DeviceRequest_release",
+      "va": "0x8ca708",
+      "bytes": 384,
+      "expected_sha256": "14844608f7a6a1daebc91da55d2f8fb15744382c3d6f77b22322ad73639f7c4e",
+      "actual_matches": true
+    },
+    {
+      "name": "sig_DeviceRequest_wait_request",
+      "va": "0x8ca888",
+      "bytes": 368,
+      "expected_sha256": "e0a67fda2fab69817e110e7523075bcda5e438d8792e11cfd67b15ffff0dfe55",
+      "actual_matches": true
+    },
+    {
+      "name": "sig_AsynchronousDeviceRequest_wait",
+      "va": "0x8cafbc",
+      "bytes": 476,
+      "expected_sha256": "603b73b5e1de8389b798dd4358d5fa05b1c2885d62e325701adf7851f6790d37",
+      "actual_matches": true
+    },
+    {
+      "name": "sig_AsynchronousDeviceRequest_vtable",
+      "va": "0xdb6628",
+      "bytes": 72,
+      "expected_sha256": "a609bf5e1af5f812b7b0e62d7c6fa017b067cdee9f5d858d6f8b105e7f4691f9",
+      "actual_matches": true
+    },
+    {
+      "name": "sig_LinuxFilesystem_vtable",
+      "va": "0xd91450",
+      "bytes": 304,
+      "expected_sha256": "4fc1761738b677e9d9f6ef37a42dd59e7c279c17cdcd85d0292b870bdb4049d4",
+      "actual_matches": true
+    },
+    {
+      "name": "sig_DeviceRequest_request",
+      "va": "0x8ca598",
+      "bytes": 368,
+      "expected_sha256": "78bbd803ddfa309053ee9acb2b166dd601cefc2895f96bf9a18ea8628e755d97",
+      "actual_matches": true
+    },
+    {
+      "name": "sig_NativeThread_current",
+      "va": "0x710b0c",
+      "bytes": 20,
+      "expected_sha256": "f191f7a68c1e344f66b91638320bcf0ea29fc3c3e70f49027ab634ab43d9c89e",
+      "actual_matches": true
+    },
+    {
+      "name": "sig_NativeThread_TLS",
+      "va": "0x713f60",
+      "bytes": 20,
+      "expected_sha256": "b1c8a10f8f74da354865e66cd2bfe2f2306606c340d039da00da7e58803b3592",
+      "actual_matches": true
+    }
+  ],
+  "all_actual_32_pins_match": true,
+  "checked_bytes": 2228,
+  "device_accessed": false,
+  "target_executed": false,
+  "does_not_prove_dynamic_FS_or_owner": true
+}

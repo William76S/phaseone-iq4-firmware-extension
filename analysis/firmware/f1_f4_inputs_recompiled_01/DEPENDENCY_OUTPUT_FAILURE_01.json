@@ -1,0 +1,70 @@
+{
+  "schema": "iq4_actual_recompile_dependency_output_correction_01",
+  "cause": "replayed frozen target commands moved -o but omitted relocating -MF dependency metadata output",
+  "source_or_firmware_bytes_modified": false,
+  "frozen_source03_dependency_file_exact_hash_restored": true,
+  "restored_files": [
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/source.o.d",
+      "incident_sha256": "1aa6e0fa0a30ad4911030aebdb6e551f16e963a07b7b33b66ab702d7e576080c",
+      "restored_sha256": "5a77fc760f00ec202869cf4b6d7e87e2009bfd5972fa5e34ffe6e8553002982b"
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/native_calls.o.d",
+      "incident_sha256": "aa1f8b435ac58b787b0f1d72f5a63ecc5ecd2d893d56d4bfe2adf025adaad040",
+      "restored_sha256": "f9f4f90b5ee8538601ab0f220aff15adb00271f0a0bd8d1100c620c524318329"
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/worker.o.d",
+      "incident_sha256": "dbb45ff41f98ab6e1bf6118ebeaf76f45df430a15b8eb010e8db3b12faab7ab3",
+      "restored_sha256": "321329fa850af45649d65c12a8d38849d6d11de9dc7476f14212c89089c5fd86"
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/session.o.d",
+      "incident_sha256": "55cceb56fd618cfbbb2f994912bff07bc9205b576c91fc1e3d31ea8bb81d7245",
+      "restored_sha256": "9e17ece01597e1c7c516c50bd0e2435d6273d2623c87f969c8cc3dc2867885ce"
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/thread_calls.o.d",
+      "incident_sha256": "95b42c0662de8436b6e11272839379cc5add1893a4522db59a7b84075e9be3e7",
+      "restored_sha256": "09dd5e948745f0d3eacf0a2e5de05d6b736f1a34a0aea9fdf73536ea435300c4"
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/movie_binding.o.d",
+      "incident_sha256": "233a707f18252726d2e5dc0f1eea1d00cc9b07a5b4e0ba074fefcce13abd3f8b",
+      "restored_sha256": "c15d6f7cec05bddf3384ba2f9adcb8db34b548922e0e2e0e29cff38971d62439"
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/entry.o.d",
+      "incident_sha256": "0b94b785fb6caa58c7b63aedef2c160901bdec94af4c9ec2efc531d9570926d8",
+      "restored_sha256": "cdf5640b11c5b4c32bc311df124c91fc2b9a2dc8020a8d6203964b1c2a98af5b"
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/menu.o.d",
+      "incident_sha256": "14953c7c204d175910ac77cdf5dfe04d2c367ac381d1992a8d3c8e2aef45222c",
+      "restored_sha256": "3570635484de4b63d8d647f9512b5359bedc31411a7b65da31c53b614b4f2a4e"
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_02_release_complete/menu_native_calls.o.d",
+      "incident_sha256": "7be2d0533dba141589b64037b64e87d88f620d269bc5720c241a8cffd8ab702a",
+      "restored_sha256": "25e59e819c2e1b64a4de09dc5f6776e36a9c4a5d6fc14c6b42a64e711f9c0786"
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_03/source.o.d",
+      "incident_sha256": "b99f9d394b1d197cd56e3a6accfef0bc7c6e3877a5526c388cace02c36d40c87",
+      "restored_sha256": "b4905a02fbc244e8989bd55c66d73efec6cbf0fa240999e72beaae114a23f5bc"
+    },
+    {
+      "path": "analysis/firmware/f3_native_jpeg8_binding_build_01/native_jpeg82.o.d",
+      "incident_sha256": "53928f70fcd376a526d77ecf11aac9c9a9d63de576e86674539241f65035fffe",
+      "restored_sha256": "5dff21c976ecd5872ccd3bf16d744204342c8cd6ae3acad8556a97336ae13ed8"
+    },
+    {
+      "path": "analysis/firmware/f3_native_jpeg8_binding_build_01/stream_rgb32.o.d",
+      "incident_sha256": "9c8b9a6c49efaae9aff839157fe305dc6b807039d5c074b1ef488ffa47f7b9c4",
+      "restored_sha256": "ab0c7c8edebccc91a76260095b22155fed33279dd8eb041ed9456482a9f706ff"
+    }
+  ],
+  "correction": "rebuild_inputs now relocates -MF to fresh output directory",
+  "target_executed": false
+}

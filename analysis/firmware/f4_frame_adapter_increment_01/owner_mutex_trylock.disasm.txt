@@ -1,0 +1,49 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+SCOPE complete_unwind_function
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006ee080 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_>:
+  71208c: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  712090: 910003fd     	mov	x29, sp
+  712094: f9000fe0     	str	x0, [sp, #0x18]
+  712098: f9400fe2     	ldr	x2, [sp, #0x18]
+  71209c: d0002880     	adrp	x0, 0xc24000
+  7120a0: 910d4001     	add	x1, x0, #0x350
+  7120a4: aa0203e0     	mov	x0, x2
+  7120a8: 97fff695     	bl	0x70fafc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x21a7c>
+  7120ac: f9400fe0     	ldr	x0, [sp, #0x18]
+  7120b0: 91006000     	add	x0, x0, #0x18
+  7120b4: 940000ec     	bl	0x712464 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x243e4>
+  7120b8: 12001c00     	and	w0, w0, #0xff
+  7120bc: 7100001f     	cmp	w0, #0x0
+  7120c0: 54000320     	b.eq	0x712124 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x240a4>
+  7120c4: f9400fe0     	ldr	x0, [sp, #0x18]
+  7120c8: b9405400     	ldr	w0, [x0, #0x54]
+  7120cc: 7100041f     	cmp	w0, #0x1
+  7120d0: 54000141     	b.ne	0x7120f8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x24078>
+  7120d4: f9400fe0     	ldr	x0, [sp, #0x18]
+  7120d8: b9405000     	ldr	w0, [x0, #0x50]
+  7120dc: 7100001f     	cmp	w0, #0x0
+  7120e0: 540000c0     	b.eq	0x7120f8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x24078>
+  7120e4: f9400fe0     	ldr	x0, [sp, #0x18]
+  7120e8: 91006000     	add	x0, x0, #0x18
+  7120ec: 940000e8     	bl	0x71248c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x2440c>
+  7120f0: 52800000     	mov	w0, #0x0                // =0
+  7120f4: 1400000d     	b	0x712128 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x240a8>
+  7120f8: f9400fe0     	ldr	x0, [sp, #0x18]
+  7120fc: b9405000     	ldr	w0, [x0, #0x50]
+  712100: 11000401     	add	w1, w0, #0x1
+  712104: f9400fe0     	ldr	x0, [sp, #0x18]
+  712108: b9005001     	str	w1, [x0, #0x50]
+  71210c: 97fffa80     	bl	0x710b0c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x22a8c>
+  712110: aa0003e1     	mov	x1, x0
+  712114: f9400fe0     	ldr	x0, [sp, #0x18]
+  712118: f9002401     	str	x1, [x0, #0x48]
+  71211c: 52800020     	mov	w0, #0x1                // =1
+  712120: 14000002     	b	0x712128 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x240a8>
+  712124: 52800000     	mov	w0, #0x0                // =0
+  712128: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  71212c: d65f03c0     	ret

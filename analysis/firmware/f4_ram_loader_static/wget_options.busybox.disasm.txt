@@ -1,0 +1,55 @@
+analysis/firmware/f4_ram_loader_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   259f0:      	sub	sp, sp, #0x130
+   259f4:      	mov	x0, #0x1090             // =4240
+   259f8:      	stp	x23, x24, [sp, #0x40]
+   259fc:      	mov	x23, x1
+   25a00:      	adrp	x1, 0xbe000
+   25a04:      	stp	x25, x26, [sp, #0x50]
+   25a08:      	adrp	x26, 0xbf000
+   25a0c:      	ldr	x1, [x1, #0xf68]
+   25a10:      	stp	x19, x20, [sp, #0x20]
+   25a14:      	ldr	x2, [x1]
+   25a18:      	str	x2, [sp, #0x128]
+   25a1c:      	mov	x2, #0x0                // =0
+   25a20:      	stp	x21, x22, [sp, #0x30]
+   25a24:      	stp	x27, x28, [sp, #0x60]
+   25a28:      	str	x30, [sp, #0x70]
+   25a2c:      	stp	d8, d9, [sp, #0x80]
+   25a30:      	str	xzr, [sp, #0xc0]
+   25a34:      	bl	0xd7bc <.text+0x201c>
+   25a38:      	mov	x21, x0
+   25a3c:      	str	x0, [x26, #0x500]
+   25a40:      	mov	w2, #0x384              // =900
+   25a44:      	adrp	x1, 0x25000 <.text+0x19860>
+   25a48:      	mov	w0, #0xe                // =14
+   25a4c:      	add	x1, x1, #0x14
+   25a50:      	str	w2, [x21, #0x70]
+   25a54:      	bl	0xa7f0 <signal@plt>
+   25a58:      	adrp	x9, 0x97000
+   25a5c:      	adrp	x8, 0x99000
+   25a60:      	add	x9, x9, #0x940
+   25a64:      	add	x8, x8, #0x958
+   25a68:      	add	x0, x21, #0x40
+   25a6c:      	add	x22, sp, #0xc0
+   25a70:      	stp	xzr, xzr, [sp]
+   25a74:      	add	x7, x21, #0x70
+   25a78:      	add	x6, x21, #0x68
+   25a7c:      	stp	x22, x0, [sp, #0x10]
+   25a80:      	add	x5, x21, #0x60
+   25a84:      	add	x4, x21, #0x38
+   25a88:      	add	x3, x21, #0x58
+   25a8c:      	adrp	x2, 0xa9000
+   25a90:      	adrp	x1, 0x99000
+   25a94:      	add	x2, x2, #0xe8a
+   25a98:      	add	x1, x1, #0x808
+   25a9c:      	mov	x0, x23
+   25aa0:      	stp	x9, x8, [x21, #0x60]
+   25aa4:      	bl	0x89628 <.text+0x7de88>
+   25aa8:      	adrp	x0, 0xbe000
+   25aac:      	ldr	x24, [sp, #0xc0]
+   25ab0:      	ldr	x0, [x0, #0xf28]
+   25ab4:      	ldr	w20, [x0]

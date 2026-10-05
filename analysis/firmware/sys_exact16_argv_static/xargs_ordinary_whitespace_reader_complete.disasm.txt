@@ -1,0 +1,104 @@
+STATIC ONLY; exported proximity is not a private function identity.
+
+analysis/firmware/sys_exact16_argv_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   845bc: a9bc53f3     	stp	x19, x20, [sp, #-0x40]!
+   845c0: aa0203f3     	mov	x19, x2
+   845c4: a9015bf5     	stp	x21, x22, [sp, #0x10]
+   845c8: d00001d5     	adrp	x21, 0xbe000
+   845cc: d00001d6     	adrp	x22, 0xbe000
+   845d0: a90263f7     	stp	x23, x24, [sp, #0x20]
+   845d4: 2a0003f7     	mov	w23, w0
+   845d8: 2a0103f8     	mov	w24, w1
+   845dc: aa0203e0     	mov	x0, x2
+   845e0: a9037bf9     	stp	x25, x30, [sp, #0x30]
+   845e4: 97fe175b     	bl	0xa350 <strlen@plt>
+   845e8: f947a6b9     	ldr	x25, [x21, #0xf48]
+   845ec: 8b37c277     	add	x23, x19, w23, sxtw
+   845f0: f947aad6     	ldr	x22, [x22, #0xf50]
+   845f4: 8b000274     	add	x20, x19, x0
+   845f8: f9400320     	ldr	x0, [x25]
+   845fc: a9408801     	ldp	x1, x2, [x0, #0x8]
+   84600: eb02003f     	cmp	x1, x2
+   84604: 54000302     	b.hs	0x84664 <.text+0x78ec4>
+   84608: 91000422     	add	x2, x1, #0x1
+   8460c: f9000402     	str	x2, [x0, #0x8]
+   84610: 39400021     	ldrb	w1, [x1]
+   84614: 51002420     	sub	w0, w1, #0x9
+   84618: 12001c00     	and	w0, w0, #0xff
+   8461c: 71005c1f     	cmp	w0, #0x17
+   84620: 7a441800     	ccmp	w0, #0x4, #0x0, ne
+   84624: 54000169     	b.ls	0x84650 <.text+0x78eb0>
+   84628: aa1303e0     	mov	x0, x19
+   8462c: 38001681     	strb	w1, [x20], #0x1
+   84630: eb1402ff     	cmp	x23, x20
+   84634: 54000141     	b.ne	0x8465c <.text+0x78ebc>
+   84638: 3900029f     	strb	wzr, [x20]
+   8463c: a9415bf5     	ldp	x21, x22, [sp, #0x10]
+   84640: a94263f7     	ldp	x23, x24, [sp, #0x20]
+   84644: a9437bf9     	ldp	x25, x30, [sp, #0x30]
+   84648: a8c453f3     	ldp	x19, x20, [sp], #0x40
+   8464c: d65f03c0     	ret
+   84650: eb14027f     	cmp	x19, x20
+   84654: 54000121     	b.ne	0x84678 <.text+0x78ed8>
+   84658: aa1403e0     	mov	x0, x20
+   8465c: aa0003f3     	mov	x19, x0
+   84660: 17ffffe6     	b	0x845f8 <.text+0x78e58>
+   84664: 97fe1c3b     	bl	0xb750 <__uflow@plt>
+   84668: 3100041f     	cmn	w0, #0x1
+   8466c: 54000581     	b.ne	0x8471c <.text+0x78f7c>
+   84670: eb14027f     	cmp	x19, x20
+   84674: 54000580     	b.eq	0x84724 <.text+0x78f84>
+   84678: 3900029f     	strb	wzr, [x20]
+   8467c: f94012c1     	ldr	x1, [x22, #0x20]
+   84680: b4000201     	cbz	x1, 0x846c0 <.text+0x78f20>
+   84684: aa1303e0     	mov	x0, x19
+   84688: 97fe19f6     	bl	0xae60 <strcmp@plt>
+   8468c: 350001a0     	cbnz	w0, 0x846c0 <.text+0x78f20>
+   84690: f947a6b5     	ldr	x21, [x21, #0xf48]
+   84694: aa1503f4     	mov	x20, x21
+   84698: f94002a0     	ldr	x0, [x21]
+   8469c: a9408801     	ldp	x1, x2, [x0, #0x8]
+   846a0: eb01005f     	cmp	x2, x1
+   846a4: 54000268     	b.hi	0x846f0 <.text+0x78f50>
+   846a8: 97fe1c2a     	bl	0xb750 <__uflow@plt>
+   846ac: 3100041f     	cmn	w0, #0x1
+   846b0: 54000260     	b.eq	0x846fc <.text+0x78f5c>
+   846b4: f9400280     	ldr	x0, [x20]
+   846b8: a9408801     	ldp	x1, x2, [x0, #0x8]
+   846bc: 17fffff9     	b	0x846a0 <.text+0x78f00>
+   846c0: aa1303e0     	mov	x0, x19
+   846c4: 97ffff48     	bl	0x843e4 <.text+0x78c44>
+   846c8: 91000680     	add	x0, x20, #0x1
+   846cc: 71000718     	subs	w24, w24, #0x1
+   846d0: aa0003f4     	mov	x20, x0
+   846d4: 54fffae1     	b.ne	0x84630 <.text+0x78e90>
+   846d8: 3900029f     	strb	wzr, [x20]
+   846dc: a9415bf5     	ldp	x21, x22, [sp, #0x10]
+   846e0: a94263f7     	ldp	x23, x24, [sp, #0x20]
+   846e4: a9437bf9     	ldp	x25, x30, [sp, #0x30]
+   846e8: a8c453f3     	ldp	x19, x20, [sp], #0x40
+   846ec: d65f03c0     	ret
+   846f0: 91000421     	add	x1, x1, #0x1
+   846f4: f9000401     	str	x1, [x0, #0x8]
+   846f8: 17ffffea     	b	0x846a0 <.text+0x78f00>
+   846fc: aa1303f4     	mov	x20, x19
+   84700: aa1303e0     	mov	x0, x19
+   84704: 3900029f     	strb	wzr, [x20]
+   84708: a9415bf5     	ldp	x21, x22, [sp, #0x10]
+   8470c: a94263f7     	ldp	x23, x24, [sp, #0x20]
+   84710: a9437bf9     	ldp	x25, x30, [sp, #0x30]
+   84714: a8c453f3     	ldp	x19, x20, [sp], #0x40
+   84718: d65f03c0     	ret
+   8471c: 12001c01     	and	w1, w0, #0xff
+   84720: 17ffffbd     	b	0x84614 <.text+0x78e74>
+   84724: 3900029f     	strb	wzr, [x20]
+   84728: aa1403e0     	mov	x0, x20
+   8472c: a9415bf5     	ldp	x21, x22, [sp, #0x10]
+   84730: a94263f7     	ldp	x23, x24, [sp, #0x20]
+   84734: a9437bf9     	ldp	x25, x30, [sp, #0x30]
+   84738: a8c453f3     	ldp	x19, x20, [sp], #0x40
+   8473c: d65f03c0     	ret

@@ -1,0 +1,23 @@
+STATIC ONLY; complete .eh_frame start-to-next-start interval; nearest labels are not private symbols
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6b6b30: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  6b6b34: 910003fd     	mov	x29, sp
+  6b6b38: f9000fe0     	str	x0, [sp, #0x18]
+  6b6b3c: 940181d2     	bl	0x717284 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x29204>
+  6b6b40: 2a0003e1     	mov	w1, w0
+  6b6b44: f9400fe0     	ldr	x0, [sp, #0x18]
+  6b6b48: b9410000     	ldr	w0, [x0, #0x100]
+  6b6b4c: 4b000021     	sub	w1, w1, w0
+  6b6b50: f9400fe0     	ldr	x0, [sp, #0x18]
+  6b6b54: b9010401     	str	w1, [x0, #0x104]
+  6b6b58: f9400fe0     	ldr	x0, [sp, #0x18]
+  6b6b5c: 52800081     	mov	w1, #0x4                // =4
+  6b6b60: b900e801     	str	w1, [x0, #0xe8]
+  6b6b64: d503201f     	nop
+  6b6b68: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  6b6b6c: d65f03c0     	ret

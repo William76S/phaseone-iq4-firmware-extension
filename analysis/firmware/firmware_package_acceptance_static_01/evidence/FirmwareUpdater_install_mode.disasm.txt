@@ -1,0 +1,62 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  756ae8:      	stp	x29, x30, [sp, #-0x30]!
+  756aec:      	mov	x29, sp
+  756af0:      	str	x0, [sp, #0x18]
+  756af4:      	ldr	x0, [sp, #0x18]
+  756af8:      	ldr	x0, [x0, #0x6b8]
+  756afc:      	add	x0, x0, #0xf38
+  756b00:      	bl	0x41497c <.text+0x974c>
+  756b04:      	and	w1, w0, #0xff
+  756b08:      	ldr	x0, [sp, #0x18]
+  756b0c:      	add	x0, x0, #0xa, lsl #12   // =0xa000
+  756b10:      	strb	w1, [x0, #0x136]
+  756b14:      	ldr	x0, [sp, #0x18]
+  756b18:      	ldr	x2, [x0, #0x5f0]
+  756b1c:      	ldr	x0, [sp, #0x18]
+  756b20:      	ldr	x0, [x0, #0x5f0]
+  756b24:      	ldr	x0, [x0]
+  756b28:      	add	x0, x0, #0x40
+  756b2c:      	ldr	x1, [x0]
+  756b30:      	mov	x0, x2
+  756b34:      	blr	x1
+  756b38:      	and	w1, w0, #0xff
+  756b3c:      	ldr	x0, [sp, #0x18]
+  756b40:      	add	x0, x0, #0xa, lsl #12   // =0xa000
+  756b44:      	strb	w1, [x0, #0x133]
+  756b48:      	ldr	x0, [sp, #0x18]
+  756b4c:      	add	x0, x0, #0xa, lsl #12   // =0xa000
+  756b50:      	ldrb	w0, [x0, #0x133]
+  756b54:      	eor	w0, w0, #0x1
+  756b58:      	and	w1, w0, #0xff
+  756b5c:      	ldr	x0, [sp, #0x18]
+  756b60:      	add	x0, x0, #0xa, lsl #12   // =0xa000
+  756b64:      	strb	w1, [x0, #0x132]
+  756b68:      	ldr	x0, [sp, #0x18]
+  756b6c:      	add	x0, x0, #0xa, lsl #12   // =0xa000
+  756b70:      	ldrb	w0, [x0, #0x130]
+  756b74:      	cmp	w0, #0x0
+  756b78:      	cset	w0, eq
+  756b7c:      	strb	w0, [sp, #0x2f]
+  756b80:      	ldrb	w0, [sp, #0x2f]
+  756b84:      	cmp	w0, #0x0
+  756b88:      	b.ne	0x756ba0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x3ce74>
+  756b8c:      	ldr	x0, [sp, #0x18]
+  756b90:      	add	x0, x0, #0xa, lsl #12   // =0xa000
+  756b94:      	ldrb	w0, [x0, #0x133]
+  756b98:      	cmp	w0, #0x0
+  756b9c:      	b.eq	0x756ba8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x3ce7c>
+  756ba0:      	mov	w1, #0x1                // =1
+  756ba4:      	b	0x756bac <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x3ce80>
+  756ba8:      	mov	w1, #0x0                // =0
+  756bac:      	ldr	x0, [sp, #0x18]
+  756bb0:      	add	x0, x0, #0xa, lsl #12   // =0xa000
+  756bb4:      	strb	w1, [x0, #0x134]
+  756bb8:      	nop
+  756bbc:      	ldp	x29, x30, [sp], #0x30
+  756bc0:      	ret

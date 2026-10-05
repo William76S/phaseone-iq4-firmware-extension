@@ -1,0 +1,17 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006ee080 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_>:
+  7144a8: d10083ff     	sub	sp, sp, #0x20
+  7144ac: f90007e0     	str	x0, [sp, #0x8]
+  7144b0: f94007e0     	ldr	x0, [sp, #0x8]
+  7144b4: 3940e000     	ldrb	w0, [x0, #0x38]
+  7144b8: 39007fe0     	strb	w0, [sp, #0x1f]
+  7144bc: f94007e0     	ldr	x0, [sp, #0x8]
+  7144c0: 52800021     	mov	w1, #0x1                // =1
+  7144c4: 3900e001     	strb	w1, [x0, #0x38]
+  7144c8: 39407fe0     	ldrb	w0, [sp, #0x1f]
+  7144cc: 910083ff     	add	sp, sp, #0x20
+  7144d0: d65f03c0     	ret

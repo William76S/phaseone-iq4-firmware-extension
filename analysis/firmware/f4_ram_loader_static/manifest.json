@@ -1,0 +1,104 @@
+{
+  "inputs": {
+    "boot": {
+      "path": "analysis/firmware/extracted/Boot_4.00.13.bin",
+      "sha256": "7a3a3d6f62c61e7d627a9f55d844d74be9111b26eb7a7fa42f5bdd7be7dabe9e",
+      "bytes": 71874288
+    },
+    "user": {
+      "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+      "bytes": 11874544
+    },
+    "ramdisk": {
+      "path": "analysis/firmware/P1_ramdisk.ext2",
+      "sha256": "2ca2a497fb22cb3b16009f5dab2aad1f744982aaafb6c928ac688c0a3f9dbccb",
+      "bytes": 134217728
+    },
+    "inventory": {
+      "path": "analysis/firmware/boot_inventory.json",
+      "sha256": "d75acf1247e82b20c867a5d9affd15e514a5f143ef8a260d0fd40f0141c0aace",
+      "bytes": 1787914
+    },
+    "kernel_config": {
+      "path": "analysis/firmware/kernel.config.txt",
+      "sha256": "da0ad7799b5836a54d4790af89e0215f35aba31821e779d5aaa199b5dbe7fc34",
+      "bytes": 115842
+    },
+    "prior_module": {
+      "path": "analysis/sdk_reference/F4_TEMPORARY_MODULE_ENTRY_STATIC.md",
+      "sha256": "a4f7235d6ed9a057aab07be9ca62d0d8e813756e61e889414c03b92294b344ed",
+      "bytes": 9497
+    },
+    "prior_bootstrap": {
+      "path": "analysis/firmware/BOOTSTRAP_RECOVERY_INCREMENT.md",
+      "sha256": "ea1cf5f39fc5c70fba7648ef3a7247852b40de2eb1ad3774e37317a3dc60cb25",
+      "bytes": 11017
+    },
+    "shell_input_guard": {
+      "path": "analysis/firmware/SHELL_INPUT_GUARD_STATIC.md",
+      "sha256": "05595f74ff3094de56c9de897f917e3f87d21ec82308e295b11802740e5eca94",
+      "bytes": 8949
+    }
+  },
+  "sources_and_report": {
+    "tools/firmware/f4_ram_loader_collect_static.py": "9f713ccdb800d2757b44cdbb404f2dd5355fae3f5f6d214a7da454d7d2ddbc5e",
+    "tools/firmware/f4_ram_loader_validate_static.py": "dad83fbd01187a878ddc6cbaf832b3f28c8309d4c6b846d0a17a4935f5b25e19",
+    "tools/firmware/f4_ram_entry_01/README.md": "fd7cb316aa7a5b0bd93fb15ffef35e0f701b84fc0744471133d1a2079b3b4292",
+    "tools/firmware/inspect_boot.py": "b2e5ea99a001cf70fb3dc12b95df4dd34351be2cbc257f9d79cd1404a9755a3a",
+    "tools/firmware/save_setup_security_collect_static.py": "aac5df8cfa3f819f196921181b1efa7679be0b4627ef4031419cd888358b5f18",
+    "tools/firmware/f4_ram_entry_01/build_readonly_probe.py": "74ef9292e8251d9a0623b63221e7f213e3917f4c3f696e198b25276dd37f72b6",
+    "tools/firmware/f4_ram_entry_01/one_shot_model.py": "9c732079c7e420de769678cde214dc3d2ba2341e57f1223e95151fbed12bcc46",
+    "tools/firmware/f4_ram_entry_01/run_host_validation.py": "eafdde7c19528ee6bbe1d2dc92209d48900f0482d99070250d9fa4f0a0800cf6",
+    "tools/firmware/f4_ram_entry_01/test_monitor_parser.py": "b49abe5b6293e5b457e1c9ef74f92173a92d7fad1c756bf7022b0724ebf04223",
+    "tools/firmware/f4_ram_entry_01/test_one_shot_model.py": "9d2d9ce7edae253c10d000557d3ed67f4289079f2b78ad5ede034dd8fdb930e2",
+    "tools/firmware/f4_ram_entry_01/readonly_monitor.c": "b9ff162491d3be3adfc8115d7f00fca83c2726ee16544e764ef1e8a515c2ddaa",
+    "analysis/firmware/F4_RAM_ONE_SHOT_ENTRY_STATIC.md": "39d00ba17f370b44ef59fd888d349393f8b0e34a20f8619603d4b7bc44cfcf61"
+  },
+  "members": {
+    "analysis/firmware/f4_ram_loader_static/.gitignore": "4dd6282e87e2700c1dcb9391645a6bcad34dda19a068229a98cd287c442ff04a",
+    "analysis/firmware/f4_ram_loader_static/LD_prefix_environment_iterator.ld.disasm.txt": "56f9f7ed5b9d19d0c446fa45237b8e0d3eef7674a9b0b39cfeac82bcbec93abf",
+    "analysis/firmware/f4_ram_loader_static/OAD_compare_and_store.ld.disasm.txt": "d90f77f323a568bd8e7fb19a54b64d89e480b3afe132b53f6b6dcfc716558270",
+    "analysis/firmware/f4_ram_loader_static/PREL_compare.ld.disasm.txt": "02216d7d864b62b48a255d335a3b87999d0ca18ddc3bc7322b68da6b829e97ba",
+    "analysis/firmware/f4_ram_loader_static/boot_ram_root_static.json": "fe9dccb62dd47dbd2e577e38361572f9e3d4a1d33778dd9ccfe8d2216c89d8d7",
+    "analysis/firmware/f4_ram_loader_static/call_maps_init.ld.disasm.txt": "8f4f775c7593125ae98eaf61891459aaa2ff183cb4c55c3434ff2f81e57e5ffb",
+    "analysis/firmware/f4_ram_loader_static/call_one_map_init.ld.disasm.txt": "1a483db59569528337eef5e8cbb3595180d523872599e23f170beee409ddb43a",
+    "analysis/firmware/f4_ram_loader_static/equal_length_call_inspection.json": "b620848664f2eaae934b428d3eac8e73a974bafa8dd75905a8ac5ce27f44152c",
+    "analysis/firmware/f4_ram_loader_static/exact_bytes.json": "0f7d716d0b214eae49a7f742b6d3b8a821a353fb0d0cffeb8cdefcff30ea9288",
+    "analysis/firmware/f4_ram_loader_static/host_validation.json": "4378b43d5eaa0a5a87b5f42c71dd47fa68390916cb16663f63ea188d8fb4ab2e",
+    "analysis/firmware/f4_ram_loader_static/init_clear_exited_pid.busybox.disasm.txt": "59cce03c5ab973de6d352edfece768cc6fb14e43073671a8d1b087411d7729c3",
+    "analysis/firmware/f4_ram_loader_static/init_exec_command.busybox.disasm.txt": "24e01b27502a159c368191baedccccb635931f0f1d146191c89abdccddcee736",
+    "analysis/firmware/f4_ram_loader_static/init_parse_inittab.busybox.disasm.txt": "d58aa77e24b991fb8a697f2e2c094f8f7d7a9426734ebacf4d5d039686c713de",
+    "analysis/firmware/f4_ram_loader_static/init_respawn_wait_loop.busybox.disasm.txt": "61c3a616f1cfb984483e9d0b2205e0519ecaef5c45ccdd0db4fea797b184e8a5",
+    "analysis/firmware/f4_ram_loader_static/init_run_actions.busybox.disasm.txt": "36493a282f89f2a0d85d666bd353de2fb2c461d122277ad34cf363cb3abdfcd9",
+    "analysis/firmware/f4_ram_loader_static/init_spawn_child.busybox.disasm.txt": "a5af8145d6b21f612124cc60f3a303fc56505bb4c4db29bad96feef5e0370db3",
+    "analysis/firmware/f4_ram_loader_static/preload_map_callback.ld.disasm.txt": "937efef84d4334ded8ef3f9ea9a76f4d317be75edf155e60a0d3c82a77a9f2b0",
+    "analysis/firmware/f4_ram_loader_static/preload_map_wrapper.ld.disasm.txt": "9f4e77a1c8ede8eab9f90fbebca9d90a65734568aaad9cab88570e866a86052e",
+    "analysis/firmware/f4_ram_loader_static/preload_name_secure_gate.ld.disasm.txt": "0d008f8288c082b67f15df39e753da9176033845c181ef1efea143bca459685e",
+    "analysis/firmware/f4_ram_loader_static/preload_pointer_consumer.ld.disasm.txt": "c4cd6fd959d934077559f0a5c366324c3ceba5fb6cda4402d97930b83edd141a",
+    "analysis/firmware/f4_ram_loader_static/preload_token_list.ld.disasm.txt": "21df197b82fe9ec7ef2dfb4f494414f36a4e6e22f0d5c83ced2fe5adb0a549ec",
+    "analysis/firmware/f4_ram_loader_static/preload_token_list_caller.ld.disasm.txt": "4dbacf5e761e1be9d5f8d75afb5eec7941f8ef7b048bb87635f371f39009eb7c",
+    "analysis/firmware/f4_ram_loader_static/readonly_probe_build.json": "84a2694391054b9e2e143824f306adbe5a3692bc03b626ede34aed37d31a5ba0",
+    "analysis/firmware/f4_ram_loader_static/rootfs_records.json": "37f1fd30eb5d92d004478d693d5b14fbde3d93d41942d9281522efdfb31721ac",
+    "analysis/firmware/f4_ram_loader_static/startup_post_environment_secure_branch.ld.disasm.txt": "949d096d07ff1743ddc2eeb186fc3c3d53cf3a19b22235ad71cfb452c3d40657",
+    "analysis/firmware/f4_ram_loader_static/startup_secure_and_environment_dispatch.ld.disasm.txt": "f02d7686675b412393436587b65471dc42c87ea3a4e90a2260e914e69159a4a6",
+    "analysis/firmware/f4_ram_loader_static/tftp_applet.busybox.disasm.txt": "285ba69fb0a9f59b9ad7798fc027edaad54122143831acf86c8fbf52d34d3067",
+    "analysis/firmware/f4_ram_loader_static/wget_open_output.busybox.disasm.txt": "c8bb81e3abae38aafd73c1c81436309e794a302d984c81eb82d169f64ff680bf",
+    "analysis/firmware/f4_ram_loader_static/wget_options.busybox.disasm.txt": "dc548b5e91e029cd0260a609a2884b8af9f12eae7adea1eacebc4cc9b1493ee7",
+    "analysis/firmware/f4_ram_loader_static/wget_output_flags_and_options.busybox.disasm.txt": "093163c91458d73b867956a1ac160fb60e7197c4b87a7d1d0461b426eef704d7",
+    "analysis/firmware/f4_ram_loader_static/wget_proxy_environment.busybox.disasm.txt": "6373be14345f548a8d76d84f7bf47ae20f95fadc2a0d92b4f0099f7ad0739231",
+    "analysis/firmware/f4_ram_loader_static/wget_transfer_timeout_counter.busybox.disasm.txt": "c4b2e5508280d12d18c26b09669797b15699434683bea1b7e4189fbff3dd1f14"
+  },
+  "derived_local_only_ELFs": {
+    "analysis/firmware/f4_ram_loader_static/ld-2.28.analysis.elf": "9be1d9704ad489d8d573f6a9fb851d4522f92481de5795d9defee99ba96dce8f",
+    "analysis/firmware/f4_ram_loader_static/busybox.analysis.elf": "bf695c8a770fc3fb0d47b3daf46b5c5841e538b3df17054e73660399d221597d"
+  },
+  "counts": {
+    "ld_windows": 13,
+    "busybox_windows": 12,
+    "data_records": 9
+  },
+  "device_accessed": false,
+  "target_executed": false,
+  "actual_recovery_or_loading_verified": false
+}

@@ -1,0 +1,184 @@
+{
+  "schema": "iq4_f1_geometry04_fixed_wire_layout",
+  "little_endian": true,
+  "publication_bytes": 760,
+  "metadata_bytes": 744,
+  "facts_bytes": 176,
+  "old_publication_preserved_bytes": 440,
+  "user_source_binding": {
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "fields": [
+    {
+      "name": "outer_sequence",
+      "offset": 0,
+      "format": "LE32 atomic"
+    },
+    {
+      "name": "total_bytes",
+      "offset": 4,
+      "format": "LE32 760"
+    },
+    {
+      "name": "publication_schema",
+      "offset": 8,
+      "format": "LE32 4"
+    },
+    {
+      "name": "header_reserved",
+      "offset": 12,
+      "format": "LE32 zero"
+    },
+    {
+      "name": "metadata_schema",
+      "offset": 16,
+      "format": "LE32 4"
+    },
+    {
+      "name": "metadata_bytes",
+      "offset": 20,
+      "format": "LE32 744"
+    },
+    {
+      "name": "result",
+      "offset": 24,
+      "format": "LE32 0/1/2/3/4/8/9"
+    },
+    {
+      "name": "scalar_present",
+      "offset": 28,
+      "format": "LE32 bool"
+    },
+    {
+      "name": "attempts",
+      "offset": 32,
+      "format": "LE64 max64"
+    },
+    {
+      "name": "geometry_epoch",
+      "offset": 40,
+      "format": "LE64 successful-snapshot count"
+    },
+    {
+      "name": "source_dispatch_epoch",
+      "offset": 48,
+      "format": "LE64 qualified UI dispatch"
+    },
+    {
+      "name": "successes",
+      "offset": 56,
+      "format": "LE64"
+    },
+    {
+      "name": "rejected",
+      "offset": 64,
+      "format": "LE64"
+    },
+    {
+      "name": "exact_user_source_sha256",
+      "offset": 72,
+      "format": "32 raw bytes"
+    },
+    {
+      "name": "exact_user_source_bytes",
+      "offset": 104,
+      "format": "LE64 11874544"
+    },
+    {
+      "name": "access_candidate",
+      "offset": 112,
+      "format": "LE64"
+    },
+    {
+      "name": "engine_candidate",
+      "offset": 120,
+      "format": "LE64"
+    },
+    {
+      "name": "buffer_metadata_object_candidate",
+      "offset": 128,
+      "format": "LE64 engine+0x2170"
+    },
+    {
+      "name": "source_startup",
+      "offset": 136,
+      "format": "LE32 0/4"
+    },
+    {
+      "name": "paint_scope_called",
+      "offset": 140,
+      "format": "LE32 zero"
+    },
+    {
+      "name": "full_source_mapping_verified",
+      "offset": 144,
+      "format": "LE32 zero"
+    },
+    {
+      "name": "fresh_blit_verified",
+      "offset": 148,
+      "format": "LE32 zero"
+    },
+    {
+      "name": "surface_lease_verified",
+      "offset": 152,
+      "format": "LE32 zero"
+    },
+    {
+      "name": "metadata_reserved",
+      "offset": 156,
+      "format": "LE32 zero"
+    },
+    {
+      "name": "embedded_Entry01_Observation",
+      "offset": 160,
+      "format": "424 exact bytes; frozen source schema"
+    },
+    {
+      "name": "local_control_candidate",
+      "offset": 584,
+      "format": "Rectangle24 LE64 addresspoint +4*LE32 signed"
+    },
+    {
+      "name": "recursive_bounds_candidate",
+      "offset": 608,
+      "format": "Rectangle24"
+    },
+    {
+      "name": "locked_roi_candidate",
+      "offset": 632,
+      "format": "Rectangle24"
+    },
+    {
+      "name": "cached_pan_x_y",
+      "offset": 656,
+      "format": "2*LE32 signed"
+    },
+    {
+      "name": "scale_normalfit",
+      "offset": 664,
+      "format": "2*IEEE754 float32 LE"
+    },
+    {
+      "name": "rotation_client_accessowner_configWH_slotWH",
+      "offset": 672,
+      "format": "7*LE32 signed"
+    },
+    {
+      "name": "countdown_softwareID_slot_parentdepth_alignment",
+      "offset": 700,
+      "format": "5*LE32"
+    },
+    {
+      "name": "running_visible_animation_borrowpresence_retain_lockedmetadata_recursivepresent_parentwouldwrite_consistent_reserved",
+      "offset": 720,
+      "format": "10*LE32; 9 bool +zero"
+    }
+  ],
+  "three_actual_verified_fields_always_zero": true,
+  "paint_scope_input_unavailable": true,
+  "geometry_epoch_is_not_source_frame_count": true,
+  "two_equal_samples_are_not_quiescence_or_lifetime_proof": true,
+  "camera_access": false
+}

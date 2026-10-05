@@ -1,0 +1,899 @@
+{
+  "schema": "iq4_native_copy_rtti_static_01",
+  "library": {
+    "path": "analysis/firmware/f1_user_ui_entry_01/libstdcxx_original_ANALYSIS_ONLY.elf",
+    "bytes": 1538432,
+    "sha256": "5876c5861ffae1b3f6a5fc091be8f1d601edf602ebeed6a4aa3bf5c3cfbe11aa"
+  },
+  "user": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "roots": [
+    "_ZTVN10__cxxabiv117__class_type_infoE",
+    "_ZTIi"
+  ],
+  "base_alignment": 65536,
+  "anchor": {
+    "user_copy_slot": 16001496,
+    "library_function_va": 585272,
+    "name": "_ZN10__cxxabiv117__class_type_infoD1Ev"
+  },
+  "COPY_dependencies": [
+    {
+      "symbol": "_ZTVN10__cxxabiv117__class_type_infoE",
+      "va": 16001480,
+      "bytes": 88,
+      "dynsym_index": 377,
+      "version_index": 8,
+      "needed_library": "libstdc++.so.6",
+      "version_name": "CXXABI_1.3",
+      "version_flags": 0,
+      "version_hash": 90943443,
+      "copy_relocation_index": 8,
+      "copy_relocation_record_hex": "c829f4000000000000040000790100000000000000000000",
+      "original_file_all_zero": true
+    },
+    {
+      "symbol": "_ZTIi",
+      "va": 16001648,
+      "bytes": 16,
+      "dynsym_index": 522,
+      "version_index": 8,
+      "needed_library": "libstdc++.so.6",
+      "version_name": "CXXABI_1.3",
+      "version_flags": 0,
+      "version_hash": 90943443,
+      "copy_relocation_index": 13,
+      "copy_relocation_record_hex": "702af40000000000000400000a0200000000000000000000",
+      "original_file_all_zero": true
+    },
+    {
+      "symbol": "_ZTVN10__cxxabiv120__si_class_type_infoE",
+      "va": 16001760,
+      "bytes": 88,
+      "dynsym_index": 493,
+      "version_index": 8,
+      "needed_library": "libstdc++.so.6",
+      "version_name": "CXXABI_1.3",
+      "version_flags": 0,
+      "version_hash": 90943443,
+      "copy_relocation_index": 16,
+      "copy_relocation_record_hex": "e02af4000000000000040000ed0100000000000000000000",
+      "original_file_all_zero": true
+    }
+  ],
+  "spans": [
+    {
+      "symbol": "_ZTVN10__cxxabiv117__class_type_infoE",
+      "lib_dynsym_index": 250,
+      "mode": 0,
+      "address": 16001480,
+      "library_va": 1559408,
+      "bytes": 88,
+      "kind": "object",
+      "raw_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365",
+      "relocations": [
+        {
+          "offset": 32,
+          "target_symbol": "_ZNKSt9type_info14__is_pointer_pEv",
+          "target_mode": 1,
+          "target_address": 596168,
+          "addend": 0,
+          "library_relocation_index": 1116,
+          "library_relocation_hex": "90cb170000000000010100000d1300000000000000000000"
+        },
+        {
+          "offset": 40,
+          "target_symbol": "_ZNKSt9type_info15__is_function_pEv",
+          "target_mode": 1,
+          "target_address": 596168,
+          "addend": 0,
+          "library_relocation_index": 1127,
+          "library_relocation_hex": "98cb17000000000001010000ef0100000000000000000000"
+        },
+        {
+          "offset": 8,
+          "target_symbol": "_ZTIN10__cxxabiv117__class_type_infoE",
+          "target_mode": 1,
+          "target_address": 1559384,
+          "addend": 0,
+          "library_relocation_index": 1189,
+          "library_relocation_hex": "78cb17000000000001010000760300000000000000000000"
+        },
+        {
+          "offset": 16,
+          "target_symbol": "_ZN10__cxxabiv117__class_type_infoD1Ev",
+          "target_mode": 1,
+          "target_address": 585272,
+          "addend": 0,
+          "library_relocation_index": 1192,
+          "library_relocation_hex": "80cb170000000000010100003a1000000000000000000000"
+        },
+        {
+          "offset": 24,
+          "target_symbol": "_ZN10__cxxabiv117__class_type_infoD0Ev",
+          "target_mode": 1,
+          "target_address": 585296,
+          "addend": 0,
+          "library_relocation_index": 1193,
+          "library_relocation_hex": "88cb17000000000001010000fe0400000000000000000000"
+        },
+        {
+          "offset": 48,
+          "target_symbol": "_ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj",
+          "target_mode": 1,
+          "target_address": 585656,
+          "addend": 0,
+          "library_relocation_index": 1194,
+          "library_relocation_hex": "a0cb17000000000001010000260100000000000000000000"
+        },
+        {
+          "offset": 56,
+          "target_symbol": "_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv",
+          "target_mode": 1,
+          "target_address": 585144,
+          "addend": 0,
+          "library_relocation_index": 1198,
+          "library_relocation_hex": "a8cb17000000000001010000800d00000000000000000000"
+        },
+        {
+          "offset": 64,
+          "target_symbol": "_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE",
+          "target_mode": 1,
+          "target_address": 585552,
+          "addend": 0,
+          "library_relocation_index": 1201,
+          "library_relocation_hex": "b0cb17000000000001010000b50f00000000000000000000"
+        },
+        {
+          "offset": 72,
+          "target_symbol": "_ZNK10__cxxabiv117__class_type_info12__do_dyncastElNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE",
+          "target_mode": 1,
+          "target_address": 585336,
+          "addend": 0,
+          "library_relocation_index": 1202,
+          "library_relocation_hex": "b8cb17000000000001010000980800000000000000000000"
+        },
+        {
+          "offset": 80,
+          "target_symbol": "_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcElPKvPKS0_S2_",
+          "target_mode": 1,
+          "target_address": 585256,
+          "addend": 0,
+          "library_relocation_index": 1203,
+          "library_relocation_hex": "c0cb17000000000001010000ba0f00000000000000000000"
+        }
+      ]
+    },
+    {
+      "symbol": "_ZTIi",
+      "lib_dynsym_index": 382,
+      "mode": 0,
+      "address": 16001648,
+      "library_va": 1561224,
+      "bytes": 16,
+      "kind": "object",
+      "raw_hex": "00000000000000000000000000000000",
+      "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+      "relocations": [
+        {
+          "offset": 0,
+          "target_symbol": "_ZTVN10__cxxabiv123__fundamental_type_infoE",
+          "target_mode": 1,
+          "target_address": 1559976,
+          "addend": 16,
+          "library_relocation_index": 1298,
+          "library_relocation_hex": "88d2170000000000010100003e0900001000000000000000"
+        },
+        {
+          "offset": 8,
+          "target_symbol": "_ZTSi",
+          "target_mode": 1,
+          "target_address": 1248656,
+          "addend": 0,
+          "library_relocation_index": 1369,
+          "library_relocation_hex": "90d217000000000001010000e00400000000000000000000"
+        }
+      ]
+    },
+    {
+      "symbol": "_ZNKSt9type_info14__is_pointer_pEv",
+      "lib_dynsym_index": 4877,
+      "mode": 1,
+      "address": 596168,
+      "library_va": 596168,
+      "bytes": 8,
+      "kind": "function",
+      "raw_hex": "00008052c0035fd6",
+      "sha256": "2f6110664dbd16b514a0c2c7c8326932a36e85d2f15b91e57ca76efd2c7a625a",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZNKSt9type_info15__is_function_pEv",
+      "lib_dynsym_index": 495,
+      "mode": 1,
+      "address": 596168,
+      "library_va": 596168,
+      "bytes": 8,
+      "kind": "function",
+      "raw_hex": "00008052c0035fd6",
+      "sha256": "2f6110664dbd16b514a0c2c7c8326932a36e85d2f15b91e57ca76efd2c7a625a",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZTIN10__cxxabiv117__class_type_infoE",
+      "lib_dynsym_index": 886,
+      "mode": 1,
+      "address": 1559384,
+      "library_va": 1559384,
+      "bytes": 24,
+      "kind": "object",
+      "raw_hex": "000000000000000000000000000000000000000000000000",
+      "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0",
+      "relocations": [
+        {
+          "offset": 0,
+          "target_symbol": "_ZTVN10__cxxabiv120__si_class_type_infoE",
+          "target_mode": 0,
+          "target_address": 16001760,
+          "addend": 16,
+          "library_relocation_index": 842,
+          "library_relocation_hex": "58cb17000000000001010000bd0300001000000000000000"
+        },
+        {
+          "offset": 16,
+          "target_symbol": "_ZTISt9type_info",
+          "target_mode": 1,
+          "target_address": 1562552,
+          "addend": 0,
+          "library_relocation_index": 1106,
+          "library_relocation_hex": "68cb17000000000001010000f10b00000000000000000000"
+        },
+        {
+          "offset": 8,
+          "target_symbol": "_ZTSN10__cxxabiv117__class_type_infoE",
+          "target_mode": 1,
+          "target_address": 1247936,
+          "addend": 0,
+          "library_relocation_index": 1188,
+          "library_relocation_hex": "60cb17000000000001010000ca0000000000000000000000"
+        }
+      ]
+    },
+    {
+      "symbol": "_ZN10__cxxabiv117__class_type_infoD1Ev",
+      "lib_dynsym_index": 4154,
+      "mode": 1,
+      "address": 585272,
+      "library_va": 585272,
+      "bytes": 20,
+      "kind": "function",
+      "raw_hex": "c1070090219044f921400091010000f98aedff17",
+      "sha256": "b3a5f50b2743e547f7f27acb744f2d09103e9399eff774d034d2243b1aab403c",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZN10__cxxabiv117__class_type_infoD0Ev",
+      "lib_dynsym_index": 1278,
+      "mode": 1,
+      "address": 585296,
+      "library_va": 585296,
+      "bytes": 40,
+      "kind": "function",
+      "raw_hex": "fd7bbea9fd030091f30b00f9f30300aa4cf6ff97e00313aa010280d2f30b40f9fd7bc2a8a3f6ff17",
+      "sha256": "769a5af565f8b01ff588054cd6777a862ce812d918d53960168135a0fb11ac7d",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj",
+      "lib_dynsym_index": 294,
+      "mode": 1,
+      "address": 585656,
+      "library_va": 585656,
+      "bytes": 168,
+      "kind": "function",
+      "raw_hex": "040440f9250440f99f0005eb00040054fd7bbda9fd030091f35301a9f40300aaf30301aaf55b02a9f503032af60302aa800040391fa8007140010054e10305aae00304aa7df3ff97c000003520008052f35341a9f55b42a9fd7bc3a8c0035fd6bf0e007188010054630240f9e20316aae10314aae00313aaf35341a9f55b42a9fd7bc3a8631440f960001fd620008052c0035fd600008052f35341a9f55b42a9fd7bc3a8c0035fd6",
+      "sha256": "3c3cfb9f57c066c9cb2c31f2ec72957383977a7e31bae274ffb808f2455ed0b1",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv",
+      "lib_dynsym_index": 3456,
+      "mode": 1,
+      "address": 585144,
+      "library_va": 585144,
+      "bytes": 108,
+      "kind": "function",
+      "raw_hex": "fd7bbca9fd030091040040f9ff1700f9ff1f00f9e3a30091841840f9f30b00f9f30302aa0202c0d2e21b00f9620240f980003fd6e03340b900041f121f180071e1000054e11740f9610200f920008052f30b40f9fd7bc4a8c0035fd600008052f30b40f9fd7bc4a8c0035fd6",
+      "sha256": "73e3e0085a9608dd34dcde56fe324b767fb170fbfedec1481d62502ac26ac5ba",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PKvRNS0_15__upcast_resultE",
+      "lib_dynsym_index": 4021,
+      "mode": 1,
+      "address": 585552,
+      "library_va": 585552,
+      "bytes": 104,
+      "kind": "function",
+      "raw_hex": "fd7bbda9fd030091000440f9f35301a9f30303aa210440f91f0001eb200100540300403914008052e21700f97fa80071400100549bf3ff97e21740f9e0000035000280d2c100805234008052620200f9610a00b9600a00f9e003142af35341a9fd7bc3a8c0035fd6",
+      "sha256": "d49aea24b3f4ade158d9f5635b414a2c8272e6580a97bffbbc9960a962a425dd",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZNK10__cxxabiv117__class_type_info12__do_dyncastElNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE",
+      "lib_dynsym_index": 2200,
+      "mode": 1,
+      "address": 585336,
+      "library_va": 585336,
+      "bytes": 212,
+      "kind": "function",
+      "raw_hex": "fd7bbca99f0006ebfd030091f35301a9f40307aaf55b02a9f50304aaf603022a130440f960020054610440f93f0013ebe0000054600240391fa8007100010054e00313aacdf3ff97a000003520008052950200f9960a00b9801200b900008052f35341a9f55b42a9fd7bc4a8c0035fd6a10440f93f0013eb20020054600240391fa8007140010054e00313aae31f00f9baf3ff9740010034e31f40f9610440f97f0201ebe1fcff54e9ffff17600440f91f0013eb41fdff54e5ffff17960e00b900008052f35341a9f55b42a9fd7bc4a8c0035fd6",
+      "sha256": "bd01124261a140600becc310390b636b003fe9b02e289b05df4b2c76da1f6b42",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZNK10__cxxabiv117__class_type_info20__do_find_public_srcElPKvPKS0_S2_",
+      "lib_dynsym_index": 4026,
+      "mode": 1,
+      "address": 585256,
+      "library_va": 585256,
+      "bytes": 16,
+      "kind": "function",
+      "raw_hex": "9f0002ebc000805200049f1ac0035fd6",
+      "sha256": "e378103484d964fa817a4fb7a40b0d70c776a93340ec5a97f3876db921f5bf50",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZTVN10__cxxabiv123__fundamental_type_infoE",
+      "lib_dynsym_index": 2366,
+      "mode": 1,
+      "address": 1559976,
+      "library_va": 1559976,
+      "bytes": 64,
+      "kind": "object",
+      "raw_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b",
+      "relocations": [
+        {
+          "offset": 32,
+          "target_symbol": "_ZNKSt9type_info14__is_pointer_pEv",
+          "target_mode": 1,
+          "target_address": 596168,
+          "addend": 0,
+          "library_relocation_index": 1119,
+          "library_relocation_hex": "c8cd170000000000010100000d1300000000000000000000"
+        },
+        {
+          "offset": 40,
+          "target_symbol": "_ZNKSt9type_info15__is_function_pEv",
+          "target_mode": 1,
+          "target_address": 596168,
+          "addend": 0,
+          "library_relocation_index": 1129,
+          "library_relocation_hex": "d0cd17000000000001010000ef0100000000000000000000"
+        },
+        {
+          "offset": 48,
+          "target_symbol": "_ZNKSt9type_info10__do_catchEPKS_PPvj",
+          "target_mode": 1,
+          "target_address": 596224,
+          "addend": 0,
+          "library_relocation_index": 1140,
+          "library_relocation_hex": "d8cd17000000000001010000910200000000000000000000"
+        },
+        {
+          "offset": 56,
+          "target_symbol": "_ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv",
+          "target_mode": 1,
+          "target_address": 596176,
+          "addend": 0,
+          "library_relocation_index": 1145,
+          "library_relocation_hex": "e0cd170000000000010100002a0400000000000000000000"
+        },
+        {
+          "offset": 8,
+          "target_symbol": "_ZTIN10__cxxabiv123__fundamental_type_infoE",
+          "target_mode": 1,
+          "target_address": 1559952,
+          "addend": 0,
+          "library_relocation_index": 1226,
+          "library_relocation_hex": "b0cd17000000000001010000d40f00000000000000000000"
+        },
+        {
+          "offset": 16,
+          "target_symbol": "_ZN10__cxxabiv123__fundamental_type_infoD1Ev",
+          "target_mode": 1,
+          "target_address": 592920,
+          "addend": 0,
+          "library_relocation_index": 1227,
+          "library_relocation_hex": "b8cd17000000000001010000181400000000000000000000"
+        },
+        {
+          "offset": 24,
+          "target_symbol": "_ZN10__cxxabiv123__fundamental_type_infoD0Ev",
+          "target_mode": 1,
+          "target_address": 592944,
+          "addend": 0,
+          "library_relocation_index": 1228,
+          "library_relocation_hex": "c0cd170000000000010100001f0900000000000000000000"
+        }
+      ]
+    },
+    {
+      "symbol": "_ZTSi",
+      "lib_dynsym_index": 1248,
+      "mode": 1,
+      "address": 1248656,
+      "library_va": 1248656,
+      "bytes": 2,
+      "kind": "object",
+      "raw_hex": "6900",
+      "sha256": "e8902c7331527e223bf3d97d077ed97fcd7ac3d38f289b5b3ba4d97ea510db05",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZTVN10__cxxabiv120__si_class_type_infoE",
+      "lib_dynsym_index": 957,
+      "mode": 0,
+      "address": 16001760,
+      "library_va": 1562464,
+      "bytes": 88,
+      "kind": "object",
+      "raw_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "sha256": "10eef285deef7a4b7c82b22aa53589b7833df29de3814649c772bbd5c832f365",
+      "relocations": [
+        {
+          "offset": 32,
+          "target_symbol": "_ZNKSt9type_info14__is_pointer_pEv",
+          "target_mode": 1,
+          "target_address": 596168,
+          "addend": 0,
+          "library_relocation_index": 1122,
+          "library_relocation_hex": "80d7170000000000010100000d1300000000000000000000"
+        },
+        {
+          "offset": 40,
+          "target_symbol": "_ZNKSt9type_info15__is_function_pEv",
+          "target_mode": 1,
+          "target_address": 596168,
+          "addend": 0,
+          "library_relocation_index": 1133,
+          "library_relocation_hex": "88d717000000000001010000ef0100000000000000000000"
+        },
+        {
+          "offset": 48,
+          "target_symbol": "_ZNK10__cxxabiv117__class_type_info10__do_catchEPKSt9type_infoPPvj",
+          "target_mode": 1,
+          "target_address": 585656,
+          "addend": 0,
+          "library_relocation_index": 1195,
+          "library_relocation_hex": "90d717000000000001010000260100000000000000000000"
+        },
+        {
+          "offset": 56,
+          "target_symbol": "_ZNK10__cxxabiv117__class_type_info11__do_upcastEPKS0_PPv",
+          "target_mode": 1,
+          "target_address": 585144,
+          "addend": 0,
+          "library_relocation_index": 1199,
+          "library_relocation_hex": "98d717000000000001010000800d00000000000000000000"
+        },
+        {
+          "offset": 8,
+          "target_symbol": "_ZTIN10__cxxabiv120__si_class_type_infoE",
+          "target_mode": 1,
+          "target_address": 1562440,
+          "addend": 0,
+          "library_relocation_index": 1443,
+          "library_relocation_hex": "68d717000000000001010000e31300000000000000000000"
+        },
+        {
+          "offset": 16,
+          "target_symbol": "_ZN10__cxxabiv120__si_class_type_infoD1Ev",
+          "target_mode": 1,
+          "target_address": 595544,
+          "addend": 0,
+          "library_relocation_index": 1445,
+          "library_relocation_hex": "70d717000000000001010000d90a00000000000000000000"
+        },
+        {
+          "offset": 24,
+          "target_symbol": "_ZN10__cxxabiv120__si_class_type_infoD0Ev",
+          "target_mode": 1,
+          "target_address": 595568,
+          "addend": 0,
+          "library_relocation_index": 1446,
+          "library_relocation_hex": "78d7170000000000010100004d1400000000000000000000"
+        },
+        {
+          "offset": 64,
+          "target_symbol": "_ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE",
+          "target_mode": 1,
+          "target_address": 596056,
+          "addend": 0,
+          "library_relocation_index": 1447,
+          "library_relocation_hex": "a0d7170000000000010100003b0b00000000000000000000"
+        },
+        {
+          "offset": 72,
+          "target_symbol": "_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+          "target_mode": 1,
+          "target_address": 595736,
+          "addend": 0,
+          "library_relocation_index": 1449,
+          "library_relocation_hex": "a8d717000000000001010000490c00000000000000000000"
+        },
+        {
+          "offset": 80,
+          "target_symbol": "_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
+          "target_mode": 1,
+          "target_address": 595608,
+          "addend": 0,
+          "library_relocation_index": 1451,
+          "library_relocation_hex": "b0d717000000000001010000230100000000000000000000"
+        }
+      ]
+    },
+    {
+      "symbol": "_ZTISt9type_info",
+      "lib_dynsym_index": 3057,
+      "mode": 1,
+      "address": 1562552,
+      "library_va": 1562552,
+      "bytes": 16,
+      "kind": "object",
+      "raw_hex": "00000000000000000000000000000000",
+      "sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb",
+      "relocations": [
+        {
+          "offset": 0,
+          "target_symbol": "_ZTVN10__cxxabiv117__class_type_infoE",
+          "target_mode": 0,
+          "target_address": 16001480,
+          "addend": 16,
+          "library_relocation_index": 1008,
+          "library_relocation_hex": "b8d717000000000001010000fa0000001000000000000000"
+        },
+        {
+          "offset": 8,
+          "target_symbol": "_ZTSSt9type_info",
+          "target_mode": 1,
+          "target_address": 1249344,
+          "addend": 0,
+          "library_relocation_index": 1453,
+          "library_relocation_hex": "c0d717000000000001010000720700000000000000000000"
+        }
+      ]
+    },
+    {
+      "symbol": "_ZTSN10__cxxabiv117__class_type_infoE",
+      "lib_dynsym_index": 202,
+      "mode": 1,
+      "address": 1247936,
+      "library_va": 1247936,
+      "bytes": 34,
+      "kind": "object",
+      "raw_hex": "4e31305f5f637878616269763131375f5f636c6173735f747970655f696e666f4500",
+      "sha256": "3d31f0af5139731003613e0b0272e68289327baf2ead29811940a77e24d0b178",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZNKSt9type_info10__do_catchEPKS_PPvj",
+      "lib_dynsym_index": 657,
+      "mode": 1,
+      "address": 596224,
+      "library_va": 596224,
+      "bytes": 76,
+      "kind": "function",
+      "raw_hex": "020440f9210440f95f0001ebc001005443004039000080527fa8007120010054fd7bbfa9e00302aafd03009131e9ff971f000071e0179f1afd7bc1a8c0035fd6c0035fd620008052c0035fd6",
+      "sha256": "4344dd04ad984a3138e78e05ad1e3f091410708dc6618de61c63dd67a4d4f1d6",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZNKSt9type_info11__do_upcastEPKN10__cxxabiv117__class_type_infoEPPv",
+      "lib_dynsym_index": 1066,
+      "mode": 1,
+      "address": 596176,
+      "library_va": 596176,
+      "bytes": 8,
+      "kind": "function",
+      "raw_hex": "00008052c0035fd6",
+      "sha256": "2f6110664dbd16b514a0c2c7c8326932a36e85d2f15b91e57ca76efd2c7a625a",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZTIN10__cxxabiv123__fundamental_type_infoE",
+      "lib_dynsym_index": 4052,
+      "mode": 1,
+      "address": 1559952,
+      "library_va": 1559952,
+      "bytes": 24,
+      "kind": "object",
+      "raw_hex": "000000000000000000000000000000000000000000000000",
+      "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0",
+      "relocations": [
+        {
+          "offset": 0,
+          "target_symbol": "_ZTVN10__cxxabiv120__si_class_type_infoE",
+          "target_mode": 0,
+          "target_address": 16001760,
+          "addend": 16,
+          "library_relocation_index": 848,
+          "library_relocation_hex": "90cd17000000000001010000bd0300001000000000000000"
+        },
+        {
+          "offset": 16,
+          "target_symbol": "_ZTISt9type_info",
+          "target_mode": 1,
+          "target_address": 1562552,
+          "addend": 0,
+          "library_relocation_index": 1109,
+          "library_relocation_hex": "a0cd17000000000001010000f10b00000000000000000000"
+        },
+        {
+          "offset": 8,
+          "target_symbol": "_ZTSN10__cxxabiv123__fundamental_type_infoE",
+          "target_mode": 1,
+          "target_address": 1248376,
+          "addend": 0,
+          "library_relocation_index": 1225,
+          "library_relocation_hex": "98cd17000000000001010000e80000000000000000000000"
+        }
+      ]
+    },
+    {
+      "symbol": "_ZN10__cxxabiv123__fundamental_type_infoD1Ev",
+      "lib_dynsym_index": 5144,
+      "mode": 1,
+      "address": 592920,
+      "library_va": 592920,
+      "bytes": 20,
+      "kind": "function",
+      "raw_hex": "a10700d021c843f921400091010000f912e6ff17",
+      "sha256": "1dc09f1f4b008330aa511926fdb5eabee30348b1a663a4e245dba12702653d14",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZN10__cxxabiv123__fundamental_type_infoD0Ev",
+      "lib_dynsym_index": 2335,
+      "mode": 1,
+      "address": 592944,
+      "library_va": 592944,
+      "bytes": 40,
+      "kind": "function",
+      "raw_hex": "fd7bbea9fd030091f30b00f9f30300aab4e3ff97e00313aa010280d2f30b40f9fd7bc2a82befff17",
+      "sha256": "ab243d2323568b66dc4e8506a1c0f25fd53906174e18a41c1f0f2853c0fce756",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZTIN10__cxxabiv120__si_class_type_infoE",
+      "lib_dynsym_index": 5091,
+      "mode": 1,
+      "address": 1562440,
+      "library_va": 1562440,
+      "bytes": 24,
+      "kind": "object",
+      "raw_hex": "000000000000000000000000000000000000000000000000",
+      "sha256": "9d908ecfb6b256def8b49a7c504e6c889c4b0e41fe6ce3e01863dd7b61a20aa0",
+      "relocations": [
+        {
+          "offset": 0,
+          "target_symbol": "_ZTVN10__cxxabiv120__si_class_type_infoE",
+          "target_mode": 0,
+          "target_address": 16001760,
+          "addend": 16,
+          "library_relocation_index": 853,
+          "library_relocation_hex": "48d717000000000001010000bd0300001000000000000000"
+        },
+        {
+          "offset": 16,
+          "target_symbol": "_ZTIN10__cxxabiv117__class_type_infoE",
+          "target_mode": 1,
+          "target_address": 1559384,
+          "addend": 0,
+          "library_relocation_index": 1190,
+          "library_relocation_hex": "58d717000000000001010000760300000000000000000000"
+        },
+        {
+          "offset": 8,
+          "target_symbol": "_ZTSN10__cxxabiv120__si_class_type_infoE",
+          "target_mode": 1,
+          "target_address": 1249304,
+          "addend": 0,
+          "library_relocation_index": 1442,
+          "library_relocation_hex": "50d7170000000000010100009a0200000000000000000000"
+        }
+      ]
+    },
+    {
+      "symbol": "_ZN10__cxxabiv120__si_class_type_infoD1Ev",
+      "lib_dynsym_index": 2777,
+      "mode": 1,
+      "address": 595544,
+      "library_va": 595544,
+      "bytes": 20,
+      "kind": "function",
+      "raw_hex": "a10700b0218447f921400091010000f9f6ecff17",
+      "sha256": "f8f1315b50c63c584fbebb43376f53011ca3ddd97ebc4e89267726fce8fee705",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZN10__cxxabiv120__si_class_type_infoD0Ev",
+      "lib_dynsym_index": 5197,
+      "mode": 1,
+      "address": 595568,
+      "library_va": 595568,
+      "bytes": 40,
+      "kind": "function",
+      "raw_hex": "fd7bbea9fd030091f30b00f9f30300aaa0e7ff97e00313aa010380d2f30b40f9fd7bc2a89becff17",
+      "sha256": "7538a713e6fe9fa8619d176318e0686988ecab81850ad045e47d35d75b571309",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZNK10__cxxabiv120__si_class_type_info11__do_upcastEPKNS_17__class_type_infoEPKvRNS1_15__upcast_resultE",
+      "lib_dynsym_index": 2875,
+      "mode": 1,
+      "address": 596056,
+      "library_va": 596056,
+      "bytes": 104,
+      "kind": "function",
+      "raw_hex": "fd7bbda9fd030091f35301a9f30301aaf40302aaf55b02a9f60300aaf50303aa6ee4ff971f1c007281010054c40a40f9e30315aae20314aae10313aae00304aa840040f9f35341a9f55b42a9fd7bc3a8841840f980001fd6f35341a9f55b42a9fd7bc3a8c0035fd6",
+      "sha256": "5a94624f9e917a917e7444f31893ca376b29235988b1cbafa9c90dca587fce2e",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE",
+      "lib_dynsym_index": 3145,
+      "mode": 1,
+      "address": 595736,
+      "library_va": 595736,
+      "bytes": 316,
+      "kind": "function",
+      "raw_hex": "fd7bbaa9fd030091f35301a9f40304aaf55b02a9f60301aaf50307aa130440f9f96b04a9fa03022a610440f9f90306aa7f0201ebc0010054f76303a9f80300aaf70303aafb7305a9fb0305aa7c0240399fab007180020054e00313aa9fe9ff9720020035f76343a9fb7345a9b40200f9ba0a00b9f603f8b79402168bc10080523f0314eb0000805221049f1aa11200b9f35341a9f55b42a9f96b44a9fd7bc6a8c0035fd69f0219eb00030054000b40f9e70315aae60319aae5031baae40314aae30317aa080040f9e2031a2ae10316aaf35341a9f55b42a9f76343a9f96b44a9fb7345a9fd7bc6a8081d40f900011fd6df0a00b100008052c1fcff5421008052a11200b9e3ffff17610740f97f0201ebc00000549fab0071a0fcff54e00313aa6ee9ff9740fcff3500008052f76343a9fb7345a9ba0e00b9d6ffff17",
+      "sha256": "82e2deab592b76f9074c798e7def080dda41dd0026cf8b6fb1bdde83b23ed6c1",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZNK10__cxxabiv120__si_class_type_info20__do_find_public_srcElPKvPKNS_17__class_type_infoES2_",
+      "lib_dynsym_index": 291,
+      "mode": 1,
+      "address": 595608,
+      "library_va": 595608,
+      "bytes": 128,
+      "kind": "function",
+      "raw_hex": "fd7bbca99f0002ebfd030091f35301a9f30300aaf40301aa20010054650a40f9e10314aaf35341a9e00305aaa50040f9a52040f9fd7bc4a8a0001fd6610440f9000440f91f0001eb4001005405004039bfa8007140feff54e28f02a9e41f00f9bee9ff97e28f42a9e41f40f980fdff35c0008052f35341a9fd7bc4a8c0035fd6",
+      "sha256": "5b8c60f6966312362c9668a830c87e42fb69ebad80b18a6676c2338987c74b52",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZTSSt9type_info",
+      "lib_dynsym_index": 1906,
+      "mode": 1,
+      "address": 1249344,
+      "library_va": 1249344,
+      "bytes": 13,
+      "kind": "object",
+      "raw_hex": "537439747970655f696e666f00",
+      "sha256": "e433f5f245c2d4f22baba153d13cbc3680ae3e22ef3bf15d260b315b5ab5d822",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZTSN10__cxxabiv123__fundamental_type_infoE",
+      "lib_dynsym_index": 232,
+      "mode": 1,
+      "address": 1248376,
+      "library_va": 1248376,
+      "bytes": 40,
+      "kind": "object",
+      "raw_hex": "4e31305f5f637878616269763132335f5f66756e64616d656e74616c5f747970655f696e666f4500",
+      "sha256": "1940be155b4c49bbf5d1eed9cd81bc7fe3ba0997abf2c886a216c027153f30e0",
+      "relocations": []
+    },
+    {
+      "symbol": "_ZTSN10__cxxabiv120__si_class_type_infoE",
+      "lib_dynsym_index": 666,
+      "mode": 1,
+      "address": 1249304,
+      "library_va": 1249304,
+      "bytes": 37,
+      "kind": "object",
+      "raw_hex": "4e31305f5f637878616269763132305f5f73695f636c6173735f747970655f696e666f4500",
+      "sha256": "c0e3a536534cd719729cf260d6da47c20e35bccf585656c719bfd96e46cb842e",
+      "relocations": []
+    }
+  ],
+  "immutable_inputs": [
+    {
+      "mode": 1,
+      "address": 0,
+      "bytes": 64,
+      "raw_hex": "7f454c460201010300000000000000000300b7000100000010cd080000000000400000000000000080721700000000000000000040003800080040001c001b00",
+      "kind": "library_elf_header"
+    },
+    {
+      "mode": 1,
+      "address": 64,
+      "bytes": 448,
+      "raw_hex": "010000000500000000000000000000000000000000000000000000000000000004b416000000000004b41600000000000000010000000000010000000600000030b616000000000030b617000000000030b617000000000028bb00000000000020ed000000000000000001000000000002000000060000000040170000000000004018000000000000401800000000005002000000000000500200000000000008000000000000000400000004000000000200000000000000020000000000000002000000000000240000000000000024000000000000000400000000000000070000000400000030b616000000000030b617000000000030b617000000000000000000000000002000000000000000080000000000000050e5746404000000408213000000000040821300000000004082130000000000cc77000000000000cc77000000000000040000000000000051e574640600000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000052e574640400000030b616000000000030b617000000000030b6170000000000d0b9000000000000d0b90000000000000100000000000000",
+      "kind": "library_program_headers"
+    },
+    {
+      "mode": 0,
+      "address": 4205640,
+      "bytes": 24,
+      "raw_hex": "7e14000021001700c829f400000000005800000000000000",
+      "kind": "user_copy_dynsym",
+      "symbol": "_ZTVN10__cxxabiv117__class_type_infoE"
+    },
+    {
+      "mode": 0,
+      "address": 4223818,
+      "bytes": 2,
+      "raw_hex": "0800",
+      "kind": "user_copy_version",
+      "symbol": "_ZTVN10__cxxabiv117__class_type_infoE"
+    },
+    {
+      "mode": 0,
+      "address": 4224768,
+      "bytes": 24,
+      "raw_hex": "c829f4000000000000040000790100000000000000000000",
+      "kind": "user_copy_relocation",
+      "symbol": "_ZTVN10__cxxabiv117__class_type_infoE"
+    },
+    {
+      "mode": 0,
+      "address": 4209120,
+      "bytes": 24,
+      "raw_hex": "7d0c000021001700702af400000000001000000000000000",
+      "kind": "user_copy_dynsym",
+      "symbol": "_ZTIi"
+    },
+    {
+      "mode": 0,
+      "address": 4224108,
+      "bytes": 2,
+      "raw_hex": "0800",
+      "kind": "user_copy_version",
+      "symbol": "_ZTIi"
+    },
+    {
+      "mode": 0,
+      "address": 4224888,
+      "bytes": 24,
+      "raw_hex": "702af40000000000000400000a0200000000000000000000",
+      "kind": "user_copy_relocation",
+      "symbol": "_ZTIi"
+    },
+    {
+      "mode": 0,
+      "address": 4208424,
+      "bytes": 24,
+      "raw_hex": "e514000021001700e02af400000000005800000000000000",
+      "kind": "user_copy_dynsym",
+      "symbol": "_ZTVN10__cxxabiv120__si_class_type_infoE"
+    },
+    {
+      "mode": 0,
+      "address": 4224050,
+      "bytes": 2,
+      "raw_hex": "0800",
+      "kind": "user_copy_version",
+      "symbol": "_ZTVN10__cxxabiv120__si_class_type_infoE"
+    },
+    {
+      "mode": 0,
+      "address": 4224960,
+      "bytes": 24,
+      "raw_hex": "e02af4000000000000040000ed0100000000000000000000",
+      "kind": "user_copy_relocation",
+      "symbol": "_ZTVN10__cxxabiv120__si_class_type_infoE"
+    }
+  ],
+  "target_executed": false,
+  "library_loaded": false
+}

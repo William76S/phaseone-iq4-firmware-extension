@@ -1,0 +1,12 @@
+STATIC ONLY; linked VAs; exported nearest labels are not recovered private names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  424700: f94867e3     	ldr	x3, [sp, #0x10c8]
+  424704: f94237e2     	ldr	x2, [sp, #0x468]
+  424708: f9486be1     	ldr	x1, [sp, #0x10d0]
+  42470c: aa1303e0     	mov	x0, x19
+  424710: 94113846     	bl	0x872828 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2e464>

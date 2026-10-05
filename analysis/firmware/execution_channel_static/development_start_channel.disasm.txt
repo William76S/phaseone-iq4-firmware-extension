@@ -1,0 +1,163 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPDevelopment.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000001ab0 <P1::IQP::DevelopmentAgent::Start()>:
+    1ab0: 41 57                        	pushq	%r15
+    1ab2: 48 8d b7 b0 09 00 00         	leaq	0x9b0(%rdi), %rsi
+    1ab9: ba ff ff ff ff               	movl	$0xffffffff, %edx       # imm = 0xFFFFFFFF
+    1abe: 41 56                        	pushq	%r14
+    1ac0: 41 55                        	pushq	%r13
+    1ac2: 41 54                        	pushq	%r12
+    1ac4: 55                           	pushq	%rbp
+    1ac5: 48 89 fd                     	movq	%rdi, %rbp
+    1ac8: 53                           	pushq	%rbx
+    1ac9: 4c 8d ad 18 0a 00 00         	leaq	0xa18(%rbp), %r13
+    1ad0: 48 83 ec 58                  	subq	$0x58, %rsp
+    1ad4: 4c 8d 64 24 20               	leaq	0x20(%rsp), %r12
+    1ad9: 4c 89 e7                     	movq	%r12, %rdi
+    1adc: e8 00 00 00 00               	callq	0x1ae1 <P1::IQP::DevelopmentAgent::Start()+0x31>
+		0000000000001add:  R_X86_64_PLT32	P1::Platform::MutexAutoLock::MutexAutoLock(P1::Platform::Mutex_Cpp&, unsigned int)-0x4
+    1ae1: 4c 89 ef                     	movq	%r13, %rdi
+    1ae4: e8 00 00 00 00               	callq	0x1ae9 <P1::IQP::DevelopmentAgent::Start()+0x39>
+		0000000000001ae5:  R_X86_64_PLT32	P1::Platform::Thread_Cpp::IsRunning() const-0x4
+    1ae9: 84 c0                        	testb	%al, %al
+    1aeb: 0f 85 7f 01 00 00            	jne	0x1c70 <P1::IQP::DevelopmentAgent::Start()+0x1c0>
+    1af1: 48 89 ef                     	movq	%rbp, %rdi
+    1af4: 4c 8d 75 40                  	leaq	0x40(%rbp), %r14
+    1af8: e8 00 00 00 00               	callq	0x1afd <P1::IQP::DevelopmentAgent::Start()+0x4d>
+		0000000000001af9:  R_X86_64_PLT32	P1::IQP::DevelopmentAgent::Stop()-0x4
+    1afd: 4c 89 f7                     	movq	%r14, %rdi
+    1b00: e8 00 00 00 00               	callq	0x1b05 <P1::IQP::DevelopmentAgent::Start()+0x55>
+		0000000000001b01:  R_X86_64_PLT32	P1::IQP::Channel::Open()-0x4
+    1b05: 85 c0                        	testl	%eax, %eax
+    1b07: 74 17                        	je	0x1b20 <P1::IQP::DevelopmentAgent::Start()+0x70>
+    1b09: 4c 89 e7                     	movq	%r12, %rdi
+    1b0c: e8 00 00 00 00               	callq	0x1b11 <P1::IQP::DevelopmentAgent::Start()+0x61>
+		0000000000001b0d:  R_X86_64_PLT32	P1::Platform::MutexAutoLock::~MutexAutoLock()-0x4
+    1b11: 48 83 c4 58                  	addq	$0x58, %rsp
+    1b15: 5b                           	popq	%rbx
+    1b16: 5d                           	popq	%rbp
+    1b17: 41 5c                        	popq	%r12
+    1b19: 41 5d                        	popq	%r13
+    1b1b: 41 5e                        	popq	%r14
+    1b1d: 41 5f                        	popq	%r15
+    1b1f: c3                           	retq
+    1b20: 4c 89 f7                     	movq	%r14, %rdi
+    1b23: 4c 8d 7c 24 18               	leaq	0x18(%rsp), %r15
+    1b28: 4c 8d 74 24 30               	leaq	0x30(%rsp), %r14
+    1b2d: e8 00 00 00 00               	callq	0x1b32 <P1::IQP::DevelopmentAgent::Start()+0x82>
+		0000000000001b2e:  R_X86_64_PLT32	P1::IQP::Channel::Close()-0x4
+    1b32: 4c 89 f6                     	movq	%r14, %rsi
+    1b35: 4c 89 ff                     	movq	%r15, %rdi
+    1b38: 48 89 6c 24 38               	movq	%rbp, 0x38(%rsp)
+    1b3d: 48 8d 1d 00 00 00 00         	leaq	(%rip), %rbx            # 0x1b44 <P1::IQP::DevelopmentAgent::Start()+0x94>
+		0000000000001b40:  R_X86_64_PC32	vtable for P1::Universal::MemberFunctionObject2<P1::IQP::DevelopmentAgent, void, P1::Platform::Thread_Cpp&, void*>+0xc
+    1b44: 48 8d 05 00 00 00 00         	leaq	(%rip), %rax            # 0x1b4b <P1::IQP::DevelopmentAgent::Start()+0x9b>
+		0000000000001b47:  R_X86_64_PC32	P1::IQP::DevelopmentAgent::SendThread(P1::Platform::Thread_Cpp&, void*)-0x4
+    1b4b: 48 c7 44 24 48 00 00 00 00   	movq	$0x0, 0x48(%rsp)
+    1b54: 48 89 5c 24 30               	movq	%rbx, 0x30(%rsp)
+    1b59: 48 89 44 24 40               	movq	%rax, 0x40(%rsp)
+    1b5e: e8 00 00 00 00               	callq	0x1b63 <P1::IQP::DevelopmentAgent::Start()+0xb3>
+		0000000000001b5f:  R_X86_64_PLT32	P1::Universal::FunctionPointer2<void, P1::Platform::Thread_Cpp&, void*>::FunctionPointer2(P1::Universal::FunctionInterface2<void, P1::Platform::Thread_Cpp&, void*> const&)-0x4
+    1b63: 4c 89 fe                     	movq	%r15, %rsi
+    1b66: 4c 89 f7                     	movq	%r14, %rdi
+    1b69: e8 00 00 00 00               	callq	0x1b6e <P1::IQP::DevelopmentAgent::Start()+0xbe>
+		0000000000001b6a:  R_X86_64_PLT32	P1::Universal::FunctionPointer2<void, P1::Platform::Thread_Cpp&, void*>::FunctionPointer2(P1::Universal::FunctionPointer2<void, P1::Platform::Thread_Cpp&, void*> const&)-0x4
+    1b6e: b9 ff ff ff ff               	movl	$0xffffffff, %ecx       # imm = 0xFFFFFFFF
+    1b73: 31 d2                        	xorl	%edx, %edx
+    1b75: 4c 89 f6                     	movq	%r14, %rsi
+    1b78: 4c 89 ef                     	movq	%r13, %rdi
+    1b7b: e8 00 00 00 00               	callq	0x1b80 <P1::IQP::DevelopmentAgent::Start()+0xd0>
+		0000000000001b7c:  R_X86_64_PLT32	P1::Platform::Thread_Cpp::Create(P1::Universal::FunctionPointer<void (P1::Platform::Thread_Cpp&, void*)> const&, void*, unsigned int)-0x4
+    1b80: 48 8b 7c 24 30               	movq	0x30(%rsp), %rdi
+    1b85: 48 c7 44 24 30 00 00 00 00   	movq	$0x0, 0x30(%rsp)
+    1b8e: 48 85 ff                     	testq	%rdi, %rdi
+    1b91: 74 06                        	je	0x1b99 <P1::IQP::DevelopmentAgent::Start()+0xe9>
+    1b93: 48 8b 07                     	movq	(%rdi), %rax
+    1b96: ff 50 08                     	callq	*0x8(%rax)
+    1b99: 48 8b 7c 24 18               	movq	0x18(%rsp), %rdi
+    1b9e: 48 c7 44 24 18 00 00 00 00   	movq	$0x0, 0x18(%rsp)
+    1ba7: 48 85 ff                     	testq	%rdi, %rdi
+    1baa: 74 06                        	je	0x1bb2 <P1::IQP::DevelopmentAgent::Start()+0x102>
+    1bac: 48 8b 07                     	movq	(%rdi), %rax
+    1baf: ff 50 08                     	callq	*0x8(%rax)
+    1bb2: 48 8d 85 80 0b 00 00         	leaq	0xb80(%rbp), %rax
+    1bb9: 48 8d 0d 00 00 00 00         	leaq	(%rip), %rcx            # 0x1bc0 <P1::IQP::DevelopmentAgent::Start()+0x110>
+		0000000000001bbc:  R_X86_64_PC32	P1::IQP::DevelopmentAgent::ReceiveThread(P1::Platform::Thread_Cpp&, void*)-0x4
+    1bc0: 4c 89 f6                     	movq	%r14, %rsi
+    1bc3: 4c 89 ff                     	movq	%r15, %rdi
+    1bc6: 48 89 44 24 08               	movq	%rax, 0x8(%rsp)
+    1bcb: 48 89 5c 24 30               	movq	%rbx, 0x30(%rsp)
+    1bd0: 48 89 6c 24 38               	movq	%rbp, 0x38(%rsp)
+    1bd5: 48 89 4c 24 40               	movq	%rcx, 0x40(%rsp)
+    1bda: 48 c7 44 24 48 00 00 00 00   	movq	$0x0, 0x48(%rsp)
+    1be3: e8 00 00 00 00               	callq	0x1be8 <P1::IQP::DevelopmentAgent::Start()+0x138>
+		0000000000001be4:  R_X86_64_PLT32	P1::Universal::FunctionPointer2<void, P1::Platform::Thread_Cpp&, void*>::FunctionPointer2(P1::Universal::FunctionInterface2<void, P1::Platform::Thread_Cpp&, void*> const&)-0x4
+    1be8: 4c 89 fe                     	movq	%r15, %rsi
+    1beb: 4c 89 f7                     	movq	%r14, %rdi
+    1bee: e8 00 00 00 00               	callq	0x1bf3 <P1::IQP::DevelopmentAgent::Start()+0x143>
+		0000000000001bef:  R_X86_64_PLT32	P1::Universal::FunctionPointer2<void, P1::Platform::Thread_Cpp&, void*>::FunctionPointer2(P1::Universal::FunctionPointer2<void, P1::Platform::Thread_Cpp&, void*> const&)-0x4
+    1bf3: b9 ff ff ff ff               	movl	$0xffffffff, %ecx       # imm = 0xFFFFFFFF
+    1bf8: 31 d2                        	xorl	%edx, %edx
+    1bfa: 4c 89 f6                     	movq	%r14, %rsi
+    1bfd: 48 8d bd 80 0b 00 00         	leaq	0xb80(%rbp), %rdi
+    1c04: e8 00 00 00 00               	callq	0x1c09 <P1::IQP::DevelopmentAgent::Start()+0x159>
+		0000000000001c05:  R_X86_64_PLT32	P1::Platform::Thread_Cpp::Create(P1::Universal::FunctionPointer<void (P1::Platform::Thread_Cpp&, void*)> const&, void*, unsigned int)-0x4
+    1c09: 48 8b 7c 24 30               	movq	0x30(%rsp), %rdi
+    1c0e: 48 c7 44 24 30 00 00 00 00   	movq	$0x0, 0x30(%rsp)
+    1c17: 48 85 ff                     	testq	%rdi, %rdi
+    1c1a: 74 06                        	je	0x1c22 <P1::IQP::DevelopmentAgent::Start()+0x172>
+    1c1c: 48 8b 07                     	movq	(%rdi), %rax
+    1c1f: ff 50 08                     	callq	*0x8(%rax)
+    1c22: 48 8b 7c 24 18               	movq	0x18(%rsp), %rdi
+    1c27: 48 c7 44 24 18 00 00 00 00   	movq	$0x0, 0x18(%rsp)
+    1c30: 48 85 ff                     	testq	%rdi, %rdi
+    1c33: 74 06                        	je	0x1c3b <P1::IQP::DevelopmentAgent::Start()+0x18b>
+    1c35: 48 8b 07                     	movq	(%rdi), %rax
+    1c38: ff 50 08                     	callq	*0x8(%rax)
+    1c3b: 4c 89 ef                     	movq	%r13, %rdi
+    1c3e: e8 00 00 00 00               	callq	0x1c43 <P1::IQP::DevelopmentAgent::Start()+0x193>
+		0000000000001c3f:  R_X86_64_PLT32	P1::Platform::Thread_Cpp::IsRunning() const-0x4
+    1c43: 84 c0                        	testb	%al, %al
+    1c45: 75 49                        	jne	0x1c90 <P1::IQP::DevelopmentAgent::Start()+0x1e0>
+    1c47: 48 89 ef                     	movq	%rbp, %rdi
+    1c4a: e8 00 00 00 00               	callq	0x1c4f <P1::IQP::DevelopmentAgent::Start()+0x19f>
+		0000000000001c4b:  R_X86_64_PLT32	P1::IQP::DevelopmentAgent::Stop()-0x4
+    1c4f: be 66 00 65 00               	movl	$0x650066, %esi         # imm = 0x650066
+    1c54: 4c 89 f7                     	movq	%r14, %rdi
+    1c57: 48 8d 15 00 00 00 00         	leaq	(%rip), %rdx            # 0x1c5e <P1::IQP::DevelopmentAgent::Start()+0x1ae>
+		0000000000001c5a:  R_X86_64_PC32	.LC34-0x4
+    1c5e: e8 00 00 00 00               	callq	0x1c63 <P1::IQP::DevelopmentAgent::Start()+0x1b3>
+		0000000000001c5f:  R_X86_64_PLT32	P1::Universal::ModuleError::ModuleError(unsigned int, wchar_t const*)-0x4
+    1c63: 31 f6                        	xorl	%esi, %esi
+    1c65: 4c 89 f7                     	movq	%r14, %rdi
+    1c68: 31 c0                        	xorl	%eax, %eax
+    1c6a: e8 00 00 00 00               	callq	0x1c6f <P1::IQP::DevelopmentAgent::Start()+0x1bf>
+		0000000000001c6b:  R_X86_64_PLT32	void P1::Universal::ThrowError<P1::Universal::ModuleError>(P1::Universal::ModuleError const&, wchar_t const*, ...)-0x4
+    1c6f: 90                           	nop
+    1c70: 48 8d bd 80 0b 00 00         	leaq	0xb80(%rbp), %rdi
+    1c77: e8 00 00 00 00               	callq	0x1c7c <P1::IQP::DevelopmentAgent::Start()+0x1cc>
+		0000000000001c78:  R_X86_64_PLT32	P1::Platform::Thread_Cpp::IsRunning() const-0x4
+    1c7c: 84 c0                        	testb	%al, %al
+    1c7e: 0f 85 85 fe ff ff            	jne	0x1b09 <P1::IQP::DevelopmentAgent::Start()+0x59>
+    1c84: e9 68 fe ff ff               	jmp	0x1af1 <P1::IQP::DevelopmentAgent::Start()+0x41>
+    1c89: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+    1c90: 48 8d bd 80 0b 00 00         	leaq	0xb80(%rbp), %rdi
+    1c97: e8 00 00 00 00               	callq	0x1c9c <P1::IQP::DevelopmentAgent::Start()+0x1ec>
+		0000000000001c98:  R_X86_64_PLT32	P1::Platform::Thread_Cpp::IsRunning() const-0x4
+    1c9c: 84 c0                        	testb	%al, %al
+    1c9e: 74 a7                        	je	0x1c47 <P1::IQP::DevelopmentAgent::Start()+0x197>
+    1ca0: e9 64 fe ff ff               	jmp	0x1b09 <P1::IQP::DevelopmentAgent::Start()+0x59>
+    1ca5: 48 89 c3                     	movq	%rax, %rbx
+    1ca8: e9 00 00 00 00               	jmp	0x1cad <P1::IQP::DevelopmentAgent::Start()+0x1fd>
+		0000000000001ca9:  R_X86_64_PC32	.text.unlikely+0x594
+    1cad: 48 89 c3                     	movq	%rax, %rbx
+    1cb0: e9 00 00 00 00               	jmp	0x1cb5 <P1::IQP::DevelopmentAgent::Start()+0x205>
+		0000000000001cb1:  R_X86_64_PC32	.text.unlikely+0x5ac
+    1cb5: 48 89 c3                     	movq	%rax, %rbx
+    1cb8: e9 00 00 00 00               	jmp	0x1cbd <P1::IQP::DevelopmentAgent::Start()+0x20d>
+		0000000000001cb9:  R_X86_64_PC32	.text.unlikely+0x5da
+    1cbd: 48 89 c3                     	movq	%rax, %rbx

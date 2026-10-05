@@ -1,0 +1,66 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_scaler_hook_install_build_10/kernel_narrow.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+ffffff80080ac2d0 <ptrace_access_vm>:
+ffffff80080ac2d0: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+ffffff80080ac2d4: 910003fd     	mov	x29, sp
+ffffff80080ac2d8: a90153f3     	stp	x19, x20, [sp, #0x10]
+ffffff80080ac2dc: aa0003f4     	mov	x20, x0
+ffffff80080ac2e0: a9025bf5     	stp	x21, x22, [sp, #0x20]
+ffffff80080ac2e4: aa0103f5     	mov	x21, x1
+ffffff80080ac2e8: aa0203f6     	mov	x22, x2
+ffffff80080ac2ec: a90363f7     	stp	x23, x24, [sp, #0x30]
+ffffff80080ac2f0: 2a0303f7     	mov	w23, w3
+ffffff80080ac2f4: 2a0403f8     	mov	w24, w4
+ffffff80080ac2f8: 97ffc842     	bl	0xffffff800809e400 <get_task_mm>
+ffffff80080ac2fc: b4000540     	cbz	x0, 0xffffff80080ac3a4 <ptrace_access_vm+0xd4>
+ffffff80080ac300: aa0003f3     	mov	x19, x0
+ffffff80080ac304: b9403280     	ldr	w0, [x20, #0x30]
+ffffff80080ac308: 340000a0     	cbz	w0, 0xffffff80080ac31c <ptrace_access_vm+0x4c>
+ffffff80080ac30c: f941ea81     	ldr	x1, [x20, #0x3d0]
+ffffff80080ac310: d5384100     	mrs	x0, SP_EL0
+ffffff80080ac314: eb00003f     	cmp	x1, x0
+ffffff80080ac318: 54000140     	b.eq	0xffffff80080ac340 <ptrace_access_vm+0x70>
+ffffff80080ac31c: aa1303e0     	mov	x0, x19
+ffffff80080ac320: 52800014     	mov	w20, #0x0       // =0
+ffffff80080ac324: 97ffca47     	bl	0xffffff800809ec40 <mmput>
+ffffff80080ac328: 2a1403e0     	mov	w0, w20
+ffffff80080ac32c: a94153f3     	ldp	x19, x20, [sp, #0x10]
+ffffff80080ac330: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+ffffff80080ac334: a94363f7     	ldp	x23, x24, [sp, #0x30]
+ffffff80080ac338: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+ffffff80080ac33c: d65f03c0     	ret
+ffffff80080ac340: f9417a60     	ldr	x0, [x19, #0x2f0]
+ffffff80080ac344: 12000400     	and	w0, w0, #0x3
+ffffff80080ac348: 7100041f     	cmp	w0, #0x1
+ffffff80080ac34c: 540000c0     	b.eq	0xffffff80080ac364 <ptrace_access_vm+0x94>
+ffffff80080ac350: f9418a61     	ldr	x1, [x19, #0x310]
+ffffff80080ac354: aa1403e0     	mov	x0, x20
+ffffff80080ac358: 97fffd1a     	bl	0xffffff80080ab7c0 <ptracer_capable>
+ffffff80080ac35c: 72001c1f     	tst	w0, #0xff
+ffffff80080ac360: 54fffde0     	b.eq	0xffffff80080ac31c <ptrace_access_vm+0x4c>
+ffffff80080ac364: 2a1803e5     	mov	w5, w24
+ffffff80080ac368: 2a1703e4     	mov	w4, w23
+ffffff80080ac36c: aa1603e3     	mov	x3, x22
+ffffff80080ac370: aa1503e2     	mov	x2, x21
+ffffff80080ac374: aa1303e1     	mov	x1, x19
+ffffff80080ac378: aa1403e0     	mov	x0, x20
+ffffff80080ac37c: 94034e15     	bl	0xffffff800817fbd0 <__access_remote_vm>
+ffffff80080ac380: 2a0003f4     	mov	w20, w0
+ffffff80080ac384: aa1303e0     	mov	x0, x19
+ffffff80080ac388: 97ffca2e     	bl	0xffffff800809ec40 <mmput>
+ffffff80080ac38c: 2a1403e0     	mov	w0, w20
+ffffff80080ac390: a94153f3     	ldp	x19, x20, [sp, #0x10]
+ffffff80080ac394: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+ffffff80080ac398: a94363f7     	ldp	x23, x24, [sp, #0x30]
+ffffff80080ac39c: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+ffffff80080ac3a0: d65f03c0     	ret
+ffffff80080ac3a4: 52800014     	mov	w20, #0x0       // =0
+ffffff80080ac3a8: 2a1403e0     	mov	w0, w20
+ffffff80080ac3ac: a94153f3     	ldp	x19, x20, [sp, #0x10]
+ffffff80080ac3b0: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+ffffff80080ac3b4: a94363f7     	ldp	x23, x24, [sp, #0x30]
+ffffff80080ac3b8: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+ffffff80080ac3bc: d65f03c0     	ret

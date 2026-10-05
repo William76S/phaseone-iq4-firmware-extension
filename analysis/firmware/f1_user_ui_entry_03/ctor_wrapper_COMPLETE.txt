@@ -1,0 +1,41 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_03/ctor_wrapper.o:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000000000 <iq4_f1_lv_ctor_wrapper_01>:
+       0: d10403ff     	sub	sp, sp, #0x100
+       4: a9017bfd     	stp	x29, x30, [sp, #0x10]
+       8: 910003fd     	mov	x29, sp
+       c: a9020be0     	stp	x0, x2, [sp, #0x20]
+      10: f94083e9     	ldr	x9, [sp, #0x100]
+      14: f90003e9     	str	x9, [sp]
+      18: 94000000     	bl	0x18 <iq4_f1_lv_ctor_wrapper_01+0x18>
+		0000000000000018:  R_AARCH64_CALL26	iq4_stock_lv_ctor_01
+      1c: a90307e0     	stp	x0, x1, [sp, #0x30]
+      20: a9040fe2     	stp	x2, x3, [sp, #0x40]
+      24: a90517e4     	stp	x4, x5, [sp, #0x50]
+      28: a9061fe6     	stp	x6, x7, [sp, #0x60]
+      2c: f9003be8     	str	x8, [sp, #0x70]
+      30: ad0407e0     	stp	q0, q1, [sp, #0x80]
+      34: ad050fe2     	stp	q2, q3, [sp, #0xa0]
+      38: d53b4409     	mrs	x9, FPCR
+      3c: d53b442a     	mrs	x10, FPSR
+      40: a90c2be9     	stp	x9, x10, [sp, #0xc0]
+      44: a94207e0     	ldp	x0, x1, [sp, #0x20]
+      48: f9400fe2     	ldr	x2, [sp, #0x18]
+      4c: 94000000     	bl	0x4c <iq4_f1_lv_ctor_wrapper_01+0x4c>
+		000000000000004c:  R_AARCH64_CALL26	iq4_f1_publish_ctor_on_return_01
+      50: a94c2be9     	ldp	x9, x10, [sp, #0xc0]
+      54: d51b4409     	msr	FPCR, x9
+      58: d51b442a     	msr	FPSR, x10
+      5c: ad4407e0     	ldp	q0, q1, [sp, #0x80]
+      60: ad450fe2     	ldp	q2, q3, [sp, #0xa0]
+      64: a94307e0     	ldp	x0, x1, [sp, #0x30]
+      68: a9440fe2     	ldp	x2, x3, [sp, #0x40]
+      6c: a94517e4     	ldp	x4, x5, [sp, #0x50]
+      70: a9461fe6     	ldp	x6, x7, [sp, #0x60]
+      74: f9403be8     	ldr	x8, [sp, #0x70]
+      78: a9417bfd     	ldp	x29, x30, [sp, #0x10]
+      7c: 910403ff     	add	sp, sp, #0x100
+      80: d65f03c0     	ret

@@ -1,0 +1,118 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  768b3c:      	stp	x29, x30, [sp, #-0x90]!
+  768b40:      	mov	x29, sp
+  768b44:      	stp	x19, x20, [sp, #0x10]
+  768b48:      	stp	x21, x22, [sp, #0x20]
+  768b4c:      	stp	x23, x24, [sp, #0x30]
+  768b50:      	stp	x25, x26, [sp, #0x40]
+  768b54:      	str	x27, [sp, #0x50]
+  768b58:      	str	x0, [x29, #0x68]
+  768b5c:      	str	w1, [x29, #0x64]
+  768b60:      	mov	x0, sp
+  768b64:      	mov	x27, x0
+  768b68:      	ldr	w1, [x29, #0x64]
+  768b6c:      	ldr	x0, [x29, #0x68]
+  768b70:      	bl	0x769364 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4f638>
+  768b74:      	str	w0, [x29, #0x8c]
+  768b78:      	ldr	w0, [x29, #0x8c]
+  768b7c:      	cmp	w0, #0x0
+  768b80:      	b.ge	0x768ba8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4ee7c>
+  768b84:      	adrp	x0, 0xc3e000
+  768b88:      	add	x3, x0, #0x458
+  768b8c:      	mov	w2, #0x1a2              // =418
+  768b90:      	adrp	x0, 0xc3e000
+  768b94:      	add	x1, x0, #0xc8
+  768b98:      	mov	w0, #0x2                // =2
+  768b9c:      	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  768ba0:      	mov	w0, #0x0                // =0
+  768ba4:      	b	0x768cd4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4efa8>
+  768ba8:      	ldr	x0, [x29, #0x68]
+  768bac:      	ldr	w0, [x0, #0x10]
+  768bb0:      	add	w0, w0, #0x1
+  768bb4:      	mov	w0, w0
+  768bb8:      	sub	x0, x0, #0x1
+  768bbc:      	str	x0, [x29, #0x80]
+  768bc0:      	ldr	x0, [x29, #0x68]
+  768bc4:      	ldr	w0, [x0, #0x10]
+  768bc8:      	add	w0, w0, #0x1
+  768bcc:      	mov	w0, w0
+  768bd0:      	mov	x25, x0
+  768bd4:      	mov	x26, #0x0               // =0
+  768bd8:      	lsr	x0, x25, #61
+  768bdc:      	lsl	x22, x26, #3
+  768be0:      	orr	x22, x0, x22
+  768be4:      	lsl	x21, x25, #3
+  768be8:      	ldr	x0, [x29, #0x68]
+  768bec:      	ldr	w0, [x0, #0x10]
+  768bf0:      	add	w0, w0, #0x1
+  768bf4:      	mov	w0, w0
+  768bf8:      	mov	x23, x0
+  768bfc:      	mov	x24, #0x0               // =0
+  768c00:      	lsr	x0, x23, #61
+  768c04:      	lsl	x20, x24, #3
+  768c08:      	orr	x20, x0, x20
+  768c0c:      	lsl	x19, x23, #3
+  768c10:      	ldr	x0, [x29, #0x68]
+  768c14:      	ldr	w0, [x0, #0x10]
+  768c18:      	add	w0, w0, #0x1
+  768c1c:      	mov	w0, w0
+  768c20:      	add	x0, x0, #0xf
+  768c24:      	lsr	x0, x0, #4
+  768c28:      	lsl	x0, x0, #4
+  768c2c:      	sub	sp, sp, x0
+  768c30:      	mov	x0, sp
+  768c34:      	add	x0, x0, #0x0
+  768c38:      	str	x0, [x29, #0x78]
+  768c3c:      	ldr	x4, [x29, #0x78]
+  768c40:      	ldr	x0, [x29, #0x68]
+  768c44:      	ldr	w0, [x0, #0x10]
+  768c48:      	mov	w2, w0
+  768c4c:      	ldr	x0, [x29, #0x68]
+  768c50:      	ldr	w1, [x0, #0x28]
+  768c54:      	ldr	w0, [x29, #0x8c]
+  768c58:      	add	w0, w1, w0
+  768c5c:      	mov	w0, w0
+  768c60:      	mov	x3, x0
+  768c64:      	mov	x1, x4
+  768c68:      	ldr	x0, [x29, #0x68]
+  768c6c:      	bl	0x768ec8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4f19c>
+  768c70:      	ldr	x0, [x29, #0x68]
+  768c74:      	ldr	w0, [x0, #0x10]
+  768c78:      	ldr	x1, [x29, #0x78]
+  768c7c:      	mov	w0, w0
+  768c80:      	strb	wzr, [x1, x0]
+  768c84:      	ldr	x0, [x29, #0x78]
+  768c88:      	mov	x3, x0
+  768c8c:      	adrp	x0, 0xc3e000
+  768c90:      	add	x2, x0, #0x478
+  768c94:      	mov	w1, #0x1aa              // =426
+  768c98:      	adrp	x0, 0xc3e000
+  768c9c:      	add	x0, x0, #0xc8
+  768ca0:      	bl	0x74649c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c770>
+  768ca4:      	ldr	x3, [x29, #0x78]
+  768ca8:      	ldr	x0, [x29, #0x68]
+  768cac:      	ldr	x1, [x0, #0x18]
+  768cb0:      	ldr	x0, [x29, #0x68]
+  768cb4:      	ldr	w0, [x0, #0x10]
+  768cb8:      	mov	w0, w0
+  768cbc:      	mov	x2, x0
+  768cc0:      	mov	x0, x3
+  768cc4:      	bl	0x40b160 <memcmp@plt>
+  768cc8:      	cmp	w0, #0x0
+  768ccc:      	cset	w0, eq
+  768cd0:      	and	w0, w0, #0xff
+  768cd4:      	mov	sp, x27
+  768cd8:      	mov	sp, x29
+  768cdc:      	ldp	x19, x20, [sp, #0x10]
+  768ce0:      	ldp	x21, x22, [sp, #0x20]
+  768ce4:      	ldp	x23, x24, [sp, #0x30]
+  768ce8:      	ldp	x25, x26, [sp, #0x40]
+  768cec:      	ldr	x27, [sp, #0x50]
+  768cf0:      	ldp	x29, x30, [sp], #0x90
+  768cf4:      	ret

@@ -1,0 +1,444 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IqpLibTransport.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+00000000000091d0 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)>:
+    91d0: 41 57                        	pushq	%r15
+    91d2: 49 89 f7                     	movq	%rsi, %r15
+    91d5: 41 56                        	pushq	%r14
+    91d7: 49 89 d6                     	movq	%rdx, %r14
+    91da: 41 55                        	pushq	%r13
+    91dc: 49 89 cd                     	movq	%rcx, %r13
+    91df: 41 54                        	pushq	%r12
+    91e1: 55                           	pushq	%rbp
+    91e2: 53                           	pushq	%rbx
+    91e3: 48 89 fb                     	movq	%rdi, %rbx
+    91e6: bf 50 05 00 00               	movl	$0x550, %edi            # imm = 0x550
+    91eb: 48 81 ec 98 00 00 00         	subq	$0x98, %rsp
+    91f2: 44 89 04 24                  	movl	%r8d, (%rsp)
+    91f6: e8 00 00 00 00               	callq	0x91fb <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x2b>
+		00000000000091f7:  R_X86_64_PLT32	operator new(unsigned long)-0x4
+    91fb: 4c 89 fe                     	movq	%r15, %rsi
+    91fe: 48 89 c5                     	movq	%rax, %rbp
+    9201: 48 b8 01 00 00 00 01 00 00 00	movabsq	$0x100000001, %rax      # imm = 0x100000001
+    920b: 48 89 45 08                  	movq	%rax, 0x8(%rbp)
+    920f: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x9216 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x46>
+		0000000000009212:  R_X86_64_REX_GOTPCRELX	vtable for std::_Sp_counted_ptr_inplace<P1::IQP::Camera, std::allocator<P1::IQP::Camera>, (__gnu_cxx::_Lock_policy)2>-0x4
+    9216: 4c 8d 65 10                  	leaq	0x10(%rbp), %r12
+    921a: 4c 89 e7                     	movq	%r12, %rdi
+    921d: 48 83 c0 10                  	addq	$0x10, %rax
+    9221: 48 89 45 00                  	movq	%rax, (%rbp)
+    9225: e8 00 00 00 00               	callq	0x922a <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x5a>
+		0000000000009226:  R_X86_64_PLT32	P1::IQP::Camera::Camera(P1::IQP::Transport::DeviceMoniker const&)-0x4
+    922a: 4c 89 ee                     	movq	%r13, %rsi
+    922d: 4c 89 e7                     	movq	%r12, %rdi
+    9230: 4c 8d 6c 24 20               	leaq	0x20(%rsp), %r13
+    9235: e8 00 00 00 00               	callq	0x923a <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x6a>
+		0000000000009236:  R_X86_64_PLT32	P1::IQP::Camera::SetAuthenticationPassword(char const*)-0x4
+    923a: 41 8b 16                     	movl	(%r14), %edx
+    923d: 48 8b 45 10                  	movq	0x10(%rbp), %rax
+    9241: 4c 89 ee                     	movq	%r13, %rsi
+    9244: 48 8d 0d b5 6d ff ff         	leaq	-0x924b(%rip), %rcx     # 0x0 <.text>
+    924b: 4c 89 e7                     	movq	%r12, %rdi
+    924e: 48 8b 40 18                  	movq	0x18(%rax), %rax
+    9252: 89 54 24 28                  	movl	%edx, 0x28(%rsp)
+    9256: 48 8d 15 73 89 ff ff         	leaq	-0x768d(%rip), %rdx     # 0x1bd0 <IqpLibTransport::MarkCameraInOpenListAsRemoved(P1::IQP::Transport::DeviceMoniker const&, int&)+0xbc0>
+    925d: 66 48 0f 6e c1               	movq	%rcx, %xmm0
+    9262: 66 48 0f 6e ca               	movq	%rdx, %xmm1
+    9267: 48 89 5c 24 20               	movq	%rbx, 0x20(%rsp)
+    926c: 66 0f 6c c1                  	punpcklqdq	%xmm1, %xmm0    # xmm0 = xmm0[0],xmm1[0]
+    9270: 0f 29 44 24 30               	movaps	%xmm0, 0x30(%rsp)
+    9275: ff d0                        	callq	*%rax
+    9277: 48 8b 44 24 30               	movq	0x30(%rsp), %rax
+    927c: 48 85 c0                     	testq	%rax, %rax
+    927f: 74 0d                        	je	0x928e <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0xbe>
+    9281: ba 03 00 00 00               	movl	$0x3, %edx
+    9286: 4c 89 ee                     	movq	%r13, %rsi
+    9289: 4c 89 ef                     	movq	%r13, %rdi
+    928c: ff d0                        	callq	*%rax
+    928e: 0f b6 34 24                  	movzbl	(%rsp), %esi
+    9292: 4c 89 e7                     	movq	%r12, %rdi
+    9295: e8 00 00 00 00               	callq	0x929a <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0xca>
+		0000000000009296:  R_X86_64_PLT32	P1::IQP::Camera::Initialize(bool)-0x4
+    929a: 89 04 24                     	movl	%eax, (%rsp)
+    929d: 85 c0                        	testl	%eax, %eax
+    929f: 74 4f                        	je	0x92f0 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x120>
+    92a1: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x92a8 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0xd8>
+		00000000000092a4:  R_X86_64_PC32	.LC224-0x4
+    92a8: bf 02 00 00 00               	movl	$0x2, %edi
+    92ad: 31 c0                        	xorl	%eax, %eax
+    92af: e8 00 00 00 00               	callq	0x92b4 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0xe4>
+		00000000000092b0:  R_X86_64_PLT32	p1_camerasdk_trace(int, char const*, ...)-0x4
+    92b4: 8b 3c 24                     	movl	(%rsp), %edi
+    92b7: 48 8d 0d 00 00 00 00         	leaq	(%rip), %rcx            # 0x92be <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0xee>
+		00000000000092ba:  R_X86_64_PC32	.LC225-0x4
+    92be: ba f0 ff ff ff               	movl	$0xfffffff0, %edx       # imm = 0xFFFFFFF0
+    92c3: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x92ca <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0xfa>
+		00000000000092c6:  R_X86_64_PC32	.LC226-0x4
+    92ca: e8 00 00 00 00               	callq	0x92cf <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0xff>
+		00000000000092cb:  R_X86_64_PLT32	handleIoResult(P1::Platform::EnumIoResult, char const*, P1::CameraSdk::ErrorCode, char const*)-0x4
+    92cf: 41 89 c4                     	movl	%eax, %r12d
+    92d2: 48 89 ef                     	movq	%rbp, %rdi
+    92d5: e8 00 00 00 00               	callq	0x92da <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x10a>
+		00000000000092d6:  R_X86_64_PLT32	std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()-0x4
+    92da: 48 81 c4 98 00 00 00         	addq	$0x98, %rsp
+    92e1: 44 89 e0                     	movl	%r12d, %eax
+    92e4: 5b                           	popq	%rbx
+    92e5: 5d                           	popq	%rbp
+    92e6: 41 5c                        	popq	%r12
+    92e8: 41 5d                        	popq	%r13
+    92ea: 41 5e                        	popq	%r14
+    92ec: 41 5f                        	popq	%r15
+    92ee: c3                           	retq
+    92ef: 90                           	nop
+    92f0: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x92f7 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x127>
+		00000000000092f3:  R_X86_64_PC32	.LC227-0x4
+    92f7: bf 05 00 00 00               	movl	$0x5, %edi
+    92fc: 31 c0                        	xorl	%eax, %eax
+    92fe: e8 00 00 00 00               	callq	0x9303 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x133>
+		00000000000092ff:  R_X86_64_PLT32	p1_camerasdk_trace(int, char const*, ...)-0x4
+    9303: 31 f6                        	xorl	%esi, %esi
+    9305: 4c 89 e7                     	movq	%r12, %rdi
+    9308: e8 00 00 00 00               	callq	0x930d <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x13d>
+		0000000000009309:  R_X86_64_PLT32	P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)-0x4
+    930d: 89 04 24                     	movl	%eax, (%rsp)
+    9310: 85 c0                        	testl	%eax, %eax
+    9312: 74 34                        	je	0x9348 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x178>
+    9314: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x931b <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x14b>
+		0000000000009317:  R_X86_64_PC32	.LC228-0x4
+    931b: bf 02 00 00 00               	movl	$0x2, %edi
+    9320: 31 c0                        	xorl	%eax, %eax
+    9322: e8 00 00 00 00               	callq	0x9327 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x157>
+		0000000000009323:  R_X86_64_PLT32	p1_camerasdk_trace(int, char const*, ...)-0x4
+    9327: 8b 3c 24                     	movl	(%rsp), %edi
+    932a: 48 8d 0d 00 00 00 00         	leaq	(%rip), %rcx            # 0x9331 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x161>
+		000000000000932d:  R_X86_64_PC32	.LC225-0x4
+    9331: ba ef ff ff ff               	movl	$0xffffffef, %edx       # imm = 0xFFFFFFEF
+    9336: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x933d <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x16d>
+		0000000000009339:  R_X86_64_PC32	.LC229-0x4
+    933d: e8 00 00 00 00               	callq	0x9342 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x172>
+		000000000000933e:  R_X86_64_PLT32	handleIoResult(P1::Platform::EnumIoResult, char const*, P1::CameraSdk::ErrorCode, char const*)-0x4
+    9342: eb 8b                        	jmp	0x92cf <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0xff>
+    9344: 0f 1f 40 00                  	nopl	(%rax)
+    9348: 4c 89 e7                     	movq	%r12, %rdi
+    934b: e8 00 00 00 00               	callq	0x9350 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x180>
+		000000000000934c:  R_X86_64_PLT32	P1::IQP::Camera::GetDeviceInfo() const-0x4
+    9350: 48 8b 50 38                  	movq	0x38(%rax), %rdx
+    9354: 48 85 d2                     	testq	%rdx, %rdx
+    9357: 0f 84 93 03 00 00            	je	0x96f0 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x520>
+    935d: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x9364 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x194>
+		0000000000009360:  R_X86_64_PC32	.LC230-0x4
+    9364: bf 05 00 00 00               	movl	$0x5, %edi
+    9369: 31 c0                        	xorl	%eax, %eax
+    936b: e8 00 00 00 00               	callq	0x9370 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x1a0>
+		000000000000936c:  R_X86_64_PLT32	p1_camerasdk_trace(int, char const*, ...)-0x4
+    9370: 48 8d b3 b8 09 00 00         	leaq	0x9b8(%rbx), %rsi
+    9377: 4c 89 ef                     	movq	%r13, %rdi
+    937a: e8 00 00 00 00               	callq	0x937f <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x1af>
+		000000000000937b:  R_X86_64_PLT32	LockContext::LockContext(std::mutex&)-0x4
+    937f: 8b 8b 10 0a 00 00            	movl	0xa10(%rbx), %ecx
+    9385: 48 83 3d 00 00 00 00 00      	cmpq	$0x0, (%rip)            # 0x938d <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x1bd>
+		0000000000009388:  R_X86_64_GOTPCREL	__pthread_key_create-0x5
+    938d: 8d 41 01                     	leal	0x1(%rcx), %eax
+    9390: 89 0c 24                     	movl	%ecx, (%rsp)
+    9393: 89 83 10 0a 00 00            	movl	%eax, 0xa10(%rbx)
+    9399: 48 8d 45 08                  	leaq	0x8(%rbp), %rax
+    939d: 41 89 0e                     	movl	%ecx, (%r14)
+    93a0: 48 89 44 24 08               	movq	%rax, 0x8(%rsp)
+    93a5: 0f 84 35 03 00 00            	je	0x96e0 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x510>
+    93ab: f0                           	lock
+    93ac: 83 00 01                     	addl	$0x1, (%rax)
+    93af: 48 8b 93 f0 09 00 00         	movq	0x9f0(%rbx), %rdx
+    93b6: 48 8d 8b e8 09 00 00         	leaq	0x9e8(%rbx), %rcx
+    93bd: 48 85 d2                     	testq	%rdx, %rdx
+    93c0: 0f 84 8a 03 00 00            	je	0x9750 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x580>
+    93c6: 41 8b 06                     	movl	(%r14), %eax
+    93c9: 48 89 ce                     	movq	%rcx, %rsi
+    93cc: eb 0e                        	jmp	0x93dc <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x20c>
+    93ce: 66 90                        	nop
+    93d0: 48 89 d6                     	movq	%rdx, %rsi
+    93d3: 48 8b 52 10                  	movq	0x10(%rdx), %rdx
+    93d7: 48 85 d2                     	testq	%rdx, %rdx
+    93da: 74 0e                        	je	0x93ea <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x21a>
+    93dc: 39 42 20                     	cmpl	%eax, 0x20(%rdx)
+    93df: 7d ef                        	jge	0x93d0 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x200>
+    93e1: 48 8b 52 18                  	movq	0x18(%rdx), %rdx
+    93e5: 48 85 d2                     	testq	%rdx, %rdx
+    93e8: 75 f2                        	jne	0x93dc <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x20c>
+    93ea: 48 39 f1                     	cmpq	%rsi, %rcx
+    93ed: 74 05                        	je	0x93f4 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x224>
+    93ef: 3b 46 20                     	cmpl	0x20(%rsi), %eax
+    93f2: 7d 19                        	jge	0x940d <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x23d>
+    93f4: 48 8d 54 24 10               	leaq	0x10(%rsp), %rdx
+    93f9: 48 8d bb e0 09 00 00         	leaq	0x9e0(%rbx), %rdi
+    9400: 4c 89 74 24 10               	movq	%r14, 0x10(%rsp)
+    9405: e8 86 76 ff ff               	callq	0xa90 <IqpLibTransport::FullImageArrivesFromIqp(int, P1::IQP::ImageReceivePackage&)+0xe0>
+    940a: 48 89 c6                     	movq	%rax, %rsi
+    940d: 8b 04 24                     	movl	(%rsp), %eax
+    9410: 48 8b 7e 38                  	movq	0x38(%rsi), %rdi
+    9414: 4c 89 66 30                  	movq	%r12, 0x30(%rsi)
+    9418: 89 46 28                     	movl	%eax, 0x28(%rsi)
+    941b: 48 39 fd                     	cmpq	%rdi, %rbp
+    941e: 74 31                        	je	0x9451 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x281>
+    9420: 48 83 3d 00 00 00 00 00      	cmpq	$0x0, (%rip)            # 0x9428 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x258>
+		0000000000009423:  R_X86_64_GOTPCREL	__pthread_key_create-0x5
+    9428: 0f 84 12 03 00 00            	je	0x9740 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x570>
+    942e: 48 8b 44 24 08               	movq	0x8(%rsp), %rax
+    9433: f0                           	lock
+    9434: 83 00 01                     	addl	$0x1, (%rax)
+    9437: 48 8b 7e 38                  	movq	0x38(%rsi), %rdi
+    943b: 48 85 ff                     	testq	%rdi, %rdi
+    943e: 74 0d                        	je	0x944d <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x27d>
+    9440: 48 89 34 24                  	movq	%rsi, (%rsp)
+    9444: e8 00 00 00 00               	callq	0x9449 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x279>
+		0000000000009445:  R_X86_64_PLT32	std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()-0x4
+    9449: 48 8b 34 24                  	movq	(%rsp), %rsi
+    944d: 48 89 6e 38                  	movq	%rbp, 0x38(%rsi)
+    9451: 31 c0                        	xorl	%eax, %eax
+    9453: c6 46 42 00                  	movb	$0x0, 0x42(%rsi)
+    9457: 48 89 ef                     	movq	%rbp, %rdi
+    945a: 66 89 46 40                  	movw	%ax, 0x40(%rsi)
+    945e: e8 00 00 00 00               	callq	0x9463 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x293>
+		000000000000945f:  R_X86_64_PLT32	std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()-0x4
+    9463: 4c 89 ef                     	movq	%r13, %rdi
+    9466: e8 00 00 00 00               	callq	0x946b <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x29b>
+		0000000000009467:  R_X86_64_PLT32	LockContext::~LockContext()-0x4
+    946b: 41 8b 06                     	movl	(%r14), %eax
+    946e: 4c 89 ee                     	movq	%r13, %rsi
+    9471: 4c 89 e7                     	movq	%r12, %rdi
+    9474: 48 8d 0d c5 6b ff ff         	leaq	-0x943b(%rip), %rcx     # 0x40 <.text+0x40>
+    947b: 48 89 5c 24 20               	movq	%rbx, 0x20(%rsp)
+    9480: 89 44 24 28                  	movl	%eax, 0x28(%rsp)
+    9484: 48 8d 05 65 1f 00 00         	leaq	0x1f65(%rip), %rax      # 0xb3f0 <IqpLibTransport::IqpCameraNotify(P1::IQP::Camera::EnumNotify, void const*, int)+0xa30>
+    948b: 66 48 0f 6e c1               	movq	%rcx, %xmm0
+    9490: 66 48 0f 6e e8               	movq	%rax, %xmm5
+    9495: 66 0f 6c c5                  	punpcklqdq	%xmm5, %xmm0    # xmm0 = xmm0[0],xmm5[0]
+    9499: 0f 29 44 24 30               	movaps	%xmm0, 0x30(%rsp)
+    949e: e8 00 00 00 00               	callq	0x94a3 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x2d3>
+		000000000000949f:  R_X86_64_PLT32	P1::IQP::Camera::SetNotifyReceiver(std::function<void (P1::IQP::Camera::EnumNotify, void const*)>)-0x4
+    94a3: 48 8b 44 24 30               	movq	0x30(%rsp), %rax
+    94a8: 48 85 c0                     	testq	%rax, %rax
+    94ab: 74 0d                        	je	0x94ba <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x2ea>
+    94ad: ba 03 00 00 00               	movl	$0x3, %edx
+    94b2: 4c 89 ee                     	movq	%r13, %rsi
+    94b5: 4c 89 ef                     	movq	%r13, %rdi
+    94b8: ff d0                        	callq	*%rax
+    94ba: 4c 89 e7                     	movq	%r12, %rdi
+    94bd: e8 00 00 00 00               	callq	0x94c2 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x2f2>
+		00000000000094be:  R_X86_64_PLT32	P1::IQP::Camera::StartDeviceControl()-0x4
+    94c2: 4c 89 e7                     	movq	%r12, %rdi
+    94c5: e8 00 00 00 00               	callq	0x94ca <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x2fa>
+		00000000000094c6:  R_X86_64_PLT32	P1::IQP::Camera::StartImageEnumeration()-0x4
+    94ca: 4c 89 e7                     	movq	%r12, %rdi
+    94cd: e8 00 00 00 00               	callq	0x94d2 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x302>
+		00000000000094ce:  R_X86_64_PLT32	P1::IQP::Camera::StopLiveView()-0x4
+    94d2: 41 8b 06                     	movl	(%r14), %eax
+    94d5: 4c 89 ee                     	movq	%r13, %rsi
+    94d8: 4c 89 e7                     	movq	%r12, %rdi
+    94db: 48 8d 0d 9e 6b ff ff         	leaq	-0x9462(%rip), %rcx     # 0x80 <.text+0x80>
+    94e2: 48 89 5c 24 20               	movq	%rbx, 0x20(%rsp)
+    94e7: 89 44 24 28                  	movl	%eax, 0x28(%rsp)
+    94eb: 48 8d 05 8e 75 ff ff         	leaq	-0x8a72(%rip), %rax     # 0xa80 <IqpLibTransport::FullImageArrivesFromIqp(int, P1::IQP::ImageReceivePackage&)+0xd0>
+    94f2: 66 48 0f 6e c1               	movq	%rcx, %xmm0
+    94f7: 66 48 0f 6e d0               	movq	%rax, %xmm2
+    94fc: 66 0f 6c c2                  	punpcklqdq	%xmm2, %xmm0    # xmm0 = xmm0[0],xmm2[0]
+    9500: 0f 29 44 24 30               	movaps	%xmm0, 0x30(%rsp)
+    9505: e8 00 00 00 00               	callq	0x950a <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x33a>
+		0000000000009506:  R_X86_64_PLT32	P1::IQP::Camera::SetImagePackageReceiver(std::function<void (P1::IQP::ImageReceivePackage&)>)-0x4
+    950a: 48 8b 44 24 30               	movq	0x30(%rsp), %rax
+    950f: 48 85 c0                     	testq	%rax, %rax
+    9512: 74 0d                        	je	0x9521 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x351>
+    9514: ba 03 00 00 00               	movl	$0x3, %edx
+    9519: 4c 89 ee                     	movq	%r13, %rsi
+    951c: 4c 89 ef                     	movq	%r13, %rdi
+    951f: ff d0                        	callq	*%rax
+    9521: 41 8b 06                     	movl	(%r14), %eax
+    9524: 48 8d 0d 95 6b ff ff         	leaq	-0x946b(%rip), %rcx     # 0xc0 <.text+0xc0>
+    952b: 4c 89 ee                     	movq	%r13, %rsi
+    952e: 4c 89 e7                     	movq	%r12, %rdi
+    9531: 66 48 0f 6e c1               	movq	%rcx, %xmm0
+    9536: 48 89 5c 24 20               	movq	%rbx, 0x20(%rsp)
+    953b: 89 44 24 28                  	movl	%eax, 0x28(%rsp)
+    953f: 48 8d 05 1a 9d ff ff         	leaq	-0x62e6(%rip), %rax     # 0x3260 <IqpLibTransport::LiveViewImageArrivesFromIqp(int, P1::IQP::ImageReceivePackage&)+0x180>
+    9546: 66 48 0f 6e d8               	movq	%rax, %xmm3
+    954b: 66 0f 6c c3                  	punpcklqdq	%xmm3, %xmm0    # xmm0 = xmm0[0],xmm3[0]
+    954f: 0f 29 44 24 30               	movaps	%xmm0, 0x30(%rsp)
+    9554: e8 00 00 00 00               	callq	0x9559 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x389>
+		0000000000009555:  R_X86_64_PLT32	P1::IQP::Camera::SetLiveViewPackageReceiver(std::function<void (P1::IQP::ImageReceivePackage&)>)-0x4
+    9559: 48 8b 44 24 30               	movq	0x30(%rsp), %rax
+    955e: 48 85 c0                     	testq	%rax, %rax
+    9561: 74 0d                        	je	0x9570 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x3a0>
+    9563: ba 03 00 00 00               	movl	$0x3, %edx
+    9568: 4c 89 ee                     	movq	%r13, %rsi
+    956b: 4c 89 ef                     	movq	%r13, %rdi
+    956e: ff d0                        	callq	*%rax
+    9570: 41 8b 06                     	movl	(%r14), %eax
+    9573: 48 89 5c 24 20               	movq	%rbx, 0x20(%rsp)
+    9578: 4c 89 ee                     	movq	%r13, %rsi
+    957b: 4c 89 e7                     	movq	%r12, %rdi
+    957e: 48 8d 1d 7b 6b ff ff         	leaq	-0x9485(%rip), %rbx     # 0x100 <.text+0x100>
+    9585: 89 44 24 28                  	movl	%eax, 0x28(%rsp)
+    9589: 48 8d 05 a0 ca ff ff         	leaq	-0x3560(%rip), %rax     # 0x6030 <IqpLibTransport::HandleImageTransferProgressUpdate(int, P1::Universal::ProgressTask const&)+0x4e0>
+    9590: 66 48 0f 6e c3               	movq	%rbx, %xmm0
+    9595: 66 48 0f 6e e0               	movq	%rax, %xmm4
+    959a: 66 0f 6c c4                  	punpcklqdq	%xmm4, %xmm0    # xmm0 = xmm0[0],xmm4[0]
+    959e: 0f 29 44 24 30               	movaps	%xmm0, 0x30(%rsp)
+    95a3: e8 00 00 00 00               	callq	0x95a8 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x3d8>
+		00000000000095a4:  R_X86_64_PLT32	P1::IQP::Camera::SetImageTransferProgressCallback(std::function<void (P1::Universal::ProgressTask const&)>)-0x4
+    95a8: 48 8b 44 24 30               	movq	0x30(%rsp), %rax
+    95ad: 48 85 c0                     	testq	%rax, %rax
+    95b0: 74 0d                        	je	0x95bf <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x3ef>
+    95b2: ba 03 00 00 00               	movl	$0x3, %edx
+    95b7: 4c 89 ee                     	movq	%r13, %rsi
+    95ba: 4c 89 ef                     	movq	%r13, %rdi
+    95bd: ff d0                        	callq	*%rax
+    95bf: 31 ff                        	xorl	%edi, %edi
+    95c1: e8 00 00 00 00               	callq	0x95c6 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x3f6>
+		00000000000095c2:  R_X86_64_PLT32	Sdk::GetInstance(bool)-0x4
+    95c6: 48 89 c3                     	movq	%rax, %rbx
+    95c9: 48 85 c0                     	testq	%rax, %rax
+    95cc: 0f 84 46 01 00 00            	je	0x9718 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x548>
+    95d2: 4c 89 fe                     	movq	%r15, %rsi
+    95d5: 4c 89 ef                     	movq	%r13, %rdi
+    95d8: 45 8b 36                     	movl	(%r14), %r14d
+    95db: e8 00 00 00 00               	callq	0x95e0 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x410>
+		00000000000095dc:  R_X86_64_PLT32	IqpLibTransport::cameraInfoFromDevcieMoniker(P1::IQP::Transport::DeviceMoniker const*)-0x4
+    95e0: 48 8b 35 00 00 00 00         	movq	(%rip), %rsi            # 0x95e7 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x417>
+		00000000000095e3:  R_X86_64_REX_GOTPCRELX	P1::CameraSdk::SdkEventType::SdkCameraOpened-0x4
+    95e7: 48 8d 7c 24 10               	leaq	0x10(%rsp), %rdi
+    95ec: 44 89 f1                     	movl	%r14d, %ecx
+    95ef: 4c 89 ea                     	movq	%r13, %rdx
+    95f2: e8 00 00 00 00               	callq	0x95f7 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x427>
+		00000000000095f3:  R_X86_64_PLT32	P1::CameraSdk::NotificationEvent::CreateSdkEvent(P1::CameraSdk::SdkEventType const&, P1::CameraSdk::CameraInfo const&, int)-0x4
+    95f7: 48 8b 7c 24 68               	movq	0x68(%rsp), %rdi
+    95fc: 48 8d 44 24 78               	leaq	0x78(%rsp), %rax
+    9601: 48 39 c7                     	cmpq	%rax, %rdi
+    9604: 74 05                        	je	0x960b <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x43b>
+    9606: e8 00 00 00 00               	callq	0x960b <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x43b>
+		0000000000009607:  R_X86_64_PLT32	operator delete(void*)-0x4
+    960b: 48 8b 7c 24 48               	movq	0x48(%rsp), %rdi
+    9610: 48 8d 44 24 58               	leaq	0x58(%rsp), %rax
+    9615: 48 39 c7                     	cmpq	%rax, %rdi
+    9618: 74 05                        	je	0x961f <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x44f>
+    961a: e8 00 00 00 00               	callq	0x961f <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x44f>
+		000000000000961b:  R_X86_64_PLT32	operator delete(void*)-0x4
+    961f: 48 8b 7c 24 28               	movq	0x28(%rsp), %rdi
+    9624: 48 8d 44 24 38               	leaq	0x38(%rsp), %rax
+    9629: 48 39 c7                     	cmpq	%rax, %rdi
+    962c: 74 05                        	je	0x9633 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x463>
+    962e: e8 00 00 00 00               	callq	0x9633 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x463>
+		000000000000962f:  R_X86_64_PLT32	operator delete(void*)-0x4
+    9633: 66 0f 6f 74 24 10            	movdqa	0x10(%rsp), %xmm6
+    9639: 48 8b 44 24 18               	movq	0x18(%rsp), %rax
+    963e: 48 8d 7b 70                  	leaq	0x70(%rbx), %rdi
+    9642: 0f 29 74 24 20               	movaps	%xmm6, 0x20(%rsp)
+    9647: 48 85 c0                     	testq	%rax, %rax
+    964a: 74 13                        	je	0x965f <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x48f>
+    964c: 48 83 3d 00 00 00 00 00      	cmpq	$0x0, (%rip)            # 0x9654 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x484>
+		000000000000964f:  R_X86_64_GOTPCREL	__pthread_key_create-0x5
+    9654: 0f 84 d6 00 00 00            	je	0x9730 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x560>
+    965a: f0                           	lock
+    965b: 83 40 08 01                  	addl	$0x1, 0x8(%rax)
+    965f: 4c 89 ee                     	movq	%r13, %rsi
+    9662: e8 00 00 00 00               	callq	0x9667 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x497>
+		0000000000009663:  R_X86_64_PLT32	P1::CameraSdkC::NotificationList::Notify(std::shared_ptr<P1::CameraSdk::INotificationEvent const>&&)-0x4
+    9667: 48 8b 7c 24 28               	movq	0x28(%rsp), %rdi
+    966c: 48 85 ff                     	testq	%rdi, %rdi
+    966f: 74 05                        	je	0x9676 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x4a6>
+    9671: e8 00 00 00 00               	callq	0x9676 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x4a6>
+		0000000000009672:  R_X86_64_PLT32	std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()-0x4
+    9676: 48 8b 7c 24 18               	movq	0x18(%rsp), %rdi
+    967b: 48 85 ff                     	testq	%rdi, %rdi
+    967e: 74 05                        	je	0x9685 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x4b5>
+    9680: e8 00 00 00 00               	callq	0x9685 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x4b5>
+		0000000000009681:  R_X86_64_PLT32	std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)2>::_M_release()-0x4
+    9685: 4c 89 e7                     	movq	%r12, %rdi
+    9688: e8 00 00 00 00               	callq	0x968d <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x4bd>
+		0000000000009689:  R_X86_64_PLT32	P1::IQP::Camera::SupportsFeaturePackProtocol()-0x4
+    968d: 84 c0                        	testb	%al, %al
+    968f: 74 6f                        	je	0x9700 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x530>
+    9691: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x9698 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x4c8>
+		0000000000009694:  R_X86_64_PC32	.LC232-0x4
+    9698: bf 06 00 00 00               	movl	$0x6, %edi
+    969d: 31 c0                        	xorl	%eax, %eax
+    969f: e8 00 00 00 00               	callq	0x96a4 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x4d4>
+		00000000000096a0:  R_X86_64_PLT32	p1_camerasdk_trace(int, char const*, ...)-0x4
+    96a4: 66 0f 6f 05 00 00 00 00      	movdqa	(%rip), %xmm0           # 0x96ac <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x4dc>
+		00000000000096a8:  R_X86_64_PC32	.LC235-0x4
+    96ac: 4c 89 ee                     	movq	%r13, %rsi
+    96af: 4c 89 e7                     	movq	%r12, %rdi
+    96b2: 0f 29 44 24 20               	movaps	%xmm0, 0x20(%rsp)
+    96b7: 66 0f ef c0                  	pxor	%xmm0, %xmm0
+    96bb: 0f 29 44 24 30               	movaps	%xmm0, 0x30(%rsp)
+    96c0: 0f 29 44 24 40               	movaps	%xmm0, 0x40(%rsp)
+    96c5: 0f 29 44 24 50               	movaps	%xmm0, 0x50(%rsp)
+    96ca: e8 00 00 00 00               	callq	0x96cf <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x4ff>
+		00000000000096cb:  R_X86_64_PLT32	P1::IQP::Camera::EnableFeaturePack(std::array<unsigned char, 64ul>&)-0x4
+    96cf: 45 31 e4                     	xorl	%r12d, %r12d
+    96d2: e9 fb fb ff ff               	jmp	0x92d2 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x102>
+    96d7: 66 0f 1f 84 00 00 00 00 00   	nopw	(%rax,%rax)
+    96e0: 83 45 08 01                  	addl	$0x1, 0x8(%rbp)
+    96e4: e9 c6 fc ff ff               	jmp	0x93af <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x1df>
+    96e9: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+    96f0: 48 8b 15 00 00 00 00         	movq	(%rip), %rdx            # 0x96f7 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x527>
+		00000000000096f3:  R_X86_64_REX_GOTPCRELX	P1::Universal::STR_NoThrow<char>::GetString() const::cNull-0x4
+    96f7: e9 61 fc ff ff               	jmp	0x935d <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x18d>
+    96fc: 0f 1f 40 00                  	nopl	(%rax)
+    9700: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x9707 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x537>
+		0000000000009703:  R_X86_64_PC32	.LC233-0x4
+    9707: bf 06 00 00 00               	movl	$0x6, %edi
+    970c: 31 c0                        	xorl	%eax, %eax
+    970e: e8 00 00 00 00               	callq	0x9713 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x543>
+		000000000000970f:  R_X86_64_PLT32	p1_camerasdk_trace(int, char const*, ...)-0x4
+    9713: eb ba                        	jmp	0x96cf <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x4ff>
+    9715: 0f 1f 00                     	nopl	(%rax)
+    9718: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x971f <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x54f>
+		000000000000971b:  R_X86_64_PC32	.LC231-0x4
+    971f: bf 01 00 00 00               	movl	$0x1, %edi
+    9724: 31 c0                        	xorl	%eax, %eax
+    9726: e8 00 00 00 00               	callq	0x972b <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x55b>
+		0000000000009727:  R_X86_64_PLT32	p1_camerasdk_trace(int, char const*, ...)-0x4
+    972b: e9 55 ff ff ff               	jmp	0x9685 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x4b5>
+    9730: 83 40 08 01                  	addl	$0x1, 0x8(%rax)
+    9734: e9 26 ff ff ff               	jmp	0x965f <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x48f>
+    9739: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+    9740: 83 45 08 01                  	addl	$0x1, 0x8(%rbp)
+    9744: e9 f2 fc ff ff               	jmp	0x943b <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x26b>
+    9749: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+    9750: 48 89 ce                     	movq	%rcx, %rsi
+    9753: e9 9c fc ff ff               	jmp	0x93f4 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x224>
+    9758: 49 89 c4                     	movq	%rax, %r12
+    975b: e9 00 00 00 00               	jmp	0x9760 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x590>
+		000000000000975c:  R_X86_64_PC32	.text.unlikely+0x19d8
+    9760: 49 89 c4                     	movq	%rax, %r12
+    9763: e9 00 00 00 00               	jmp	0x9768 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x598>
+		0000000000009764:  R_X86_64_PC32	.text.unlikely+0x19ff
+    9768: e9 00 00 00 00               	jmp	0x976d <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x59d>
+		0000000000009769:  R_X86_64_PC32	.text.unlikely+0x1a0f
+    976d: 48 89 c7                     	movq	%rax, %rdi
+    9770: 48 89 d0                     	movq	%rdx, %rax
+    9773: e9 00 00 00 00               	jmp	0x9778 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x5a8>
+		0000000000009774:  R_X86_64_PC32	.text.unlikely+0x1a14
+    9778: 49 89 c4                     	movq	%rax, %r12
+    977b: e9 00 00 00 00               	jmp	0x9780 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x5b0>
+		000000000000977c:  R_X86_64_PC32	.text.unlikely+0x1a3f
+    9780: 49 89 c4                     	movq	%rax, %r12
+    9783: e9 00 00 00 00               	jmp	0x9788 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x5b8>
+		0000000000009784:  R_X86_64_PC32	.text.unlikely+0x1a5f
+    9788: 49 89 c4                     	movq	%rax, %r12
+    978b: e9 00 00 00 00               	jmp	0x9790 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x5c0>
+		000000000000978c:  R_X86_64_PC32	.text.unlikely+0x1a7b
+    9790: 49 89 c4                     	movq	%rax, %r12
+    9793: e9 00 00 00 00               	jmp	0x9798 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x5c8>
+		0000000000009794:  R_X86_64_PC32	.text.unlikely+0x1a9b
+    9798: 49 89 c4                     	movq	%rax, %r12
+    979b: e9 00 00 00 00               	jmp	0x97a0 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x5d0>
+		000000000000979c:  R_X86_64_PC32	.text.unlikely+0x1abb
+    97a0: 49 89 c4                     	movq	%rax, %r12
+    97a3: e9 00 00 00 00               	jmp	0x97a8 <IqpLibTransport::OpenCameraFromMoniker(P1::IQP::Transport::DeviceMoniker&, int&, char const*, bool)+0x5d8>
+		00000000000097a4:  R_X86_64_PC32	.text.unlikely+0x1ad0
+    97a8: 49 89 c4                     	movq	%rax, %r12
+    97ab: e9 00 00 00 00               	jmp	0x97b0 <IqpLibTransport::OpenUsbCamera(int&, char const*, char const*)>
+		00000000000097ac:  R_X86_64_PC32	.text.unlikely+0x1add

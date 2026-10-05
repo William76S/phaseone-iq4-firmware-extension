@@ -1,0 +1,95 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000009770a0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm>:
+  98c454:      	sub	sp, sp, #0x10
+  98c458:      	str	x0, [sp, #0x8]
+  98c45c:      	ldr	x0, [sp, #0x8]
+  98c460:      	cmp	x0, #0x0
+  98c464:      	b.eq	0x98c478 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x153d8>
+  98c468:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c46c:      	add	x0, x0, #0x2f0
+  98c470:      	ldr	x1, [sp, #0x8]
+  98c474:      	str	x1, [x0]
+  98c478:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c47c:      	add	x0, x0, #0x270
+  98c480:      	adrp	x1, 0x98c000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x14f60>
+  98c484:      	add	x1, x1, #0xb4
+  98c488:      	str	x1, [x0]
+  98c48c:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c490:      	add	x0, x0, #0x270
+  98c494:      	adrp	x1, 0x98c000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x14f60>
+  98c498:      	add	x1, x1, #0xd0
+  98c49c:      	str	x1, [x0, #0x8]
+  98c4a0:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c4a4:      	add	x0, x0, #0x270
+  98c4a8:      	adrp	x1, 0x98c000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x14f60>
+  98c4ac:      	add	x1, x1, #0x174
+  98c4b0:      	str	x1, [x0, #0x10]
+  98c4b4:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c4b8:      	add	x0, x0, #0x270
+  98c4bc:      	adrp	x1, 0x98c000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x14f60>
+  98c4c0:      	add	x1, x1, #0x238
+  98c4c4:      	str	x1, [x0, #0x18]
+  98c4c8:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c4cc:      	add	x0, x0, #0x270
+  98c4d0:      	adrp	x1, 0x98c000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x14f60>
+  98c4d4:      	add	x1, x1, #0x260
+  98c4d8:      	str	x1, [x0, #0x20]
+  98c4dc:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c4e0:      	add	x0, x0, #0x270
+  98c4e4:      	adrp	x1, 0x98c000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x14f60>
+  98c4e8:      	add	x1, x1, #0x360
+  98c4ec:      	str	x1, [x0, #0x28]
+  98c4f0:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c4f4:      	add	x0, x0, #0x270
+  98c4f8:      	adrp	x1, 0x98c000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x14f60>
+  98c4fc:      	add	x1, x1, #0x388
+  98c500:      	str	x1, [x0, #0x30]
+  98c504:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c508:      	add	x0, x0, #0x270
+  98c50c:      	str	xzr, [x0, #0x38]
+  98c510:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c514:      	add	x0, x0, #0x2b0
+  98c518:      	adrp	x1, 0x98b000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x13f60>
+  98c51c:      	add	x1, x1, #0xc04
+  98c520:      	str	x1, [x0]
+  98c524:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c528:      	add	x0, x0, #0x2b0
+  98c52c:      	adrp	x1, 0x98b000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x13f60>
+  98c530:      	add	x1, x1, #0xd44
+  98c534:      	str	x1, [x0, #0x8]
+  98c538:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c53c:      	add	x0, x0, #0x2b0
+  98c540:      	adrp	x1, 0x98b000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x13f60>
+  98c544:      	add	x1, x1, #0xdd4
+  98c548:      	str	x1, [x0, #0x10]
+  98c54c:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c550:      	add	x0, x0, #0x2b0
+  98c554:      	adrp	x1, 0x98b000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x13f60>
+  98c558:      	add	x1, x1, #0xe64
+  98c55c:      	str	x1, [x0, #0x18]
+  98c560:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c564:      	add	x0, x0, #0x2b0
+  98c568:      	adrp	x1, 0x98b000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x13f60>
+  98c56c:      	add	x1, x1, #0xee0
+  98c570:      	str	x1, [x0, #0x20]
+  98c574:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c578:      	add	x0, x0, #0x2b0
+  98c57c:      	adrp	x1, 0x98b000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x13f60>
+  98c580:      	add	x1, x1, #0xff4
+  98c584:      	str	x1, [x0, #0x28]
+  98c588:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c58c:      	add	x0, x0, #0x2b0
+  98c590:      	adrp	x1, 0x98c000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x14f60>
+  98c594:      	add	x1, x1, #0x7c
+  98c598:      	str	x1, [x0, #0x30]
+  98c59c:      	adrp	x0, 0x423d000 <_ZNSt5ctypeIcE2idE+0x32d9ed8>
+  98c5a0:      	add	x0, x0, #0x2b0
+  98c5a4:      	str	xzr, [x0, #0x38]
+  98c5a8:      	nop
+  98c5ac:      	add	sp, sp, #0x10
+  98c5b0:      	ret

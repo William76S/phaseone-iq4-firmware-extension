@@ -1,0 +1,42 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  871edc: 79401800     	ldrh	w0, [x0, #0xc]
+  871ee0: 92403c00     	and	x0, x0, #0xffff
+  871ee4: f9400fe1     	ldr	x1, [sp, #0x18]
+  871ee8: 8b000020     	add	x0, x1, x0
+  871eec: f90023e0     	str	x0, [sp, #0x40]
+  871ef0: f9400fe0     	ldr	x0, [sp, #0x18]
+  871ef4: b9400800     	ldr	w0, [x0, #0x8]
+  871ef8: b9003fe0     	str	w0, [sp, #0x3c]
+  871efc: f94017e0     	ldr	x0, [sp, #0x28]
+  871f00: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871f04: f9401401     	ldr	x1, [x0, #0x28]
+  871f08: f94017e0     	ldr	x0, [sp, #0x28]
+  871f0c: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871f10: f9001801     	str	x1, [x0, #0x30]
+  871f14: f94017e0     	ldr	x0, [sp, #0x28]
+  871f18: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871f1c: f9401800     	ldr	x0, [x0, #0x30]
+  871f20: 97ee63e0     	bl	0x40aea0 <strlen@plt>
+  871f24: 2a0003e1     	mov	w1, w0
+  871f28: f94017e0     	ldr	x0, [sp, #0x28]
+  871f2c: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871f30: b9003801     	str	w1, [x0, #0x38]
+  871f34: f94017e0     	ldr	x0, [sp, #0x28]
+  871f38: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871f3c: b9003c1f     	str	wzr, [x0, #0x3c]
+  871f40: f94017e0     	ldr	x0, [sp, #0x28]
+  871f44: 91402000     	add	x0, x0, #0x8, lsl #12   // =0x8000
+  871f48: f94023e1     	ldr	x1, [sp, #0x40]
+  871f4c: f9002001     	str	x1, [x0, #0x40]
+  871f50: b9403fe0     	ldr	w0, [sp, #0x3c]
+  871f54: aa0003e1     	mov	x1, x0
+  871f58: f94023e0     	ldr	x0, [sp, #0x40]
+  871f5c: 97ee5fc9     	bl	0x409e80 <strnlen@plt>
+  871f60: 2a0003e1     	mov	w1, w0
+  871f64: f94017e0     	ldr	x0, [sp, #0x28]

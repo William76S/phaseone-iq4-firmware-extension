@@ -1,0 +1,1165 @@
+{
+  "schema": "iq4_f1_user_elf_append_02",
+  "baseline_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "baseline_bytes": 11874544,
+  "candidate_sha256": "0614eb093fe1104f403b4c65c00380de2590679dd4b541cfb8f803ffe21c338f",
+  "candidate_bytes": 12265800,
+  "app_version": [
+    6,
+    3,
+    25
+  ],
+  "objects": [
+    {
+      "label": "build/reproduction_02/menu.o",
+      "bytes": 18384,
+      "sha256": "f89deb687cf709cb889a6c730ad9fb9fc355ef4f0905ec7ed8fe22471d6311c0"
+    },
+    {
+      "label": "build/reproduction_02/menu_wrapper.o",
+      "bytes": 1152,
+      "sha256": "8dbfe0494aaea32764f2d44147becba99c59ad1c6db93e77798722d9d1ce01c7"
+    },
+    {
+      "label": "build/reproduction_02/display.o",
+      "bytes": 6072,
+      "sha256": "494aff7b28f3a06d7d6eee89bb54357c45c824cb53a8f9137d2b0d47595c1c0f"
+    },
+    {
+      "label": "build/reproduction_02/display_wrapper.o",
+      "bytes": 1296,
+      "sha256": "8fbc28bc3435f81a67b7d02e5cdf9bef67f11ebf5b8b47e17f8a9accb0bfdbf1"
+    }
+  ],
+  "hooks": [
+    {
+      "va": 5365196,
+      "file_offset": 1170892,
+      "old_bytes": "9b64fd97",
+      "old_target": 4681784,
+      "new_target": 69478512,
+      "new_bytes": "a992f494",
+      "symbol": "iq4_f1_lv_draw_wrapper_14"
+    },
+    {
+      "va": 5171800,
+      "file_offset": 977496,
+      "old_bytes": "43320094",
+      "old_target": 5223268,
+      "new_target": 69474680,
+      "new_bytes": "c84bf594",
+      "symbol": "iq4_f1_native_menu_wrapper_02"
+    },
+    {
+      "va": 5171072,
+      "file_offset": 976768,
+      "old_bytes": "f9320094",
+      "old_target": 5223268,
+      "new_target": 69474680,
+      "new_bytes": "7e4cf594",
+      "symbol": "iq4_f1_native_menu_wrapper_02"
+    }
+  ],
+  "initializer_va": 69468528,
+  "original_init_entries_preserved": 340,
+  "new_init_entries": 1,
+  "actual_CSU_startup": {
+    "start": 69796680,
+    "end": 69799408,
+    "count": 341,
+    "main_startup_init_callback_va": 10416304,
+    "provided_by_executable_entry": true,
+    "dynamic_array_matches_actual_CSU": true,
+    "target_executed": false
+  },
+  "CSU_bound_instruction_changes": [
+    {
+      "va": 10416316,
+      "file_offset": 6222012,
+      "old_bytes": "942a00f0",
+      "new_bytes": "14c501b0",
+      "register": 20,
+      "pair_address": 69799408
+    },
+    {
+      "va": 10416320,
+      "file_offset": 6222016,
+      "old_bytes": "94022191",
+      "new_bytes": "94c23791",
+      "register": 20,
+      "pair_address": 69799408
+    },
+    {
+      "va": 10416328,
+      "file_offset": 6222024,
+      "old_bytes": "952a00d0",
+      "new_bytes": "15c501b0",
+      "register": 21,
+      "pair_address": 69796680
+    },
+    {
+      "va": 10416332,
+      "file_offset": 6222028,
+      "old_bytes": "b5823691",
+      "new_bytes": "b5220d91",
+      "register": 21,
+      "pair_address": 69796680
+    }
+  ],
+  "DT_INIT_unchanged": 4234128,
+  "dynamic_changes": [
+    {
+      "tag": 25,
+      "file_offset": 11742784,
+      "old": 15998368,
+      "new": 69796680
+    },
+    {
+      "tag": 27,
+      "file_offset": 11742800,
+      "old": 2720,
+      "new": 2728
+    }
+  ],
+  "phdr_file_offset": 11736920,
+  "AT_PHDR_expected_va": 15931224,
+  "program_headers": [
+    [
+      6,
+      4,
+      11736920,
+      15931224,
+      15931224,
+      672,
+      672,
+      8
+    ],
+    [
+      3,
+      4,
+      624,
+      4194928,
+      4194928,
+      27,
+      27,
+      1
+    ],
+    [
+      1,
+      5,
+      0,
+      4194304,
+      4194304,
+      11737592,
+      11737592,
+      65536
+    ],
+    [
+      1,
+      6,
+      11738528,
+      15998368,
+      15998368,
+      133716,
+      53459488,
+      65536
+    ],
+    [
+      2,
+      6,
+      11742600,
+      16002440,
+      16002440,
+      592,
+      592,
+      8
+    ],
+    [
+      4,
+      4,
+      652,
+      4194956,
+      4194956,
+      68,
+      68,
+      4
+    ],
+    [
+      7,
+      4,
+      11738528,
+      15998368,
+      15998368,
+      0,
+      8,
+      8
+    ],
+    [
+      1685382480,
+      4,
+      11938312,
+      69478920,
+      69478920,
+      259836,
+      259836,
+      4
+    ],
+    [
+      1685382481,
+      6,
+      0,
+      0,
+      0,
+      0,
+      0,
+      16
+    ],
+    [
+      1685382482,
+      4,
+      11738528,
+      15998368,
+      15998368,
+      4704,
+      4704,
+      1
+    ],
+    [
+      1,
+      5,
+      11927552,
+      69468160,
+      69468160,
+      270876,
+      270876,
+      65536
+    ],
+    [
+      1,
+      6,
+      12255232,
+      69795840,
+      69795840,
+      3568,
+      3568,
+      65536
+    ]
+  ],
+  "original_EH_entries_preserved": 32455,
+  "own_EH_entries": 23,
+  "new_EH_entries": 32478,
+  "own_fde_pairs": [
+    [
+      69468160,
+      69474284
+    ],
+    [
+      69468452,
+      69474320
+    ],
+    [
+      69468464,
+      69474340
+    ],
+    [
+      69468528,
+      69474360
+    ],
+    [
+      69468540,
+      69474380
+    ],
+    [
+      69469504,
+      69474428
+    ],
+    [
+      69469712,
+      69474448
+    ],
+    [
+      69469876,
+      69474468
+    ],
+    [
+      69469976,
+      69474488
+    ],
+    [
+      69470120,
+      69474520
+    ],
+    [
+      69472480,
+      69474552
+    ],
+    [
+      69472564,
+      69474580
+    ],
+    [
+      69473104,
+      69474600
+    ],
+    [
+      69473236,
+      69474620
+    ],
+    [
+      69473524,
+      69474640
+    ],
+    [
+      69473700,
+      69474660
+    ],
+    [
+      69474680,
+      69474820
+    ],
+    [
+      69474864,
+      69478364
+    ],
+    [
+      69476680,
+      69478416
+    ],
+    [
+      69476796,
+      69478436
+    ],
+    [
+      69477072,
+      69478456
+    ],
+    [
+      69478048,
+      69478492
+    ],
+    [
+      69478512,
+      69478876
+    ]
+  ],
+  "original_import_bindings": {
+    "iq4_stock_menu_set_01": {
+      "va": 5223268,
+      "kind": "native_SetMenu",
+      "proof_va": 5223268,
+      "proof_bytes": "fd7bbea9fd030091e00f00f9e10b00f9"
+    }
+  },
+  "new_dynamic_import": null,
+  "own_symbols": {
+    "iq4_f1_report_14": 69468160,
+    "iq4_f1_mode_get_01": 69468452,
+    "iq4_f1_mode_set_on_ui_01": 69468464,
+    "iq4_f1_menu_initialize_02": 69468528,
+    "iq4_f1_before_native_menu_02": 69468540,
+    "iq4_f1_native_menu_wrapper_02": 69474680,
+    "iq4_f1_plan_14": 69474864,
+    "iq4_f1_after_stock_draw_14": 69477072,
+    "iq4_f1_lv_draw_wrapper_14": 69478512
+  },
+  "changed_original_spans": [
+    {
+      "offset": 32,
+      "bytes": 3,
+      "original_hex": "400000",
+      "candidate_hex": "5817b3"
+    },
+    {
+      "offset": 40,
+      "bytes": 3,
+      "original_hex": "3029b5",
+      "candidate_hex": "4815bb"
+    },
+    {
+      "offset": 56,
+      "bytes": 1,
+      "original_hex": "0a",
+      "candidate_hex": "0c"
+    },
+    {
+      "offset": 60,
+      "bytes": 1,
+      "original_hex": "1f",
+      "candidate_hex": "50"
+    },
+    {
+      "offset": 976768,
+      "bytes": 3,
+      "original_hex": "f93200",
+      "candidate_hex": "7e4cf5"
+    },
+    {
+      "offset": 977496,
+      "bytes": 3,
+      "original_hex": "433200",
+      "candidate_hex": "c84bf5"
+    },
+    {
+      "offset": 1170892,
+      "bytes": 4,
+      "original_hex": "9b64fd97",
+      "candidate_hex": "a992f494"
+    },
+    {
+      "offset": 6222012,
+      "bytes": 4,
+      "original_hex": "942a00f0",
+      "candidate_hex": "14c501b0"
+    },
+    {
+      "offset": 6222017,
+      "bytes": 2,
+      "original_hex": "0221",
+      "candidate_hex": "c237"
+    },
+    {
+      "offset": 6222024,
+      "bytes": 4,
+      "original_hex": "952a00d0",
+      "candidate_hex": "15c501b0"
+    },
+    {
+      "offset": 6222029,
+      "bytes": 2,
+      "original_hex": "8236",
+      "candidate_hex": "220d"
+    },
+    {
+      "offset": 10332290,
+      "bytes": 1,
+      "original_hex": "15",
+      "candidate_hex": "19"
+    },
+    {
+      "offset": 11736920,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "06"
+    },
+    {
+      "offset": 11736924,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11736928,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "5817b3"
+    },
+    {
+      "offset": 11736936,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "5817f3"
+    },
+    {
+      "offset": 11736944,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "5817f3"
+    },
+    {
+      "offset": 11736952,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "a002"
+    },
+    {
+      "offset": 11736960,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "a002"
+    },
+    {
+      "offset": 11736968,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "08"
+    },
+    {
+      "offset": 11736976,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "03"
+    },
+    {
+      "offset": 11736980,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11736984,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "7002"
+    },
+    {
+      "offset": 11736992,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "700240"
+    },
+    {
+      "offset": 11737000,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "700240"
+    },
+    {
+      "offset": 11737008,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "1b"
+    },
+    {
+      "offset": 11737016,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "1b"
+    },
+    {
+      "offset": 11737024,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737032,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737036,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "05"
+    },
+    {
+      "offset": 11737050,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "40"
+    },
+    {
+      "offset": 11737058,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "40"
+    },
+    {
+      "offset": 11737064,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "f819b3"
+    },
+    {
+      "offset": 11737072,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "f819b3"
+    },
+    {
+      "offset": 11737082,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737088,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737092,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "06"
+    },
+    {
+      "offset": 11737096,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01db3"
+    },
+    {
+      "offset": 11737104,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01df4"
+    },
+    {
+      "offset": 11737112,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01df4"
+    },
+    {
+      "offset": 11737120,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "540a02"
+    },
+    {
+      "offset": 11737128,
+      "bytes": 4,
+      "original_hex": "00000000",
+      "candidate_hex": "20ba2f03"
+    },
+    {
+      "offset": 11737138,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737144,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "02"
+    },
+    {
+      "offset": 11737148,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "06"
+    },
+    {
+      "offset": 11737152,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "882db3"
+    },
+    {
+      "offset": 11737160,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "882df4"
+    },
+    {
+      "offset": 11737168,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "882df4"
+    },
+    {
+      "offset": 11737176,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "5002"
+    },
+    {
+      "offset": 11737184,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "5002"
+    },
+    {
+      "offset": 11737192,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "08"
+    },
+    {
+      "offset": 11737200,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11737204,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11737208,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "8c02"
+    },
+    {
+      "offset": 11737216,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "8c0240"
+    },
+    {
+      "offset": 11737224,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "8c0240"
+    },
+    {
+      "offset": 11737232,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "44"
+    },
+    {
+      "offset": 11737240,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "44"
+    },
+    {
+      "offset": 11737248,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11737256,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "07"
+    },
+    {
+      "offset": 11737260,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11737264,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01db3"
+    },
+    {
+      "offset": 11737272,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01df4"
+    },
+    {
+      "offset": 11737280,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01df4"
+    },
+    {
+      "offset": 11737296,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "08"
+    },
+    {
+      "offset": 11737304,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "08"
+    },
+    {
+      "offset": 11737312,
+      "bytes": 5,
+      "original_hex": "0000000000",
+      "candidate_hex": "50e5746404"
+    },
+    {
+      "offset": 11737320,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "082ab6"
+    },
+    {
+      "offset": 11737328,
+      "bytes": 4,
+      "original_hex": "00000000",
+      "candidate_hex": "082a2404"
+    },
+    {
+      "offset": 11737336,
+      "bytes": 4,
+      "original_hex": "00000000",
+      "candidate_hex": "082a2404"
+    },
+    {
+      "offset": 11737344,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "fcf603"
+    },
+    {
+      "offset": 11737352,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "fcf603"
+    },
+    {
+      "offset": 11737360,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11737368,
+      "bytes": 5,
+      "original_hex": "0000000000",
+      "candidate_hex": "51e5746406"
+    },
+    {
+      "offset": 11737416,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "10"
+    },
+    {
+      "offset": 11737424,
+      "bytes": 5,
+      "original_hex": "0000000000",
+      "candidate_hex": "52e5746404"
+    },
+    {
+      "offset": 11737432,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01db3"
+    },
+    {
+      "offset": 11737440,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01df4"
+    },
+    {
+      "offset": 11737448,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01df4"
+    },
+    {
+      "offset": 11737456,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "6012"
+    },
+    {
+      "offset": 11737464,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "6012"
+    },
+    {
+      "offset": 11737472,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737480,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737484,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "05"
+    },
+    {
+      "offset": 11737490,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "b6"
+    },
+    {
+      "offset": 11737498,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "2404"
+    },
+    {
+      "offset": 11737506,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "2404"
+    },
+    {
+      "offset": 11737512,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "1c2204"
+    },
+    {
+      "offset": 11737520,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "1c2204"
+    },
+    {
+      "offset": 11737530,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737536,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737540,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "06"
+    },
+    {
+      "offset": 11737546,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "bb"
+    },
+    {
+      "offset": 11737554,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "2904"
+    },
+    {
+      "offset": 11737562,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "2904"
+    },
+    {
+      "offset": 11737568,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "f00d"
+    },
+    {
+      "offset": 11737576,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "f00d"
+    },
+    {
+      "offset": 11737586,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11742784,
+      "bytes": 4,
+      "original_hex": "a01df400",
+      "candidate_hex": "48032904"
+    },
+    {
+      "offset": 11742800,
+      "bytes": 1,
+      "original_hex": "a0",
+      "candidate_hex": "a8"
+    }
+  ],
+  "allowed_original_spans": [
+    [
+      0,
+      64,
+      "ELF header"
+    ],
+    [
+      11736920,
+      672,
+      "relocated active PHDR"
+    ],
+    [
+      10332288,
+      4,
+      "explicit appversion"
+    ],
+    [
+      1170892,
+      4,
+      "exact BL iq4_f1_lv_draw_wrapper_14"
+    ],
+    [
+      977496,
+      4,
+      "exact BL iq4_f1_native_menu_wrapper_02"
+    ],
+    [
+      976768,
+      4,
+      "exact BL iq4_f1_native_menu_wrapper_02"
+    ],
+    [
+      6222012,
+      4,
+      "exact CSU array bound"
+    ],
+    [
+      6222016,
+      4,
+      "exact CSU array bound"
+    ],
+    [
+      6222024,
+      4,
+      "exact CSU array bound"
+    ],
+    [
+      6222028,
+      4,
+      "exact CSU array bound"
+    ],
+    [
+      11742784,
+      8,
+      "DT_INIT_ARRAY metadata"
+    ],
+    [
+      11742800,
+      8,
+      "DT_INIT_ARRAY metadata"
+    ]
+  ],
+  "original_body_preservation_verified": true,
+  "ELF_inspection_only": true,
+  "target_executed": false,
+  "camera_access": false,
+  "firmware_accepted": false,
+  "restoration_verified": false,
+  "F1_camera_acceptance": false,
+  "native_menu_contract": {
+    "path": "tools/firmware/f1_stock_menu_02/NATIVE_CONTRACT.json",
+    "bytes": 2837,
+    "sha256": "4059ef8e4a05a81a067f53dd6830ffad34fbf7185eee5bd4887f7c5d6b5f586e"
+  },
+  "old_independent_button_and_queue_hooks_removed": true,
+  "build_commands": [
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "version"
+      ],
+      "exit": 0,
+      "stdout": "0.15.2\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-std=c11",
+        "-O2",
+        "-g0",
+        "-ffp-contract=off",
+        "-fno-strict-aliasing",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-mno-outline-atomics",
+        "-funwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-omit-frame-pointer",
+        "-fno-optimize-sibling-calls",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fPIC",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card04_fresh_source/build/reproduction_02/menu.o.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card04_fresh_source/tools/firmware/f1_stock_menu_02/runtime.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card04_fresh_source/build/reproduction_02/menu.o"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-g0",
+        "-fPIC",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card04_fresh_source/build/reproduction_02/menu_wrapper.o.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card04_fresh_source/tools/firmware/f1_stock_menu_02/wrapper.S",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card04_fresh_source/build/reproduction_02/menu_wrapper.o"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-std=c11",
+        "-O2",
+        "-g0",
+        "-ffp-contract=off",
+        "-fno-strict-aliasing",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-mno-outline-atomics",
+        "-funwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-omit-frame-pointer",
+        "-fno-optimize-sibling-calls",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fPIC",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card04_fresh_source/build/reproduction_02/display.o.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card04_fresh_source/tools/firmware/f1_stock_display_payload_14/payload.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card04_fresh_source/build/reproduction_02/display.o"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-g0",
+        "-fPIC",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card04_fresh_source/build/reproduction_02/display_wrapper.o.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card04_fresh_source/tools/firmware/f1_stock_display_payload_14/wrapper.S",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card04_fresh_source/build/reproduction_02/display_wrapper.o"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

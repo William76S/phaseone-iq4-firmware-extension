@@ -1,0 +1,71 @@
+{
+  "schema": "iq4_native_COPY_RTTI_exact_static_ABI_01",
+  "runtime_verifier_symbol": "iq4_native_copy_rtti_current_01",
+  "runtime_verifier_object": {
+    "path": "analysis/firmware/native_copy_rtti_build_01/rtti.o",
+    "bytes": 10824,
+    "sha256": "ae928f227bd6748870e00f0769b72ce23b403e9e5032d61364815dc15bc1fbd3"
+  },
+  "bindings": [
+    {
+      "symbol": "_ZTVN10__cxxabiv117__class_type_infoE",
+      "va": 16001480,
+      "bytes": 88,
+      "dynsym_index": 377,
+      "version_index": 8,
+      "needed_library": "libstdc++.so.6",
+      "version_name": "CXXABI_1.3"
+    },
+    {
+      "symbol": "_ZTIi",
+      "va": 16001648,
+      "bytes": 16,
+      "dynsym_index": 522,
+      "version_index": 8,
+      "needed_library": "libstdc++.so.6",
+      "version_name": "CXXABI_1.3"
+    },
+    {
+      "symbol": "_ZTVN10__cxxabiv120__si_class_type_infoE",
+      "va": 16001760,
+      "bytes": 88,
+      "dynsym_index": 493,
+      "version_index": 8,
+      "needed_library": "libstdc++.so.6",
+      "version_name": "CXXABI_1.3"
+    }
+  ],
+  "actual_libstdcxx": {
+    "path": "analysis/firmware/f1_user_ui_entry_01/libstdcxx_original_ANALYSIS_ONLY.elf",
+    "bytes": 1538432,
+    "sha256": "5876c5861ffae1b3f6a5fc091be8f1d601edf602ebeed6a4aa3bf5c3cfbe11aa"
+  },
+  "original_user": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "source_manifest": {
+    "path": "tools/firmware/native_copy_rtti_01/SOURCE_SHA256.json",
+    "bytes": 3469,
+    "sha256": "ef5b7e4e5d120a24cda3364d0ee9e429f35f6558f5d735661466cb1abfb54099"
+  },
+  "static_graph": {
+    "path": "analysis/firmware/native_copy_rtti_static_01/GRAPH.json",
+    "bytes": 33986,
+    "sha256": "6a6af4b96f4f53877b13a8132f11ab0e4a133690d1f9e8804054cbbdbd798a92"
+  },
+  "reader_maximum_bytes": 448,
+  "library_bias_derived_from_actual_copy_function_slot": {
+    "user_copy_slot": 16001496,
+    "library_function_va": 585272,
+    "name": "_ZN10__cxxabiv117__class_type_infoD1Ev"
+  },
+  "base_alignment": 65536,
+  "finite_runtime_spans": 42,
+  "complete_function_bodies": 18,
+  "active_final_elf_copy_metadata_requires_root_seal": true,
+  "target_executed": false,
+  "library_loaded": false,
+  "sdk_loaded": false
+}

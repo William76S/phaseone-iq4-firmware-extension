@@ -1,0 +1,14 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual callable binding.
+  46037c: d10043ff     	sub	sp, sp, #0x10
+  460380: f90007e0     	str	x0, [sp, #0x8]
+  460384: f94007e0     	ldr	x0, [sp, #0x8]
+  460388: f9400400     	ldr	x0, [x0, #0x8]
+  46038c: 910043ff     	add	sp, sp, #0x10
+  460390: d65f03c0     	ret
+  460394: d10043ff     	sub	sp, sp, #0x10
+  460398: f90007e0     	str	x0, [sp, #0x8]
+  46039c: f94007e0     	ldr	x0, [sp, #0x8]
+  4603a0: f9400800     	ldr	x0, [x0, #0x10]
+  4603a4: 910043ff     	add	sp, sp, #0x10
+  4603a8: d65f03c0     	ret

@@ -1,0 +1,829 @@
+{
+  "input_fwr_sha256": "a52758ffb163023e5323297e450450f91002175b69bed7590fe2cd037c2ab300",
+  "p1linux_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "evidence_level": "static_analysis_and_host_validation_only",
+  "device_actions": 0,
+  "scope": "Research scripts, documents, JSON, logs, selected pseudocode and disassembly; binary and rootfs inventories are SHA-bound separately in inventory files",
+  "files": [
+    {
+      "path": "tools/firmware/DecompileIQ4.java",
+      "bytes": 2227,
+      "sha256": "09a11abd5319609109a55cd3edfc50cb32c9a351ea1d6e80cdf3a46bfcad450e"
+    },
+    {
+      "path": "tools/firmware/inspect_boot.py",
+      "bytes": 7046,
+      "sha256": "b2e5ea99a001cf70fb3dc12b95df4dd34351be2cbc257f9d79cd1404a9755a3a"
+    },
+    {
+      "path": "tools/firmware/inspect_firmware.py",
+      "bytes": 3828,
+      "sha256": "ebebc54d6c82a36515207f8b528601efe5792bf666d26d3605f8e34d1f3e61fa"
+    },
+    {
+      "path": "tools/firmware/map_p1linux.py",
+      "bytes": 3848,
+      "sha256": "6656d24adb3154b32e09571ca4c9e4bad4245c933f9d8b582f066c185a3157f5"
+    },
+    {
+      "path": "tools/firmware/minimal_late_hook_candidate.sh",
+      "bytes": 1274,
+      "sha256": "45eee2b79cbd5f878b52d8faafef31e23b1a9133d1dff7f39abe9a8b0e92267e"
+    },
+    {
+      "path": "tools/firmware/record_adapter_evidence.py",
+      "bytes": 10259,
+      "sha256": "1b97d28f9b5d8267992c4c1a02aa60f1cb5e05cadda94961da3fc965794cac62"
+    },
+    {
+      "path": "analysis/firmware/ENTRYPOINTS.json",
+      "bytes": 15676,
+      "sha256": "851b4eb003a9200e5bf2f5fe3ef2d7d7823f355ea20020c84cef79d379f3f714"
+    },
+    {
+      "path": "analysis/firmware/HOST_VALIDATION.json",
+      "bytes": 770,
+      "sha256": "2619e300e96bf9b4aede427ac3a111975fffc745dc2e7cab2f88e7c263c7a053"
+    },
+    {
+      "path": "analysis/firmware/MODULE_MAP.md",
+      "bytes": 18058,
+      "sha256": "e497c18832ba82d6e193675771b677b6098f8e815f07591e9ead4139df982c60"
+    },
+    {
+      "path": "analysis/firmware/SHA256SUMS.extracted.txt",
+      "bytes": 1893,
+      "sha256": "496e8a9c9d0d1044d2f4a6df7761c22a7d547c5fcbf4afc5742f370f6bf4d6d7"
+    },
+    {
+      "path": "analysis/firmware/UI_JPEG_ABI.md",
+      "bytes": 10524,
+      "sha256": "5d46fe140c05c2525cab421eae2dd3d6aaa5811e0b8cbf85afc5bac4cee7f323"
+    },
+    {
+      "path": "analysis/firmware/adapter_evidence.json",
+      "bytes": 148972,
+      "sha256": "f3aa85d3c033f2df544fbbc9429d0dd41b37c58cce3ebb71a08d7696845fe171"
+    },
+    {
+      "path": "analysis/firmware/adapter_ic_image_buffer_reference.disasm.txt",
+      "bytes": 16218,
+      "sha256": "b42a8c7bb727263134d9e37eecdc47155c25cabb519262d2c9568017d2d296ff"
+    },
+    {
+      "path": "analysis/firmware/adapter_jpeg_lock_unlock.disasm.txt",
+      "bytes": 4103,
+      "sha256": "980fed84dd58f89b5dfbe0d2952482ca537dc1a3504aa542cafa3cf5a3f7634c"
+    },
+    {
+      "path": "analysis/firmware/adapter_jpeg_objects_constructor.disasm.txt",
+      "bytes": 21670,
+      "sha256": "3c8e495ff3f475a17bfd5aa75e08fed2875be9ea492465d4f332875d50f94962"
+    },
+    {
+      "path": "analysis/firmware/adapter_jpeg_request.disasm.txt",
+      "bytes": 2556,
+      "sha256": "670ff70ca590619d45e1b446c4a54f7097053c378fbbad3897ec1f6e54aa6d58"
+    },
+    {
+      "path": "analysis/firmware/adapter_jpeg_rgb_copy.disasm.txt",
+      "bytes": 3601,
+      "sha256": "c0b23eeb3e823c77b0c1265bb367c8511807acd09e3ae75ace6cfb8166f6899f"
+    },
+    {
+      "path": "analysis/firmware/adapter_jpeg_scale_clamp_site.disasm.txt",
+      "bytes": 10033,
+      "sha256": "58a40ec08f929e05c01dc7129fd7e4f3ed4533f14fd660d054bd5fef00e24b0a"
+    },
+    {
+      "path": "analysis/firmware/adapter_jpeg_worker_copy_site.disasm.txt",
+      "bytes": 15695,
+      "sha256": "580c93081bbd4240cdb8bd368e810821012838d182c324feeefb97d0399be233"
+    },
+    {
+      "path": "analysis/firmware/adapter_raw_pool_owner.disasm.txt",
+      "bytes": 4304,
+      "sha256": "5fc11b80af3fea4ff21c3b648ffe593e69f40743d8f7f9efb496846d301f2c82"
+    },
+    {
+      "path": "analysis/firmware/adapter_raw_pool_refcount.disasm.txt",
+      "bytes": 11846,
+      "sha256": "1f43a0da650d2432b8eff3ee0373e13cf425652bd39cc4c87dab98dff4e34350"
+    },
+    {
+      "path": "analysis/firmware/adapter_rgb2rgb_enum_tables.disasm.txt",
+      "bytes": 5257,
+      "sha256": "29660737d0c93ae2a1bc4ce5647177c053802e50f540a31da2b664bc9052bc04"
+    },
+    {
+      "path": "analysis/firmware/adapter_srgb_transfers.disasm.txt",
+      "bytes": 4457,
+      "sha256": "b478296b324af821397890bc58472256f62a180f3345eed7337124970f380367"
+    },
+    {
+      "path": "analysis/firmware/adapter_ui_overlay_events.disasm.txt",
+      "bytes": 12423,
+      "sha256": "252f00820acc173457d728d0123f91e8fdd4e7c6dd0fdd8fa98bc3aec084695d"
+    },
+    {
+      "path": "analysis/firmware/adapter_ui_paint.disasm.txt",
+      "bytes": 20309,
+      "sha256": "ebb10ecaed06ca3f424dacd1f0ee1a4eb8dbeb707c74998fb3ddd35af512bda0"
+    },
+    {
+      "path": "analysis/firmware/adapter_ui_start_stop.disasm.txt",
+      "bytes": 16664,
+      "sha256": "baed3e3591ca3bbbdc1d89b5063aabf6b7a0a88f4eca25d99d861d6410de9a28"
+    },
+    {
+      "path": "analysis/firmware/adapter_ui_vtable_control_show.disasm.txt",
+      "bytes": 1489,
+      "sha256": "6fdd5de08d2b28c6e67a8399fb4c92786d713a6f2af66f1b11b21022f9869509"
+    },
+    {
+      "path": "analysis/firmware/boot.binwalk.json",
+      "bytes": 3776,
+      "sha256": "cb410c61d88593ad6ee021de02d8d16d4b93c8da30e4a26da77237aa11890f70"
+    },
+    {
+      "path": "analysis/firmware/boot.strings.txt",
+      "bytes": 11324645,
+      "sha256": "8db36ba2cb794caa40dc95521ac5f824b92a72379454acce58f17f786555150c"
+    },
+    {
+      "path": "analysis/firmware/boot_environment.static.txt",
+      "bytes": 1707,
+      "sha256": "1291372f254498774b68cc66bcb0a094958e448cb70cabc33a71d34ac74556f7"
+    },
+    {
+      "path": "analysis/firmware/boot_inventory.json",
+      "bytes": 1787914,
+      "sha256": "d75acf1247e82b20c867a5d9affd15e514a5f143ef8a260d0fd40f0141c0aace"
+    },
+    {
+      "path": "analysis/firmware/decompile_targets.txt",
+      "bytes": 750,
+      "sha256": "c9b514aa00407204015c956bd9dabc9e66f8b2fc0ae2bcfa78da8be57100c97e"
+    },
+    {
+      "path": "analysis/firmware/decompile_targets_all.txt",
+      "bytes": 2974,
+      "sha256": "815e3ca8993cea6b3c57a51a3a842fe3083fceb8b8e20fc30ba614f9d0076c29"
+    },
+    {
+      "path": "analysis/firmware/decompile_targets_deep.txt",
+      "bytes": 966,
+      "sha256": "822387c311203c0f05a852bb7b7de1d71c3f808c8f7f8f2064b582a17c1c6c1a"
+    },
+    {
+      "path": "analysis/firmware/decompile_targets_deep2.txt",
+      "bytes": 1164,
+      "sha256": "da6af067cdc5ba64ff31e690bc89ac99b1e501d6492e009bccfa93945dc55f78"
+    },
+    {
+      "path": "analysis/firmware/decompile_targets_deep3.txt",
+      "bytes": 252,
+      "sha256": "da1368ebbe292909744655edcd2c6a974dad2c1e6415f82d99a81af5f4fd2e78"
+    },
+    {
+      "path": "analysis/firmware/decompiled/HdmiOverlayEvents.c",
+      "bytes": 870,
+      "sha256": "79ad334a86dea753b6ad45a46e41ea1abd455979b5af666baf08b3b69326fad1"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IcImageBufferAttach.c",
+      "bytes": 1109,
+      "sha256": "059e5e4bfb2208d578103a967ff199382a64aaad5b3bbe7ba42a724b8c160c09"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IcImageBufferBase.c",
+      "bytes": 301,
+      "sha256": "23d62c95caf3802b9e8940a0a89debaf923f8dd7e68ffaa2b48a4fa266eac6ae"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IcImageBufferByteSize.c",
+      "bytes": 305,
+      "sha256": "b0e000e68bb043397a9741335082f01ef5abfab41859eee10de332116ca4c91f"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IcImageBufferDefault.c",
+      "bytes": 2457,
+      "sha256": "83726a4ca01dc810be5593e3dcb19b462edc651e874f88babef8a223ca688ecd"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IcImageBufferDestroy.c",
+      "bytes": 766,
+      "sha256": "9d0eb4600ea4b9cc0d9c8a6787ebc894d1d1ae06a07f6fdcb08d9f7e77c2e298"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IcImageBufferHeight.c",
+      "bytes": 300,
+      "sha256": "ec1e8317d6b6a39cfe0923462d86907876042dca44a59487ae5d28b23475acb5"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IcImageBufferPlane.c",
+      "bytes": 633,
+      "sha256": "4fc4d95d76c8e4fc46e84a3baf7e7f291dc09064ae286fd64b8064e287f60e00"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IcImageBufferRowStride.c",
+      "bytes": 306,
+      "sha256": "adf33a59c16c7fce884f96094998394cba845bc9a5730184a2a6cae42667e802"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IcImageBufferSetReference.c",
+      "bytes": 816,
+      "sha256": "4f7a74b3ebde6f2d3ca59d6416a0ecaa226cc8bd217b59f9a47f638dd04ed50e"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IcImageBufferValidHeight.c",
+      "bytes": 308,
+      "sha256": "035edf6cca4304b3ec13e1a1821d9855d9386d5ff4ba56988fa9ae88c0234aaf"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IcImageBufferValidWidth.c",
+      "bytes": 307,
+      "sha256": "6ef76f8d36f4772ef9f7349400b56e1e2808961d1b38cd716a0f94e62fc70c66"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IcImageBufferWidth.c",
+      "bytes": 299,
+      "sha256": "12a94d32ce94c91172cd4d7f8a1d520f0573844a70fbe6b840725e42c02a197a"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IceBuildPreviewRawSource.c",
+      "bytes": 6152,
+      "sha256": "c978136de8768246eae78f146660e23b5bd21fae959ae4f7b13191bc2058f8af"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IceCopyPlanar.c",
+      "bytes": 829,
+      "sha256": "094aaa140818d0a0ae56f104105c14d1bbdd113fa97f226e0652f9c802df4918"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IceCopyRgbToJpeg.c",
+      "bytes": 1022,
+      "sha256": "5f8efa8acbee28d6eb13b75eaf69c50e3cad6cedc4cc45bdf2fda12696367c19"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IceEnqueue.c",
+      "bytes": 682,
+      "sha256": "c56933488f6c884c181f64e32586e555416ef40a6b6f0633a37e439a035af5b1"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IceImageFormatMap.c",
+      "bytes": 1008,
+      "sha256": "aa40bbab8d9c8f8ff9ba51381334c54403440e37a92594507257a928fa1424d6"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IceJobProcessor.c",
+      "bytes": 16740,
+      "sha256": "bbc3f7d108c62c59e409e10c98de61caa0baa519ee5352f58deb28fff884fcc5"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IceJpegRequestWorker.c",
+      "bytes": 12505,
+      "sha256": "faf850d47b739eeabbbc011af322de36eeea2abfe98077cf4a28d06cc9ec4e7f"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IceJpegStateTransition.c",
+      "bytes": 946,
+      "sha256": "db8b71b8e73272abf52d74a2d3893c68cff0a6bc62b951c6811fde7386b31662"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IcePreviewRequestWorker.c",
+      "bytes": 10512,
+      "sha256": "ca4c94c05a085c34f8cb225fa3f5501c1d3d62628be33b53137299d9e8fa0091"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IceSourceSetup.c",
+      "bytes": 2630,
+      "sha256": "77abd3c908974e3da551733218da1d9d78827714028c4424a437aa8650244d86"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IfmBackgroundWorker.c",
+      "bytes": 7846,
+      "sha256": "93045872802ef1bdc4b089218d19a9af9135c255dda280f0fe941d1a4ab72acd"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IfmGenerateJpegImage.c",
+      "bytes": 556,
+      "sha256": "d22b0639e02f822770ec9f614a858c0ed704c0b92332737c64178d59f2bdf905"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IfmLockJpegBuffer.c",
+      "bytes": 495,
+      "sha256": "4d86f28d10c18302cb5aca7eccc5ca9acf185af2333d32e7b27cc16a8fb12e20"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IfmObjectsConstructor.c",
+      "bytes": 2229,
+      "sha256": "78b7a83696ea3d3ca4e56dbc8c16510ed901506255f900c4f23a3b472080346d"
+    },
+    {
+      "path": "analysis/firmware/decompiled/IfmUnlockJpegBuffer.c",
+      "bytes": 371,
+      "sha256": "85d7c3a4ff7e484af9cd08a73c5533a1b5af5f6a46b4530c1f57f96e6e2ab228"
+    },
+    {
+      "path": "analysis/firmware/decompiled/ImageDescriptorConstructor.c",
+      "bytes": 2068,
+      "sha256": "5467ff07533cef6616e11b9af465ce3561643b5979a3ff6305e8225c3eee0ee3"
+    },
+    {
+      "path": "analysis/firmware/decompiled/Jpeg4kTask.c",
+      "bytes": 4914,
+      "sha256": "9d617f281db7a261c95a7ee65fcf9337e0cbda48bb54050d24852afa9403af26"
+    },
+    {
+      "path": "analysis/firmware/decompiled/JpegCompressor.c",
+      "bytes": 1729,
+      "sha256": "29a5263c75f05cd86b96674a3b135e2843176de176dae508145a670343fcd18d"
+    },
+    {
+      "path": "analysis/firmware/decompiled/JpegEncodeTask.c",
+      "bytes": 1474,
+      "sha256": "cdefbf1274b620c8078ff7aaae1ad2dbf05bb918b295675a05251f0ed110f28b"
+    },
+    {
+      "path": "analysis/firmware/decompiled/JpegStorageEvents.c",
+      "bytes": 5165,
+      "sha256": "9bc57c175b203f00fccea780c6dd22a2d4b67d1cf3b28043b9f1db5ae6397f35"
+    },
+    {
+      "path": "analysis/firmware/decompiled/JpegZoomPanTask.c",
+      "bytes": 5257,
+      "sha256": "98885c77971ec9132930be564d6f0efe608908348ba3c181db9f182d4d2215db"
+    },
+    {
+      "path": "analysis/firmware/decompiled/LiveViewLock.c",
+      "bytes": 550,
+      "sha256": "989afa0d4167172ae08c8b96a291606ecb1386722039e92f22ce1b9de2d1528a"
+    },
+    {
+      "path": "analysis/firmware/decompiled/LiveViewRelease.c",
+      "bytes": 556,
+      "sha256": "104185e9b6ea3c05eee21365ef72f026682ef90672f01bbfca8bc278101a6a47"
+    },
+    {
+      "path": "analysis/firmware/decompiled/PreviewConfigureColorProfile.c",
+      "bytes": 12466,
+      "sha256": "74ba161cd52ff725acdf23df5acbdcc6e25ecf689cdfe096ae09c87ef988a69d"
+    },
+    {
+      "path": "analysis/firmware/decompiled/PreviewConfigureSensor.c",
+      "bytes": 3199,
+      "sha256": "2b539d0b092530f5f09741883de058f563f378af90c4f03bfe012ac6dc3f4446"
+    },
+    {
+      "path": "analysis/firmware/decompiled/PreviewConfigureStyle.c",
+      "bytes": 20761,
+      "sha256": "ab69aeff62bbfd4f496f80e3d2c1c09362cc3ddd776731f5860024e0e7a07f42"
+    },
+    {
+      "path": "analysis/firmware/decompiled/PreviewProcess.c",
+      "bytes": 21677,
+      "sha256": "cd82a57e79fe8151519a15179d4c89c53488797c15f36b6f3e135486e5013bb2"
+    },
+    {
+      "path": "analysis/firmware/decompiled/PreviewRawSourceConfig.c",
+      "bytes": 5472,
+      "sha256": "033ad347dfbc8161102da00dbbcb75266cfa9bb6175b65178d89fa1ca4c6a1e6"
+    },
+    {
+      "path": "analysis/firmware/decompiled/PreviewRgbThreadDispatch.c",
+      "bytes": 1792,
+      "sha256": "c6728c8e839a619b7c7f1c9c2bbca069f7f62f7a7d07858a8a84d30921bdd8db"
+    },
+    {
+      "path": "analysis/firmware/decompiled/PreviewSettingsDefault.c",
+      "bytes": 2094,
+      "sha256": "71b04d55fc121d57cb04114adf501e09b05a062b83d14924314df98f7bbd911b"
+    },
+    {
+      "path": "analysis/firmware/decompiled/PreviewWhiteBalanceSample.c",
+      "bytes": 16339,
+      "sha256": "f7d40b9212e0b79797124e11325b6d54d2b7cbf1d9c16fd0678a66746212f281"
+    },
+    {
+      "path": "analysis/firmware/decompiled/ProcessRgbColorTask.c",
+      "bytes": 10171,
+      "sha256": "79d086b3275367c79913859a4887ccf16963d21a89b235c79fc747b87dad9584"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RawEffectiveRect.c",
+      "bytes": 459,
+      "sha256": "66e3b14233f0dcc2069b5754f9c4640c9fe90989b26273d772428ad8e4b232b8"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RawJpegRequest.c",
+      "bytes": 9114,
+      "sha256": "f0fb19a05f7c8f3a70547326f48a938cec8f84d54df8afa8ee2df7dc91d36961"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RawNodeAcquire.c",
+      "bytes": 789,
+      "sha256": "1dbfb10e3b0327eaad48e05b498a3317e71c16ffcf6933aff04866ae03351760"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RawNodeRelease.c",
+      "bytes": 493,
+      "sha256": "b860f1faafd785f0f90839bbfb7ee5bb545f8b5893038faee555be5bedcd6514"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RawPoolAcquire.c",
+      "bytes": 1611,
+      "sha256": "366506156054f95def2f63f63f12c5736bca2b825603ff24d819ac1748d54014"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RawPoolRelease.c",
+      "bytes": 918,
+      "sha256": "7d1dbe62b9eb448729735bfe6018398329c8a4100de78b6f8b44fa0b8acea064"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RawSourceGetter943078.c",
+      "bytes": 95417,
+      "sha256": "fb458024b793e7fdb4176739e216261bf3f9b9d5fb309e21e7e2f8220d113a42"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RawSourceGetter9431f8.c",
+      "bytes": 92985,
+      "sha256": "e69ec772204fd31159528e23956f5371041a2318c58bd0b2e4da55d2f5c724f1"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RawSourceGetter943378.c",
+      "bytes": 90549,
+      "sha256": "ad2554b40f10a7549dfb72a3925ecbd0c90e1163e374f4957e09af3c3cf2d498"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RawSourceGetter9437f8.c",
+      "bytes": 83223,
+      "sha256": "3c4c576df2b2b9d39589e14b4bc001cd9d891d7da0f33416250e023ff57adae8"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RawSourceGetter943978.c",
+      "bytes": 80805,
+      "sha256": "a27b54abfeaecafc74d34c698105e811c7108bf2b3275fd0feb4d0183a4be6a7"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RawSourceGetter943c88.c",
+      "bytes": 75841,
+      "sha256": "ecb38b5410ea3b693dfd88578b00079a0c39e22a83ee1b3ee5502d95d2b7bf5c"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RgbColorSpaceConvert.c",
+      "bytes": 8308,
+      "sha256": "4c00dbc12de25db3a72f819efd5ce3121d56c6db18d18e8cfcffed60d8ce56c0"
+    },
+    {
+      "path": "analysis/firmware/decompiled/RgbColorSpacePlanarConvert.c",
+      "bytes": 4943,
+      "sha256": "8de66df5971014451150d2c04e7432a16132a4bb7c960e2c45ec2b86d96530ba"
+    },
+    {
+      "path": "analysis/firmware/decompiled/ScaleClamp.c",
+      "bytes": 402,
+      "sha256": "fbd3f4ff79529b67d88d72f2c4223aa85d93484817405b851b33660b46ecddb7"
+    },
+    {
+      "path": "analysis/firmware/decompiled/ShellIfmCommands.c",
+      "bytes": 7530,
+      "sha256": "914c3c9a5fbcf6a5b7e79cc7ca79b72815be841a4e952db5913c283484ed3a65"
+    },
+    {
+      "path": "analysis/firmware/decompiled/SurfaceDrawImage.c",
+      "bytes": 2774,
+      "sha256": "6d4fb809e2cb357898a501339c680e9602a6a3609fd17242f50ed7b5ee92a3f1"
+    },
+    {
+      "path": "analysis/firmware/decompiled/Transfer_9753e0.c",
+      "bytes": 389,
+      "sha256": "95552c4877d1f37fc2371880036003bed3fc9be7daa0a7d96bf8a5d07484d760"
+    },
+    {
+      "path": "analysis/firmware/decompiled/Transfer_975418.c",
+      "bytes": 389,
+      "sha256": "517876339fb311d691022f5b46e2c212d8230322a0bf8b8ed5284188dd67d4fe"
+    },
+    {
+      "path": "analysis/firmware/decompiled/Transfer_975450.c",
+      "bytes": 324,
+      "sha256": "b6e615cec71e79b7a2800d29eafe22387375cdf9fd59025b1357eda0284a1543"
+    },
+    {
+      "path": "analysis/firmware/decompiled/Transfer_975490.c",
+      "bytes": 320,
+      "sha256": "e8c10f2548fb2d4dfbf78b01c22be6c4e35fede939e3fd6da38bd1c82db1e2fa"
+    },
+    {
+      "path": "analysis/firmware/decompiled/Transfer_9754c8.c",
+      "bytes": 430,
+      "sha256": "6971072ab9f29977b05cc247c817ec173ad9af9f1d3f78463c799bd500bbdba8"
+    },
+    {
+      "path": "analysis/firmware/decompiled/Transfer_975528.c",
+      "bytes": 630,
+      "sha256": "5288e8d853f203c7d223be66cc0042b1cff8cfa9f600716e516ec02ee18af748"
+    },
+    {
+      "path": "analysis/firmware/decompiled/Transfer_975558.c",
+      "bytes": 627,
+      "sha256": "d4e442e4f3c37c265c5ed4a96ab0753da079d9272c873747ab1405d9fd830325"
+    },
+    {
+      "path": "analysis/firmware/decompiled/Transfer_9755c0.c",
+      "bytes": 670,
+      "sha256": "5ab3b60b920f69db646eb0c6b655a07565b818e1d3f6631be102b7a8a07e14eb"
+    },
+    {
+      "path": "analysis/firmware/decompiled/Transfer_975618.c",
+      "bytes": 634,
+      "sha256": "80e44993292c929b72a1d03f46a0a0e6a48067c8b16a482440a4de57da38c54a"
+    },
+    {
+      "path": "analysis/firmware/decompiled/Transfer_975648.c",
+      "bytes": 661,
+      "sha256": "7fcedbcd7171f51dac946a1f8e70d6a00792d536947d0c8a4be21a2030e7eadb"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiAddControl.c",
+      "bytes": 483,
+      "sha256": "f45b0c6772f875f212cc32ebf8194ab88cec0ef3170f6eb89eaedba1cd582a21"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiControlShow.c",
+      "bytes": 421,
+      "sha256": "f865e5ef6367313b29a5551653fbe012f8832b0d009616b2e29edb86ade32393"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiGridControlConstructor.c",
+      "bytes": 428,
+      "sha256": "641d906ff6bab9f537adb7f3c763117af218693769156e439db8de9af2db3081"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiInvalidateCandidate.c",
+      "bytes": 457,
+      "sha256": "4164765c720ecad0e8c682552946b86b0dd8324d021484d24a55205046f18b62"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiLvConstructor.c",
+      "bytes": 31169,
+      "sha256": "2b1f47b1dc53dcb378141cc1800313daeec18963b4ddf2efe83646f3bbdc383d"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiLvDialogEnter.c",
+      "bytes": 1129,
+      "sha256": "6bf8aebce64a592c3aa71639a2a26eb195b464c8a6670225201ad17bd1665a33"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiLvDialogExit.c",
+      "bytes": 411,
+      "sha256": "eb122749687cf8e1f2074051c71d3b87b8281487157664b0001c9ec1bde739f6"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiLvEnter.c",
+      "bytes": 2808,
+      "sha256": "1c1961e8d242e03e31d1db741d824eccb63c54d7876c5166e887283e2d260ad8"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiLvInputEvent.c",
+      "bytes": 3946,
+      "sha256": "07630a581593ef43377dc61efbdbac84bb98ffaf268bb674cb66d7c8c87eaaf6"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiLvOverlayConstructor.c",
+      "bytes": 5487,
+      "sha256": "488361237035851c27446bcbc66ea6ca1a5d32f9aa13e7ad9bef9a6550e84ed7"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiLvOverlayPropertyEvent.c",
+      "bytes": 1971,
+      "sha256": "d8d6d2a9454110ca4309787c542d87853ed86615d9f7683fd09fa87a7ff3f69e"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiLvOverlayShowLayout.c",
+      "bytes": 963,
+      "sha256": "387db4145c557420b76580d568843e995a7e6fd91e977850ada7fdbf9e5b902b"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiLvPaint.c",
+      "bytes": 4591,
+      "sha256": "91091b0b6a3d4a0e7745fa1ce78d683b75b7b792fa9afdb5932e890c516532e2"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiLvPropertyEvent.c",
+      "bytes": 32965,
+      "sha256": "f08f2970622bb5ebf0a0e23dcd0b51c10d9b26555af2cf808cad4876d7d09e05"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiLvShowTransientOverlay.c",
+      "bytes": 675,
+      "sha256": "ab8825d564331459af26f20ffed6647c09bf609ce2bb58db3716971b3385a773"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiLvStop.c",
+      "bytes": 931,
+      "sha256": "ce56b330d564da0fe1d56cdf8a4e2fa43e1b33f05ce5b54725d5c3a8d004f286"
+    },
+    {
+      "path": "analysis/firmware/decompiled/UiOverlayObjects.c",
+      "bytes": 3666,
+      "sha256": "bb9be45c0efd1c760a2c71d9a19446d03ebc99d01d776ab70d54a3639ddb27f9"
+    },
+    {
+      "path": "analysis/firmware/decompiled/VideoBufferId.c",
+      "bytes": 468,
+      "sha256": "4cc0619f083bbb25929be0d03d63ec97e6d2fe7ba7fd34b50c8404fbae544274"
+    },
+    {
+      "path": "analysis/firmware/decompiled/VideoBufferLock.c",
+      "bytes": 957,
+      "sha256": "409463e5e21b634bbd0e7aaf201c5dbca6a66ac799c44218bdf16f67d4872d94"
+    },
+    {
+      "path": "analysis/firmware/device_trees.json",
+      "bytes": 373852,
+      "sha256": "594c254b8eeede95d41cd64dee6b739c9d8a6e7b48db03d0d7ee6eed364dd9bd"
+    },
+    {
+      "path": "analysis/firmware/ghidra_deep.log",
+      "bytes": 7462,
+      "sha256": "8596233625ff3c4f6d3017dff38790650ec0f3ee2045a47d947ad1ad0cb63e49"
+    },
+    {
+      "path": "analysis/firmware/ghidra_deep2.log",
+      "bytes": 14370,
+      "sha256": "340ef35302d5b545948794f6cda8440c8dda04265f81b5848f7ea507bb0576d2"
+    },
+    {
+      "path": "analysis/firmware/ghidra_deep2_script.log",
+      "bytes": 3194,
+      "sha256": "7844e224b4dbfef8365a578632f47f1c85c9e32b3f26250a6775ddbf67998b59"
+    },
+    {
+      "path": "analysis/firmware/ghidra_deep3.log",
+      "bytes": 5071,
+      "sha256": "d020d5bc1144ecf1f3eb89b801b1ae2ebca14532263c18ec3167da7e444ead90"
+    },
+    {
+      "path": "analysis/firmware/ghidra_deep3_script.log",
+      "bytes": 658,
+      "sha256": "597f0d567955217b25b46df2d84635e7a5325b97adeaca66207d5fdcb37ff8e3"
+    },
+    {
+      "path": "analysis/firmware/ghidra_deep_script.log",
+      "bytes": 2706,
+      "sha256": "756cd099cb04f4df69818548399000bce4af962727ec018befa87c28241bff59"
+    },
+    {
+      "path": "analysis/firmware/ghidra_final.log",
+      "bytes": 13923,
+      "sha256": "17831e6c39ca7295b7dc761f9016cdcecfb0d8e4046e2bbdfd103246c4b0ee05"
+    },
+    {
+      "path": "analysis/firmware/ghidra_final_script.log",
+      "bytes": 8252,
+      "sha256": "a5b6260f4362047bdc6d9b12cb8ca108589f96ddcb770f4df860764f90ce6b31"
+    },
+    {
+      "path": "analysis/firmware/ghidra_import.log",
+      "bytes": 15921,
+      "sha256": "685dee71a14e33a5953ad8b43d7e5c498ba61b6ff922fad15502acd4adfd8983"
+    },
+    {
+      "path": "analysis/firmware/ghidra_script.log",
+      "bytes": 2200,
+      "sha256": "8ecdb339854074b30447da766b92555a28b13856afc34b2e532e2a9c44201726"
+    },
+    {
+      "path": "analysis/firmware/hook_host_validation.json",
+      "bytes": 196,
+      "sha256": "3c1c517b404b11a17e0cc487a0819565a1344d33098e0888677e8bcb0739e30b"
+    },
+    {
+      "path": "analysis/firmware/inventory.json",
+      "bytes": 19559,
+      "sha256": "d7ebd48e6a167767633172e252a50ddb7918d31d8c577b1988131bc4468cc795"
+    },
+    {
+      "path": "analysis/firmware/iqp_development_dispatch.disasm.txt",
+      "bytes": 6238,
+      "sha256": "9ae756804de9674b8d0208a45c8bd9bbc929a6a4151f439316e6066a53332595"
+    },
+    {
+      "path": "analysis/firmware/iqp_development_packet.disasm.txt",
+      "bytes": 11676,
+      "sha256": "58cbadcc134ca4dca98a5f869b5a2db67984c0fe666026456460663b721a1791"
+    },
+    {
+      "path": "analysis/firmware/iqp_development_shell.disasm.txt",
+      "bytes": 9468,
+      "sha256": "9c950160d43f8c358c314fd4b3450c2877ffcaef673d7aaf456b97c23f228881"
+    },
+    {
+      "path": "analysis/firmware/jpeg_4k_task.disasm.txt",
+      "bytes": 23389,
+      "sha256": "0df815534c90494ee3d1ccfdd490e2a46d6172f4cc1517989c4f599828ad29d0"
+    },
+    {
+      "path": "analysis/firmware/jpeg_compress_task.disasm.txt",
+      "bytes": 7766,
+      "sha256": "8fa7331f035cf37fda852b451eed000ccd0b315efaf50d48f250a3d412e5d017"
+    },
+    {
+      "path": "analysis/firmware/jpeg_compressor.disasm.txt",
+      "bytes": 9115,
+      "sha256": "2b64f8a4c5d358214c8a0fa7bcafee33e210bded1d15d8561e9ced4cb2621850"
+    },
+    {
+      "path": "analysis/firmware/jpeg_image_from_raw.disasm.txt",
+      "bytes": 37974,
+      "sha256": "538072108e814908ed9e25de443f983dfaba63c0b9eed96de799d3e7a486afd7"
+    },
+    {
+      "path": "analysis/firmware/kernel.config.txt",
+      "bytes": 115842,
+      "sha256": "da0ad7799b5836a54d4790af89e0215f35aba31821e779d5aaa199b5dbe7fc34"
+    },
+    {
+      "path": "analysis/firmware/linux_commands.disasm.txt",
+      "bytes": 33961,
+      "sha256": "5a666ddb6eb14cf02c7e28b585ac7e66a87c3ef9772904e7e770e3ff882cab16"
+    },
+    {
+      "path": "analysis/firmware/linux_commands_execute.disasm.txt",
+      "bytes": 27253,
+      "sha256": "13a2f4aeaa7436a5db1f725c519f357e8c33b35cae4e474b78849a537e23bdad"
+    },
+    {
+      "path": "analysis/firmware/linux_commands_handle.disasm.txt",
+      "bytes": 283,
+      "sha256": "ae7e3766f2d5ce638de23d6840d656e9646bc0ba032a01d0b46d95eed8fc8c4e"
+    },
+    {
+      "path": "analysis/firmware/liveview_ui_render.disasm.txt",
+      "bytes": 13379,
+      "sha256": "4e5ff8e065c9b28677e43c2085d85cfda88b9981eda38eff2eaf04e7d54c167b"
+    },
+    {
+      "path": "analysis/firmware/lv_engine_buffer.disasm.txt",
+      "bytes": 4205,
+      "sha256": "c79fb713294464384595a3c58a57a9f4bcb5cfc04f9303d5a2b767ace4813c7c"
+    },
+    {
+      "path": "analysis/firmware/lv_lock_buffer.disasm.txt",
+      "bytes": 1790,
+      "sha256": "640bdd06a076f7b117906c9835d4d4ccf6ab995495d4d600e69663cf00fa95c8"
+    },
+    {
+      "path": "analysis/firmware/lv_release_buffer.disasm.txt",
+      "bytes": 1820,
+      "sha256": "d4273a07cb3be4364fd0e990f51be9a51077b1d1785a836541de224577b159c7"
+    },
+    {
+      "path": "analysis/firmware/lv_video_buffer_lock.disasm.txt",
+      "bytes": 9766,
+      "sha256": "4ac6cdfebca5f6d009564282b0776b4a5e315f2d117c5140c09294fc0274f918"
+    },
+    {
+      "path": "analysis/firmware/p1linux.dynsym.txt",
+      "bytes": 46935,
+      "sha256": "0a7fc46426b6f313008cd2d16ce27e62a5cf7db58808078d8d1fcfa490f80903"
+    },
+    {
+      "path": "analysis/firmware/p1linux.strings.txt",
+      "bytes": 1179071,
+      "sha256": "fe0ffa4aa33ed1c7b942510e40dbbf9681aebcf97f9e4da2b2cad4304af5dc63"
+    },
+    {
+      "path": "analysis/firmware/preview_generator.disasm.txt",
+      "bytes": 11371,
+      "sha256": "4ef58c0901ebfd0670b47133cdca9170c488b241b9c9fbbfe49866a8c43617e4"
+    },
+    {
+      "path": "analysis/firmware/prior_research.json",
+      "bytes": 5179,
+      "sha256": "0562d84960b063ab145339605f54434267e3e7dfddcc44bea6b9be633a7ef928"
+    },
+    {
+      "path": "analysis/firmware/rootfs_extract.log",
+      "bytes": 1059,
+      "sha256": "e71556adfeadbb3b16bc641be93d8a128fe7baf9b21006aaa0c59945c3044297"
+    },
+    {
+      "path": "analysis/firmware/squashfs_listing.txt",
+      "bytes": 1358,
+      "sha256": "6c69ba48957edebf771803134a0f1ffe2b596ba53d25a9b7f50ce41aa3310d6b"
+    },
+    {
+      "path": "analysis/firmware/string_references.json",
+      "bytes": 758843,
+      "sha256": "e80144f344d1f5ebf15990fe50f9ac5d3ec82b86a7e8496dca4013f0c1cc580b"
+    },
+    {
+      "path": "analysis/firmware/unwind_functions.json",
+      "bytes": 9190140,
+      "sha256": "3d3d54d925492731a5d7f4b19514a5664e349c0a776a4922848f043435b83fb8"
+    }
+  ]
+}

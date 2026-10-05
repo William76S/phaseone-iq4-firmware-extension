@@ -1,0 +1,27 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  415774: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  415778: 910003fd     	mov	x29, sp
+  41577c: f90017e0     	str	x0, [sp, #0x28]
+  415780: f90013e1     	str	x1, [sp, #0x20]
+  415784: a9010fe2     	stp	x2, x3, [sp, #0x10]
+  415788: f94017e0     	ldr	x0, [sp, #0x28]
+  41578c: 97ffff24     	bl	0x41541c <.text+0xa1ec>
+  415790: 90002ee0     	adrp	x0, 0x9f1000
+  415794: 910bc001     	add	x1, x0, #0x2f0
+  415798: f94017e0     	ldr	x0, [sp, #0x28]
+  41579c: f9000001     	str	x1, [x0]
+  4157a0: f94017e0     	ldr	x0, [sp, #0x28]
+  4157a4: f94013e1     	ldr	x1, [sp, #0x20]
+  4157a8: f9000401     	str	x1, [x0, #0x8]
+  4157ac: f94017e2     	ldr	x2, [sp, #0x28]
+  4157b0: a94107e0     	ldp	x0, x1, [sp, #0x10]
+  4157b4: a9010440     	stp	x0, x1, [x2, #0x10]
+  4157b8: d503201f     	nop
+  4157bc: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  4157c0: d65f03c0     	ret

@@ -1,0 +1,39 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  41a570: d2805c00     	mov	x0, #0x2e0              // =736
+  41a574: 97ffbe3b     	bl	0x409e60 <_Znwm@plt>
+  41a578: aa0003f3     	mov	x19, x0
+  41a57c: d0002ec0     	adrp	x0, 0x9f4000
+  41a580: 91168001     	add	x1, x0, #0x5a0
+  41a584: aa1303e0     	mov	x0, x19
+  41a588: 94092690     	bl	0x663fc8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x16af18>
+  41a58c: f90dbbf3     	str	x19, [sp, #0x1b70]
+  41a590: d2805c00     	mov	x0, #0x2e0              // =736
+  41a594: 97ffbe33     	bl	0x409e60 <_Znwm@plt>
+  41a598: aa0003f3     	mov	x19, x0
+  41a59c: d0002ec0     	adrp	x0, 0x9f4000
+  41a5a0: 9116c001     	add	x1, x0, #0x5b0
+  41a5a4: aa1303e0     	mov	x0, x19
+  41a5a8: 94092688     	bl	0x663fc8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x16af18>
+  41a5ac: f90db7f3     	str	x19, [sp, #0x1b68]
+  41a5b0: d2805c00     	mov	x0, #0x2e0              // =736
+  41a5b4: 97ffbe2b     	bl	0x409e60 <_Znwm@plt>
+  41a5b8: aa0003f3     	mov	x19, x0
+  41a5bc: d0002ec0     	adrp	x0, 0x9f4000
+  41a5c0: 91170001     	add	x1, x0, #0x5c0
+  41a5c4: aa1303e0     	mov	x0, x19
+  41a5c8: 94092680     	bl	0x663fc8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x16af18>
+  41a5cc: f90db3f3     	str	x19, [sp, #0x1b60]
+  41a5d0: d2805c00     	mov	x0, #0x2e0              // =736
+  41a5d4: 97ffbe23     	bl	0x409e60 <_Znwm@plt>
+  41a5d8: aa0003f3     	mov	x19, x0
+  41a5dc: d0002ec0     	adrp	x0, 0x9f4000
+  41a5e0: 91174001     	add	x1, x0, #0x5d0
+  41a5e4: aa1303e0     	mov	x0, x19
+  41a5e8: 94092678     	bl	0x663fc8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x16af18>
+  41a5ec: f90daff3     	str	x19, [sp, #0x1b58]

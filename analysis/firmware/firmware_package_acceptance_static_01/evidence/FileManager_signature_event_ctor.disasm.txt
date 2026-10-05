@@ -1,0 +1,141 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  74dbfc:      	stp	x29, x30, [sp, #-0xd0]!
+  74dc00:      	mov	x29, sp
+  74dc04:      	stp	x19, x20, [sp, #0x10]
+  74dc08:      	str	x0, [sp, #0x58]
+  74dc0c:      	str	x1, [sp, #0x50]
+  74dc10:      	add	x0, sp, #0x60
+  74dc14:      	bl	0x411b20 <.text+0x68f0>
+  74dc18:      	add	x0, sp, #0x60
+  74dc1c:      	bl	0x74fde8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x360bc>
+  74dc20:      	mov	x0, #0x8                // =8
+  74dc24:      	bl	0x409e60 <_Znwm@plt>
+  74dc28:      	mov	x19, x0
+  74dc2c:      	mov	x0, x19
+  74dc30:      	bl	0x74fe58 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x3612c>
+  74dc34:      	str	x19, [sp, #0xc0]
+  74dc38:      	str	wzr, [sp, #0xcc]
+  74dc3c:      	ldrsw	x0, [sp, #0xcc]
+  74dc40:      	cmp	x0, #0x55
+  74dc44:      	b.hi	0x74de04 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x340d8>
+  74dc48:      	adrp	x0, 0xf55000
+  74dc4c:      	add	x2, x0, #0xf18
+  74dc50:      	ldrsw	x1, [sp, #0xcc]
+  74dc54:      	mov	x0, x1
+  74dc58:      	lsl	x0, x0, #2
+  74dc5c:      	add	x0, x0, x1
+  74dc60:      	lsl	x0, x0, #3
+  74dc64:      	add	x0, x2, x0
+  74dc68:      	ldr	w0, [x0, #0x1c]
+  74dc6c:      	cmp	w0, #0x0
+  74dc70:      	b.eq	0x74dddc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x340b0>
+  74dc74:      	adrp	x0, 0xf55000
+  74dc78:      	add	x2, x0, #0xf18
+  74dc7c:      	ldrsw	x1, [sp, #0xcc]
+  74dc80:      	mov	x0, x1
+  74dc84:      	lsl	x0, x0, #2
+  74dc88:      	add	x0, x0, x1
+  74dc8c:      	lsl	x0, x0, #3
+  74dc90:      	add	x0, x2, x0
+  74dc94:      	ldr	x0, [x0, #0x8]
+  74dc98:      	mov	x1, x0
+  74dc9c:      	adrp	x0, 0xc36000
+  74dca0:      	add	x0, x0, #0x328
+  74dca4:      	bl	0x70ab3c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x1cabc>
+  74dca8:      	mov	x20, x0
+  74dcac:      	add	x0, sp, #0x90
+  74dcb0:      	add	x1, sp, #0x60
+  74dcb4:      	ldp	x2, x3, [x1]
+  74dcb8:      	stp	x2, x3, [x0]
+  74dcbc:      	ldp	x2, x3, [x1, #0x10]
+  74dcc0:      	stp	x2, x3, [x0, #0x10]
+  74dcc4:      	ldr	x2, [x1, #0x20]
+  74dcc8:      	str	x2, [x0, #0x20]
+  74dccc:      	ldr	w1, [x1, #0x28]
+  74dcd0:      	str	w1, [x0, #0x28]
+  74dcd4:      	mov	x0, #0x130              // =304
+  74dcd8:      	bl	0x409e60 <_Znwm@plt>
+  74dcdc:      	mov	x19, x0
+  74dce0:      	add	x0, sp, #0x20
+  74dce4:      	add	x1, sp, #0x90
+  74dce8:      	ldp	x2, x3, [x1]
+  74dcec:      	stp	x2, x3, [x0]
+  74dcf0:      	ldp	x2, x3, [x1, #0x10]
+  74dcf4:      	stp	x2, x3, [x0, #0x10]
+  74dcf8:      	ldr	x2, [x1, #0x20]
+  74dcfc:      	str	x2, [x0, #0x20]
+  74dd00:      	ldr	w1, [x1, #0x28]
+  74dd04:      	str	w1, [x0, #0x28]
+  74dd08:      	add	x0, sp, #0x20
+  74dd0c:      	mov	w3, #0x1                // =1
+  74dd10:      	mov	x2, x0
+  74dd14:      	mov	x1, x20
+  74dd18:      	mov	x0, x19
+  74dd1c:      	bl	0x74ff10 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x361e4>
+  74dd20:      	ldr	x1, [sp, #0x58]
+  74dd24:      	ldrsw	x0, [sp, #0xcc]
+  74dd28:      	add	x0, x0, #0x6
+  74dd2c:      	lsl	x0, x0, #3
+  74dd30:      	add	x0, x1, x0
+  74dd34:      	str	x19, [x0, #0x8]
+  74dd38:      	ldr	x1, [sp, #0x58]
+  74dd3c:      	ldrsw	x0, [sp, #0xcc]
+  74dd40:      	add	x0, x0, #0x6
+  74dd44:      	lsl	x0, x0, #3
+  74dd48:      	add	x0, x1, x0
+  74dd4c:      	ldr	x3, [x0, #0x8]
+  74dd50:      	ldr	x1, [sp, #0x58]
+  74dd54:      	ldrsw	x0, [sp, #0xcc]
+  74dd58:      	add	x0, x0, #0x6
+  74dd5c:      	lsl	x0, x0, #3
+  74dd60:      	add	x0, x1, x0
+  74dd64:      	ldr	x0, [x0, #0x8]
+  74dd68:      	ldr	x0, [x0]
+  74dd6c:      	add	x0, x0, #0x88
+  74dd70:      	ldr	x2, [x0]
+  74dd74:      	ldr	x1, [sp, #0xc0]
+  74dd78:      	mov	x0, x3
+  74dd7c:      	blr	x2
+  74dd80:      	ldr	x0, [sp, #0x50]
+  74dd84:      	ldr	x0, [x0]
+  74dd88:      	ldr	x3, [x0]
+  74dd8c:      	ldr	x1, [sp, #0x58]
+  74dd90:      	ldrsw	x0, [sp, #0xcc]
+  74dd94:      	add	x0, x0, #0x6
+  74dd98:      	lsl	x0, x0, #3
+  74dd9c:      	add	x0, x1, x0
+  74dda0:      	ldr	x0, [x0, #0x8]
+  74dda4:      	mov	x4, x0
+  74dda8:      	adrp	x0, 0xf55000
+  74ddac:      	add	x2, x0, #0xf18
+  74ddb0:      	ldrsw	x1, [sp, #0xcc]
+  74ddb4:      	mov	x0, x1
+  74ddb8:      	lsl	x0, x0, #2
+  74ddbc:      	add	x0, x0, x1
+  74ddc0:      	lsl	x0, x0, #3
+  74ddc4:      	add	x0, x2, x0
+  74ddc8:      	ldr	w0, [x0, #0x1c]
+  74ddcc:      	mov	w2, w0
+  74ddd0:      	mov	x1, x4
+  74ddd4:      	ldr	x0, [sp, #0x50]
+  74ddd8:      	blr	x3
+  74dddc:      	ldr	w0, [sp, #0xcc]
+  74dde0:      	add	w0, w0, #0x1
+  74dde4:      	str	w0, [sp, #0xcc]
+  74dde8:      	b	0x74dc3c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x33f10>
+  74ddec:      	mov	x20, x0
+  74ddf0:      	mov	x1, #0x130              // =304
+  74ddf4:      	mov	x0, x19
+  74ddf8:      	bl	0x409de0 <_ZdlPvm@plt>
+  74ddfc:      	mov	x0, x20
+  74de00:      	bl	0x40a750 <_Unwind_Resume@plt>
+  74de04:      	nop
+  74de08:      	ldp	x19, x20, [sp, #0x10]
+  74de0c:      	ldp	x29, x30, [sp], #0xd0
+  74de10:      	ret

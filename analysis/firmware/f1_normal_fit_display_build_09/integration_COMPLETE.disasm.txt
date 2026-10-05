@@ -1,0 +1,143 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_normal_fit_display_build_09/integration.o:	file format elf64-littleaarch64
+
+Disassembly of section .text._Z35iq4_f1_ui09_after_original_boundaryRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE:
+
+0000000000000000 <_Z35iq4_f1_ui09_after_original_boundaryRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE>:
+       0: a9bf7bfd     	stp	x29, x30, [sp, #-0x10]!
+       4: 910003fd     	mov	x29, sp
+       8: 94000000     	bl	0x8 <_Z35iq4_f1_ui09_after_original_boundaryRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0x8>
+		0000000000000008:  R_AARCH64_CALL26	_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE
+       c: 12000000     	and	w0, w0, #0x1
+      10: a8c17bfd     	ldp	x29, x30, [sp], #0x10
+      14: d65f03c0     	ret
+
+Disassembly of section .text._ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE:
+
+0000000000000000 <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE>:
+       0: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+       4: f9000bfc     	str	x28, [sp, #0x10]
+       8: a90257f6     	stp	x22, x21, [sp, #0x20]
+       c: a9034ff4     	stp	x20, x19, [sp, #0x30]
+      10: 910003fd     	mov	x29, sp
+      14: d10703ff     	sub	sp, sp, #0x1c0
+      18: aa0203f4     	mov	x20, x2
+      1c: aa0103f6     	mov	x22, x1
+      20: aa0303f5     	mov	x21, x3
+      24: aa0503e1     	mov	x1, x5
+      28: aa0303e2     	mov	x2, x3
+      2c: aa0403e3     	mov	x3, x4
+      30: aa1603e4     	mov	x4, x22
+      34: aa1403e5     	mov	x5, x20
+      38: aa0003f3     	mov	x19, x0
+      3c: 94000000     	bl	0x3c <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0x3c>
+		000000000000003c:  R_AARCH64_CALL26	_ZN3iq42f18normal0931install_after_original_boundaryERNS1_8RendererERKNS0_11native_ui0213BoundaryInputERNS0_7entry016ModuleERNS0_7entry077BindingENS0_14native_overlay6MemoryE
+      40: 36000420     	tbz	w0, #0x0, 0xc4 <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0xc4>
+      44: 39520268     	ldrb	w8, [x19, #0x480]
+      48: 370001a8     	tbnz	w8, #0x0, 0x7c <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0x7c>
+      4c: d101c3a8     	sub	x8, x29, #0x70
+      50: aa1503e0     	mov	x0, x21
+      54: 94000000     	bl	0x54 <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0x54>
+		0000000000000054:  R_AARCH64_CALL26	_ZN3iq42f17entry016Module14selector_portsEv
+      58: 9105e260     	add	x0, x19, #0x178
+      5c: d101c3a3     	sub	x3, x29, #0x70
+      60: 910202a4     	add	x4, x21, #0x80
+      64: aa1603e1     	mov	x1, x22
+      68: aa1403e2     	mov	x2, x20
+      6c: 94000000     	bl	0x6c <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0x6c>
+		000000000000006c:  R_AARCH64_CALL26	_ZN3iq42f18normal0921ProvenProviderAdapter29bind_observation_on_actual_uiENS0_14native_overlay6MemoryENS0_11native_ui026NativeERKNS5_5OwnerE
+      70: 360002a0     	tbz	w0, #0x0, 0xc4 <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0xc4>
+      74: 52800028     	mov	w8, #0x1                // =1
+      78: 39120268     	strb	w8, [x19, #0x480]
+      7c: 39520668     	ldrb	w8, [x19, #0x481]
+      80: 370000e8     	tbnz	w8, #0x0, 0x9c <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0x9c>
+      84: 9105e260     	add	x0, x19, #0x178
+      88: aa1303e1     	mov	x1, x19
+      8c: 94000000     	bl	0x8c <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0x8c>
+		000000000000008c:  R_AARCH64_CALL26	_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE
+      90: 360001a0     	tbz	w0, #0x0, 0xc4 <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0xc4>
+      94: 52800028     	mov	w8, #0x1                // =1
+      98: 39120668     	strb	w8, [x19, #0x481]
+      9c: 9105e260     	add	x0, x19, #0x178
+      a0: 94000000     	bl	0xa0 <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0xa0>
+		00000000000000a0:  R_AARCH64_CALL26	_ZN3iq42f18normal0921ProvenProviderAdapter36sample_boundary_scalars_on_actual_uiEv
+      a4: 910023e0     	add	x0, sp, #0x8
+      a8: 910cc261     	add	x1, x19, #0x330
+      ac: 52802902     	mov	w2, #0x148              // =328
+      b0: 94000000     	bl	0xb0 <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0xb0>
+		00000000000000b0:  R_AARCH64_CALL26	memcpy
+      b4: 910023e0     	add	x0, sp, #0x8
+      b8: 94000000     	bl	0xb8 <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0xb8>
+		00000000000000b8:  R_AARCH64_CALL26	_ZN3iq42f18normal0921publish_ingress_on_uiERKNS1_13IngressStatusE
+      bc: 52800020     	mov	w0, #0x1                // =1
+      c0: 14000002     	b	0xc8 <_ZN3iq42f18normal0910UI09Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry077BindingERKNS0_11native_ui0213BoundaryInputE+0xc8>
+      c4: 2a1f03e0     	mov	w0, wzr
+      c8: 910703ff     	add	sp, sp, #0x1c0
+      cc: a9434ff4     	ldp	x20, x19, [sp, #0x30]
+      d0: f9400bfc     	ldr	x28, [sp, #0x10]
+      d4: a94257f6     	ldp	x22, x21, [sp, #0x20]
+      d8: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+      dc: d65f03c0     	ret
+
+Disassembly of section .text._Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE:
+
+0000000000000000 <_Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE>:
+       0: 39520008     	ldrb	w8, [x0, #0x480]
+       4: 7100051f     	cmp	w8, #0x1
+       8: 540006a1     	b.ne	0xdc <_Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE+0xdc>
+       c: 39520408     	ldrb	w8, [x0, #0x481]
+      10: 7100051f     	cmp	w8, #0x1
+      14: 2a1f03e8     	mov	w8, wzr
+      18: 540005e1     	b.ne	0xd4 <_Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE+0xd4>
+      1c: b940c009     	ldr	w9, [x0, #0xc0]
+      20: 7100053f     	cmp	w9, #0x1
+      24: 54000581     	b.ne	0xd4 <_Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE+0xd4>
+      28: f9406888     	ldr	x8, [x4, #0xd0]
+      2c: f9404069     	ldr	x9, [x3, #0x80]
+      30: eb09011f     	cmp	x8, x9
+      34: 54000541     	b.ne	0xdc <_Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE+0xdc>
+      38: f9406c88     	ldr	x8, [x4, #0xd8]
+      3c: f9404469     	ldr	x9, [x3, #0x88]
+      40: eb09011f     	cmp	x8, x9
+      44: 540004c1     	b.ne	0xdc <_Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE+0xdc>
+      48: f9407088     	ldr	x8, [x4, #0xe0]
+      4c: f9404869     	ldr	x9, [x3, #0x90]
+      50: eb09011f     	cmp	x8, x9
+      54: 54000441     	b.ne	0xdc <_Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE+0xdc>
+      58: f9407488     	ldr	x8, [x4, #0xe8]
+      5c: f9404c69     	ldr	x9, [x3, #0x98]
+      60: eb09011f     	cmp	x8, x9
+      64: 540003c1     	b.ne	0xdc <_Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE+0xdc>
+      68: f9407888     	ldr	x8, [x4, #0xf0]
+      6c: f9405069     	ldr	x9, [x3, #0xa0]
+      70: eb09011f     	cmp	x8, x9
+      74: 54000341     	b.ne	0xdc <_Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE+0xdc>
+      78: d10283ff     	sub	sp, sp, #0xa0
+      7c: a9077bfd     	stp	x29, x30, [sp, #0x70]
+      80: a90857f6     	stp	x22, x21, [sp, #0x80]
+      84: a9094ff4     	stp	x20, x19, [sp, #0x90]
+      88: 9101c3fd     	add	x29, sp, #0x70
+      8c: 910003e8     	mov	x8, sp
+      90: aa0003f6     	mov	x22, x0
+      94: aa0303e0     	mov	x0, x3
+      98: aa0403f3     	mov	x19, x4
+      9c: aa0203f4     	mov	x20, x2
+      a0: aa0103f5     	mov	x21, x1
+      a4: 94000000     	bl	0xa4 <_Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE+0xa4>
+		00000000000000a4:  R_AARCH64_CALL26	_ZN3iq42f17entry016Module14selector_portsEv
+      a8: 9105e2c0     	add	x0, x22, #0x178
+      ac: 910003e3     	mov	x3, sp
+      b0: aa1503e1     	mov	x1, x21
+      b4: aa1403e2     	mov	x2, x20
+      b8: aa1303e4     	mov	x4, x19
+      bc: 94000000     	bl	0xbc <_Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE+0xbc>
+		00000000000000bc:  R_AARCH64_CALL26	_ZN3iq42f18normal0921ProvenProviderAdapter22configure_on_actual_uiENS0_14native_overlay6MemoryENS0_11native_ui026NativeERKNS1_22ActualProviderContractE
+      c0: 2a0003e8     	mov	w8, w0
+      c4: a9494ff4     	ldp	x20, x19, [sp, #0x90]
+      c8: a94857f6     	ldp	x22, x21, [sp, #0x80]
+      cc: a9477bfd     	ldp	x29, x30, [sp, #0x70]
+      d0: 910283ff     	add	sp, sp, #0xa0
+      d4: 12000100     	and	w0, w8, #0x1
+      d8: d65f03c0     	ret
+      dc: 120003e0     	and	w0, wzr, #0x1
+      e0: d65f03c0     	ret

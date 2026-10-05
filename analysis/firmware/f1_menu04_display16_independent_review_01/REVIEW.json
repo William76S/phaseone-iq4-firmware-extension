@@ -1,0 +1,98 @@
+{
+  "schema": "iq4_menu04_display16_independent_finite_review_01",
+  "baseline_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "candidate_sha256": "e5938d916a3e33dbe62110b8ce9ef5ffd5717baebc64b824a49fd7a4bb188efd",
+  "runtime_sha256": "af77d957df002a20760f0f2d8f182bcaa8fac68d4467cac4dced1b46dc267452",
+  "display_sha256": "bc84ab1949b93fdf2ca86020be61bf1e3c598e5ac1dd2fd1e67c3385f6843399",
+  "actual_callsite_bytes": [
+    {
+      "name": "Grid_original_SetMenu",
+      "va": "0x4ee780",
+      "offset": "0xee780",
+      "original": "f9320094",
+      "candidate": "f9320094",
+      "unchanged": true
+    },
+    {
+      "name": "LVSettings_SetMenu_hook",
+      "va": "0x4eea58",
+      "offset": "0xeea58",
+      "original": "43320094",
+      "candidate": "1c4df594",
+      "unchanged": false
+    },
+    {
+      "name": "LV_original_Draw_hook",
+      "va": "0x51ddcc",
+      "offset": "0x11ddcc",
+      "original": "9b64fd97",
+      "candidate": "7f94f494",
+      "unchanged": false
+    }
+  ],
+  "actual_link_report_sha256": "0d30fc3b2486332dca7048a497181b463bb248a0ba47b710d3fe291d8c39d0c1",
+  "retained_submenu_type": {
+    "vtable_copy_includes_negative_header": true,
+    "menu_index16": "0x4e6004",
+    "item_index16": "0x4ea2fc",
+    "navigator_path": "4e7d7c VT+40 -> dynamic_cast SubMenu -> 4e7dfc/4e73b4",
+    "leaf_action": "4e7e04..4e7e18 VT+50"
+  },
+  "mapping": {
+    "mode_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "diagnostic_indices": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "opacity_leaf_percentages": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60,
+      65,
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100
+    ]
+  },
+  "null_allocation_failure": {
+    "root_not_attached": true,
+    "building_retained_true": true,
+    "partial_objects_not_retried": true,
+    "leak_possible": true,
+    "automatic_same_boot_recovery": false
+  },
+  "new_host_tests_run": false,
+  "target_execution": false,
+  "camera_or_SDK_access": false,
+  "conclusion": "No certain normal-path failure identified in this finite source/static-byte review; allocation failure remains fail-closed for this boot."
+}

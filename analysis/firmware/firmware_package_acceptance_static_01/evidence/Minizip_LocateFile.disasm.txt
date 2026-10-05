@@ -1,0 +1,101 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000009d6948 <uncompress>:
+  9d7e60:      	stp	x29, x30, [sp, #-0x1f0]!
+  9d7e64:      	mov	x29, sp
+  9d7e68:      	str	x0, [sp, #0x28]
+  9d7e6c:      	str	x1, [sp, #0x20]
+  9d7e70:      	str	w2, [sp, #0x1c]
+  9d7e74:      	ldr	x0, [sp, #0x28]
+  9d7e78:      	cmp	x0, #0x0
+  9d7e7c:      	b.ne	0x9d7e88 <uncompress+0x1540>
+  9d7e80:      	mov	w0, #-0x66              // =-102
+  9d7e84:      	b	0x9d7fd0 <uncompress+0x1688>
+  9d7e88:      	ldr	x0, [sp, #0x20]
+  9d7e8c:      	bl	0x40aea0 <strlen@plt>
+  9d7e90:      	cmp	x0, #0xff
+  9d7e94:      	b.ls	0x9d7ea0 <uncompress+0x1558>
+  9d7e98:      	mov	w0, #-0x66              // =-102
+  9d7e9c:      	b	0x9d7fd0 <uncompress+0x1688>
+  9d7ea0:      	ldr	x0, [sp, #0x28]
+  9d7ea4:      	str	x0, [sp, #0x1e0]
+  9d7ea8:      	ldr	x0, [sp, #0x1e0]
+  9d7eac:      	ldr	x0, [x0, #0x70]
+  9d7eb0:      	cmp	x0, #0x0
+  9d7eb4:      	b.ne	0x9d7ec0 <uncompress+0x1578>
+  9d7eb8:      	mov	w0, #-0x64              // =-100
+  9d7ebc:      	b	0x9d7fd0 <uncompress+0x1688>
+  9d7ec0:      	ldr	x0, [sp, #0x1e0]
+  9d7ec4:      	ldr	x0, [x0, #0x60]
+  9d7ec8:      	str	x0, [sp, #0x1d8]
+  9d7ecc:      	ldr	x0, [sp, #0x1e0]
+  9d7ed0:      	ldr	x0, [x0, #0x68]
+  9d7ed4:      	str	x0, [sp, #0x1d0]
+  9d7ed8:      	ldr	x0, [sp, #0x1e0]
+  9d7edc:      	add	x1, x0, #0x90
+  9d7ee0:      	add	x0, sp, #0x148
+  9d7ee4:      	mov	x3, x1
+  9d7ee8:      	mov	x1, #0x88               // =136
+  9d7eec:      	mov	x2, x1
+  9d7ef0:      	mov	x1, x3
+  9d7ef4:      	bl	0x40a530 <memcpy@plt>
+  9d7ef8:      	ldr	x0, [sp, #0x1e0]
+  9d7efc:      	ldr	x0, [x0, #0x118]
+  9d7f00:      	str	x0, [sp, #0x140]
+  9d7f04:      	ldr	x0, [sp, #0x28]
+  9d7f08:      	bl	0x9d7c88 <uncompress+0x1340>
+  9d7f0c:      	str	w0, [sp, #0x1ec]
+  9d7f10:      	b	0x9d7f78 <uncompress+0x1630>
+  9d7f14:      	add	x0, sp, #0x38
+  9d7f18:      	mov	x7, #0x0                // =0
+  9d7f1c:      	mov	x6, #0x0                // =0
+  9d7f20:      	mov	x5, #0x0                // =0
+  9d7f24:      	mov	x4, #0x0                // =0
+  9d7f28:      	mov	x3, #0x100              // =256
+  9d7f2c:      	mov	x2, x0
+  9d7f30:      	mov	x1, #0x0                // =0
+  9d7f34:      	ldr	x0, [sp, #0x28]
+  9d7f38:      	bl	0x9d7c24 <uncompress+0x12dc>
+  9d7f3c:      	str	w0, [sp, #0x1ec]
+  9d7f40:      	ldr	w0, [sp, #0x1ec]
+  9d7f44:      	cmp	w0, #0x0
+  9d7f48:      	b.ne	0x9d7f78 <uncompress+0x1630>
+  9d7f4c:      	add	x0, sp, #0x38
+  9d7f50:      	ldr	w2, [sp, #0x1c]
+  9d7f54:      	ldr	x1, [sp, #0x20]
+  9d7f58:      	bl	0x9d6db4 <uncompress+0x46c>
+  9d7f5c:      	cmp	w0, #0x0
+  9d7f60:      	b.ne	0x9d7f6c <uncompress+0x1624>
+  9d7f64:      	mov	w0, #0x0                // =0
+  9d7f68:      	b	0x9d7fd0 <uncompress+0x1688>
+  9d7f6c:      	ldr	x0, [sp, #0x28]
+  9d7f70:      	bl	0x9d7d34 <uncompress+0x13ec>
+  9d7f74:      	str	w0, [sp, #0x1ec]
+  9d7f78:      	ldr	w0, [sp, #0x1ec]
+  9d7f7c:      	cmp	w0, #0x0
+  9d7f80:      	b.eq	0x9d7f14 <uncompress+0x15cc>
+  9d7f84:      	ldr	x0, [sp, #0x1e0]
+  9d7f88:      	ldr	x1, [sp, #0x1d8]
+  9d7f8c:      	str	x1, [x0, #0x60]
+  9d7f90:      	ldr	x0, [sp, #0x1e0]
+  9d7f94:      	ldr	x1, [sp, #0x1d0]
+  9d7f98:      	str	x1, [x0, #0x68]
+  9d7f9c:      	ldr	x0, [sp, #0x1e0]
+  9d7fa0:      	add	x0, x0, #0x90
+  9d7fa4:      	mov	x3, x0
+  9d7fa8:      	add	x0, sp, #0x148
+  9d7fac:      	mov	x1, #0x88               // =136
+  9d7fb0:      	mov	x2, x1
+  9d7fb4:      	mov	x1, x0
+  9d7fb8:      	mov	x0, x3
+  9d7fbc:      	bl	0x40a530 <memcpy@plt>
+  9d7fc0:      	ldr	x0, [sp, #0x1e0]
+  9d7fc4:      	ldr	x1, [sp, #0x140]
+  9d7fc8:      	str	x1, [x0, #0x118]
+  9d7fcc:      	ldr	w0, [sp, #0x1ec]
+  9d7fd0:      	ldp	x29, x30, [sp], #0x1f0
+  9d7fd4:      	ret

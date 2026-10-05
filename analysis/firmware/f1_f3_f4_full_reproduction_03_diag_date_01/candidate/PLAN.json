@@ -1,0 +1,136 @@
+{
+  "schema": "iq4_offline_user_only_stock_wrapper_candidate_v3",
+  "evidence_level": "host_container_validation_only",
+  "original_fwr_sha256": "a52758ffb163023e5323297e450450f91002175b69bed7590fe2cd037c2ab300",
+  "original_user_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "payload_sha256": "49e99546629f14f5111109fd6f49e8bc55a43de96bcc3d552483f7838154dd60",
+  "payload_size": 13224296,
+  "payload_elf_host_review": {
+    "entry": 4240268,
+    "program_count": 12,
+    "section_count": 661,
+    "loads": [
+      {
+        "flags": 5,
+        "offset": 0,
+        "va": 4194304,
+        "file_size": 11737592,
+        "memory_size": 11737592,
+        "alignment": 65536
+      },
+      {
+        "flags": 6,
+        "offset": 11738528,
+        "va": 15998368,
+        "file_size": 133716,
+        "memory_size": 53459488,
+        "alignment": 65536
+      },
+      {
+        "flags": 5,
+        "offset": 11927552,
+        "va": 69468160,
+        "file_size": 691092,
+        "memory_size": 691092,
+        "alignment": 65536
+      },
+      {
+        "flags": 6,
+        "offset": 12648448,
+        "va": 70189056,
+        "file_size": 495664,
+        "memory_size": 495664,
+        "alignment": 65536
+      }
+    ],
+    "interpreter": "/lib/ld-linux-aarch64.so.1",
+    "image_header_offset": 10332272,
+    "image_header_va": 14526576,
+    "image_header_size": 180,
+    "header_version": [
+      6,
+      3,
+      32
+    ],
+    "host_elf_review_only": true,
+    "target_memory_capacity_or_boot_verified": false
+  },
+  "candidate_extent_differs_from_stock": true,
+  "candidate_elf_layout_differs_from_stock": true,
+  "added_loads_or_growth_is_not_a_device_acceptance_claim": true,
+  "release_version": "6.03.29",
+  "component_version": "6.03.32",
+  "payload_modified_from_stock": true,
+  "payload_changes_limited_to_image_header_version": false,
+  "both_versions_strictly_newer_than_fixed_baseline": true,
+  "offline_candidate_generation_scope_passed": true,
+  "fwr": {
+    "size": 13224868,
+    "sha256": "34d6b667f1cea64be962c0ca79dd16d9ad8615d3ee747260af297807bcaf691d",
+    "entries": [
+      {
+        "name": "manifest.xml",
+        "size": 336,
+        "sha256": "314c14c2365f1019bba318ca409735974dea5d0ba72d333c90798eb5628f849d",
+        "crc32": "90871852"
+      },
+      {
+        "name": "P1Linux_6.03.32.bin",
+        "size": 13224296,
+        "sha256": "49e99546629f14f5111109fd6f49e8bc55a43de96bcc3d552483f7838154dd60",
+        "crc32": "d33328a7"
+      }
+    ]
+  },
+  "fwp": {
+    "size": 13225371,
+    "sha256": "9d6c33950f917678e64489b21b94525cb7cbfe5a43ca09a9776e586d5c9f0247",
+    "entries": [
+      {
+        "name": "manifest.xml",
+        "size": 271,
+        "sha256": "49fb641cf11e3a46500a0039304e2df636fa5eb871b9c52cbe39e63cb1b53928",
+        "crc32": "9c202819"
+      },
+      {
+        "name": "IQ4-user-only.fwr",
+        "size": 13224868,
+        "sha256": "34d6b667f1cea64be962c0ca79dd16d9ad8615d3ee747260af297807bcaf691d",
+        "crc32": "442a8b88"
+      }
+    ]
+  },
+  "fwp_outer_schema_reconstructed_from_static_consumer_not_stock_sample": false,
+  "static_target_files": [
+    "User/manifest.xml",
+    "User/p1linux.bin"
+  ],
+  "additional_fwp_package_manifest_state_requires_independent_closure": true,
+  "static_other_side_effects": [
+    "FileManager component signature events",
+    "firmware flags",
+    "User boot image marker clear/reestablish through /dev/mtd0 erase-block read/erase/write",
+    "upgrade-mode state",
+    "reboot/runner consumes p1linux.bin"
+  ],
+  "required_install_mode": "actual running User and install-as-User, partial update",
+  "contains_boot_fpga_igloo_sensorprofile_language_calibration_or_keys": false,
+  "device_acceptance_observed": false,
+  "device_recovery_verified": false,
+  "f1_feature_implementation_or_acceptance_proven": false,
+  "camera_or_sdk_access_performed": false,
+  "installation_authorized_by_this_tool": false,
+  "original_stock_fwp_sha256": "3dfb12c9417d60a0838a5abbfe3adccba2f242a79bab5f9ffa312be097571252",
+  "stock_outer_manifest_sha256": "29081a1b7be5753e91648f00abe2b478e3c040ced65b11c963361d296e96f575",
+  "system_version": "8.02.11",
+  "original_system_version": "8.02.0",
+  "system_version_strictly_newer_host_policy": true,
+  "release_date": "2026-10-05",
+  "original_release_date": "2022-07-18",
+  "original_outer_date": "2022-07-21",
+  "inner_and_outer_release_dates_match": true,
+  "stock_outer_attributes_and_back_selectors_preserved_except_explicit_versions_date_and_filename": true,
+  "outer_XF_and_XT_components_removed": true,
+  "outer_stock_date_retained_as_candidate_base": false,
+  "minimum_update_version_not_added_to_stock_outer_or_child": true
+}

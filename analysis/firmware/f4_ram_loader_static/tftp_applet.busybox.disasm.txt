@@ -1,0 +1,77 @@
+analysis/firmware/f4_ram_loader_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   24cd8:      	stp	x19, x20, [sp, #-0x50]!
+   24cdc:      	mov	x0, x1
+   24ce0:      	stp	x21, x22, [sp, #0x10]
+   24ce4:      	adrp	x21, 0xbe000
+   24ce8:      	mov	x22, x1
+   24cec:      	ldr	x4, [x21, #0xf68]
+   24cf0:      	adrp	x1, 0x99000
+   24cf4:      	add	x3, sp, #0x40
+   24cf8:      	add	x1, x1, #0x760
+   24cfc:      	ldr	x5, [x4]
+   24d00:      	str	x5, [sp, #0x48]
+   24d04:      	mov	x5, #0x0                // =0
+   24d08:      	add	x2, sp, #0x38
+   24d0c:      	stp	x23, x30, [sp, #0x20]
+   24d10:      	stp	xzr, xzr, [sp, #0x38]
+   24d14:      	bl	0x89590 <.text+0x7ddf0>
+   24d18:      	mov	w23, w0
+   24d1c:      	adrp	x0, 0xbe000
+   24d20:      	ldr	x0, [x0, #0xf28]
+   24d24:      	ldr	w19, [x0]
+   24d28:      	ldp	x0, x20, [sp, #0x38]
+   24d2c:      	cbz	x20, 0x24d60 <.text+0x195c0>
+   24d30:      	cbnz	x0, 0x24d4c <.text+0x195ac>
+   24d34:      	mov	x0, x20
+   24d38:      	mov	w1, #0x2f               // =47
+   24d3c:      	bl	0xacd0 <strrchr@plt>
+   24d40:      	cmp	x0, #0x0
+   24d44:      	csinc	x20, x20, x0, eq
+   24d48:      	str	x20, [sp, #0x38]
+   24d4c:      	sxtw	x19, w19
+   24d50:      	add	x0, x22, x19, lsl #3
+   24d54:      	ldr	x1, [x22, x19, lsl #3]
+   24d58:      	cbnz	x1, 0x24d6c <.text+0x195cc>
+   24d5c:      	bl	0xbb2c <.text+0x38c>
+   24d60:      	str	x0, [sp, #0x40]
+   24d64:      	cbnz	x0, 0x24d4c <.text+0x195ac>
+   24d68:      	bl	0xbb2c <.text+0x38c>
+   24d6c:      	ldr	x0, [x0, #0x8]
+   24d70:      	mov	w2, #0x45               // =69
+   24d74:      	adrp	x1, 0x98000
+   24d78:      	add	x1, x1, #0x5b8
+   24d7c:      	bl	0x94d74 <.text+0x895d4>
+   24d80:      	mov	w1, w0
+   24d84:      	ldr	x0, [x22, x19, lsl #3]
+   24d88:      	bl	0x94e78 <.text+0x896d8>
+   24d8c:      	mov	x1, x0
+   24d90:      	ldp	x2, x3, [sp, #0x38]
+   24d94:      	mov	x0, #0x0                // =0
+   24d98:      	bl	0x24708 <.text+0x18f68>
+   24d9c:      	mov	w19, w0
+   24da0:      	cbz	w0, 0x24dbc <.text+0x1961c>
+   24da4:      	ldr	x0, [sp, #0x38]
+   24da8:      	ldrb	w1, [x0]
+   24dac:      	cmp	w1, #0x2d
+   24db0:      	b.eq	0x24de8 <.text+0x19648>
+   24db4:      	tbz	w23, #0x0, 0x24dbc <.text+0x1961c>
+   24db8:      	bl	0xb710 <unlink@plt>
+   24dbc:      	ldr	x21, [x21, #0xf68]
+   24dc0:      	mov	w0, w19
+   24dc4:      	ldr	x2, [sp, #0x48]
+   24dc8:      	ldr	x1, [x21]
+   24dcc:      	eor	x1, x2, x1
+   24dd0:      	cbnz	x1, 0x24de4 <.text+0x19644>
+   24dd4:      	ldp	x21, x22, [sp, #0x10]
+   24dd8:      	ldp	x23, x30, [sp, #0x20]
+   24ddc:      	ldp	x19, x20, [sp], #0x50
+   24de0:      	ret
+   24de4:      	bl	0xac80 <__stack_chk_fail@plt>
+   24de8:      	ldrb	w1, [x0, #0x1]
+   24dec:      	cbz	w1, 0x24dbc <.text+0x1961c>
+   24df0:      	tbz	w23, #0x0, 0x24dbc <.text+0x1961c>
+   24df4:      	b	0x24db8 <.text+0x19618>

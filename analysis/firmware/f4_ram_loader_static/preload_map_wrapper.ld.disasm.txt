@@ -1,0 +1,43 @@
+analysis/firmware/f4_ram_loader_static/ld-2.28.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000001040 <.text>:
+    1230:      	stp	x29, x30, [sp, #-0x70]!
+    1234:      	mov	w5, #0x4000000          // =67108864
+    1238:      	adrp	x3, 0x1000 <free@plt>
+    123c:      	mov	x29, sp
+    1240:      	stp	x19, x20, [sp, #0x10]
+    1244:      	adrp	x19, 0x30000 <_rtld_global>
+    1248:      	add	x19, x19, #0x0
+    124c:      	mov	x20, x0
+    1250:      	add	x4, sp, #0x50
+    1254:      	add	x3, x3, #0x2c8
+    1258:      	add	x0, sp, #0x40
+    125c:      	stp	x21, x22, [sp, #0x20]
+    1260:      	mov	x22, x2
+    1264:      	ldr	w21, [x19, #0x8]
+    1268:      	add	x2, sp, #0x3f
+    126c:      	stp	xzr, x20, [sp, #0x48]
+    1270:      	str	x1, [sp, #0x58]
+    1274:      	add	x1, sp, #0x48
+    1278:      	str	w5, [sp, #0x60]
+    127c:      	bl	0xff0 <_dl_catch_error@plt>
+    1280:      	ldr	x4, [sp, #0x48]
+    1284:      	cbnz	x4, 0x12a4 <.text+0x264>
+    1288:      	ldr	w0, [x19, #0x8]
+    128c:      	cmp	w0, w21
+    1290:      	cset	w0, ne
+    1294:      	ldp	x19, x20, [sp, #0x10]
+    1298:      	ldp	x21, x22, [sp, #0x20]
+    129c:      	ldp	x29, x30, [sp], #0x70
+    12a0:      	ret
+    12a4:      	mov	w0, #0x2                // =2
+    12a8:      	mov	x3, x22
+    12ac:      	mov	x2, x20
+    12b0:      	adrp	x1, 0x18000
+    12b4:      	add	x1, x1, #0x2f0
+    12b8:      	bl	0xe650 <_dl_debug_state+0x880>
+    12bc:      	mov	w0, #0x0                // =0
+    12c0:      	b	0x1294 <.text+0x254>
+    12c4:      	nop

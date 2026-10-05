@@ -1,0 +1,106 @@
+{
+  "schema": "iq4_f3_full_raw_native_adapter_review_01",
+  "original": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "implementation": [
+    "render_plan.c",
+    "native_render_adapter.c",
+    "core_receipt.c",
+    "native_api_bridge.cpp"
+  ],
+  "raw_source_builder_bound": false,
+  "whole_render_completion_provider_bound": false,
+  "core_receipt_hook_installed": false,
+  "target_addresses_bound": false,
+  "raw_decoded": false,
+  "camera_accessed": false,
+  "feature_native_accepted": false,
+  "host": 80,
+  "sanitized": 80,
+  "collector_tests": 6,
+  "static_exact_sha256": "81361d3631d4bb47a0e77fdae3e27bbeb72556ed4ee06c7ba9cdb1d11d672241",
+  "target_objects": [
+    {
+      "unit": "render_plan",
+      "sha256": "410705ba2e192b8c5f2434094bf82f27c082eb3c69b2b598d74f9dc37293a3b3",
+      "bytes": 27408,
+      "undefined_symbols": [],
+      "elf_type": "ET_REL",
+      "elf_machine": "AArch64",
+      "fresh_builds_equal": true
+    },
+    {
+      "unit": "native_render_adapter",
+      "sha256": "024d8c33abee8f6d8d9c6ecc9219a7e7806791e86618a1111b42228d1b09a6e1",
+      "bytes": 20536,
+      "undefined_symbols": [
+        "f3_job_begin",
+        "f3_job_consume",
+        "f3_job_release",
+        "f3_job_render_complete"
+      ],
+      "elf_type": "ET_REL",
+      "elf_machine": "AArch64",
+      "fresh_builds_equal": true
+    },
+    {
+      "unit": "core_receipt",
+      "sha256": "67714dda6bb70dc2058cc996ad947444d08182f73acd56bb4104eba5bb275a20",
+      "bytes": 10536,
+      "undefined_symbols": [],
+      "elf_type": "ET_REL",
+      "elf_machine": "AArch64",
+      "fresh_builds_equal": true
+    },
+    {
+      "unit": "native_api_bridge",
+      "sha256": "aa3ca16389152aab53634f85a230c522e2b1594e16e63dd30ee893b8c5dfe4de",
+      "bytes": 30248,
+      "undefined_symbols": [
+        "__cxa_begin_catch",
+        "__cxa_end_catch",
+        "__gxx_personality_v0"
+      ],
+      "elf_type": "ET_REL",
+      "elf_machine": "AArch64",
+      "fresh_builds_equal": true
+    }
+  ],
+  "capacity": {
+    "stock_generator_bytes": 996147200,
+    "prefix_bytes": 83886080,
+    "stock_remaining_bytes": 912261120,
+    "example_only_valid_width": 14204,
+    "example_only_valid_height": 10652,
+    "conditional_pipeline_min_stages": 2,
+    "full_and_75_arena_min_model": 2572841472,
+    "decoded_raw_min_model": 302687232,
+    "full_and_75_total_min_model": 2875528704,
+    "half_arena_min_model": 643210368,
+    "half_total_min_model": 945897600,
+    "actual_stage_bounds_and_upper_budget_proved": false
+  },
+  "blockers": [
+    "complete-RAW payload producer/section and row-offset semantics not proved",
+    "native reader/source/settings/tags construction and exclusive source lease binder unbound",
+    "whole-render proof must include RAW decode/all core passes/resample/orientation",
+    "verified held arena/native scratch/cache upper budget unavailable",
+    "target C++ unwind and target getters/calls not executed"
+  ],
+  "next_manual_iiq_calls": [
+    "7d9630",
+    "7d9710",
+    "7b6314",
+    "7bba90",
+    "7ba364"
+  ],
+  "next_tile_windows": [
+    "916ef8",
+    "916f80",
+    "904018",
+    "per-stage VT+18/+30/+38"
+  ]
+}

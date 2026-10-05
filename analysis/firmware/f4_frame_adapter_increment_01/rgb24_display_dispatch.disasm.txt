@@ -1,0 +1,31 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+SCOPE partial_instruction_window
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000435fac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_>:
+  47fbe8: b940b3e0     	ldr	w0, [sp, #0xb0]
+  47fbec: 34000740     	cbz	w0, 0x47fcd4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49d28>
+  47fbf0: 7100081f     	cmp	w0, #0x2
+  47fbf4: 54000801     	b.ne	0x47fcf4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49d48>
+  47fbf8: f94093e0     	ldr	x0, [sp, #0x120]
+  47fbfc: b4000080     	cbz	x0, 0x47fc0c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49c60>
+  47fc00: b9401800     	ldr	w0, [x0, #0x18]
+  47fc04: 7100081f     	cmp	w0, #0x2
+  47fc08: 54000860     	b.eq	0x47fd14 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49d68>
+  47fc0c: 710002bf     	cmp	w21, #0x0
+  47fc10: 7a5902c0     	ccmp	w22, w25, #0x0, eq
+  47fc14: 1a9f17f7     	cset	w23, eq
+  47fc18: 6b1a031f     	cmp	w24, w26
+  47fc1c: 1a9f02f7     	csel	w23, w23, wzr, eq
+  47fc20: 350008b7     	cbnz	w23, 0x47fd34 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49d88>
+  47fc24: f0fffffc     	adrp	x28, 0x47e000 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x48054>
+  47fc28: 12800047     	mov	w7, #-0x3               // =-3
+  47fc2c: 9124c380     	add	x0, x28, #0x930
+  47fc30: 52800037     	mov	w23, #0x1               // =1
+  47fc34: 52800064     	mov	w4, #0x3                // =3
+  47fc38: 52800081     	mov	w1, #0x4                // =4
+  47fc3c: f9005be0     	str	x0, [sp, #0xb0]
+  47fc40: 17ffff5c     	b	0x47f9b0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49a04>

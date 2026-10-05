@@ -1,0 +1,27 @@
+--- tools/firmware/f4_native_source_04/source.c
++++ tools/firmware/f4_native_source_05/source.c
+@@ -1,7 +1,7 @@
+ #include "../f4_native_source_03/source.h"
+ #include "../f4_native_diagnostics_04/diagnostics.h"
+-#include "../f4_native_source_03/native_calls.h"
+-#include "../f4_native_source_03/code_pins.h"
++#include "native_calls.h"
++#include "code_pins.h"
+ #include <stdatomic.h>
+ #include <string.h>
+ #define MAGIC UINT64_C(0x4951344634535232)
+@@ -61,11 +61,12 @@
+  }return 1;
+ }
+ /* Actual exact triple inspection under the same original recursive mutex.
+- * Return 1 present, 0 absent, -1 unknown; a busy mutex is unknown, never wait. */
++ * Return 1 present, 0 absent, -1 unknown. The original queue lock waits for
++ * ordinary contention, exactly like Queue::Register; exceptions remain unknown. */
+ static int exact_triple(Source*s,uintptr_t event,const Observer*observer){uintptr_t p,prev,tail,next,back,fields[4],ev,q,obs,active;
+  uint32_t kind;uint32_t nodes=0,found=0;int rc,result=-1;
+  if(!on_ui(s)||!rd(s,0xf553d0,&kind,4)||kind!=1||!word(s,0xf553a8,&active)||!active||
+- !iq4_f4_native_trylock_02(0xf553c0,&rc)||rc)return -1;
++ !iq4_f4_native_queue_lock_05(0xf553c0))return -1;
+  uintptr_t head=s->owner.queue+0x78;prev=head;
+  if(!word(s,head+8,&p)||!word(s,head+16,&tail))goto done;
+  while(p!=head){

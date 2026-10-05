@@ -1,0 +1,33 @@
+analysis/firmware/f4_ram_loader_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   25b58:      	ldr	x0, [x21, #0x58]
+   25b5c:      	mov	x1, #0xffffffff         // =4294967295
+   25b60:      	movk	x1, #0x2c1, lsl #32
+   25b64:      	str	x1, [x21, #0x78]
+   25b68:      	cbz	x0, 0x25ba0 <.text+0x1a400>
+   25b6c:      	ldrb	w1, [x0]
+   25b70:      	cmp	w1, #0x2d
+   25b74:      	b.ne	0x25b98 <.text+0x1a3f8>
+   25b78:      	ldrb	w0, [x0, #0x1]
+   25b7c:      	cbnz	w0, 0x25b98 <.text+0x1a3f8>
+   25b80:      	adrp	x22, 0xbf000
+   25b84:      	mov	w0, #0x1                // =1
+   25b88:      	str	w0, [x21, #0x78]
+   25b8c:      	ldr	w0, [x22, #0x94c]
+   25b90:      	and	w0, w0, #0xfffffffe
+   25b94:      	str	w0, [x22, #0x94c]
+   25b98:      	mov	w0, #0x241              // =577
+   25b9c:      	str	w0, [x21, #0x7c]
+   25ba0:      	sxtw	x20, w20
+   25ba4:      	add	x0, x23, x20, lsl #3
+   25ba8:      	str	x0, [sp, #0x90]
+   25bac:      	ldr	x0, [x23, x20, lsl #3]
+   25bb0:      	cbz	x0, 0x25fb4 <.text+0x1a814>
+   25bb4:      	adrp	x22, 0xbf000
+   25bb8:      	adrp	x1, 0xa9000
+   25bbc:      	add	x22, x22, #0x94c
+   25bc0:      	add	x1, x1, #0xe5f
+   25bc4:      	mov	x19, x21

@@ -1,0 +1,42 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  4162d4: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  4162d8: 910003fd     	mov	x29, sp
+  4162dc: f9000fe0     	str	x0, [sp, #0x18]
+  4162e0: f9400fe0     	ldr	x0, [sp, #0x18]
+  4162e4: f9400400     	ldr	x0, [x0, #0x8]
+  4162e8: f9400fe1     	ldr	x1, [sp, #0x18]
+  4162ec: f9400c21     	ldr	x1, [x1, #0x18]
+  4162f0: 9341fc22     	asr	x2, x1, #1
+  4162f4: aa0203e1     	mov	x1, x2
+  4162f8: 8b010002     	add	x2, x0, x1
+  4162fc: f9400fe0     	ldr	x0, [sp, #0x18]
+  416300: f9400c00     	ldr	x0, [x0, #0x18]
+  416304: 92400000     	and	x0, x0, #0x1
+  416308: f100001f     	cmp	x0, #0x0
+  41630c: 540001c0     	b.eq	0x416344 <.text+0xb114>
+  416310: f9400fe0     	ldr	x0, [sp, #0x18]
+  416314: f9400400     	ldr	x0, [x0, #0x8]
+  416318: f9400fe1     	ldr	x1, [sp, #0x18]
+  41631c: f9400c21     	ldr	x1, [x1, #0x18]
+  416320: 9341fc23     	asr	x3, x1, #1
+  416324: aa0303e1     	mov	x1, x3
+  416328: 8b010000     	add	x0, x0, x1
+  41632c: f9400000     	ldr	x0, [x0]
+  416330: f9400fe1     	ldr	x1, [sp, #0x18]
+  416334: f9400821     	ldr	x1, [x1, #0x10]
+  416338: 8b010000     	add	x0, x0, x1
+  41633c: f9400001     	ldr	x1, [x0]
+  416340: 14000003     	b	0x41634c <.text+0xb11c>
+  416344: f9400fe0     	ldr	x0, [sp, #0x18]
+  416348: f9400801     	ldr	x1, [x0, #0x10]
+  41634c: aa0203e0     	mov	x0, x2
+  416350: d63f0020     	blr	x1
+  416354: d503201f     	nop
+  416358: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  41635c: d65f03c0     	ret

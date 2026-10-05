@@ -1,0 +1,30 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+SCOPE complete_leaf_assembly_return_boundary
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000009db97c <zError>:
+  9ef058: d53b0023     	mrs	x3, CTR_EL0
+  9ef05c: d503201f     	nop
+  9ef060: d3504c63     	ubfx	x3, x3, #16, #4
+  9ef064: d2800082     	mov	x2, #0x4                // =4
+  9ef068: 9ac32042     	lsl	x2, x2, x3
+  9ef06c: d1000443     	sub	x3, x2, #0x1
+  9ef070: ea03003f     	tst	x1, x3
+  9ef074: 8a230021     	bic	x1, x1, x3
+  9ef078: 54000040     	b.eq	0x9ef080 <zError+0x13704>
+  9ef07c: d50b7e21     	dc	civac, x1
+  9ef080: ea03001f     	tst	x0, x3
+  9ef084: 8a230000     	bic	x0, x0, x3
+  9ef088: 54000060     	b.eq	0x9ef094 <zError+0x13718>
+  9ef08c: d50b7e20     	dc	civac, x0
+  9ef090: 14000002     	b	0x9ef098 <zError+0x1371c>
+  9ef094: d50b7e20     	dc	civac, x0
+  9ef098: 8b020000     	add	x0, x0, x2
+  9ef09c: eb01001f     	cmp	x0, x1
+  9ef0a0: 54ffffa3     	b.lo	0x9ef094 <zError+0x13718>
+  9ef0a4: d5033f9f     	dsb	sy
+  9ef0a8: d65f03c0     	ret
+  9ef0ac: d503201f     	nop

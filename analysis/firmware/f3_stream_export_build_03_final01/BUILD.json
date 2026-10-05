@@ -1,0 +1,143 @@
+{
+  "schema": "iq4_stream_export_03",
+  "source": [
+    {
+      "path": "src/codec/export_pixels.c",
+      "bytes": 2932,
+      "sha256": "339a986b4d8b8967d4af3c80ece3736c08a2b588103400707d2f1aa368de41fe"
+    },
+    {
+      "path": "src/codec/export_geometry.c",
+      "bytes": 1210,
+      "sha256": "8cacc31e028c5df0f0ccbf3f27cae824160b5c0656b294fe52a79bf31a14701f"
+    },
+    {
+      "path": "src/codec/export_pixels.h",
+      "bytes": 900,
+      "sha256": "0724d12361e5b47ae9aa4946e203e93c55c116fe4aa332640258ba78efc0042c"
+    },
+    {
+      "path": "src/codec/export_geometry.h",
+      "bytes": 906,
+      "sha256": "917b058ef2b572f8f37eef13fcfd680ef2c801f786dabf910772fb9287b33759"
+    },
+    {
+      "path": "src/codec/stream_export.c",
+      "bytes": 6285,
+      "sha256": "1e9334215a98075aec29f9bf627fbe3948fe3bad353d6e460daa5f279261a0cc"
+    },
+    {
+      "path": "src/codec/stream_export.h",
+      "bytes": 637,
+      "sha256": "5106fb56de2ebdbc3c3edcd311672f75f1995c5bbadf67d398ea498aa6a533ba"
+    },
+    {
+      "path": "tools/firmware/f3_stream_export_03/stream_export.c",
+      "bytes": 12652,
+      "sha256": "ce3aedfce73822b04b2c103324ef9b6d0b3149435161e2abd7a252b5a7c81ee9"
+    },
+    {
+      "path": "tools/firmware/f3_stream_export_03/stream_export.h",
+      "bytes": 1724,
+      "sha256": "771450f18e7b7faa83d106681d677b293296b9502dd92dedd33d045df329be3f"
+    },
+    {
+      "path": "tools/firmware/f3_stream_export_03/test_export.c",
+      "bytes": 10269,
+      "sha256": "654bf4d1df413306b2517b198f14ccf82b07d3388ac142ff827a72b273a01e3e"
+    },
+    {
+      "path": "tests/test_export_pixels.c",
+      "bytes": 3149,
+      "sha256": "627413693c3d8a8e56bd3aa94cd3551d969afa34586a2929700b5bba12e636c0"
+    },
+    {
+      "path": "tools/firmware/f3_stream_export_03/build.py",
+      "bytes": 4060,
+      "sha256": "9270567af747833e544ca69e14e8e80ed84e27ca647fe58ff52a1f4054276233"
+    }
+  ],
+  "host": [
+    {
+      "sanitized": false,
+      "kind": "independent_pixels",
+      "output": "PASS: 2540 independent area/rotation/stride/unchanged-source cases plus six invalid-input groups"
+    },
+    {
+      "sanitized": false,
+      "kind": "real_JPEG_and_checked_file_fixture",
+      "output": {
+        "groups": 61,
+        "passed": true,
+        "real_host_entropy_decoded_geometry_cases": 24,
+        "actual_RAW_decode": false,
+        "device_accessed": false
+      },
+      "library": {
+        "path": "evidence/codec/build/libjpeg8/.libs/libjpeg.a",
+        "bytes": 389512,
+        "sha256": "3c0912bd72422550c2780b278e1beb7eb856a1fea849b8df33223bc684448fe7"
+      }
+    },
+    {
+      "sanitized": true,
+      "kind": "independent_pixels",
+      "output": "PASS: 2540 independent area/rotation/stride/unchanged-source cases plus six invalid-input groups"
+    },
+    {
+      "sanitized": true,
+      "kind": "real_JPEG_and_checked_file_fixture",
+      "output": {
+        "groups": 61,
+        "passed": true,
+        "real_host_entropy_decoded_geometry_cases": 24,
+        "actual_RAW_decode": false,
+        "device_accessed": false
+      },
+      "library": {
+        "path": "evidence/codec/build/libjpeg8_sanitized/.libs/libjpeg.a",
+        "bytes": 8069200,
+        "sha256": "742cfcdb479326b1a5be567c318b27c8c3ef8d59edbf64925eeea87a61f8d4e8"
+      }
+    }
+  ],
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_stream_export_build_03_final01/export_pixels.o",
+      "bytes": 2920,
+      "sha256": "942ebfb2f63806edfbd1839620b6fcbb7658bf38029cedab5ed424818532d481",
+      "ET_REL": true,
+      "target_executed": false
+    },
+    {
+      "path": "analysis/firmware/f3_stream_export_build_03_final01/export_geometry.o",
+      "bytes": 2008,
+      "sha256": "faae3f7683fee14cc167540418f16c21b95b83501a606e39402fade7d5ef89b8",
+      "ET_REL": true,
+      "target_executed": false
+    },
+    {
+      "path": "analysis/firmware/f3_stream_export_build_03_final01/jpeg_export.o",
+      "bytes": 5320,
+      "sha256": "68bf8db8dcac95c4621562ae19b7dd236cc2318329b6abd997ed9780b2e320ae",
+      "ET_REL": true,
+      "target_executed": false
+    },
+    {
+      "path": "analysis/firmware/f3_stream_export_build_03_final01/stream_export.o",
+      "bytes": 17800,
+      "sha256": "abf85f08fbd8f1a76713332618fbc7fc361b047ddbd9e3c76b5385aec1a638a8",
+      "ET_REL": true,
+      "target_executed": false
+    }
+  ],
+  "compiler": {
+    "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+    "bytes": 188226560,
+    "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c"
+  },
+  "actual_RAW_decoded": false,
+  "camera_executed": false,
+  "firmware_produced": false,
+  "global_JPEG_only_capture_proved": false
+}

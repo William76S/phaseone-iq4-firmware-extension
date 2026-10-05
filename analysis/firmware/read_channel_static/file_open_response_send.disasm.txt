@@ -1,0 +1,125 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; private nearest-symbol labels are not authoritative.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  870ca0: a9b57bfd     	stp	x29, x30, [sp, #-0xb0]!
+  870ca4: 910003fd     	mov	x29, sp
+  870ca8: a90153f3     	stp	x19, x20, [sp, #0x10]
+  870cac: f90013f5     	str	x21, [sp, #0x20]
+  870cb0: f90027e0     	str	x0, [sp, #0x48]
+  870cb4: f90023e1     	str	x1, [sp, #0x40]
+  870cb8: b9003fe2     	str	w2, [sp, #0x3c]
+  870cbc: b9003be3     	str	w3, [sp, #0x38]
+  870cc0: b90037e4     	str	w4, [sp, #0x34]
+  870cc4: f94027e0     	ldr	x0, [sp, #0x48]
+  870cc8: f9439005     	ldr	x5, [x0, #0x720]
+  870ccc: f94027e0     	ldr	x0, [sp, #0x48]
+  870cd0: f9439000     	ldr	x0, [x0, #0x720]
+  870cd4: f9400000     	ldr	x0, [x0]
+  870cd8: 91008000     	add	x0, x0, #0x20
+  870cdc: f9400004     	ldr	x4, [x0]
+  870ce0: 52800003     	mov	w3, #0x0                // =0
+  870ce4: f00029a0     	adrp	x0, 0xda7000
+  870ce8: 91110002     	add	x2, x0, #0x440
+  870cec: 52800581     	mov	w1, #0x2c               // =44
+  870cf0: aa0503e0     	mov	x0, x5
+  870cf4: d63f0080     	blr	x4
+  870cf8: f90057e0     	str	x0, [sp, #0xa8]
+  870cfc: f94057e0     	ldr	x0, [sp, #0xa8]
+  870d00: f9401c03     	ldr	x3, [x0, #0x38]
+  870d04: f94057e0     	ldr	x0, [sp, #0xa8]
+  870d08: b9400800     	ldr	w0, [x0, #0x8]
+  870d0c: 2a0003e0     	mov	w0, w0
+  870d10: aa0003e2     	mov	x2, x0
+  870d14: 52800001     	mov	w1, #0x0                // =0
+  870d18: aa0303e0     	mov	x0, x3
+  870d1c: 97ee6521     	bl	0x40a1a0 <memset@plt>
+  870d20: f94057e0     	ldr	x0, [sp, #0xa8]
+  870d24: f9401400     	ldr	x0, [x0, #0x28]
+  870d28: aa0003e1     	mov	x1, x0
+  870d2c: d2800200     	mov	x0, #0x10               // =16
+  870d30: 97ee8332     	bl	0x4119f8 <.text+0x67c8>
+  870d34: aa0003f3     	mov	x19, x0
+  870d38: f94023e0     	ldr	x0, [sp, #0x40]
+  870d3c: 39401801     	ldrb	w1, [x0, #0x6]
+  870d40: f94023e0     	ldr	x0, [sp, #0x40]
+  870d44: 39401c00     	ldrb	w0, [x0, #0x7]
+  870d48: 2a0003e2     	mov	w2, w0
+  870d4c: aa1303e0     	mov	x0, x19
+  870d50: 97ff6b6f     	bl	0x84bb0c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x7748>
+  870d54: f90053f3     	str	x19, [sp, #0xa0]
+  870d58: f94053e0     	ldr	x0, [sp, #0xa0]
+  870d5c: 97ff6d07     	bl	0x84c178 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x7db4>
+  870d60: f9004fe0     	str	x0, [sp, #0x98]
+  870d64: f94027e0     	ldr	x0, [sp, #0x48]
+  870d68: 794e8000     	ldrh	w0, [x0, #0x740]
+  870d6c: 790113e0     	strh	w0, [sp, #0x88]
+  870d70: f9404ff4     	ldr	x20, [sp, #0x98]
+  870d74: aa1403e1     	mov	x1, x20
+  870d78: d2800380     	mov	x0, #0x1c               // =28
+  870d7c: 97ee831f     	bl	0x4119f8 <.text+0x67c8>
+  870d80: aa0003f3     	mov	x19, x0
+  870d84: b9403be4     	ldr	w4, [sp, #0x38]
+  870d88: b94037e3     	ldr	w3, [sp, #0x34]
+  870d8c: b9403fe2     	ldr	w2, [sp, #0x3c]
+  870d90: 794113e1     	ldrh	w1, [sp, #0x88]
+  870d94: aa1303e0     	mov	x0, x19
+  870d98: 94000265     	bl	0x87172c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2d368>
+  870d9c: f9004bf3     	str	x19, [sp, #0x90]
+  870da0: f9404be0     	ldr	x0, [sp, #0x90]
+  870da4: 97ffa48b     	bl	0x859fd0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x15c0c>
+  870da8: 12003c01     	and	w1, w0, #0xffff
+  870dac: f94053e0     	ldr	x0, [sp, #0xa0]
+  870db0: 79001001     	strh	w1, [x0, #0x8]
+  870db4: 910143e0     	add	x0, sp, #0x50
+  870db8: f94057e2     	ldr	x2, [sp, #0xa8]
+  870dbc: 52800161     	mov	w1, #0xb                // =11
+  870dc0: 97ee8684     	bl	0x4127d0 <.text+0x75a0>
+  870dc4: f94027e0     	ldr	x0, [sp, #0x48]
+  870dc8: f9439c05     	ldr	x5, [x0, #0x738]
+  870dcc: f94027e0     	ldr	x0, [sp, #0x48]
+  870dd0: f9439c00     	ldr	x0, [x0, #0x738]
+  870dd4: f9400000     	ldr	x0, [x0]
+  870dd8: 9100c000     	add	x0, x0, #0x30
+  870ddc: f9400004     	ldr	x4, [x0]
+  870de0: 910143e0     	add	x0, sp, #0x50
+  870de4: 52807d03     	mov	w3, #0x3e8              // =1000
+  870de8: 529d4c02     	mov	w2, #0xea60             // =60000
+  870dec: aa0003e1     	mov	x1, x0
+  870df0: aa0503e0     	mov	x0, x5
+  870df4: d63f0080     	blr	x4
+  870df8: 12001c00     	and	w0, w0, #0xff
+  870dfc: 39023fe0     	strb	w0, [sp, #0x8f]
+  870e00: 39423fe0     	ldrb	w0, [sp, #0x8f]
+  870e04: 52000000     	eor	w0, w0, #0x1
+  870e08: 12001c00     	and	w0, w0, #0xff
+  870e0c: 7100001f     	cmp	w0, #0x0
+  870e10: 54000280     	b.eq	0x870e60 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2ca9c>
+  870e14: f94027e0     	ldr	x0, [sp, #0x48]
+  870e18: 97ee8380     	bl	0x411c18 <.text+0x69e8>
+  870e1c: aa0003e4     	mov	x4, x0
+  870e20: f00029a0     	adrp	x0, 0xda7000
+  870e24: 9111a003     	add	x3, x0, #0x468
+  870e28: 52803062     	mov	w2, #0x183              // =387
+  870e2c: d00029a0     	adrp	x0, 0xda6000
+  870e30: 9138c001     	add	x1, x0, #0xe30
+  870e34: 52800040     	mov	w0, #0x2                // =2
+  870e38: 97fb55c5     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  870e3c: f94057e0     	ldr	x0, [sp, #0xa8]
+  870e40: 97ffc38f     	bl	0x861c7c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x1d8b8>
+  870e44: 14000007     	b	0x870e60 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2ca9c>
+  870e48: aa0003f5     	mov	x21, x0
+  870e4c: aa1403e1     	mov	x1, x20
+  870e50: aa1303e0     	mov	x0, x19
+  870e54: 97eef491     	bl	0x42e098 <.text+0x22e68>
+  870e58: aa1503e0     	mov	x0, x21
+  870e5c: 97ee663d     	bl	0x40a750 <_Unwind_Resume@plt>
+  870e60: d503201f     	nop
+  870e64: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  870e68: f94013f5     	ldr	x21, [sp, #0x20]
+  870e6c: a8cb7bfd     	ldp	x29, x30, [sp], #0xb0
+  870e70: d65f03c0     	ret

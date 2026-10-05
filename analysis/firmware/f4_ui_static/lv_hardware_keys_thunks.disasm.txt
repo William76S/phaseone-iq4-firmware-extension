@@ -1,0 +1,111 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; private names and recovered types are provisional.
+  51f184: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  51f188: 910003fd     	mov	x29, sp
+  51f18c: f90017e0     	str	x0, [sp, #0x28]
+  51f190: b90027e1     	str	w1, [sp, #0x24]
+  51f194: f9000fe2     	str	x2, [sp, #0x18]
+  51f198: b94027e0     	ldr	w0, [sp, #0x24]
+  51f19c: 7100041f     	cmp	w0, #0x1
+  51f1a0: 540001e0     	b.eq	0x51f1dc
+  51f1a4: 7100041f     	cmp	w0, #0x1
+  51f1a8: 5400008c     	b.gt	0x51f1b8
+  51f1ac: 7100001f     	cmp	w0, #0x0
+  51f1b0: 540000e0     	b.eq	0x51f1cc
+  51f1b4: 1400001d     	b	0x51f228
+  51f1b8: 7100081f     	cmp	w0, #0x2
+  51f1bc: 540001a0     	b.eq	0x51f1f0
+  51f1c0: 71000c1f     	cmp	w0, #0x3
+  51f1c4: 54000240     	b.eq	0x51f20c
+  51f1c8: 14000018     	b	0x51f228
+  51f1cc: f94017e0     	ldr	x0, [sp, #0x28]
+  51f1d0: f9405800     	ldr	x0, [x0, #0xb0]
+  51f1d4: 97ff0f3d     	bl	0x4e2ec8
+  51f1d8: 14000014     	b	0x51f228
+  51f1dc: f94017e0     	ldr	x0, [sp, #0x28]
+  51f1e0: 912b0000     	add	x0, x0, #0xac0
+  51f1e4: 52800021     	mov	w1, #0x1
+  51f1e8: 97febf3d     	bl	0x4ceedc
+  51f1ec: 1400000f     	b	0x51f228
+  51f1f0: f94017e0     	ldr	x0, [sp, #0x28]
+  51f1f4: 940005b6     	bl	0x5208cc
+  51f1f8: f94017e0     	ldr	x0, [sp, #0x28]
+  51f1fc: 912b0000     	add	x0, x0, #0xac0
+  51f200: 12800001     	mov	w1, #-0x1
+  51f204: 97febf68     	bl	0x4cefa4
+  51f208: 14000008     	b	0x51f228
+  51f20c: f94017e0     	ldr	x0, [sp, #0x28]
+  51f210: 940005af     	bl	0x5208cc
+  51f214: f94017e0     	ldr	x0, [sp, #0x28]
+  51f218: 912b0000     	add	x0, x0, #0xac0
+  51f21c: 52800021     	mov	w1, #0x1
+  51f220: 97febf61     	bl	0x4cefa4
+  51f224: d503201f     	nop
+  51f228: 52800002     	mov	w2, #0x0
+  51f22c: 52800001     	mov	w1, #0x0
+  51f230: f94017e0     	ldr	x0, [sp, #0x28]
+  51f234: 97fffb77     	bl	0x51e010
+  51f238: 52800020     	mov	w0, #0x1
+  51f23c: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  51f240: d65f03c0     	ret
+  51f244: d1020000     	sub	x0, x0, #0x80
+  51f248: 17ffffcf     	b	0x51f184
+  51f24c: d10083ff     	sub	sp, sp, #0x20
+  51f250: f9000fe0     	str	x0, [sp, #0x18]
+  51f254: b90017e1     	str	w1, [sp, #0x14]
+  51f258: f90007e2     	str	x2, [sp, #0x8]
+  51f25c: b90013e3     	str	w3, [sp, #0x10]
+  51f260: b90007e4     	str	w4, [sp, #0x4]
+  51f264: 52800020     	mov	w0, #0x1
+  51f268: 910083ff     	add	sp, sp, #0x20
+  51f26c: d65f03c0     	ret
+  51f270: d1020000     	sub	x0, x0, #0x80
+  51f274: 17fffff6     	b	0x51f24c
+  51f278: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  51f27c: 910003fd     	mov	x29, sp
+  51f280: f90017e0     	str	x0, [sp, #0x28]
+  51f284: b90027e1     	str	w1, [sp, #0x24]
+  51f288: f9000fe2     	str	x2, [sp, #0x18]
+  51f28c: b90023e3     	str	w3, [sp, #0x20]
+  51f290: b90017e4     	str	w4, [sp, #0x14]
+  51f294: b94027e0     	ldr	w0, [sp, #0x24]
+  51f298: 7100041f     	cmp	w0, #0x1
+  51f29c: 540001e0     	b.eq	0x51f2d8
+  51f2a0: 7100041f     	cmp	w0, #0x1
+  51f2a4: 5400008c     	b.gt	0x51f2b4
+  51f2a8: 7100001f     	cmp	w0, #0x0
+  51f2ac: 540000e0     	b.eq	0x51f2c8
+  51f2b0: 14000019     	b	0x51f314
+  51f2b4: 7100081f     	cmp	w0, #0x2
+  51f2b8: 540001a0     	b.eq	0x51f2ec
+  51f2bc: 71000c1f     	cmp	w0, #0x3
+  51f2c0: 54000200     	b.eq	0x51f300
+  51f2c4: 14000014     	b	0x51f314
+  51f2c8: f94017e0     	ldr	x0, [sp, #0x28]
+  51f2cc: f9405800     	ldr	x0, [x0, #0xb0]
+  51f2d0: 97ff0efe     	bl	0x4e2ec8
+  51f2d4: 14000010     	b	0x51f314
+  51f2d8: f94017e0     	ldr	x0, [sp, #0x28]
+  51f2dc: 912b0000     	add	x0, x0, #0xac0
+  51f2e0: 52800021     	mov	w1, #0x1
+  51f2e4: 97febefe     	bl	0x4ceedc
+  51f2e8: 1400000b     	b	0x51f314
+  51f2ec: f94017e0     	ldr	x0, [sp, #0x28]
+  51f2f0: 912b0000     	add	x0, x0, #0xac0
+  51f2f4: 12800001     	mov	w1, #-0x1
+  51f2f8: 97febf2b     	bl	0x4cefa4
+  51f2fc: 14000006     	b	0x51f314
+  51f300: f94017e0     	ldr	x0, [sp, #0x28]
+  51f304: 912b0000     	add	x0, x0, #0xac0
+  51f308: 52800021     	mov	w1, #0x1
+  51f30c: 97febf26     	bl	0x4cefa4
+  51f310: d503201f     	nop
+  51f314: 52800002     	mov	w2, #0x0
+  51f318: 52800001     	mov	w1, #0x0
+  51f31c: f94017e0     	ldr	x0, [sp, #0x28]
+  51f320: 97fffb3c     	bl	0x51e010
+  51f324: 52800020     	mov	w0, #0x1
+  51f328: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  51f32c: d65f03c0     	ret
+  51f330: d1020000     	sub	x0, x0, #0x80
+  51f334: 17ffffd1     	b	0x51f278

@@ -1,0 +1,22 @@
+/* Unbound preview. No actual EEPROM leaf, metadata, bytes or write authority. */
+#define R1_BOUND_READ 0
+#define R1_BOUND_WRITE 0
+#define R1_LEAF "/sys/UNBOUND_RECORD1/eeprom"
+#define R1_STATE "/run/iq4_record1_01"
+#define R1_STATE_DEV_MAJOR 0U
+#define R1_STATE_DEV_MINOR 0U
+#define R1_WHOLE_SHA "0000000000000000000000000000000000000000000000000000000000000000"
+#define R1_ORIGINAL_BYTES {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+#define R1_OFFSET 0U
+#define R1_ACTUAL_EXTENT 0U
+#define R1_EEP_DEV_MAJOR 0U
+#define R1_EEP_DEV_MINOR 0U
+#define R1_EEP_INODE 0ULL
+#define R1_EEP_MODE 0600U
+#define R1_EEP_STAT_SIZE 0LL
+#define R1_USER_PID 0ULL
+#define R1_USER_START_TICKS 0ULL
+#define R1_USER_PATH "/mnt/qspi/User/p1linux"
+#define R1_USER_SHA "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+#define R1_KERNEL "UNBOUND"
+#define R1_ALLOW_ACTION 0

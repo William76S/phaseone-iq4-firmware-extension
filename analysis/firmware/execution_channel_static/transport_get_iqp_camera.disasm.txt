@@ -1,0 +1,569 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IqpLibTransport.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000001d60 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)>:
+    1d60: 41 57                        	pushq	%r15
+    1d62: 41 56                        	pushq	%r14
+    1d64: 41 55                        	pushq	%r13
+    1d66: 41 54                        	pushq	%r12
+    1d68: 55                           	pushq	%rbp
+    1d69: 48 89 d5                     	movq	%rdx, %rbp
+    1d6c: 53                           	pushq	%rbx
+    1d6d: 48 89 fb                     	movq	%rdi, %rbx
+    1d70: 48 81 ec 78 02 00 00         	subq	$0x278, %rsp            # imm = 0x278
+    1d77: 4c 8d bc 24 80 00 00 00      	leaq	0x80(%rsp), %r15
+    1d7f: 89 74 24 5c                  	movl	%esi, 0x5c(%rsp)
+    1d83: 48 8d b7 10 0c 00 00         	leaq	0xc10(%rdi), %rsi
+    1d8a: 4c 89 ff                     	movq	%r15, %rdi
+    1d8d: e8 00 00 00 00               	callq	0x1d92 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x32>
+		0000000000001d8e:  R_X86_64_PLT32	LockContext::LockContext(std::mutex&)-0x4
+    1d92: 48 8b 93 f0 0b 00 00         	movq	0xbf0(%rbx), %rdx
+    1d99: 48 85 d2                     	testq	%rdx, %rdx
+    1d9c: 0f 84 9e 06 00 00            	je	0x2440 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x6e0>
+    1da2: 48 8d bb e8 0b 00 00         	leaq	0xbe8(%rbx), %rdi
+    1da9: 8b 4c 24 5c                  	movl	0x5c(%rsp), %ecx
+    1dad: 48 89 d0                     	movq	%rdx, %rax
+    1db0: 48 89 fe                     	movq	%rdi, %rsi
+    1db3: eb 0f                        	jmp	0x1dc4 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x64>
+    1db5: 0f 1f 00                     	nopl	(%rax)
+    1db8: 48 89 c6                     	movq	%rax, %rsi
+    1dbb: 48 8b 40 10                  	movq	0x10(%rax), %rax
+    1dbf: 48 85 c0                     	testq	%rax, %rax
+    1dc2: 74 0e                        	je	0x1dd2 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x72>
+    1dc4: 3b 48 20                     	cmpl	0x20(%rax), %ecx
+    1dc7: 7e ef                        	jle	0x1db8 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x58>
+    1dc9: 48 8b 40 18                  	movq	0x18(%rax), %rax
+    1dcd: 48 85 c0                     	testq	%rax, %rax
+    1dd0: 75 f2                        	jne	0x1dc4 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x64>
+    1dd2: 48 39 f7                     	cmpq	%rsi, %rdi
+    1dd5: 0f 84 65 06 00 00            	je	0x2440 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x6e0>
+    1ddb: 3b 4e 20                     	cmpl	0x20(%rsi), %ecx
+    1dde: 0f 8c 5c 06 00 00            	jl	0x2440 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x6e0>
+    1de4: 48 8d ab e0 0b 00 00         	leaq	0xbe0(%rbx), %rbp
+    1deb: 49 89 fc                     	movq	%rdi, %r12
+    1dee: eb 0c                        	jmp	0x1dfc <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x9c>
+    1df0: 49 89 d4                     	movq	%rdx, %r12
+    1df3: 48 8b 52 10                  	movq	0x10(%rdx), %rdx
+    1df7: 48 85 d2                     	testq	%rdx, %rdx
+    1dfa: 74 0e                        	je	0x1e0a <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0xaa>
+    1dfc: 3b 4a 20                     	cmpl	0x20(%rdx), %ecx
+    1dff: 7e ef                        	jle	0x1df0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x90>
+    1e01: 48 8b 52 18                  	movq	0x18(%rdx), %rdx
+    1e05: 48 85 d2                     	testq	%rdx, %rdx
+    1e08: 75 f2                        	jne	0x1dfc <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x9c>
+    1e0a: 4c 8d 6c 24 5c               	leaq	0x5c(%rsp), %r13
+    1e0f: 4c 39 e7                     	cmpq	%r12, %rdi
+    1e12: 0f 84 d8 06 00 00            	je	0x24f0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x790>
+    1e18: 41 3b 4c 24 20               	cmpl	0x20(%r12), %ecx
+    1e1d: 0f 8c cd 06 00 00            	jl	0x24f0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x790>
+    1e23: 48 8d 84 24 e0 00 00 00      	leaq	0xe0(%rsp), %rax
+    1e2b: 48 89 44 24 08               	movq	%rax, 0x8(%rsp)
+    1e30: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x1e37 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0xd7>
+		0000000000001e33:  R_X86_64_REX_GOTPCRELX	vtable for P1::Universal::UniversalError-0x4
+    1e37: 49 8b 5c 24 30               	movq	0x30(%r12), %rbx
+    1e3c: 48 c7 84 24 a8 00 00 00 00 00 00 00  	movq	$0x0, 0xa8(%rsp)
+    1e48: 48 83 c0 10                  	addq	$0x10, %rax
+    1e4c: 48 89 84 24 a0 00 00 00      	movq	%rax, 0xa0(%rsp)
+    1e54: 48 85 db                     	testq	%rbx, %rbx
+    1e57: 74 65                        	je	0x1ebe <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x15e>
+    1e59: 8b 3b                        	movl	(%rbx), %edi
+    1e5b: 85 ff                        	testl	%edi, %edi
+    1e5d: 74 5f                        	je	0x1ebe <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x15e>
+    1e5f: 31 c0                        	xorl	%eax, %eax
+    1e61: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+    1e68: 48 89 c2                     	movq	%rax, %rdx
+    1e6b: 48 83 c0 01                  	addq	$0x1, %rax
+    1e6f: 8b 34 83                     	movl	(%rbx,%rax,4), %esi
+    1e72: 85 f6                        	testl	%esi, %esi
+    1e74: 75 f2                        	jne	0x1e68 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x108>
+    1e76: 48 b8 fe ff ff ff ff ff ff 1f	movabsq	$0x1ffffffffffffffe, %rax # imm = 0x1FFFFFFFFFFFFFFE
+    1e80: 48 83 c2 02                  	addq	$0x2, %rdx
+    1e84: 48 39 c2                     	cmpq	%rax, %rdx
+    1e87: 0f 87 00 00 00 00            	ja	0x1e8d <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x12d>
+		0000000000001e89:  R_X86_64_PC32	.text.unlikely+0x5cf
+    1e8d: 48 8d 3c 95 00 00 00 00      	leaq	(,%rdx,4), %rdi
+    1e95: e8 00 00 00 00               	callq	0x1e9a <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x13a>
+		0000000000001e96:  R_X86_64_PLT32	operator new[](unsigned long)-0x4
+    1e9a: 8b 0b                        	movl	(%rbx), %ecx
+    1e9c: 48 89 84 24 a8 00 00 00      	movq	%rax, 0xa8(%rsp)
+    1ea4: 31 d2                        	xorl	%edx, %edx
+    1ea6: 85 c9                        	testl	%ecx, %ecx
+    1ea8: 0f 84 1a 07 00 00            	je	0x25c8 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x868>
+    1eae: 66 90                        	nop
+    1eb0: 8b 0c 13                     	movl	(%rbx,%rdx), %ecx
+    1eb3: 89 0c 10                     	movl	%ecx, (%rax,%rdx)
+    1eb6: 48 83 c2 04                  	addq	$0x4, %rdx
+    1eba: 85 c9                        	testl	%ecx, %ecx
+    1ebc: 75 f2                        	jne	0x1eb0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x150>
+    1ebe: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x1ec5 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x165>
+		0000000000001ec1:  R_X86_64_REX_GOTPCRELX	vtable for P1::Universal::ModuleError-0x4
+    1ec5: 4c 89 ee                     	movq	%r13, %rsi
+    1ec8: 48 89 ef                     	movq	%rbp, %rdi
+    1ecb: 4c 8d ac 24 60 01 00 00      	leaq	0x160(%rsp), %r13
+    1ed3: 48 83 c0 10                  	addq	$0x10, %rax
+    1ed7: 48 89 84 24 a0 00 00 00      	movq	%rax, 0xa0(%rsp)
+    1edf: 41 8b 44 24 38               	movl	0x38(%r12), %eax
+    1ee4: 89 84 24 b0 00 00 00         	movl	%eax, 0xb0(%rsp)
+    1eeb: e8 00 00 00 00               	callq	0x1ef0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x190>
+		0000000000001eec:  R_X86_64_PLT32	std::_Rb_tree<int, std::pair<int const, P1::Universal::ModuleError>, std::_Select1st<std::pair<int const, P1::Universal::ModuleError>>, std::less<int>, std::allocator<std::pair<int const, P1::Universal::ModuleError>>>::erase(int const&)-0x4
+    1ef0: 4c 89 ef                     	movq	%r13, %rdi
+    1ef3: e8 00 00 00 00               	callq	0x1ef8 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x198>
+		0000000000001ef4:  R_X86_64_PLT32	std::ios_base::ios_base()-0x4
+    1ef8: 66 0f ef c0                  	pxor	%xmm0, %xmm0
+    1efc: 48 8b 7c 24 08               	movq	0x8(%rsp), %rdi
+    1f01: 31 f6                        	xorl	%esi, %esi
+    1f03: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x1f0a <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x1aa>
+		0000000000001f06:  R_X86_64_REX_GOTPCRELX	vtable for std::basic_ios<char, std::char_traits<char>>-0x4
+    1f0a: 4c 8b 25 00 00 00 00         	movq	(%rip), %r12            # 0x1f11 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x1b1>
+		0000000000001f0d:  R_X86_64_REX_GOTPCRELX	VTT for std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>-0x4
+    1f11: 0f 11 84 24 48 02 00 00      	movups	%xmm0, 0x248(%rsp)
+    1f19: 0f 11 84 24 58 02 00 00      	movups	%xmm0, 0x258(%rsp)
+    1f21: 48 83 c0 10                  	addq	$0x10, %rax
+    1f25: 49 8b 5c 24 10               	movq	0x10(%r12), %rbx
+    1f2a: 48 c7 84 24 38 02 00 00 00 00 00 00  	movq	$0x0, 0x238(%rsp)
+    1f36: 48 89 84 24 60 01 00 00      	movq	%rax, 0x160(%rsp)
+    1f3e: 31 c0                        	xorl	%eax, %eax
+    1f40: 66 89 84 24 40 02 00 00      	movw	%ax, 0x240(%rsp)
+    1f48: 49 8b 44 24 18               	movq	0x18(%r12), %rax
+    1f4d: 48 89 9c 24 e0 00 00 00      	movq	%rbx, 0xe0(%rsp)
+    1f55: 48 89 c1                     	movq	%rax, %rcx
+    1f58: 48 89 44 24 10               	movq	%rax, 0x10(%rsp)
+    1f5d: 48 8b 43 e8                  	movq	-0x18(%rbx), %rax
+    1f61: 48 89 8c 04 e0 00 00 00      	movq	%rcx, 0xe0(%rsp,%rax)
+    1f69: 48 c7 84 24 e8 00 00 00 00 00 00 00  	movq	$0x0, 0xe8(%rsp)
+    1f75: 48 03 7b e8                  	addq	-0x18(%rbx), %rdi
+    1f79: e8 00 00 00 00               	callq	0x1f7e <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x21e>
+		0000000000001f7a:  R_X86_64_PLT32	std::basic_ios<char, std::char_traits<char>>::init(std::basic_streambuf<char, std::char_traits<char>>*)-0x4
+    1f7e: 49 8b 44 24 20               	movq	0x20(%r12), %rax
+    1f83: 48 8d ac 24 f0 00 00 00      	leaq	0xf0(%rsp), %rbp
+    1f8b: 31 f6                        	xorl	%esi, %esi
+    1f8d: 48 8b 78 e8                  	movq	-0x18(%rax), %rdi
+    1f91: 48 89 84 24 f0 00 00 00      	movq	%rax, 0xf0(%rsp)
+    1f99: 48 89 44 24 18               	movq	%rax, 0x18(%rsp)
+    1f9e: 49 8b 44 24 28               	movq	0x28(%r12), %rax
+    1fa3: 48 01 ef                     	addq	%rbp, %rdi
+    1fa6: 48 89 07                     	movq	%rax, (%rdi)
+    1fa9: 48 89 44 24 20               	movq	%rax, 0x20(%rsp)
+    1fae: e8 00 00 00 00               	callq	0x1fb3 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x253>
+		0000000000001faf:  R_X86_64_PLT32	std::basic_ios<char, std::char_traits<char>>::init(std::basic_streambuf<char, std::char_traits<char>>*)-0x4
+    1fb3: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x1fba <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x25a>
+		0000000000001fb6:  R_X86_64_REX_GOTPCRELX	vtable for std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>-0x4
+    1fba: 49 8b 74 24 30               	movq	0x30(%r12), %rsi
+    1fbf: 48 8d 48 40                  	leaq	0x40(%rax), %rcx
+    1fc3: 49 8b 44 24 08               	movq	0x8(%r12), %rax
+    1fc8: 48 89 74 24 30               	movq	%rsi, 0x30(%rsp)
+    1fcd: 4c 8d a4 24 f8 00 00 00      	leaq	0xf8(%rsp), %r12
+    1fd5: 66 48 0f 6e c1               	movq	%rcx, %xmm0
+    1fda: 48 89 4c 24 38               	movq	%rcx, 0x38(%rsp)
+    1fdf: 48 89 44 24 28               	movq	%rax, 0x28(%rsp)
+    1fe4: 48 8b 40 e8                  	movq	-0x18(%rax), %rax
+    1fe8: 48 89 b4 04 e0 00 00 00      	movq	%rsi, 0xe0(%rsp,%rax)
+    1ff0: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x1ff7 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x297>
+		0000000000001ff3:  R_X86_64_REX_GOTPCRELX	vtable for std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>-0x4
+    1ff7: 48 83 c0 18                  	addq	$0x18, %rax
+    1ffb: 48 89 84 24 e0 00 00 00      	movq	%rax, 0xe0(%rsp)
+    2003: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x200a <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x2aa>
+		0000000000002006:  R_X86_64_REX_GOTPCRELX	vtable for std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>-0x4
+    200a: 48 83 c0 68                  	addq	$0x68, %rax
+    200e: 48 89 84 24 60 01 00 00      	movq	%rax, 0x160(%rsp)
+    2016: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x201d <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x2bd>
+		0000000000002019:  R_X86_64_REX_GOTPCRELX	vtable for std::basic_streambuf<char, std::char_traits<char>>-0x4
+    201d: 48 83 c0 10                  	addq	$0x10, %rax
+    2021: 66 48 0f 6e c8               	movq	%rax, %xmm1
+    2026: 48 8d 84 24 30 01 00 00      	leaq	0x130(%rsp), %rax
+    202e: 66 0f 6c c1                  	punpcklqdq	%xmm1, %xmm0    # xmm0 = xmm0[0],xmm1[0]
+    2032: 48 89 c7                     	movq	%rax, %rdi
+    2035: 48 89 44 24 48               	movq	%rax, 0x48(%rsp)
+    203a: 0f 29 84 24 f0 00 00 00      	movaps	%xmm0, 0xf0(%rsp)
+    2042: 66 0f ef c0                  	pxor	%xmm0, %xmm0
+    2046: 0f 29 84 24 00 01 00 00      	movaps	%xmm0, 0x100(%rsp)
+    204e: 0f 29 84 24 10 01 00 00      	movaps	%xmm0, 0x110(%rsp)
+    2056: 0f 29 84 24 20 01 00 00      	movaps	%xmm0, 0x120(%rsp)
+    205e: e8 00 00 00 00               	callq	0x2063 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x303>
+		000000000000205f:  R_X86_64_PLT32	std::locale::locale()-0x4
+    2063: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x206a <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x30a>
+		0000000000002066:  R_X86_64_REX_GOTPCRELX	vtable for std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char>>-0x4
+    206a: 4c 89 e6                     	movq	%r12, %rsi
+    206d: 4c 89 ef                     	movq	%r13, %rdi
+    2070: c7 84 24 38 01 00 00 18 00 00 00     	movl	$0x18, 0x138(%rsp)
+    207b: 48 83 c0 10                  	addq	$0x10, %rax
+    207f: c6 84 24 50 01 00 00 00      	movb	$0x0, 0x150(%rsp)
+    2087: 48 89 84 24 f8 00 00 00      	movq	%rax, 0xf8(%rsp)
+    208f: 48 8d 84 24 50 01 00 00      	leaq	0x150(%rsp), %rax
+    2097: 48 89 44 24 40               	movq	%rax, 0x40(%rsp)
+    209c: 48 89 84 24 40 01 00 00      	movq	%rax, 0x140(%rsp)
+    20a4: 48 c7 84 24 48 01 00 00 00 00 00 00  	movq	$0x0, 0x148(%rsp)
+    20b0: e8 00 00 00 00               	callq	0x20b5 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x355>
+		00000000000020b1:  R_X86_64_PLT32	std::basic_ios<char, std::char_traits<char>>::init(std::basic_streambuf<char, std::char_traits<char>>*)-0x4
+    20b5: 4c 8d b4 24 c0 00 00 00      	leaq	0xc0(%rsp), %r14
+    20bd: 4c 8d a4 24 a0 00 00 00      	leaq	0xa0(%rsp), %r12
+    20c5: 4c 89 e6                     	movq	%r12, %rsi
+    20c8: 4c 89 f7                     	movq	%r14, %rdi
+    20cb: e8 00 00 00 00               	callq	0x20d0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x370>
+		00000000000020cc:  R_X86_64_PLT32	P1::Universal::ModuleError::GetErrorTypeString() const-0x4
+    20d0: 48 8b b4 24 c0 00 00 00      	movq	0xc0(%rsp), %rsi
+    20d8: 48 85 f6                     	testq	%rsi, %rsi
+    20db: 0f 84 87 04 00 00            	je	0x2568 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x808>
+    20e1: 48 8d 7c 24 68               	leaq	0x68(%rsp), %rdi
+    20e6: ba 01 10 00 00               	movl	$0x1001, %edx           # imm = 0x1001
+    20eb: e8 00 00 00 00               	callq	0x20f0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x390>
+		00000000000020ec:  R_X86_64_PLT32	P1::Universal::ConvertToStr8(wchar_t const*, P1::Universal::EnumStringEncoding8)-0x4
+    20f0: 48 8b bc 24 c0 00 00 00      	movq	0xc0(%rsp), %rdi
+    20f8: 48 85 ff                     	testq	%rdi, %rdi
+    20fb: 74 05                        	je	0x2102 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x3a2>
+    20fd: e8 00 00 00 00               	callq	0x2102 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x3a2>
+		00000000000020fe:  R_X86_64_PLT32	operator delete[](void*)-0x4
+    2102: 4c 89 e6                     	movq	%r12, %rsi
+    2105: ba 01 00 00 00               	movl	$0x1, %edx
+    210a: 4c 89 f7                     	movq	%r14, %rdi
+    210d: e8 00 00 00 00               	callq	0x2112 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x3b2>
+		000000000000210e:  R_X86_64_PLT32	P1::Universal::ModuleError::GetErrorString(bool) const-0x4
+    2112: 48 8b b4 24 c0 00 00 00      	movq	0xc0(%rsp), %rsi
+    211a: 48 85 f6                     	testq	%rsi, %rsi
+    211d: 0f 84 35 04 00 00            	je	0x2558 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x7f8>
+    2123: 48 8d 7c 24 70               	leaq	0x70(%rsp), %rdi
+    2128: ba 01 10 00 00               	movl	$0x1001, %edx           # imm = 0x1001
+    212d: e8 00 00 00 00               	callq	0x2132 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x3d2>
+		000000000000212e:  R_X86_64_PLT32	P1::Universal::ConvertToStr8(wchar_t const*, P1::Universal::EnumStringEncoding8)-0x4
+    2132: 48 8b bc 24 c0 00 00 00      	movq	0xc0(%rsp), %rdi
+    213a: 48 85 ff                     	testq	%rdi, %rdi
+    213d: 74 05                        	je	0x2144 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x3e4>
+    213f: e8 00 00 00 00               	callq	0x2144 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x3e4>
+		0000000000002140:  R_X86_64_PLT32	operator delete[](void*)-0x4
+    2144: 4c 89 e6                     	movq	%r12, %rsi
+    2147: 4c 89 f7                     	movq	%r14, %rdi
+    214a: e8 00 00 00 00               	callq	0x214f <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x3ef>
+		000000000000214b:  R_X86_64_PLT32	P1::Universal::UniversalError::GetDetailString() const-0x4
+    214f: 48 8b b4 24 c0 00 00 00      	movq	0xc0(%rsp), %rsi
+    2157: 48 85 f6                     	testq	%rsi, %rsi
+    215a: 0f 84 e8 03 00 00            	je	0x2548 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x7e8>
+    2160: 48 8d 7c 24 78               	leaq	0x78(%rsp), %rdi
+    2165: ba 01 10 00 00               	movl	$0x1001, %edx           # imm = 0x1001
+    216a: e8 00 00 00 00               	callq	0x216f <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x40f>
+		000000000000216b:  R_X86_64_PLT32	P1::Universal::ConvertToStr8(wchar_t const*, P1::Universal::EnumStringEncoding8)-0x4
+    216f: 48 8b bc 24 c0 00 00 00      	movq	0xc0(%rsp), %rdi
+    2177: 48 85 ff                     	testq	%rdi, %rdi
+    217a: 74 05                        	je	0x2181 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x421>
+    217c: e8 00 00 00 00               	callq	0x2181 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x421>
+		000000000000217d:  R_X86_64_PLT32	operator delete[](void*)-0x4
+    2181: ba 04 00 00 00               	movl	$0x4, %edx
+    2186: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x218d <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x42d>
+		0000000000002189:  R_X86_64_PC32	.LC36-0x4
+    218d: 48 89 ef                     	movq	%rbp, %rdi
+    2190: e8 00 00 00 00               	callq	0x2195 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x435>
+		0000000000002191:  R_X86_64_PLT32	std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)-0x4
+    2195: 48 8b 74 24 68               	movq	0x68(%rsp), %rsi
+    219a: 48 85 f6                     	testq	%rsi, %rsi
+    219d: 0f 84 fd 03 00 00            	je	0x25a0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x840>
+    21a3: 48 89 f7                     	movq	%rsi, %rdi
+    21a6: 48 89 74 24 50               	movq	%rsi, 0x50(%rsp)
+    21ab: e8 00 00 00 00               	callq	0x21b0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x450>
+		00000000000021ac:  R_X86_64_PLT32	strlen-0x4
+    21b0: 48 8b 74 24 50               	movq	0x50(%rsp), %rsi
+    21b5: 48 89 c2                     	movq	%rax, %rdx
+    21b8: 48 89 ef                     	movq	%rbp, %rdi
+    21bb: e8 00 00 00 00               	callq	0x21c0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x460>
+		00000000000021bc:  R_X86_64_PLT32	std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)-0x4
+    21c0: ba 02 00 00 00               	movl	$0x2, %edx
+    21c5: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x21cc <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x46c>
+		00000000000021c8:  R_X86_64_PC32	.LC37-0x4
+    21cc: 48 89 ef                     	movq	%rbp, %rdi
+    21cf: e8 00 00 00 00               	callq	0x21d4 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x474>
+		00000000000021d0:  R_X86_64_PLT32	std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)-0x4
+    21d4: 4c 89 e7                     	movq	%r12, %rdi
+    21d7: e8 00 00 00 00               	callq	0x21dc <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x47c>
+		00000000000021d8:  R_X86_64_PLT32	P1::Universal::ModuleError::GetErrorNumber() const-0x4
+    21dc: 48 89 ef                     	movq	%rbp, %rdi
+    21df: 89 c6                        	movl	%eax, %esi
+    21e1: e8 00 00 00 00               	callq	0x21e6 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x486>
+		00000000000021e2:  R_X86_64_PLT32	std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long)-0x4
+    21e6: ba 02 00 00 00               	movl	$0x2, %edx
+    21eb: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x21f2 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x492>
+		00000000000021ee:  R_X86_64_PC32	.LC38-0x4
+    21f2: 48 89 c7                     	movq	%rax, %rdi
+    21f5: 48 89 c5                     	movq	%rax, %rbp
+    21f8: e8 00 00 00 00               	callq	0x21fd <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x49d>
+		00000000000021f9:  R_X86_64_PLT32	std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)-0x4
+    21fd: 48 8b 74 24 70               	movq	0x70(%rsp), %rsi
+    2202: 48 85 f6                     	testq	%rsi, %rsi
+    2205: 0f 84 85 03 00 00            	je	0x2590 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x830>
+    220b: 48 89 f7                     	movq	%rsi, %rdi
+    220e: 48 89 74 24 50               	movq	%rsi, 0x50(%rsp)
+    2213: e8 00 00 00 00               	callq	0x2218 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x4b8>
+		0000000000002214:  R_X86_64_PLT32	strlen-0x4
+    2218: 48 8b 74 24 50               	movq	0x50(%rsp), %rsi
+    221d: 48 89 c2                     	movq	%rax, %rdx
+    2220: 48 89 ef                     	movq	%rbp, %rdi
+    2223: e8 00 00 00 00               	callq	0x2228 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x4c8>
+		0000000000002224:  R_X86_64_PLT32	std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)-0x4
+    2228: ba 01 00 00 00               	movl	$0x1, %edx
+    222d: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x2234 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x4d4>
+		0000000000002230:  R_X86_64_PC32	.LC39-0x4
+    2234: 48 89 ef                     	movq	%rbp, %rdi
+    2237: e8 00 00 00 00               	callq	0x223c <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x4dc>
+		0000000000002238:  R_X86_64_PLT32	std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)-0x4
+    223c: 48 8b 74 24 78               	movq	0x78(%rsp), %rsi
+    2241: 48 85 f6                     	testq	%rsi, %rsi
+    2244: 0f 84 2e 03 00 00            	je	0x2578 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x818>
+    224a: 48 89 f7                     	movq	%rsi, %rdi
+    224d: 48 89 74 24 50               	movq	%rsi, 0x50(%rsp)
+    2252: e8 00 00 00 00               	callq	0x2257 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x4f7>
+		0000000000002253:  R_X86_64_PLT32	strlen-0x4
+    2257: 48 8b 74 24 50               	movq	0x50(%rsp), %rsi
+    225c: 48 89 c2                     	movq	%rax, %rdx
+    225f: 48 89 ef                     	movq	%rbp, %rdi
+    2262: e8 00 00 00 00               	callq	0x2267 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x507>
+		0000000000002263:  R_X86_64_PLT32	std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, long)-0x4
+    2267: 48 8b 84 24 20 01 00 00      	movq	0x120(%rsp), %rax
+    226f: 48 8d ac 24 d0 00 00 00      	leaq	0xd0(%rsp), %rbp
+    2277: 48 c7 84 24 c8 00 00 00 00 00 00 00  	movq	$0x0, 0xc8(%rsp)
+    2283: 48 89 ac 24 c0 00 00 00      	movq	%rbp, 0xc0(%rsp)
+    228b: c6 84 24 d0 00 00 00 00      	movb	$0x0, 0xd0(%rsp)
+    2293: 48 85 c0                     	testq	%rax, %rax
+    2296: 0f 84 14 03 00 00            	je	0x25b0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x850>
+    229c: 4c 8b 84 24 10 01 00 00      	movq	0x110(%rsp), %r8
+    22a4: 48 8b 8c 24 18 01 00 00      	movq	0x118(%rsp), %rcx
+    22ac: 4c 39 c0                     	cmpq	%r8, %rax
+    22af: 0f 86 7b 02 00 00            	jbe	0x2530 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x7d0>
+    22b5: 48 29 c8                     	subq	%rcx, %rax
+    22b8: 31 d2                        	xorl	%edx, %edx
+    22ba: 31 f6                        	xorl	%esi, %esi
+    22bc: 4c 89 f7                     	movq	%r14, %rdi
+    22bf: 49 89 c0                     	movq	%rax, %r8
+    22c2: e8 00 00 00 00               	callq	0x22c7 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x567>
+		00000000000022c3:  R_X86_64_PLT32	std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)-0x4
+    22c7: 48 8b b4 24 c0 00 00 00      	movq	0xc0(%rsp), %rsi
+    22cf: 48 8d 15 00 00 00 00         	leaq	(%rip), %rdx            # 0x22d6 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x576>
+		00000000000022d2:  R_X86_64_PC32	.LC40-0x4
+    22d6: bf ff ff ff ff               	movl	$0xffffffff, %edi       # imm = 0xFFFFFFFF
+    22db: e8 00 00 00 00               	callq	0x22e0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x580>
+		00000000000022dc:  R_X86_64_PLT32	CameraSdkError::Error(P1::CameraSdk::ErrorCode, char const*, char const*)-0x4
+    22e0: 48 8b bc 24 c0 00 00 00      	movq	0xc0(%rsp), %rdi
+    22e8: 41 89 c6                     	movl	%eax, %r14d
+    22eb: 48 39 ef                     	cmpq	%rbp, %rdi
+    22ee: 74 05                        	je	0x22f5 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x595>
+    22f0: e8 00 00 00 00               	callq	0x22f5 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x595>
+		00000000000022f1:  R_X86_64_PLT32	operator delete(void*)-0x4
+    22f5: 48 8b 7c 24 78               	movq	0x78(%rsp), %rdi
+    22fa: 48 85 ff                     	testq	%rdi, %rdi
+    22fd: 74 05                        	je	0x2304 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x5a4>
+    22ff: e8 00 00 00 00               	callq	0x2304 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x5a4>
+		0000000000002300:  R_X86_64_PLT32	operator delete[](void*)-0x4
+    2304: 48 8b 7c 24 70               	movq	0x70(%rsp), %rdi
+    2309: 48 85 ff                     	testq	%rdi, %rdi
+    230c: 74 05                        	je	0x2313 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x5b3>
+    230e: e8 00 00 00 00               	callq	0x2313 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x5b3>
+		000000000000230f:  R_X86_64_PLT32	operator delete[](void*)-0x4
+    2313: 48 8b 7c 24 68               	movq	0x68(%rsp), %rdi
+    2318: 48 85 ff                     	testq	%rdi, %rdi
+    231b: 74 05                        	je	0x2322 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x5c2>
+    231d: e8 00 00 00 00               	callq	0x2322 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x5c2>
+		000000000000231e:  R_X86_64_PLT32	operator delete[](void*)-0x4
+    2322: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x2329 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x5c9>
+		0000000000002325:  R_X86_64_REX_GOTPCRELX	vtable for std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>-0x4
+    2329: f3 0f 7e 44 24 38            	movq	0x38(%rsp), %xmm0
+    232f: 48 8b bc 24 40 01 00 00      	movq	0x140(%rsp), %rdi
+    2337: 48 83 c0 18                  	addq	$0x18, %rax
+    233b: 48 89 84 24 e0 00 00 00      	movq	%rax, 0xe0(%rsp)
+    2343: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x234a <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x5ea>
+		0000000000002346:  R_X86_64_REX_GOTPCRELX	vtable for std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>-0x4
+    234a: 48 83 c0 68                  	addq	$0x68, %rax
+    234e: 48 89 84 24 60 01 00 00      	movq	%rax, 0x160(%rsp)
+    2356: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x235d <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x5fd>
+		0000000000002359:  R_X86_64_REX_GOTPCRELX	vtable for std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char>>-0x4
+    235d: 48 83 c0 10                  	addq	$0x10, %rax
+    2361: 66 48 0f 6e d0               	movq	%rax, %xmm2
+    2366: 66 0f 6c c2                  	punpcklqdq	%xmm2, %xmm0    # xmm0 = xmm0[0],xmm2[0]
+    236a: 0f 29 84 24 f0 00 00 00      	movaps	%xmm0, 0xf0(%rsp)
+    2372: 48 3b 7c 24 40               	cmpq	0x40(%rsp), %rdi
+    2377: 74 05                        	je	0x237e <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x61e>
+    2379: e8 00 00 00 00               	callq	0x237e <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x61e>
+		000000000000237a:  R_X86_64_PLT32	operator delete(void*)-0x4
+    237e: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x2385 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x625>
+		0000000000002381:  R_X86_64_REX_GOTPCRELX	vtable for std::basic_streambuf<char, std::char_traits<char>>-0x4
+    2385: 48 8b 7c 24 48               	movq	0x48(%rsp), %rdi
+    238a: 48 83 c0 10                  	addq	$0x10, %rax
+    238e: 48 89 84 24 f8 00 00 00      	movq	%rax, 0xf8(%rsp)
+    2396: e8 00 00 00 00               	callq	0x239b <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x63b>
+		0000000000002397:  R_X86_64_PLT32	std::locale::~locale()-0x4
+    239b: 48 8b 44 24 28               	movq	0x28(%rsp), %rax
+    23a0: 48 8b 4c 24 30               	movq	0x30(%rsp), %rcx
+    23a5: 4c 89 ef                     	movq	%r13, %rdi
+    23a8: 48 8b 40 e8                  	movq	-0x18(%rax), %rax
+    23ac: 48 89 8c 04 e0 00 00 00      	movq	%rcx, 0xe0(%rsp,%rax)
+    23b4: 48 8b 44 24 18               	movq	0x18(%rsp), %rax
+    23b9: 48 8b 4c 24 20               	movq	0x20(%rsp), %rcx
+    23be: 48 89 84 24 f0 00 00 00      	movq	%rax, 0xf0(%rsp)
+    23c6: 48 8b 40 e8                  	movq	-0x18(%rax), %rax
+    23ca: 48 89 8c 04 f0 00 00 00      	movq	%rcx, 0xf0(%rsp,%rax)
+    23d2: 48 8b 43 e8                  	movq	-0x18(%rbx), %rax
+    23d6: 48 89 9c 24 e0 00 00 00      	movq	%rbx, 0xe0(%rsp)
+    23de: 48 8b 5c 24 10               	movq	0x10(%rsp), %rbx
+    23e3: 48 89 9c 04 e0 00 00 00      	movq	%rbx, 0xe0(%rsp,%rax)
+    23eb: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x23f2 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x692>
+		00000000000023ee:  R_X86_64_REX_GOTPCRELX	vtable for std::basic_ios<char, std::char_traits<char>>-0x4
+    23f2: 48 c7 84 24 e8 00 00 00 00 00 00 00  	movq	$0x0, 0xe8(%rsp)
+    23fe: 48 83 c0 10                  	addq	$0x10, %rax
+    2402: 48 89 84 24 60 01 00 00      	movq	%rax, 0x160(%rsp)
+    240a: e8 00 00 00 00               	callq	0x240f <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x6af>
+		000000000000240b:  R_X86_64_PLT32	std::ios_base::~ios_base()-0x4
+    240f: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x2416 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x6b6>
+		0000000000002412:  R_X86_64_REX_GOTPCRELX	vtable for P1::Universal::ModuleError-0x4
+    2416: 4c 89 e7                     	movq	%r12, %rdi
+    2419: 48 83 c0 10                  	addq	$0x10, %rax
+    241d: 48 89 84 24 a0 00 00 00      	movq	%rax, 0xa0(%rsp)
+    2425: e8 00 00 00 00               	callq	0x242a <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x6ca>
+		0000000000002426:  R_X86_64_PLT32	P1::Universal::UniversalError::~UniversalError()-0x4
+    242a: 4c 89 ff                     	movq	%r15, %rdi
+    242d: e8 00 00 00 00               	callq	0x2432 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x6d2>
+		000000000000242e:  R_X86_64_PLT32	LockContext::~LockContext()-0x4
+    2432: e9 9c 00 00 00               	jmp	0x24d3 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x773>
+    2437: 66 0f 1f 84 00 00 00 00 00   	nopw	(%rax,%rax)
+    2440: 4c 89 ff                     	movq	%r15, %rdi
+    2443: e8 00 00 00 00               	callq	0x2448 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x6e8>
+		0000000000002444:  R_X86_64_PLT32	LockContext::~LockContext()-0x4
+    2448: 48 8d 84 24 e0 00 00 00      	leaq	0xe0(%rsp), %rax
+    2450: 48 8d b3 b8 09 00 00         	leaq	0x9b8(%rbx), %rsi
+    2457: 48 89 c7                     	movq	%rax, %rdi
+    245a: 48 89 44 24 08               	movq	%rax, 0x8(%rsp)
+    245f: e8 00 00 00 00               	callq	0x2464 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x704>
+		0000000000002460:  R_X86_64_PLT32	LockContext::LockContext(std::mutex&)-0x4
+    2464: 8b 74 24 5c                  	movl	0x5c(%rsp), %esi
+    2468: 48 89 df                     	movq	%rbx, %rdi
+    246b: e8 00 00 00 00               	callq	0x2470 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x710>
+		000000000000246c:  R_X86_64_PLT32	IqpLibTransport::IsOpenUnsafe(int)-0x4
+    2470: 84 c0                        	testb	%al, %al
+    2472: 0f 84 60 01 00 00            	je	0x25d8 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x878>
+    2478: 48 8b 83 f0 09 00 00         	movq	0x9f0(%rbx), %rax
+    247f: 48 8d b3 e8 09 00 00         	leaq	0x9e8(%rbx), %rsi
+    2486: 48 85 c0                     	testq	%rax, %rax
+    2489: 74 33                        	je	0x24be <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x75e>
+    248b: 8b 54 24 5c                  	movl	0x5c(%rsp), %edx
+    248f: 48 89 f1                     	movq	%rsi, %rcx
+    2492: eb 10                        	jmp	0x24a4 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x744>
+    2494: 0f 1f 40 00                  	nopl	(%rax)
+    2498: 48 89 c1                     	movq	%rax, %rcx
+    249b: 48 8b 40 10                  	movq	0x10(%rax), %rax
+    249f: 48 85 c0                     	testq	%rax, %rax
+    24a2: 74 0e                        	je	0x24b2 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x752>
+    24a4: 39 50 20                     	cmpl	%edx, 0x20(%rax)
+    24a7: 7d ef                        	jge	0x2498 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x738>
+    24a9: 48 8b 40 18                  	movq	0x18(%rax), %rax
+    24ad: 48 85 c0                     	testq	%rax, %rax
+    24b0: 75 f2                        	jne	0x24a4 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x744>
+    24b2: 48 39 ce                     	cmpq	%rcx, %rsi
+    24b5: 74 07                        	je	0x24be <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x75e>
+    24b7: 3b 51 20                     	cmpl	0x20(%rcx), %edx
+    24ba: 48 0f 4d f1                  	cmovgeq	%rcx, %rsi
+    24be: 48 8b 46 30                  	movq	0x30(%rsi), %rax
+    24c2: 45 31 f6                     	xorl	%r14d, %r14d
+    24c5: 48 89 45 00                  	movq	%rax, (%rbp)
+    24c9: 48 8b 7c 24 08               	movq	0x8(%rsp), %rdi
+    24ce: e8 00 00 00 00               	callq	0x24d3 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x773>
+		00000000000024cf:  R_X86_64_PLT32	LockContext::~LockContext()-0x4
+    24d3: 48 81 c4 78 02 00 00         	addq	$0x278, %rsp            # imm = 0x278
+    24da: 44 89 f0                     	movl	%r14d, %eax
+    24dd: 5b                           	popq	%rbx
+    24de: 5d                           	popq	%rbp
+    24df: 41 5c                        	popq	%r12
+    24e1: 41 5d                        	popq	%r13
+    24e3: 41 5e                        	popq	%r14
+    24e5: 41 5f                        	popq	%r15
+    24e7: c3                           	retq
+    24e8: 0f 1f 84 00 00 00 00 00      	nopl	(%rax,%rax)
+    24f0: 48 8d 84 24 e0 00 00 00      	leaq	0xe0(%rsp), %rax
+    24f8: 48 8b 15 00 00 00 00         	movq	(%rip), %rdx            # 0x24ff <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x79f>
+		00000000000024fb:  R_X86_64_REX_GOTPCRELX	std::piecewise_construct-0x4
+    24ff: 4c 89 e6                     	movq	%r12, %rsi
+    2502: 48 89 ef                     	movq	%rbp, %rdi
+    2505: 4c 8d 84 24 c0 00 00 00      	leaq	0xc0(%rsp), %r8
+    250d: 48 89 c1                     	movq	%rax, %rcx
+    2510: 48 89 44 24 08               	movq	%rax, 0x8(%rsp)
+    2515: 4c 89 ac 24 e0 00 00 00      	movq	%r13, 0xe0(%rsp)
+    251d: e8 00 00 00 00               	callq	0x2522 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x7c2>
+		000000000000251e:  R_X86_64_PLT32	std::_Rb_tree_iterator<std::pair<int const, P1::Universal::ModuleError>> std::_Rb_tree<int, std::pair<int const, P1::Universal::ModuleError>, std::_Select1st<std::pair<int const, P1::Universal::ModuleError>>, std::less<int>, std::allocator<std::pair<int const, P1::Universal::ModuleError>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<int const, P1::Universal::ModuleError>>, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&)-0x4
+    2522: 49 89 c4                     	movq	%rax, %r12
+    2525: e9 06 f9 ff ff               	jmp	0x1e30 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0xd0>
+    252a: 66 0f 1f 44 00 00            	nopw	(%rax,%rax)
+    2530: 49 29 c8                     	subq	%rcx, %r8
+    2533: 31 d2                        	xorl	%edx, %edx
+    2535: 31 f6                        	xorl	%esi, %esi
+    2537: 4c 89 f7                     	movq	%r14, %rdi
+    253a: e8 00 00 00 00               	callq	0x253f <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x7df>
+		000000000000253b:  R_X86_64_PLT32	std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_replace(unsigned long, unsigned long, char const*, unsigned long)-0x4
+    253f: e9 83 fd ff ff               	jmp	0x22c7 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x567>
+    2544: 0f 1f 40 00                  	nopl	(%rax)
+    2548: 48 8b 35 00 00 00 00         	movq	(%rip), %rsi            # 0x254f <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x7ef>
+		000000000000254b:  R_X86_64_REX_GOTPCRELX	P1::Universal::STR_NoThrow<wchar_t>::GetString() const::cNull-0x4
+    254f: e9 0c fc ff ff               	jmp	0x2160 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x400>
+    2554: 0f 1f 40 00                  	nopl	(%rax)
+    2558: 48 8b 35 00 00 00 00         	movq	(%rip), %rsi            # 0x255f <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x7ff>
+		000000000000255b:  R_X86_64_REX_GOTPCRELX	P1::Universal::STR_NoThrow<wchar_t>::GetString() const::cNull-0x4
+    255f: e9 bf fb ff ff               	jmp	0x2123 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x3c3>
+    2564: 0f 1f 40 00                  	nopl	(%rax)
+    2568: 48 8b 35 00 00 00 00         	movq	(%rip), %rsi            # 0x256f <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x80f>
+		000000000000256b:  R_X86_64_REX_GOTPCRELX	P1::Universal::STR_NoThrow<wchar_t>::GetString() const::cNull-0x4
+    256f: e9 6d fb ff ff               	jmp	0x20e1 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x381>
+    2574: 0f 1f 40 00                  	nopl	(%rax)
+    2578: 48 8b 35 00 00 00 00         	movq	(%rip), %rsi            # 0x257f <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x81f>
+		000000000000257b:  R_X86_64_REX_GOTPCRELX	P1::Universal::STR_NoThrow<char>::GetString() const::cNull-0x4
+    257f: 31 d2                        	xorl	%edx, %edx
+    2581: e9 d9 fc ff ff               	jmp	0x225f <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x4ff>
+    2586: 66 2e 0f 1f 84 00 00 00 00 00	nopw	%cs:(%rax,%rax)
+    2590: 48 8b 35 00 00 00 00         	movq	(%rip), %rsi            # 0x2597 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x837>
+		0000000000002593:  R_X86_64_REX_GOTPCRELX	P1::Universal::STR_NoThrow<char>::GetString() const::cNull-0x4
+    2597: 31 d2                        	xorl	%edx, %edx
+    2599: e9 82 fc ff ff               	jmp	0x2220 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x4c0>
+    259e: 66 90                        	nop
+    25a0: 48 8b 35 00 00 00 00         	movq	(%rip), %rsi            # 0x25a7 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x847>
+		00000000000025a3:  R_X86_64_REX_GOTPCRELX	P1::Universal::STR_NoThrow<char>::GetString() const::cNull-0x4
+    25a7: 31 d2                        	xorl	%edx, %edx
+    25a9: e9 0a fc ff ff               	jmp	0x21b8 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x458>
+    25ae: 66 90                        	nop
+    25b0: 48 8d b4 24 40 01 00 00      	leaq	0x140(%rsp), %rsi
+    25b8: 4c 89 f7                     	movq	%r14, %rdi
+    25bb: e8 00 00 00 00               	callq	0x25c0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x860>
+		00000000000025bc:  R_X86_64_PLT32	std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)-0x4
+    25c0: e9 02 fd ff ff               	jmp	0x22c7 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x567>
+    25c5: 0f 1f 00                     	nopl	(%rax)
+    25c8: c7 00 00 00 00 00            	movl	$0x0, (%rax)
+    25ce: e9 eb f8 ff ff               	jmp	0x1ebe <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x15e>
+    25d3: 0f 1f 44 00 00               	nopl	(%rax,%rax)
+    25d8: 48 8d 15 00 00 00 00         	leaq	(%rip), %rdx            # 0x25df <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x87f>
+		00000000000025db:  R_X86_64_PC32	.LC41-0x4
+    25df: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x25e6 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x886>
+		00000000000025e2:  R_X86_64_PC32	.LC25-0x4
+    25e6: bf f6 ff ff ff               	movl	$0xfffffff6, %edi       # imm = 0xFFFFFFF6
+    25eb: e8 00 00 00 00               	callq	0x25f0 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x890>
+		00000000000025ec:  R_X86_64_PLT32	CameraSdkError::Error(P1::CameraSdk::ErrorCode, char const*, char const*)-0x4
+    25f0: 41 89 c6                     	movl	%eax, %r14d
+    25f3: e9 d1 fe ff ff               	jmp	0x24c9 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x769>
+    25f8: e9 00 00 00 00               	jmp	0x25fd <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x89d>
+		00000000000025f9:  R_X86_64_PC32	.text.unlikely+0x4b5
+    25fd: 48 89 c3                     	movq	%rax, %rbx
+    2600: e9 00 00 00 00               	jmp	0x2605 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x8a5>
+		0000000000002601:  R_X86_64_PC32	.text.unlikely+0x4e5
+    2605: 48 89 c3                     	movq	%rax, %rbx
+    2608: e9 00 00 00 00               	jmp	0x260d <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x8ad>
+		0000000000002609:  R_X86_64_PC32	.text.unlikely+0x55c
+    260d: 48 89 c5                     	movq	%rax, %rbp
+    2610: e9 00 00 00 00               	jmp	0x2615 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x8b5>
+		0000000000002611:  R_X86_64_PC32	.text.unlikely+0x54c
+    2615: 48 89 c5                     	movq	%rax, %rbp
+    2618: e9 00 00 00 00               	jmp	0x261d <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x8bd>
+		0000000000002619:  R_X86_64_PC32	.text.unlikely+0x570
+    261d: 48 89 c5                     	movq	%rax, %rbp
+    2620: e9 00 00 00 00               	jmp	0x2625 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x8c5>
+		0000000000002621:  R_X86_64_PC32	.text.unlikely+0x582
+    2625: 48 89 c5                     	movq	%rax, %rbp
+    2628: e9 00 00 00 00               	jmp	0x262d <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x8cd>
+		0000000000002629:  R_X86_64_PC32	.text.unlikely+0x5d4
+    262d: 48 89 c5                     	movq	%rax, %rbp
+    2630: e9 00 00 00 00               	jmp	0x2635 <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x8d5>
+		0000000000002631:  R_X86_64_PC32	.text.unlikely+0x5a7
+    2635: 48 89 c3                     	movq	%rax, %rbx
+    2638: e9 00 00 00 00               	jmp	0x263d <IqpLibTransport::GetCamera(int, P1::IQP::Camera*&)+0x8dd>
+		0000000000002639:  R_X86_64_PC32	.text.unlikely+0x4f7

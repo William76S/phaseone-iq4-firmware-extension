@@ -1,0 +1,51 @@
+STATIC ONLY; linked VAs; exported nearest labels are not recovered private names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  40bfb4: d10043ff     	sub	sp, sp, #0x10
+  40bfb8: f90007e0     	str	x0, [sp, #0x8]
+  40bfbc: f94007e0     	ldr	x0, [sp, #0x8]
+  40bfc0: f9400400     	ldr	x0, [x0, #0x8]
+  40bfc4: 39400000     	ldrb	w0, [x0]
+  40bfc8: 7100a81f     	cmp	w0, #0x2a
+  40bfcc: 540000a1     	b.ne	0x40bfe0 <.text+0xdb0>
+  40bfd0: f94007e0     	ldr	x0, [sp, #0x8]
+  40bfd4: f9400400     	ldr	x0, [x0, #0x8]
+  40bfd8: 91000400     	add	x0, x0, #0x1
+  40bfdc: 14000003     	b	0x40bfe8 <.text+0xdb8>
+  40bfe0: f94007e0     	ldr	x0, [sp, #0x8]
+  40bfe4: f9400400     	ldr	x0, [x0, #0x8]
+  40bfe8: 910043ff     	add	sp, sp, #0x10
+  40bfec: d65f03c0     	ret
+  40bff0: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  40bff4: 910003fd     	mov	x29, sp
+  40bff8: f9000fe0     	str	x0, [sp, #0x18]
+  40bffc: f9000be1     	str	x1, [sp, #0x10]
+  40c000: f9400fe0     	ldr	x0, [sp, #0x18]
+  40c004: f9400401     	ldr	x1, [x0, #0x8]
+  40c008: f9400be0     	ldr	x0, [sp, #0x10]
+  40c00c: f9400400     	ldr	x0, [x0, #0x8]
+  40c010: eb00003f     	cmp	x1, x0
+  40c014: 540001e0     	b.eq	0x40c050 <.text+0xe20>
+  40c018: f9400fe0     	ldr	x0, [sp, #0x18]
+  40c01c: f9400400     	ldr	x0, [x0, #0x8]
+  40c020: 39400000     	ldrb	w0, [x0]
+  40c024: 7100a81f     	cmp	w0, #0x2a
+  40c028: 54000180     	b.eq	0x40c058 <.text+0xe28>
+  40c02c: f9400fe0     	ldr	x0, [sp, #0x18]
+  40c030: f9400402     	ldr	x2, [x0, #0x8]
+  40c034: f9400be0     	ldr	x0, [sp, #0x10]
+  40c038: f9400400     	ldr	x0, [x0, #0x8]
+  40c03c: aa0003e1     	mov	x1, x0
+  40c040: aa0203e0     	mov	x0, x2
+  40c044: 97fffabf     	bl	0x40ab40 <strcmp@plt>
+  40c048: 7100001f     	cmp	w0, #0x0
+  40c04c: 54000061     	b.ne	0x40c058 <.text+0xe28>
+  40c050: 52800020     	mov	w0, #0x1                // =1
+  40c054: 14000002     	b	0x40c05c <.text+0xe2c>
+  40c058: 52800000     	mov	w0, #0x0                // =0
+  40c05c: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  40c060: d65f03c0     	ret

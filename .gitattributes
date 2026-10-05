@@ -1,0 +1,30 @@
+ACCEPTANCE_TESTS.csv whitespace=cr-at-eol
+# Frozen tool output and mechanical diffs retain their exact original bytes.
+analysis/host/windows_guard242_startup_review_actual_04/startup_parser_adaptation.diff -whitespace
+analysis/sdk_reference/f4_ui_supervision_host_03/*.diff -whitespace
+analysis/sdk_reference/f4_ui_supervision_host_03/entry_object_sections.txt -whitespace
+tools/host/windows_guard242_startup_review_01/startup_subset_for_profiles.py whitespace=-blank-at-eof
+tools/sdk/development_protocol_query_v3/query_v2_to_v3.diff -whitespace
+tools/sdk/native_user_restart_02/restart_once.cpp.diff.txt -whitespace
+tools/sdk/development_protocol_query_private_controller_03/run_query_private_02_to_03.diff.txt -whitespace
+tools/sdk/shell_readiness_guard_01/*.diff.txt -whitespace
+tools/host/windows_query_v3_artifact_audit_01/startup_subset_for_v3.py whitespace=-blank-at-eof
+tools/sdk/shell_readiness_guard_01/readiness_gate.hpp whitespace=-blank-at-eof
+
+# Preserve exact frozen readiness derivatives and their literal diff context.
+tools/host/windows_shell_readiness_artifact_audit_01/derived_bindings.py whitespace=-blank-at-eof
+tools/host/windows_shell_readiness_artifact_audit_01/startup_subset_for_readiness.py whitespace=-blank-at-eof
+tools/host/windows_shell_readiness_artifact_audit_01/startup_subset.diff -whitespace
+tools/sdk/readonly_octets_native_01/*.diff.txt -whitespace
+tools/sdk/readonly_octets_controller_01/*.diff.txt -whitespace
+
+analysis/firmware/f1_entry_button_ports_01/sections.txt -whitespace
+tools/firmware/f1_restore_baseline_03/OCTET_PARSER_DIFF.txt -whitespace
+tools/firmware/f1_module_entry_01/*.diff.txt -whitespace
+tools/sdk/f1_restore_baseline_native_03/*.diff.txt -whitespace
+analysis/sdk_reference/f1_observe_role_build_02/entry.diff.txt -whitespace
+tools/sdk/f1_restore_baseline_controller_03/*.diff.txt -whitespace
+tools/sdk/f1_restore_baseline_transport_03/*.diff.txt -whitespace
+tools/firmware/f1_observe_geometry_04/*.diff.txt -whitespace
+tools/sdk/native_security_level_01/*.diff.txt -whitespace
+tools/sdk/finite_security_level_controller_01/*.diff.txt -whitespace

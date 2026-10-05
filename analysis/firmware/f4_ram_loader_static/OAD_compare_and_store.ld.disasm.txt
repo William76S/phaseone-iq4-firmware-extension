@@ -1,0 +1,17 @@
+analysis/firmware/f4_ram_loader_static/ld-2.28.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000001040 <.text>:
+    3714:      	ldrh	w3, [x0, #0x4]
+    3718:      	mov	w2, #0x414f             // =16719
+    371c:      	cmp	w3, w2
+    3720:      	b.ne	0x329c <.text+0x225c>
+    3724:      	ldrb	w2, [x0, #0x6]
+    3728:      	cmp	w2, #0x44
+    372c:      	b.ne	0x329c <.text+0x225c>
+    3730:      	adrp	x1, 0x2f000
+    3734:      	add	x0, x0, #0x8
+    3738:      	str	x0, [x1, #0x680]
+    373c:      	b	0x21b4 <.text+0x1174>
+    3740:      	ldrh	w3, [x0, #0x4]

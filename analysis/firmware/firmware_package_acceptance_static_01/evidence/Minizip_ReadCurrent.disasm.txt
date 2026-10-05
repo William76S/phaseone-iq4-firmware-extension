@@ -1,0 +1,338 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000009d6948 <uncompress>:
+  9d8958:      	stp	x29, x30, [sp, #-0x80]!
+  9d895c:      	mov	x29, sp
+  9d8960:      	str	x0, [sp, #0x28]
+  9d8964:      	str	x1, [sp, #0x20]
+  9d8968:      	str	w2, [sp, #0x1c]
+  9d896c:      	str	wzr, [sp, #0x7c]
+  9d8970:      	str	wzr, [sp, #0x78]
+  9d8974:      	ldr	x0, [sp, #0x28]
+  9d8978:      	cmp	x0, #0x0
+  9d897c:      	b.ne	0x9d8988 <uncompress+0x2040>
+  9d8980:      	mov	w0, #-0x66              // =-102
+  9d8984:      	b	0x9d8e7c <uncompress+0x2534>
+  9d8988:      	ldr	x0, [sp, #0x28]
+  9d898c:      	str	x0, [sp, #0x60]
+  9d8990:      	ldr	x0, [sp, #0x60]
+  9d8994:      	ldr	x0, [x0, #0x120]
+  9d8998:      	str	x0, [sp, #0x58]
+  9d899c:      	ldr	x0, [sp, #0x58]
+  9d89a0:      	cmp	x0, #0x0
+  9d89a4:      	b.ne	0x9d89b0 <uncompress+0x2068>
+  9d89a8:      	mov	w0, #-0x66              // =-102
+  9d89ac:      	b	0x9d8e7c <uncompress+0x2534>
+  9d89b0:      	ldr	x0, [sp, #0x58]
+  9d89b4:      	ldr	x0, [x0]
+  9d89b8:      	cmp	x0, #0x0
+  9d89bc:      	b.ne	0x9d89c8 <uncompress+0x2080>
+  9d89c0:      	mov	w0, #-0x64              // =-100
+  9d89c4:      	b	0x9d8e7c <uncompress+0x2534>
+  9d89c8:      	ldr	w0, [sp, #0x1c]
+  9d89cc:      	cmp	w0, #0x0
+  9d89d0:      	b.ne	0x9d89dc <uncompress+0x2094>
+  9d89d4:      	mov	w0, #0x0                // =0
+  9d89d8:      	b	0x9d8e7c <uncompress+0x2534>
+  9d89dc:      	ldr	x0, [sp, #0x58]
+  9d89e0:      	ldr	x1, [sp, #0x20]
+  9d89e4:      	str	x1, [x0, #0x20]
+  9d89e8:      	ldr	x0, [sp, #0x58]
+  9d89ec:      	ldr	w1, [sp, #0x1c]
+  9d89f0:      	str	w1, [x0, #0x28]
+  9d89f4:      	ldr	w1, [sp, #0x1c]
+  9d89f8:      	ldr	x0, [sp, #0x58]
+  9d89fc:      	ldr	x0, [x0, #0xb8]
+  9d8a00:      	cmp	x1, x0
+  9d8a04:      	b.ls	0x9d8a2c <uncompress+0x20e4>
+  9d8a08:      	ldr	x0, [sp, #0x58]
+  9d8a0c:      	ldr	w0, [x0, #0x118]
+  9d8a10:      	cmp	w0, #0x0
+  9d8a14:      	b.ne	0x9d8a2c <uncompress+0x20e4>
+  9d8a18:      	ldr	x0, [sp, #0x58]
+  9d8a1c:      	ldr	x0, [x0, #0xb8]
+  9d8a20:      	mov	w1, w0
+  9d8a24:      	ldr	x0, [sp, #0x58]
+  9d8a28:      	str	w1, [x0, #0x28]
+  9d8a2c:      	ldr	w1, [sp, #0x1c]
+  9d8a30:      	ldr	x0, [sp, #0x58]
+  9d8a34:      	ldr	x2, [x0, #0xb0]
+  9d8a38:      	ldr	x0, [sp, #0x58]
+  9d8a3c:      	ldr	w0, [x0, #0x10]
+  9d8a40:      	mov	w0, w0
+  9d8a44:      	add	x0, x2, x0
+  9d8a48:      	cmp	x1, x0
+  9d8a4c:      	b.ls	0x9d8e4c <uncompress+0x2504>
+  9d8a50:      	ldr	x0, [sp, #0x58]
+  9d8a54:      	ldr	w0, [x0, #0x118]
+  9d8a58:      	cmp	w0, #0x0
+  9d8a5c:      	b.eq	0x9d8e4c <uncompress+0x2504>
+  9d8a60:      	ldr	x0, [sp, #0x58]
+  9d8a64:      	ldr	x0, [x0, #0xb0]
+  9d8a68:      	mov	w1, w0
+  9d8a6c:      	ldr	x0, [sp, #0x58]
+  9d8a70:      	ldr	w0, [x0, #0x10]
+  9d8a74:      	add	w1, w1, w0
+  9d8a78:      	ldr	x0, [sp, #0x58]
+  9d8a7c:      	str	w1, [x0, #0x28]
+  9d8a80:      	b	0x9d8e4c <uncompress+0x2504>
+  9d8a84:      	ldr	x0, [sp, #0x58]
+  9d8a88:      	ldr	w0, [x0, #0x10]
+  9d8a8c:      	cmp	w0, #0x0
+  9d8a90:      	b.ne	0x9d8bc8 <uncompress+0x2280>
+  9d8a94:      	ldr	x0, [sp, #0x58]
+  9d8a98:      	ldr	x0, [x0, #0xb0]
+  9d8a9c:      	cmp	x0, #0x0
+  9d8aa0:      	b.eq	0x9d8bc8 <uncompress+0x2280>
+  9d8aa4:      	mov	w0, #0x4000             // =16384
+  9d8aa8:      	str	w0, [sp, #0x74]
+  9d8aac:      	ldr	x0, [sp, #0x58]
+  9d8ab0:      	ldr	x1, [x0, #0xb0]
+  9d8ab4:      	ldr	w0, [sp, #0x74]
+  9d8ab8:      	cmp	x1, x0
+  9d8abc:      	b.hs	0x9d8acc <uncompress+0x2184>
+  9d8ac0:      	ldr	x0, [sp, #0x58]
+  9d8ac4:      	ldr	x0, [x0, #0xb0]
+  9d8ac8:      	str	w0, [sp, #0x74]
+  9d8acc:      	ldr	w0, [sp, #0x74]
+  9d8ad0:      	cmp	w0, #0x0
+  9d8ad4:      	b.ne	0x9d8ae0 <uncompress+0x2198>
+  9d8ad8:      	mov	w0, #0x0                // =0
+  9d8adc:      	b	0x9d8e7c <uncompress+0x2534>
+  9d8ae0:      	ldr	x0, [sp, #0x58]
+  9d8ae4:      	ldr	x4, [x0, #0xe0]
+  9d8ae8:      	ldr	x0, [sp, #0x58]
+  9d8aec:      	ldr	x5, [x0, #0xf8]
+  9d8af0:      	ldr	x0, [sp, #0x58]
+  9d8af4:      	ldr	x6, [x0, #0x100]
+  9d8af8:      	ldr	x0, [sp, #0x58]
+  9d8afc:      	ldr	x1, [x0, #0x78]
+  9d8b00:      	ldr	x0, [sp, #0x58]
+  9d8b04:      	ldr	x0, [x0, #0x110]
+  9d8b08:      	add	x0, x1, x0
+  9d8b0c:      	mov	w3, #0x0                // =0
+  9d8b10:      	mov	x2, x0
+  9d8b14:      	mov	x1, x6
+  9d8b18:      	mov	x0, x5
+  9d8b1c:      	blr	x4
+  9d8b20:      	cmp	x0, #0x0
+  9d8b24:      	b.eq	0x9d8b30 <uncompress+0x21e8>
+  9d8b28:      	mov	w0, #-0x1               // =-1
+  9d8b2c:      	b	0x9d8e7c <uncompress+0x2534>
+  9d8b30:      	ldr	x0, [sp, #0x58]
+  9d8b34:      	ldr	x4, [x0, #0xc8]
+  9d8b38:      	ldr	x0, [sp, #0x58]
+  9d8b3c:      	ldr	x5, [x0, #0xf8]
+  9d8b40:      	ldr	x0, [sp, #0x58]
+  9d8b44:      	ldr	x1, [x0, #0x100]
+  9d8b48:      	ldr	x0, [sp, #0x58]
+  9d8b4c:      	ldr	x0, [x0]
+  9d8b50:      	ldr	w2, [sp, #0x74]
+  9d8b54:      	mov	x3, x2
+  9d8b58:      	mov	x2, x0
+  9d8b5c:      	mov	x0, x5
+  9d8b60:      	blr	x4
+  9d8b64:      	mov	x1, x0
+  9d8b68:      	ldr	w0, [sp, #0x74]
+  9d8b6c:      	cmp	x1, x0
+  9d8b70:      	b.eq	0x9d8b7c <uncompress+0x2234>
+  9d8b74:      	mov	w0, #-0x1               // =-1
+  9d8b78:      	b	0x9d8e7c <uncompress+0x2534>
+  9d8b7c:      	ldr	x0, [sp, #0x58]
+  9d8b80:      	ldr	x1, [x0, #0x78]
+  9d8b84:      	ldr	w0, [sp, #0x74]
+  9d8b88:      	add	x1, x1, x0
+  9d8b8c:      	ldr	x0, [sp, #0x58]
+  9d8b90:      	str	x1, [x0, #0x78]
+  9d8b94:      	ldr	x0, [sp, #0x58]
+  9d8b98:      	ldr	x1, [x0, #0xb0]
+  9d8b9c:      	ldr	w0, [sp, #0x74]
+  9d8ba0:      	sub	x1, x1, x0
+  9d8ba4:      	ldr	x0, [sp, #0x58]
+  9d8ba8:      	str	x1, [x0, #0xb0]
+  9d8bac:      	ldr	x0, [sp, #0x58]
+  9d8bb0:      	ldr	x1, [x0]
+  9d8bb4:      	ldr	x0, [sp, #0x58]
+  9d8bb8:      	str	x1, [x0, #0x8]
+  9d8bbc:      	ldr	x0, [sp, #0x58]
+  9d8bc0:      	ldr	w1, [sp, #0x74]
+  9d8bc4:      	str	w1, [x0, #0x10]
+  9d8bc8:      	ldr	x0, [sp, #0x58]
+  9d8bcc:      	ldr	x0, [x0, #0x108]
+  9d8bd0:      	cmp	x0, #0x0
+  9d8bd4:      	b.eq	0x9d8be8 <uncompress+0x22a0>
+  9d8bd8:      	ldr	x0, [sp, #0x58]
+  9d8bdc:      	ldr	w0, [x0, #0x118]
+  9d8be0:      	cmp	w0, #0x0
+  9d8be4:      	b.eq	0x9d8d60 <uncompress+0x2418>
+  9d8be8:      	ldr	x0, [sp, #0x58]
+  9d8bec:      	ldr	w0, [x0, #0x10]
+  9d8bf0:      	cmp	w0, #0x0
+  9d8bf4:      	b.ne	0x9d8c10 <uncompress+0x22c8>
+  9d8bf8:      	ldr	x0, [sp, #0x58]
+  9d8bfc:      	ldr	x0, [x0, #0xb0]
+  9d8c00:      	cmp	x0, #0x0
+  9d8c04:      	b.ne	0x9d8c10 <uncompress+0x22c8>
+  9d8c08:      	ldr	w0, [sp, #0x78]
+  9d8c0c:      	b	0x9d8e7c <uncompress+0x2534>
+  9d8c10:      	ldr	x0, [sp, #0x58]
+  9d8c14:      	ldr	w1, [x0, #0x28]
+  9d8c18:      	ldr	x0, [sp, #0x58]
+  9d8c1c:      	ldr	w0, [x0, #0x10]
+  9d8c20:      	cmp	w1, w0
+  9d8c24:      	b.hs	0x9d8c38 <uncompress+0x22f0>
+  9d8c28:      	ldr	x0, [sp, #0x58]
+  9d8c2c:      	ldr	w0, [x0, #0x28]
+  9d8c30:      	str	w0, [sp, #0x70]
+  9d8c34:      	b	0x9d8c44 <uncompress+0x22fc>
+  9d8c38:      	ldr	x0, [sp, #0x58]
+  9d8c3c:      	ldr	w0, [x0, #0x10]
+  9d8c40:      	str	w0, [sp, #0x70]
+  9d8c44:      	str	wzr, [sp, #0x6c]
+  9d8c48:      	b	0x9d8c80 <uncompress+0x2338>
+  9d8c4c:      	ldr	x0, [sp, #0x58]
+  9d8c50:      	ldr	x1, [x0, #0x8]
+  9d8c54:      	ldr	w0, [sp, #0x6c]
+  9d8c58:      	add	x1, x1, x0
+  9d8c5c:      	ldr	x0, [sp, #0x58]
+  9d8c60:      	ldr	x2, [x0, #0x20]
+  9d8c64:      	ldr	w0, [sp, #0x6c]
+  9d8c68:      	add	x0, x2, x0
+  9d8c6c:      	ldrb	w1, [x1]
+  9d8c70:      	strb	w1, [x0]
+  9d8c74:      	ldr	w0, [sp, #0x6c]
+  9d8c78:      	add	w0, w0, #0x1
+  9d8c7c:      	str	w0, [sp, #0x6c]
+  9d8c80:      	ldr	w1, [sp, #0x6c]
+  9d8c84:      	ldr	w0, [sp, #0x70]
+  9d8c88:      	cmp	w1, w0
+  9d8c8c:      	b.lo	0x9d8c4c <uncompress+0x2304>
+  9d8c90:      	ldr	x0, [sp, #0x58]
+  9d8c94:      	ldr	x3, [x0, #0xa0]
+  9d8c98:      	ldr	x0, [sp, #0x58]
+  9d8c9c:      	ldr	x0, [x0, #0x20]
+  9d8ca0:      	ldr	w2, [sp, #0x70]
+  9d8ca4:      	mov	x1, x0
+  9d8ca8:      	mov	x0, x3
+  9d8cac:      	bl	0x9c41fc <crc32>
+  9d8cb0:      	mov	x1, x0
+  9d8cb4:      	ldr	x0, [sp, #0x58]
+  9d8cb8:      	str	x1, [x0, #0xa0]
+  9d8cbc:      	ldr	x0, [sp, #0x58]
+  9d8cc0:      	ldr	x1, [x0, #0xb8]
+  9d8cc4:      	ldr	w0, [sp, #0x70]
+  9d8cc8:      	sub	x1, x1, x0
+  9d8ccc:      	ldr	x0, [sp, #0x58]
+  9d8cd0:      	str	x1, [x0, #0xb8]
+  9d8cd4:      	ldr	x0, [sp, #0x58]
+  9d8cd8:      	ldr	w1, [x0, #0x10]
+  9d8cdc:      	ldr	w0, [sp, #0x70]
+  9d8ce0:      	sub	w1, w1, w0
+  9d8ce4:      	ldr	x0, [sp, #0x58]
+  9d8ce8:      	str	w1, [x0, #0x10]
+  9d8cec:      	ldr	x0, [sp, #0x58]
+  9d8cf0:      	ldr	w1, [x0, #0x28]
+  9d8cf4:      	ldr	w0, [sp, #0x70]
+  9d8cf8:      	sub	w1, w1, w0
+  9d8cfc:      	ldr	x0, [sp, #0x58]
+  9d8d00:      	str	w1, [x0, #0x28]
+  9d8d04:      	ldr	x0, [sp, #0x58]
+  9d8d08:      	ldr	x1, [x0, #0x20]
+  9d8d0c:      	ldr	w0, [sp, #0x70]
+  9d8d10:      	add	x1, x1, x0
+  9d8d14:      	ldr	x0, [sp, #0x58]
+  9d8d18:      	str	x1, [x0, #0x20]
+  9d8d1c:      	ldr	x0, [sp, #0x58]
+  9d8d20:      	ldr	x1, [x0, #0x8]
+  9d8d24:      	ldr	w0, [sp, #0x70]
+  9d8d28:      	add	x1, x1, x0
+  9d8d2c:      	ldr	x0, [sp, #0x58]
+  9d8d30:      	str	x1, [x0, #0x8]
+  9d8d34:      	ldr	x0, [sp, #0x58]
+  9d8d38:      	ldr	x1, [x0, #0x30]
+  9d8d3c:      	ldr	w0, [sp, #0x70]
+  9d8d40:      	add	x1, x1, x0
+  9d8d44:      	ldr	x0, [sp, #0x58]
+  9d8d48:      	str	x1, [x0, #0x30]
+  9d8d4c:      	ldr	w1, [sp, #0x78]
+  9d8d50:      	ldr	w0, [sp, #0x70]
+  9d8d54:      	add	w0, w1, w0
+  9d8d58:      	str	w0, [sp, #0x78]
+  9d8d5c:      	b	0x9d8e4c <uncompress+0x2504>
+  9d8d60:      	mov	w0, #0x2                // =2
+  9d8d64:      	str	w0, [sp, #0x54]
+  9d8d68:      	ldr	x0, [sp, #0x58]
+  9d8d6c:      	ldr	x0, [x0, #0x30]
+  9d8d70:      	str	x0, [sp, #0x48]
+  9d8d74:      	ldr	x0, [sp, #0x58]
+  9d8d78:      	ldr	x0, [x0, #0x20]
+  9d8d7c:      	str	x0, [sp, #0x40]
+  9d8d80:      	ldr	x0, [sp, #0x58]
+  9d8d84:      	add	x0, x0, #0x8
+  9d8d88:      	ldr	w1, [sp, #0x54]
+  9d8d8c:      	bl	0x9ce840 <inflate>
+  9d8d90:      	str	w0, [sp, #0x7c]
+  9d8d94:      	ldr	w0, [sp, #0x7c]
+  9d8d98:      	cmp	w0, #0x0
+  9d8d9c:      	b.lt	0x9d8db8 <uncompress+0x2470>
+  9d8da0:      	ldr	x0, [sp, #0x58]
+  9d8da4:      	ldr	x0, [x0, #0x38]
+  9d8da8:      	cmp	x0, #0x0
+  9d8dac:      	b.eq	0x9d8db8 <uncompress+0x2470>
+  9d8db0:      	mov	w0, #-0x3               // =-3
+  9d8db4:      	str	w0, [sp, #0x7c]
+  9d8db8:      	ldr	x0, [sp, #0x58]
+  9d8dbc:      	ldr	x0, [x0, #0x30]
+  9d8dc0:      	str	x0, [sp, #0x38]
+  9d8dc4:      	ldr	x1, [sp, #0x38]
+  9d8dc8:      	ldr	x0, [sp, #0x48]
+  9d8dcc:      	sub	x0, x1, x0
+  9d8dd0:      	str	x0, [sp, #0x30]
+  9d8dd4:      	ldr	x0, [sp, #0x58]
+  9d8dd8:      	ldr	x0, [x0, #0xa0]
+  9d8ddc:      	ldr	x1, [sp, #0x30]
+  9d8de0:      	mov	w2, w1
+  9d8de4:      	ldr	x1, [sp, #0x40]
+  9d8de8:      	bl	0x9c41fc <crc32>
+  9d8dec:      	mov	x1, x0
+  9d8df0:      	ldr	x0, [sp, #0x58]
+  9d8df4:      	str	x1, [x0, #0xa0]
+  9d8df8:      	ldr	x0, [sp, #0x58]
+  9d8dfc:      	ldr	x1, [x0, #0xb8]
+  9d8e00:      	ldr	x0, [sp, #0x30]
+  9d8e04:      	sub	x1, x1, x0
+  9d8e08:      	ldr	x0, [sp, #0x58]
+  9d8e0c:      	str	x1, [x0, #0xb8]
+  9d8e10:      	ldr	x0, [sp, #0x38]
+  9d8e14:      	mov	w1, w0
+  9d8e18:      	ldr	x0, [sp, #0x48]
+  9d8e1c:      	sub	w0, w1, w0
+  9d8e20:      	ldr	w1, [sp, #0x78]
+  9d8e24:      	add	w0, w1, w0
+  9d8e28:      	str	w0, [sp, #0x78]
+  9d8e2c:      	ldr	w0, [sp, #0x7c]
+  9d8e30:      	cmp	w0, #0x1
+  9d8e34:      	b.ne	0x9d8e40 <uncompress+0x24f8>
+  9d8e38:      	ldr	w0, [sp, #0x78]
+  9d8e3c:      	b	0x9d8e7c <uncompress+0x2534>
+  9d8e40:      	ldr	w0, [sp, #0x7c]
+  9d8e44:      	cmp	w0, #0x0
+  9d8e48:      	b.ne	0x9d8e60 <uncompress+0x2518>
+  9d8e4c:      	ldr	x0, [sp, #0x58]
+  9d8e50:      	ldr	w0, [x0, #0x28]
+  9d8e54:      	cmp	w0, #0x0
+  9d8e58:      	b.ne	0x9d8a84 <uncompress+0x213c>
+  9d8e5c:      	b	0x9d8e64 <uncompress+0x251c>
+  9d8e60:      	nop
+  9d8e64:      	ldr	w0, [sp, #0x7c]
+  9d8e68:      	cmp	w0, #0x0
+  9d8e6c:      	b.ne	0x9d8e78 <uncompress+0x2530>
+  9d8e70:      	ldr	w0, [sp, #0x78]
+  9d8e74:      	b	0x9d8e7c <uncompress+0x2534>
+  9d8e78:      	ldr	w0, [sp, #0x7c]
+  9d8e7c:      	ldp	x29, x30, [sp], #0x80
+  9d8e80:      	ret

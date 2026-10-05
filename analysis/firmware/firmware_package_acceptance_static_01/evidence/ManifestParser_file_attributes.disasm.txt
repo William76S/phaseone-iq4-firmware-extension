@@ -1,0 +1,88 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  765a18:      	stp	x29, x30, [sp, #-0x80]!
+  765a1c:      	mov	x29, sp
+  765a20:      	str	x0, [sp, #0x28]
+  765a24:      	str	x1, [sp, #0x20]
+  765a28:      	str	x2, [sp, #0x18]
+  765a2c:      	ldr	x0, [sp, #0x20]
+  765a30:      	bl	0x9977d4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x20734>
+  765a34:      	and	w0, w0, #0xff
+  765a38:      	cmp	w0, #0x0
+  765a3c:      	b.eq	0x765a48 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4bd1c>
+  765a40:      	mov	w0, #0x0                // =0
+  765a44:      	b	0x765b54 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4be28>
+  765a48:      	adrp	x0, 0xc3d000
+  765a4c:      	add	x1, x0, #0xe38
+  765a50:      	ldr	x0, [sp, #0x20]
+  765a54:      	bl	0x997990 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x208f0>
+  765a58:      	str	x0, [sp, #0x38]
+  765a5c:      	add	x0, sp, #0x38
+  765a60:      	bl	0x996cec <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x1fc4c>
+  765a64:      	str	x0, [sp, #0x78]
+  765a68:      	ldr	x0, [sp, #0x18]
+  765a6c:      	mov	x2, x0
+  765a70:      	ldr	x1, [sp, #0x78]
+  765a74:      	ldr	x0, [sp, #0x28]
+  765a78:      	bl	0x7663a8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4c67c>
+  765a7c:      	adrp	x0, 0xc3d000
+  765a80:      	add	x1, x0, #0xe68
+  765a84:      	ldr	x0, [sp, #0x20]
+  765a88:      	bl	0x997990 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x208f0>
+  765a8c:      	str	x0, [sp, #0x40]
+  765a90:      	add	x0, sp, #0x40
+  765a94:      	bl	0x996cec <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x1fc4c>
+  765a98:      	str	x0, [sp, #0x70]
+  765a9c:      	ldr	x0, [sp, #0x18]
+  765aa0:      	add	x0, x0, #0x8
+  765aa4:      	mov	x2, x0
+  765aa8:      	ldr	x1, [sp, #0x70]
+  765aac:      	ldr	x0, [sp, #0x28]
+  765ab0:      	bl	0x7669ec <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4ccc0>
+  765ab4:      	adrp	x0, 0xc3d000
+  765ab8:      	add	x1, x0, #0xe78
+  765abc:      	ldr	x0, [sp, #0x20]
+  765ac0:      	bl	0x997990 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x208f0>
+  765ac4:      	str	x0, [sp, #0x48]
+  765ac8:      	add	x0, sp, #0x48
+  765acc:      	bl	0x996cec <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x1fc4c>
+  765ad0:      	str	x0, [sp, #0x68]
+  765ad4:      	ldr	x0, [sp, #0x18]
+  765ad8:      	add	x0, x0, #0x218
+  765adc:      	mov	x2, x0
+  765ae0:      	ldr	x1, [sp, #0x68]
+  765ae4:      	ldr	x0, [sp, #0x28]
+  765ae8:      	bl	0x7669ec <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x4ccc0>
+  765aec:      	adrp	x0, 0xc3d000
+  765af0:      	add	x1, x0, #0xf10
+  765af4:      	ldr	x0, [sp, #0x20]
+  765af8:      	bl	0x997990 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x208f0>
+  765afc:      	str	x0, [sp, #0x50]
+  765b00:      	add	x0, sp, #0x50
+  765b04:      	bl	0x996cec <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x1fc4c>
+  765b08:      	str	x0, [sp, #0x60]
+  765b0c:      	ldr	x0, [sp, #0x18]
+  765b10:      	add	x0, x0, #0x428
+  765b14:      	mov	x2, #0x1f               // =31
+  765b18:      	ldr	x1, [sp, #0x60]
+  765b1c:      	bl	0x40a9c0 <strncpy@plt>
+  765b20:      	ldr	x0, [sp, #0x18]
+  765b24:      	strb	wzr, [x0, #0x447]
+  765b28:      	ldr	x0, [sp, #0x20]
+  765b2c:      	bl	0x997f44 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm+0x20ea4>
+  765b30:      	str	x0, [sp, #0x58]
+  765b34:      	ldr	x0, [sp, #0x18]
+  765b38:      	add	x0, x0, #0x448
+  765b3c:      	mov	x2, #0x3f               // =63
+  765b40:      	ldr	x1, [sp, #0x58]
+  765b44:      	bl	0x40a9c0 <strncpy@plt>
+  765b48:      	ldr	x0, [sp, #0x18]
+  765b4c:      	strb	wzr, [x0, #0x487]
+  765b50:      	mov	w0, #0x1                // =1
+  765b54:      	ldp	x29, x30, [sp], #0x80
+  765b58:      	ret

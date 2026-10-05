@@ -1,0 +1,91 @@
+STATIC ONLY; linked VAs; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6aa7fc: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  6aa800: 910003fd     	mov	x29, sp
+  6aa804: f9000fe0     	str	x0, [sp, #0x18]
+  6aa808: b90017e1     	str	w1, [sp, #0x14]
+  6aa80c: 12800000     	mov	w0, #-0x1               // =-1
+  6aa810: b9002be0     	str	w0, [sp, #0x28]
+  6aa814: 12800000     	mov	w0, #-0x1               // =-1
+  6aa818: b9002fe0     	str	w0, [sp, #0x2c]
+  6aa81c: 12800000     	mov	w0, #-0x1               // =-1
+  6aa820: b90033e0     	str	w0, [sp, #0x30]
+  6aa824: 12800000     	mov	w0, #-0x1               // =-1
+  6aa828: b90037e0     	str	w0, [sp, #0x34]
+  6aa82c: b94017e0     	ldr	w0, [sp, #0x14]
+  6aa830: 3100041f     	cmn	w0, #0x1
+  6aa834: 54000120     	b.eq	0x6aa858 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0xa498>
+  6aa838: b94017e0     	ldr	w0, [sp, #0x14]
+  6aa83c: b9002be0     	str	w0, [sp, #0x28]
+  6aa840: b9002fff     	str	wzr, [sp, #0x2c]
+  6aa844: b90033ff     	str	wzr, [sp, #0x30]
+  6aa848: b90037ff     	str	wzr, [sp, #0x34]
+  6aa84c: 9100a3e0     	add	x0, sp, #0x28
+  6aa850: d2800201     	mov	x1, #0x10               // =16
+  6aa854: 9408eb53     	bl	0x8e55a0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIPKcS4_EESA_+0x3ed74>
+  6aa858: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aa85c: f9400c05     	ldr	x5, [x0, #0x18]
+  6aa860: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aa864: f9400c00     	ldr	x0, [x0, #0x18]
+  6aa868: f9400000     	ldr	x0, [x0]
+  6aa86c: 91012000     	add	x0, x0, #0x48
+  6aa870: f9400004     	ldr	x4, [x0]
+  6aa874: 9100f3e0     	add	x0, sp, #0x3c
+  6aa878: aa0003e3     	mov	x3, x0
+  6aa87c: 52800202     	mov	w2, #0x10               // =16
+  6aa880: 52800021     	mov	w1, #0x1                // =1
+  6aa884: aa0503e0     	mov	x0, x5
+  6aa888: d63f0080     	blr	x4
+  6aa88c: 12001c00     	and	w0, w0, #0xff
+  6aa890: 52000000     	eor	w0, w0, #0x1
+  6aa894: 12001c00     	and	w0, w0, #0xff
+  6aa898: 7100001f     	cmp	w0, #0x0
+  6aa89c: 54000380     	b.eq	0x6aa90c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0xa54c>
+  6aa8a0: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aa8a4: f9400c05     	ldr	x5, [x0, #0x18]
+  6aa8a8: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aa8ac: f9400c00     	ldr	x0, [x0, #0x18]
+  6aa8b0: f9400000     	ldr	x0, [x0]
+  6aa8b4: 91010000     	add	x0, x0, #0x40
+  6aa8b8: f9400004     	ldr	x4, [x0]
+  6aa8bc: 9100f3e0     	add	x0, sp, #0x3c
+  6aa8c0: aa0003e3     	mov	x3, x0
+  6aa8c4: 52800202     	mov	w2, #0x10               // =16
+  6aa8c8: 52800021     	mov	w1, #0x1                // =1
+  6aa8cc: aa0503e0     	mov	x0, x5
+  6aa8d0: d63f0080     	blr	x4
+  6aa8d4: 12001c00     	and	w0, w0, #0xff
+  6aa8d8: 52000000     	eor	w0, w0, #0x1
+  6aa8dc: 12001c00     	and	w0, w0, #0xff
+  6aa8e0: 7100001f     	cmp	w0, #0x0
+  6aa8e4: 54000140     	b.eq	0x6aa90c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0xa54c>
+  6aa8e8: 52800024     	mov	w4, #0x1                // =1
+  6aa8ec: d0002ac0     	adrp	x0, 0xc04000
+  6aa8f0: 913f4003     	add	x3, x0, #0xfd0
+  6aa8f4: 52801342     	mov	w2, #0x9a               // =154
+  6aa8f8: d0002ac0     	adrp	x0, 0xc04000
+  6aa8fc: 913cc001     	add	x1, x0, #0xf30
+  6aa900: 52800080     	mov	w0, #0x4                // =4
+  6aa904: 94026f12     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  6aa908: 1400000f     	b	0x6aa944 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0xa584>
+  6aa90c: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aa910: f9400c05     	ldr	x5, [x0, #0x18]
+  6aa914: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aa918: f9400c00     	ldr	x0, [x0, #0x18]
+  6aa91c: f9400000     	ldr	x0, [x0]
+  6aa920: 91014000     	add	x0, x0, #0x50
+  6aa924: f9400004     	ldr	x4, [x0]
+  6aa928: b9403fe0     	ldr	w0, [sp, #0x3c]
+  6aa92c: 9100a3e1     	add	x1, sp, #0x28
+  6aa930: aa0103e3     	mov	x3, x1
+  6aa934: 52800202     	mov	w2, #0x10               // =16
+  6aa938: 2a0003e1     	mov	w1, w0
+  6aa93c: aa0503e0     	mov	x0, x5
+  6aa940: d63f0080     	blr	x4
+  6aa944: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  6aa948: d65f03c0     	ret

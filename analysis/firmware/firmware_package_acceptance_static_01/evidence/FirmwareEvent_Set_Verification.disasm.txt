@@ -1,0 +1,18 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:
+  5de938:      	stp	x29, x30, [sp, #-0x20]!
+  5de93c:      	mov	x29, sp
+  5de940:      	str	x0, [sp, #0x18]
+  5de944:      	strb	w1, [sp, #0x17]
+  5de948:      	ldrb	w2, [sp, #0x17]
+  5de94c:      	mov	w1, #0x1                // =1
+  5de950:      	ldr	x0, [sp, #0x18]
+  5de954:      	bl	0x5de8a0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0xe57f0>
+  5de958:      	nop
+  5de95c:      	ldp	x29, x30, [sp], #0x20
+  5de960:      	ret

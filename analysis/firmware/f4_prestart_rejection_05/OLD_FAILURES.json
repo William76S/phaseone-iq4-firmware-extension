@@ -1,0 +1,42 @@
+{
+  "compile": [
+    "/Library/Developer/CommandLineTools/usr/bin/clang",
+    "-isysroot",
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "tools/firmware/f4_native_session_04/session.c",
+    "tools/firmware/f4_native_session_05/test_session.c",
+    "-o",
+    "analysis/firmware/f4_prestart_rejection_05/old_session"
+  ],
+  "cases": [
+    {
+      "scenario": 10,
+      "exit": -6,
+      "stdout": "",
+      "stderr": "Assertion failed: (!get(&attached)&&!get(&accepting)&&!get(&prepared)&&!get(&finalized)&&!get(&released)), function main, file test_session.c, line 70.\n"
+    },
+    {
+      "scenario": 11,
+      "exit": -6,
+      "stdout": "",
+      "stderr": "Assertion failed: (!get(&attached)&&!get(&accepting)&&!get(&prepared)&&!get(&finalized)&&!get(&released)), function main, file test_session.c, line 70.\n"
+    },
+    {
+      "scenario": 12,
+      "exit": -6,
+      "stdout": "",
+      "stderr": "Assertion failed: (await(&p,IQ4_F4_UI_IDLE)), function main, file test_session.c, line 67.\n"
+    },
+    {
+      "scenario": 13,
+      "exit": -6,
+      "stdout": "",
+      "stderr": "Assertion failed: (refused==IQ4_F4_UI_UNKNOWN), function main, file test_session.c, line 66.\n"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin:	file format elf64-littleaarch64
+
+Disassembly of section .f1.0.20.text.activate:
+
+000000000424092c <.f1.0.20.text.activate>:
+ 424092c: b40006e0     	cbz	x0, 0x4240a08 <.f1.0.20.text.activate+0xdc>
+ 4240930: 90000288     	adrp	x8, 0x4290000
+ 4240934: f940d108     	ldr	x8, [x8, #0x1a0]
+ 4240938: eb08001f     	cmp	x0, x8
+ 424093c: 540004e0     	b.eq	0x42409d8 <.f1.0.20.text.activate+0xac>
+ 4240940: 90000288     	adrp	x8, 0x4290000
+ 4240944: f940d508     	ldr	x8, [x8, #0x1a8]
+ 4240948: eb08001f     	cmp	x0, x8
+ 424094c: 540004a0     	b.eq	0x42409e0 <.f1.0.20.text.activate+0xb4>
+ 4240950: 90000288     	adrp	x8, 0x4290000
+ 4240954: f940d908     	ldr	x8, [x8, #0x1b0]
+ 4240958: eb08001f     	cmp	x0, x8
+ 424095c: 54000460     	b.eq	0x42409e8 <.f1.0.20.text.activate+0xbc>
+ 4240960: 90000288     	adrp	x8, 0x4290000
+ 4240964: f940dd08     	ldr	x8, [x8, #0x1b8]
+ 4240968: eb08001f     	cmp	x0, x8
+ 424096c: 54000420     	b.eq	0x42409f0 <.f1.0.20.text.activate+0xc4>
+ 4240970: 90000288     	adrp	x8, 0x4290000
+ 4240974: f940e108     	ldr	x8, [x8, #0x1c0]
+ 4240978: eb08001f     	cmp	x0, x8
+ 424097c: 540003e0     	b.eq	0x42409f8 <.f1.0.20.text.activate+0xcc>
+ 4240980: 90000288     	adrp	x8, 0x4290000
+ 4240984: f940e508     	ldr	x8, [x8, #0x1c8]
+ 4240988: eb08001f     	cmp	x0, x8
+ 424098c: 54000260     	b.eq	0x42409d8 <.f1.0.20.text.activate+0xac>
+ 4240990: 90000288     	adrp	x8, 0x4290000
+ 4240994: f940e908     	ldr	x8, [x8, #0x1d0]
+ 4240998: eb08001f     	cmp	x0, x8
+ 424099c: 54000220     	b.eq	0x42409e0 <.f1.0.20.text.activate+0xb4>
+ 42409a0: 90000288     	adrp	x8, 0x4290000
+ 42409a4: f940ed08     	ldr	x8, [x8, #0x1d8]
+ 42409a8: eb08001f     	cmp	x0, x8
+ 42409ac: 540001e0     	b.eq	0x42409e8 <.f1.0.20.text.activate+0xbc>
+ 42409b0: 90000288     	adrp	x8, 0x4290000
+ 42409b4: f940f108     	ldr	x8, [x8, #0x1e0]
+ 42409b8: eb08001f     	cmp	x0, x8
+ 42409bc: 540001a0     	b.eq	0x42409f0 <.f1.0.20.text.activate+0xc4>
+ 42409c0: 90000288     	adrp	x8, 0x4290000
+ 42409c4: f940f508     	ldr	x8, [x8, #0x1e8]
+ 42409c8: eb08001f     	cmp	x0, x8
+ 42409cc: 54000160     	b.eq	0x42409f8 <.f1.0.20.text.activate+0xcc>
+ 42409d0: 2a1f03e0     	mov	w0, wzr
+ 42409d4: d65f03c0     	ret
+ 42409d8: 2a1f03e8     	mov	w8, wzr
+ 42409dc: 14000008     	b	0x42409fc <.f1.0.20.text.activate+0xd0>
+ 42409e0: 52800028     	mov	w8, #0x1                // =1
+ 42409e4: 14000006     	b	0x42409fc <.f1.0.20.text.activate+0xd0>
+ 42409e8: 52800048     	mov	w8, #0x2                // =2
+ 42409ec: 14000004     	b	0x42409fc <.f1.0.20.text.activate+0xd0>
+ 42409f0: 52800068     	mov	w8, #0x3                // =3
+ 42409f4: 14000002     	b	0x42409fc <.f1.0.20.text.activate+0xd0>
+ 42409f8: 52800088     	mov	w8, #0x4                // =4
+ 42409fc: 90000289     	adrp	x9, 0x4290000
+ 4240a00: 52800020     	mov	w0, #0x1                // =1
+ 4240a04: b9000128     	str	w8, [x9]
+ 4240a08: d65f03c0     	ret

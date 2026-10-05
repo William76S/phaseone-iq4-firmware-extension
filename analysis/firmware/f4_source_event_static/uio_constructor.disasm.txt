@@ -1,0 +1,46 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  76e6c0: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  76e6c4: 910003fd     	mov	x29, sp
+  76e6c8: f9000bf3     	str	x19, [sp, #0x10]
+  76e6cc: f90017e0     	str	x0, [sp, #0x28]
+  76e6d0: f90013e1     	str	x1, [sp, #0x20]
+  76e6d4: f94017e0     	ldr	x0, [sp, #0x28]
+  76e6d8: 94000099     	bl	0x76e93c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x54c10>
+  76e6dc: d0002680     	adrp	x0, 0xc40000
+  76e6e0: 912d6001     	add	x1, x0, #0xb58
+  76e6e4: f94017e0     	ldr	x0, [sp, #0x28]
+  76e6e8: f9000001     	str	x1, [x0]
+  76e6ec: 52800041     	mov	w1, #0x2                // =2
+  76e6f0: 72a00101     	movk	w1, #0x8, lsl #16
+  76e6f4: f94013e0     	ldr	x0, [sp, #0x20]
+  76e6f8: 97f26f76     	bl	0x40a4d0 <open@plt>
+  76e6fc: 2a0003e1     	mov	w1, w0
+  76e700: f94017e0     	ldr	x0, [sp, #0x28]
+  76e704: b9000801     	str	w1, [x0, #0x8]
+  76e708: f94017e0     	ldr	x0, [sp, #0x28]
+  76e70c: b9400800     	ldr	w0, [x0, #0x8]
+  76e710: 7100001f     	cmp	w0, #0x0
+  76e714: 540001ca     	b.ge	0x76e74c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x54a20>
+  76e718: d0002680     	adrp	x0, 0xc40000
+  76e71c: 9127c003     	add	x3, x0, #0x9f0
+  76e720: 52800182     	mov	w2, #0xc                // =12
+  76e724: d0002680     	adrp	x0, 0xc40000
+  76e728: 912a0001     	add	x1, x0, #0xa80
+  76e72c: 52800040     	mov	w0, #0x2                // =2
+  76e730: 97ff5f87     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  76e734: 14000006     	b	0x76e74c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x54a20>
+  76e738: aa0003f3     	mov	x19, x0
+  76e73c: f94017e0     	ldr	x0, [sp, #0x28]
+  76e740: 9400006c     	bl	0x76e8f0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x54bc4>
+  76e744: aa1303e0     	mov	x0, x19
+  76e748: 97f27002     	bl	0x40a750 <_Unwind_Resume@plt>
+  76e74c: d503201f     	nop
+  76e750: f9400bf3     	ldr	x19, [sp, #0x10]
+  76e754: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  76e758: d65f03c0     	ret

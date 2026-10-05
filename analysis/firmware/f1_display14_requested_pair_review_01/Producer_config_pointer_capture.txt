@@ -1,0 +1,34 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no camera access or target execution.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  787578: a9b87bfd     	stp	x29, x30, [sp, #-0x80]!
+  78757c: f0003e65     	adrp	x5, 0xf56000
+  787580: 910003fd     	mov	x29, sp
+  787584: a9046bf9     	stp	x25, x26, [sp, #0x40]
+  787588: d001c0f9     	adrp	x25, 0x3fa5000 <_ZNSt5ctypeIcE2idE+0x3041ed8>
+  78758c: a90363f7     	stp	x23, x24, [sp, #0x30]
+  787590: aa0203f7     	mov	x23, x2
+  787594: b9411322     	ldr	w2, [x25, #0x110]
+  787598: a9025bf5     	stp	x21, x22, [sp, #0x20]
+  78759c: d001c115     	adrp	x21, 0x3fa9000 <_ZNSt5ctypeIcE2idE+0x3045ed8>
+  7875a0: 9124e2b5     	add	x21, x21, #0x938
+  7875a4: 8b020842     	add	x2, x2, x2, lsl #2
+  7875a8: b94072e4     	ldr	w4, [x23, #0x70]
+  7875ac: a90153f3     	stp	x19, x20, [sp, #0x10]
+  7875b0: aa0103f8     	mov	x24, x1
+  7875b4: 8b020ea2     	add	x2, x21, x2, lsl #3
+  7875b8: a90573fb     	stp	x27, x28, [sp, #0x50]
+  7875bc: aa0003f3     	mov	x19, x0
+  7875c0: aa0303f4     	mov	x20, x3
+  7875c4: b9001c5f     	str	wzr, [x2, #0x1c]
+  7875c8: 397650a0     	ldrb	w0, [x5, #0xd94]
+  7875cc: 34000804     	cbz	w4, 0x7876cc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6d9a0>
+  7875d0: 51000496     	sub	w22, w4, #0x1
+  7875d4: b90072f6     	str	w22, [x23, #0x70]
+  7875d8: 350025e0     	cbnz	w0, 0x787a94 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6dd68>
+  7875dc: 340007b6     	cbz	w22, 0x7876d0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6d9a4>

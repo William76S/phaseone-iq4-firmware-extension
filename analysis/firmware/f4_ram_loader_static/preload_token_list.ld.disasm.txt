@@ -1,0 +1,63 @@
+analysis/firmware/f4_ram_loader_static/ld-2.28.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000001040 <.text>:
+    1fe8:      	mov	x16, #0x1050            // =4176
+    1fec:      	sub	sp, sp, x16
+    1ff0:      	stp	x29, x30, [sp]
+    1ff4:      	mov	x29, sp
+    1ff8:      	stp	x19, x20, [sp, #0x10]
+    1ffc:      	mov	x19, x0
+    2000:      	stp	x21, x22, [sp, #0x20]
+    2004:      	adrp	x22, 0x18000
+    2008:      	add	x21, sp, #0x50
+    200c:      	add	x22, x22, #0x728
+    2010:      	stp	x23, x24, [sp, #0x30]
+    2014:      	adrp	x24, 0x18000
+    2018:      	add	x24, x24, #0x730
+    201c:      	str	x25, [sp, #0x40]
+    2020:      	mov	x25, x1
+    2024:      	mov	w23, #0x0               // =0
+    2028:      	ldrb	w2, [x19]
+    202c:      	mov	x1, x22
+    2030:      	mov	x0, x19
+    2034:      	cbz	w2, 0x2094 <.text+0x1054>
+    2038:      	bl	0x16c28 <_dl_catch_error+0x1828>
+    203c:      	mov	x20, x0
+    2040:      	sub	x0, x0, #0x1
+    2044:      	cmp	x0, #0xffe
+    2048:      	b.ls	0x20b8 <.text+0x1078>
+    204c:      	strb	wzr, [sp, #0x50]
+    2050:      	add	x19, x19, x20
+    2054:      	mov	x0, x21
+    2058:      	ldrb	w1, [x19]
+    205c:      	cmp	w1, #0x0
+    2060:      	cinc	x19, x19, ne
+    2064:      	bl	0x1570 <.text+0x530>
+    2068:      	tst	w0, #0xff
+    206c:      	b.eq	0x2028 <.text+0xfe8>
+    2070:      	mov	x2, x24
+    2074:      	mov	x1, x25
+    2078:      	mov	x0, x21
+    207c:      	bl	0x1230 <.text+0x1f0>
+    2080:      	ldrb	w2, [x19]
+    2084:      	add	w23, w23, w0
+    2088:      	mov	x1, x22
+    208c:      	mov	x0, x19
+    2090:      	cbnz	w2, 0x2038 <.text+0xff8>
+    2094:      	mov	w0, w23
+    2098:      	mov	x16, #0x1050            // =4176
+    209c:      	ldp	x29, x30, [sp]
+    20a0:      	ldp	x19, x20, [sp, #0x10]
+    20a4:      	ldp	x21, x22, [sp, #0x20]
+    20a8:      	ldp	x23, x24, [sp, #0x30]
+    20ac:      	ldr	x25, [sp, #0x40]
+    20b0:      	add	sp, sp, x16
+    20b4:      	ret
+    20b8:      	mov	x2, x20
+    20bc:      	mov	x1, x19
+    20c0:      	mov	x0, x21
+    20c4:      	bl	0x178d0 <_dl_catch_error+0x24d0>
+    20c8:      	strb	wzr, [x21, x20]
+    20cc:      	b	0x2050 <.text+0x1010>

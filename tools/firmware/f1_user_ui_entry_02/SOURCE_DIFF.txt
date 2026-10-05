@@ -1,0 +1,36 @@
+--- tools/firmware/f1_user_ui_entry_01/runtime.cpp
++++ tools/firmware/f1_user_ui_entry_02/runtime.cpp
+@@ -1,6 +1,7 @@
+ #include "state.h"
+ #include "entry_binding_10.hpp"
+ #include "stock_windows.hpp"
++#include "display_grid.hpp"
+ #include "../f4_ui_bootstrap_02/sha256.h"
+ #include <elf.h>
+ #include <fcntl.h>
+@@ -69,7 +70,7 @@
+   if(count==512||node<4096||(node&7))return false;for(unsigned i=0;i<count;++i)if(seen[i]==node)return false;seen[count]=node;
+   Address parent{},prev{},next{};Rectangle24 r{};unsigned char visible{};
+   if(!p.word(node+8,parent)||parent!=o.lv||!p.word(node+0x18,prev)||prev!=previous||!p.word(node+0x20,next)||!p.read(node+0x28,&r,sizeof r)||r.address_point!=0xb73b98||r.width<0||r.height<0||!p.read(node+0x6f,&visible,1)||visible>1)return false;
+-  boxes[count++].r=visible?r:Rectangle24{};previous=node;node=next;
++  boxes[count++].r=visible&&!iq4::f1::firmware_ui02::display_grid_without_click_target(p,o.lv,node)?r:Rectangle24{};previous=node;node=next;
+  }
+  Address again{};if(!p.word(o.lv+0x10,again)||again!=first)return false;
+  for(int y=0;y<=bounds.height-128;y+=128)for(int x=0;x<=bounds.width-128;x+=128){
+--- tools/firmware/f1_user_ui_entry_01/entry_binding_10.cpp
++++ tools/firmware/f1_user_ui_entry_02/entry_binding_10.cpp
+@@ -1,4 +1,5 @@
+ #include "entry_binding_10.hpp"
++#include "display_grid.hpp"
+ #include <cstring>
+ #include <limits>
+ namespace iq4::f1::entry10 {
+@@ -56,7 +57,7 @@
+   if(count==seen.size()||node==own_button()||node<4096||(node&7))return false;for(unsigned i=0;i<count;i++)if(seen[i]==node)return false;seen[count++]=node;
+   Address parent{},prev{},next{};Rectangle24 r{};std::uint8_t visible{};
+   if(!p.word(node+8,parent)||parent!=owner_.lv||!p.word(node+0x18,prev)||prev!=previous||!p.word(node+0x20,next)||!p.read(node+0x28,&r,sizeof r)||r.address_point!=0xb73b98||r.width<0||r.height<0||!p.read(node+0x6f,&visible,1)||visible>1)return false;
+-  if(visible&&overlaps(r,placement_.x,placement_.y))return false;previous=node;node=next;
++  if(visible&&overlaps(r,placement_.x,placement_.y)&&!firmware_ui02::display_grid_without_click_target(p,owner_.lv,node))return false;previous=node;node=next;
+  }
+  Address again{};return p.word(owner_.lv+0x10,again)&&again==first;
+ }

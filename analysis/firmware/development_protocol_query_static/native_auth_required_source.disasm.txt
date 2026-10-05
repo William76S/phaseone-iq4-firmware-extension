@@ -1,0 +1,22 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  851d44: f94017e0     	ldr	x0, [sp, #0x28]
+  851d48: f9415c00     	ldr	x0, [x0, #0x2b8]
+  851d4c: f100001f     	cmp	x0, #0x0
+  851d50: 54000140     	b.eq	0x851d78 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0xd9b4>
+  851d54: f94017e0     	ldr	x0, [sp, #0x28]
+  851d58: f9415c00     	ldr	x0, [x0, #0x2b8]
+  851d5c: 91002000     	add	x0, x0, #0x8
+  851d60: 97ef0b07     	bl	0x41497c <.text+0x974c>
+  851d64: 12001c00     	and	w0, w0, #0xff
+  851d68: 7100001f     	cmp	w0, #0x0
+  851d6c: 54000060     	b.eq	0x851d78 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0xd9b4>
+  851d70: 52800020     	mov	w0, #0x1                // =1
+  851d74: 14000002     	b	0x851d7c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0xd9b8>
+  851d78: 52800000     	mov	w0, #0x0                // =0
+  851d7c: 39035fe0     	strb	w0, [sp, #0xd7]

@@ -1,0 +1,26 @@
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_capture_menu_build_09_native_size/menu.o: \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/runtime.c \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_capture_menu_04/menu.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_capture_menu_06/policy.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_capture_menu_06/../f3_capture_menu_04/policy.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_capture_menu_06/../f3_capture_menu_04/../f3_save_transaction_01/transaction.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_capture_menu_06/backend.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/coordinator.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../f3_saved_raw_capture_01/capture.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../f3_saved_raw_capture_01/../f3_native_card_bridge_06/card.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../f3_saved_raw_capture_01/../f3_native_card_bridge_06/../f3_native_card_bridge_05/card.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../f3_saved_raw_capture_01/../f3_native_card_bridge_06/../f3_native_card_bridge_05/../f3_native_fs_adapter_04/fs.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../f3_saved_raw_capture_01/../f3_native_card_bridge_06/../f3_native_card_bridge_05/../f3_native_fs_adapter_04/../f3_stream_transaction_02/stream.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../f3_saved_raw_capture_01/../f3_native_card_bridge_06/../f3_native_card_bridge_05/../f3_native_fs_adapter_04/../f3_stream_transaction_02/../f3_save_transaction_01/transaction.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../f3_saved_raw_capture_01/../f3_native_card_bridge_06/../f3_native_card_bridge_05/../f3_native_fs_adapter_04/../f3_stream_transaction_02/sha256.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../f3_saved_raw_capture_01/../native_activity_01/activity.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../f3_native_executor_01/executor.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../f3_native_executor_01/../native_activity_01/activity.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../../../src/codec/bounded_jpeg.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../../../src/codec/vendor/libjpeg-turbo-1.5.3/jpeglib.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../../../src/codec/vendor/libjpeg-turbo-1.5.3/jconfig.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_save_coordinator_06/../../../src/codec/vendor/libjpeg-turbo-1.5.3/jmorecfg.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f4_native_menu_03/native_calls.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f4_native_source_02/native_calls.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../native_runtime_01/self_read.h \
+  /Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_capture_menu_09/../f3_capture_menu_04/code_pins.h

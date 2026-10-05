@@ -1,0 +1,615 @@
+{
+  "Published": {
+    "bytes": 1440,
+    "fields": {
+      "sequence": {
+        "offset": 0,
+        "bytes": 4
+      },
+      "bytes": {
+        "offset": 4,
+        "bytes": 4
+      },
+      "schema": {
+        "offset": 8,
+        "bytes": 4
+      },
+      "reserved": {
+        "offset": 12,
+        "bytes": 4
+      },
+      "metadata": {
+        "offset": 16,
+        "bytes": 1424
+      }
+    }
+  },
+  "Metadata": {
+    "bytes": 1424,
+    "fields": {
+      "schema": {
+        "offset": 0,
+        "bytes": 4
+      },
+      "bytes": {
+        "offset": 4,
+        "bytes": 4
+      },
+      "result": {
+        "offset": 8,
+        "bytes": 4
+      },
+      "kind": {
+        "offset": 12,
+        "bytes": 4
+      },
+      "exact_user_sha256": {
+        "offset": 16,
+        "bytes": 32
+      },
+      "exact_user_bytes": {
+        "offset": 48,
+        "bytes": 8
+      },
+      "boundary_attempts": {
+        "offset": 56,
+        "bytes": 8
+      },
+      "paint_attempts": {
+        "offset": 64,
+        "bytes": 8
+      },
+      "publication_epoch": {
+        "offset": 72,
+        "bytes": 8
+      },
+      "source_dispatch_epoch": {
+        "offset": 80,
+        "bytes": 8
+      },
+      "source_stack_epoch": {
+        "offset": 88,
+        "bytes": 8
+      },
+      "paint_call_serial": {
+        "offset": 96,
+        "bytes": 8
+      },
+      "own_shadow_address_point": {
+        "offset": 104,
+        "bytes": 8
+      },
+      "own_paint_callback": {
+        "offset": 112,
+        "bytes": 8
+      },
+      "owner_present": {
+        "offset": 120,
+        "bytes": 4
+      },
+      "geometry_present": {
+        "offset": 124,
+        "bytes": 4
+      },
+      "paint_present": {
+        "offset": 128,
+        "bytes": 4
+      },
+      "shadow_table_ready": {
+        "offset": 132,
+        "bytes": 4
+      },
+      "source_anchor_startup": {
+        "offset": 136,
+        "bytes": 4
+      },
+      "source_anchor_relation": {
+        "offset": 140,
+        "bytes": 4
+      },
+      "mask_enabled": {
+        "offset": 144,
+        "bytes": 4
+      },
+      "full_source_mapping_verified": {
+        "offset": 148,
+        "bytes": 4
+      },
+      "fresh_blit_verified": {
+        "offset": 152,
+        "bytes": 4
+      },
+      "surface_lease_verified": {
+        "offset": 156,
+        "bytes": 4
+      },
+      "native_provider_getter_called": {
+        "offset": 160,
+        "bytes": 4
+      },
+      "native_fill_called": {
+        "offset": 164,
+        "bytes": 4
+      },
+      "native_ui_mutation_called": {
+        "offset": 168,
+        "bytes": 4
+      },
+      "reserved": {
+        "offset": 172,
+        "bytes": 4
+      },
+      "owner_before": {
+        "offset": 176,
+        "bytes": 232
+      },
+      "owner_after": {
+        "offset": 408,
+        "bytes": 232
+      },
+      "geometry_before": {
+        "offset": 640,
+        "bytes": 248
+      },
+      "geometry_after": {
+        "offset": 888,
+        "bytes": 248
+      },
+      "paint": {
+        "offset": 1136,
+        "bytes": 288
+      }
+    }
+  },
+  "OwnerFacts": {
+    "bytes": 232,
+    "fields": {
+      "owner": {
+        "offset": 0,
+        "bytes": 40
+      },
+      "actual_lv_vtable": {
+        "offset": 40,
+        "bytes": 8
+      },
+      "provider": {
+        "offset": 48,
+        "bytes": 8
+      },
+      "provider_vtable": {
+        "offset": 56,
+        "bytes": 8
+      },
+      "getter_target": {
+        "offset": 64,
+        "bytes": 8
+      },
+      "present_target": {
+        "offset": 72,
+        "bytes": 8
+      },
+      "configurator_provider": {
+        "offset": 80,
+        "bytes": 8
+      },
+      "resource_wrapper": {
+        "offset": 88,
+        "bytes": 8
+      },
+      "lv_resource_wrapper": {
+        "offset": 96,
+        "bytes": 8
+      },
+      "resource_provider": {
+        "offset": 104,
+        "bytes": 8
+      },
+      "resource_provider_vtable": {
+        "offset": 112,
+        "bytes": 8
+      },
+      "popup_header": {
+        "offset": 120,
+        "bytes": 8
+      },
+      "popup_root": {
+        "offset": 128,
+        "bytes": 8
+      },
+      "popup_selected": {
+        "offset": 136,
+        "bytes": 8
+      },
+      "provider_typeinfo": {
+        "offset": 144,
+        "bytes": 8
+      },
+      "provider_offset_to_top": {
+        "offset": 152,
+        "bytes": 8
+      },
+      "getter_first16": {
+        "offset": 160,
+        "bytes": 16
+      },
+      "present_first16": {
+        "offset": 176,
+        "bytes": 16
+      },
+      "provider_header_present": {
+        "offset": 192,
+        "bytes": 4
+      },
+      "getter_prefix_present": {
+        "offset": 196,
+        "bytes": 4
+      },
+      "present_prefix_present": {
+        "offset": 200,
+        "bytes": 4
+      },
+      "getter_in_original_user_executable_load": {
+        "offset": 204,
+        "bytes": 4
+      },
+      "provider_alias_equal": {
+        "offset": 208,
+        "bytes": 4
+      },
+      "resource_alias_equal": {
+        "offset": 212,
+        "bytes": 4
+      },
+      "popup_title": {
+        "offset": 216,
+        "bytes": 4
+      },
+      "popup_depth": {
+        "offset": 220,
+        "bytes": 4
+      },
+      "stack_shape": {
+        "offset": 224,
+        "bytes": 4
+      },
+      "shadow_instance": {
+        "offset": 228,
+        "bytes": 4
+      }
+    }
+  },
+  "GeometryFacts": {
+    "bytes": 248,
+    "fields": {
+      "scalars": {
+        "offset": 0,
+        "bytes": 176
+      },
+      "access": {
+        "offset": 176,
+        "bytes": 8
+      },
+      "engine": {
+        "offset": 184,
+        "bytes": 8
+      },
+      "buffer": {
+        "offset": 192,
+        "bytes": 8
+      },
+      "config_point_candidates": {
+        "offset": 200,
+        "bytes": 32
+      },
+      "config_point_model_valid": {
+        "offset": 232,
+        "bytes": 4
+      },
+      "config_equals_slot": {
+        "offset": 236,
+        "bytes": 4
+      },
+      "config_equals_roi": {
+        "offset": 240,
+        "bytes": 4
+      },
+      "slot_equals_roi": {
+        "offset": 244,
+        "bytes": 4
+      }
+    }
+  },
+  "PaintFacts": {
+    "bytes": 288,
+    "fields": {
+      "thread_pointer": {
+        "offset": 0,
+        "bytes": 8
+      },
+      "wrapper_frame": {
+        "offset": 8,
+        "bytes": 8
+      },
+      "caller_pc": {
+        "offset": 16,
+        "bytes": 8
+      },
+      "control_frame": {
+        "offset": 24,
+        "bytes": 8
+      },
+      "manager_frame": {
+        "offset": 32,
+        "bytes": 8
+      },
+      "lv": {
+        "offset": 40,
+        "bytes": 8
+      },
+      "surface": {
+        "offset": 48,
+        "bytes": 8
+      },
+      "draw_arg": {
+        "offset": 56,
+        "bytes": 8
+      },
+      "clip_arg": {
+        "offset": 64,
+        "bytes": 8
+      },
+      "draw_owner": {
+        "offset": 72,
+        "bytes": 8
+      },
+      "draw_vtable": {
+        "offset": 80,
+        "bytes": 8
+      },
+      "input_draw": {
+        "offset": 88,
+        "bytes": 24
+      },
+      "input_clip": {
+        "offset": 112,
+        "bytes": 24
+      },
+      "display_bounds": {
+        "offset": 136,
+        "bytes": 24
+      },
+      "original_return": {
+        "offset": 160,
+        "bytes": 24
+      },
+      "post_draw": {
+        "offset": 184,
+        "bytes": 24
+      },
+      "post_clip": {
+        "offset": 208,
+        "bytes": 24
+      },
+      "post_display_bounds": {
+        "offset": 232,
+        "bytes": 24
+      },
+      "pitch_pixels": {
+        "offset": 256,
+        "bytes": 4
+      },
+      "height": {
+        "offset": 260,
+        "bytes": 4
+      },
+      "original_returned_normally": {
+        "offset": 264,
+        "bytes": 4
+      },
+      "geometry_equal_before_after": {
+        "offset": 268,
+        "bytes": 4
+      },
+      "post_pitch_pixels": {
+        "offset": 272,
+        "bytes": 4
+      },
+      "post_height": {
+        "offset": 276,
+        "bytes": 4
+      },
+      "surface_metadata_equal": {
+        "offset": 280,
+        "bytes": 4
+      },
+      "reserved": {
+        "offset": 284,
+        "bytes": 4
+      }
+    }
+  },
+  "WireGeometry": {
+    "bytes": 176,
+    "fields": {
+      "local_control": {
+        "offset": 0,
+        "bytes": 24
+      },
+      "recursive_bounds_candidate": {
+        "offset": 24,
+        "bytes": 24
+      },
+      "locked_roi": {
+        "offset": 48,
+        "bytes": 24
+      },
+      "pan_x": {
+        "offset": 72,
+        "bytes": 4
+      },
+      "pan_y": {
+        "offset": 76,
+        "bytes": 4
+      },
+      "scale": {
+        "offset": 80,
+        "bytes": 4
+      },
+      "normal_fit_scale": {
+        "offset": 84,
+        "bytes": 4
+      },
+      "rotation": {
+        "offset": 88,
+        "bytes": 4
+      },
+      "client_id": {
+        "offset": 92,
+        "bytes": 4
+      },
+      "access_owner": {
+        "offset": 96,
+        "bytes": 4
+      },
+      "config_width": {
+        "offset": 100,
+        "bytes": 4
+      },
+      "config_height": {
+        "offset": 104,
+        "bytes": 4
+      },
+      "slot_width": {
+        "offset": 108,
+        "bytes": 4
+      },
+      "slot_height": {
+        "offset": 112,
+        "bytes": 4
+      },
+      "countdown": {
+        "offset": 116,
+        "bytes": 4
+      },
+      "software_completion_id": {
+        "offset": 120,
+        "bytes": 4
+      },
+      "locked_slot": {
+        "offset": 124,
+        "bytes": 4
+      },
+      "parent_depth": {
+        "offset": 128,
+        "bytes": 4
+      },
+      "alignment_flags": {
+        "offset": 132,
+        "bytes": 4
+      },
+      "running": {
+        "offset": 136,
+        "bytes": 4
+      },
+      "visible": {
+        "offset": 140,
+        "bytes": 4
+      },
+      "pan_animation": {
+        "offset": 144,
+        "bytes": 4
+      },
+      "borrowed_pointer_present": {
+        "offset": 148,
+        "bytes": 4
+      },
+      "retain_borrowed": {
+        "offset": 152,
+        "bytes": 4
+      },
+      "locked_metadata_present": {
+        "offset": 156,
+        "bytes": 4
+      },
+      "recursive_bounds_candidate_present": {
+        "offset": 160,
+        "bytes": 4
+      },
+      "parent_transform_would_update_local_size": {
+        "offset": 164,
+        "bytes": 4
+      },
+      "consistent_double_read": {
+        "offset": 168,
+        "bytes": 4
+      },
+      "reserved": {
+        "offset": 172,
+        "bytes": 4
+      }
+    }
+  },
+  "Owner": {
+    "bytes": 40,
+    "fields": {
+      "queue": {
+        "offset": 0,
+        "bytes": 8
+      },
+      "manager": {
+        "offset": 8,
+        "bytes": 8
+      },
+      "data": {
+        "offset": 16,
+        "bytes": 8
+      },
+      "lv": {
+        "offset": 24,
+        "bytes": 8
+      },
+      "popup": {
+        "offset": 32,
+        "bytes": 8
+      }
+    }
+  },
+  "Rectangle24": {
+    "bytes": 24,
+    "fields": {
+      "address_point": {
+        "offset": 0,
+        "bytes": 8
+      },
+      "x": {
+        "offset": 8,
+        "bytes": 4
+      },
+      "y": {
+        "offset": 12,
+        "bytes": 4
+      },
+      "width": {
+        "offset": 16,
+        "bytes": 4
+      },
+      "height": {
+        "offset": 20,
+        "bytes": 4
+      }
+    }
+  },
+  "geometry03::Point8": {
+    "bytes": 8,
+    "fields": {
+      "x": {
+        "offset": 0,
+        "bytes": 4
+      },
+      "y": {
+        "offset": 4,
+        "bytes": 4
+      }
+    }
+  }
+}

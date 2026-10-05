@@ -1,0 +1,642 @@
+{
+  "schema": 11,
+  "public_ABI": 10,
+  "only_production_delta": "two Binding phases invalidate already captured Native.current",
+  "unchanged_production_sources": [
+    {
+      "name": "normal_fit.cpp",
+      "sha256": "2fbf34380071d5cb16916287c0ee0e7f35545e018abeb6df586be0629d144686"
+    },
+    {
+      "name": "fixed_plan.cpp",
+      "sha256": "6e9f797d49d9b820d3f9d282ed47bd6170ab01ac4af9ab471f9909c155adef26"
+    },
+    {
+      "name": "provider.cpp",
+      "sha256": "5d00e6c2c1f6dd0d8204b82566a0e6b30848554795d11aa650a42a90a5cf2c3f"
+    },
+    {
+      "name": "hook_capture.cpp",
+      "sha256": "9605b0cbe7c4c380f3b35ac9bc4dc91efb265cd88c52d7afcd65a8d032f713b4"
+    },
+    {
+      "name": "integration.cpp",
+      "sha256": "9591415075ea5c80207728e3c9ee34e041ca2994e33a5f4aa02e2341bcefb8d3"
+    },
+    {
+      "name": "prepare_linux.cpp",
+      "sha256": "8b2bffc9a670d80a6ea740057bf392d9cb19019c6a2cbc7d95afd4d4812613cd"
+    },
+    {
+      "name": "runtime_prepare_10.cpp",
+      "sha256": "8abf3b7160be8a4feb7b26672b90c472b9d473c8b3ca88bf942032aaa48ec261"
+    },
+    {
+      "name": "entry_bridge_10.hpp",
+      "sha256": "7422ed1c2eccfc1df0c1a24d7ef98aa4ab3519bad0ffb4a9c179f4f588ff3761"
+    },
+    {
+      "name": "entry_binding_10.hpp",
+      "sha256": "5f6ec6343bc4d4c5f585b169496ab29dc688ce4463c7e13b2020ed6f47a08f9f"
+    },
+    {
+      "name": "scaler_bridge.S",
+      "sha256": "3d9513323e42d968e6803de10a2b50210d48c7ec5e4ab712a0ebd96810f708fa"
+    },
+    {
+      "name": "normal_fit.hpp",
+      "sha256": "ee33372da507b3badaacdf980037077fc2839c378c8fcdce63400de16742d28c"
+    },
+    {
+      "name": "provider.hpp",
+      "sha256": "b06e3da4c652a47b629fc7eeaf1bda2e0531b648d5b84fc82417e0a381b12408"
+    },
+    {
+      "name": "hook_capture.hpp",
+      "sha256": "87b6ec7e84157b22f9be93ad5e37a938d53d02c33b90ce6392d2152c2acc9977"
+    },
+    {
+      "name": "integration.hpp",
+      "sha256": "58c432aaa20da8c4529dfcf3d60442ca43b91d337d5522810df243dfd779d156"
+    },
+    {
+      "name": "prepare.hpp",
+      "sha256": "a91392abc898ef9678361b29c905f25bcf0e189da682348a006d64c3d8196c82"
+    },
+    {
+      "name": "transaction.cpp",
+      "sha256": "baadc8b07d841185ef8d489ad90ecfd1c742c7633710ac52c01552058d64575f"
+    },
+    {
+      "name": "transaction.hpp",
+      "sha256": "0fcc9342af51085171b6e2f68ffbd4cf75e82bf6530baec5ad60aa5da6277279"
+    },
+    {
+      "name": "linux_controller.cpp",
+      "sha256": "13758beadfffda88db9072565082dac6b79f3b743e33581b182decf79d327594"
+    },
+    {
+      "name": "layout.cpp",
+      "sha256": "bae481b6c246c5b1bb874ed99bd1eef5f8e942c38904dd732366f69ca63f308e"
+    }
+  ],
+  "linked_functions": {
+    "pthread_mutex_unlock": {
+      "name": "pthread_mutex_unlock",
+      "info": 18,
+      "section": 13,
+      "va": 163624,
+      "size": 2668,
+      "body_sha256": "c2c9da1cc94d08e441c791b012b3c2cb5e8944ba0004f05d18c46ec07e4ca7c3",
+      "direct_BL_calls": [
+        {
+          "at": 163684,
+          "target": 175152,
+          "names": []
+        },
+        {
+          "at": 163700,
+          "target": 161632,
+          "names": [
+            "_ZN12_GLOBAL__N_116resolve_originalEv"
+          ]
+        },
+        {
+          "at": 163892,
+          "target": 174788,
+          "names": [
+            "memset"
+          ]
+        },
+        {
+          "at": 163908,
+          "target": 116964,
+          "names": [
+            "_ZNK3iq42f17entry016Module8snapshotERNS1_11ObservationE"
+          ]
+        },
+        {
+          "at": 163932,
+          "target": 116016,
+          "names": [
+            "_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE"
+          ]
+        },
+        {
+          "at": 163956,
+          "target": 174788,
+          "names": [
+            "memset"
+          ]
+        },
+        {
+          "at": 163968,
+          "target": 116964,
+          "names": [
+            "_ZNK3iq42f17entry016Module8snapshotERNS1_11ObservationE"
+          ]
+        },
+        {
+          "at": 164024,
+          "target": 174540,
+          "names": [
+            "memcpy"
+          ]
+        },
+        {
+          "at": 164236,
+          "target": 174788,
+          "names": [
+            "memset"
+          ]
+        },
+        {
+          "at": 164276,
+          "target": 104068,
+          "names": [
+            "_ZN3iq42f19observe049Collector7captureERKNS0_11native_ui0213BoundaryInputERKNS0_7entry0111ObservationEjRNS1_8MetadataE"
+          ]
+        },
+        {
+          "at": 164320,
+          "target": 174540,
+          "names": [
+            "memcpy"
+          ]
+        },
+        {
+          "at": 164472,
+          "target": 174788,
+          "names": [
+            "memset"
+          ]
+        },
+        {
+          "at": 164536,
+          "target": 100128,
+          "names": [
+            "_ZN3iq42f17stack059Collector7captureERKNS0_11native_ui0213BoundaryInputERKNS0_7entry0111ObservationESA_jRNS1_8MetadataE"
+          ]
+        },
+        {
+          "at": 164580,
+          "target": 174540,
+          "names": [
+            "memcpy"
+          ]
+        },
+        {
+          "at": 164648,
+          "target": 174788,
+          "names": [
+            "memset"
+          ]
+        },
+        {
+          "at": 164712,
+          "target": 93900,
+          "names": [
+            "_ZN3iq42f19display069Collector16capture_boundaryERKNS0_11native_ui0213BoundaryInputERKNS0_7stack058MetadataERNS1_8MetadataE"
+          ]
+        },
+        {
+          "at": 164732,
+          "target": 97732,
+          "names": [
+            "_ZN3iq42f19display067publishERNS1_9PublishedERKNS1_8MetadataE"
+          ]
+        },
+        {
+          "at": 165028,
+          "target": 174344,
+          "names": [
+            "lstat",
+            "__lstat"
+          ]
+        },
+        {
+          "at": 165084,
+          "target": 166320,
+          "names": [
+            "_ZN3iq42f17entry1014BoundaryBridge27after_original_unlock_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_9display069CollectorERKNS0_11native_ui0213BoundaryInputENS1_15SynchronizationE"
+          ]
+        },
+        {
+          "at": 165140,
+          "target": 142880,
+          "names": [
+            "_ZN3iq42f18normal1010UI10Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry107BindingERKNS0_11native_ui0213BoundaryInputE"
+          ]
+        },
+        {
+          "at": 165168,
+          "target": 154556,
+          "names": [
+            "_ZN3iq42f16hook1023prepare_once_at_live_uiERNS0_8normal1010UI10BridgeERNS0_7entry016ModuleENS0_14native_overlay6MemoryE"
+          ]
+        },
+        {
+          "at": 165292,
+          "target": 174540,
+          "names": [
+            "memcpy"
+          ]
+        },
+        {
+          "at": 165316,
+          "target": 97732,
+          "names": [
+            "_ZN3iq42f19display067publishERNS1_9PublishedERKNS1_8MetadataE"
+          ]
+        },
+        {
+          "at": 165424,
+          "target": 174344,
+          "names": [
+            "lstat",
+            "__lstat"
+          ]
+        },
+        {
+          "at": 165624,
+          "target": 174328,
+          "names": [
+            "fstat",
+            "__fstat"
+          ]
+        },
+        {
+          "at": 165860,
+          "target": 174328,
+          "names": [
+            "fstat",
+            "__fstat"
+          ]
+        },
+        {
+          "at": 166024,
+          "target": 175424,
+          "names": []
+        },
+        {
+          "at": 166104,
+          "target": 175440,
+          "names": []
+        },
+        {
+          "at": 166136,
+          "target": 175020,
+          "names": [
+            "$x",
+            "bcmp"
+          ]
+        },
+        {
+          "at": 166152,
+          "target": 166292,
+          "names": [
+            "_ZN12_GLOBAL__N_115unresolved_holdEv"
+          ]
+        },
+        {
+          "at": 166168,
+          "target": 174344,
+          "names": [
+            "lstat",
+            "__lstat"
+          ]
+        },
+        {
+          "at": 166288,
+          "target": 84824,
+          "names": [
+            "__clang_call_terminate"
+          ]
+        }
+      ]
+    },
+    "prepare_once_at_live_ui": {
+      "name": "_ZN3iq42f16hook1023prepare_once_at_live_uiERNS0_8normal1010UI10BridgeERNS0_7entry016ModuleENS0_14native_overlay6MemoryE",
+      "info": 2,
+      "section": 13,
+      "va": 154556,
+      "size": 2572,
+      "body_sha256": "61553303566be09391b4da87a414009cebe23a1b2e687a9c44d2ea84575187f4",
+      "direct_BL_calls": [
+        {
+          "at": 154604,
+          "target": 175152,
+          "names": []
+        },
+        {
+          "at": 154664,
+          "target": 174344,
+          "names": [
+            "lstat",
+            "__lstat"
+          ]
+        },
+        {
+          "at": 154752,
+          "target": 175232,
+          "names": []
+        },
+        {
+          "at": 154764,
+          "target": 175248,
+          "names": []
+        },
+        {
+          "at": 154956,
+          "target": 174344,
+          "names": [
+            "lstat",
+            "__lstat"
+          ]
+        },
+        {
+          "at": 155248,
+          "target": 157128,
+          "names": [
+            "_ZN3iq42f16hook1012_GLOBAL__N_19read_rootEPKcPvmb"
+          ]
+        },
+        {
+          "at": 155272,
+          "target": 157128,
+          "names": [
+            "_ZN3iq42f16hook1012_GLOBAL__N_19read_rootEPKcPvmb"
+          ]
+        },
+        {
+          "at": 155404,
+          "target": 174540,
+          "names": [
+            "memcpy"
+          ]
+        },
+        {
+          "at": 155432,
+          "target": 158428,
+          "names": []
+        },
+        {
+          "at": 155496,
+          "target": 174788,
+          "names": [
+            "memset"
+          ]
+        },
+        {
+          "at": 155508,
+          "target": 158428,
+          "names": []
+        },
+        {
+          "at": 155536,
+          "target": 174788,
+          "names": [
+            "memset"
+          ]
+        },
+        {
+          "at": 155560,
+          "target": 158428,
+          "names": []
+        },
+        {
+          "at": 155732,
+          "target": 175216,
+          "names": []
+        },
+        {
+          "at": 155968,
+          "target": 175264,
+          "names": []
+        },
+        {
+          "at": 156004,
+          "target": 157852,
+          "names": [
+            "_ZN3iq42f16hook1012_GLOBAL__N_15ticksERm"
+          ]
+        },
+        {
+          "at": 156048,
+          "target": 127948,
+          "names": [
+            "_ZNK3iq42f18normal108Renderer5on_uiEv"
+          ]
+        },
+        {
+          "at": 156264,
+          "target": 175280,
+          "names": []
+        },
+        {
+          "at": 156416,
+          "target": 174360,
+          "names": [
+            "__clear_cache"
+          ]
+        },
+        {
+          "at": 156440,
+          "target": 175296,
+          "names": []
+        },
+        {
+          "at": 157096,
+          "target": 158224,
+          "names": [
+            "_ZN3iq42f18normal1010UI10Bridge39bind_actual_provider_before_patch_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE"
+          ]
+        }
+      ]
+    },
+    "bind_actual_provider_before_patch_on_ui": {
+      "name": "_ZN3iq42f18normal1010UI10Bridge39bind_actual_provider_before_patch_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE",
+      "info": 2,
+      "section": 13,
+      "va": 158224,
+      "size": 204,
+      "body_sha256": "2f3bc4dcd191c5ca4af7b5db4b58b12cef009a5b04342bafb7370f502fceb54c",
+      "direct_BL_calls": [
+        {
+          "at": 158396,
+          "target": 139544,
+          "names": [
+            "_ZN3iq42f18normal1021ProvenProviderAdapter22configure_on_actual_uiENS0_14native_overlay6MemoryENS0_11native_ui026NativeERKNS1_22ActualProviderContractE"
+          ]
+        }
+      ]
+    },
+    "after_original_boundary_on_ui": {
+      "name": "_ZN3iq42f18normal1010UI10Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry107BindingERKNS0_11native_ui0213BoundaryInputE",
+      "info": 2,
+      "section": 13,
+      "va": 142880,
+      "size": 400,
+      "body_sha256": "a4740bd35bbe1252b46de6c8a71c6197a6b41d20e2e910065927c689c9055241",
+      "direct_BL_calls": [
+        {
+          "at": 142948,
+          "target": 131032,
+          "names": [
+            "_ZN3iq42f18normal1031install_after_original_boundaryERNS1_8RendererERKNS0_11native_ui0213BoundaryInputERNS0_7entry016ModuleERNS0_7entry107BindingENS0_14native_overlay6MemoryE"
+          ]
+        },
+        {
+          "at": 142996,
+          "target": 143956,
+          "names": [
+            "_ZNK3iq42f17entry107Binding5on_uiEv"
+          ]
+        },
+        {
+          "at": 143008,
+          "target": 145284,
+          "names": [
+            "_ZNK3iq42f17entry107Binding12actual_ownerEv"
+          ]
+        },
+        {
+          "at": 143164,
+          "target": 132688,
+          "names": [
+            "_ZN3iq42f18normal1021ProvenProviderAdapter29bind_observation_on_actual_uiENS0_14native_overlay6MemoryENS0_11native_ui026NativeERKNS5_5OwnerE"
+          ]
+        },
+        {
+          "at": 143196,
+          "target": 142284,
+          "names": [
+            "_ZN3iq42f18normal1035install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE"
+          ]
+        },
+        {
+          "at": 143216,
+          "target": 132908,
+          "names": [
+            "_ZN3iq42f18normal1021ProvenProviderAdapter36sample_boundary_scalars_on_actual_uiEv"
+          ]
+        },
+        {
+          "at": 143232,
+          "target": 174540,
+          "names": [
+            "memcpy"
+          ]
+        },
+        {
+          "at": 143240,
+          "target": 142180,
+          "names": [
+            "_ZN3iq42f18normal1021publish_ingress_on_uiERKNS1_13IngressStatusE"
+          ]
+        }
+      ]
+    },
+    "configure_on_actual_ui": {
+      "name": "_ZN3iq42f18normal1021ProvenProviderAdapter22configure_on_actual_uiENS0_14native_overlay6MemoryENS0_11native_ui026NativeERKNS1_22ActualProviderContractE",
+      "info": 2,
+      "section": 13,
+      "va": 139544,
+      "size": 1076,
+      "body_sha256": "f7474b8bcef094dfa81793e4c7ab34be412d902c641893dcc1355e8645fcbc14",
+      "direct_BL_calls": [
+        {
+          "at": 139664,
+          "target": 175020,
+          "names": [
+            "$x",
+            "bcmp"
+          ]
+        },
+        {
+          "at": 140292,
+          "target": 174540,
+          "names": [
+            "memcpy"
+          ]
+        },
+        {
+          "at": 140548,
+          "target": 140620,
+          "names": [
+            "_ZNK3iq42f18normal1021ProvenProviderAdapter19exact_inline_getterEv"
+          ]
+        },
+        {
+          "at": 140604,
+          "target": 174540,
+          "names": [
+            "memcpy"
+          ]
+        }
+      ]
+    },
+    "Binding14native_current": {
+      "name": "_ZN3iq42f17entry107Binding14native_currentEPv",
+      "info": 2,
+      "section": 13,
+      "va": 149008,
+      "size": 80,
+      "body_sha256": "2213bec812418cd3b9a0c3eeee4003939721efbb39fc5385876cd51be75f791b",
+      "direct_BL_calls": [
+        {
+          "at": 149072,
+          "target": 175120,
+          "names": []
+        },
+        {
+          "at": 149076,
+          "target": 175184,
+          "names": []
+        },
+        {
+          "at": 149084,
+          "target": 84824,
+          "names": [
+            "__clang_call_terminate"
+          ]
+        }
+      ]
+    },
+    "iq4_f1_scaler_bridge_10": {
+      "name": "iq4_f1_scaler_bridge_10",
+      "info": 2,
+      "section": 13,
+      "va": 168536,
+      "size": 356,
+      "body_sha256": "7dff2681baa74439b54fafebd475d88736f12b876741dced69ae1841418d2d28",
+      "direct_BL_calls": [
+        {
+          "at": 168748,
+          "target": 142468,
+          "names": [
+            "iq4_f1_scaler_after_10"
+          ]
+        }
+      ]
+    }
+  },
+  "original_unlock_BLR_count": 1,
+  "slot_release_store_at": 157108,
+  "configure_before_slot": true,
+  "explicit_DSB_ISB": true,
+  "init_array": [
+    "_ZN12_GLOBAL__N_17prepareEv",
+    "_ZN12_GLOBAL__N_116role_constructorEv"
+  ],
+  "loaded_range_changes_only_ELF_section_metadata": [
+    40,
+    41,
+    42,
+    60,
+    62
+  ],
+  "all_other_LOAD_bytes_identical": true,
+  "target_executed": false,
+  "old_test_suite_rerun": false
+}

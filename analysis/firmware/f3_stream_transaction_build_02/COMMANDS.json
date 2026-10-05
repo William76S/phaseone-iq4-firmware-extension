@@ -1,0 +1,214 @@
+[
+  {
+    "argv": [
+      "/usr/bin/clang",
+      "-std=c11",
+      "-O1",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/test_stream.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/test_normal"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/test_normal"
+    ],
+    "returncode": 0,
+    "stdout": "{\"owned_stream_fault_groups\":50,\"passed\":true,\"target_executed\":false,\"native_ports_bound\":false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/usr/bin/clang",
+      "-std=c11",
+      "-O1",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/codec_bridge.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/test_codec_bridge.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/stream_rgb32.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/build/libjpeg8/.libs/libjpeg.a",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/codec_normal"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/codec_normal"
+    ],
+    "returncode": 0,
+    "stdout": "{\"actual_host_codec_transaction_groups\":6,\"passed\":true,\"entropy_decoded_rows\":256,\"synthetic_RGB_only\":true,\"RAW_source_provenance_verified\":false,\"native_ports_bound\":false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/usr/bin/clang",
+      "-std=c11",
+      "-O1",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/test_stream.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/test_asan_ubsan"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/test_asan_ubsan"
+    ],
+    "returncode": 0,
+    "stdout": "{\"owned_stream_fault_groups\":50,\"passed\":true,\"target_executed\":false,\"native_ports_bound\":false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/usr/bin/clang",
+      "-std=c11",
+      "-O1",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/codec_bridge.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/test_codec_bridge.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/stream_rgb32.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/build/libjpeg8_sanitized/.libs/libjpeg.a",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/codec_asan_ubsan"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/codec_asan_ubsan"
+    ],
+    "returncode": 0,
+    "stdout": "{\"actual_host_codec_transaction_groups\":6,\"passed\":true,\"entropy_decoded_rows\":256,\"synthetic_RGB_only\":true,\"RAW_source_provenance_verified\":false,\"native_ports_bound\":false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-omit-frame-pointer",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/stream.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/stream.o"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+      "-u",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/stream.o"
+    ],
+    "returncode": 0,
+    "stdout": "                 U memcpy\n                 U memset\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/usr/bin/file",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/stream.o"
+    ],
+    "returncode": 0,
+    "stdout": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/stream.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-omit-frame-pointer",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/codec_bridge.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/codec_bridge.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/codec_bridge.o"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+      "-u",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/codec_bridge.o"
+    ],
+    "returncode": 0,
+    "stdout": "                 U f3_stream_abort_02\n                 U f3_stream_finish_02\n                 U f3_stream_sink_write_02\n                 U iq4_jpeg_stream_rgb32\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/usr/bin/file",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/codec_bridge.o"
+    ],
+    "returncode": 0,
+    "stdout": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_transaction_build_02/codec_bridge.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped\n",
+    "stderr": ""
+  }
+]

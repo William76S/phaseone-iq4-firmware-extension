@@ -1,0 +1,60 @@
+STATIC ONLY; exported proximity is not a private function identity.
+
+analysis/firmware/sys_exact16_argv_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   8f354: f9400002     	ldr	x2, [x0]
+   8f358: 52800106     	mov	w6, #0x8                // =8
+   8f35c: 52800003     	mov	w3, #0x0                // =0
+   8f360: 39400044     	ldrb	w4, [x2]
+   8f364: 7101e09f     	cmp	w4, #0x78
+   8f368: 54000560     	b.eq	0x8f414 <.text+0x83c74>
+   8f36c: 52800005     	mov	w5, #0x0                // =0
+   8f370: 321b0087     	orr	w7, w4, #0x20
+   8f374: 5100c0e1     	sub	w1, w7, #0x30
+   8f378: 51015ce7     	sub	w7, w7, #0x57
+   8f37c: 7100243f     	cmp	w1, #0x9
+   8f380: 1a8180e1     	csel	w1, w7, w1, hi
+   8f384: 6b06003f     	cmp	w1, w6
+   8f388: 54000143     	b.lo	0x8f3b0 <.text+0x83c10>
+   8f38c: 710040df     	cmp	w6, #0x10
+   8f390: 54000161     	b.ne	0x8f3bc <.text+0x83c1c>
+   8f394: 7100047f     	cmp	w3, #0x1
+   8f398: 52800b81     	mov	w1, #0x5c               // =92
+   8f39c: 54000060     	b.eq	0x8f3a8 <.text+0x83c08>
+   8f3a0: 12001ca1     	and	w1, w5, #0xff
+   8f3a4: f9000002     	str	x2, [x0]
+   8f3a8: 2a0103e0     	mov	w0, w1
+   8f3ac: d65f03c0     	ret
+   8f3b0: 1b0604a1     	madd	w1, w5, w6, w1
+   8f3b4: 7103fc3f     	cmp	w1, #0xff
+   8f3b8: 54000149     	b.ls	0x8f3e0 <.text+0x83c40>
+   8f3bc: 35ffff23     	cbnz	w3, 0x8f3a0 <.text+0x83c00>
+   8f3c0: 900000e1     	adrp	x1, 0xab000
+   8f3c4: 91283421     	add	x1, x1, #0xa0d
+   8f3c8: 52800c23     	mov	w3, #0x61               // =97
+   8f3cc: 6b04007f     	cmp	w3, w4
+   8f3d0: 540001a1     	b.ne	0x8f404 <.text+0x83c64>
+   8f3d4: 91000442     	add	x2, x2, #0x1
+   8f3d8: 39402821     	ldrb	w1, [x1, #0xa]
+   8f3dc: 17fffff2     	b	0x8f3a4 <.text+0x83c04>
+   8f3e0: 11000463     	add	w3, w3, #0x1
+   8f3e4: 91000442     	add	x2, x2, #0x1
+   8f3e8: 71000c7f     	cmp	w3, #0x3
+   8f3ec: 54000080     	b.eq	0x8f3fc <.text+0x83c5c>
+   8f3f0: 2a0103e5     	mov	w5, w1
+   8f3f4: 39400044     	ldrb	w4, [x2]
+   8f3f8: 17ffffde     	b	0x8f370 <.text+0x83bd0>
+   8f3fc: 12001c21     	and	w1, w1, #0xff
+   8f400: 17ffffe9     	b	0x8f3a4 <.text+0x83c04>
+   8f404: 38401c23     	ldrb	w3, [x1, #0x1]!
+   8f408: 35fffe23     	cbnz	w3, 0x8f3cc <.text+0x83c2c>
+   8f40c: 39402821     	ldrb	w1, [x1, #0xa]
+   8f410: 17ffffe5     	b	0x8f3a4 <.text+0x83c04>
+   8f414: 39400444     	ldrb	w4, [x2, #0x1]
+   8f418: 52800206     	mov	w6, #0x10               // =16
+   8f41c: 91000442     	add	x2, x2, #0x1
+   8f420: 52800023     	mov	w3, #0x1                // =1
+   8f424: 17ffffd2     	b	0x8f36c <.text+0x83bcc>

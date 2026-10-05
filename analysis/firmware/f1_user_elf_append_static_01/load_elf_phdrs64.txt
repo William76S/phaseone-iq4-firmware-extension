@@ -1,0 +1,66 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/sys_eeprom_range_restore_static/kernel_symbolized.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+ffffff8008204b30 <load_elf_phdrs>:
+ffffff8008204b30: a9bb7bfd     	stp	x29, x30, [sp, #-0x50]!
+ffffff8008204b34: 910003fd     	mov	x29, sp
+ffffff8008204b38: a90153f3     	stp	x19, x20, [sp, #0x10]
+ffffff8008204b3c: b00059b3     	adrp	x19, 0xffffff8008d39000 <_einittext+0x87784>
+ffffff8008204b40: 91172273     	add	x19, x19, #0x5c8
+ffffff8008204b44: a9025bf5     	stp	x21, x22, [sp, #0x20]
+ffffff8008204b48: aa0103f6     	mov	x22, x1
+ffffff8008204b4c: f9400261     	ldr	x1, [x19]
+ffffff8008204b50: f90027e1     	str	x1, [sp, #0x48]
+ffffff8008204b54: d2800001     	mov	x1, #0x0        // =0
+ffffff8008204b58: f9401001     	ldr	x1, [x0, #0x20]
+ffffff8008204b5c: f90023e1     	str	x1, [sp, #0x40]
+ffffff8008204b60: 79406c01     	ldrh	w1, [x0, #0x36]
+ffffff8008204b64: 7100e03f     	cmp	w1, #0x38
+ffffff8008204b68: 540003c1     	b.ne	0xffffff8008204be0 <load_elf_phdrs+0xb0>
+ffffff8008204b6c: 79407001     	ldrh	w1, [x0, #0x38]
+ffffff8008204b70: 51000420     	sub	w0, w1, #0x1
+ffffff8008204b74: 12003c00     	and	w0, w0, #0xffff
+ffffff8008204b78: 7112441f     	cmp	w0, #0x491
+ffffff8008204b7c: 54000328     	b.hi	0xffffff8008204be0 <load_elf_phdrs+0xb0>
+ffffff8008204b80: 531d7034     	lsl	w20, w1, #3
+ffffff8008204b84: 4b010294     	sub	w20, w20, w1
+ffffff8008204b88: 531d7294     	lsl	w20, w20, #3
+ffffff8008204b8c: 7140069f     	cmp	w20, #0x1, lsl #12 // =0x1000
+ffffff8008204b90: 54000288     	b.hi	0xffffff8008204be0 <load_elf_phdrs+0xb0>
+ffffff8008204b94: 52801801     	mov	w1, #0xc0       // =192
+ffffff8008204b98: f9001bf7     	str	x23, [sp, #0x30]
+ffffff8008204b9c: 2a1403f7     	mov	w23, w20
+ffffff8008204ba0: 72a00c01     	movk	w1, #0x60, lsl #16
+ffffff8008204ba4: aa1703e0     	mov	x0, x23
+ffffff8008204ba8: 97fe5684     	bl	0xffffff800819a5b8 <__kmalloc>
+ffffff8008204bac: aa0003f5     	mov	x21, x0
+ffffff8008204bb0: b4000140     	cbz	x0, 0xffffff8008204bd8 <load_elf_phdrs+0xa8>
+ffffff8008204bb4: aa1703e2     	mov	x2, x23
+ffffff8008204bb8: aa1603e0     	mov	x0, x22
+ffffff8008204bbc: 910103e3     	add	x3, sp, #0x40
+ffffff8008204bc0: aa1503e1     	mov	x1, x21
+ffffff8008204bc4: 97fe9dbf     	bl	0xffffff80081ac2c0 <kernel_read>
+ffffff8008204bc8: 6b00029f     	cmp	w20, w0
+ffffff8008204bcc: f9401bf7     	ldr	x23, [sp, #0x30]
+ffffff8008204bd0: 54000100     	b.eq	0xffffff8008204bf0 <load_elf_phdrs+0xc0>
+ffffff8008204bd4: 14000004     	b	0xffffff8008204be4 <load_elf_phdrs+0xb4>
+ffffff8008204bd8: f9401bf7     	ldr	x23, [sp, #0x30]
+ffffff8008204bdc: d503201f     	nop
+ffffff8008204be0: d2800015     	mov	x21, #0x0       // =0
+ffffff8008204be4: aa1503e0     	mov	x0, x21
+ffffff8008204be8: d2800015     	mov	x21, #0x0       // =0
+ffffff8008204bec: 97fe5a8d     	bl	0xffffff800819b620 <kfree>
+ffffff8008204bf0: aa1503e0     	mov	x0, x21
+ffffff8008204bf4: f94027e2     	ldr	x2, [sp, #0x48]
+ffffff8008204bf8: f9400261     	ldr	x1, [x19]
+ffffff8008204bfc: ca010041     	eor	x1, x2, x1
+ffffff8008204c00: b50000a1     	cbnz	x1, 0xffffff8008204c14 <load_elf_phdrs+0xe4>
+ffffff8008204c04: a94153f3     	ldp	x19, x20, [sp, #0x10]
+ffffff8008204c08: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+ffffff8008204c0c: a8c57bfd     	ldp	x29, x30, [sp], #0x50
+ffffff8008204c10: d65f03c0     	ret
+ffffff8008204c14: f9001bf7     	str	x23, [sp, #0x30]
+ffffff8008204c18: 97fa7252     	bl	0xffffff80080a1560 <__stack_chk_fail>
+ffffff8008204c1c: d503201f     	nop

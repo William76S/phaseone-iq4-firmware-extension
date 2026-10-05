@@ -1,0 +1,93 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  75a1fc:      	sub	sp, sp, #0x90
+  75a200:      	stp	x29, x30, [sp, #0x20]
+  75a204:      	add	x29, sp, #0x20
+  75a208:      	str	x0, [sp, #0x48]
+  75a20c:      	str	x1, [sp, #0x40]
+  75a210:      	str	x2, [sp, #0x38]
+  75a214:      	str	w3, [sp, #0x34]
+  75a218:      	ldr	x0, [sp, #0x40]
+  75a21c:      	add	x0, x0, #0x42c
+  75a220:      	add	x1, sp, #0x68
+  75a224:      	mov	w2, #0x10               // =16
+  75a228:      	bl	0x42e180 <.text+0x22f50>
+  75a22c:      	ldr	x0, [sp, #0x40]
+  75a230:      	add	x0, x0, #0x428
+  75a234:      	add	x1, sp, #0x58
+  75a238:      	mov	w2, #0x10               // =16
+  75a23c:      	bl	0x42e180 <.text+0x22f50>
+  75a240:      	str	xzr, [sp, #0x88]
+  75a244:      	str	xzr, [sp, #0x80]
+  75a248:      	ldr	x0, [sp, #0x40]
+  75a24c:      	add	x2, x0, #0x428
+  75a250:      	ldr	x0, [sp, #0x40]
+  75a254:      	add	x0, x0, #0x42c
+  75a258:      	mov	x1, x0
+  75a25c:      	mov	x0, x2
+  75a260:      	bl	0x5079f0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0xe940>
+  75a264:      	and	w0, w0, #0xff
+  75a268:      	cmp	w0, #0x0
+  75a26c:      	b.eq	0x75a28c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x40560>
+  75a270:      	adrp	x0, 0xc39000
+  75a274:      	add	x0, x0, #0x6f0
+  75a278:      	str	x0, [sp, #0x88]
+  75a27c:      	adrp	x0, 0xc39000
+  75a280:      	add	x0, x0, #0x6f8
+  75a284:      	str	x0, [sp, #0x80]
+  75a288:      	b	0x75a2a4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x40578>
+  75a28c:      	adrp	x0, 0xc39000
+  75a290:      	add	x0, x0, #0x708
+  75a294:      	str	x0, [sp, #0x88]
+  75a298:      	adrp	x0, 0xc39000
+  75a29c:      	add	x0, x0, #0x710
+  75a2a0:      	str	x0, [sp, #0x80]
+  75a2a4:      	ldrsw	x1, [sp, #0x34]
+  75a2a8:      	ldr	x0, [sp, #0x40]
+  75a2ac:      	add	x2, x0, #0x450
+  75a2b0:      	ldr	x0, [sp, #0x40]
+  75a2b4:      	ldrb	w0, [x0, #0x42f]
+  75a2b8:      	mov	w8, w0
+  75a2bc:      	ldr	x0, [sp, #0x40]
+  75a2c0:      	ldrb	w0, [x0, #0x42e]
+  75a2c4:      	mov	w9, w0
+  75a2c8:      	ldr	x0, [sp, #0x40]
+  75a2cc:      	ldrh	w0, [x0, #0x42c]
+  75a2d0:      	mov	w6, w0
+  75a2d4:      	ldr	x0, [sp, #0x40]
+  75a2d8:      	ldrb	w0, [x0, #0x42b]
+  75a2dc:      	mov	w3, w0
+  75a2e0:      	ldr	x0, [sp, #0x40]
+  75a2e4:      	ldrb	w0, [x0, #0x42a]
+  75a2e8:      	mov	w4, w0
+  75a2ec:      	ldr	x0, [sp, #0x40]
+  75a2f0:      	ldrh	w0, [x0, #0x428]
+  75a2f4:      	mov	w5, w0
+  75a2f8:      	ldr	x0, [sp, #0x80]
+  75a2fc:      	str	x0, [sp, #0x18]
+  75a300:      	str	w5, [sp, #0x10]
+  75a304:      	str	w4, [sp, #0x8]
+  75a308:      	str	w3, [sp]
+  75a30c:      	ldr	x7, [sp, #0x88]
+  75a310:      	mov	w5, w9
+  75a314:      	mov	w4, w8
+  75a318:      	mov	x3, x2
+  75a31c:      	adrp	x0, 0xc39000
+  75a320:      	add	x2, x0, #0x720
+  75a324:      	ldr	x0, [sp, #0x38]
+  75a328:      	bl	0x409f30 <snprintf@plt>
+  75a32c:      	str	w0, [sp, #0x7c]
+  75a330:      	ldrsw	x0, [sp, #0x34]
+  75a334:      	sub	x0, x0, #0x1
+  75a338:      	ldr	x1, [sp, #0x38]
+  75a33c:      	add	x0, x1, x0
+  75a340:      	strb	wzr, [x0]
+  75a344:      	ldr	w0, [sp, #0x7c]
+  75a348:      	ldp	x29, x30, [sp, #0x20]
+  75a34c:      	add	sp, sp, #0x90
+  75a350:      	ret

@@ -1,0 +1,58 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual callable binding.
+  4e9d30: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  4e9d34: 910003fd     	mov	x29, sp
+  4e9d38: f90017e0     	str	x0, [sp, #0x28]
+  4e9d3c: b90027e1     	str	w1, [sp, #0x24]
+  4e9d40: f9000fe2     	str	x2, [sp, #0x18]
+  4e9d44: f9000be3     	str	x3, [sp, #0x10]
+  4e9d48: f94017e0     	ldr	x0, [sp, #0x28]
+  4e9d4c: 97ffee73     	bl	0x4e5718
+  4e9d50: f0003520     	adrp	x0, 0xb90000
+  4e9d54: 911d2001     	add	x1, x0, #0x748
+  4e9d58: f94017e0     	ldr	x0, [sp, #0x28]
+  4e9d5c: f9000001     	str	x1, [x0]
+  4e9d60: f94017e0     	ldr	x0, [sp, #0x28]
+  4e9d64: b94027e1     	ldr	w1, [sp, #0x24]
+  4e9d68: b9001401     	str	w1, [x0, #0x14]
+  4e9d6c: f94017e0     	ldr	x0, [sp, #0x28]
+  4e9d70: f9400fe1     	ldr	x1, [sp, #0x18]
+  4e9d74: f9000c01     	str	x1, [x0, #0x18]
+  4e9d78: f94017e0     	ldr	x0, [sp, #0x28]
+  4e9d7c: f9400be1     	ldr	x1, [sp, #0x10]
+  4e9d80: f9001001     	str	x1, [x0, #0x20]
+  4e9d84: f94017e0     	ldr	x0, [sp, #0x28]
+  4e9d88: 52800021     	mov	w1, #0x1
+  4e9d8c: 3900a001     	strb	w1, [x0, #0x28]
+  4e9d90: f94017e0     	ldr	x0, [sp, #0x28]
+  4e9d94: 52800021     	mov	w1, #0x1
+  4e9d98: 3900a401     	strb	w1, [x0, #0x29]
+  4e9d9c: f94017e0     	ldr	x0, [sp, #0x28]
+  4e9da0: f0003521     	adrp	x1, 0xb90000
+  4e9da4: 911cc021     	add	x1, x1, #0x730
+  4e9da8: f9001801     	str	x1, [x0, #0x30]
+  4e9dac: d503201f     	nop
+  4e9db0: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  4e9db4: d65f03c0     	ret
+  4e9db8: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  4e9dbc: 910003fd     	mov	x29, sp
+  4e9dc0: f9000fe0     	str	x0, [sp, #0x18]
+  4e9dc4: f0003520     	adrp	x0, 0xb90000
+  4e9dc8: 911d2001     	add	x1, x0, #0x748
+  4e9dcc: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e9dd0: f9000001     	str	x1, [x0]
+  4e9dd4: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e9dd8: 97ffed96     	bl	0x4e5430
+  4e9ddc: d503201f     	nop
+  4e9de0: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  4e9de4: d65f03c0     	ret
+  4e9de8: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  4e9dec: 910003fd     	mov	x29, sp
+  4e9df0: f9000fe0     	str	x0, [sp, #0x18]
+  4e9df4: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e9df8: 97fffff0     	bl	0x4e9db8
+  4e9dfc: d2800701     	mov	x1, #0x38
+  4e9e00: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e9e04: 97fc7ff7     	bl	0x409de0
+  4e9e08: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  4e9e0c: d65f03c0     	ret

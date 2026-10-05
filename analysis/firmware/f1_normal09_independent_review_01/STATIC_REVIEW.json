@@ -1,0 +1,264 @@
+{
+  "schema": "iq4_f1_normal09_independent_static_review",
+  "source_sha256": "1271de60d10c04ca6ed580bd93ebf4bbdd8544e401e98a9ee581e2f17e3e69cb",
+  "checked_reference_rows": 516,
+  "groups": {
+    "members": 19,
+    "frozen_refs": 474,
+    "review_artifacts": 23
+  },
+  "outputs": {
+    "default_off": {
+      "path": "analysis/firmware/f1_normal_fit_display_build_09/libiq4_f1_normal_fit_display_09_default_off_load_only.so",
+      "bytes": 103448,
+      "sha256": "bcc28b5a83118e5a093491358d2a776ef77bf41f269a36440ecb63e0dcc224de",
+      "ELF_type": "ET_DYN",
+      "ELF_machine": "AArch64",
+      "exports": [
+        "iq4_f1_display_observed_06",
+        "iq4_f1_display_paint_callback_06",
+        "iq4_f1_entry_binding_observed_07",
+        "iq4_f1_entry_observed",
+        "iq4_f1_geometry_observed_04",
+        "iq4_f1_normal_fit_ingress_observed_09",
+        "iq4_f1_role_ctor_status",
+        "iq4_f1_stack_observed_05",
+        "pthread_mutex_unlock"
+      ],
+      "undefined": [
+        "_Unwind_Resume",
+        "_ZSt9terminatev",
+        "__cxa_begin_catch",
+        "__cxa_end_catch",
+        "__cxa_rethrow",
+        "__errno_location",
+        "__fxstat",
+        "__gxx_personality_v0",
+        "__isoc99_sscanf",
+        "__lxstat",
+        "bcmp",
+        "getenv",
+        "memcmp",
+        "memcpy",
+        "memset",
+        "snprintf",
+        "strchr",
+        "strcmp",
+        "strlen",
+        "strrchr"
+      ],
+      "DT_NEEDED": [
+        "libpthread.so.0",
+        "libc.so.6"
+      ],
+      "bind_now": true,
+      "publication": {
+        "info": 17,
+        "section": 22,
+        "va": 293648,
+        "size": 496
+      },
+      "init_array_order": [
+        "_ZN12_GLOBAL__N_17prepareEv"
+      ],
+      "retained_production_symbols": {
+        "_ZN3iq42f18normal0917fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE": {
+          "info": 2,
+          "section": 13,
+          "va": 139396,
+          "size": 1020
+        },
+        "_ZN3iq42f18normal0921ProvenProviderAdapter28dispatch_scaler_return_on_uiERKNS1_13ScalerCaptureERNS1_8RendererE": {
+          "info": 2,
+          "section": 13,
+          "va": 149540,
+          "size": 368
+        },
+        "_ZN3iq42f18normal098Renderer24after_native_write_on_uiERKNS1_10PaintTokenE": {
+          "info": 2,
+          "section": 13,
+          "va": 137396,
+          "size": 1092
+        },
+        "iq4_f1_scaler_bridge_09": {
+          "info": 2,
+          "section": 13,
+          "va": 160588,
+          "size": 356
+        },
+        "_ZN3iq42f18normal0921ProvenProviderAdapter36sample_boundary_scalars_on_actual_uiEv": {
+          "info": 2,
+          "section": 13,
+          "va": 140636,
+          "size": 1648
+        },
+        "_ZN3iq42f18normal0921ProvenProviderAdapter22configure_on_actual_uiENS0_14native_overlay6MemoryENS0_11native_ui026NativeERKNS1_22ActualProviderContractE": {
+          "info": 2,
+          "section": 13,
+          "va": 147272,
+          "size": 1076
+        },
+        "_Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE": {
+          "info": 2,
+          "section": 13,
+          "va": 150832,
+          "size": 228
+        }
+      },
+      "trampoline_initial": {
+        "info": 1,
+        "section": 22,
+        "va": 298088,
+        "size": 8
+      },
+      "trampoline_initial_value": 0,
+      "original_unlock": {
+        "va": 155704,
+        "bytes": 2640,
+        "body_sha256": "ccd06d37fd4018cef22695d89fe6ce2cb81689d2ec9071f662eef6ec1aca2579",
+        "original_pointer_BLR_count": 1,
+        "incoming_errno_restore_va": 155792,
+        "original_BLR_va": 155800,
+        "original_errno_save_va": 155808,
+        "return_errno_restore_va": 157380
+      }
+    },
+    "authenticated_candidate": {
+      "path": "analysis/firmware/f1_normal_fit_display_build_09/libiq4_f1_normal_fit_display_09_authenticated_candidate_load_only.so",
+      "bytes": 111024,
+      "sha256": "1cf41b8bb0478caa968dc884bed7fd25f919536a40e98c2e7f26dbc6fb541e0f",
+      "ELF_type": "ET_DYN",
+      "ELF_machine": "AArch64",
+      "exports": [
+        "iq4_f1_display_observed_06",
+        "iq4_f1_display_paint_callback_06",
+        "iq4_f1_entry_binding_observed_07",
+        "iq4_f1_entry_observed",
+        "iq4_f1_geometry_observed_04",
+        "iq4_f1_normal_fit_ingress_observed_09",
+        "iq4_f1_role_ctor_status",
+        "iq4_f1_stack_observed_05",
+        "pthread_mutex_unlock"
+      ],
+      "undefined": [
+        "_Unwind_Resume",
+        "_ZSt9terminatev",
+        "__cxa_begin_catch",
+        "__cxa_end_catch",
+        "__cxa_rethrow",
+        "__errno_location",
+        "__fxstat",
+        "__gxx_personality_v0",
+        "__isoc99_sscanf",
+        "__lxstat",
+        "bcmp",
+        "close",
+        "getenv",
+        "getpeername",
+        "getpid",
+        "getsockopt",
+        "memchr",
+        "memcmp",
+        "memcpy",
+        "memset",
+        "open",
+        "pread",
+        "read",
+        "readlink",
+        "send",
+        "snprintf",
+        "strchr",
+        "strcmp",
+        "strlen",
+        "strrchr"
+      ],
+      "DT_NEEDED": [
+        "libpthread.so.0",
+        "libc.so.6"
+      ],
+      "bind_now": true,
+      "publication": {
+        "info": 17,
+        "section": 22,
+        "va": 301224,
+        "size": 496
+      },
+      "init_array_order": [
+        "_ZN12_GLOBAL__N_17prepareEv",
+        "_ZN12_GLOBAL__N_116role_constructorEv"
+      ],
+      "retained_production_symbols": {
+        "_ZN3iq42f18normal0917fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE": {
+          "info": 2,
+          "section": 13,
+          "va": 141284,
+          "size": 1020
+        },
+        "_ZN3iq42f18normal0921ProvenProviderAdapter28dispatch_scaler_return_on_uiERKNS1_13ScalerCaptureERNS1_8RendererE": {
+          "info": 2,
+          "section": 13,
+          "va": 151428,
+          "size": 368
+        },
+        "_ZN3iq42f18normal098Renderer24after_native_write_on_uiERKNS1_10PaintTokenE": {
+          "info": 2,
+          "section": 13,
+          "va": 139284,
+          "size": 1092
+        },
+        "iq4_f1_scaler_bridge_09": {
+          "info": 2,
+          "section": 13,
+          "va": 162476,
+          "size": 356
+        },
+        "_ZN3iq42f18normal0921ProvenProviderAdapter36sample_boundary_scalars_on_actual_uiEv": {
+          "info": 2,
+          "section": 13,
+          "va": 142524,
+          "size": 1648
+        },
+        "_ZN3iq42f18normal0921ProvenProviderAdapter22configure_on_actual_uiENS0_14native_overlay6MemoryENS0_11native_ui026NativeERKNS1_22ActualProviderContractE": {
+          "info": 2,
+          "section": 13,
+          "va": 149160,
+          "size": 1076
+        },
+        "_Z45iq4_f1_ui09_bind_actual_provider_before_patchRN3iq42f18normal0910UI09BridgeENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE": {
+          "info": 2,
+          "section": 13,
+          "va": 152720,
+          "size": 228
+        }
+      },
+      "trampoline_initial": {
+        "info": 1,
+        "section": 22,
+        "va": 305664,
+        "size": 8
+      },
+      "trampoline_initial_value": 0,
+      "original_unlock": {
+        "va": 157592,
+        "bytes": 2640,
+        "body_sha256": "856830405ce59bb7c861799106438c683f174da704eca823851de114f40a6c3c",
+        "original_pointer_BLR_count": 1,
+        "incoming_errno_restore_va": 157680,
+        "original_BLR_va": 157688,
+        "original_errno_save_va": 157696,
+        "return_errno_restore_va": 159268
+      }
+    }
+  },
+  "runtime_provider_configuration_caller_present": false,
+  "persistent_UI_ports_needed_before_production": true,
+  "review_scope": "source_and_existing_linked_SO_only",
+  "target_loaded": false,
+  "mask_accepted": false,
+  "SDK_or_Windows_or_network_used": false,
+  "new_or_old_build_executed": false,
+  "ELF_parser": {
+    "path": "analysis/firmware/f1_entry_observe_independent_review_08/collect.py",
+    "sha256": "703a092b1b7da043262d930ca802f4f10771d9e804852dd07fd38468a7d2b58c"
+  }
+}

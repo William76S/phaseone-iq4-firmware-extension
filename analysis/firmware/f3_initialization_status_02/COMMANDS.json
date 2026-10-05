@@ -1,0 +1,157 @@
+[
+  {
+    "argv": [
+      "/usr/bin/xcrun",
+      "--show-sdk-path"
+    ],
+    "exit": 0,
+    "stdout": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "tools/firmware/f1_f3_f4_user_integration_05/test_initialize.c",
+      "-o",
+      "analysis/firmware/f3_initialization_status_02/normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f3_initialization_status_02/normal",
+      "0"
+    ],
+    "exit": 0,
+    "stdout": "PASS init failure attribution, downstream refusal, F1 preserved, no retry\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f3_initialization_status_02/normal",
+      "10"
+    ],
+    "exit": 0,
+    "stdout": "PASS init failure attribution, downstream refusal, F1 preserved, no retry\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f3_initialization_status_02/normal",
+      "20"
+    ],
+    "exit": 0,
+    "stdout": "PASS init failure attribution, downstream refusal, F1 preserved, no retry\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f3_initialization_status_02/normal",
+      "30"
+    ],
+    "exit": 0,
+    "stdout": "PASS init failure attribution, downstream refusal, F1 preserved, no retry\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f3_initialization_status_02/normal",
+      "40"
+    ],
+    "exit": 0,
+    "stdout": "PASS init failure attribution, downstream refusal, F1 preserved, no retry\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f3_initialization_status_02/normal",
+      "50"
+    ],
+    "exit": 0,
+    "stdout": "PASS init failure attribution, downstream refusal, F1 preserved, no retry\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "tools/firmware/f1_f3_f4_user_integration_05/test_initialize.c",
+      "-o",
+      "analysis/firmware/f3_initialization_status_02/asan_ubsan"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f3_initialization_status_02/asan_ubsan",
+      "0"
+    ],
+    "exit": 0,
+    "stdout": "PASS init failure attribution, downstream refusal, F1 preserved, no retry\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f3_initialization_status_02/asan_ubsan",
+      "10"
+    ],
+    "exit": 0,
+    "stdout": "PASS init failure attribution, downstream refusal, F1 preserved, no retry\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f3_initialization_status_02/asan_ubsan",
+      "20"
+    ],
+    "exit": 0,
+    "stdout": "PASS init failure attribution, downstream refusal, F1 preserved, no retry\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f3_initialization_status_02/asan_ubsan",
+      "30"
+    ],
+    "exit": 0,
+    "stdout": "PASS init failure attribution, downstream refusal, F1 preserved, no retry\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f3_initialization_status_02/asan_ubsan",
+      "40"
+    ],
+    "exit": 0,
+    "stdout": "PASS init failure attribution, downstream refusal, F1 preserved, no retry\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/f3_initialization_status_02/asan_ubsan",
+      "50"
+    ],
+    "exit": 0,
+    "stdout": "PASS init failure attribution, downstream refusal, F1 preserved, no retry\n",
+    "stderr": ""
+  }
+]

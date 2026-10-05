@@ -1,0 +1,29 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual owner/lease/fresh/mapping proof.
+  4ad02c: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  4ad030: 910003fd     	mov	x29, sp
+  4ad034: f9000bf3     	str	x19, [sp, #0x10]
+  4ad038: aa0803f3     	mov	x19, x8
+  4ad03c: f90017e0     	str	x0, [sp, #0x28]
+  4ad040: f90013e1     	str	x1, [sp, #0x20]
+  4ad044: f94017e0     	ldr	x0, [sp, #0x28]
+  4ad048: b9400801     	ldr	w1, [x0, #0x8]
+  4ad04c: f94013e0     	ldr	x0, [sp, #0x20]
+  4ad050: b9400000     	ldr	w0, [x0]
+  4ad054: 0b000021     	add	w1, w1, w0
+  4ad058: f94017e0     	ldr	x0, [sp, #0x28]
+  4ad05c: b9000801     	str	w1, [x0, #0x8]
+  4ad060: f94017e0     	ldr	x0, [sp, #0x28]
+  4ad064: b9400c01     	ldr	w1, [x0, #0xc]
+  4ad068: f94013e0     	ldr	x0, [sp, #0x20]
+  4ad06c: b9400400     	ldr	w0, [x0, #0x4]
+  4ad070: 0b000021     	add	w1, w1, w0
+  4ad074: f94017e0     	ldr	x0, [sp, #0x28]
+  4ad078: b9000c01     	str	w1, [x0, #0xc]
+  4ad07c: f94017e1     	ldr	x1, [sp, #0x28]
+  4ad080: aa1303e0     	mov	x0, x19
+  4ad084: 97feab34     	bl	0x457d54
+  4ad088: aa1303e0     	mov	x0, x19
+  4ad08c: f9400bf3     	ldr	x19, [sp, #0x10]
+  4ad090: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  4ad094: d65f03c0     	ret

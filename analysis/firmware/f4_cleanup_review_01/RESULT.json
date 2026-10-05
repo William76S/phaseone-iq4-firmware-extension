@@ -1,0 +1,83 @@
+{
+  "review_kind": "finite offline linked-User/source review plus host revision verification",
+  "input_build": {
+    "path": "analysis/firmware/f1_f4_user_integration_build_01_attempt03/BUILD.json",
+    "bytes": 8891,
+    "sha256": "c11c08488df7cb15a71e1770c263b8ad822b05cba9b96e9d8444d134d122c5c5"
+  },
+  "input_link_report": {
+    "path": "analysis/firmware/f1_f4_user_integration_build_01_attempt03/LINK_REPORT.json",
+    "bytes": 42074,
+    "sha256": "c3abc10db7eff49588ff7aa99601db4af54663718642e71adb061b434a6b0d4a"
+  },
+  "input_User": {
+    "path": "analysis/firmware/f1_f4_user_integration_build_01_attempt03/P1Linux_RatioMask_LVRecording_6.03.28.bin",
+    "bytes": 12361944,
+    "sha256": "7a5a5e8f557a17d2fb8fc3e2b1e84eda2fd9edeac28ba15963bfff25046e0566"
+  },
+  "input_object_hashes_verified": 26,
+  "input_camera_accepted": false,
+  "original_User_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "native_JPEG_api_version": 82,
+  "native_compressor_bytes": 584,
+  "conditional_cleanup_defect": "original context freed after fatal destroy; original worker releases slot/restarts",
+  "revision": "new two-object overlay retains unknown encoder context and worker/session graph",
+  "revision_build": {
+    "path": "analysis/firmware/f4_codec_cleanup_build_01/BUILD.json",
+    "bytes": 4561,
+    "sha256": "fa730424c3acb5d47fcf651f2d6b8ac11c06e595aa3eb735d7c84a999b85a270"
+  },
+  "finite_original_destroy_windows": {
+    "path": "analysis/firmware/f4_codec_cleanup_build_01/EXACT.json",
+    "bytes": 2681,
+    "sha256": "69ceb29c535b29037d68ade86be3e1ecdfaef169518a9a1e817eb36a8804495b"
+  },
+  "session_inspected": {
+    "path": "tools/firmware/f4_native_source_02/session.c",
+    "bytes": 13489,
+    "sha256": "adcd73f967cbe48116a79c0bc048a1626568d42f92205fe87bac63d3143b262d"
+  },
+  "source_inspected": {
+    "path": "tools/firmware/f4_native_source_03/source.c",
+    "bytes": 18473,
+    "sha256": "81b3c096134a9c2d76cbb16003766350b51758d9eeb5ea57456868b684b91a81"
+  },
+  "display_inspected": {
+    "path": "tools/firmware/f1_stock_display_payload_16/payload.c",
+    "bytes": 12575,
+    "sha256": "bc84ab1949b93fdf2ca86020be61bf1e3c598e5ac1dd2fd1e67c3385f6843399"
+  },
+  "mkv_inspected": {
+    "path": "src/recording/native_mkv.c",
+    "bytes": 9226,
+    "sha256": "aed2a78b229c83cb17e94763bffb72c377022038fa5618b9a04d8c6b15737f51"
+  },
+  "movie_inspected": {
+    "path": "tools/firmware/movie_card_01/movie.c",
+    "bytes": 9029,
+    "sha256": "89181dc5a086f131701d2506ab6037f9fffba1550856eb83c02e1291ced9ee7a"
+  },
+  "host_groups_normal": 8,
+  "host_groups_ASan_UBSan": 8,
+  "real_host_JPEG_decode": true,
+  "worker_faults_model_only": true,
+  "AArch64_ET_REL_types": 2,
+  "AArch64_rebuilds_each": 2,
+  "byte_identical": true,
+  "remaining_boundary": {
+    "priority": 2,
+    "conditional_only": true,
+    "issue": "first software ID may be zero while native_mkv rejects zero local sequence",
+    "actual_first_id_observed": false,
+    "changed_by_this_revision": false
+  },
+  "native_destroy_fatal_observed": false,
+  "sensor_FPS_proven": false,
+  "target_executed": false,
+  "camera_accessed": false,
+  "review_text": {
+    "path": "analysis/firmware/f4_cleanup_review_01/REVIEW.md",
+    "bytes": 3942,
+    "sha256": "be2cc246b04082443c30e6b1a263e5381bb27a2a79b67b7c58ac92b062d6b8bb"
+  }
+}

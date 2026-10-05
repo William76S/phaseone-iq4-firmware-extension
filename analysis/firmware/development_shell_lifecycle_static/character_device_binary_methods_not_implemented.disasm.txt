@@ -1,0 +1,79 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  872708: d10043ff     	sub	sp, sp, #0x10
+  87270c: f90007e0     	str	x0, [sp, #0x8]
+  872710: d503201f     	nop
+  872714: 910043ff     	add	sp, sp, #0x10
+  872718: d65f03c0     	ret
+  87271c: d10043ff     	sub	sp, sp, #0x10
+  872720: f90007e0     	str	x0, [sp, #0x8]
+  872724: d503201f     	nop
+  872728: 910043ff     	add	sp, sp, #0x10
+  87272c: d65f03c0     	ret
+  872730: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  872734: 910003fd     	mov	x29, sp
+  872738: f9000fe0     	str	x0, [sp, #0x18]
+  87273c: b00029a0     	adrp	x0, 0xda7000
+  872740: 911be003     	add	x3, x0, #0x6f8
+  872744: 528004c2     	mov	w2, #0x26               // =38
+  872748: b00029a0     	adrp	x0, 0xda7000
+  87274c: 911d2001     	add	x1, x0, #0x748
+  872750: 52800040     	mov	w0, #0x2                // =2
+  872754: 97fb4f7e     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  872758: d503201f     	nop
+  87275c: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  872760: d65f03c0     	ret
+  872764: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  872768: 910003fd     	mov	x29, sp
+  87276c: f90017e0     	str	x0, [sp, #0x28]
+  872770: b90027e1     	str	w1, [sp, #0x24]
+  872774: f9000fe2     	str	x2, [sp, #0x18]
+  872778: b90023e3     	str	w3, [sp, #0x20]
+  87277c: b00029a0     	adrp	x0, 0xda7000
+  872780: 911de003     	add	x3, x0, #0x778
+  872784: 52800502     	mov	w2, #0x28               // =40
+  872788: b00029a0     	adrp	x0, 0xda7000
+  87278c: 911d2001     	add	x1, x0, #0x748
+  872790: 52800040     	mov	w0, #0x2                // =2
+  872794: 97fb4f6e     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  872798: d503201f     	nop
+  87279c: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  8727a0: d65f03c0     	ret
+  8727a4: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  8727a8: 910003fd     	mov	x29, sp
+  8727ac: f90017e0     	str	x0, [sp, #0x28]
+  8727b0: f90013e1     	str	x1, [sp, #0x20]
+  8727b4: b9001fe2     	str	w2, [sp, #0x1c]
+  8727b8: f9000be3     	str	x3, [sp, #0x10]
+  8727bc: b00029a0     	adrp	x0, 0xda7000
+  8727c0: 911ec003     	add	x3, x0, #0x7b0
+  8727c4: 52800582     	mov	w2, #0x2c               // =44
+  8727c8: b00029a0     	adrp	x0, 0xda7000
+  8727cc: 911d2001     	add	x1, x0, #0x748
+  8727d0: 52800040     	mov	w0, #0x2                // =2
+  8727d4: 97fb4f5e     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  8727d8: 52800000     	mov	w0, #0x0                // =0
+  8727dc: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  8727e0: d65f03c0     	ret
+  8727e4: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  8727e8: 910003fd     	mov	x29, sp
+  8727ec: f9001fe0     	str	x0, [sp, #0x38]
+  8727f0: f9001be1     	str	x1, [sp, #0x30]
+  8727f4: b9002fe2     	str	w2, [sp, #0x2c]
+  8727f8: f90013e3     	str	x3, [sp, #0x20]
+  8727fc: f9000fe4     	str	x4, [sp, #0x18]
+  872800: b00029a0     	adrp	x0, 0xda7000
+  872804: 911fa003     	add	x3, x0, #0x7e8
+  872808: 52800642     	mov	w2, #0x32               // =50
+  87280c: b00029a0     	adrp	x0, 0xda7000
+  872810: 911d2001     	add	x1, x0, #0x748
+  872814: 52800040     	mov	w0, #0x2                // =2
+  872818: 97fb4f4d     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  87281c: 52800000     	mov	w0, #0x0                // =0
+  872820: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  872824: d65f03c0     	ret

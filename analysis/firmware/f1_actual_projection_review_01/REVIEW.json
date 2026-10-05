@@ -1,0 +1,246 @@
+{
+  "schema": "iq4_f1_actual_projection_review_01",
+  "actual_source": "root_device_receipt",
+  "independently_read_camera": false,
+  "native_executed": false,
+  "pixel_canvas_used": false,
+  "production_source_modified": false,
+  "actual_fields": {
+    "config": [
+      14204,
+      10652
+    ],
+    "roi": [
+      0,
+      0,
+      14204,
+      10652
+    ],
+    "image": [
+      640,
+      480
+    ],
+    "scale_bits": "41b00000",
+    "normal_scale_bits": "41b00000",
+    "rotation": 0,
+    "animation": 0,
+    "countdown": 0,
+    "projected": [
+      77,
+      0,
+      645,
+      483
+    ],
+    "clip": [
+      0,
+      0,
+      800,
+      480
+    ],
+    "lcd": [
+      0,
+      0,
+      800,
+      480
+    ],
+    "format": 0
+  },
+  "derived_projection": {
+    "destination": [
+      77,
+      0,
+      645,
+      484
+    ],
+    "binary32_fit_bits": "3f810000",
+    "fit": 1.0078125,
+    "untruncated_height": 483.75,
+    "projected": [
+      77,
+      0,
+      645,
+      483
+    ]
+  },
+  "coverage_distinction": {
+    "geometric_intersection": [
+      77,
+      0,
+      645,
+      480
+    ],
+    "geometric_intersection_is_fresh_receipt": false,
+    "native_clipped_source_height": 476,
+    "native_output_height": 479,
+    "static_native_write_rectangle": [
+      77,
+      0,
+      645,
+      479
+    ],
+    "row_y479_covered": false,
+    "root_sdk_reviewer_complete_contract": "analysis/sdk_reference/display15_clip_write_contract_review_01/RESULT.json",
+    "native_static_windows": [
+      {
+        "path": "analysis/firmware/f1_actual_projection_review_01/Native_clipped_source_height.txt",
+        "start_va": "0x4756e0",
+        "end_va_exclusive": "0x47572c",
+        "raw_sha256": "ffa8b75a352f176a4420643887074b2a972fef471886c976c301ffa8c182ea9a",
+        "disassembly_sha256": "6d2e0f93a9da968a82acf578b7777073be995eb1d802b29a64154a1aa6f172b9"
+      },
+      {
+        "path": "analysis/firmware/f1_actual_projection_review_01/Native_output_height_after_clipping.txt",
+        "start_va": "0x475894",
+        "end_va_exclusive": "0x4758c0",
+        "raw_sha256": "1390e5dd8c696fffcebbcfa0888acb318fa104d1970b9d062486e1987710912e",
+        "disassembly_sha256": "88e8c221cc12fdcb6cd5510fb2bad316a97f41a99cc3a2a7c32fa27000275e58"
+      },
+      {
+        "path": "analysis/firmware/f1_actual_projection_review_01/Native_output_row_count.txt",
+        "start_va": "0x47f910",
+        "end_va_exclusive": "0x47fb3c",
+        "raw_sha256": "216b451d97e5fffc06dc1d12ffb1a9499fb390a383882500a24af133e3cc415f",
+        "disassembly_sha256": "72acc3c89b8792015db10ffe4a96040d0493781d0ae637be042fa0862e814fdf"
+      }
+    ],
+    "root_sdk_reviewer_complete_contract_identity": {
+      "path": "analysis/sdk_reference/display15_clip_write_contract_review_01/RESULT.json",
+      "bytes": 15307,
+      "sha256": "20c1aaa6bf645227573902397ac8e4ad4f4340b1bd5e5edda4c5f32a8a080185"
+    }
+  },
+  "composition_reference": "full projected645x483, never recenter from cropped visible rect",
+  "native_write_clipped_mode_geometry": [
+    {
+      "clip_kind": "static_native_write479",
+      "mode": 0,
+      "band_count": 0,
+      "full_frame_keep": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "visible_bands": [],
+      "mask_area": 0
+    },
+    {
+      "clip_kind": "static_native_write479",
+      "mode": 1,
+      "band_count": 2,
+      "full_frame_keep": [
+        77,
+        122,
+        645,
+        238
+      ],
+      "visible_bands": [
+        [
+          77,
+          0,
+          645,
+          122
+        ],
+        [
+          77,
+          360,
+          645,
+          119
+        ]
+      ],
+      "mask_area": 155445
+    },
+    {
+      "clip_kind": "static_native_write479",
+      "mode": 2,
+      "band_count": 2,
+      "full_frame_keep": [
+        77,
+        60,
+        645,
+        362
+      ],
+      "visible_bands": [
+        [
+          77,
+          0,
+          645,
+          60
+        ],
+        [
+          77,
+          422,
+          645,
+          57
+        ]
+      ],
+      "mask_area": 75465
+    },
+    {
+      "clip_kind": "static_native_write479",
+      "mode": 3,
+      "band_count": 2,
+      "full_frame_keep": [
+        77,
+        26,
+        645,
+        430
+      ],
+      "visible_bands": [
+        [
+          77,
+          0,
+          645,
+          26
+        ],
+        [
+          77,
+          456,
+          645,
+          23
+        ]
+      ],
+      "mask_area": 31605
+    },
+    {
+      "clip_kind": "static_native_write479",
+      "mode": 4,
+      "band_count": 2,
+      "full_frame_keep": [
+        158,
+        0,
+        483,
+        483
+      ],
+      "visible_bands": [
+        [
+          77,
+          0,
+          81,
+          479
+        ],
+        [
+          641,
+          0,
+          81,
+          479
+        ]
+      ],
+      "mask_area": 77598
+    }
+  ],
+  "host_normal": "10 mode cases + projection + clipping counts PASS",
+  "host_asan_ubsan": "same PASS",
+  "remaining_device_acceptance": "not performed by this agent",
+  "preserve_guards": [
+    "full ROI",
+    "locked/Image/configured output pair",
+    "packed RGB",
+    "normalScale",
+    "rotation0",
+    "exact LCD",
+    "source/display disjoint allocation",
+    "proven native write arm only"
+  ],
+  "prohibited_shortcut": "Do not use P intersect clip as native fresh coverage."
+}

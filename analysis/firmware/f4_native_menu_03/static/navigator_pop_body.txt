@@ -1,0 +1,55 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000435fac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_>:
+  4e74a8: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  4e74ac: 910003fd     	mov	x29, sp
+  4e74b0: f9000fe0     	str	x0, [sp, #0x18]
+  4e74b4: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e74b8: b9434800     	ldr	w0, [x0, #0x348]
+  4e74bc: 7100001f     	cmp	w0, #0x0
+  4e74c0: 54000061     	b.ne	0x4e74cc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0xb1520>
+  4e74c4: 52800000     	mov	w0, #0x0                // =0
+  4e74c8: 14000027     	b	0x4e7564 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0xb15b8>
+  4e74cc: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e74d0: b9434800     	ldr	w0, [x0, #0x348]
+  4e74d4: f9400fe1     	ldr	x1, [sp, #0x18]
+  4e74d8: 2a0003e0     	mov	w0, w0
+  4e74dc: 91018000     	add	x0, x0, #0x60
+  4e74e0: d37df000     	lsl	x0, x0, #3
+  4e74e4: 8b000020     	add	x0, x1, x0
+  4e74e8: f9400400     	ldr	x0, [x0, #0x8]
+  4e74ec: f90017e0     	str	x0, [sp, #0x28]
+  4e74f0: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e74f4: b9434800     	ldr	w0, [x0, #0x348]
+  4e74f8: f9400fe1     	ldr	x1, [sp, #0x18]
+  4e74fc: 2a0003e0     	mov	w0, w0
+  4e7500: 91018000     	add	x0, x0, #0x60
+  4e7504: d37df000     	lsl	x0, x0, #3
+  4e7508: 8b000020     	add	x0, x1, x0
+  4e750c: f900041f     	str	xzr, [x0, #0x8]
+  4e7510: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e7514: b9434800     	ldr	w0, [x0, #0x348]
+  4e7518: 51000401     	sub	w1, w0, #0x1
+  4e751c: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e7520: b9034801     	str	w1, [x0, #0x348]
+  4e7524: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e7528: b9434800     	ldr	w0, [x0, #0x348]
+  4e752c: f9400fe1     	ldr	x1, [sp, #0x18]
+  4e7530: 2a0003e0     	mov	w0, w0
+  4e7534: 91018000     	add	x0, x0, #0x60
+  4e7538: d37df000     	lsl	x0, x0, #3
+  4e753c: 8b000020     	add	x0, x1, x0
+  4e7540: f9400400     	ldr	x0, [x0, #0x8]
+  4e7544: aa0003e2     	mov	x2, x0
+  4e7548: f94017e1     	ldr	x1, [sp, #0x28]
+  4e754c: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e7550: 940002b0     	bl	0x4e8010 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0xb2064>
+  4e7554: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e7558: 91008000     	add	x0, x0, #0x20
+  4e755c: 94089f67     	bl	0x70f2f8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x21278>
+  4e7560: 52800020     	mov	w0, #0x1                // =1
+  4e7564: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  4e7568: d65f03c0     	ret

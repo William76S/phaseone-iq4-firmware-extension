@@ -1,0 +1,56 @@
+analysis/firmware/f4_ram_loader_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   856e8:      	adrp	x1, 0xbe000
+   856ec:      	stp	x19, x20, [sp, #-0x30]!
+   856f0:      	ldr	x1, [x1, #0xf50]
+   856f4:      	str	x30, [sp, #0x28]
+   856f8:      	ldr	x19, [x1]
+   856fc:      	cbz	x19, 0x85730 <.text+0x79f90>
+   85700:      	mov	w20, w0
+   85704:      	stp	x21, x22, [sp, #0x10]
+   85708:      	mov	w22, #0x63              // =99
+   8570c:      	str	x23, [sp, #0x20]
+   85710:      	mov	w23, #0x67              // =103
+   85714:      	ldrb	w1, [x19, #0xc]
+   85718:      	tst	w1, w20
+   8571c:      	b.ne	0x8573c <.text+0x79f9c>
+   85720:      	ldr	x19, [x19]
+   85724:      	cbnz	x19, 0x85714 <.text+0x79f74>
+   85728:      	ldp	x21, x22, [sp, #0x10]
+   8572c:      	ldr	x23, [sp, #0x20]
+   85730:      	ldr	x30, [sp, #0x28]
+   85734:      	ldp	x19, x20, [sp], #0x30
+   85738:      	ret
+   8573c:      	tst	w1, w23
+   85740:      	b.eq	0x85760 <.text+0x79fc0>
+   85744:      	mov	x0, x19
+   85748:      	bl	0x85594 <.text+0x79df4>
+   8574c:      	ldrb	w1, [x19, #0xc]
+   85750:      	mov	w21, w0
+   85754:      	tst	w1, w22
+   85758:      	ccmp	w0, #0x0, #0x4, ne
+   8575c:      	b.gt	0x85788 <.text+0x79fe8>
+   85760:      	tst	w1, #0x18
+   85764:      	b.eq	0x85720 <.text+0x79f80>
+   85768:      	ldr	w0, [x19, #0x8]
+   8576c:      	cbnz	w0, 0x85720 <.text+0x79f80>
+   85770:      	mov	x0, x19
+   85774:      	bl	0x85594 <.text+0x79df4>
+   85778:      	str	w0, [x19, #0x8]
+   8577c:      	ldr	x19, [x19]
+   85780:      	cbnz	x19, 0x85714 <.text+0x79f74>
+   85784:      	b	0x85728 <.text+0x79f88>
+   85788:      	mov	x0, #0x0                // =0
+   8578c:      	bl	0xb1d0 <wait@plt>
+   85790:      	bl	0x84f78 <.text+0x797d8>
+   85794:      	mov	w1, #0x0                // =0
+   85798:      	mov	w0, w21
+   8579c:      	bl	0xa6f0 <kill@plt>
+   857a0:      	cbz	w0, 0x85788 <.text+0x79fe8>
+   857a4:      	ldrb	w1, [x19, #0xc]
+   857a8:      	tst	w1, #0x18
+   857ac:      	b.eq	0x85720 <.text+0x79f80>
+   857b0:      	b	0x85768 <.text+0x79fc8>

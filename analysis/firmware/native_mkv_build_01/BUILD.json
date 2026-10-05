@@ -1,0 +1,168 @@
+{
+  "schema": "iq4_freestanding_native_mkv_build_01",
+  "source": [
+    {
+      "path": "src/recording/native_mkv.c",
+      "bytes": 9226,
+      "sha256": "aed2a78b229c83cb17e94763bffb72c377022038fa5618b9a04d8c6b15737f51"
+    },
+    {
+      "path": "src/recording/native_mkv.h",
+      "bytes": 2507,
+      "sha256": "021a12114e426aceae9838579cd903f26054da45557ce5b3bc405dc02e4f56b0"
+    },
+    {
+      "path": "src/codec/export_geometry.c",
+      "bytes": 1210,
+      "sha256": "8cacc31e028c5df0f0ccbf3f27cae824160b5c0656b294fe52a79bf31a14701f"
+    },
+    {
+      "path": "src/codec/export_geometry.h",
+      "bytes": 906,
+      "sha256": "917b058ef2b572f8f37eef13fcfd680ef2c801f786dabf910772fb9287b33759"
+    },
+    {
+      "path": "tests/test_native_mkv.c",
+      "bytes": 6604,
+      "sha256": "6adb452acebed21930a6d19764065ecd6c72838856831ed7422cad98eb7b9286"
+    },
+    {
+      "path": "tests/test_export_geometry.c",
+      "bytes": 1609,
+      "sha256": "b2f98bbcd4a31e1b9d2ea15b88ce7120d0bc247febcdc742a0a1c0f320cbf677"
+    },
+    {
+      "path": "tools/firmware/build_native_mkv_01.py",
+      "bytes": 4572,
+      "sha256": "368bc902c472f2cf3eee45428035d7b615548f30daae09c70531ca8e069408c2"
+    },
+    {
+      "path": "tools/firmware/f3_stream_transaction_02/stream.c",
+      "bytes": 10513,
+      "sha256": "d00e96507d0596b8692591fc03969f88107b8b3f76776315c56073cad9a8b496"
+    },
+    {
+      "path": "tools/firmware/f3_save_transaction_01/transaction.c",
+      "bytes": 6606,
+      "sha256": "b6cea8c14282d800c53968e16709485a40ab82f3aff1feec4e511508b723eddd"
+    }
+  ],
+  "host": [
+    {
+      "sanitized": false,
+      "result": {
+        "host_packet_file_groups": 13,
+        "target_executed": false
+      },
+      "geometry": {
+        "geometry_checks": 33,
+        "target_executed": false
+      },
+      "probe": {
+        "packets": [
+          {
+            "pts_time": "0.000000"
+          },
+          {
+            "pts_time": "0.033333"
+          },
+          {
+            "pts_time": "0.078000"
+          }
+        ],
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mjpeg",
+            "width": 128,
+            "height": 96,
+            "time_base": "1/1000000000"
+          }
+        ]
+      },
+      "decoded_frames": 3,
+      "distinct_decoded_hashes": [
+        "933faad9610ced06bbcad38c586da4bf0a44728848331f4201629bbd1e9daaa1",
+        "d4e7ef939702988b0fe8c832225c3a9baba68c619d22e226829d5ef6ce374e92",
+        "6a0a7b49d28fbdde62f53ae6a820f01c5b27ddb9bfd97a2582a774b36c523cc0"
+      ],
+      "movie": {
+        "path": "analysis/firmware/native_mkv_build_01/actual_host_normal.mkv",
+        "bytes": 14149,
+        "sha256": "b46abb2e8d7f6da51642407184e5d8782b9073e0592ab5955668a49e41727f52"
+      },
+      "decoded": {
+        "path": "analysis/firmware/native_mkv_build_01/decoded_normal.rgb",
+        "bytes": 110592,
+        "sha256": "bf527a435f33bc80a086a065dc7572865b8de660e5a65d758bff59e52f8fc3d2"
+      }
+    },
+    {
+      "sanitized": true,
+      "result": {
+        "host_packet_file_groups": 13,
+        "target_executed": false
+      },
+      "geometry": {
+        "geometry_checks": 33,
+        "target_executed": false
+      },
+      "probe": {
+        "packets": [
+          {
+            "pts_time": "0.000000"
+          },
+          {
+            "pts_time": "0.033333"
+          },
+          {
+            "pts_time": "0.078000"
+          }
+        ],
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "mjpeg",
+            "width": 128,
+            "height": 96,
+            "time_base": "1/1000000000"
+          }
+        ]
+      },
+      "decoded_frames": 3,
+      "distinct_decoded_hashes": [
+        "933faad9610ced06bbcad38c586da4bf0a44728848331f4201629bbd1e9daaa1",
+        "d4e7ef939702988b0fe8c832225c3a9baba68c619d22e226829d5ef6ce374e92",
+        "6a0a7b49d28fbdde62f53ae6a820f01c5b27ddb9bfd97a2582a774b36c523cc0"
+      ],
+      "movie": {
+        "path": "analysis/firmware/native_mkv_build_01/actual_host_sanitized.mkv",
+        "bytes": 14149,
+        "sha256": "b46abb2e8d7f6da51642407184e5d8782b9073e0592ab5955668a49e41727f52"
+      },
+      "decoded": {
+        "path": "analysis/firmware/native_mkv_build_01/decoded_sanitized.rgb",
+        "bytes": 110592,
+        "sha256": "bf527a435f33bc80a086a065dc7572865b8de660e5a65d758bff59e52f8fc3d2"
+      }
+    }
+  ],
+  "objects": [
+    {
+      "path": "analysis/firmware/native_mkv_build_01/native_mkv.o",
+      "bytes": 15584,
+      "sha256": "ab25e278bf9ad795c8b0d5e013c0d8daf5b164f8b1e9db3bd0c471e3447a4216"
+    },
+    {
+      "path": "analysis/firmware/native_mkv_build_01/export_geometry.o",
+      "bytes": 2008,
+      "sha256": "faae3f7683fee14cc167540418f16c21b95b83501a606e39402fade7d5ef89b8"
+    }
+  ],
+  "target_executed": false,
+  "device_accessed": false,
+  "new_sensor_frame_rate_verified": false,
+  "file_publication_verified_by_muxer": false
+}

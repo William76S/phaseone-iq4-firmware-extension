@@ -1,0 +1,56 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPAgentBase.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000000000 <P1::IQP::BaseAgent::SetAuthenticationToken(std::array<unsigned char, 32ul> const&)>:
+       0: 48 83 c7 08                  	addq	$0x8, %rdi
+       4: e9 00 00 00 00               	jmp	0x9 <P1::IQP::BaseAgent::SetAuthenticationToken(std::array<unsigned char, 32ul> const&)+0x9>
+		0000000000000005:  R_X86_64_PLT32	P1::IQP::Channel::SetAuthenticationToken(std::array<unsigned char, 32ul> const&)-0x4
+       9: 90                           	nop
+       a: 66 0f 1f 44 00 00            	nopw	(%rax,%rax)
+
+0000000000000010 <P1::IQP::BaseDataAgent::SetAuthenticationToken(std::array<unsigned char, 32ul> const&)>:
+      10: 55                           	pushq	%rbp
+      11: 48 89 f5                     	movq	%rsi, %rbp
+      14: 53                           	pushq	%rbx
+      15: 48 89 fb                     	movq	%rdi, %rbx
+      18: 48 83 ec 08                  	subq	$0x8, %rsp
+      1c: 48 8b bf a8 09 00 00         	movq	0x9a8(%rdi), %rdi
+      23: e8 00 00 00 00               	callq	0x28 <P1::IQP::BaseDataAgent::SetAuthenticationToken(std::array<unsigned char, 32ul> const&)+0x18>
+		0000000000000024:  R_X86_64_PLT32	P1::IQP::Channel::SetAuthenticationToken(std::array<unsigned char, 32ul> const&)-0x4
+      28: 48 83 c4 08                  	addq	$0x8, %rsp
+      2c: 48 8d bb b0 09 00 00         	leaq	0x9b0(%rbx), %rdi
+      33: 48 89 ee                     	movq	%rbp, %rsi
+      36: 5b                           	popq	%rbx
+      37: 5d                           	popq	%rbp
+      38: e9 00 00 00 00               	jmp	0x3d <P1::IQP::BaseDataAgent::SetAuthenticationToken(std::array<unsigned char, 32ul> const&)+0x2d>
+		0000000000000039:  R_X86_64_PLT32	P1::IQP::Channel::SetAuthenticationToken(std::array<unsigned char, 32ul> const&)-0x4
+      3d: 90                           	nop
+      3e: 66 90                        	nop
+
+0000000000000040 <P1::IQP::BaseAgent::BaseAgent(unsigned char, unsigned char, P1::IQP::ChannelTransport&)>:
+      40: 48 8d 05 00 00 00 00         	leaq	(%rip), %rax            # 0x47 <P1::IQP::BaseAgent::BaseAgent(unsigned char, unsigned char, P1::IQP::ChannelTransport&)+0x7>
+		0000000000000043:  R_X86_64_PC32	vtable for P1::IQP::BaseAgent+0xc
+      47: 53                           	pushq	%rbx
+      48: 0f b6 d2                     	movzbl	%dl, %edx
+      4b: 48 89 fb                     	movq	%rdi, %rbx
+      4e: 48 89 07                     	movq	%rax, (%rdi)
+      51: 40 0f b6 f6                  	movzbl	%sil, %esi
+      55: 48 8d 7f 08                  	leaq	0x8(%rdi), %rdi
+      59: e8 00 00 00 00               	callq	0x5e <P1::IQP::BaseAgent::BaseAgent(unsigned char, unsigned char, P1::IQP::ChannelTransport&)+0x1e>
+		000000000000005a:  R_X86_64_PLT32	P1::IQP::Channel::Channel(unsigned char, unsigned char, P1::IQP::ChannelTransport&)-0x4
+      5e: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x65 <P1::IQP::BaseAgent::BaseAgent(unsigned char, unsigned char, P1::IQP::ChannelTransport&)+0x25>
+		0000000000000061:  R_X86_64_REX_GOTPCRELX	vtable for P1::Platform::Mutex_Cpp-0x4
+      65: 66 0f ef c0                  	pxor	%xmm0, %xmm0
+      69: 48 c7 83 a0 09 00 00 00 00 00 00     	movq	$0x0, 0x9a0(%rbx)
+      74: 0f 11 83 90 09 00 00         	movups	%xmm0, 0x990(%rbx)
+      7b: 48 83 c0 10                  	addq	$0x10, %rax
+      7f: c7 83 90 09 00 00 01 00 00 00	movl	$0x1, 0x990(%rbx)
+      89: 48 89 83 78 09 00 00         	movq	%rax, 0x978(%rbx)
+      90: 0f 11 83 80 09 00 00         	movups	%xmm0, 0x980(%rbx)
+      97: 5b                           	popq	%rbx
+      98: c3                           	retq
+      99: 90                           	nop
+      9a: 66 0f 1f 44 00 00            	nopw	(%rax,%rax)

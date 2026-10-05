@@ -1,0 +1,46 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  863aa0: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  863aa4: 910003fd     	mov	x29, sp
+  863aa8: f9000fe0     	str	x0, [sp, #0x18]
+  863aac: 39005fe1     	strb	w1, [sp, #0x17]
+  863ab0: b90013e2     	str	w2, [sp, #0x10]
+  863ab4: 39005be3     	strb	w3, [sp, #0x16]
+  863ab8: 390057e4     	strb	w4, [sp, #0x15]
+  863abc: f9400fe0     	ldr	x0, [sp, #0x18]
+  863ac0: 52800041     	mov	w1, #0x2                // =2
+  863ac4: 97ffffe0     	bl	0x863a44 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x1f680>
+  863ac8: f9400fe0     	ldr	x0, [sp, #0x18]
+  863acc: 39405fe1     	ldrb	w1, [sp, #0x17]
+  863ad0: 39001001     	strb	w1, [x0, #0x4]
+  863ad4: f9400fe0     	ldr	x0, [sp, #0x18]
+  863ad8: 39405be1     	ldrb	w1, [sp, #0x16]
+  863adc: 39001401     	strb	w1, [x0, #0x5]
+  863ae0: f9400fe0     	ldr	x0, [sp, #0x18]
+  863ae4: 52800061     	mov	w1, #0x3                // =3
+  863ae8: 39001801     	strb	w1, [x0, #0x6]
+  863aec: f9400fe0     	ldr	x0, [sp, #0x18]
+  863af0: 394057e1     	ldrb	w1, [sp, #0x15]
+  863af4: 39001c01     	strb	w1, [x0, #0x7]
+  863af8: f9400fe0     	ldr	x0, [sp, #0x18]
+  863afc: b94013e1     	ldr	w1, [sp, #0x10]
+  863b00: b9000801     	str	w1, [x0, #0x8]
+  863b04: f9400fe0     	ldr	x0, [sp, #0x18]
+  863b08: 52800281     	mov	w1, #0x14               // =20
+  863b0c: 79001801     	strh	w1, [x0, #0xc]
+  863b10: f9400fe0     	ldr	x0, [sp, #0x18]
+  863b14: 79401800     	ldrh	w0, [x0, #0xc]
+  863b18: 2a0003e1     	mov	w1, w0
+  863b1c: f9400fe0     	ldr	x0, [sp, #0x18]
+  863b20: b9400800     	ldr	w0, [x0, #0x8]
+  863b24: 0b000021     	add	w1, w1, w0
+  863b28: f9400fe0     	ldr	x0, [sp, #0x18]
+  863b2c: b9001001     	str	w1, [x0, #0x10]
+  863b30: d503201f     	nop
+  863b34: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  863b38: d65f03c0     	ret

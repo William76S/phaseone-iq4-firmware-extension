@@ -1,0 +1,41 @@
+STATIC ONLY; exported proximity is not a private function identity.
+
+analysis/firmware/sys_exact16_argv_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   93fdc: f81d0ffe     	str	x30, [sp, #-0x30]!
+   93fe0: f9000fe0     	str	x0, [sp, #0x18]
+   93fe4: 97fde6d8     	bl	0xdb44 <.text+0x23a4>
+   93fe8: b9002fff     	str	wzr, [sp, #0x2c]
+   93fec: 97fddab1     	bl	0xaab0 <vfork@plt>
+   93ff0: 2a0003e1     	mov	w1, w0
+   93ff4: 7100001f     	cmp	w0, #0x0
+   93ff8: 5400008a     	b.ge	0x94008 <.text+0x88868>
+   93ffc: 2a0103e0     	mov	w0, w1
+   94000: f84307fe     	ldr	x30, [sp], #0x30
+   94004: d65f03c0     	ret
+   94008: 54000141     	b.ne	0x94030 <.text+0x88890>
+   9400c: f9400fe1     	ldr	x1, [sp, #0x18]
+   94010: f9400020     	ldr	x0, [x1]
+   94014: 97fddb7f     	bl	0xae10 <execvp@plt>
+   94018: f0000141     	adrp	x1, 0xbf000
+   9401c: 52800de0     	mov	w0, #0x6f               // =111
+   94020: f9427c21     	ldr	x1, [x1, #0x4f8]
+   94024: b9400021     	ldr	w1, [x1]
+   94028: b9002fe1     	str	w1, [sp, #0x2c]
+   9402c: 97fdd8a9     	bl	0xa2d0 <_exit@plt>
+   94030: b9402fe2     	ldr	w2, [sp, #0x2c]
+   94034: 34fffe42     	cbz	w2, 0x93ffc <.text+0x8885c>
+   94038: 52800002     	mov	w2, #0x0                // =0
+   9403c: d2800001     	mov	x1, #0x0                // =0
+   94040: 97fde564     	bl	0xd5d0 <.text+0x1e30>
+   94044: f0000140     	adrp	x0, 0xbf000
+   94048: b9402fe2     	ldr	w2, [sp, #0x2c]
+   9404c: 12800001     	mov	w1, #-0x1               // =-1
+   94050: f9427c00     	ldr	x0, [x0, #0x4f8]
+   94054: b9000002     	str	w2, [x0]
+   94058: 2a0103e0     	mov	w0, w1
+   9405c: f84307fe     	ldr	x30, [sp], #0x30
+   94060: d65f03c0     	ret

@@ -1,0 +1,114 @@
+[
+  {
+    "argv": [
+      "python3",
+      "tools/firmware/f1_f3_f4_user_integration_03/build.py",
+      "--spec",
+      "tools/firmware/f1_f3_f4_user_integration_03/INPUTS_DIAG_DATE_01.json",
+      "--spec-sha256",
+      "8f25230b4d7b5b22926fc4ef63bddcd7db558210b17952bee1844b9ed57db5c2",
+      "--output",
+      "analysis/firmware/f1_f3_f4_user_integration_build_03_diag_date_01",
+      "--app-version",
+      "6.03.32"
+    ],
+    "exit": 0,
+    "stdout": "13224296 actual linked User bytes, 63 objects; seal and review still required\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "tools/firmware/native_linked_unwind_02/verify.py",
+      "--build",
+      "analysis/firmware/f1_f3_f4_user_integration_build_03_diag_date_01"
+    ],
+    "exit": 0,
+    "stdout": "522 own FDEs, 60 LSDAs; 4625 CFI operations; static only PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "tools/firmware/native_linked_contract_01/seal.py",
+      "--build",
+      "analysis/firmware/f1_f3_f4_user_integration_build_03_diag_date_01",
+      "--loader-proof",
+      "tools/firmware/native_copy_rtti_01/ABI_PROOF.json"
+    ],
+    "exit": 0,
+    "stdout": "131 actual immutable regions sealed; no target acceptance\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "tools/firmware/native_linked_unwind_02/verify.py",
+      "--build",
+      "analysis/firmware/f1_f3_f4_user_integration_build_03_diag_date_01"
+    ],
+    "exit": 0,
+    "stdout": "522 own FDEs, 60 LSDAs; 4625 CFI operations; static only PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "tools/firmware/f1_f3_f4_user_integration_03/verify_user.py",
+      "--build",
+      "analysis/firmware/f1_f3_f4_user_integration_build_03_diag_date_01"
+    ],
+    "exit": 0,
+    "stdout": "22 actual branches; 63 exact objects; finite inspection PASS; no target acceptance\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "tools/firmware/native_linked_unwind_02/readback.py",
+      "--build",
+      "analysis/firmware/f1_f3_f4_user_integration_build_03_diag_date_01",
+      "--library",
+      "analysis/firmware/native_linked_contract_User_host_validation_02/contract.dylib"
+    ],
+    "exit": 0,
+    "stdout": "11 actual ELF byte/failure host C cases passed; no target execution\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "tools/firmware/user_only_package_stock_wrapper_03/package.py",
+      "--user-payload",
+      "analysis/firmware/f1_f3_f4_user_integration_build_03_diag_date_01/P1Linux_RatioMask_JPEG_LVRecording_6.03.32.bin",
+      "--expected-user-sha256",
+      "49e99546629f14f5111109fd6f49e8bc55a43de96bcc3d552483f7838154dd60",
+      "--release-version",
+      "6.03.29",
+      "--app-version",
+      "6.03.32",
+      "--system-version",
+      "8.02.11",
+      "--release-date",
+      "2026-10-05",
+      "--emit-candidate-directory",
+      "deploy/f1_f3_f4_card_candidate_03_diag_date_01"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"schema\": \"iq4_offline_user_only_stock_wrapper_candidate_v3\",\n  \"evidence_level\": \"host_container_validation_only\",\n  \"original_fwr_sha256\": \"a52758ffb163023e5323297e450450f91002175b69bed7590fe2cd037c2ab300\",\n  \"original_user_sha256\": \"9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb\",\n  \"payload_sha256\": \"49e99546629f14f5111109fd6f49e8bc55a43de96bcc3d552483f7838154dd60\",\n  \"payload_size\": 13224296,\n  \"payload_elf_host_review\": {\n    \"entry\": 4240268,\n    \"program_count\": 12,\n    \"section_count\": 661,\n    \"loads\": [\n      {\n        \"flags\": 5,\n        \"offset\": 0,\n        \"va\": 4194304,\n        \"file_size\": 11737592,\n        \"memory_size\": 11737592,\n        \"alignment\": 65536\n      },\n      {\n        \"flags\": 6,\n        \"offset\": 11738528,\n        \"va\": 15998368,\n        \"file_size\": 133716,\n        \"memory_size\": 53459488,\n        \"alignment\": 65536\n      },\n      {\n        \"flags\": 5,\n        \"offset\": 11927552,\n        \"va\": 69468160,\n        \"file_size\": 691092,\n        \"memory_size\": 691092,\n        \"alignment\": 65536\n      },\n      {\n        \"flags\": 6,\n        \"offset\": 12648448,\n        \"va\": 70189056,\n        \"file_size\": 495664,\n        \"memory_size\": 495664,\n        \"alignment\": 65536\n      }\n    ],\n    \"interpreter\": \"/lib/ld-linux-aarch64.so.1\",\n    \"image_header_offset\": 10332272,\n    \"image_header_va\": 14526576,\n    \"image_header_size\": 180,\n    \"header_version\": [\n      6,\n      3,\n      32\n    ],\n    \"host_elf_review_only\": true,\n    \"target_memory_capacity_or_boot_verified\": false\n  },\n  \"candidate_extent_differs_from_stock\": true,\n  \"candidate_elf_layout_differs_from_stock\": true,\n  \"added_loads_or_growth_is_not_a_device_acceptance_claim\": true,\n  \"release_version\": \"6.03.29\",\n  \"component_version\": \"6.03.32\",\n  \"payload_modified_from_stock\": true,\n  \"payload_changes_limited_to_image_header_version\": false,\n  \"both_versions_strictly_newer_than_fixed_baseline\": true,\n  \"offline_candidate_generation_scope_passed\": true,\n  \"fwr\": {\n    \"size\": 13224868,\n    \"sha256\": \"34d6b667f1cea64be962c0ca79dd16d9ad8615d3ee747260af297807bcaf691d\",\n    \"entries\": [\n      {\n        \"name\": \"manifest.xml\",\n        \"size\": 336,\n        \"sha256\": \"314c14c2365f1019bba318ca409735974dea5d0ba72d333c90798eb5628f849d\",\n        \"crc32\": \"90871852\"\n      },\n      {\n        \"name\": \"P1Linux_6.03.32.bin\",\n        \"size\": 13224296,\n        \"sha256\": \"49e99546629f14f5111109fd6f49e8bc55a43de96bcc3d552483f7838154dd60\",\n        \"crc32\": \"d33328a7\"\n      }\n    ]\n  },\n  \"fwp\": {\n    \"size\": 13225371,\n    \"sha256\": \"9d6c33950f917678e64489b21b94525cb7cbfe5a43ca09a9776e586d5c9f0247\",\n    \"entries\": [\n      {\n        \"name\": \"manifest.xml\",\n        \"size\": 271,\n        \"sha256\": \"49fb641cf11e3a46500a0039304e2df636fa5eb871b9c52cbe39e63cb1b53928\",\n        \"crc32\": \"9c202819\"\n      },\n      {\n        \"name\": \"IQ4-user-only.fwr\",\n        \"size\": 13224868,\n        \"sha256\": \"34d6b667f1cea64be962c0ca79dd16d9ad8615d3ee747260af297807bcaf691d\",\n        \"crc32\": \"442a8b88\"\n      }\n    ]\n  },\n  \"fwp_outer_schema_reconstructed_from_static_consumer_not_stock_sample\": false,\n  \"static_target_files\": [\n    \"User/manifest.xml\",\n    \"User/p1linux.bin\"\n  ],\n  \"additional_fwp_package_manifest_state_requires_independent_closure\": true,\n  \"static_other_side_effects\": [\n    \"FileManager component signature events\",\n    \"firmware flags\",\n    \"User boot image marker clear/reestablish through /dev/mtd0 erase-block read/erase/write\",\n    \"upgrade-mode state\",\n    \"reboot/runner consumes p1linux.bin\"\n  ],\n  \"required_install_mode\": \"actual running User and install-as-User, partial update\",\n  \"contains_boot_fpga_igloo_sensorprofile_language_calibration_or_keys\": false,\n  \"device_acceptance_observed\": false,\n  \"device_recovery_verified\": false,\n  \"f1_feature_implementation_or_acceptance_proven\": false,\n  \"camera_or_sdk_access_performed\": false,\n  \"installation_authorized_by_this_tool\": false,\n  \"original_stock_fwp_sha256\": \"3dfb12c9417d60a0838a5abbfe3adccba2f242a79bab5f9ffa312be097571252\",\n  \"stock_outer_manifest_sha256\": \"29081a1b7be5753e91648f00abe2b478e3c040ced65b11c963361d296e96f575\",\n  \"system_version\": \"8.02.11\",\n  \"original_system_version\": \"8.02.0\",\n  \"system_version_strictly_newer_host_policy\": true,\n  \"release_date\": \"2026-10-05\",\n  \"original_release_date\": \"2022-07-18\",\n  \"original_outer_date\": \"2022-07-21\",\n  \"inner_and_outer_release_dates_match\": true,\n  \"stock_outer_attributes_and_back_selectors_preserved_except_explicit_versions_date_and_filename\": true,\n  \"outer_XF_and_XT_components_removed\": true,\n  \"outer_stock_date_retained_as_candidate_base\": false,\n  \"minimum_update_version_not_added_to_stock_outer_or_child\": true\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "tools/firmware/f1_f3_f4_user_integration_03/inspect_package.py",
+      "--build",
+      "analysis/firmware/f1_f3_f4_user_integration_build_03_diag_date_01",
+      "--package",
+      "deploy/f1_f3_f4_card_candidate_03_diag_date_01"
+    ],
+    "exit": 0,
+    "stdout": "Actual nested User, both manifests, CRC, complete fresh FWP/FWR identity PASS; no device acceptance\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,362 @@
+{
+  "schema": "iq4_f3_capture_menu_build_03",
+  "original_User": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "compiler": {
+    "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+    "bytes": 188226560,
+    "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c"
+  },
+  "native_contract": {
+    "path": "tools/firmware/f3_capture_menu_03/NATIVE_CONTRACT.json",
+    "bytes": 3704,
+    "sha256": "249fb8d030257c2c781c50bed0f25971bbb9bb55b9b689ae6e46280db9a4f848"
+  },
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_03_final/policy.o",
+      "bytes": 5048,
+      "sha256": "b56acb0006b926773a565edd4f61b96beed12693027650cffc5ac093cecc20b8",
+      "machine": 183,
+      "type": "ET_REL",
+      "undefined_symbols": [
+        "iq4_export_geometry"
+      ],
+      "target_executed": false
+    },
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_03_final/geometry.o",
+      "bytes": 1768,
+      "sha256": "088817a3fefdb4a10647043e842d05567a4ac5f8130f71dc4a9ee8536bbe680f",
+      "machine": 183,
+      "type": "ET_REL",
+      "undefined_symbols": [],
+      "target_executed": false
+    },
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_03_final/menu_EN0.o",
+      "bytes": 1184,
+      "sha256": "0beca2c8b5ae19d1f2dbbac7c7bed473d23dd7c9348f4ef1026a4d64889b1613",
+      "machine": 183,
+      "type": "ET_REL",
+      "undefined_symbols": [],
+      "target_executed": false
+    },
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_03_final/menu_EN1_inspection_only.o",
+      "bytes": 17512,
+      "sha256": "70b3bbfc38250e9e0fca2e8cd3230da4f3202c8a02607f288e2be42624d3714b",
+      "machine": 183,
+      "type": "ET_REL",
+      "undefined_symbols": [
+        "iq4_f3_mode_get_01",
+        "iq4_f3_mode_set_on_ui_01",
+        "iq4_f3_quality_get_03",
+        "iq4_f3_quality_set_on_ui_03",
+        "iq4_f3_scale_get_01",
+        "iq4_f3_scale_set_on_ui_01"
+      ],
+      "target_executed": false
+    },
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_03_final/wrapper.o",
+      "bytes": 1232,
+      "sha256": "8435b89fea567ed1aabd03101512d0224a77af1bd8755b17497fc708c055b954",
+      "machine": 183,
+      "type": "ET_REL",
+      "undefined_symbols": [
+        "iq4_f3_after_file_settings_append_01"
+      ],
+      "target_executed": false
+    }
+  ],
+  "host_tests": [
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "1"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "2"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "3"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "4"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "5"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "6"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "7"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "8"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "9"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "10"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "11"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "12"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "13"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "14"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_menu_normal",
+      "args": [
+        "15"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_policy_normal",
+      "args": [],
+      "result": "PASS: immutable once-per-node policy/unknown owner/CAS concurrency; no actual source lease"
+    },
+    {
+      "sanitizer": false,
+      "executable": "test_disabled_normal",
+      "args": [],
+      "result": "PASS: production EN0 performs no menu or native read/call"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "1"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "2"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "3"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "4"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "5"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "6"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "7"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "8"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "9"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "10"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "11"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "12"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "13"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "14"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_menu_sanitized",
+      "args": [
+        "15"
+      ],
+      "result": "PASS: own-memory native-menu ABI fixture; no native firmware execution"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_policy_sanitized",
+      "args": [],
+      "result": "PASS: immutable once-per-node policy/unknown owner/CAS concurrency; no actual source lease"
+    },
+    {
+      "sanitizer": true,
+      "executable": "test_disabled_sanitized",
+      "args": [],
+      "result": "PASS: production EN0 performs no menu or native read/call"
+    }
+  ],
+  "production_default_EN0": true,
+  "EN1_object_purpose": "static ABI inspect only; never linked/installed",
+  "native_complete_RAW_consumer_bound": false,
+  "native_source_lease_bound": false,
+  "firmware_candidate_produced": false,
+  "target_executed": false,
+  "sdk_loaded": false,
+  "device_access": false
+}

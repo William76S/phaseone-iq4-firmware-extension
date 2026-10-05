@@ -1,0 +1,407 @@
+{
+  "evidence_level": "offline_exact_binary",
+  "device_accessed": false,
+  "target_executed": false,
+  "ld_windows": [
+    {
+      "name": "preload_map_wrapper",
+      "va": "0x1230",
+      "end_va_exclusive": "0x12c8",
+      "file_offset": "0x1230",
+      "section": ".text",
+      "extent": "complete_unwind",
+      "bytes_hex": "fd7bb9a90580a05203000090fd030091f35301a9730100f073020091f40300aae443019163200b91e0030191f55b02a9f60302aa750a40b9e2ff0091ffd304a9e12f00f9e1230191e56300b95dffff97e42740f9040100b5600a40b91f00156be0079f1af35341a9f55b42a9fd7bc7a8c0035fd640008052e30316aae20314aaa10000f021c00b91e634009400008052f5ffff171f2003d5",
+      "bytes_sha256": "1069688c301ca2606402d508c33d8d6c78bc365dbb4bf987378efde1bf34f995",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/preload_map_wrapper.ld.disasm.txt",
+      "disassembly_sha256": "9f4e77a1c8ede8eab9f90fbebca9d90a65734568aaad9cab88570e866a86052e"
+    },
+    {
+      "name": "preload_map_callback",
+      "va": "0x12c8",
+      "end_va_exclusive": "0x1308",
+      "file_offset": "0x12c8",
+      "section": ".text",
+      "extent": "complete_unwind",
+      "bytes_hex": "fd7bbea9050080d203008052fd030091f30b00f9f30300aa0000a452641240b99f00006b610240a9e2079f1a5d1a0094600e00f9f30b40f9fd7bc2a8c0035fd6",
+      "bytes_sha256": "fc97841328b99a3dd02f5674bc80d1d3a64a20ccbd875c77b46bf8b713eaddd7",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/preload_map_callback.ld.disasm.txt",
+      "disassembly_sha256": "937efef84d4334ded8ef3f9ea9a76f4d317be75edf155e60a0d3c82a77a9f2b0"
+    },
+    {
+      "name": "preload_name_secure_gate",
+      "va": "0x1570",
+      "end_va_exclusive": "0x15d0",
+      "file_offset": "0x1570",
+      "section": ".text",
+      "extent": "complete_unwind",
+      "bytes_hex": "fd7bbea9610100d0fd03009121c84db9f35301a9f40300aa01010035800240391f000071f3079f1ae003132af35341a9fd7bc2a8c0035fd606560094130080521ff803f128ffff54e20300aae1058052e00314aa0757009480feffb5f0ffff17",
+      "bytes_sha256": "088b4afcc76804a62a6496b9abb9ce0f53999f2b5a1a87c73d4201f57339b905",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/preload_name_secure_gate.ld.disasm.txt",
+      "disassembly_sha256": "0d008f8288c082b67f15df39e753da9176033845c181ef1efea143bca459685e"
+    },
+    {
+      "name": "preload_token_list",
+      "va": "0x1fe8",
+      "end_va_exclusive": "0x20d0",
+      "file_offset": "0x1fe8",
+      "section": ".text",
+      "extent": "complete_unwind",
+      "bytes_hex": "100a82d2ff6330cbfd7b00a9fd030091f35301a9f30300aaf55b02a9b60000d0f5430191d6a21c91f76303a9b80000d018c31c91f92300f9f90301aa1700805262024039e10316aae00313aa02030034fc520094f40300aa000400d11ff83ff189030054ff4301397302148be00315aa610240393f0000717306939a43fdff971f1c0072e0fdff54e20318aae10319aae00315aa6dfcff9762024039f702000be10316aae00313aa42fdff35e003172a100a82d2fd7b40a9f35341a9f55b42a9f76343a9f92340f9ff63308bc0035fd6e20314aae10313aae00315aa03560094bf6a3438e1ffff17",
+      "bytes_sha256": "2df1469305e6117fea8de93d1f4bf13c67b5d0117772f841addb0812aa4b8193",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/preload_token_list.ld.disasm.txt",
+      "disassembly_sha256": "21df197b82fe9ec7ef2dfb4f494414f36a4e6e22f0d5c83ced2fe5adb0a549ec"
+    },
+    {
+      "name": "startup_secure_and_environment_dispatch",
+      "va": "0x20fc",
+      "end_va_exclusive": "0x2210",
+      "file_offset": "0x20fc",
+      "section": ".text",
+      "extent": "bounded_partial",
+      "bytes_hex": "780100b0f96b04a97a0100d0450300910acb4db908810391f35301a9670000d0e7202d91f55b02a9f60300aaa00000b0fb7305a9f90303aae83300fda05300f900202c91a25f00f9a1db00b9ab8f00f9a9c407f9a8c807f9a7cc07f9a6f407f96a30003500600991740100b0fb498ad281821c911c4a8ad297a888d23be9a8f2fcc9a8f257a8aaf2130080d23bc9c9f23c89c9f2f7e8cbf2f50313aaa2630491fb0beaf2bce8ebf2f7a9eaf2a26700f9bfeb00b920d800f9a06740f94e4a0094600400b402004039010080d25ff400714418407a20ffff541f2003d521040091026861385ff400714418407a81ffff545ff4007121feff543f2c00f140870054680b00543f1c00f1a0830054481100543f1000f1",
+      "bytes_sha256": "c1de7c04a5523f70388b681b0b04140dc9f8574ba1fd3b2d48e08fc3e77fec7e",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/startup_secure_and_environment_dispatch.ld.disasm.txt",
+      "disassembly_sha256": "f02d7686675b412393436587b65471dc42c87ea3a4e90a2260e914e69159a4a6"
+    },
+    {
+      "name": "startup_post_environment_secure_branch",
+      "va": "0x2248",
+      "end_va_exclusive": "0x2268",
+      "file_offset": "0x2248",
+      "section": ".text",
+      "extent": "bounded_partial",
+      "bytes_hex": "f30315aaf50300aa00cb4db960ab0035600100b0007446b91f000071641a40fa",
+      "bytes_sha256": "16875f57dbf274b7d71aafc01e718fe177622c93ef20142a3d88bd64fa2c4e68",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/startup_post_environment_secure_branch.ld.disasm.txt",
+      "disassembly_sha256": "949d096d07ff1743ddc2eeb186fc3c3d53cf3a19b22235ad71cfb452c3d40657"
+    },
+    {
+      "name": "PREL_compare",
+      "va": "0x3278",
+      "end_va_exclusive": "0x32a4",
+      "file_offset": "0x3278",
+      "section": ".text",
+      "extent": "bounded_partial",
+      "bytes_hex": "010040b9c2aa8852424aa8723f00026bc0250054024a8a52a288a9723f00026be0230054024a8a52e2c9a872",
+      "bytes_sha256": "2da5b5c3bed9e4c8c999833bbcfef1ee57a5eb7daa6f3f3969aaee265f963f60",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/PREL_compare.ld.disasm.txt",
+      "disassembly_sha256": "02216d7d864b62b48a255d335a3b87999d0ca18ddc3bc7322b68da6b829e97ba"
+    },
+    {
+      "name": "preload_pointer_consumer",
+      "va": "0x3580",
+      "end_va_exclusive": "0x359c",
+      "file_offset": "0x3580",
+      "section": ".text",
+      "extent": "bounded_partial",
+      "bytes_hex": "a06b40f91600805200c01991000840f900d700b5b90000d037230f91",
+      "bytes_sha256": "5f8b652b4a7976c03317636947b091a6496bfbaea6a7c53d6f6cde5a1385877a",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/preload_pointer_consumer.ld.disasm.txt",
+      "disassembly_sha256": "c4cd6fd959d934077559f0a5c366324c3ceba5fb6cda4402d97930b83edd141a"
+    },
+    {
+      "name": "OAD_compare_and_store",
+      "va": "0x3714",
+      "end_va_exclusive": "0x3744",
+      "file_offset": "0x3714",
+      "section": ".text",
+      "extent": "bounded_partial",
+      "bytes_hex": "03084079e22988527f00026be1dbff54021840395f10017181dbff546101009000200091204003f99efaff1703084079",
+      "bytes_sha256": "74b2ee9dd4f4e597289924cd13096d267f636c97bc7ddf710e6a14160d4aaca0",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/OAD_compare_and_store.ld.disasm.txt",
+      "disassembly_sha256": "d90f77f323a568bd8e7fb19a54b64d89e480b3afe132b53f6b6dcfc716558270"
+    },
+    {
+      "name": "preload_token_list_caller",
+      "va": "0x5070",
+      "end_va_exclusive": "0x5084",
+      "file_offset": "0x5070",
+      "section": ".text",
+      "extent": "bounded_partial",
+      "bytes_hex": "e10313aaddf3ff97f603002a46f9ff17a3000090",
+      "bytes_sha256": "08cb40fa0d4a218e8384be8103374c565018e51a0b18221b9852f2ee23599060",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/preload_token_list_caller.ld.disasm.txt",
+      "disassembly_sha256": "4dbacf5e761e1be9d5f8d75afb5eec7941f8ef7b048bb87635f371f39009eb7c"
+    },
+    {
+      "name": "call_one_map_init",
+      "va": "0xd770",
+      "end_va_exclusive": "0xd8a8",
+      "file_offset": "0xd770",
+      "section": ".text",
+      "extent": "complete_unwind",
+      "bytes_hex": "04704c39050440f984001d3204700c39a6004039a6070034fd7bbca9fd030091f35301a9f30300aa005040f9f55b02a9f60302aaf71b00f9f503012af70303aa800400b4010100d0212047b9e1040837040440f9e20317aa630240f9e10316aae003152a6300048b60003fd6628640f9620200b4608e40f9610240f9000440f9530440f900fc43d37302018b800100341404005194060091740e148b1f2003d5638640f8e20317aae10316aae003152a60003fd69f0213eb41ffff54f35341a9f55b42a9f71b40f9fd7bc4a8c0035fd6628640f942ffffb4000100d0002047b9a0fc0f361f2003d566010034e10305aa600000b000000f9136030094605240f960fbffb4d3ffff179f0440f261f8ff54c0035fd621010090400000f000001d91210040f9250040f9bf0000f10500859aefffff171f2003d5",
+      "bytes_sha256": "8d36ff29c116db03b27161400206ef656a28768f1b7b4b169c14d5e3b443d802",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/call_one_map_init.ld.disasm.txt",
+      "disassembly_sha256": "1a483db59569528337eef5e8cbb3595180d523872599e23f170beee409ddb43a"
+    },
+    {
+      "name": "call_maps_init",
+      "va": "0xd8a8",
+      "end_va_exclusive": "0xda00",
+      "file_offset": "0xd8a8",
+      "section": ".text",
+      "extent": "complete_unwind",
+      "bytes_hex": "fd7bbba9fd030091f35301a9130100f064020091f40300aaf55b02a9f603012a80f844f9f76303a9f50303aa98a640f9f92300f9f70302aa99a240f9400600b53f0300f1041b40fa0103005493ca42b973060051e30315aa7f060031a001005480e241f9e20317aae103162a045873f8e00304aa84704c39c4fe1f3793ffff9773060051e30315aa7f060031a1feff54f35341a9f55b42a9f76343a9f92340f9fd7bc5a8c0035fd6130740f973fe43d3f3fcff34000100d0002047b900030837810240f978060051200740f90000018b13200091784e388b0200001473220091030040f9e20315aae003162ae10317aa60003fd6e00313aa1f0313eb01ffff54d3ffff1704704c39440018376fffff97730200917ffa04f9caffff17810640f9200040390001003521010090400000f000001d91210040f9210040f93f0000f10100819a600000b000600f91d3020094dcffff171f2003d5",
+      "bytes_sha256": "604895c0dcb0dae1e13c3d4b033ddeabc16ac9d5e39318b6b72f9a097ec26b6b",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/call_maps_init.ld.disasm.txt",
+      "disassembly_sha256": "8f4f775c7593125ae98eaf61891459aaa2ff183cb4c55c3434ff2f81e57e5ffb"
+    },
+    {
+      "name": "LD_prefix_environment_iterator",
+      "va": "0x14af0",
+      "end_va_exclusive": "0x14b40",
+      "file_offset": "0x14af0",
+      "section": ".text",
+      "extent": "complete_unwind",
+      "bytes_hex": "010040f9e30300aa200040f9800000b50f000014208c40f8a00100b4020040395f30017181ffff54020440395f10017121ffff54020840395f7c0171c1feff54000c009121200091610000f9c0035fd6",
+      "bytes_sha256": "f183c65fd2a59fae380da93910d2c216068e3d62b74401887d5bd55d233e1dc0",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/LD_prefix_environment_iterator.ld.disasm.txt",
+      "disassembly_sha256": "56f9f7ed5b9d19d0c446fa45237b8e0d3eef7674a9b0b39cfeac82bcbec93abf"
+    }
+  ],
+  "busybox_windows": [
+    {
+      "name": "init_clear_exited_pid",
+      "va": "0x84f78",
+      "end_va_exclusive": "0x84fd8",
+      "file_offset": "0x84f78",
+      "section": ".text",
+      "extent": "bounded_window",
+      "bytes_hex": "1f000071cd010054f37bbfa9f303002ae13b0094c00100d000a847f9000040f9c00100b4010840b97f02016b210100541f0800b9f37bc1a8c0035fd6000080d2c0035fd6010840b93f00136b20ffff54000040f980ffffb5000080d2f6ffff17",
+      "bytes_sha256": "ceff189ee99e8810410efceb19308eee7afc576e2ea8dc7112847d88b1e4237b",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/init_clear_exited_pid.busybox.disasm.txt",
+      "disassembly_sha256": "59cce03c5ab973de6d352edfece768cc6fb14e43073671a8d1b087411d7729c3"
+    },
+    {
+      "name": "init_parse_inittab",
+      "va": "0x851a8",
+      "end_va_exclusive": "0x853ac",
+      "file_offset": "0x851a8",
+      "section": ".text",
+      "extent": "bounded_window",
+      "bytes_hex": "f353b8a921fcfff0e00000d0f55b01a9d50100b021503991a2b647f900600891f76302a9430040f9e33f00f9030080d2f96b03a9fb7b04a97d250094200800b4f80000d0370100d09a008052f60300aa18630a91f73a1f91f3630191fb0000d09a08a07263e30a91e2031a2ae10313aae00316aa93250094e0010035e00316aa83250094b5b647f9e13f40f9a00240f9200000cae00000b5f55b41a9f76342a9f96b43a9fb7b44a9f353c8a8c0035fd68a16fe97600e40f9c00000b5c23240b9e10318aa600080527dffff97e6ffff17610a40f9e00317aa740240f9591cfe97f903002ac0feff37610e40f92000403960feff348002403920010034e00314aad11dfe9782000090e10300aa40402f91d8030094f40300aa610e40f9200080520020d91ae20314aae2feff9780024039a0f9ff34e00314aa2c17fe97caffff17930000d073220b91e20313aa20008052e10000d03401009021a0089194aa1891d4feff97e20313aae10314aa00028052d0feff97e10314aa00028052e20000d042e00891cbfeff97e10314aa00028052e20000d042200991c6feff97e10314aa00028052e20000d042600991c1feff97e20313aa00048052e10000d021a00991bcfeff97e20313aa00088052e10000d021c00991b7feff97e20313aa00088052e10000d021000a91b2feff97e10000d0e20313aa21400a91e00f8012adfeff97a1ffff17",
+      "bytes_sha256": "46ebcef6c52c234a596adfdcbba722ea4b76067f83afb3eac0f5a922a0962849",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/init_parse_inittab.busybox.disasm.txt",
+      "disassembly_sha256": "d58aa77e24b991fb8a697f2e2c094f8f7d7a9426734ebacf4d5d039686c713de"
+    },
+    {
+      "name": "init_exec_command",
+      "va": "0x8541c",
+      "end_va_exclusive": "0x85594",
+      "file_offset": "0x8541c",
+      "section": ".text",
+      "extent": "bounded_window",
+      "bytes_hex": "fd7bbaa9fd030091f55b02a9d50100b0a1b647f9f35301a9f30300aa220040f9a22f00f9020080d2f76303a9f96b04a9c113fe970020001176024039e10000d021a00391027c0153003c009100707c92dfb6007142f07dd3ff6320cb423c0091f8179f9a40787c92f70300917902188bff6320cbf4030091e00319aa6e15fe97e00400b421008052e40319aae30000d00200809263000491e00317aab213fe97f30000d0dfb6007161660391e00000d000600391f30301aa2110809a800000d000802a91810200a9977e01a9e10314aae00313aa4816fe9760008052e10000d0e20313aa21200491d8feff97b5b647f9a12f40f9a00240f9200000ca600300b5bf030091f35341a9f55b42a9f76343a9f96b44a9fd7bc6a8c0035fd6e10313aae00317aaba4301913f17fe97970000b0f30300aaf7022991160080d2a02b00f9f903162ae10317aae0031aaa2616fe97e00000b40100403961ffff34807a36f8d6060091f7ffff17bf15fe977302188b9fda39f8d6ffff17",
+      "bytes_sha256": "6ab717bdaf3ddfec264f6ecd2538a30f58e2223d5cf4052e71812f237bdb8836",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/init_exec_command.busybox.disasm.txt",
+      "disassembly_sha256": "24e01b27502a159c368191baedccccb635931f0f1d146191c89abdccddcee736"
+    },
+    {
+      "name": "init_spawn_child",
+      "va": "0x85594",
+      "end_va_exclusive": "0x856e8",
+      "file_offset": "0x85594",
+      "section": ".text",
+      "extent": "bounded_window",
+      "bytes_hex": "c10100b0f353bca9f30300aa21b447f9f57b01a9220040f9e21f00f9020080d2e01700f9000080520f24fe9760324039a00220364e14fe97f303002ab300f836e10000d06000805221000b91a1feff9733020034200080520324fe97c10100b0e003132a21b447f9e21f40f9210040f9410001cae10600b5f57b41a9f353c4a8c0035fd62615fe97f303002ab3fdff37f0ffff17010080d2c08192520003a0720824fe9720008052ef23fe977017fe97e01740f914340091e00314aa57ffff9760000035200080521d13fe97e01740f90030403920022036210100d0f5df0091330080d2c20580d221382091200080525723fe97e20313aae10315aa000080527123fe971f0400f181000054e0df40391f28007101ffff54e01740f913b400916f14fe97e203002ae30314aae40313aae10000d021400b912000805265feff97e00313aa51ffff9700008012fc12fe976715fe97",
+      "bytes_sha256": "d9f902e1422e39f0018396c02160b2740f083a4bb4ce337ef40d97c4d8b2f2df",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/init_spawn_child.busybox.disasm.txt",
+      "disassembly_sha256": "a5af8145d6b21f612124cc60f3a303fc56505bb4c4db29bad96feef5e0370db3"
+    },
+    {
+      "name": "init_run_actions",
+      "va": "0x856e8",
+      "end_va_exclusive": "0x857b4",
+      "file_offset": "0x856e8",
+      "section": ".text",
+      "extent": "bounded_window",
+      "bytes_hex": "c10100b0f353bda921a847f9fe1700f9330040f9b30100b4f403002af55b01a9760c8052f71300f9f70c8052613240393f00146a01010054730240f993ffffb5f55b41a9f71340f9fe1740f9f353c3a8c0035fd63f00176a00010054e00313aa93ffff9761324039f503002a3f00166a0418407a6c0100543f041d72e0fdff54600a40b9a0fdff35e00313aa88ffff97600a00b9730240f9b3fcffb5e9ffff17000080d29116fe97fafdff9701008052e003152ad513fe9740ffff34613240393f041d72a0fbff54eeffff17",
+      "bytes_sha256": "b877fa1778152d3944bb93df1284b5f8d28c585cb8b55124a53778ebcc186ec4",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/init_run_actions.busybox.disasm.txt",
+      "disassembly_sha256": "36493a282f89f2a0d85d666bd353de2fb2c461d122277ad34cf363cb3abdfcd9"
+    },
+    {
+      "name": "init_respawn_wait_loop",
+      "va": "0x85c4c",
+      "end_va_exclusive": "0x85cbc",
+      "file_offset": "0x85c4c",
+      "section": ".text",
+      "extent": "bounded_window",
+      "bytes_hex": "f8feff97f303002a00038052a4feff97f4feff977302002a200080529e13fe97f0feff976002002a1f000071f3079f1ae203132a010080d2000080129e16fe97f503002a1f000071cdfdff54b8fcff9733008052e0feffb402b40091e303152ae10314aae003132aecfcff97f1ffff17",
+      "bytes_sha256": "7fcbde40f097e34cbf3ba24edc97bee514a7ed61702dd28ef01ad799524d6e06",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/init_respawn_wait_loop.busybox.disasm.txt",
+      "disassembly_sha256": "61c3a616f1cfb984483e9d0b2205e0519ecaef5c45ccdd0db4fea797b184e8a5"
+    },
+    {
+      "name": "wget_options",
+      "va": "0x259f0",
+      "end_va_exclusive": "0x25ab8",
+      "file_offset": "0x259f0",
+      "section": ".text",
+      "extent": "bounded_window",
+      "bytes_hex": "ffc304d1001282d2f76304a9f70301aac10400b0f96b05a9da0400d021b447f9f35302a9220040f9e29700f9020080d2f55b03a9fb7306a9fe3b00f9e827086dff6300f9629fff97f50300aa408302f98270805201000090c001805221500091a27200b96793ff97890300d0a80300902901259108612591a0020191f6030391ff7f00a9a7c20191a6a20191f60301a9a5820191a4e20091a362019122040090a103009042283a9121202091e00317aaa92206a9e18e0194c00400b0f86340f9009447f9140040b9",
+      "bytes_sha256": "ce49915c60f0b3a403e0de5d3e16f99ec9241f2a2b46095e94a76e32e9036f6f",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/wget_options.busybox.disasm.txt",
+      "disassembly_sha256": "dc548b5e91e029cd0260a609a2884b8af9f12eae7adea1eacebc4cc9b1493ee7"
+    },
+    {
+      "name": "wget_output_flags_and_options",
+      "va": "0x25b58",
+      "end_va_exclusive": "0x25bc8",
+      "file_offset": "0x25b58",
+      "section": ".text",
+      "extent": "bounded_window",
+      "bytes_hex": "a02e40f9e17f40b22158c0f2a13e00f9c00100b4010040393fb400712101005400044039e0000035d60400d020008052a07a00b9c04e49b900781f12c04e09b920488052a07e00b9947e4093e00e148be04b00f9e07a74f8202000b4d60400d021040090d6322591217c3991f30315aa",
+      "bytes_sha256": "77adc735dc206432e05ed3ace08e639da5ba6137cb3fed6b4bd2c53a90f4dd63",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/wget_output_flags_and_options.busybox.disasm.txt",
+      "disassembly_sha256": "093163c91458d73b867956a1ac160fb60e7197c4b87a7d1d0461b426eef704d7"
+    },
+    {
+      "name": "wget_open_output",
+      "va": "0x25f08",
+      "end_va_exclusive": "0x25f24",
+      "file_offset": "0x25f08",
+      "section": ".text",
+      "extent": "bounded_window",
+      "bytes_hex": "607a40b9f90314aaa000f836617e40b9602e40f9739eff97607a00b9",
+      "bytes_sha256": "099fe255c6def971cb8e610400f01e7b14b899636f458d68104a990c1319942b",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/wget_open_output.busybox.disasm.txt",
+      "disassembly_sha256": "c8bb81e3abae38aafd73c1c81436309e794a302d984c81eb82d169f64ff680bf"
+    },
+    {
+      "name": "wget_proxy_environment",
+      "va": "0x2663c",
+      "end_va_exclusive": "0x2667c",
+      "file_offset": "0x2663c",
+      "section": ".text",
+      "extent": "bounded_window",
+      "bytes_hex": "e28b40f9810300f021c02491800300f000802491420040395f9801710000819af193ff9700adffb401004039c1acff34e12303913900805223fbff976afdff17",
+      "bytes_sha256": "ffb62f285775bb700f1270b17bd1b425c969db2509897909ea7e80eae08e6495",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/wget_proxy_environment.busybox.disasm.txt",
+      "disassembly_sha256": "6373be14345f548a8d76d84f7bf47ae20f95fadc2a0d92b4f0099f7ad0739231"
+    },
+    {
+      "name": "wget_transfer_timeout_counter",
+      "va": "0x25700",
+      "end_va_exclusive": "0x25878",
+      "file_offset": "0x25700",
+      "section": ".text",
+      "extent": "bounded_window",
+      "bytes_hex": "767240b9220040f9e22f00f9020080d2fe2300f9ab94ff97e05300b96100805200008012e1ab0079b5ffff97608240b9c10400d0387c42f900050035e05340b979420291fa430191dc9dff97e00314aaa896ff971f0300b9608640b9e00c0035020082d2e30314aa210080d2e00319aae095ff971f000071ed040054157c4093607a40b9e10319aae20315aa9da0ff97600a40f9618640b90000158b600a00f961060034600240f9150015cb750200f9f50500b5e00314aa8e96ff97e05340b9cd9dff97608240b900060034010080d2e00314aa93feff97010080d2e00314aa90feff971f0300b97542029102028052e00315aa010080d2d292ff97600200f9e003f8b6a0030090e10315aa000023912f9dff97000340b91f2c007100010054800240b980fc2f360000805274ffff978003009000403691269cff97027d8052210080d2e0031aaa1fb401942001003516010034d6060071c100005468ffff97a003009000a02091199dff97767240b92000805262ffff97",
+      "bytes_sha256": "db810e3bd727bb98a2cd2cb777420a69c3ca45d7beb2a08dfedb9e98e1050d26",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/wget_transfer_timeout_counter.busybox.disasm.txt",
+      "disassembly_sha256": "c4b2e5508280d12d18c26b09669797b15699434683bea1b7e4189fbff3dd1f14"
+    },
+    {
+      "name": "tftp_applet",
+      "va": "0x24cd8",
+      "end_va_exclusive": "0x24df8",
+      "file_offset": "0x24cd8",
+      "section": ".text",
+      "extent": "bounded_window",
+      "bytes_hex": "f353bba9e00301aaf55b01a9d50400d0f60301aaa4b647f9a10300b0e303019121801d91850040f9e52700f9050080d2e2e30091f77b02a9ffff03a91f920194f703002ac00400d0009447f9130040b9e0d343a9b40100b4e00000b5e00314aae1058052e597ff971f0000f19406809af41f00f9737e4093c00e138bc17a73f8a10000b5749bff97e02300f940ffffb5719bff97000440f9a2088052a103009021e01691febf0194e103002ac07a73f83cc00194e10300aae28f43a9000080d25cfeff97f303002ae0000034e01f40f9010040393fb40071c001005457000036569aff97b5b647f9e003132ae22740f9a10240f9410001caa10000b5f55b41a9f77b42a9f353c5a8c0035fd6a797ff970104403981feff3477fe0736f1ffff17",
+      "bytes_sha256": "5b7638382fd50549127bb552cc4b1d4f3d9d3733e97741e1ae26b0d70b2b1e99",
+      "disassembly": "analysis/firmware/f4_ram_loader_static/tftp_applet.busybox.disasm.txt",
+      "disassembly_sha256": "285ba69fb0a9f59b9ad7798fc027edaad54122143831acf86c8fbf52d34d3067"
+    }
+  ],
+  "data_records": [
+    {
+      "source": "ld",
+      "name": "LD_PRELOAD_unsafe_name",
+      "va": "0x17dfa",
+      "file_offset": "0x17dfa",
+      "section": ".rodata",
+      "bytes_hex": "4c445f5052454c4f414400",
+      "bytes_sha256": "24caa1f364b7130846c4794dd132decedde9f48cd172524dbae42e7ad8064cc6"
+    },
+    {
+      "source": "ld",
+      "name": "preload_delimiters",
+      "va": "0x18728",
+      "file_offset": "0x18728",
+      "section": ".rodata",
+      "bytes_hex": "203a00",
+      "bytes_sha256": "8ec0717998a1f53747e7467c674fb30f642eecb15bcce5c075de4af9f5a21108"
+    },
+    {
+      "source": "ld",
+      "name": "preload_label",
+      "va": "0x18730",
+      "file_offset": "0x18730",
+      "section": ".rodata",
+      "bytes_hex": "4c445f5052454c4f414400",
+      "bytes_sha256": "24caa1f364b7130846c4794dd132decedde9f48cd172524dbae42e7ad8064cc6"
+    },
+    {
+      "source": "ld",
+      "name": "calling_init_label",
+      "va": "0x1a3c0",
+      "file_offset": "0x1a3c0",
+      "section": ".rodata",
+      "bytes_hex": "0a63616c6c696e6720696e69743a2025730a0a00",
+      "bytes_sha256": "6863df0db9a4e63379c4da0ee4a000351c321a428bb486f5b81a8fc906b23189"
+    },
+    {
+      "source": "busybox",
+      "name": "wget_short_options",
+      "va": "0x99808",
+      "file_offset": "0x99808",
+      "section": ".rodata",
+      "bytes_hex": "5e6371534f3a503a593a553a543a2b743a6e3a3a002d313aff3a3a00",
+      "bytes_sha256": "33f421f938a28af722e9bb8c37d03d3a65d755ad2703d05f24ad3b3e77183ce1"
+    },
+    {
+      "source": "busybox",
+      "name": "wget_long_options",
+      "va": "0xa9e8a",
+      "file_offset": "0xa9e8a",
+      "section": ".rodata",
+      "bytes_hex": "636f6e74696e756500006371756965740000717365727665722d726573706f6e73650000536f75747075742d646f63756d656e7400014f6469726563746f72792d70726566697800015070726f7879000159757365722d6167656e7400015574696d656f75740001546865616465720001ff706f73742d646174610001fe7370696465720000fd6e6f2d636865636b2d63657274696669636174650000fc00486f73743a00557365722d4167656e743a0052616e67653a00417574686f72697a6174696f6e3a00",
+      "bytes_sha256": "00d6d5a832d6db07fafc4ac4593f44c72667cb9ceb95fde4c8672064da831ce0"
+    },
+    {
+      "source": "busybox",
+      "name": "tftp_options",
+      "va": "0x99760",
+      "file_offset": "0x99760",
+      "section": ".rodata",
+      "bytes_hex": "5e67706c3a723a00673a703a672d2d703a702d2d673a00",
+      "bytes_sha256": "3334b6de5a5eff675183b5d68cc97188360a1a3c161a0051f57e8bab375d1965"
+    },
+    {
+      "source": "busybox",
+      "name": "init_action_names",
+      "va": "0xab7ce",
+      "file_offset": "0xab7ce",
+      "section": ".rodata",
+      "bytes_hex": "737973696e69740077616974006f6e6365007265737061776e0061736b6669727374006374726c616c7464656c0073687574646f776e00726573746172740000",
+      "bytes_sha256": "1d2a642dd518840c4c4886ec837837331a2a45fbd10b9df3e21178aa724682cc"
+    },
+    {
+      "source": "busybox",
+      "name": "inittab_path",
+      "va": "0xa3218",
+      "file_offset": "0xa3218",
+      "section": ".rodata",
+      "bytes_hex": "2f6574632f696e697474616200",
+      "bytes_sha256": "60e91a595159bbc05f6ec799a5786a039dee117fe1c5e5e0fd9eaa55135a6231"
+    }
+  ],
+  "user_interp": {
+    "ph_index": 1,
+    "file_offset": "0x270",
+    "bytes_hex": "2f6c69622f6c642d6c696e75782d616172636836342e736f2e3100",
+    "bytes_sha256": "be23adc91ec8582e52305c0a524ca336d671113934722eb2d35eecfcda22ec8f"
+  },
+  "ld_secure_symbol": {
+    "name": "__libc_enable_secure",
+    "dynsym_file_offset": "0x6f8",
+    "dynsym_bytes_hex": "cd00000011000f00c8fd0200000000000400000000000000",
+    "va": "0x2fdc8",
+    "bytes": 4,
+    "symbol_name_file_offset": "0x7f5",
+    "actual_runtime_value_verified": false
+  }
+}

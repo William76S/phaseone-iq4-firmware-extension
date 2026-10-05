@@ -1,0 +1,37 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  787820: b90010fc     	str	w28, [x7, #0x10]
+  787824: 3902969f     	strb	wzr, [x20, #0xa5]
+  787828: 3902a77f     	strb	wzr, [x27, #0xa9]
+  78782c: 35001d01     	cbnz	w1, 0x787bcc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6dea0>
+  787830: 3942a360     	ldrb	w0, [x27, #0xa8]
+  787834: 35001aa0     	cbnz	w0, 0x787b88 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6de5c>
+  787838: b940df04     	ldr	w4, [x24, #0xdc]
+  78783c: 91024283     	add	x3, x20, #0x90
+  787840: b9405ee5     	ldr	w5, [x23, #0x5c]
+  787844: 91023282     	add	x2, x20, #0x8c
+  787848: 91002884     	add	x4, x4, #0xa
+  78784c: b9406fe6     	ldr	w6, [sp, #0x6c]
+  787850: 6b1a00bf     	cmp	w5, w26
+  787854: 91022281     	add	x1, x20, #0x88
+  787858: d37df084     	lsl	x4, x4, #3
+  78785c: 1a9ad0ba     	csel	w26, w5, w26, le
+  787860: 8b040305     	add	x5, x24, x4
+  787864: aa1303e0     	mov	x0, x19
+  787868: b8246b06     	str	w6, [x24, x4]
+  78786c: b90004ba     	str	w26, [x5, #0x4]
+  787870: b940df04     	ldr	w4, [x24, #0xdc]
+  787874: 3cc182e0     	ldur	q0, [x23, #0x18]
+  787878: 8b040484     	add	x4, x4, x4, lsl #1
+  78787c: 8b040f06     	add	x6, x24, x4, lsl #3
+  787880: 3c8780c0     	stur	q0, [x6, #0x78]
+  787884: 97fff435     	bl	0x784958 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6ac2c>
+  787888: 528001c1     	mov	w1, #0xe                // =14
+  78788c: aa1303e0     	mov	x0, x19
+  787890: 97ffd6b0     	bl	0x77d350 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x63624>
+  787894: 528001a1     	mov	w1, #0xd                // =13
+  787898: 2a0003fa     	mov	w26, w0

@@ -1,0 +1,76 @@
+{
+  "inputs": {
+    "firmware": {
+      "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+      "bytes": 11874544
+    },
+    "archive": {
+      "path": "analysis/sdk_reference/vendor_downloads/dest/lib/libCameraSdkCppStatic.a",
+      "sha256": "3754ed25d9d98b8da8a7648d011d2904be82f824144c9ae366af1aa98692dde2",
+      "bytes": 5539920
+    },
+    "shared": {
+      "path": "analysis/sdk_reference/vendor_downloads/dest/lib/libCameraSdkCpp.so.3.2.5",
+      "sha256": "fc94f19ed5bebfd4db61906dce529c1c57e360d9cc6eb02f3da33dcbf708c3e4",
+      "bytes": 1798872
+    },
+    "windows_cpp": {
+      "path": "analysis/sdk_reference/vendor_downloads/windows/lib/CameraSdkCpp.dll",
+      "sha256": "f395aa33ee5a44626d8050c63953efb9f113970330aa3a3ad5670176868c3891",
+      "bytes": 1131152
+    },
+    "windows_cs_bridge": {
+      "path": "analysis/sdk_reference/vendor_downloads/windows/Cs/CameraSdkCppBindingsForCs.dll",
+      "sha256": "5c6c4dee07f145ea68f573a72027690fadd5f10ad1e60b33d3fb42e34d4e00c2",
+      "bytes": 1176208
+    }
+  },
+  "evidence_level": "static_only",
+  "files": {
+    "analysis/firmware/execution_channel_static/archive_members.json": "2a8e91d9011929162e083b55e1996ac3ae6c9f2ce741d8dbea23eb074e2b5594",
+    "analysis/firmware/execution_channel_static/base_agent_auth.disasm.txt": "5679ede0038ee703568ab23cba2028e0efb678ee8204c9a546b7740913a265f5",
+    "analysis/firmware/execution_channel_static/camera_development_auth.disasm.txt": "d020cba89933ab98de7845e46b30c10a7a80290fdcea711f6c0064c969263ec3",
+    "analysis/firmware/execution_channel_static/camera_development_methods.disasm.txt": "e5e463b04bf78e320b39a57a64e971197ef3d974560d4627b7269cdf4b9254e8",
+    "analysis/firmware/execution_channel_static/camera_open_development_create.disasm.txt": "1a6fd6ecc14d257b48ef1ddcce84649cecaba8041ebb9c67a8626dc52e2f1af7",
+    "analysis/firmware/execution_channel_static/camera_open_development_tail.disasm.txt": "2fc6862e6cf7d86fb911720e3b95751e1dff783ccfa01c5d1f0a183556a55987",
+    "analysis/firmware/execution_channel_static/channel_auth_generate.disasm.txt": "27f6321ae0e3dfacfea16357e1b6b4479d9e02186f4a1e5a6fedd7ce990467c9",
+    "analysis/firmware/execution_channel_static/channel_open_reply.disasm.txt": "52139479c479df3f8aa1345783481eb1d37231cae1dd86493c010ec2fbe43f6c",
+    "analysis/firmware/execution_channel_static/channel_send_open.disasm.txt": "a5c5562b08d1d8679016ef327c509da3fae95b678a52466ddd529303be5bfb68",
+    "analysis/firmware/execution_channel_static/development_constructor.disasm.txt": "b6536000c81bf5a3b9cea5b8b26314b661bc2618372162b702525583dc98538c",
+    "analysis/firmware/execution_channel_static/development_receive.disasm.txt": "1fc3f27652f717636497ab3f8d6372e451e721d6642f421f6ead316085b76300",
+    "analysis/firmware/execution_channel_static/development_send.disasm.txt": "60d23d9c8517ec15d48875fc6d8c08e6c9035031c8d38d3b2aee8b7763c14841",
+    "analysis/firmware/execution_channel_static/development_send_copy.disasm.txt": "e1020d21be4b9402e7ad4eaf3b6f1d013204a31ed5665d2e2844e68bfc41769f",
+    "analysis/firmware/execution_channel_static/development_send_sync.disasm.txt": "973f953ec352e4a48a531864d4fc53f59c165491be1f528c327806071ffe901f",
+    "analysis/firmware/execution_channel_static/development_start_channel.disasm.txt": "41decde254f740da9ce350ef46a9aa04df8e71a347e297baaf6f0f4071ad09da",
+    "analysis/firmware/execution_channel_static/exact_bytes.json": "51eba53f2ca2c135b3160896fd18e384720b0a7d27e533d059489a3ef31c8ec7",
+    "analysis/firmware/execution_channel_static/firmware_auth_group_ctor.disasm.txt": "8794afe4011e35a92b0c9eae97b6f845b1ce358049582631073e8c30d30cd6a5",
+    "analysis/firmware/execution_channel_static/firmware_auth_group_sources.disasm.txt": "9f6a8bd8d1dfb939bd1f322ca0a9d4de5c6939c10d299d3173eca6cb672c63b6",
+    "analysis/firmware/execution_channel_static/firmware_channel_creation_loop.disasm.txt": "4d9e4b26da3b79d49ac037a0de66559fe1ea746791ed1f43928b4ff006a59ff4",
+    "analysis/firmware/execution_channel_static/firmware_channel_lookup.disasm.txt": "c4e4a2d666884586aaaea8f423c5d7ce89236b9b9f64b172ee7dce26c40e12a3",
+    "analysis/firmware/execution_channel_static/firmware_channel_manager_ctor.disasm.txt": "9396cb58d8cf0603e630c9890206fd8dbf843d21b1c5091152c8ac30ae3c0b5e",
+    "analysis/firmware/execution_channel_static/firmware_channel_state_ctor.disasm.txt": "42ba53762a108d3169e81f45de3ad55cea9dc7b24cdc7f237d051ba555dcac9f",
+    "analysis/firmware/execution_channel_static/firmware_development_auth_gate.disasm.txt": "e736f604a0ba18f02f79596900158ad00c4a5f2e4d944e2c958ebcd8a967225a",
+    "analysis/firmware/execution_channel_static/firmware_development_dispatch.disasm.txt": "be47996e95d3052681d2fed6d885700d5979facef35f3489d6003eb1d2c1c5c9",
+    "analysis/firmware/execution_channel_static/firmware_development_factory.disasm.txt": "f506a8a57f7a37b9b793adc0170b86547b28e1fa8bc2a48acafcb477f49f14a4",
+    "analysis/firmware/execution_channel_static/firmware_development_factory_tail.disasm.txt": "cd2317f695be382effebc0893d5846c143a4a51319f53e76df3b91745c3eeaf4",
+    "analysis/firmware/execution_channel_static/firmware_development_receive.disasm.txt": "44fcac7944211735a9d63c0d7150f3c0e70f4d0a736bf0e0415a85e591ffb0d6",
+    "analysis/firmware/execution_channel_static/firmware_factory_config_eth.disasm.txt": "260cd72558d80ab3228b3fdc9714aa2887d599dbaaefd5911222c9d5dfeae9ed",
+    "analysis/firmware/execution_channel_static/firmware_factory_config_usb.disasm.txt": "eccabd2c22d75479d74a7ad51de6de3747a3bd28ed6ae466a012c1d50d9cca58",
+    "analysis/firmware/execution_channel_static/firmware_native_linux_sys.disasm.txt": "3ae90d8221be56a787a2f2d3ad66365f4a55e4d0a41981aa019b0a11c3e108a0",
+    "analysis/firmware/execution_channel_static/firmware_simple_factory_ctor.disasm.txt": "6cba29a136370d1c4cf8adfdaa2f962989fd265b152dec8a07e5c3315db50092",
+    "analysis/firmware/execution_channel_static/linux_dynamic_symbols.txt": "761a1b814077a815f89f4a8bafd61ae3b2795acf4132ae4a7be4588c8e3315cb",
+    "analysis/firmware/execution_channel_static/linux_export_camera_id_helper.disasm.txt": "9fe1b4e03e7abf8d4524996fabc7d86b01ea7decaf323849c7052301e0f0b7b1",
+    "analysis/firmware/execution_channel_static/linux_export_capi_test.disasm.txt": "84fd3d016686300572cf47058b027c6b7177a1977430ae2dbc389c7f31e79728",
+    "analysis/firmware/execution_channel_static/linux_export_get_iqp_camera.disasm.txt": "f6e59baa257de1fddee8c8463895e763ec61190127a96237e1c55e91faabd935",
+    "analysis/firmware/execution_channel_static/linux_static_symbols.txt": "4f20edd7dc68fd7c4c71e11aac8c70969b262efd66c34906a7ddb41242c7e87e",
+    "analysis/firmware/execution_channel_static/public_api_coverage.json": "d695cd6171cc8fbeb98d4794aa40fa715c2edcc3ffbb540d35051c34faaef187",
+    "analysis/firmware/execution_channel_static/transport_camera_open.disasm.txt": "9b46d3eebfdbda8562a59c19cadc22a8fb1281519e4e08c844f20de5344098dd",
+    "analysis/firmware/execution_channel_static/transport_get_iqp_camera.disasm.txt": "bdd56d3fcad6b1d405fd7cb4d402caf891fbf4baea5c2c770c2f562fca5318a5",
+    "analysis/firmware/execution_channel_static/windows_cpp_exports.json": "ef6430fe49e6037dd7c3b682f60635be27794c507276e328ee904584ca33e11f",
+    "analysis/firmware/execution_channel_static/windows_cs_bridge_exports.json": "1ccbe0d79642942646984b66070dc936294f58ff9a8efa07cd1f283865887270",
+    "tools/firmware/execution_channel_collect_static.py": "c009d8972699716464303fb5d5e5255a5cd6c6d801f947a14883b3ae9b8f2766",
+    "analysis/firmware/EXECUTION_CHANNEL_STATIC.md": "ef9a1e1c525e8effd673360b0ef7b7cd9ea8760fa9fe7ae7236325074dc943cb",
+    "analysis/firmware/execution_decompile_targets.txt": "10faec977c1c57a3a82cfa35482c41c691271aa8730a038eafe2d37f33150205"
+  }
+}

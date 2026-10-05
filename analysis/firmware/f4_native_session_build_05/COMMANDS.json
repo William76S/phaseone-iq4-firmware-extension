@@ -1,0 +1,389 @@
+[
+  {
+    "argv": [
+      "/usr/bin/xcrun",
+      "--show-sdk-path"
+    ],
+    "exit": 0,
+    "stdout": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_session_04/session.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_session_05/test_session.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/old_session"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/old_session",
+      "10"
+    ],
+    "exit": -6,
+    "stdout": "",
+    "stderr": "Assertion failed: (!get(&attached)&&!get(&accepting)&&!get(&prepared)&&!get(&finalized)&&!get(&released)), function main, file test_session.c, line 70.\n"
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/old_session",
+      "11"
+    ],
+    "exit": -6,
+    "stdout": "",
+    "stderr": "Assertion failed: (!get(&attached)&&!get(&accepting)&&!get(&prepared)&&!get(&finalized)&&!get(&released)), function main, file test_session.c, line 70.\n"
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/old_session",
+      "12"
+    ],
+    "exit": -6,
+    "stdout": "",
+    "stderr": "Assertion failed: (await(&p,IQ4_F4_UI_IDLE)), function main, file test_session.c, line 67.\n"
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/old_session",
+      "13"
+    ],
+    "exit": -6,
+    "stdout": "",
+    "stderr": "Assertion failed: (refused==IQ4_F4_UI_UNKNOWN), function main, file test_session.c, line 66.\n"
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_session_05/session.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_session_05/test_session.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "0"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 0: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "1"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 1: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "2"
+    ],
+    "exit": 0,
+    "stdout": "unknown card poll: retained/no retry/no cleanup PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "3"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 3: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "4"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 4: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "5"
+    ],
+    "exit": 0,
+    "stdout": "unknown finalizer: all owners retained/no release PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "6"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 6: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "7"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 7: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "8"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 8: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "9"
+    ],
+    "exit": 0,
+    "stdout": "unknown page during worker timer: Hold, no frames/finalizer/cleanup PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "10"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 10: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "11"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 11: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "12"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 12: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_normal",
+      "13"
+    ],
+    "exit": 0,
+    "stdout": "unknown prestart detach retains owner; no retry PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_session_05/session.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_session_05/test_session.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "0"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 0: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "1"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 1: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "2"
+    ],
+    "exit": 0,
+    "stdout": "unknown card poll: retained/no retry/no cleanup PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "3"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 3: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "4"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 4: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "5"
+    ],
+    "exit": 0,
+    "stdout": "unknown finalizer: all owners retained/no release PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "6"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 6: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "7"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 7: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "8"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 8: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "9"
+    ],
+    "exit": 0,
+    "stdout": "unknown page during worker timer: Hold, no frames/finalizer/cleanup PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "10"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 10: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "11"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 11: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "12"
+    ],
+    "exit": 0,
+    "stdout": "session scenario 12: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session_asan_ubsan",
+      "13"
+    ],
+    "exit": 0,
+    "stdout": "unknown prestart detach retains owner; no retry PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-ffreestanding",
+      "-fPIC",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-omit-frame-pointer",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_session_05/session.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_native_session_build_05/session.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

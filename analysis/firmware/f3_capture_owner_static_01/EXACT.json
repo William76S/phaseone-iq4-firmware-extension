@@ -1,0 +1,309 @@
+{
+  "schema": "iq4_f3_capture_owner_finite_static_01",
+  "input_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "windows": [
+    {
+      "label": "node_test_acquire",
+      "va": 9184704,
+      "end": 9184872,
+      "file_offset": 4990400,
+      "bytes": 168,
+      "hex": "fd7bbea9fd030091e00f00f9c0c901d000a00991000040f9026c41f9e00f40f9004440f9e10300aae00302aa78b8f897e10300aae00f40f9014400f9e00f40f9004440f91f0000f161000054000080d214000014e00f40f9004440f91f0000f141010054430e8052802700b002a03a91802700b001603e91802700b000803b91d01fed9731a8fa97e00f40f9004440f9e10f40f9010800f9e00f40f9004440f9fd7bc2a8c0035fd6",
+      "sha256": "ba5d5d9db8784a29ea436b09ec9590bcec9a3fdd3ae354591fb2afd428f5564d",
+      "disasm_sha256": "fee1045d52205fd18eea2b3f6283070de3ae6a5381b640a19970eb4ebac9ba75",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=9184704",
+        "--stop-address=9184872",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "node_test_decrement",
+      "va": 9184872,
+      "end": 9184984,
+      "file_offset": 4990568,
+      "bytes": 112,
+      "hex": "fd7bbea9fd030091e00f00f9e00f40f9004440f91f0000f141010054830f8052802700b002a03a91802700b001603e91802700b000803b91b81fed9719a8fa97c0c901d000a00991000040f9026c41f9e00f40f9004440f9e10300aae00302aab0b8f8971f2003d5fd7bc2a8c0035fd6",
+      "sha256": "0015366d0ae52e301c975d194f70beec5d843e591d0c966ce2e09c8a55e93168",
+      "disasm_sha256": "f612c9f0fd59b2c3a97cf1af98a50d19c38585d59b37fffbd8b658e4e984d6c2",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=9184872",
+        "--stop-address=9184984",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "node_frame_acquire",
+      "va": 9185104,
+      "end": 9185248,
+      "file_offset": 4990800,
+      "bytes": 144,
+      "hex": "fd7bbea9fd030091e00f00f9c0c901d000a00991000040f9027041f9e00f40f9004840f9e10300aae00302aad1030094e10300aae00f40f9014800f9e00f40f9004840f91f0000f14101005403128052802700b002a03a91802700b001a03e91802700b000803b91721fed97d3a7fa97e00f40f9004840f9e10f40f9010800f9e00f40f9004840f9fd7bc2a8c0035fd6",
+      "sha256": "a26d9ada65faa8191c20c55ffeb5cccfabd306ac9bb5179c89dff91faad799d7",
+      "disasm_sha256": "cca230497e895fa774e11c199971f172ac5ea80b98ad38757b5921ac550e1ebe",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=9185104",
+        "--stop-address=9185248",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "node_frame_decrement",
+      "va": 9185248,
+      "end": 9185360,
+      "file_offset": 4990944,
+      "bytes": 112,
+      "hex": "fd7bbea9fd030091e00f00f9e00f40f9004840f91f0000f14101005423138052802700b002a03a91802700b001a03e91802700b000803b915a1fed97bba7fa97c0c901d000a00991000040f9027041f9e00f40f9004840f9e10300aae00302aa0f0400941f2003d5fd7bc2a8c0035fd6",
+      "sha256": "c48450ca1a6d48900118ccd73141395ea1985f2768447dcc5e0673e9a9ed0738",
+      "disasm_sha256": "7cf445399c267a1e5f76211c8c4940ab1d4448c0b9c573be0e3246a3e84666f5",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=9185248",
+        "--stop-address=9185360",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "node_frame_dispose",
+      "va": 9185360,
+      "end": 9185480,
+      "file_offset": 4991056,
+      "bytes": 120,
+      "hex": "fd7bbea9fd030091e00f00f9e00f40f9004840f91f0000f14101005403148052802700b002a03a91802700b001a03e91802700b000803b913e1fed979fa7fa97c0c901d000a00991000040f9027041f9e00f40f9004840f9e10300aae00302aa38040094e00f40f91f4800f91f2003d5fd7bc2a8c0035fd6",
+      "sha256": "2e6acf24dd2d88a06d16c72367cc8e7a15c3bac291a42ae1e2edad908f45ebc5",
+      "disasm_sha256": "39f7f14e37e3e0f50b5bcb154b6efae70fe384bb825106d9785ddc671a310218",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=9185360",
+        "--stop-address=9185480",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "test_pool_acquire",
+      "va": 7276492,
+      "end": 7276936,
+      "file_offset": 3082188,
+      "bytes": 444,
+      "hex": "fd7bbca9fd030091f35301a9e01700f9e11300f9ffff0039e0c30091ea870094e01340f91f0000f141070054e01740f900c0009131010094001c001200000052001c00121f00007120010054e01740f900c0009121008052310100940020019141010094e01300f92a000014e01740f9002000912100805229010094e01300f9e01340f91f0000f1810100544029009003203591220980524029009001c03591402900900080369162570194140080d21300805229000014e01340f9001840b91f00007140010054a30980524029009002c035914029009001a0369140290090008034913467f49795ef0194e21340f9e01340f9000040f900400091010040f9e00302aa20003fd620008052e0ff0039e01740f902600191e01340f91f0000f180000054e01340f90020019102000014000080d2e10300aae00302aa10010094e01340f9001840b901040011e01340f9011800b933008052e0c30091a78700947f06007181010054e0ff40391f00007100010054e21340f9e01340f9000040f900600091010040f9e00302aa20003fd6f41340f9e00314aa06000014f30300aae0c3009195870094e00313aa7667f497f35341a9fd7bc4a8c0035fd6",
+      "sha256": "87be8656e77129eaeb7200bd37d4724b1bb821e2c3eb94768b67d391170c343f",
+      "disasm_sha256": "81198840c6d1560ff998323b4b70a56cac92318631b2cc47759e6744ff1215b5",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=7276492",
+        "--stop-address=7276936",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "test_pool_decrement",
+      "va": 7276936,
+      "end": 7277212,
+      "file_offset": 3082632,
+      "bytes": 276,
+      "hex": "fd7bbca9fd030091f30b00f9e01700f9e11300f9e0e300917c870094e01340f91f0000f141010054230d80524029009002c0359140290090012037914029009000803491ed66f4974eef0194e01340f9001840b91f00007101020054e01740f9014040f9e21340f9e01340f9001840b9e603002ae50302aae40301aa4029009003403791a20d80524029009001c0359180008052cc560194e01340f9011840b921040051011800b9e01340f9001840b91f000071a1010054e01740f902200091e01340f91f0000f180000054e01340f90020019102000014000080d2e10300aae00302aab7000094e0e300915487009406000014f30300aae0e3009150870094e00313aa3167f497f30b40f9fd7bc4a8c0035fd6",
+      "sha256": "fc770b9c131f9ce83209045b4ba2ae0e07f0172f0f9cec67844f575b7ad597e8",
+      "disasm_sha256": "f7740580001f6cbef6836d5947fef96a5cffc8901ef36f91f8a5cc878dc2cbef",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=7276936",
+        "--stop-address=7277212",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "test_pool_dispose",
+      "va": 7277212,
+      "end": 7277468,
+      "file_offset": 3082908,
+      "bytes": 256,
+      "hex": "fd7bbca9fd030091f30b00f9e01700f9e11300f9e0e3009137870094e01340f91f0000f141010054031080524029009002c0359140290090012037914029009000803491a866f49709ef0194e01340f9001840b91f040071e9000054e01340f9e10300aae01740f9a1ffff971300805218000014e01340f91f1800b9e01340f9e20300aae01340f9000040f900400091010040f9e00302aa20003fd6e01740f902c00091e01340f91f0000f180000054e01340f90020019102000014000080d2e10300aae00302aa7900009433008052e0e30091158700947f06007106000014f30300aae0e3009110870094e00313aaf166f497f30b40f9fd7bc4a8c0035fd6",
+      "sha256": "19223fbc60e80c4d3d63043f9f0a104d4003111a1a7450fcc0997b17dbc49a8b",
+      "disasm_sha256": "43d20555da01f61fbc89be5541dea1883d6feaf84384666d4ef41d3f6c49ec8f",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=7277212",
+        "--stop-address=7277468",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "frame_pool_acquire",
+      "va": 9189056,
+      "end": 9189500,
+      "file_offset": 4994752,
+      "bytes": 444,
+      "hex": "fd7bbca9fd030091f35301a9e01700f9e11300f9ffff0039e0c300912d3cf997e01340f91f0000f141070054e01740f900c00091a7050094001c001200000052001c00121f00007120010054e01740f900c0009121008052a705009400200191b7050094e01300f92a000014e01740f900200091210080529f050094e01300f9e01340f91f0000f181010054802700b003c0019122098052802700b001600291802700b000200391a50bfa97140080d21300805229000014e01340f9001840b91f00007140010054a3098052802700b002600291802700b0014003918027009000803b91771bed97d8a3fa97e21340f9e01340f9000040f900400091010040f9e00302aa20003fd620008052e0ff0039e01740f902600191e01340f91f0000f180000054e01340f90020019102000014000080d2e10300aae00302aa86050094e01340f9001840b901040011e01340f9011800b933008052e0c30091ea3bf9977f06007181010054e0ff40391f00007100010054e21340f9e01340f9000040f900600091010040f9e00302aa20003fd6f41340f9e00314aa06000014f30300aae0c30091d83bf997e00313aab91bed97f35341a9fd7bc4a8c0035fd6",
+      "sha256": "ed10d6b9227c1b1aed5d1a08f45dfbf8258a8eabd2273a2fc85afce5d0a349da",
+      "disasm_sha256": "2e0373fd2ddd376a562f989e7f43778b5afcc6d8d0569b84451a42fac974be17",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=9189056",
+        "--stop-address=9189500",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "frame_pool_decrement",
+      "va": 9189500,
+      "end": 9189776,
+      "file_offset": 4995196,
+      "bytes": 276,
+      "hex": "fd7bbca9fd030091f30b00f9e01700f9e11300f9e0e30091bf3bf997e01340f91f0000f141010054230d8052802700b002600291802700b001c003918027009000803b91301bed9791a3fa97e01340f9001840b91f00007101020054e01740f9014040f9e21340f9e01340f9001840b9e603002ae50302aae40301aa802700b003e00391a20d8052802700b001600291800080520f0bfa97e01340f9011840b921040051011800b9e01340f9001840b91f000071a1010054e01740f902200091e01340f91f0000f180000054e01340f90020019102000014000080d2e10300aae00302aa2d050094e0e30091973bf99706000014f30300aae0e30091933bf997e00313aa741bed97f30b40f9fd7bc4a8c0035fd6",
+      "sha256": "04179245cd6e458fb93394b6f206a51ef24584b539ecb06f1e42f5b7a8745a88",
+      "disasm_sha256": "6e104e6231a2533a7d9f18c6491bedd3e7e896c5a85c5b27cffb3f6d695cccba",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=9189500",
+        "--stop-address=9189776",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "frame_pool_dispose",
+      "va": 9189776,
+      "end": 9190032,
+      "file_offset": 4995472,
+      "bytes": 256,
+      "hex": "fd7bbca9fd030091f30b00f9e01700f9e11300f9e0e300917a3bf997e01340f91f0000f14101005403108052802700b002600291802700b001c003918027009000803b91eb1aed974ca3fa97e01340f9001840b91f040071e9000054e01340f9e10300aae01740f9a1ffff971300805218000014e01340f91f1800b9e01340f9e20300aae01340f9000040f900400091010040f9e00302aa20003fd6e01740f902c00091e01340f91f0000f180000054e01340f90020019102000014000080d2e10300aae00302aaef04009433008052e0e30091583bf9977f06007106000014f30300aae0e30091533bf997e00313aa341bed97f30b40f9fd7bc4a8c0035fd6",
+      "sha256": "022d57eb1263115b16cf903bf228b603290e7b81541b4ecfb2daa81331f881eb",
+      "disasm_sha256": "090fc1fad1a41a01ac280d3d4285483e05fd5697716c8f04e87fa2ac9b6a0d25",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=9189776",
+        "--stop-address=9190032",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "retire_bridge",
+      "va": 9197968,
+      "end": 9198104,
+      "file_offset": 5003664,
+      "bytes": 136,
+      "hex": "fd7bbea9fd030091e00f00f9e10b00f9e00f40f9009041f91f0000f100010054e00f40f9029041f9e00b40f900d840b9e103002ae00302aa4b43ef97e00b40f984f3ff97e00b40f955abf897001c00121f00007160000054e00b40f9dbf3ff97e00f40f902200991e00b40f900e00191e10300aae00302aaa50500941f2003d5fd7bc2a8c0035fd6",
+      "sha256": "c2b2fd34544508956a0adc54054f9def0b9ae76c6992d89a96cfa9055ed90e79",
+      "disasm_sha256": "51f4f289a06a965b3286731bee8f2db2dcee79b200c9c3f6ab3218e99beda5c9",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=9197968",
+        "--stop-address=9198104",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "test_reference_wait",
+      "va": 9198104,
+      "end": 9198648,
+      "file_offset": 5003800,
+      "bytes": 544,
+      "hex": "fd7bbda9fd030091e00f00f9e10b00f9e00b40f9004440f91f0000f1e00f0054ff2f00b9ffaf0039e00b40f9004440f9001840b91f040071090e0054602700f002801a9181148052602700f000e013918d02fa97ff2f00b9e02f40b91f9c0f714c07005440018052ee2bf997e00b40f9004440f9001840b91f040071a103005420008052e0af0039a0c901f000500f91000040b9e12f40b93f00006b4d050054a0c901f000500f91e12f40b9010000b9a0c901f000500f91010040b9e003012a00741e530000010b00781f53e403002a602700f003801b91c2158052602700f001e01391400080529302fa9716000014e02f40b91f280071e1010054e00b40f901dc40b9e00b40f9004440f9001840b9e503002ae403012a602700f003001c91a2168052602700f001e01391400080528102fa97e02f40b900040011e02f00b9c6ffff171f2003d5e0af403900000052001c00121f00007100020054e00b40f901dc40b9e00b40f9004440f9001840b9e503002ae403012a602700f003c01c9162178052602700f001e01391800080526902fa9719000014e02f40b91f280071cd020054e12f40b9e003012a00741e530000010b00781f53e203002ae00b40f901dc40b9e00b40f9004440f9001840b9e603002ae503012ae403022a602700f003201e9122188052602700f001e01391008080525002fa97e00b40f9b1f2ff97e00b40f9004440f91f0000f160000054e00b40f98ff2ff97e00b40f9004840f9",
+      "sha256": "f4a53c1e6776fac540dab78567fbfb25f053bddd16995ae7608f1983ec124a07",
+      "disasm_sha256": "a2bc013d53af83fe41be671b6aaebb946bd3dfc200399274afbf302b922bede6",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=9198104",
+        "--stop-address=9198648",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    },
+    {
+      "label": "jpeg_payload_and_meta_borrow",
+      "va": 8091616,
+      "end": 8091912,
+      "file_offset": 3897312,
+      "bytes": 296,
+      "hex": "e05f06b9e01f593900000052001c00121f00007120110054ff1703f9ff1303f9e02342f91f0000f1e0000054e02f42f96c2b0494e02703f9e02342f91e76f397e01703f9e02f42f91f0000f140010054e02f42f9c72b0494e02b03f9e02b43f91f0000f180000054e02b43f91876f397e01303f9e01343f91f0000f180000054e01743f91f0000f181030054e01343f91f0000f160000054e02f42f9d92b0494e01743f91f0000f160000054e02f42f9762b0494ff031039e12f40f980aaacd22000008b008c7cf913800791e1031091e0a312912f5df397e0a31291e10300aae00313aacd61f397e0a31291205df3971300805297020014e12f40f900278fd280aaacf22000008be31343f9e21743f9e10300aae02f40f9790c0094e01743f900b04091008c58b9",
+      "sha256": "f5b33c6c76765ec3d2c76dc43ffa69f2dd3c907190dd6da999559305419454a4",
+      "disasm_sha256": "e5693833a75162e0dbd4e2bb04e12f20af43602fa9692320433d9783cb992bca",
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=8091616",
+        "--stop-address=8091912",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "returncode": 0
+    }
+  ],
+  "literals": [
+    {
+      "label": "node_source_file",
+      "va": 14368424,
+      "file_offset": 10174120,
+      "bytes": 34,
+      "hex": "2e2e2f2e2e2f5372632f496d6167654e6f64652f496d6167654e6f64652e63707000",
+      "sha256": "d6c9363d8545f693b9c1ad9670ec695dcae282f25a12480a005139c28836aa72",
+      "text": "../../Src/ImageNode/ImageNode.cpp"
+    },
+    {
+      "label": "test_resource_name",
+      "va": 14368664,
+      "file_offset": 10174360,
+      "bytes": 12,
+      "hex": "6d5465737442756666657200",
+      "sha256": "9ebe0b834c48eb8f5c440a10dfd01e777f2391c966be4def84e5cbeeaa9982bf",
+      "text": "mTestBuffer"
+    },
+    {
+      "label": "frame_resource_name",
+      "va": 14368680,
+      "file_offset": 10174376,
+      "bytes": 13,
+      "hex": "6d4672616d6542756666657200",
+      "sha256": "ab151a5f22dd4cbad75a760a686c9123357c096dee026283c3480b30095fb769",
+      "text": "mFrameBuffer"
+    },
+    {
+      "label": "preview_resource_name",
+      "va": 14368696,
+      "file_offset": 10174392,
+      "bytes": 15,
+      "hex": "6d5072657669657742756666657200",
+      "sha256": "30afccaf04ca6c09528e50e6795bf4b5baeb43aad477f2101efc3a65d199fda4",
+      "text": "mPreviewBuffer"
+    },
+    {
+      "label": "frame_manager_source_file",
+      "va": 14368920,
+      "file_offset": 10174616,
+      "bytes": 45,
+      "hex": "2e2e2f2e2e2f5372632f496d6167654e6f64652f496d616765446174614275666665724d616e616765722e6800",
+      "sha256": "c3ddbd388c8f94dd6a086b8bd5394705aecff30a21f8623876c3099a8a449501",
+      "text": "../../Src/ImageNode/ImageDataBufferManager.h"
+    }
+  ],
+  "collector_sha256": "26a2dbbca556f9adb38c23366efafaaecde3805e4ab508928fc7a6f041f433f7",
+  "target_or_SDK_or_camera_executed": false,
+  "name_does_not_prove_or_disprove_complete_RAW": true,
+  "capture_source_builder_or_retention_installed": false
+}

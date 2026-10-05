@@ -1,0 +1,273 @@
+{
+  "schema": "iq4_f3_fs06_single_object_overlay",
+  "replace_only": {
+    "path": "analysis/firmware/f3_native_card_bridge_build_06/fs05.o",
+    "bytes": 13168,
+    "sha256": "00e8cfaa49b71539bfc716aec64acb87bbdf750c3eb8cc79af6a84a994f4b956",
+    "type": "ET_REL",
+    "machine": 183,
+    "alloc_sections": [
+      {
+        "name": ".text",
+        "type": 1,
+        "flags": 6,
+        "bytes": 8032
+      },
+      {
+        "name": ".rodata.str1.1",
+        "type": 1,
+        "flags": 50,
+        "bytes": 53
+      },
+      {
+        "name": ".rodata",
+        "type": 1,
+        "flags": 2,
+        "bytes": 288
+      },
+      {
+        "name": ".eh_frame",
+        "type": 1,
+        "flags": 2,
+        "bytes": 792
+      }
+    ],
+    "relocation_types": [
+      261,
+      275,
+      277,
+      283
+    ],
+    "undefined_symbols": [
+      "memcpy",
+      "memset"
+    ],
+    "defined_global_symbols": [
+      "f3_fs_create_stage_03",
+      "f3_fs_manual_raw_03",
+      "f3_fs_ports_03",
+      "f3_fs_prepare_03",
+      "f3_fs_release_raw_03",
+      "f3_fs_seal_stage_03"
+    ],
+    "executed": false
+  },
+  "replacement": {
+    "path": "analysis/firmware/f3_native_fs_unique_build_06/fs06.o",
+    "bytes": 21224,
+    "sha256": "3ae1c43101ae1f86a6ca5a3a4c1c1b94134c02acfb10274ababf09347df309cc",
+    "type": "ET_REL",
+    "machine": 183,
+    "alloc_sections": [
+      {
+        "name": ".text",
+        "type": 1,
+        "flags": 6,
+        "bytes": 0
+      },
+      {
+        "name": ".text.f3_fs_prepare_03",
+        "type": 1,
+        "flags": 6,
+        "bytes": 492
+      },
+      {
+        "name": ".text.name",
+        "type": 1,
+        "flags": 6,
+        "bytes": 624
+      },
+      {
+        "name": ".text.guard",
+        "type": 1,
+        "flags": 6,
+        "bytes": 276
+      },
+      {
+        "name": ".text.f3_fs_create_stage_03",
+        "type": 1,
+        "flags": 6,
+        "bytes": 380
+      },
+      {
+        "name": ".text.stat_pair",
+        "type": 1,
+        "flags": 6,
+        "bytes": 280
+      },
+      {
+        "name": ".text.f3_fs_seal_stage_03",
+        "type": 1,
+        "flags": 6,
+        "bytes": 784
+      },
+      {
+        "name": ".text.f4_sha_update",
+        "type": 1,
+        "flags": 6,
+        "bytes": 168
+      },
+      {
+        "name": ".text.f4_sha_end",
+        "type": 1,
+        "flags": 6,
+        "bytes": 244
+      },
+      {
+        "name": ".text.same",
+        "type": 1,
+        "flags": 6,
+        "bytes": 140
+      },
+      {
+        "name": ".text.f3_fs_manual_raw_03",
+        "type": 1,
+        "flags": 6,
+        "bytes": 684
+      },
+      {
+        "name": ".text.copy_leaf",
+        "type": 1,
+        "flags": 6,
+        "bytes": 140
+      },
+      {
+        "name": ".text.f3_fs_ports_03",
+        "type": 1,
+        "flags": 6,
+        "bytes": 108
+      },
+      {
+        "name": ".text.raw_check",
+        "type": 1,
+        "flags": 6,
+        "bytes": 668
+      },
+      {
+        "name": ".text.openw",
+        "type": 1,
+        "flags": 6,
+        "bytes": 1156
+      },
+      {
+        "name": ".text.write_jpeg",
+        "type": 1,
+        "flags": 6,
+        "bytes": 120
+      },
+      {
+        "name": ".text.closew",
+        "type": 1,
+        "flags": 6,
+        "bytes": 148
+      },
+      {
+        "name": ".text.openr",
+        "type": 1,
+        "flags": 6,
+        "bytes": 428
+      },
+      {
+        "name": ".text.read_jpeg",
+        "type": 1,
+        "flags": 6,
+        "bytes": 120
+      },
+      {
+        "name": ".text.statr",
+        "type": 1,
+        "flags": 6,
+        "bytes": 320
+      },
+      {
+        "name": ".text.closer",
+        "type": 1,
+        "flags": 6,
+        "bytes": 104
+      },
+      {
+        "name": ".text.publish",
+        "type": 1,
+        "flags": 6,
+        "bytes": 772
+      },
+      {
+        "name": ".text.remove_raw",
+        "type": 1,
+        "flags": 6,
+        "bytes": 288
+      },
+      {
+        "name": ".text.f3_fs_release_raw_03",
+        "type": 1,
+        "flags": 6,
+        "bytes": 132
+      },
+      {
+        "name": ".text.f4_sha_block",
+        "type": 1,
+        "flags": 6,
+        "bytes": 560
+      },
+      {
+        "name": ".text.candidate_name",
+        "type": 1,
+        "flags": 6,
+        "bytes": 204
+      },
+      {
+        "name": ".rodata.str1.1",
+        "type": 1,
+        "flags": 50,
+        "bytes": 54
+      },
+      {
+        "name": ".rodata.f4_sha_init.iv",
+        "type": 1,
+        "flags": 2,
+        "bytes": 32
+      },
+      {
+        "name": ".rodata.f4_sha_block.k",
+        "type": 1,
+        "flags": 2,
+        "bytes": 256
+      },
+      {
+        "name": ".eh_frame",
+        "type": 1,
+        "flags": 2,
+        "bytes": 848
+      }
+    ],
+    "relocation_types": [
+      261,
+      275,
+      277,
+      283
+    ],
+    "undefined_symbols": [
+      "memcpy",
+      "memset"
+    ],
+    "defined_global_symbols": [
+      "f3_fs_create_stage_03",
+      "f3_fs_manual_raw_03",
+      "f3_fs_ports_03",
+      "f3_fs_prepare_03",
+      "f3_fs_release_raw_03",
+      "f3_fs_seal_stage_03"
+    ],
+    "executed": false
+  },
+  "ABI_layout_unchanged": true,
+  "public_symbol_names_unchanged": true,
+  "no_new_aliases": true,
+  "new_BL": [],
+  "additional_aliases": [],
+  "max_name_candidates": 4096,
+  "prior_files_never_adopted_or_deleted": true,
+  "SDK_invoked": false,
+  "camera_access": false,
+  "target_executed": false
+}

@@ -1,0 +1,27 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)>:
+  85d074: f9002001     	str	x1, [x0, #0x40]
+  85d078: f9402fe0     	ldr	x0, [sp, #0x58]
+  85d07c: f9404802     	ldr	x2, [x0, #0x90]
+  85d080: f9403be0     	ldr	x0, [sp, #0x70]
+  85d084: f9402fe1     	ldr	x1, [sp, #0x58]
+  85d088: f9409421     	ldr	x1, [x1, #0x128]
+  85d08c: f90007e1     	str	x1, [sp, #0x8]
+  85d090: f90003e0     	str	x0, [sp]
+  85d094: aa0203e7     	mov	x7, x2
+  85d098: f94037e6     	ldr	x6, [sp, #0x68]
+  85d09c: f94023e5     	ldr	x5, [sp, #0x40]
+  85d0a0: 52800004     	mov	w4, #0x0                // =0
+  85d0a4: 12800003     	mov	w3, #-0x1               // =-1
+  85d0a8: 39413fe2     	ldrb	w2, [sp, #0x4f]
+  85d0ac: f9402be1     	ldr	x1, [sp, #0x50]
+  85d0b0: f9402fe0     	ldr	x0, [sp, #0x58]
+  85d0b4: 94000015     	bl	0x85d108 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x18d44>
+  85d0b8: aa0003e1     	mov	x1, x0
+  85d0bc: f9403fe0     	ldr	x0, [sp, #0x78]
+  85d0c0: f9002401     	str	x1, [x0, #0x48]

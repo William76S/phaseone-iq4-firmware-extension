@@ -1,0 +1,63 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  74ec98:      	stp	x29, x30, [sp, #-0x70]!
+  74ec9c:      	mov	x29, sp
+  74eca0:      	str	x0, [sp, #0x58]
+  74eca4:      	str	w1, [sp, #0x54]
+  74eca8:      	str	x2, [sp, #0x48]
+  74ecac:      	ldr	w1, [sp, #0x54]
+  74ecb0:      	ldr	x0, [sp, #0x58]
+  74ecb4:      	bl	0x74fa78 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x35d4c>
+  74ecb8:      	str	w0, [sp, #0x6c]
+  74ecbc:      	ldr	w0, [sp, #0x6c]
+  74ecc0:      	cmp	w0, #0x0
+  74ecc4:      	b.ge	0x74ecd0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x34fa4>
+  74ecc8:      	mov	w0, #0x0                // =0
+  74eccc:      	b	0x74ed70 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x35044>
+  74ecd0:      	ldr	x1, [sp, #0x58]
+  74ecd4:      	ldrsw	x0, [sp, #0x6c]
+  74ecd8:      	add	x0, x0, #0x6
+  74ecdc:      	lsl	x0, x0, #3
+  74ece0:      	add	x0, x1, x0
+  74ece4:      	ldr	x0, [x0, #0x8]
+  74ece8:      	cmp	x0, #0x0
+  74ecec:      	b.ne	0x74ecf8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x34fcc>
+  74ecf0:      	mov	w0, #0x0                // =0
+  74ecf4:      	b	0x74ed70 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x35044>
+  74ecf8:      	ldr	x1, [sp, #0x58]
+  74ecfc:      	ldrsw	x0, [sp, #0x6c]
+  74ed00:      	add	x0, x0, #0x6
+  74ed04:      	lsl	x0, x0, #3
+  74ed08:      	add	x0, x1, x0
+  74ed0c:      	ldr	x5, [x0, #0x8]
+  74ed10:      	ldr	x1, [sp, #0x58]
+  74ed14:      	ldrsw	x0, [sp, #0x6c]
+  74ed18:      	add	x0, x0, #0x6
+  74ed1c:      	lsl	x0, x0, #3
+  74ed20:      	add	x0, x1, x0
+  74ed24:      	ldr	x0, [x0, #0x8]
+  74ed28:      	ldr	x0, [x0]
+  74ed2c:      	add	x0, x0, #0x48
+  74ed30:      	ldr	x4, [x0]
+  74ed34:      	ldr	x1, [sp, #0x48]
+  74ed38:      	add	x0, sp, #0x10
+  74ed3c:      	ldp	x2, x3, [x1]
+  74ed40:      	stp	x2, x3, [x0]
+  74ed44:      	ldp	x2, x3, [x1, #0x10]
+  74ed48:      	stp	x2, x3, [x0, #0x10]
+  74ed4c:      	ldr	x2, [x1, #0x20]
+  74ed50:      	str	x2, [x0, #0x20]
+  74ed54:      	ldr	w1, [x1, #0x28]
+  74ed58:      	str	w1, [x0, #0x28]
+  74ed5c:      	add	x0, sp, #0x10
+  74ed60:      	mov	x1, x0
+  74ed64:      	mov	x0, x5
+  74ed68:      	blr	x4
+  74ed6c:      	mov	w0, #0x1                // =1
+  74ed70:      	ldp	x29, x30, [sp], #0x70
+  74ed74:      	ret

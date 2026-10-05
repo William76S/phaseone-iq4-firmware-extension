@@ -1,0 +1,182 @@
+{
+  "schema": "iq4_f4_native_source_build_03",
+  "compiler": {
+    "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+    "bytes": 188226560,
+    "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c"
+  },
+  "source_inputs": [
+    {
+      "path": "tools/firmware/f4_native_source_03/build.py",
+      "bytes": 3441,
+      "sha256": "e8230c606d08903053851abea59d63943703de9e37205b377041d6c7a5027f05"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_03/code_pins.h",
+      "bytes": 20481,
+      "sha256": "c623b235dce5695296e77d1eabd17e898b8ff88fd71611470c02ee994a50e35e"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_03/collect.py",
+      "bytes": 3298,
+      "sha256": "37323eb995a6dd3e224dbaa97aa351d1c51dc64d82d6563392c701c146de4966"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_03/native_calls.h",
+      "bytes": 49,
+      "sha256": "6393c738859620e79069c8a5dc8f15f7a87dfd1f72c919b02ca1956254bc073b"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_03/source.c",
+      "bytes": 18473,
+      "sha256": "81b3c096134a9c2d76cbb16003766350b51758d9eeb5ea57456868b684b91a81"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_03/source.h",
+      "bytes": 116,
+      "sha256": "bc077181692a1377afa8763208a562e20227ead3ee5539d3c519b04590dbc9b5"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_03/test_source.c",
+      "bytes": 10207,
+      "sha256": "b286b72547abc7c430e8f8b6f3e32de1267ac785c974aa2e0f85f2e3d107b87e"
+    }
+  ],
+  "frozen_compatibility_inputs": [
+    {
+      "path": "tools/firmware/f4_native_source_02/SOURCE_SHA256.json",
+      "bytes": 16039,
+      "sha256": "d2e4cff35e7e524f30c56bd8881fc57b4eb96ee309aee2c66b0de214a8fb3c9a"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/source.c",
+      "bytes": 18239,
+      "sha256": "e151863fb714679e458e60310e1099c35383eb69c30a29952e8be60f223f61f8"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/source.h",
+      "bytes": 3310,
+      "sha256": "62489ca18aa03a92588f703b029fdf438fcc531701e39d24f0289f30ddd47037"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/native_calls.h",
+      "bytes": 959,
+      "sha256": "88f593540be70ff1878e938204432b5359dccfcd333a33f64aca3b3187245054"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/code_pins.h",
+      "bytes": 17706,
+      "sha256": "3a33654e4feb1507b98bbbf9963051242f08c2f282dd5df0a59f33f0cf0275cc"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/test_source.c",
+      "bytes": 9087,
+      "sha256": "7107ce107e8149bd0674485e40626db55043656dc2a83048207cca15a74b678b"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/build.py",
+      "bytes": 6029,
+      "sha256": "b446fd996220aa52b211a7c5eb1b17e032ab2464d2a2592c2255250c68557e35"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/LINK_INPUT.json",
+      "bytes": 19244,
+      "sha256": "3c0587eec78ff08abec9eead777d2fa2a652357844cb88eda45e6f67bd856871"
+    }
+  ],
+  "tests": [
+    {
+      "variant": "normal",
+      "stdout": "28 synthetic fault groups PASS; no target/SDK/device\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "stdout": "28 synthetic fault groups PASS; no target/SDK/device\n"
+    },
+    {
+      "variant": "tsan",
+      "stdout": "28 synthetic fault groups PASS; no target/SDK/device\n"
+    }
+  ],
+  "objects": [
+    {
+      "path": "analysis/firmware/f4_native_source_build_03/source.o",
+      "bytes": 20648,
+      "sha256": "fe0307ce7c6268c9e77b4fea31ca2e2694aae6428671da8d3436cc06672d6651",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 8216
+        },
+        {
+          "name": ".rodata.cst16",
+          "type": 1,
+          "flags": 18,
+          "bytes": 32
+        },
+        {
+          "name": ".rodata.str1.1",
+          "type": 1,
+          "flags": 50,
+          "bytes": 77
+        },
+        {
+          "name": ".data.rel.ro",
+          "type": 1,
+          "flags": 3,
+          "bytes": 816
+        },
+        {
+          "name": ".rodata",
+          "type": 1,
+          "flags": 2,
+          "bytes": 3468
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 768
+        }
+      ],
+      "relocation_types": [
+        257,
+        261,
+        275,
+        277,
+        282,
+        283,
+        299
+      ],
+      "undefined_symbols": [
+        "iq4_f4_native_clock_02",
+        "iq4_f4_native_construct_observer_02",
+        "iq4_f4_native_current_02",
+        "iq4_f4_native_event_construct_02",
+        "iq4_f4_native_event_notify_02",
+        "iq4_f4_native_id_02",
+        "iq4_f4_native_lock_02",
+        "iq4_f4_native_mutex_unlock_02",
+        "iq4_f4_native_size_02",
+        "iq4_f4_native_subscribe_02",
+        "iq4_f4_native_tid_02",
+        "iq4_f4_native_trylock_02",
+        "iq4_f4_native_unlock_02",
+        "iq4_f4_native_unsubscribe_02",
+        "memcmp",
+        "memcpy",
+        "memset"
+      ],
+      "executed": false
+    }
+  ],
+  "original_other_eight_objects_unchanged": true,
+  "API02_unchanged": true,
+  "target_executed": false,
+  "camera_access": false,
+  "actual_color_tested": false
+}

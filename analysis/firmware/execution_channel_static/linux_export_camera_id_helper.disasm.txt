@@ -1,0 +1,16 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/sdk_reference/vendor_downloads/dest/lib/libCameraSdkCpp.so.3.2.5:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+00000000000a9720 <P1::CameraSdk::CameraPimpl::GetIdFromCamera(P1::CameraSdk::Camera const&)>:
+   a9720: 48 83 ec 08                  	subq	$0x8, %rsp
+   a9724: 48 8b 3f                     	movq	(%rdi), %rdi
+   a9727: e8 24 10 fa ff               	callq	0x4a750 <_ZNK2P19CameraSdk11CameraPimpl9GetCApiIdEv@plt>
+   a972c: 8b 00                        	movl	(%rax), %eax
+   a972e: 48 83 c4 08                  	addq	$0x8, %rsp
+   a9732: c3                           	retq
+   a9733: 90                           	nop
+   a9734: 66 66 2e 0f 1f 84 00 00 00 00 00     	nopw	%cs:(%rax,%rax)
+   a973f: 90                           	nop

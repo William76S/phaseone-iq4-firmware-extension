@@ -1,0 +1,56 @@
+--- tools/firmware/f1_scaler_hook_install_10/entry_binding_10.cpp
++++ tools/firmware/f1_scaler_hook_install_11/entry_binding_10.cpp
+@@ -86,7 +86,7 @@
+  if(!current(false)||!resource()||!free_placement()){configured_=false;return false;}status_.phase=static_cast<unsigned>(Phase::Bound);return true;
+ }
+ Address Binding::native_current(void*c)noexcept{
+- auto&b=*static_cast<Binding*>(c);if(!b.configured_||!b.ports_.current_thread)return 0;try{return reinterpret_cast<Address>(b.ports_.current_thread());}catch(...){return 0;}
++ auto&b=*static_cast<Binding*>(c);if(!b.configured_||!b.ports_.current_thread||b.status_.phase==static_cast<unsigned>(Phase::Hold)||b.status_.phase==static_cast<unsigned>(Phase::DetachedRetained))return 0;try{return reinterpret_cast<Address>(b.ports_.current_thread());}catch(...){return 0;}
+ }
+ Triple Binding::native_triple(void*c,Address q,Address e,const Observer*o)noexcept{
+  auto&b=*static_cast<Binding*>(c);if(q!=b.owner_.queue||native_current(c)!=q)return Triple::Unknown;
+--- tools/firmware/f1_scaler_hook_install_10/test_persistent.cpp
++++ tools/firmware/f1_scaler_hook_install_11/test_persistent.cpp
+@@ -19,6 +19,7 @@
+ }
+ namespace iq4::f1::entry10 {
+ struct OwnedFixture {
++ static void phase(Binding&b,Phase p){b.status_.phase=static_cast<unsigned>(p);}
+  static void bind(Binding&b,Memory&m,const Owner&o){b.configured_=true;b.memory_=m;b.owner_=o;b.status_.phase=static_cast<unsigned>(Phase::Ready);b.ports_.current_thread=current;b.native_.context=&b;b.native_.current_thread=Binding::native_current;b.native_.inspect_triple=Binding::native_triple;b.native_.invalidate=invalidate;}
+ };
+ }
+@@ -36,6 +37,15 @@
+  normal10::ProvenProviderAdapter provider;assert(provider.bind_observation_on_actual_ui(mem,persistent,owner)&&provider.ready_on_current_ui());
+  normal10::ActualProviderContract c{};c.profile=normal10::ProviderProfile::RootReviewedInlineUIRetainedUntilPresent;std::memcpy(c.actual_UserSHA,native_overlay::UserSHA,65);std::memset(c.owner_review_sha256,'a',64);std::memset(c.hook_quiescence_receipt_sha256,'b',64);c.owner=owner;c.provider=0x60000;c.provider_vtable=0x61000;c.getter=0x62000;c.present=0x63000;c.near_entry=0x500000;c.near_trampoline=0x500020;c.own_bridge=0x70000;c.inline_surface_offset=128;c.getter_shape=normal10::InlineGetterShape::LeafAddRet8;
+  assert(provider.configure_on_actual_ui(mem,persistent,c)&&provider.rendering_contract_bound()&&provider.ready_on_current_ui());
++ // Captured Native must become invalid too, not only a newly requested copy.
++ entry10::OwnedFixture::phase(binding,entry10::Phase::Hold);
++ assert(!persistent.current_thread(persistent.context)&&!binding.persistent_ports_on_ui().current_thread&&!provider.ready_on_current_ui()&&!renderer.status_address_on_actual_ui());
++ entry10::OwnedFixture::phase(binding,entry10::Phase::Ready);
++ assert(persistent.current_thread(persistent.context)==owner.queue&&provider.ready_on_current_ui()&&renderer.status_address_on_actual_ui());
++ entry10::OwnedFixture::phase(binding,entry10::Phase::DetachedRetained);
++ assert(!persistent.current_thread(persistent.context)&&!binding.persistent_ports_on_ui().current_thread&&!provider.ready_on_current_ui()&&!renderer.status_address_on_actual_ui());
++ entry10::OwnedFixture::phase(binding,entry10::Phase::Ready);
++ assert(persistent.current_thread(persistent.context)==owner.queue&&provider.ready_on_current_ui()&&renderer.status_address_on_actual_ui());
+  tls=0x10008;assert(!binding.persistent_ports_on_ui().current_thread&&!provider.ready_on_current_ui()&&!renderer.status_address_on_actual_ui());assert(capped.current_thread(capped.context)==0);
+- std::puts("1 owned Module-cap/persistent Binding/Renderer/Provider/TLS rejection group PASS; no native function or target execution");
++ std::puts("3 owned Module-cap/captured-Hold/captured-DetachedRetained groups PASS; no native function or target execution");
+ }
+--- tools/firmware/f1_scaler_hook_install_10/module_identity.hpp
++++ tools/firmware/f1_scaler_hook_install_11/module_identity.hpp
+@@ -1,9 +1,9 @@
+ #pragma once
+-// Exact pinned compile/link + LOAD-preserving compact artifact; not runtime acceptance.
++// New11 artifact; public/schema10 ABI unchanged. Not runtime acceptance.
+ namespace iq4::f1::hook10 {
+-inline constexpr unsigned long long module_bytes=118048;
+-inline constexpr char module_sha256[]="88417d06b6cb8ca2553ad1ae76a3444e4014829d75e6c1b66a3946fbd05d7c5c";
+-inline constexpr unsigned long long module_bridge_offset=168504;
+-inline constexpr unsigned long long module_trampoline_offset=312656;
+-inline constexpr unsigned long long module_preparation_offset=308520;
++inline constexpr unsigned long long module_bytes=118080;
++inline constexpr char module_sha256[]="3d8ca1c3bfa74f2f3a5c71aa0ace97cc7dd774cb57f26589992a39a0df6f65ff";
++inline constexpr unsigned long long module_bridge_offset=168536;
++inline constexpr unsigned long long module_trampoline_offset=312688;
++inline constexpr unsigned long long module_preparation_offset=308552;
+ }

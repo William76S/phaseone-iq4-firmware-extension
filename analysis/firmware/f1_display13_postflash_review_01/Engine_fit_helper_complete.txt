@@ -1,0 +1,66 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution or actual field read.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  7974e8: a9ba7bfd     	stp	x29, x30, [sp, #-0x60]!
+  7974ec: 910003fd     	mov	x29, sp
+  7974f0: f90013f5     	str	x21, [sp, #0x20]
+  7974f4: 91401015     	add	x21, x0, #0x4, lsl #12  // =0x4000
+  7974f8: a90153f3     	stp	x19, x20, [sp, #0x10]
+  7974fc: aa0103f3     	mov	x19, x1
+  797500: aa0803f4     	mov	x20, x8
+  797504: b9476ea1     	ldr	w1, [x21, #0x76c]
+  797508: 9100e3e2     	add	x2, sp, #0x38
+  79750c: f9506000     	ldr	x0, [x0, #0x20c0]
+  797510: 97f2dd28     	bl	0x44e9b0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x18a04>
+  797514: 2d4783e1     	ldp	s1, s0, [sp, #0x3c]
+  797518: 29420263     	ldp	w3, w0, [x19, #0x10]
+  79751c: 7e21d822     	ucvtf	s2, s1
+  797520: 7e21d801     	ucvtf	s1, s0
+  797524: 1e220064     	scvtf	s4, w3
+  797528: 1e220000     	scvtf	s0, w0
+  79752c: b947baa4     	ldr	w4, [x21, #0x7b8]
+  797530: b947bea5     	ldr	w5, [x21, #0x7bc]
+  797534: 1e211841     	fdiv	s1, s2, s1
+  797538: 1e201884     	fdiv	s4, s4, s0
+  79753c: 1e220083     	scvtf	s3, w4
+  797540: 1e2200a5     	scvtf	s5, w5
+  797544: 1e251862     	fdiv	s2, s3, s5
+  797548: 1e240821     	fmul	s1, s1, s4
+  79754c: 1e222030     	fcmpe	s1, s2
+  797550: 540002c4     	b.mi	0x7975a8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d87c>
+  797554: b9400e62     	ldr	w2, [x19, #0xc]
+  797558: 2a0003e1     	mov	w1, w0
+  79755c: 6b0100bf     	cmp	w5, w1
+  797560: 5400004b     	b.lt	0x797568 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d83c>
+  797564: b947bea1     	ldr	w1, [x21, #0x7bc]
+  797568: b9001661     	str	w1, [x19, #0x14]
+  79756c: 6b04007f     	cmp	w3, w4
+  797570: 5400004c     	b.gt	0x797578 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d84c>
+  797574: b947baa3     	ldr	w3, [x21, #0x7b8]
+  797578: b9400a65     	ldr	w5, [x19, #0x8]
+  79757c: 90001ee4     	adrp	x4, 0xb73000
+  797580: 912e6084     	add	x4, x4, #0xb98
+  797584: aa1403e0     	mov	x0, x20
+  797588: f94013f5     	ldr	x21, [sp, #0x20]
+  79758c: f9000284     	str	x4, [x20]
+  797590: 29010a85     	stp	w5, w2, [x20, #0x8]
+  797594: b9001263     	str	w3, [x19, #0x10]
+  797598: 29020683     	stp	w3, w1, [x20, #0x10]
+  79759c: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  7975a0: a8c67bfd     	ldp	x29, x30, [sp], #0x60
+  7975a4: d65f03c0     	ret
+  7975a8: 1e211841     	fdiv	s1, s2, s1
+  7975ac: b9400e62     	ldr	w2, [x19, #0xc]
+  7975b0: 1e211800     	fdiv	s0, s0, s1
+  7975b4: 1e380001     	fcvtzs	w1, s0
+  7975b8: 4b010000     	sub	w0, w0, w1
+  7975bc: 0b407c00     	add	w0, w0, w0, lsr #31
+  7975c0: 0b800442     	add	w2, w2, w0, asr #1
+  7975c4: b9000e62     	str	w2, [x19, #0xc]
+  7975c8: 17ffffe5     	b	0x79755c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d830>
+  7975cc: d503201f     	nop

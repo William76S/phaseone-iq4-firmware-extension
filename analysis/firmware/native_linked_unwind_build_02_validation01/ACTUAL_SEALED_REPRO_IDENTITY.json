@@ -1,0 +1,54 @@
+{
+  "schema": "iq4_directory_independent_actual_sealed_User_identity_01",
+  "unsealed_User_sha256": "25727654bfccdeb6140380767cead82fae1b5f2a9237ae02fa9ef52110f2c0ff",
+  "sealed_User": {
+    "bytes": 13221224,
+    "sha256": "b3479e4bff7cc320ab3a172cf9bccf578e622303e646e22542f61e7ba45bcb03"
+  },
+  "both_User_files": [
+    {
+      "path": "analysis/firmware/f1_f3_f4_user_integration_build_01_final01/P1Linux_RatioMask_JPEG_LVRecording_6.03.30.bin",
+      "bytes": 13221224,
+      "sha256": "b3479e4bff7cc320ab3a172cf9bccf578e622303e646e22542f61e7ba45bcb03"
+    },
+    {
+      "path": "analysis/firmware/f1_f3_f4_user_integration_build_01_repro01/P1Linux_RatioMask_JPEG_LVRecording_6.03.30.bin",
+      "bytes": 13221224,
+      "sha256": "b3479e4bff7cc320ab3a172cf9bccf578e622303e646e22542f61e7ba45bcb03"
+    }
+  ],
+  "full_bytes_identical": true,
+  "semantic_review_sha256": "410c5ff1787ede4b1b8e6b40370a13065bf0fe10d8ea7c01fb85d50991e53777",
+  "semantic_identity_full_bytes_identical": true,
+  "raw_review_JSON_hashes_differ": [
+    "8022c5e0ff5f323cd1582708c764619453b211f77a46f86a14a50839f45cc383",
+    "80fdf24a84c4c8156a4ec115537e955f591afa5e4bb9d01ba5ede6cbc230d161"
+  ],
+  "regions": 113,
+  "actual_loader_composition": {
+    "symbol": "iq4_extensions_contract_current_01",
+    "va": 69704072,
+    "bytes": 68,
+    "sha256": "3c2b62563fa5bc1b06d247964abc02a4841135c5a1fdc4a212bc844d1d9441ff",
+    "object": {
+      "label": "analysis/firmware/f1_f3_f4_user_integration_build_01_final01/initialize.o",
+      "bytes": 4856,
+      "sha256": "1dc40af5372094bb6ab412216c2c4311ee88958ca3acffb06533a4d737444310"
+    },
+    "calls": [
+      [
+        69704092,
+        69704616
+      ],
+      [
+        69704108,
+        69699704
+      ]
+    ],
+    "seal_failure_skips_loader": true
+  },
+  "two_host_readback_runs_each_cases": 9,
+  "target_executed": false,
+  "camera_accessed": false,
+  "feature_candidate_status": "superseded-history; Root replacing coordinator and filesystem modules before delivery"
+}

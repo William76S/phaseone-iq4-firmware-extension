@@ -1,0 +1,64 @@
+--- frozen/f1_observe_geometry_04/runtime_linux.cpp
++++ new/f1_observe_stack_05/runtime_linux.cpp
+@@ -1,4 +1,5 @@
+ // Target-only Linux/AArch64 wrapper. Never executed by the host validation tool.
++#include "../f1_observe_geometry_04/observe.hpp"
+ #include "observe.hpp"
+ #include "../f4_ui_bootstrap_02/sha256.h"
+ #include <elf.h>
+@@ -16,7 +17,8 @@
+ #error This runtime binds only the fixed IQ4 AArch64 Linux original
+ #endif
+ extern "C" {__attribute__((visibility("default"))) iq4::f1::entry01::PublishedObservation iq4_f1_entry_observed;
+-__attribute__((visibility("default"))) iq4::f1::observe04::Published iq4_f1_geometry_observed_04;}
++__attribute__((visibility("default"))) iq4::f1::observe04::Published iq4_f1_geometry_observed_04;
++__attribute__((visibility("default"))) iq4::f1::stack05::Published iq4_f1_stack_observed_05;}
+ namespace {
+ using namespace iq4::f1::entry01;
+ // No dlvsym/dlsym, pthread_create, SDK, signal, process exit or retry interface.
+@@ -52,6 +54,8 @@
+ alignas(Module) unsigned char module_storage[sizeof(Module)]{};Module* module=nullptr;
+ alignas(iq4::f1::observe04::Collector) unsigned char geometry_storage[sizeof(iq4::f1::observe04::Collector)]{};
+ iq4::f1::observe04::Collector* geometry=nullptr;
++alignas(iq4::f1::stack05::Collector) unsigned char stack_storage[sizeof(iq4::f1::stack05::Collector)]{};
++iq4::f1::stack05::Collector* stack_collector=nullptr;
+ std::atomic<bool> diagnostic_ready{false};thread_local bool inside=false;
+ bool self_read(void*,Address address,void* data,std::size_t n) noexcept {return n<=4096 && pread_all(memory_fd,data,n,address);}
+ // Resolve only the original exact public export, from the actual loaded library.
+@@ -127,6 +131,7 @@
+     iq4_f1_entry_observed.startup.store(3,std::memory_order_release);
+     module=new(module_storage)Module;
+     geometry=new(geometry_storage)iq4::f1::observe04::Collector({nullptr,self_read},0);
++    stack_collector=new(stack_storage)iq4::f1::stack05::Collector({nullptr,self_read},0);
+     if(module->configure({nullptr,self_read},{true,true,true,true,0},reinterpret_cast<int(*)(void*)>(original_try_lock.load(std::memory_order_acquire)),reinterpret_cast<int(*)(void*)>(original_unlock.load(std::memory_order_acquire)))){diagnostic_ready.store(true,std::memory_order_release);iq4_f1_entry_observed.startup.store(4,std::memory_order_release);}
+     else iq4_f1_entry_observed.startup.store(7,std::memory_order_release);
+ 
+@@ -143,6 +148,8 @@
+     if(caller==0x6be8ac && result==0 && diagnostic_ready.load(std::memory_order_acquire) && !inside) {
+         inside=true;Address tp{};asm volatile("mrs %0, tpidr_el0":"=r"(tp));
+         const BoundaryInput input{caller,reinterpret_cast<Address>(__builtin_frame_address(0)),tp,reinterpret_cast<Address>(mutex),result};
++        iq4::f1::entry01::Observation before{};
++        const bool before_copied=module->snapshot(before);
+         module->after_unlock(input);
+         iq4::f1::entry01::Observation observed{};
+         if(module->snapshot(observed)){
+@@ -160,6 +167,13 @@
+                 iq4_f1_geometry_observed_04.metadata=facts;
+                 iq4_f1_geometry_observed_04.sequence.fetch_add(1,std::memory_order_release);
+             }
++            iq4::f1::stack05::Metadata stack_facts{};
++            if(before_copied && stack_collector && stack_collector->capture(input,before,observed,iq4_f1_entry_observed.startup.load(std::memory_order_acquire),stack_facts)){
++                iq4_f1_stack_observed_05.sequence.fetch_add(1,std::memory_order_acq_rel);
++                iq4_f1_stack_observed_05.metadata=stack_facts;
++                iq4_f1_stack_observed_05.sequence.fetch_add(1,std::memory_order_release);
++                if(stack_facts.attempts>=64)diagnostic_ready.store(false,std::memory_order_release);
++            }
+         }
+         inside=false;
+     }
+@@ -168,3 +182,5 @@
+ 
+ // Data publications only. Read-only Geo04 deliberately exports no original
+ // menu, fill, observer, repaint, stop, or pointer-based integration methods.
++// Stack05 independently reads only scalar identities/graph at this real boundary;
++// it never changes the inherited Entry phase or Geometry03/04 gates.

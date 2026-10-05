@@ -1,0 +1,123 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution or actual field read.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000435fac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_>:
+  476e6c: a9ba7bfd     	stp	x29, x30, [sp, #-0x60]!
+  476e70: 910003fd     	mov	x29, sp
+  476e74: f9001fe0     	str	x0, [sp, #0x38]
+  476e78: f9001be1     	str	x1, [sp, #0x30]
+  476e7c: b9002fe2     	str	w2, [sp, #0x2c]
+  476e80: f90013e3     	str	x3, [sp, #0x20]
+  476e84: f9000fe4     	str	x4, [sp, #0x18]
+  476e88: f9401be0     	ldr	x0, [sp, #0x30]
+  476e8c: b9400400     	ldr	w0, [x0, #0x4]
+  476e90: b9005fe0     	str	w0, [sp, #0x5c]
+  476e94: f9401be0     	ldr	x0, [sp, #0x30]
+  476e98: b9400800     	ldr	w0, [x0, #0x8]
+  476e9c: b9005be0     	str	w0, [sp, #0x58]
+  476ea0: b9402fe0     	ldr	w0, [sp, #0x2c]
+  476ea4: 7101681f     	cmp	w0, #0x5a
+  476ea8: 540002c0     	b.eq	0x476f00 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x40f54>
+  476eac: b9402fe0     	ldr	w0, [sp, #0x2c]
+  476eb0: 7101681f     	cmp	w0, #0x5a
+  476eb4: 540000a8     	b.hi	0x476ec8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x40f1c>
+  476eb8: b9402fe0     	ldr	w0, [sp, #0x2c]
+  476ebc: 7100001f     	cmp	w0, #0x0
+  476ec0: 54000120     	b.eq	0x476ee4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x40f38>
+  476ec4: 14000016     	b	0x476f1c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x40f70>
+  476ec8: b9402fe0     	ldr	w0, [sp, #0x2c]
+  476ecc: 7102d01f     	cmp	w0, #0xb4
+  476ed0: 540000a0     	b.eq	0x476ee4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x40f38>
+  476ed4: b9402fe0     	ldr	w0, [sp, #0x2c]
+  476ed8: 7104381f     	cmp	w0, #0x10e
+  476edc: 54000120     	b.eq	0x476f00 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x40f54>
+  476ee0: 1400000f     	b	0x476f1c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x40f70>
+  476ee4: f9401be0     	ldr	x0, [sp, #0x30]
+  476ee8: b9400400     	ldr	w0, [x0, #0x4]
+  476eec: b9005fe0     	str	w0, [sp, #0x5c]
+  476ef0: f9401be0     	ldr	x0, [sp, #0x30]
+  476ef4: b9400800     	ldr	w0, [x0, #0x8]
+  476ef8: b9005be0     	str	w0, [sp, #0x58]
+  476efc: 1400000a     	b	0x476f24 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x40f78>
+  476f00: f9401be0     	ldr	x0, [sp, #0x30]
+  476f04: b9400800     	ldr	w0, [x0, #0x8]
+  476f08: b9005fe0     	str	w0, [sp, #0x5c]
+  476f0c: f9401be0     	ldr	x0, [sp, #0x30]
+  476f10: b9400400     	ldr	w0, [x0, #0x4]
+  476f14: b9005be0     	str	w0, [sp, #0x58]
+  476f18: 14000003     	b	0x476f24 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x40f78>
+  476f1c: 52800000     	mov	w0, #0x0                // =0
+  476f20: 14000044     	b	0x477030 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x41084>
+  476f24: f9401fe0     	ldr	x0, [sp, #0x38]
+  476f28: b9401000     	ldr	w0, [x0, #0x10]
+  476f2c: 1e220001     	scvtf	s1, w0
+  476f30: b9405fe0     	ldr	w0, [sp, #0x5c]
+  476f34: 1e220000     	scvtf	s0, w0
+  476f38: 1e201820     	fdiv	s0, s1, s0
+  476f3c: bd004be0     	str	s0, [sp, #0x48]
+  476f40: f9401fe0     	ldr	x0, [sp, #0x38]
+  476f44: b9401400     	ldr	w0, [x0, #0x14]
+  476f48: 1e220001     	scvtf	s1, w0
+  476f4c: b9405be0     	ldr	w0, [sp, #0x58]
+  476f50: 1e220000     	scvtf	s0, w0
+  476f54: 1e201820     	fdiv	s0, s1, s0
+  476f58: bd004fe0     	str	s0, [sp, #0x4c]
+  476f5c: 910133e1     	add	x1, sp, #0x4c
+  476f60: 910123e0     	add	x0, sp, #0x48
+  476f64: 94001d3b     	bl	0x47e450 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x484a4>
+  476f68: b9400001     	ldr	w1, [x0]
+  476f6c: f9400fe0     	ldr	x0, [sp, #0x18]
+  476f70: b9000001     	str	w1, [x0]
+  476f74: f9400fe0     	ldr	x0, [sp, #0x18]
+  476f78: bd400001     	ldr	s1, [x0]
+  476f7c: b9405fe0     	ldr	w0, [sp, #0x5c]
+  476f80: 1e220000     	scvtf	s0, w0
+  476f84: 1e200820     	fmul	s0, s1, s0
+  476f88: 1e380000     	fcvtzs	w0, s0
+  476f8c: b90057e0     	str	w0, [sp, #0x54]
+  476f90: f9400fe0     	ldr	x0, [sp, #0x18]
+  476f94: bd400001     	ldr	s1, [x0]
+  476f98: b9405be0     	ldr	w0, [sp, #0x58]
+  476f9c: 1e220000     	scvtf	s0, w0
+  476fa0: 1e200820     	fmul	s0, s1, s0
+  476fa4: 1e380000     	fcvtzs	w0, s0
+  476fa8: b90053e0     	str	w0, [sp, #0x50]
+  476fac: f9401fe0     	ldr	x0, [sp, #0x38]
+  476fb0: b9400801     	ldr	w1, [x0, #0x8]
+  476fb4: f9401fe0     	ldr	x0, [sp, #0x38]
+  476fb8: b9401002     	ldr	w2, [x0, #0x10]
+  476fbc: b94057e0     	ldr	w0, [sp, #0x54]
+  476fc0: 4b000040     	sub	w0, w2, w0
+  476fc4: 531f7c02     	lsr	w2, w0, #31
+  476fc8: 0b000040     	add	w0, w2, w0
+  476fcc: 13017c02     	asr	w2, w0, #1
+  476fd0: 2a0203e0     	mov	w0, w2
+  476fd4: 0b000021     	add	w1, w1, w0
+  476fd8: f94013e0     	ldr	x0, [sp, #0x20]
+  476fdc: b9000801     	str	w1, [x0, #0x8]
+  476fe0: f9401fe0     	ldr	x0, [sp, #0x38]
+  476fe4: b9400c01     	ldr	w1, [x0, #0xc]
+  476fe8: f9401fe0     	ldr	x0, [sp, #0x38]
+  476fec: b9401402     	ldr	w2, [x0, #0x14]
+  476ff0: b94053e0     	ldr	w0, [sp, #0x50]
+  476ff4: 4b000040     	sub	w0, w2, w0
+  476ff8: 531f7c02     	lsr	w2, w0, #31
+  476ffc: 0b000040     	add	w0, w2, w0
+  477000: 13017c02     	asr	w2, w0, #1
+  477004: 2a0203e0     	mov	w0, w2
+  477008: 0b000021     	add	w1, w1, w0
+  47700c: f94013e0     	ldr	x0, [sp, #0x20]
+  477010: b9000c01     	str	w1, [x0, #0xc]
+  477014: f94013e0     	ldr	x0, [sp, #0x20]
+  477018: b94057e1     	ldr	w1, [sp, #0x54]
+  47701c: b9001001     	str	w1, [x0, #0x10]
+  477020: f94013e0     	ldr	x0, [sp, #0x20]
+  477024: b94053e1     	ldr	w1, [sp, #0x50]
+  477028: b9001401     	str	w1, [x0, #0x14]
+  47702c: 52800020     	mov	w0, #0x1                // =1
+  477030: a8c67bfd     	ldp	x29, x30, [sp], #0x60
+  477034: d65f03c0     	ret

@@ -1,0 +1,14 @@
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6b614c: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  6b6150: 910003fd     	mov	x29, sp
+  6b6154: f9000fe0     	str	x0, [sp, #0x18]
+  6b6158: f9400fe0     	ldr	x0, [sp, #0x18]
+  6b615c: f9400400     	ldr	x0, [x0, #0x8]
+  6b6160: 94000323     	bl	0x6b6dec <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16a2c>
+  6b6164: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  6b6168: d65f03c0     	ret

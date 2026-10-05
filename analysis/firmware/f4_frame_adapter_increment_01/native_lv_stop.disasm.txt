@@ -1,0 +1,69 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+SCOPE complete_unwind_function
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:
+  520590: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  520594: 910003fd     	mov	x29, sp
+  520598: f9000fe0     	str	x0, [sp, #0x18]
+  52059c: d00033c0     	adrp	x0, 0xb9a000
+  5205a0: 911e2002     	add	x2, x0, #0x788
+  5205a4: 52814501     	mov	w1, #0xa28              // =2600
+  5205a8: d00033c0     	adrp	x0, 0xb9a000
+  5205ac: 91166000     	add	x0, x0, #0x598
+  5205b0: 940897bb     	bl	0x74649c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c770>
+  5205b4: f9400fe0     	ldr	x0, [sp, #0x18]
+  5205b8: 39441000     	ldrb	w0, [x0, #0x104]
+  5205bc: 7100001f     	cmp	w0, #0x0
+  5205c0: 540005c0     	b.eq	0x520678 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x275c8>
+  5205c4: f9400fe0     	ldr	x0, [sp, #0x18]
+  5205c8: f940c400     	ldr	x0, [x0, #0x188]
+  5205cc: f100001f     	cmp	x0, #0x0
+  5205d0: 54000140     	b.eq	0x5205f8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x27548>
+  5205d4: f9400fe0     	ldr	x0, [sp, #0x18]
+  5205d8: f9408402     	ldr	x2, [x0, #0x108]
+  5205dc: f9400fe0     	ldr	x0, [sp, #0x18]
+  5205e0: b9410000     	ldr	w0, [x0, #0x100]
+  5205e4: 2a0003e1     	mov	w1, w0
+  5205e8: aa0203e0     	mov	x0, x2
+  5205ec: 94065719     	bl	0x6b6250 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15e90>
+  5205f0: f9400fe0     	ldr	x0, [sp, #0x18]
+  5205f4: f900c41f     	str	xzr, [x0, #0x188]
+  5205f8: f9400fe0     	ldr	x0, [sp, #0x18]
+  5205fc: f940c003     	ldr	x3, [x0, #0x180]
+  520600: f9400fe0     	ldr	x0, [sp, #0x18]
+  520604: f940c000     	ldr	x0, [x0, #0x180]
+  520608: f9400000     	ldr	x0, [x0]
+  52060c: 91012000     	add	x0, x0, #0x48
+  520610: f9400002     	ldr	x2, [x0]
+  520614: 52800001     	mov	w1, #0x0                // =0
+  520618: aa0303e0     	mov	x0, x3
+  52061c: d63f0040     	blr	x2
+  520620: f9400fe0     	ldr	x0, [sp, #0x18]
+  520624: f9408403     	ldr	x3, [x0, #0x108]
+  520628: f9400fe0     	ldr	x0, [sp, #0x18]
+  52062c: b9410000     	ldr	w0, [x0, #0x100]
+  520630: 52800002     	mov	w2, #0x0                // =0
+  520634: 2a0003e1     	mov	w1, w0
+  520638: aa0303e0     	mov	x0, x3
+  52063c: 94065623     	bl	0x6b5ec8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15b08>
+  520640: f9400fe0     	ldr	x0, [sp, #0x18]
+  520644: f9408402     	ldr	x2, [x0, #0x108]
+  520648: f9400fe0     	ldr	x0, [sp, #0x18]
+  52064c: b9410000     	ldr	w0, [x0, #0x100]
+  520650: 2a0003e1     	mov	w1, w0
+  520654: aa0203e0     	mov	x0, x2
+  520658: 9406557b     	bl	0x6b5c44 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15884>
+  52065c: f9400fe0     	ldr	x0, [sp, #0x18]
+  520660: 3904101f     	strb	wzr, [x0, #0x104]
+  520664: f9400fe0     	ldr	x0, [sp, #0x18]
+  520668: 9135c000     	add	x0, x0, #0xd70
+  52066c: 9407d4c2     	bl	0x715974 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x278f4>
+  520670: f9400fe0     	ldr	x0, [sp, #0x18]
+  520674: 3935a41f     	strb	wzr, [x0, #0xd69]
+  520678: d503201f     	nop
+  52067c: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  520680: d65f03c0     	ret

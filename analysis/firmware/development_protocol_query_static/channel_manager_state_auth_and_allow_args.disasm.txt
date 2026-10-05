@@ -1,0 +1,42 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  85becc: b0002a20     	adrp	x0, 0xda0000
+  85bed0: 91252000     	add	x0, x0, #0x948
+  85bed4: 97eeb9ab     	bl	0x40a580 <printf@plt>
+  85bed8: 97fc420c     	bl	0x76c708 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x529dc>
+  85bedc: f94037e0     	ldr	x0, [sp, #0x68]
+  85bee0: 3945a001     	ldrb	w1, [x0, #0x168]
+  85bee4: f94037e0     	ldr	x0, [sp, #0x68]
+  85bee8: 3945a400     	ldrb	w0, [x0, #0x169]
+  85beec: 2a0003e2     	mov	w2, w0
+  85bef0: f9402be0     	ldr	x0, [sp, #0x50]
+  85bef4: 97fabadd     	bl	0x70aa68 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x1c9e8>
+  85bef8: aa0003f4     	mov	x20, x0
+  85befc: d2805900     	mov	x0, #0x2c8              // =712
+  85bf00: 97eeb7d8     	bl	0x409e60 <_Znwm@plt>
+  85bf04: aa0003f3     	mov	x19, x0
+  85bf08: f94037e0     	ldr	x0, [sp, #0x68]
+  85bf0c: f940ac01     	ldr	x1, [x0, #0x158]
+  85bf10: f94037e0     	ldr	x0, [sp, #0x68]
+  85bf14: 3945a002     	ldrb	w2, [x0, #0x168]
+  85bf18: f94037e0     	ldr	x0, [sp, #0x68]
+  85bf1c: 3945a403     	ldrb	w3, [x0, #0x169]
+  85bf20: f94037e0     	ldr	x0, [sp, #0x68]
+  85bf24: f940a804     	ldr	x4, [x0, #0x150]
+  85bf28: f94043e0     	ldr	x0, [sp, #0x80]
+  85bf2c: f90003e0     	str	x0, [sp]
+  85bf30: f9403fe7     	ldr	x7, [sp, #0x78]
+  85bf34: aa0403e6     	mov	x6, x4
+  85bf38: 2a0303e5     	mov	w5, w3
+  85bf3c: 2a0203e4     	mov	w4, w2
+  85bf40: aa0103e3     	mov	x3, x1
+  85bf44: f9402fe2     	ldr	x2, [sp, #0x58]
+  85bf48: aa1403e1     	mov	x1, x20
+  85bf4c: aa1303e0     	mov	x0, x19
+  85bf50: 97ffd469     	bl	0x8510f4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0xcd30>
+  85bf54: f94037e0     	ldr	x0, [sp, #0x68]

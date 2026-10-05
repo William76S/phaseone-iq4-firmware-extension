@@ -1,0 +1,369 @@
+--- frozen08/hook_capture.cpp
++++ new09/hook_capture.cpp
+@@ -5,18 +5,18 @@
+ #include <cstring>
+ // Not an installer/export, not a provider getter, and not a token issuer.
+ // Retained OWN storage only. Actual hook dispatch is not enabled or loaded.
+-extern "C" {__attribute__((visibility("default"))) iq4::f1::normal08::PublishedIngress iq4_f1_normal_fit_ingress_observed_08;}
++extern "C" {__attribute__((visibility("default"))) iq4::f1::normal09::PublishedIngress iq4_f1_normal_fit_ingress_observed_09;}
+ namespace {
+- std::atomic_flag busy=ATOMIC_FLAG_INIT;std::atomic<unsigned>sequence{0};iq4::f1::normal08::RawWriteObservation observed{};
+- struct Consumer {iq4::f1::normal08::ProvenProviderAdapter*provider{};iq4::f1::normal08::Renderer*renderer{};};
++ std::atomic_flag busy=ATOMIC_FLAG_INIT;std::atomic<unsigned>sequence{0};iq4::f1::normal09::RawWriteObservation observed{};
++ struct Consumer {iq4::f1::normal09::ProvenProviderAdapter*provider{};iq4::f1::normal09::Renderer*renderer{};};
+  Consumer retained{};std::atomic<Consumer*>consumer{nullptr};
+ }
+-namespace iq4::f1::normal08 {
++namespace iq4::f1::normal09 {
+ void publish_ingress_on_ui(const IngressStatus&s)noexcept{
+- iq4_f1_normal_fit_ingress_observed_08.sequence.fetch_add(1,std::memory_order_acq_rel);
+- iq4_f1_normal_fit_ingress_observed_08.metadata=s;
+- iq4_f1_normal_fit_ingress_observed_08.raw={};
+- iq4_f1_normal_fit_ingress_observed_08.sequence.fetch_add(1,std::memory_order_release);
++ iq4_f1_normal_fit_ingress_observed_09.sequence.fetch_add(1,std::memory_order_acq_rel);
++ iq4_f1_normal_fit_ingress_observed_09.metadata=s;
++ iq4_f1_normal_fit_ingress_observed_09.raw={};
++ iq4_f1_normal_fit_ingress_observed_09.sequence.fetch_add(1,std::memory_order_release);
+ }
+ bool install_capture_consumer_once_on_ui(ProvenProviderAdapter&p,Renderer&r)noexcept{
+  // Root must already hold its quiescence receipt. The renderer itself checks
+@@ -25,7 +25,7 @@
+  retained={&p,&r};Consumer*empty=nullptr;return consumer.compare_exchange_strong(empty,&retained,std::memory_order_release,std::memory_order_acquire);
+ }
+ }
+-extern "C" __attribute__((visibility("hidden"))) void iq4_f1_scaler_after_08(const iq4::f1::normal08::ScalerCapture*c)noexcept{
++extern "C" __attribute__((visibility("hidden"))) void iq4_f1_scaler_after_09(const iq4::f1::normal09::ScalerCapture*c)noexcept{
+  const int saved=errno;
+  if(c&&!busy.test_and_set(std::memory_order_acquire)){
+   sequence.fetch_add(1,std::memory_order_acq_rel);
+@@ -42,10 +42,10 @@
+   if(auto*p=consumer.load(std::memory_order_acquire)){
+    if(p->provider->rendering_contract_bound())(void)p->provider->dispatch_scaler_return_on_ui(*c,*p->renderer);
+    else (void)p->provider->observe_scaler_return_on_ui(*c);
+-   iq4_f1_normal_fit_ingress_observed_08.sequence.fetch_add(1,std::memory_order_acq_rel);
+-   iq4_f1_normal_fit_ingress_observed_08.metadata=p->provider->status_on_ui();
+-   iq4_f1_normal_fit_ingress_observed_08.raw=observed;
+-   iq4_f1_normal_fit_ingress_observed_08.sequence.fetch_add(1,std::memory_order_release);
++   iq4_f1_normal_fit_ingress_observed_09.sequence.fetch_add(1,std::memory_order_acq_rel);
++   iq4_f1_normal_fit_ingress_observed_09.metadata=p->provider->status_on_ui();
++   iq4_f1_normal_fit_ingress_observed_09.raw=observed;
++   iq4_f1_normal_fit_ingress_observed_09.sequence.fetch_add(1,std::memory_order_release);
+   }
+   busy.clear(std::memory_order_release);
+  }
+--- frozen08/hook_capture.hpp
++++ new09/hook_capture.hpp
+@@ -1,7 +1,7 @@
+ #pragma once
+ #include <cstddef>
+ #include <cstdint>
+-namespace iq4::f1::normal08 {
++namespace iq4::f1::normal09 {
+ // Assembly frame is 1024B. These offsets are independently checked against
+ // actual AArch64 object bytes/disassembly; the trailing 144B is not published.
+ struct alignas(16) ScalerCapture {
+@@ -23,4 +23,4 @@
+  std::uint32_t normal_original_return{},full_source{},surface_lease{},mask_enabled{};
+ };
+ }
+-extern "C" void iq4_f1_scaler_after_08(const iq4::f1::normal08::ScalerCapture*)noexcept;
++extern "C" void iq4_f1_scaler_after_09(const iq4::f1::normal09::ScalerCapture*)noexcept;
+--- frozen08/integration.cpp
++++ new09/integration.cpp
+@@ -1,5 +1,5 @@
+ #include "integration.hpp"
+ // Compile-only own runtime bridge bodies. Hidden C++ ports, no constructor,
+ // SDK RPC/native event setter/target loader/process exit or patch installer.
+-bool iq4_f1_ui08_after_original_boundary(iq4::f1::normal08::UI08Bridge&bridge,iq4::f1::native_ui02::Memory memory,iq4::f1::entry01::Module&module,iq4::f1::entry07::Binding&entry,const iq4::f1::native_ui02::BoundaryInput&input)noexcept{return bridge.after_original_boundary_on_ui(memory,module,entry,input);}
+-bool iq4_f1_ui08_bind_actual_provider_before_patch(iq4::f1::normal08::UI08Bridge&bridge,iq4::f1::native_ui02::Memory memory,iq4::f1::entry01::Module&module,const iq4::f1::normal08::ActualProviderContract&contract)noexcept{return bridge.bind_actual_provider_before_patch_on_ui(memory,module,contract);}
++bool iq4_f1_ui09_after_original_boundary(iq4::f1::normal09::UI09Bridge&bridge,iq4::f1::native_ui02::Memory memory,iq4::f1::entry01::Module&module,iq4::f1::entry07::Binding&entry,const iq4::f1::native_ui02::BoundaryInput&input)noexcept{return bridge.after_original_boundary_on_ui(memory,module,entry,input);}
++bool iq4_f1_ui09_bind_actual_provider_before_patch(iq4::f1::normal09::UI09Bridge&bridge,iq4::f1::native_ui02::Memory memory,iq4::f1::entry01::Module&module,const iq4::f1::normal09::ActualProviderContract&contract)noexcept{return bridge.bind_actual_provider_before_patch_on_ui(memory,module,contract);}
+--- frozen08/integration.hpp
++++ new09/integration.hpp
+@@ -1,9 +1,9 @@
+ #pragma once
+ #include "provider.hpp"
+-namespace iq4::f1::normal08 {
++namespace iq4::f1::normal09 {
+ // Concrete finite integration for a new derivative runtime, independent of
+ // frozen UI07/Loader07. No global ctor/paint installer is introduced.
+-class UI08Bridge {
++class UI09Bridge {
+ public:
+  bool after_original_boundary_on_ui(native_ui02::Memory memory,entry01::Module&module,entry07::Binding&entry,const native_ui02::BoundaryInput&input)noexcept{
+   if(!install_after_original_boundary(renderer_,input,module,entry,memory))return false;
+--- frozen08/normal_fit.cpp
++++ new09/normal_fit.cpp
+@@ -3,7 +3,7 @@
+ #include <cmath>
+ #include <cstring>
+ #include <limits>
+-namespace iq4::f1::normal08 {
++namespace iq4::f1::normal09 {
+ namespace {
+ bool positive(Rect r)noexcept{return r.width>0&&r.height>0&&r.width<=4096&&r.height<=4096&&r.x>=0&&r.y>=0&&std::int64_t(r.x)+r.width<=4096&&std::int64_t(r.y)+r.height<=4096;}
+ bool same(Rect a,Rect b)noexcept{return a.x==b.x&&a.y==b.y&&a.width==b.width&&a.height==b.height;}
+@@ -17,7 +17,7 @@
+ }
+ GeometryResult normal_mapping(const Geometry&g,display::ViewMapping&out)noexcept{
+  out={};if(g.source_width<=0||g.source_height<=0||g.source_width>32768||g.source_height>32768||!positive(g.image_viewport)||!positive(g.display_bounds)||!contains(g.display_bounds,g.image_viewport)||!positive(g.clip)||!std::isfinite(g.scale)||!std::isfinite(g.normal_fit_scale)||g.scale<=0||g.normal_fit_scale<=0)return GeometryResult::Invalid;
+- if(g.rotation!=0&&g.rotation!=90&&g.rotation!=180&&g.rotation!=270)return GeometryResult::Invalid;
++ if(g.rotation!=0)return GeometryResult::Invalid;
+  if(g.pan_animation||g.pan.x||g.pan.y||g.scale!=g.normal_fit_scale)return GeometryResult::ZoomOrPan;
+  const Rect full{0,0,g.source_width,g.source_height};
+  if(!same(g.source_rectangle,full)||!same(g.clipped_source_rectangle,full))return GeometryResult::PartialSource;
+@@ -86,7 +86,7 @@
+  if(!contains(w.geometry.clip,coverage))return false;
+  native_overlay::FixedPlan next{};
+  try{
+-  if(kind==GeometryResult::NormalFullView){mask_.select(status_.requested);if(!native_overlay::fixed_plan(mask_.plan(mapping),next)){hold();return false;}}
++  if(kind==GeometryResult::NormalFullView){if(!fixed_normal_plan(w.geometry,status_.requested,next)){hold();return false;}}
+   else {next.image_clip=coverage;next.hidden=MaskHidden::SourceCoordinatesUnavailable;}
+  }catch(...){hold();return false;}
+  Rect needed{};if(!unite(required_clean_,coverage,needed)||!contains(clean,needed)||!contains(w.geometry.clip,needed))return false;
+--- frozen08/normal_fit.hpp
++++ new09/normal_fit.hpp
+@@ -2,7 +2,7 @@
+ #include "../f1_native_entry_binding_07/binding.hpp"
+ #include "../f1_geometry_probe_03/probe.hpp"
+ 
+-namespace iq4::f1::normal08 {
++namespace iq4::f1::normal09 {
+ using Address=native_ui02::Address;
+ using Rect=native_overlay::PixelRect;
+ using Rectangle=native_ui02::Rectangle24;
+@@ -18,6 +18,7 @@
+ };
+ enum class GeometryResult:std::uint32_t {Invalid,NormalFullView,ZoomOrPan,PartialSource};
+ GeometryResult normal_mapping(const Geometry&,display::ViewMapping&)noexcept;
++bool fixed_normal_plan(const Geometry&,MaskMode,native_overlay::FixedPlan&)noexcept;
+ struct WriteFacts {
+  Address queue{},lv{},surface{},draw{},provider{},provider_vtable{},getter_target{},manager_frame{};
+  std::uint64_t paint_serial{},geometry_epoch{};
+@@ -38,13 +39,13 @@
+  explicit PaintToken(const WriteFacts&f)noexcept:facts_(f){}
+  WriteFacts facts_{};
+  friend class ProvenProviderAdapter;
+-#ifdef IQ4_F1_NORMAL08_OWNED_HOST_FIXTURE
++#ifdef IQ4_F1_NORMAL09_OWNED_HOST_FIXTURE
+  friend struct OwnedFixture;
+ #endif
+ };
+ enum class Phase:std::uint32_t {Unbound,OffClean,Waiting,Shown,Hidden,Hold,Detached};
+ struct Status {
+- std::uint32_t schema{8},bytes{sizeof(Status)};
++ std::uint32_t schema{9},bytes{sizeof(Status)};
+  Phase phase{Phase::Unbound};MaskMode requested{MaskMode::Off};
+  std::uint64_t generation{},last_paint{},fills{},rejected{},geometry_epoch{};
+  std::uint32_t actual_geometry_known{},factory_restored{1},module_retained{1},selection_installed{};
+@@ -70,9 +71,9 @@
+  void hold()noexcept{status_.phase=Phase::Hold;}
+  native_ui02::Memory memory_{};native_ui02::Native native_{};
+  native_overlay::FillWrapper fill_{};native_ui02::Owner owner_{};entry07::Binding*entry_{};
+- Status status_{};display::TemporaryMask mask_{};native_overlay::FixedPlan plan_{};
++ Status status_{};native_overlay::FixedPlan plan_{};
+  Rect required_clean_{};bool busy_{};
+-#ifdef IQ4_F1_NORMAL08_OWNED_HOST_FIXTURE
++#ifdef IQ4_F1_NORMAL09_OWNED_HOST_FIXTURE
+  friend struct OwnedFixture;
+ #endif
+ };
+--- frozen08/provider.cpp
++++ new09/provider.cpp
+@@ -2,7 +2,7 @@
+ #include <cmath>
+ #include <cstring>
+ #include <limits>
+-namespace iq4::f1::normal08 {
++namespace iq4::f1::normal09 {
+ namespace {
+ bool digest(const char*s)noexcept{if(!s||s[64])return false;bool any=false;for(unsigned i=0;i<64;i++){if(!((s[i]>='0'&&s[i]<='9')||(s[i]>='a'&&s[i]<='f')))return false;any|=s[i]!='0';}return any;}
+ bool jump(Address from,Address to,std::uint32_t&word)noexcept{
+@@ -49,7 +49,7 @@
+  return status_.result=result;
+ }
+ bool ProvenProviderAdapter::configure_on_actual_ui(native_ui02::Memory memory,native_ui02::Native native,const ActualProviderContract&c)noexcept{
+- if(configured_||!memory.read||!native.current_thread||c.schema!=8||c.profile!=ProviderProfile::RootReviewedInlineUIRetainedUntilPresent||std::memcmp(c.actual_UserSHA,native_overlay::UserSHA,65)||!digest(c.owner_review_sha256)||!digest(c.hook_quiescence_receipt_sha256)||!c.owner.lv||!c.owner.manager||!c.owner.queue||native.current_thread(native.context)!=c.owner.queue||!c.provider||!c.provider_vtable||!c.getter||!c.present||!c.own_bridge||c.inline_surface_offset>4095||(c.inline_surface_offset&7))return false;
++ if(configured_||!memory.read||!native.current_thread||c.schema!=9||c.profile!=ProviderProfile::RootReviewedInlineUIRetainedUntilPresent||std::memcmp(c.actual_UserSHA,native_overlay::UserSHA,65)||!digest(c.owner_review_sha256)||!digest(c.hook_quiescence_receipt_sha256)||!c.owner.lv||!c.owner.manager||!c.owner.queue||native.current_thread(native.context)!=c.owner.queue||!c.provider||!c.provider_vtable||!c.getter||!c.present||!c.own_bridge||c.inline_surface_offset>4095||(c.inline_surface_offset&7))return false;
+  std::uint32_t p{},b{};if(!jump(0x47f910,c.near_entry,p)||!jump(c.near_trampoline+4,0x47f914,b)||(c.near_entry<c.near_trampoline+8&&c.near_trampoline<c.near_entry+16))return false;
+  ProvenProviderAdapter candidate;candidate.memory_=memory;candidate.native_=native;candidate.contract_=c;
+  Address provider{},vt{},getter{},present{};
+--- frozen08/provider.hpp
++++ new09/provider.hpp
+@@ -1,14 +1,14 @@
+ #pragma once
+ #include "normal_fit.hpp"
+ #include "hook_capture.hpp"
+-namespace iq4::f1::normal08 {
++namespace iq4::f1::normal09 {
+ enum class ProviderProfile:std::uint32_t {Unknown,RootReviewedInlineUIRetainedUntilPresent};
+ enum class InlineGetterShape:std::uint32_t {Unknown,LeafAddRet8,OriginalO0StackAddRet24};
+ // Only Root's protected actual admission may supply this contract. Hash syntax
+ // is checked here; the caller must have reviewed the referenced actual receipt.
+ // Off observations cannot fill profile/owner_review_sha256 by themselves.
+ struct ActualProviderContract {
+- std::uint32_t schema{8};ProviderProfile profile{ProviderProfile::Unknown};
++ std::uint32_t schema{9};ProviderProfile profile{ProviderProfile::Unknown};
+  char actual_UserSHA[65]{};char owner_review_sha256[65]{},hook_quiescence_receipt_sha256[65]{};
+  native_ui02::Owner owner{};
+  Address provider{},provider_vtable{},getter{},present{},near_entry{},near_trampoline{},own_bridge{};
+@@ -16,7 +16,7 @@
+  InlineGetterShape getter_shape{InlineGetterShape::Unknown};
+ };
+ enum class IngressResult:std::uint32_t {Disabled,WrongOwner,PatchMismatch,UnsupportedCall,NoWrite,ReadFailed,ScopeMismatch,UnknownLease,PartialSource,UnsupportedFormat,InvalidGeometry,RendererRejected,Emitted,Observed,BoundaryObserved};
+-struct IngressStatus {std::uint32_t schema{8},bytes{sizeof(IngressStatus)};IngressResult result{};std::uint32_t emitted{},normal_returns{},reserved{};std::uint64_t serial{};WriteFacts last{};};
++struct IngressStatus {std::uint32_t schema{9},bytes{sizeof(IngressStatus)};IngressResult result{};std::uint32_t emitted{},normal_returns{},reserved{};std::uint64_t serial{};WriteFacts last{};};
+ class ProvenProviderAdapter {
+ public:
+  bool bind_observation_on_actual_ui(native_ui02::Memory,native_ui02::Native,const native_ui02::Owner&)noexcept;
+@@ -45,4 +45,4 @@
+ bool install_capture_consumer_once_on_ui(ProvenProviderAdapter&,Renderer&)noexcept;
+ void publish_ingress_on_ui(const IngressStatus&)noexcept;
+ }
+-extern "C" iq4::f1::normal08::PublishedIngress iq4_f1_normal_fit_ingress_observed_08;
++extern "C" iq4::f1::normal09::PublishedIngress iq4_f1_normal_fit_ingress_observed_09;
+--- frozen08/runtime_linux.cpp
++++ new09/runtime_linux.cpp
+@@ -1,5 +1,5 @@
+ #include "../f1_native_entry_binding_07/bridge.hpp"
+-#include "../f1_normal_fit_display_08/integration.hpp"
++#include "../f1_normal_fit_display_09/integration.hpp"
+ // Target-only Linux/AArch64 wrapper. Never executed by the host validation tool.
+ #include "../f1_observe_geometry_04/observe.hpp"
+ #include "../f1_observe_stack_05/observe.hpp"
+@@ -61,8 +61,8 @@
+ std::atomic<Address> original_unlock{}, original_try_lock{};int memory_fd=-1;
+ alignas(iq4::f1::entry07::BoundaryBridge) unsigned char entry07_storage[sizeof(iq4::f1::entry07::BoundaryBridge)]{};
+ iq4::f1::entry07::BoundaryBridge* entry07_bridge=nullptr;
+-alignas(iq4::f1::normal08::UI08Bridge) unsigned char ui08_storage[sizeof(iq4::f1::normal08::UI08Bridge)]{};
+-iq4::f1::normal08::UI08Bridge* ui08_bridge=nullptr;
++alignas(iq4::f1::normal09::UI09Bridge) unsigned char ui09_storage[sizeof(iq4::f1::normal09::UI09Bridge)]{};
++iq4::f1::normal09::UI09Bridge* ui09_bridge=nullptr;
+ alignas(Module) unsigned char module_storage[sizeof(Module)]{};Module* module=nullptr;
+ alignas(iq4::f1::observe04::Collector) unsigned char geometry_storage[sizeof(iq4::f1::observe04::Collector)]{};
+ iq4::f1::observe04::Collector* geometry=nullptr;
+@@ -136,12 +136,12 @@
+     if(ok)ok=user_ro_mappings(eh,ph,st);
+     rclose(fd);return ok;
+ }
+-// Protected default-OFF entry/finite-observation admission for this new UI08
++// Protected default-OFF entry/finite-observation admission for this new UI09
+ // deployment contract. Absence/unknown/failure stays OFF. This file does not
+ // attest geometry, source coverage, paint freshness, or Surface lifetime.
+ bool entry08_admission(iq4::f1::entry07::Placement& placement) noexcept {
+     if(iq4_f1_role_ctor_status!=4)return false;
+-    const char*path="/run/iq4_f1_observe02/ui08.entry";
++    const char*path="/run/iq4_f1_observe02/ui09.entry";
+     struct stat d{},a{},b{},c{};
+     if(::lstat("/run/iq4_f1_observe02",&d)||!S_ISDIR(d.st_mode)||d.st_uid||d.st_gid||(d.st_mode&07777)!=0700||
+        ::lstat(path,&a)||!S_ISREG(a.st_mode)||a.st_uid||a.st_gid||(a.st_mode&07777)!=0600||a.st_nlink!=1||a.st_size<=0||a.st_size>=96)return false;
+@@ -150,8 +150,8 @@
+     long n=ok?raw_call(SYS_read,fd,reinterpret_cast<long>(text),b.st_size):-1;char extra{};
+     ok=ok&&n==b.st_size&&raw_call(SYS_read,fd,reinterpret_cast<long>(&extra),1)==0&&!::fstat(fd,&c)&&b.st_dev==c.st_dev&&b.st_ino==c.st_ino&&b.st_size==c.st_size&&b.st_mtim.tv_sec==c.st_mtim.tv_sec&&b.st_mtim.tv_nsec==c.st_mtim.tv_nsec;
+     rclose(fd);int x=-1,y=-1;char tail{};
+-    if(!ok||::sscanf(text,"IQ4_F1_UI08_ENTRY_OBSERVE_ONLY %d %d%c",&x,&y,&tail)!=3||tail!='\n'||x<0||y<0||x>32767||y>32767)return false;
+-    int size=::snprintf(canonical,sizeof canonical,"IQ4_F1_UI08_ENTRY_OBSERVE_ONLY %d %d\n",x,y);
++    if(!ok||::sscanf(text,"IQ4_F1_UI09_ENTRY_OBSERVE_ONLY %d %d%c",&x,&y,&tail)!=3||tail!='\n'||x<0||y<0||x>32767||y>32767)return false;
++    int size=::snprintf(canonical,sizeof canonical,"IQ4_F1_UI09_ENTRY_OBSERVE_ONLY %d %d\n",x,y);
+     if(size!=n||std::memcmp(text,canonical,static_cast<std::size_t>(n))||::lstat(path,&c)||b.st_dev!=c.st_dev||b.st_ino!=c.st_ino||b.st_size!=c.st_size)return false;
+     placement={x,y};return true;
+ }
+@@ -169,7 +169,7 @@
+     stack_collector=new(stack_storage)iq4::f1::stack05::Collector({nullptr,self_read},0);
+     display_collector=new(display_storage)iq4::f1::display06::Collector({nullptr,self_read},0,reinterpret_cast<Address>(&iq4_f1_display_paint_callback_06));
+     entry07_bridge=new(entry07_storage)iq4::f1::entry07::BoundaryBridge;
+-    ui08_bridge=new(ui08_storage)iq4::f1::normal08::UI08Bridge;
++    ui09_bridge=new(ui09_storage)iq4::f1::normal09::UI09Bridge;
+     original_paint.store(0x51da0c,std::memory_order_release);
+     iq4::f1::display06::publish(iq4_f1_display_observed_06,display_collector->snapshot());
+     if(module->configure({nullptr,self_read},{true,true,true,true,0},reinterpret_cast<int(*)(void*)>(original_try_lock.load(std::memory_order_acquire)),reinterpret_cast<int(*)(void*)>(original_unlock.load(std::memory_order_acquire)))){diagnostic_ready.store(true,std::memory_order_release);iq4_f1_entry_observed.startup.store(4,std::memory_order_release);}
+@@ -229,8 +229,8 @@
+                 {reinterpret_cast<int(*)(void*)>(original_try_lock.load(std::memory_order_acquire)),reinterpret_cast<int(*)(void*)>(original_unlock.load(std::memory_order_acquire))});
+             // Actual caller closes the source port. No provider contract is
+             // configured here, no text hook is installed, and no token is issued.
+-            if(ui08_bridge&&entry07_bridge->admitted())
+-                (void)ui08_bridge->after_original_boundary_on_ui(
++            if(ui09_bridge&&entry07_bridge->admitted())
++                (void)ui09_bridge->after_original_boundary_on_ui(
+                     {nullptr,self_read},*module,entry07_bridge->binding(),input);
+             iq4_f1_entry_binding_observed_07.sequence.fetch_add(1,std::memory_order_acq_rel);
+             iq4_f1_entry_binding_observed_07.metadata=entry07_bridge->binding().status_on_ui();
+--- frozen08/scaler_bridge.S
++++ new09/scaler_bridge.S
+@@ -1,10 +1,10 @@
+ // Compile-only AArch64 ABI bridge. No installer; trampoline starts NULL.
+ .text
+ .p2align 2
+-.global iq4_f1_scaler_bridge_08
+-.hidden iq4_f1_scaler_bridge_08
+-.type iq4_f1_scaler_bridge_08,%function
+-iq4_f1_scaler_bridge_08:
++.global iq4_f1_scaler_bridge_09
++.hidden iq4_f1_scaler_bridge_09
++.type iq4_f1_scaler_bridge_09,%function
++iq4_f1_scaler_bridge_09:
+ .cfi_startproc
+  sub sp,sp,#1024
+ .cfi_def_cfa_offset 1024
+@@ -26,8 +26,8 @@
+  stp x10,x11,[sp,#16]
+  ldr x10,[x9,#32]
+  str x10,[sp,#32]
+- adrp x16,iq4_f1_scaler_trampoline_08
+- ldr x16,[x16,:lo12:iq4_f1_scaler_trampoline_08]
++ adrp x16,iq4_f1_scaler_trampoline_09
++ ldr x16,[x16,:lo12:iq4_f1_scaler_trampoline_09]
+  blr x16
+ // Reached only after a normal original return; preserve all ordinary results.
+  stp x0,x1,[sp,#176]
+@@ -63,7 +63,7 @@
+  mrs x9,fpsr
+  str x9,[sp,#864]
+  mov x0,sp
+- bl iq4_f1_scaler_after_08
++ bl iq4_f1_scaler_after_09
+  ldp q0,q1,[sp,#336]
+  ldp q2,q3,[sp,#368]
+  ldp q4,q5,[sp,#400]
+@@ -103,13 +103,13 @@
+ .cfi_def_cfa_offset 0
+  ret
+ .cfi_endproc
+-.size iq4_f1_scaler_bridge_08,.-iq4_f1_scaler_bridge_08
++.size iq4_f1_scaler_bridge_09,.-iq4_f1_scaler_bridge_09
+ .data
+ .p2align 3
+-.global iq4_f1_scaler_trampoline_08
+-.hidden iq4_f1_scaler_trampoline_08
+-.type iq4_f1_scaler_trampoline_08,%object
+-iq4_f1_scaler_trampoline_08:
++.global iq4_f1_scaler_trampoline_09
++.hidden iq4_f1_scaler_trampoline_09
++.type iq4_f1_scaler_trampoline_09,%object
++iq4_f1_scaler_trampoline_09:
+ .quad 0
+-.size iq4_f1_scaler_trampoline_08,8
++.size iq4_f1_scaler_trampoline_09,8
+ .section .note.GNU-stack,"",%progbits
+--- frozen08/test_normal.cpp
++++ new09/test_normal.cpp
+@@ -6,8 +6,8 @@
+ #include <cstring>
+ #include <map>
+ #include <vector>
+-using namespace iq4::f1::normal08;
+-namespace iq4::f1::normal08 {struct OwnedFixture {static PaintToken token(const WriteFacts&w)noexcept{return PaintToken(w);}};}
++using namespace iq4::f1::normal09;
++namespace iq4::f1::normal09 {struct OwnedFixture {static PaintToken token(const WriteFacts&w)noexcept{return PaintToken(w);}};}
+ namespace {
+ struct Host {
+  std::map<Address,unsigned char>memory;
+@@ -57,7 +57,7 @@
+  {Host h;Renderer r;assert(r.bind_once_on_ui(h.mem(),h.native(),Host::fill,h.owner,nullptr));assert(r.after_native_write_on_ui(OwnedFixture::token(h.facts())));auto p=r.selection_port();assert(p.apply_on_ui(p.context,iq4::MaskMode::Ratio16_9,1)==iq4::f1::entry07::SelectResult::AwaitingStockPaint);assert(r.after_native_write_on_ui(OwnedFixture::token(h.facts(2))));const auto n=h.fills;auto w=h.facts(3);w.geometry.pan.x=1;assert(r.after_native_write_on_ui(OwnedFixture::token(w)));assert(r.status_on_ui().phase==Phase::Hidden&&h.fills==n&&!r.status_on_ui().actual_geometry_known);assert(r.after_native_write_on_ui(OwnedFixture::token(h.facts(4))));assert(r.status_on_ui().phase==Phase::Shown&&h.fills>n);++groups;}
+  {Host h;Renderer r;assert(r.bind_once_on_ui(h.mem(),h.native(),Host::fill,h.owner,nullptr));assert(r.after_native_write_on_ui(OwnedFixture::token(h.facts())));auto w=h.facts(2);w.geometry.clip={240,60,400,600};assert(!r.after_native_write_on_ui(OwnedFixture::token(w)));assert(!h.fills&&r.status_on_ui().last_paint==1);w=h.facts(2);w.geometry.image_viewport={0,0,400,300};assert(!r.after_native_write_on_ui(OwnedFixture::token(w)));assert(!h.fills);++groups;}
+  {Host h;Renderer r;assert(r.bind_once_on_ui(h.mem(),h.native(),Host::fill,h.owner,nullptr));assert(r.after_native_write_on_ui(OwnedFixture::token(h.facts())));assert(!r.after_native_write_on_ui(OwnedFixture::token(h.facts())));h.thread=0;auto p=r.selection_port();assert(p.apply_on_ui(p.context,iq4::MaskMode::Ratio1_1,1)==iq4::f1::entry07::SelectResult::Rejected);h.thread=h.owner.queue;auto w=h.facts(2);w.draw+=8;assert(!r.after_native_write_on_ui(OwnedFixture::token(w)));assert(!h.fills);++groups;}
+- {Host h;iq4::display::ViewMapping mapping{};auto g=h.facts().geometry;for(int rotation:{0,90,180,270}){g.rotation=rotation;assert(normal_mapping(g,mapping)==GeometryResult::NormalFullView);auto p=mapping.sourceToDisplay.map({0,0});assert(p.x>=240&&p.x<=1040&&p.y>=60&&p.y<=660);}g.scale=2;assert(normal_mapping(g,mapping)==GeometryResult::ZoomOrPan&&!mapping.fullSourceMappingKnown);g.scale=1;g.clipped_source_rectangle.width=799;assert(normal_mapping(g,mapping)==GeometryResult::PartialSource);g=h.facts().geometry;g.scale=0;assert(normal_mapping(g,mapping)==GeometryResult::Invalid);++groups;}
++ {Host h;iq4::display::ViewMapping mapping{};auto g=h.facts().geometry;assert(normal_mapping(g,mapping)==GeometryResult::NormalFullView);for(int rotation:{90,180,270}){g.rotation=rotation;assert(normal_mapping(g,mapping)==GeometryResult::Invalid&&!mapping.fullSourceMappingKnown);}g.rotation=0;g.scale=2;assert(normal_mapping(g,mapping)==GeometryResult::ZoomOrPan&&!mapping.fullSourceMappingKnown);g.scale=1;g.clipped_source_rectangle.width=799;assert(normal_mapping(g,mapping)==GeometryResult::PartialSource);g=h.facts().geometry;g.scale=0;assert(normal_mapping(g,mapping)==GeometryResult::Invalid);++groups;}
+  {Host h;Renderer r;assert(r.bind_once_on_ui(h.mem(),h.native(),Host::fill,h.owner,nullptr));assert(r.after_native_write_on_ui(OwnedFixture::token(h.facts())));auto p=r.selection_port();assert(p.apply_on_ui(p.context,iq4::MaskMode::Ratio1_1,1)==iq4::f1::entry07::SelectResult::AwaitingStockPaint);h.throw_fill=true;assert(!r.after_native_write_on_ui(OwnedFixture::token(h.facts(2))));assert(r.status_on_ui().phase==Phase::Hold&&!r.off_and_detach_on_ui(10));++groups;}
+  {Host h;Renderer r;assert(r.bind_once_on_ui(h.mem(),h.native(),Host::fill,h.owner,nullptr));auto a=h.actual_fixture();ProvenProviderAdapter observer;assert(observer.bind_observation_on_actual_ui(h.mem(),h.native(),h.owner));assert(observer.sample_boundary_scalars_on_actual_ui()==IngressResult::BoundaryObserved&&observer.status_on_ui().last.surface==0x40000&&!observer.status_on_ui().emitted&&!observer.status_on_ui().last.paint_serial&&!r.status_on_ui().actual_geometry_known&&!h.fills);assert(observer.observe_scaler_return_on_ui(a.first)==IngressResult::Observed&&!observer.status_on_ui().emitted&&!r.status_on_ui().actual_geometry_known&&!h.fills);ProvenProviderAdapter p;auto absent=a.second;absent.profile=ProviderProfile::Unknown;assert(!p.configure_on_actual_ui(h.mem(),h.native(),absent));assert(p.configure_on_actual_ui(h.mem(),h.native(),a.second));assert(p.dispatch_scaler_return_on_ui(a.first,r)==IngressResult::Emitted);auto port=r.selection_port();assert(port.apply_on_ui(port.context,iq4::MaskMode::Ratio1_1,1)==iq4::f1::entry07::SelectResult::AwaitingStockPaint);assert(p.dispatch_scaler_return_on_ui(a.first,r)==IngressResult::Emitted&&h.fills);auto bad=a.first;bad.stack_arguments[1]=0;assert(p.dispatch_scaler_return_on_ui(bad,r)==IngressResult::NoWrite);bad=a.first;bad.original_lr=0x475838;assert(p.dispatch_scaler_return_on_ui(bad,r)==IngressResult::UnsupportedCall);bad=a.first;bad.arguments[5]=2;assert(p.dispatch_scaler_return_on_ui(bad,r)==IngressResult::UnsupportedFormat);++groups;}
+  {Host h;Renderer r;assert(r.bind_once_on_ui(h.mem(),h.native(),Host::fill,h.owner,nullptr));auto a=h.actual_fixture();ProvenProviderAdapter p;h.put(a.second.getter,std::uint32_t{0xf9400400});assert(!p.configure_on_actual_ui(h.mem(),h.native(),a.second));h.put(a.second.getter,std::uint32_t{0x91040000});assert(p.configure_on_actual_ui(h.mem(),h.native(),a.second));h.put(a.second.provider_vtable+0x18,Address{0x62008});assert(p.dispatch_scaler_return_on_ui(a.first,r)==IngressResult::UnknownLease);h.put(a.second.provider_vtable+0x18,a.second.getter);const std::uint32_t o0[6]={0xd10043ff,0xf90007e0,0xf94007e0,0x91040000,0x910043ff,0xd65f03c0};for(unsigned i=0;i<6;i++)h.put(a.second.getter+4*i,o0[i]);auto c=a.second;c.getter_shape=InlineGetterShape::OriginalO0StackAddRet24;ProvenProviderAdapter p2;assert(p2.configure_on_actual_ui(h.mem(),h.native(),c)&&p2.dispatch_scaler_return_on_ui(a.first,r)==IngressResult::Emitted);h.put(0x47f910,std::uint32_t{0xd10403ff});assert(p.dispatch_scaler_return_on_ui(a.first,r)==IngressResult::PatchMismatch);assert(!h.fills);++groups;}

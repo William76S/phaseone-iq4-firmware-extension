@@ -1,0 +1,328 @@
+[
+  {
+    "kind": "host_sdk",
+    "argv": [
+      "/usr/bin/xcrun",
+      "--show-sdk-path"
+    ],
+    "exit": 0,
+    "stdout": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk\n",
+    "stderr": ""
+  },
+  {
+    "kind": "decoder_identity",
+    "argv": [
+      "/opt/homebrew/bin/ffmpeg",
+      "-version"
+    ],
+    "exit": 0,
+    "stdout": "ffmpeg version 8.0.1 Copyright (c) 2000-2025 the FFmpeg developers\nbuilt with Apple clang version 17.0.0 (clang-1700.6.3.2)\nconfiguration: --prefix=/opt/homebrew/Cellar/ffmpeg/8.0.1_4 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --enable-neon\nlibavutil      60.  8.100 / 60.  8.100\nlibavcodec     62. 11.100 / 62. 11.100\nlibavformat    62.  3.100 / 62.  3.100\nlibavdevice    62.  1.100 / 62.  1.100\nlibavfilter    11.  4.100 / 11.  4.100\nlibswscale      9.  1.100 /  9.  1.100\nlibswresample   6.  1.100 /  6.  1.100\n\nExiting with exit code 0\n",
+    "stderr": ""
+  },
+  {
+    "kind": "probe_identity",
+    "argv": [
+      "/opt/homebrew/bin/ffprobe",
+      "-version"
+    ],
+    "exit": 0,
+    "stdout": "ffprobe version 8.0.1 Copyright (c) 2007-2025 the FFmpeg developers\nbuilt with Apple clang version 17.0.0 (clang-1700.6.3.2)\nconfiguration: --prefix=/opt/homebrew/Cellar/ffmpeg/8.0.1_4 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --enable-neon\nlibavutil      60.  8.100 / 60.  8.100\nlibavcodec     62. 11.100 / 62. 11.100\nlibavformat    62.  3.100 / 62.  3.100\nlibavdevice    62.  1.100 / 62.  1.100\nlibavfilter    11.  4.100 / 11.  4.100\nlibswscale      9.  1.100 /  9.  1.100\nlibswresample   6.  1.100 /  6.  1.100\n",
+    "stderr": ""
+  },
+  {
+    "kind": "target_compiler_identity",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "version"
+    ],
+    "exit": 0,
+    "stdout": "0.15.2\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_synthetic_JPEG_generation",
+    "argv": [
+      "/opt/homebrew/bin/ffmpeg",
+      "-v",
+      "error",
+      "-f",
+      "lavfi",
+      "-i",
+      "testsrc2=size=128x96:rate=30",
+      "-frames:v",
+      "3",
+      "-c:v",
+      "mjpeg",
+      "-q:v",
+      "2",
+      "-threads",
+      "1",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/fixture_%d.jpg"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tests/test_native_mkv.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/recording/native_mkv.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_save_transaction_01/transaction.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/mkv_normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/mkv_normal",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/fixture_1.jpg",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/fixture_2.jpg",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/fixture_3.jpg",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/actual_host_normal.mkv"
+    ],
+    "exit": 0,
+    "stdout": "{\"host_packet_file_groups\":13,\"target_executed\":false}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_geometry_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tests/test_export_geometry.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/geometry_normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_geometry_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/geometry_normal"
+    ],
+    "exit": 0,
+    "stdout": "{\"geometry_checks\":33,\"target_executed\":false}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "actual_host_file_probe",
+    "argv": [
+      "/opt/homebrew/bin/ffprobe",
+      "-v",
+      "error",
+      "-show_entries",
+      "stream=codec_name,width,height,time_base:packet=pts_time",
+      "-of",
+      "json",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/actual_host_normal.mkv"
+    ],
+    "exit": 0,
+    "stdout": "{\n    \"packets\": [\n        {\n            \"pts_time\": \"0.000000\"\n        },\n        {\n            \"pts_time\": \"0.033333\"\n        },\n        {\n            \"pts_time\": \"0.078000\"\n        }\n    ],\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"mjpeg\",\n            \"width\": 128,\n            \"height\": 96,\n            \"time_base\": \"1/1000000000\"\n        }\n    ]\n}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "actual_host_entropy_decode",
+    "argv": [
+      "/opt/homebrew/bin/ffmpeg",
+      "-v",
+      "error",
+      "-i",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/actual_host_normal.mkv",
+      "-fps_mode",
+      "passthrough",
+      "-pix_fmt",
+      "rgb24",
+      "-f",
+      "rawvideo",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/decoded_normal.rgb"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tests/test_native_mkv.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/recording/native_mkv.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_save_transaction_01/transaction.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/mkv_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/mkv_sanitized",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/fixture_1.jpg",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/fixture_2.jpg",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/fixture_3.jpg",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/actual_host_sanitized.mkv"
+    ],
+    "exit": 0,
+    "stdout": "{\"host_packet_file_groups\":13,\"target_executed\":false}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_geometry_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tests/test_export_geometry.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/geometry_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_geometry_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/geometry_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "{\"geometry_checks\":33,\"target_executed\":false}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "actual_host_file_probe",
+    "argv": [
+      "/opt/homebrew/bin/ffprobe",
+      "-v",
+      "error",
+      "-show_entries",
+      "stream=codec_name,width,height,time_base:packet=pts_time",
+      "-of",
+      "json",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/actual_host_sanitized.mkv"
+    ],
+    "exit": 0,
+    "stdout": "{\n    \"packets\": [\n        {\n            \"pts_time\": \"0.000000\"\n        },\n        {\n            \"pts_time\": \"0.033333\"\n        },\n        {\n            \"pts_time\": \"0.078000\"\n        }\n    ],\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"mjpeg\",\n            \"width\": 128,\n            \"height\": 96,\n            \"time_base\": \"1/1000000000\"\n        }\n    ]\n}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "actual_host_entropy_decode",
+    "argv": [
+      "/opt/homebrew/bin/ffmpeg",
+      "-v",
+      "error",
+      "-i",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/actual_host_sanitized.mkv",
+      "-fps_mode",
+      "passthrough",
+      "-pix_fmt",
+      "rgb24",
+      "-f",
+      "rawvideo",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/decoded_sanitized.rgb"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "target_compile_only",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-fPIC",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/recording/native_mkv.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/native_mkv.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "target_compile_only",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-fPIC",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/native_mkv_build_01/export_geometry.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "schema": "iq4_f1_stack_publication_layout_05",
+  "architecture": "little-endian AArch64/uint64 addresses",
+  "bytes": 1192,
+  "own_export": "iq4_f1_stack_observed_05",
+  "outer": {
+    "sequence": 0,
+    "bytes": 4,
+    "schema": 8,
+    "reserved": 12
+  },
+  "metadata": {
+    "schema": 16,
+    "bytes": 20,
+    "result": 24,
+    "graph_present": 28,
+    "attempts": 32,
+    "snapshot_epoch": 40,
+    "source_dispatch_epoch": 48,
+    "prior_source_dispatch_epoch": 56,
+    "accepted": 64,
+    "rejected": 72,
+    "exact_user_sha256_32": 80,
+    "exact_user_bytes": 112,
+    "flags_12_u32": 120,
+    "actual_popped_observer": 168,
+    "normal_tail_dialog": 176,
+    "selected_dialog_projection": 184,
+    "unchanged_source_424": 192,
+    "facts_576": 616
+  },
+  "facts": {
+    "priority_first": 616,
+    "priority_last": 624,
+    "normal_first": 632,
+    "normal_last": 640,
+    "override_dialog": 648,
+    "aux_dialog": 656,
+    "aux_active": 664,
+    "count": 668,
+    "complete": 672,
+    "priority_empty": 676,
+    "nodes_8_64byte_rows": 680
+  },
+  "node_row": {
+    "node": 0,
+    "dialog": 8,
+    "node_vtable": 16,
+    "primary_vtable": 24,
+    "next": 32,
+    "previous": 40,
+    "manager": 48,
+    "request_pending": 56,
+    "kind": 60
+  },
+  "flags_12_u32": [
+    "source_startup",
+    "source_relation",
+    "shape",
+    "normal_tail_projection",
+    "prior_source_sequence",
+    "native_manager_current_called",
+    "paint_called",
+    "full_source_mapping_verified",
+    "fresh_blit_verified",
+    "surface_lease_verified",
+    "actual_scene_verified",
+    "reserved"
+  ],
+  "fixed_zero_proofs": [
+    "native_manager_current_called",
+    "paint_called",
+    "full_source_mapping_verified",
+    "fresh_blit_verified",
+    "surface_lease_verified",
+    "actual_scene_verified"
+  ],
+  "mask_enabled": false,
+  "source_phase_never_relabelled": true,
+  "source_frame_counter": false
+}

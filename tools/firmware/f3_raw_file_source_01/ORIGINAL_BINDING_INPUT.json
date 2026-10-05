@@ -1,0 +1,196 @@
+{
+  "schema": "iq4_f3_saved_iiq_original_binding_input_01",
+  "original_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "original_bytes": 11874544,
+  "functions": [
+    {
+      "name": "reader_construct",
+      "va": 8229560,
+      "va_hex": "0x7d92b8",
+      "file_offset": 4035256,
+      "prefix_bytes": 32,
+      "prefix_hex": "fd7bbda9e70303aae30305aafd030091f35301a9f30300aa74e24091f51300f9",
+      "prefix_sha256": "04423b7482c55ae99c7b1bee6be52008fa4715d61f8163ea2aba33b9ccefd309",
+      "AAPCS_observed": "x0=self,x1=moduleA,x2=FS,x3/4/5=metadataInit,x6=moduleB"
+    },
+    {
+      "name": "reader_destroy_nondeleting",
+      "va": 8229776,
+      "va_hex": "0x7d9390",
+      "file_offset": 4035472,
+      "prefix_bytes": 32,
+      "prefix_hex": "fd7bbda9c110009021c03791fd030091f35301a9f30300aa628a419142003091",
+      "prefix_sha256": "a47b3fb1fb812f849750f957f02f002fe5629d7349c813a8e712e092381d2db5",
+      "AAPCS_observed": "x0=self"
+    },
+    {
+      "name": "reader_open",
+      "va": 8231304,
+      "va_hex": "0x7d9988",
+      "file_offset": 4037000,
+      "prefix_bytes": 32,
+      "prefix_hex": "fd7baba9fd030091f35301a9f30300aa000c40f9000800b4748a4191f55b02a9",
+      "prefix_sha256": "305079042e5ecba69af23f4c466ca174901b401320e17844cd63150cf0e6f261",
+      "AAPCS_observed": "x0=self,x1=directory,x2=name,w3=extra,w4=fileFlag; w0=bool"
+    },
+    {
+      "name": "reader_close",
+      "va": 8231648,
+      "va_hex": "0x7d9ae0",
+      "file_offset": 4037344,
+      "prefix_bytes": 32,
+      "prefix_hex": "fd7bbea9fd030091f30b00f9f30300aa00e0409100800291b5b5ff97608a4191",
+      "prefix_sha256": "43976b52e89f63d303d0a4c00bfc8bf906a5ba5150487c5f9f657c48fea68b2c",
+      "AAPCS_observed": "x0=self; w0=bool"
+    },
+    {
+      "name": "reader_is_open",
+      "va": 8230336,
+      "va_hex": "0x7d95c0",
+      "file_offset": 4036032,
+      "prefix_bytes": 32,
+      "prefix_hex": "0088419100403091f83001141f2003d5fd7bbda9fd030091f30b00f9f30300aa",
+      "prefix_sha256": "dc6723ccb575a2f63adf608b1eb6dfeedc0cb8ff693eb0173b8f60db89c1e502",
+      "AAPCS_observed": "x0=self; w0=bool"
+    },
+    {
+      "name": "reader_read_payload",
+      "va": 8230448,
+      "va_hex": "0x7d9630",
+      "file_offset": 4036144,
+      "prefix_bytes": 32,
+      "prefix_hex": "fd7bbda9fd030091f35301a9f30300aa0088419100403091f55b02a9f50301aa",
+      "prefix_sha256": "e2ec4990a0dd598fafd280e71462c94eb1c83427cb464fa6a1bd58219b7f1a3f",
+      "AAPCS_observed": "x0=self,x1=destination,w2=capacity; w0=received"
+    },
+    {
+      "name": "reader_capture_codec",
+      "va": 8230672,
+      "va_hex": "0x7d9710",
+      "file_offset": 4036368,
+      "prefix_bytes": 32,
+      "prefix_hex": "fd7bbea9fd030091f30b00f9f30300aa0088419100403091a03001941f1c0072",
+      "prefix_sha256": "794d8bf05ee393c74709fa8fb0c3998cadf7115ecbdc73f62a8f0d00c50f142b",
+      "AAPCS_observed": "x0=self; w0=codec"
+    },
+    {
+      "name": "map_construct",
+      "va": 8108556,
+      "va_hex": "0x7bba0c",
+      "file_offset": 3914252,
+      "prefix_bytes": 32,
+      "prefix_hex": "fd7bbea9fd030091e00f00f9e00f40f9f4ffff971f2003d5fd7bc2a8c0035fd6",
+      "prefix_sha256": "fb2302e8a3cbab8dbe96234052ea878aa19c05cb86777ce0b3f109772a7bd978",
+      "AAPCS_observed": "x0=0x30 owned map"
+    },
+    {
+      "name": "map_destroy",
+      "va": 8108588,
+      "va_hex": "0x7bba2c",
+      "file_offset": 3914284,
+      "prefix_bytes": 32,
+      "prefix_hex": "fd7bbea9fd030091e00f00f9e00f40f9530200941f2003d5fd7bc2a8c0035fd6",
+      "prefix_sha256": "57357e2cc2dead95c996d473f721d20f9c0a646bfc1074ef55425737b6c0795e",
+      "AAPCS_observed": "x0=0x30 owned map"
+    },
+    {
+      "name": "map_index",
+      "va": 8113252,
+      "va_hex": "0x7bcc64",
+      "file_offset": 3918948,
+      "prefix_bytes": 32,
+      "prefix_hex": "fd7bbaa9fd030091f30b00f9e01700f9e11300f9e11340f9e01740f985030094",
+      "prefix_sha256": "5cc4228e207cc58dfd56c0d6085470a61d956486592cf7ab043eb80be3e1ea01",
+      "AAPCS_observed": "x0=map,x1=u32 key*; x0=value*"
+    },
+    {
+      "name": "tag_u32",
+      "va": 8108256,
+      "va_hex": "0x7bb8e0",
+      "file_offset": 3913952,
+      "prefix_bytes": 32,
+      "prefix_hex": "ff4300d1e00700f9e10700b9e00740f921008052010000b9e00740f9e10740b9",
+      "prefix_sha256": "3c3c99cb99229f796b7b27e0d6cfbe30acd8488c35579c4d34035d441a92d7a1",
+      "AAPCS_observed": "x0=value,w1=data"
+    },
+    {
+      "name": "tag_float",
+      "va": 8108304,
+      "va_hex": "0x7bb910",
+      "file_offset": 3914000,
+      "prefix_bytes": 32,
+      "prefix_hex": "ff4300d1e00700f9e00700bde00740f921008052010000b9e00740f9e10740b9",
+      "prefix_sha256": "5ca718838cc7c63ebff38ecc99f931a4d82d8cb736e4c8e9c55dd2c646641771",
+      "AAPCS_observed": "x0=value,s0=data"
+    },
+    {
+      "name": "tag_blob_borrows",
+      "va": 8108352,
+      "va_hex": "0x7bb940",
+      "file_offset": 3914048,
+      "prefix_bytes": 32,
+      "prefix_hex": "ff8300d1e00f00f9e10b00f9e20f00b9e00f40f941008052010000b9e00f40f9",
+      "prefix_sha256": "dced985747c001a7828c6a4b492840c1016cc9cdd23e03911a96c97073071af8",
+      "AAPCS_observed": "x0=value,x1=held data*,w2=bytes"
+    },
+    {
+      "name": "input_construct",
+      "va": 8108736,
+      "va_hex": "0x7bbac0",
+      "file_offset": 3914432,
+      "prefix_bytes": 32,
+      "prefix_hex": "fd7bbea9fd030091e00f00f9e00f40f91f0000b9e00f40f90020009109020094",
+      "prefix_sha256": "b17559e02aeeef427c7399cf188a1a07dee4b7768cfacb2003a8c77280e3f91d",
+      "AAPCS_observed": "x0=0x30 owned RawInput"
+    },
+    {
+      "name": "input_destroy",
+      "va": 8108796,
+      "va_hex": "0x7bbafc",
+      "file_offset": 3914492,
+      "prefix_bytes": 32,
+      "prefix_hex": "fd7bbea9fd030091e00f00f9e00f40f90020009131d7f1971f2003d5fd7bc2a8",
+      "prefix_sha256": "3bd1e8c2219b09af8f82ddd6ebc2651442cd6cc7467bf327d3e88a8d0eee8d46",
+      "AAPCS_observed": "x0=0x30 owned RawInput"
+    },
+    {
+      "name": "vector_push",
+      "va": 8112100,
+      "va_hex": "0x7bc7e4",
+      "file_offset": 3917796,
+      "prefix_bytes": 32,
+      "prefix_hex": "fd7bbea9fd030091e00f00f9e10b00f9e00f40f9010440f9e00f40f9000840f9",
+      "prefix_sha256": "49bf161b3ff5fe4da3dee12fc15e4bd6d56fa3d808eac36afa925c52089e29f7",
+      "AAPCS_observed": "x0=RawInput+8,x1=held u32*"
+    }
+  ],
+  "expected_vtables": {
+    "reader": "0xd86708",
+    "file": "0xd90410",
+    "linux_filesystem": "0xd91450"
+  },
+  "layouts": {
+    "reader_bytes": 404608,
+    "capture_format_offset": 229536,
+    "payload_length_offset": 238956,
+    "row_inline_offset": 32,
+    "tag_map_bytes": 48,
+    "raw_input_bytes": 48,
+    "raw_input_rows_vector_offset": 8,
+    "raw_input_payload_offset": 32,
+    "raw_input_bytes_offset": 40,
+    "capture_container_kind_offset": 53296,
+    "capture_black_mode_offset": 60140,
+    "capture_tag20c_offset": 520
+  },
+  "native_function_table_bound": false,
+  "target_invoked": false,
+  "unverified": [
+    "constructor dependency provenance",
+    "runtime relocated image identity and prefix guards",
+    "native C++ exception/unwind compatibility",
+    "target same-fd stat/pread/tell adapter",
+    "generator profile parsing/sRGB settings",
+    "whole decoded/render completion receipt"
+  ]
+}

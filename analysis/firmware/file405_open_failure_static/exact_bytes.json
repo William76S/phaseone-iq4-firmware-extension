@@ -1,0 +1,98 @@
+{
+  "input_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "evidence_level": "static_only",
+  "target_code_executed": false,
+  "ranges": [
+    {
+      "name": "folder_cached_linux_owner",
+      "start_va": "0x74e454",
+      "end_va_exclusive": "0x74e534",
+      "file_offset": "0x34e454",
+      "bytes_hex": "fd7bbca9fd030091f35301a9e01700f9e12700b9e28f0039ff1b00f9ff3f00b9e03f80b91f4800f188060054204000f001e03291e03f80b900e87bd32000008b000040b9e12740b93f00006be1040054e08f40391f00007180010054204000f001e03291e03f80b900e87bd32000008b000840f9e01b00f9e01b40f921008052fc0500941d000014204000f001e03291e03f80b900e87bd32000008b001840b91f000071e0179f1ae0ef0039004380d257eef297f30300aa204000f001e03291e03f80b900e87bd32000008b000440f9e2ef4039e10300aae00313aab75d0394",
+      "bytes_sha256": "81055fdb7d5a58f80a4262c28303de719f07d8cf1a24bc02bf0cf0ebd0818af0",
+      "disassembly": "analysis/firmware/file405_open_failure_static/folder_cached_linux_owner.disasm.txt",
+      "disassembly_sha256": "4cc131d8d2a36b9a0c0808274982c1501ee70a4e08c2573feda29a764022883b"
+    },
+    {
+      "name": "file_id_to_folder_owner",
+      "start_va": "0x74e5a8",
+      "end_va_exclusive": "0x74e634",
+      "file_offset": "0x34e5a8",
+      "bytes_hex": "fd7bbda9fd030091e00f00f9e11700b9e24f0039ff2f00b9e02f80b91f5401f1e8030054204000f002603c91e12f80b9e00301aa00f47ed30000018b00f07dd34000008b000040b9e11740b93f00006be1010054204000f002603c91e12f80b9e00301aa00f47ed30000018b00f07dd34000008b001840b9e24f4039e103002ae00f40f98affff9714000014",
+      "bytes_sha256": "d4124af8db3848bf849d14cc3652aaa4ce493d905d4d56cbf820de25890eeb18",
+      "disassembly": "analysis/firmware/file405_open_failure_static/file_id_to_folder_owner.disasm.txt",
+      "disassembly_sha256": "b1fa0c21d62e82f8a8e555b2b3d9b3d5a35ffff7465020de98cb1b1a6c389583"
+    },
+    {
+      "name": "linux_relative_path_join",
+      "start_va": "0x827418",
+      "end_va_exclusive": "0x82744c",
+      "file_offset": "0x427418",
+      "bytes_hex": "e01f40f901540091e01f40f90054049100040091e51b40f9e40300aae30301aa402b00d002800391012080d2e01740f9ba8aef97",
+      "bytes_sha256": "1b54127d92adcfc0404ab42131f67dc57dc6dce9852d22c1716858b87e1cef8d",
+      "disassembly": "analysis/firmware/file405_open_failure_static/linux_relative_path_join.disasm.txt",
+      "disassembly_sha256": "28f7709f0af2c3930a5f69787001a2b43675fe3b629135a1ddec8eb2b6ff4e21"
+    }
+  ],
+  "tables": [
+    {
+      "name": "user_application_and_upgrade_entries",
+      "va": "0xf56030",
+      "file_offset": "0xb46030",
+      "size": 80,
+      "bytes_hex": "0500000000000000a056c300000000000300000000000000040000000a000000a856c300000000000600000000000000b856c3000000000003000000000000000400000000000000c856c30000000000",
+      "sha256": "5a2607373d9b58fea2c5ea1d1b5c0946462e417b03798a0ccf93ec5431686534"
+    },
+    {
+      "name": "factory_application_and_upgrade_entries",
+      "va": "0xf56288",
+      "file_offset": "0xb46288",
+      "size": 80,
+      "bytes_hex": "0f00000000000000a056c3000000000003000000010000000500000000000000b058c300000000001000000000000000b856c3000000000003000000010000000500000000000000c858c30000000000",
+      "sha256": "312e8d12176d3323ab4c352af9809af940e91cabae154766156fe813aec805f7"
+    },
+    {
+      "name": "user_factory_folders",
+      "va": "0xf55d38",
+      "file_offset": "0xb45d38",
+      "size": 64,
+      "bytes_hex": "04000000000000006854c300000000000000000000000000000000000000000005000000000000008854c3000000000000000000000000000000000000000000",
+      "sha256": "2f220e05057cffe6059eff325e15f319f841fd089bcd02cabae101992fbce452"
+    },
+    {
+      "name": "user_factory_path_strings",
+      "va": "0xc35468",
+      "file_offset": "0x835468",
+      "size": 64,
+      "bytes_hex": "2f72756e2f6d656469612f73746f726167652f557365722f00000000000000002f72756e2f6d656469612f73746f726167652f466163746f72792f0000000000",
+      "sha256": "84dfccd2593608f60d02d18d96e8440c86f0c849e87d4041c42ce0f851962d80"
+    },
+    {
+      "name": "application_name_strings",
+      "va": "0xc356a0",
+      "file_offset": "0x8356a0",
+      "size": 56,
+      "bytes_hex": "70316c696e757800557365723a206c696e7578417070000070316c696e75782e62696e0000000000557365723a206c696e75784170702069",
+      "sha256": "947d7d2e3813ab2818cedb31db55fc95a07b9b3be7042a3a3fc5c631ced34c25"
+    },
+    {
+      "name": "linux_fs_open_vtable",
+      "va": "0xd91450",
+      "file_offset": "0x991450",
+      "size": 48,
+      "bytes_hex": "0c5e8200000000003c5e820000000000645e820000000000a05e82000000000074b1460000000000d45e820000000000",
+      "sha256": "55866241883c0e1a2c78f6dec42d0c1e3903576a96870531d4fcf8a8a55b6284"
+    }
+  ],
+  "unchanged_frozen_references": {
+    "analysis/firmware/read_channel_static/file_client_open.disasm.txt": "c3e5a549ecd9c62161c3d8bf9ff3b16ae371b2f3f749a1196ec55681b4bf3db5",
+    "analysis/firmware/read_channel_static/linux_fs_open_flags.disasm.txt": "3a23ba5d0037ed99cfc78db55de849d9b558feb0a99e0560a2e1dfc67a607567",
+    "analysis/firmware/read_channel_static/file_read_open_start.disasm.txt": "dfbafde8b95f40216853d83b61cf6a141b2c282710202c5fa047e939ca92f3bf",
+    "analysis/firmware/f4_static/file_manager_constructor.disasm.txt": "a2002fc07f11a079cd281b57d49a4d6418529877f99737a4d8df8788994a086f"
+  },
+  "unchanged_rootfs_scripts": {
+    "analysis/firmware/rootfs_static/etc/init.d/p1-link-to-user-storage.sh": "62939396e60608350b6c024dd8ee86d60474e17c594a6527756323256d91d477",
+    "analysis/firmware/rootfs_static/etc/init.d/p1-mount-qspi-partitions.sh": "ba3354a0f294baf74366a6b03434241cfcdbae27eb767ac840db07dabc9e91de",
+    "analysis/firmware/rootfs_static/p1/scripts/boot_run_p1linux.sh": "fe57b899f3a583e1058e4e856cf80704d902d6989b802154d02e77bc93305e88"
+  }
+}

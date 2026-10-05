@@ -1,0 +1,72 @@
+{
+  "stock_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "compiled_thunk_sha256": "8ee72b140b8c1f03e1f128f524d631092dcc60b03013bdbcb64722692dee661f",
+  "level": "host_original_A64_and_compiled_thunk_emulation",
+  "device_executed": false,
+  "cpp_wrapper": "observation fixture; actual C++ wrapper separately host-tested",
+  "cases": [
+    {
+      "scenario": "empty",
+      "passed": true,
+      "trace": [
+        "native mutex acquired",
+        "notification while native mutex remains held",
+        "compiled thunk supplies exact queue, link, insertion bool under mutex",
+        "original mutex release; ready=True"
+      ],
+      "held": false,
+      "ready": true,
+      "normal_unlock": true,
+      "exception": false
+    },
+    {
+      "scenario": "nonempty",
+      "passed": true,
+      "trace": [
+        "native mutex acquired",
+        "notification while native mutex remains held",
+        "compiled thunk supplies exact queue, link, insertion bool under mutex",
+        "original mutex release; ready=True"
+      ],
+      "held": false,
+      "ready": true,
+      "normal_unlock": true,
+      "exception": false
+    },
+    {
+      "scenario": "already_linked",
+      "passed": true,
+      "trace": [
+        "native mutex acquired",
+        "compiled thunk supplies exact queue, link, insertion bool under mutex",
+        "original mutex release; ready=False"
+      ],
+      "held": false,
+      "ready": false,
+      "normal_unlock": true,
+      "exception": false
+    },
+    {
+      "scenario": "null_link",
+      "passed": true,
+      "trace": [],
+      "held": false,
+      "ready": false,
+      "normal_unlock": false,
+      "exception": false
+    },
+    {
+      "scenario": "notification_exception_entry",
+      "passed": true,
+      "trace": [
+        "native mutex acquired",
+        "notification while native mutex remains held",
+        "original mutex release; ready=False"
+      ],
+      "held": false,
+      "ready": false,
+      "normal_unlock": false,
+      "exception": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+SCOPE partial_instruction_window
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  41ef48: d2801f00     	mov	x0, #0xf8               // =248
+  41ef4c: 97ffabc5     	bl	0x409e60 <_Znwm@plt>
+  41ef50: aa0003f3     	mov	x19, x0
+  41ef54: f9430fe8     	ldr	x8, [sp, #0x618]
+  41ef58: f94f83e9     	ldr	x9, [sp, #0x1f00]
+  41ef5c: f94f93ea     	ldr	x10, [sp, #0x1f20]
+  41ef60: f94dbfe1     	ldr	x1, [sp, #0x1b78]
+  41ef64: d282bf00     	mov	x0, #0x15f8             // =5624
+  41ef68: 8b00002b     	add	x11, x1, x0
+  41ef6c: f94e53e0     	ldr	x0, [sp, #0x1ca0]
+  41ef70: 910dc005     	add	x5, x0, #0x370
+  41ef74: f94e53e0     	ldr	x0, [sp, #0x1ca0]
+  41ef78: 912fc006     	add	x6, x0, #0xbf0
+  41ef7c: f94dbfe1     	ldr	x1, [sp, #0x1b78]
+  41ef80: d28b5800     	mov	x0, #0x5ac0             // =23232
+  41ef84: 8b000027     	add	x7, x1, x0
+  41ef88: f943afe1     	ldr	x1, [sp, #0x758]
+  41ef8c: d2861700     	mov	x0, #0x30b8             // =12472
+  41ef90: 8b000020     	add	x0, x1, x0
+  41ef94: f943afe2     	ldr	x2, [sp, #0x758]
+  41ef98: d2857301     	mov	x1, #0x2b98             // =11160
+  41ef9c: 8b010041     	add	x1, x2, x1
+  41efa0: f943afe2     	ldr	x2, [sp, #0x758]
+  41efa4: 91002042     	add	x2, x2, #0x8
+  41efa8: f943afe3     	ldr	x3, [sp, #0x758]
+  41efac: 9112a063     	add	x3, x3, #0x4a8
+  41efb0: f943afe4     	ldr	x4, [sp, #0x758]
+  41efb4: 9103a084     	add	x4, x4, #0xe8
+  41efb8: f90013e4     	str	x4, [sp, #0x20]
+  41efbc: f9000fe3     	str	x3, [sp, #0x18]
+  41efc0: f9000be2     	str	x2, [sp, #0x10]
+  41efc4: f90007e1     	str	x1, [sp, #0x8]
+  41efc8: f90003e0     	str	x0, [sp]
+  41efcc: aa0b03e4     	mov	x4, x11
+  41efd0: aa0a03e3     	mov	x3, x10
+  41efd4: aa0903e2     	mov	x2, x9
+  41efd8: aa0803e1     	mov	x1, x8
+  41efdc: aa1303e0     	mov	x0, x19
+  41efe0: 940a59c3     	bl	0x6b56ec <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1532c>
+  41efe4: f90a37f3     	str	x19, [sp, #0x1468]

@@ -1,0 +1,258 @@
+{
+  "schema": "iq4_f3_native_executor_build_01",
+  "compiler": {
+    "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+    "bytes": 188226560,
+    "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c"
+  },
+  "tests": [
+    {
+      "variant": "normal",
+      "stdout": "PASS 17 native-thread mailbox/exception/fence fault groups\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "stdout": "PASS 17 native-thread mailbox/exception/fence fault groups\n"
+    },
+    {
+      "variant": "tsan",
+      "stdout": "PASS 17 native-thread mailbox/exception/fence fault groups\n"
+    }
+  ],
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_native_executor_build_01_final/executor.o",
+      "bytes": 16160,
+      "sha256": "54d50fa7790a570a878a2c837c31ef6c06d08fc661f70d6bca0c60dfefc0c8e5",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 5064
+        },
+        {
+          "name": ".gcc_except_table",
+          "type": 1,
+          "flags": 2,
+          "bytes": 56
+        },
+        {
+          "name": ".text.__clang_call_terminate",
+          "type": 1,
+          "flags": 518,
+          "bytes": 16
+        },
+        {
+          "name": ".bss",
+          "type": 8,
+          "flags": 3,
+          "bytes": 448
+        },
+        {
+          "name": ".data.rel.ro",
+          "type": 1,
+          "flags": 3,
+          "bytes": 336
+        },
+        {
+          "name": ".rodata",
+          "type": 1,
+          "flags": 2,
+          "bytes": 412
+        },
+        {
+          "name": ".data.DW.ref.__gxx_personality_v0",
+          "type": 1,
+          "flags": 515,
+          "bytes": 8
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 512
+        }
+      ],
+      "relocation_types": [
+        257,
+        260,
+        261,
+        275,
+        277,
+        283,
+        285,
+        286
+      ],
+      "undefined_symbols": [
+        "_Unwind_Resume",
+        "_ZSt9terminatev",
+        "__cxa_begin_catch",
+        "__cxa_end_catch",
+        "__cxa_rethrow",
+        "__gxx_personality_v0",
+        "f3_executor_clock_01",
+        "f3_executor_current_01",
+        "f3_executor_event_ctor_01",
+        "f3_executor_event_notify_01",
+        "f3_executor_listener_ctor_01",
+        "f3_executor_pause_01",
+        "f3_executor_pthread_self_01",
+        "f3_executor_read_01",
+        "f3_executor_selected_get_01",
+        "f3_executor_tid_01",
+        "iq4_activity_hold_01",
+        "iq4_activity_release_01",
+        "iq4_activity_try_01",
+        "iq4_activity_valid_01",
+        "iq4_f3_original_ifm_wait_01",
+        "memcmp"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f3_native_executor_build_01_final/native_calls.o",
+      "bytes": 4600,
+      "sha256": "07c3fefc4ede3977b97ef3a573ad504237c8ae25419a421120ed080e50f371f2",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 492
+        },
+        {
+          "name": ".gcc_except_table",
+          "type": 1,
+          "flags": 2,
+          "bytes": 144
+        },
+        {
+          "name": ".rodata.str1.1",
+          "type": 1,
+          "flags": 50,
+          "bytes": 25
+        },
+        {
+          "name": ".rodata.cst16",
+          "type": 1,
+          "flags": 18,
+          "bytes": 16
+        },
+        {
+          "name": ".data.DW.ref.__gxx_personality_v0",
+          "type": 1,
+          "flags": 515,
+          "bytes": 8
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 352
+        }
+      ],
+      "relocation_types": [
+        257,
+        260,
+        261,
+        275,
+        277,
+        282,
+        283
+      ],
+      "undefined_symbols": [
+        "__cxa_begin_catch",
+        "__cxa_end_catch",
+        "__gxx_personality_v0",
+        "iq4_native_current_tid_01",
+        "iq4_native_self_read_01"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f3_native_executor_build_01_final/wait_wrapper.o",
+      "bytes": 936,
+      "sha256": "f7c422a502fab1d9f3ec3852f0b234497b4ea6786a9f11b6b35f62ab7b4d058b",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 4
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 40
+        }
+      ],
+      "relocation_types": [
+        261,
+        282
+      ],
+      "undefined_symbols": [
+        "iq4_f3_ifm_wait_entry_01"
+      ],
+      "executed": false
+    }
+  ],
+  "source_inputs": [
+    {
+      "path": "tools/firmware/f3_native_executor_01/build.py",
+      "bytes": 3470,
+      "sha256": "3a131e1a9c2954ad690bf844a76b6f34c3a71c704991bb743bed961d0a0a150e"
+    },
+    {
+      "path": "tools/firmware/f3_native_executor_01/collect.py",
+      "bytes": 3205,
+      "sha256": "c8fa65fb645c33917643662d94db8962506dd36529934e88ce4f50c4e9a84eec"
+    },
+    {
+      "path": "tools/firmware/f3_native_executor_01/executor.cpp",
+      "bytes": 11543,
+      "sha256": "674d6de1969391e05cd219b2761b9d50f14486895f6807e7e377110edff2e584"
+    },
+    {
+      "path": "tools/firmware/f3_native_executor_01/executor.h",
+      "bytes": 4120,
+      "sha256": "4cb79a7fe3ad4db66eb0cc879fdbcdcd3da3f2415536e0b5fd2bc6969cece8a2"
+    },
+    {
+      "path": "tools/firmware/f3_native_executor_01/native_calls.cpp",
+      "bytes": 1839,
+      "sha256": "26e80966a0d45a59f8fa34623b5f88c3081a65e1cd1afa4f1bb241ad9be3ea5e"
+    },
+    {
+      "path": "tools/firmware/f3_native_executor_01/native_calls.h",
+      "bytes": 840,
+      "sha256": "01dab1711b22bc1a3ee55d3eafb6cb7f256cb74a5952c0528ad147772476a0ec"
+    },
+    {
+      "path": "tools/firmware/f3_native_executor_01/pins.h",
+      "bytes": 3597,
+      "sha256": "f7dc5d647b5f2861cbf2e7632d081a59724b8f467076d206a6ed85e2924f5451"
+    },
+    {
+      "path": "tools/firmware/f3_native_executor_01/test_executor.cpp",
+      "bytes": 12254,
+      "sha256": "66f1326173e74a9e1db73a6280b0b44926ed011b6ec94ad97dcf8aead313734f"
+    },
+    {
+      "path": "tools/firmware/f3_native_executor_01/wait_wrapper.S",
+      "bytes": 424,
+      "sha256": "4a952108969bd32c30d7c85a138ae57a40acd9c09868d35d0f45150880847618"
+    }
+  ],
+  "target_executed": false,
+  "camera_access": false,
+  "sdk_loaded": false,
+  "actual_native_thread_tested": false
+}

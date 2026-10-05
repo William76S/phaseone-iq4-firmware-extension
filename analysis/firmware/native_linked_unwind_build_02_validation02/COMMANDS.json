@@ -1,0 +1,188 @@
+[
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/host-venv/bin/python",
+      "tools/firmware/native_linked_unwind_02/test_identity.py"
+    ],
+    "cwd": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2",
+    "exit_code": 0,
+    "stdout": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/identity.stdout",
+      "bytes": 281,
+      "sha256": "3e7014e9596e337c5f251a8332a7e87cc9ec3271e3cc7bef67e1cc90c978764f"
+    },
+    "stderr": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/identity.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/host-venv/bin/python",
+      "tools/firmware/native_linked_unwind_02/verify.py",
+      "--build",
+      "analysis/firmware/native_linked_unwind_build_02_validation02/a"
+    ],
+    "cwd": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2",
+    "exit_code": 0,
+    "stdout": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/a_unsealed.stdout",
+      "bytes": 62,
+      "sha256": "f3bd3ab29c4af4c0bcff8e5af1953f35cbcc5fa94a673a3f4bb68395ac0712a6"
+    },
+    "stderr": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/a_unsealed.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/host-venv/bin/python",
+      "tools/firmware/native_linked_contract_01/seal.py",
+      "--build",
+      "analysis/firmware/native_linked_unwind_build_02_validation02/a",
+      "--loader-proof",
+      "tools/firmware/native_copy_rtti_01/ABI_PROOF.json"
+    ],
+    "cwd": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2",
+    "exit_code": 0,
+    "stdout": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/a_seal.stdout",
+      "bytes": 58,
+      "sha256": "20756883eab9e792707fa158737821b93e6e505a8ba2b3c96fbcc7070f6a615d"
+    },
+    "stderr": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/a_seal.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/host-venv/bin/python",
+      "tools/firmware/native_linked_unwind_02/verify.py",
+      "--build",
+      "analysis/firmware/native_linked_unwind_build_02_validation02/a"
+    ],
+    "cwd": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2",
+    "exit_code": 0,
+    "stdout": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/a_sealed.stdout",
+      "bytes": 62,
+      "sha256": "f3bd3ab29c4af4c0bcff8e5af1953f35cbcc5fa94a673a3f4bb68395ac0712a6"
+    },
+    "stderr": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/a_sealed.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/host-venv/bin/python",
+      "tools/firmware/native_linked_unwind_02/readback.py",
+      "--build",
+      "analysis/firmware/native_linked_unwind_build_02_validation02/a",
+      "--library",
+      "analysis/firmware/native_linked_contract_User_host_validation_02/contract.dylib"
+    ],
+    "cwd": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2",
+    "exit_code": 0,
+    "stdout": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/a_readback.stdout",
+      "bytes": 68,
+      "sha256": "d22777f15137f56897e7a6d41d72c47f1fc4caaf7c4ef22b81f695a5d2f29783"
+    },
+    "stderr": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/a_readback.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/host-venv/bin/python",
+      "tools/firmware/native_linked_unwind_02/verify.py",
+      "--build",
+      "analysis/firmware/native_linked_unwind_build_02_validation02/b"
+    ],
+    "cwd": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2",
+    "exit_code": 0,
+    "stdout": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/b_unsealed.stdout",
+      "bytes": 62,
+      "sha256": "f3bd3ab29c4af4c0bcff8e5af1953f35cbcc5fa94a673a3f4bb68395ac0712a6"
+    },
+    "stderr": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/b_unsealed.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/host-venv/bin/python",
+      "tools/firmware/native_linked_contract_01/seal.py",
+      "--build",
+      "analysis/firmware/native_linked_unwind_build_02_validation02/b",
+      "--loader-proof",
+      "tools/firmware/native_copy_rtti_01/ABI_PROOF.json"
+    ],
+    "cwd": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2",
+    "exit_code": 0,
+    "stdout": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/b_seal.stdout",
+      "bytes": 58,
+      "sha256": "20756883eab9e792707fa158737821b93e6e505a8ba2b3c96fbcc7070f6a615d"
+    },
+    "stderr": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/b_seal.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/host-venv/bin/python",
+      "tools/firmware/native_linked_unwind_02/verify.py",
+      "--build",
+      "analysis/firmware/native_linked_unwind_build_02_validation02/b"
+    ],
+    "cwd": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2",
+    "exit_code": 0,
+    "stdout": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/b_sealed.stdout",
+      "bytes": 62,
+      "sha256": "f3bd3ab29c4af4c0bcff8e5af1953f35cbcc5fa94a673a3f4bb68395ac0712a6"
+    },
+    "stderr": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/b_sealed.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/host-venv/bin/python",
+      "tools/firmware/native_linked_unwind_02/readback.py",
+      "--build",
+      "analysis/firmware/native_linked_unwind_build_02_validation02/b",
+      "--library",
+      "analysis/firmware/native_linked_contract_User_host_validation_02/contract.dylib"
+    ],
+    "cwd": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2",
+    "exit_code": 0,
+    "stdout": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/b_readback.stdout",
+      "bytes": 68,
+      "sha256": "d22777f15137f56897e7a6d41d72c47f1fc4caaf7c4ef22b81f695a5d2f29783"
+    },
+    "stderr": {
+      "path": "analysis/firmware/native_linked_unwind_build_02_validation02/b_readback.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+]

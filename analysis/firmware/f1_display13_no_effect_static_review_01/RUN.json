@@ -1,0 +1,485 @@
+{
+  "schema": "iq4_f1_display13_no_effect_static_review_run_01",
+  "input_identity_before": [
+    {
+      "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "bytes": 11874544,
+      "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+    },
+    {
+      "path": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "bytes": 12264480,
+      "sha256": "c2ee83dcad9529e1fb61af5a989b8a1f8f3f6c07c1ec2d2742a662d032404443"
+    },
+    {
+      "path": "tools/firmware/f1_stock_display_payload_13/payload.c",
+      "bytes": 10348,
+      "sha256": "115588af448dec17816b35c53cbe3432f4dd4ef2003f081e2ec99cf1ddcdca92"
+    },
+    {
+      "path": "tools/firmware/f1_stock_display_payload_13/payload.h",
+      "bytes": 1738,
+      "sha256": "acc6473d181d2758115c8feb3a88e2565888a65ff6ec39503784e12e9ceab8a9"
+    },
+    {
+      "path": "tools/firmware/f1_stock_display_payload_13/wrapper.S",
+      "bytes": 3181,
+      "sha256": "613a60a6ea498da6fd1fa0f79421929ea1c3824f990e187a3af378de9a87e0a7"
+    },
+    {
+      "path": "tools/firmware/f1_stock_menu_01/runtime.c",
+      "bytes": 6293,
+      "sha256": "0678519df94b107a9956c11c3d2828e8153d47a08ab785da5f27dda888581b0d"
+    }
+  ],
+  "input_identity_after": [
+    {
+      "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "bytes": 11874544,
+      "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+    },
+    {
+      "path": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "bytes": 12264480,
+      "sha256": "c2ee83dcad9529e1fb61af5a989b8a1f8f3f6c07c1ec2d2742a662d032404443"
+    },
+    {
+      "path": "tools/firmware/f1_stock_display_payload_13/payload.c",
+      "bytes": 10348,
+      "sha256": "115588af448dec17816b35c53cbe3432f4dd4ef2003f081e2ec99cf1ddcdca92"
+    },
+    {
+      "path": "tools/firmware/f1_stock_display_payload_13/payload.h",
+      "bytes": 1738,
+      "sha256": "acc6473d181d2758115c8feb3a88e2565888a65ff6ec39503784e12e9ceab8a9"
+    },
+    {
+      "path": "tools/firmware/f1_stock_display_payload_13/wrapper.S",
+      "bytes": 3181,
+      "sha256": "613a60a6ea498da6fd1fa0f79421929ea1c3824f990e187a3af378de9a87e0a7"
+    },
+    {
+      "path": "tools/firmware/f1_stock_menu_01/runtime.c",
+      "bytes": 6293,
+      "sha256": "0678519df94b107a9956c11c3d2828e8153d47a08ab785da5f27dda888581b0d"
+    }
+  ],
+  "frozen_inputs_unchanged": true,
+  "native_executed": false,
+  "camera_access": false,
+  "windows": [
+    {
+      "name": "LV_lock_dimensions_metadata_roi",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x51db50",
+      "end_va_exclusive": "0x51dc10",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_lock_dimensions_metadata_roi.txt",
+        "bytes": 2826,
+        "sha256": "22d98cade9cb797b4a672e6938932d61e5e7634ade537a1da88e5a431df1a08d"
+      }
+    },
+    {
+      "name": "LV_actual_draw_call",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x51dd78",
+      "end_va_exclusive": "0x51de30",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_actual_draw_call.txt",
+        "bytes": 2866,
+        "sha256": "c1610921d6456c898b5828718d2e063a799c569bf86886e49f3e425ee94f95cb"
+      }
+    },
+    {
+      "name": "LV_access_methods",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x6b614c",
+      "end_va_exclusive": "0x6b6244",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_access_methods.txt",
+        "bytes": 3582,
+        "sha256": "76a84f4b20599c12bdb714bc2acf79171a4eca8b6a17eb2051d6c795d582e95d"
+      }
+    },
+    {
+      "name": "VideoBuffer_locked_dimensions_roi_metadata",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x6b6b70",
+      "end_va_exclusive": "0x6b6e10",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/VideoBuffer_locked_dimensions_roi_metadata.txt",
+        "bytes": 8837,
+        "sha256": "cf80879584007424bdd41d649d6d2363783d0e7a2f955dfa5ee22d3d512d6e1d"
+      }
+    },
+    {
+      "name": "PlFunctions_actual_FPGA_dimensions",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x787578",
+      "end_va_exclusive": "0x787708",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/PlFunctions_actual_FPGA_dimensions.txt",
+        "bytes": 6127,
+        "sha256": "6fba535fbb77fac12d89df34fb1975addaf6fa00a9809b6565506c94525d6dca"
+      }
+    },
+    {
+      "name": "PlFunctions_publish_slot_dimensions_roi",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x787820",
+      "end_va_exclusive": "0x78789c",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/PlFunctions_publish_slot_dimensions_roi.txt",
+        "bytes": 1909,
+        "sha256": "aafe337c0a7bcc59d654746e8716435f0ed75ebd6331b22bc9b56adff0ad1035"
+      }
+    },
+    {
+      "name": "LV_metadata_provider_writes",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x7995e0",
+      "end_va_exclusive": "0x799698",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_metadata_provider_writes.txt",
+        "bytes": 2427,
+        "sha256": "bc30a3d9e572be0241740909fa3c6f1c80ed121689f931db803fe2b192603215"
+      }
+    },
+    {
+      "name": "LV_config_coordinate_projection",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x51f50c",
+      "end_va_exclusive": "0x51f5ec",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_config_coordinate_projection.txt",
+        "bytes": 3147,
+        "sha256": "45612121f8833c13e5b08c33690a640a2456e497785b922e5b11bd85a42b64c3"
+      }
+    },
+    {
+      "name": "LV_normal_scale_setup",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x520488",
+      "end_va_exclusive": "0x520504",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_normal_scale_setup.txt",
+        "bytes": 1924,
+        "sha256": "a3fe70a4e049fcfea013ba1ac7c270726eaa5a81d631f10c2de33f6cfa072ce8"
+      }
+    },
+    {
+      "name": "LV_scale_setter",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x520814",
+      "end_va_exclusive": "0x5208a0",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/LV_scale_setter.txt",
+        "bytes": 2063,
+        "sha256": "9ab23bb08e962f25ebc788861976c4dd7daba94a95f0709218365255bf7beaf4"
+      }
+    },
+    {
+      "name": "Native_image_full_source_and_projection",
+      "source": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+      "start_va": "0x477038",
+      "end_va_exclusive": "0x477158",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/Native_image_full_source_and_projection.txt",
+        "bytes": 4425,
+        "sha256": "3dd27a5901a64df4e75d9b3909379b07f4933a4502c450609304dd2ed0e3761f"
+      }
+    },
+    {
+      "name": "Linked_mode_get_set",
+      "source": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "start_va": "0x4240000",
+      "end_va_exclusive": "0x4240038",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/Linked_mode_get_set.txt",
+        "bytes": 1035,
+        "sha256": "3c819e871fd628b3560bef21b7ab7eb8558adb63d44a8a2ba1da9f829e021796"
+      }
+    },
+    {
+      "name": "Linked_native_leaf_activate",
+      "source": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "start_va": "0x424092c",
+      "end_va_exclusive": "0x4240a30",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/Linked_native_leaf_activate.txt",
+        "bytes": 3009,
+        "sha256": "2ca9696a64332b2e91a75836a3814952bc385ecb2e7bd6542b40b8eae93667ad"
+      }
+    },
+    {
+      "name": "Linked_after_stock_getter_call",
+      "source": "build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin",
+      "start_va": "0x4241440",
+      "end_va_exclusive": "0x4241470",
+      "file": {
+        "path": "analysis/firmware/f1_display13_no_effect_static_review_01/Linked_after_stock_getter_call.txt",
+        "bytes": 877,
+        "sha256": "e87f303e154931e949d6eb4dafa3b7901ddc5ebd2249c37c76f59bed481f4017"
+      }
+    }
+  ],
+  "host_results": [
+    {
+      "name": "normal",
+      "executable": {
+        "path": "build/f1_display13_no_effect_static_review_01/normal",
+        "bytes": 34056,
+        "sha256": "86671c50eb28e7fe02e894d55e6cddbbe9c81f02c52f6c44194b1a6995c3c010"
+      },
+      "case_count": 11,
+      "passed": 11,
+      "native_executed": false,
+      "camera_access": false
+    },
+    {
+      "name": "asan_ubsan",
+      "executable": {
+        "path": "build/f1_display13_no_effect_static_review_01/asan_ubsan",
+        "bytes": 91144,
+        "sha256": "2fbd9ede8337964601200cb4a256a11820116d9667232356ef0572578f094a8f"
+      },
+      "case_count": 11,
+      "passed": 11,
+      "native_executed": false,
+      "camera_access": false
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=5364560",
+        "--stop-address=5364752",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:\n  51db50: f9401fe0     \tldr\tx0, [sp, #0x38]\n  51db54: f9408400     \tldr\tx0, [x0, #0x108]\n  51db58: 940661a9     \tbl\t0x6b61fc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15e3c>\n  51db5c: f9005fe0     \tstr\tx0, [sp, #0xb8]\n  51db60: f9401fe0     \tldr\tx0, [sp, #0x38]\n  51db64: f9408400     \tldr\tx0, [x0, #0x108]\n  51db68: 94066179     \tbl\t0x6b614c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15d8c>\n  51db6c: f900b7e0     \tstr\tx0, [sp, #0x168]\n  51db70: f9401fe0     \tldr\tx0, [sp, #0x38]\n  51db74: f9408400     \tldr\tx0, [x0, #0x108]\n  51db78: 910283e1     \tadd\tx1, sp, #0xa0\n  51db7c: aa0103e8     \tmov\tx8, x1\n  51db80: 940661a7     \tbl\t0x6b621c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15e5c>\n  51db84: b940bbe1     \tldr\tw1, [sp, #0xb8]\n  51db88: b940bfe2     \tldr\tw2, [sp, #0xbc]\n  51db8c: f9401fe0     \tldr\tx0, [sp, #0x38]\n  51db90: f940c403     \tldr\tx3, [x0, #0x188]\n  51db94: 910303e0     \tadd\tx0, sp, #0xc0\n  51db98: 52800005     \tmov\tw5, #0x0                // =0\n  51db9c: aa0303e4     \tmov\tx4, x3\n  51dba0: 2a0203e3     \tmov\tw3, w2\n  51dba4: 2a0103e2     \tmov\tw2, w1\n  51dba8: 52800001     \tmov\tw1, #0x0                // =0\n  51dbac: 97fd08b8     \tbl\t0x45fe8c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x29ee0>\n  51dbb0: 910283e0     \tadd\tx0, sp, #0xa0\n  51dbb4: 97fd1a48     \tbl\t0x4644d4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x2e528>\n  51dbb8: aa0003e1     \tmov\tx1, x0\n  51dbbc: f9401fe0     \tldr\tx0, [sp, #0x38]\n  51dbc0: 94000653     \tbl\t0x51f50c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x2645c>\n  51dbc4: f9004fe0     \tstr\tx0, [sp, #0x98]\n  51dbc8: b9409be1     \tldr\tw1, [sp, #0x98]\n  51dbcc: b9409fe2     \tldr\tw2, [sp, #0x9c]\n  51dbd0: b940b3e0     \tldr\tw0, [sp, #0xb0]\n  51dbd4: 1e220001     \tscvtf\ts1, w0\n  51dbd8: f9401fe0     \tldr\tx0, [sp, #0x38]\n  51dbdc: bd419000     \tldr\ts0, [x0, #0x190]\n  51dbe0: 1e201820     \tfdiv\ts0, s1, s0\n  51dbe4: 5ea1b802     \tfcvtzs\ts2, s0\n  51dbe8: b940b7e0     \tldr\tw0, [sp, #0xb4]\n  51dbec: 1e220001     \tscvtf\ts1, w0\n  51dbf0: f9401fe0     \tldr\tx0, [sp, #0x38]\n  51dbf4: bd419000     \tldr\ts0, [x0, #0x190]\n  51dbf8: 1e201820     \tfdiv\ts0, s1, s0\n  51dbfc: 5ea1b800     \tfcvtzs\ts0, s0\n  51dc00: 910203e0     \tadd\tx0, sp, #0x80\n  51dc04: 1e260004     \tfmov\tw4, s0\n  51dc08: 1e260043     \tfmov\tw3, s2\n  51dc0c: 97fce839     \tbl\t0x457cf0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21d44>\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=5365112",
+        "--stop-address=5365296",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:\n  51dd78: 910203e1     \tadd\tx1, sp, #0x80\n  51dd7c: 910443e0     \tadd\tx0, sp, #0x110\n  51dd80: 97fce7f5     \tbl\t0x457d54 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21da8>\n  51dd84: f9401fe0     \tldr\tx0, [sp, #0x38]\n  51dd88: b941b014     \tldr\tw20, [x0, #0x1b0]\n  51dd8c: 9104a3e0     \tadd\tx0, sp, #0x128\n  51dd90: f94013e1     \tldr\tx1, [sp, #0x20]\n  51dd94: 97fce7f0     \tbl\t0x457d54 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21da8>\n  51dd98: 9104a3e2     \tadd\tx2, sp, #0x128\n  51dd9c: 910303e1     \tadd\tx1, sp, #0xc0\n  51dda0: 910443e0     \tadd\tx0, sp, #0x110\n  51dda4: 9103e3e3     \tadd\tx3, sp, #0xf8\n  51dda8: aa0303e8     \tmov\tx8, x3\n  51ddac: d2800007     \tmov\tx7, #0x0                // =0\n  51ddb0: aa0203e6     \tmov\tx6, x2\n  51ddb4: 2a1403e5     \tmov\tw5, w20\n  51ddb8: aa0103e4     \tmov\tx4, x1\n  51ddbc: 52800003     \tmov\tw3, #0x0                // =0\n  51ddc0: 52800002     \tmov\tw2, #0x0                // =0\n  51ddc4: aa0003e1     \tmov\tx1, x0\n  51ddc8: f9401be0     \tldr\tx0, [sp, #0x30]\n  51ddcc: 97fd649b     \tbl\t0x477038 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x4108c>\n  51ddd0: 9103e3e0     \tadd\tx0, sp, #0xf8\n  51ddd4: 97fce7b4     \tbl\t0x457ca4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21cf8>\n  51ddd8: 9104a3e0     \tadd\tx0, sp, #0x128\n  51dddc: 97fce7b2     \tbl\t0x457ca4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21cf8>\n  51dde0: 910443e0     \tadd\tx0, sp, #0x110\n  51dde4: 97fce7b0     \tbl\t0x457ca4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21cf8>\n  51dde8: f9401fe0     \tldr\tx0, [sp, #0x38]\n  51ddec: b94167e1     \tldr\tw1, [sp, #0x164]\n  51ddf0: b901bc01     \tstr\tw1, [x0, #0x1bc]\n  51ddf4: f9401fe0     \tldr\tx0, [sp, #0x38]\n  51ddf8: 39470000     \tldrb\tw0, [x0, #0x1c0]\n  51ddfc: 52000000     \teor\tw0, w0, #0x1\n  51de00: 12001c00     \tand\tw0, w0, #0xff\n  51de04: 7100001f     \tcmp\tw0, #0x0\n  51de08: 54000140     \tb.eq\t0x51de30 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x24d80>\n  51de0c: f9401fe0     \tldr\tx0, [sp, #0x38]\n  51de10: f9408402     \tldr\tx2, [x0, #0x108]\n  51de14: f9401fe0     \tldr\tx0, [sp, #0x38]\n  51de18: b9410000     \tldr\tw0, [x0, #0x100]\n  51de1c: 2a0003e1     \tmov\tw1, w0\n  51de20: aa0203e0     \tmov\tx0, x2\n  51de24: 9406610b     \tbl\t0x6b6250 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15e90>\n  51de28: f9401fe0     \tldr\tx0, [sp, #0x38]\n  51de2c: f900c41f     \tstr\txzr, [x0, #0x188]\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=7037260",
+        "--stop-address=7037508",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:\n  6b614c: a9be7bfd     \tstp\tx29, x30, [sp, #-0x20]!\n  6b6150: 910003fd     \tmov\tx29, sp\n  6b6154: f9000fe0     \tstr\tx0, [sp, #0x18]\n  6b6158: f9400fe0     \tldr\tx0, [sp, #0x18]\n  6b615c: f9400400     \tldr\tx0, [x0, #0x8]\n  6b6160: 94000323     \tbl\t0x6b6dec <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16a2c>\n  6b6164: a8c27bfd     \tldp\tx29, x30, [sp], #0x20\n  6b6168: d65f03c0     \tret\n  6b616c: a9be7bfd     \tstp\tx29, x30, [sp, #-0x20]!\n  6b6170: 910003fd     \tmov\tx29, sp\n  6b6174: f9000fe0     \tstr\tx0, [sp, #0x18]\n  6b6178: f9400fe0     \tldr\tx0, [sp, #0x18]\n  6b617c: f9400400     \tldr\tx0, [x0, #0x8]\n  6b6180: 94000322     \tbl\t0x6b6e08 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16a48>\n  6b6184: a8c27bfd     \tldp\tx29, x30, [sp], #0x20\n  6b6188: d65f03c0     \tret\n  6b618c: a9be7bfd     \tstp\tx29, x30, [sp, #-0x20]!\n  6b6190: 910003fd     \tmov\tx29, sp\n  6b6194: f9000fe0     \tstr\tx0, [sp, #0x18]\n  6b6198: b90017e1     \tstr\tw1, [sp, #0x14]\n  6b619c: f9400fe0     \tldr\tx0, [sp, #0x18]\n  6b61a0: b940b000     \tldr\tw0, [x0, #0xb0]\n  6b61a4: b94017e1     \tldr\tw1, [sp, #0x14]\n  6b61a8: 6b00003f     \tcmp\tw1, w0\n  6b61ac: 540001c0     \tb.eq\t0x6b61e4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15e24>\n  6b61b0: b94017e1     \tldr\tw1, [sp, #0x14]\n  6b61b4: f9400fe0     \tldr\tx0, [sp, #0x18]\n  6b61b8: 97fffdf8     \tbl\t0x6b5998 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x155d8>\n  6b61bc: aa0003e4     \tmov\tx4, x0\n  6b61c0: b0002a80     \tadrp\tx0, 0xc07000\n  6b61c4: 912f2003     \tadd\tx3, x0, #0xbc8\n  6b61c8: 52801fe2     \tmov\tw2, #0xff               // =255\n  6b61cc: b0002a80     \tadrp\tx0, 0xc07000\n  6b61d0: 9127a001     \tadd\tx1, x0, #0x9e8\n  6b61d4: 52800040     \tmov\tw0, #0x2                // =2\n  6b61d8: 940240dd     \tbl\t0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>\n  6b61dc: d2800000     \tmov\tx0, #0x0                // =0\n  6b61e0: 14000005     \tb\t0x6b61f4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15e34>\n  6b61e4: f9400fe0     \tldr\tx0, [sp, #0x18]\n  6b61e8: f9400400     \tldr\tx0, [x0, #0x8]\n  6b61ec: 940002cc     \tbl\t0x6b6d1c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1695c>\n  6b61f0: d503201f     \tnop\n  6b61f4: a8c27bfd     \tldp\tx29, x30, [sp], #0x20\n  6b61f8: d65f03c0     \tret\n  6b61fc: a9be7bfd     \tstp\tx29, x30, [sp, #-0x20]!\n  6b6200: 910003fd     \tmov\tx29, sp\n  6b6204: f9000fe0     \tstr\tx0, [sp, #0x18]\n  6b6208: f9400fe0     \tldr\tx0, [sp, #0x18]\n  6b620c: f9400400     \tldr\tx0, [x0, #0x8]\n  6b6210: 940002cd     \tbl\t0x6b6d44 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16984>\n  6b6214: a8c27bfd     \tldp\tx29, x30, [sp], #0x20\n  6b6218: d65f03c0     \tret\n  6b621c: a9bd7bfd     \tstp\tx29, x30, [sp, #-0x30]!\n  6b6220: 910003fd     \tmov\tx29, sp\n  6b6224: f9000bf3     \tstr\tx19, [sp, #0x10]\n  6b6228: aa0803f3     \tmov\tx19, x8\n  6b622c: f90017e0     \tstr\tx0, [sp, #0x28]\n  6b6230: f94017e0     \tldr\tx0, [sp, #0x28]\n  6b6234: f9400400     \tldr\tx0, [x0, #0x8]\n  6b6238: aa1303e8     \tmov\tx8, x19\n  6b623c: 940002cb     \tbl\t0x6b6d68 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x169a8>\n  6b6240: aa1303e0     \tmov\tx0, x19\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=7039856",
+        "--stop-address=7040528",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:\n  6b6b70: a9bd7bfd     \tstp\tx29, x30, [sp, #-0x30]!\n  6b6b74: 910003fd     \tmov\tx29, sp\n  6b6b78: f9000fe0     \tstr\tx0, [sp, #0x18]\n  6b6b7c: f9400fe0     \tldr\tx0, [sp, #0x18]\n  6b6b80: b940e800     \tldr\tw0, [x0, #0xe8]\n  6b6b84: 7100101f     \tcmp\tw0, #0x4\n  6b6b88: 540001c1     \tb.ne\t0x6b6bc0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16800>\n  6b6b8c: b0002a80     \tadrp\tx0, 0xc07000\n  6b6b90: 91234003     \tadd\tx3, x0, #0x8d0\n  6b6b94: 52803582     \tmov\tw2, #0x1ac              // =428\n  6b6b98: b0002a80     \tadrp\tx0, 0xc07000\n  6b6b9c: 91220001     \tadd\tx1, x0, #0x880\n  6b6ba0: 52800080     \tmov\tw0, #0x4                // =4\n  6b6ba4: 94023e6a     \tbl\t0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>\n  6b6ba8: 9100a3e0     \tadd\tx0, sp, #0x28\n  6b6bac: 52800002     \tmov\tw2, #0x0                // =0\n  6b6bb0: 52800001     \tmov\tw1, #0x0                // =0\n  6b6bb4: 97f5eaeb     \tbl\t0x431760 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6lengthEv+0x18>\n  6b6bb8: f94017e0     \tldr\tx0, [sp, #0x28]\n  6b6bbc: 14000007     \tb\t0x6b6bd8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16818>\n  6b6bc0: f9400fe0     \tldr\tx0, [sp, #0x18]\n  6b6bc4: b940e801     \tldr\tw1, [x0, #0xe8]\n  6b6bc8: f9400fe0     \tldr\tx0, [sp, #0x18]\n  6b6bcc: 2a0103e1     \tmov\tw1, w1\n  6b6bd0: 91002821     \tadd\tx1, x1, #0xa\n  6b6bd4: f8617800     \tldr\tx0, [x0, x1, lsl #3]\n  6b6bd8: a8c37bfd     \tldp\tx29, x30, [sp], #0x30\n  6b6bdc: d65f03c0     \tret\n  6b6be0: a9bd7bfd     \tstp\tx29, x30, [sp, #-0x30]!\n  6b6be4: 910003fd     \tmov\tx29, sp\n  6b6be8: f9000bf3     \tstr\tx19, [sp, #0x10]\n  6b6bec: aa0803f3     \tmov\tx19, x8\n  6b6bf0: f90017e0     \tstr\tx0, [sp, #0x28]\n  6b6bf4: f94017e0     \tldr\tx0, [sp, #0x28]\n  6b6bf8: b940e800     \tldr\tw0, [x0, #0xe8]\n  6b6bfc: 7100101f     \tcmp\tw0, #0x4\n  6b6c00: 540001e1     \tb.ne\t0x6b6c3c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1687c>\n  6b6c04: b0002a80     \tadrp\tx0, 0xc07000\n  6b6c08: 91234003     \tadd\tx3, x0, #0x8d0\n  6b6c0c: 528036e2     \tmov\tw2, #0x1b7              // =439\n  6b6c10: b0002a80     \tadrp\tx0, 0xc07000\n  6b6c14: 91220001     \tadd\tx1, x0, #0x880\n  6b6c18: 52800080     \tmov\tw0, #0x4                // =4\n  6b6c1c: 94023e4c     \tbl\t0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>\n  6b6c20: 52800004     \tmov\tw4, #0x0                // =0\n  6b6c24: 52800003     \tmov\tw3, #0x0                // =0\n  6b6c28: 52800002     \tmov\tw2, #0x0                // =0\n  6b6c2c: 52800001     \tmov\tw1, #0x0                // =0\n  6b6c30: aa1303e0     \tmov\tx0, x19\n  6b6c34: 97f6842f     \tbl\t0x457cf0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21d44>\n  6b6c38: 1400000e     \tb\t0x6b6c70 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x168b0>\n  6b6c3c: f94017e0     \tldr\tx0, [sp, #0x28]\n  6b6c40: b940e800     \tldr\tw0, [x0, #0xe8]\n  6b6c44: 2a0003e1     \tmov\tw1, w0\n  6b6c48: aa0103e0     \tmov\tx0, x1\n  6b6c4c: d37ff800     \tlsl\tx0, x0, #1\n  6b6c50: 8b010000     \tadd\tx0, x0, x1\n  6b6c54: d37df000     \tlsl\tx0, x0, #3\n  6b6c58: 9101c000     \tadd\tx0, x0, #0x70\n  6b6c5c: f94017e1     \tldr\tx1, [sp, #0x28]\n  6b6c60: 8b000020     \tadd\tx0, x1, x0\n  6b6c64: aa0003e1     \tmov\tx1, x0\n  6b6c68: aa1303e0     \tmov\tx0, x19\n  6b6c6c: 97f6843a     \tbl\t0x457d54 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21da8>\n  6b6c70: aa1303e0     \tmov\tx0, x19\n  6b6c74: f9400bf3     \tldr\tx19, [sp, #0x10]\n  6b6c78: a8c37bfd     \tldp\tx29, x30, [sp], #0x30\n  6b6c7c: d65f03c0     \tret\n  6b6c80: a9be7bfd     \tstp\tx29, x30, [sp, #-0x20]!\n  6b6c84: 910003fd     \tmov\tx29, sp\n  6b6c88: f9000fe0     \tstr\tx0, [sp, #0x18]\n  6b6c8c: f9400fe0     \tldr\tx0, [sp, #0x18]\n  6b6c90: b940e800     \tldr\tw0, [x0, #0xe8]\n  6b6c94: 7100101f     \tcmp\tw0, #0x4\n  6b6c98: 54000141     \tb.ne\t0x6b6cc0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16900>\n  6b6c9c: b0002a80     \tadrp\tx0, 0xc07000\n  6b6ca0: 91246003     \tadd\tx3, x0, #0x918\n  6b6ca4: 528039c2     \tmov\tw2, #0x1ce              // =462\n  6b6ca8: b0002a80     \tadrp\tx0, 0xc07000\n  6b6cac: 91220001     \tadd\tx1, x0, #0x880\n  6b6cb0: 52800080     \tmov\tw0, #0x4                // =4\n  6b6cb4: 94023e26     \tbl\t0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>\n  6b6cb8: 52800000     \tmov\tw0, #0x0                // =0\n  6b6cbc: 14000003     \tb\t0x6b6cc8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16908>\n  6b6cc0: f9400fe0     \tldr\tx0, [sp, #0x18]\n  6b6cc4: b940f400     \tldr\tw0, [x0, #0xf4]\n  6b6cc8: a8c27bfd     \tldp\tx29, x30, [sp], #0x20\n  6b6ccc: d65f03c0     \tret\n  6b6cd0: d10043ff     \tsub\tsp, sp, #0x10\n  6b6cd4: f90007e0     \tstr\tx0, [sp, #0x8]\n  6b6cd8: f94007e1     \tldr\tx1, [sp, #0x8]\n  6b6cdc: d283b700     \tmov\tx0, #0x1db8             // =7608\n  6b6ce0: 8b000020     \tadd\tx0, x1, x0\n  6b6ce4: 910043ff     \tadd\tsp, sp, #0x10\n  6b6ce8: d65f03c0     \tret\n  6b6cec: d10043ff     \tsub\tsp, sp, #0x10\n  6b6cf0: f90007e0     \tstr\tx0, [sp, #0x8]\n  6b6cf4: f94007e0     \tldr\tx0, [sp, #0x8]\n  6b6cf8: 91122000     \tadd\tx0, x0, #0x488\n  6b6cfc: 910043ff     \tadd\tsp, sp, #0x10\n  6b6d00: d65f03c0     \tret\n  6b6d04: d10043ff     \tsub\tsp, sp, #0x10\n  6b6d08: f90007e0     \tstr\tx0, [sp, #0x8]\n  6b6d0c: f94007e0     \tldr\tx0, [sp, #0x8]\n  6b6d10: 9118e000     \tadd\tx0, x0, #0x638\n  6b6d14: 910043ff     \tadd\tsp, sp, #0x10\n  6b6d18: d65f03c0     \tret\n  6b6d1c: a9be7bfd     \tstp\tx29, x30, [sp, #-0x20]!\n  6b6d20: 910003fd     \tmov\tx29, sp\n  6b6d24: f9000fe0     \tstr\tx0, [sp, #0x18]\n  6b6d28: f9400fe1     \tldr\tx1, [sp, #0x18]\n  6b6d2c: d2842e00     \tmov\tx0, #0x2170             // =8560\n  6b6d30: 8b000020     \tadd\tx0, x1, x0\n  6b6d34: 52800021     \tmov\tw1, #0x1                // =1\n  6b6d38: 97ffff41     \tbl\t0x6b6a3c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1667c>\n  6b6d3c: a8c27bfd     \tldp\tx29, x30, [sp], #0x20\n  6b6d40: d65f03c0     \tret\n  6b6d44: a9be7bfd     \tstp\tx29, x30, [sp, #-0x20]!\n  6b6d48: 910003fd     \tmov\tx29, sp\n  6b6d4c: f9000fe0     \tstr\tx0, [sp, #0x18]\n  6b6d50: f9400fe1     \tldr\tx1, [sp, #0x18]\n  6b6d54: d2842e00     \tmov\tx0, #0x2170             // =8560\n  6b6d58: 8b000020     \tadd\tx0, x1, x0\n  6b6d5c: 97ffff85     \tbl\t0x6b6b70 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x167b0>\n  6b6d60: a8c27bfd     \tldp\tx29, x30, [sp], #0x20\n  6b6d64: d65f03c0     \tret\n  6b6d68: a9bd7bfd     \tstp\tx29, x30, [sp, #-0x30]!\n  6b6d6c: 910003fd     \tmov\tx29, sp\n  6b6d70: f9000bf3     \tstr\tx19, [sp, #0x10]\n  6b6d74: aa0803f3     \tmov\tx19, x8\n  6b6d78: f90017e0     \tstr\tx0, [sp, #0x28]\n  6b6d7c: f94017e1     \tldr\tx1, [sp, #0x28]\n  6b6d80: d2842e00     \tmov\tx0, #0x2170             // =8560\n  6b6d84: 8b000020     \tadd\tx0, x1, x0\n  6b6d88: aa1303e8     \tmov\tx8, x19\n  6b6d8c: 97ffff95     \tbl\t0x6b6be0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16820>\n  6b6d90: aa1303e0     \tmov\tx0, x19\n  6b6d94: f9400bf3     \tldr\tx19, [sp, #0x10]\n  6b6d98: a8c37bfd     \tldp\tx29, x30, [sp], #0x30\n  6b6d9c: d65f03c0     \tret\n  6b6da0: a9be7bfd     \tstp\tx29, x30, [sp, #-0x20]!\n  6b6da4: 910003fd     \tmov\tx29, sp\n  6b6da8: f9000fe0     \tstr\tx0, [sp, #0x18]\n  6b6dac: f9400fe1     \tldr\tx1, [sp, #0x18]\n  6b6db0: d2842e00     \tmov\tx0, #0x2170             // =8560\n  6b6db4: 8b000020     \tadd\tx0, x1, x0\n  6b6db8: 97ffff5e     \tbl\t0x6b6b30 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16770>\n  6b6dbc: d503201f     \tnop\n  6b6dc0: a8c27bfd     \tldp\tx29, x30, [sp], #0x20\n  6b6dc4: d65f03c0     \tret\n  6b6dc8: a9be7bfd     \tstp\tx29, x30, [sp, #-0x20]!\n  6b6dcc: 910003fd     \tmov\tx29, sp\n  6b6dd0: f9000fe0     \tstr\tx0, [sp, #0x18]\n  6b6dd4: f9400fe1     \tldr\tx1, [sp, #0x18]\n  6b6dd8: d2842e00     \tmov\tx0, #0x2170             // =8560\n  6b6ddc: 8b000020     \tadd\tx0, x1, x0\n  6b6de0: 97ffffa8     \tbl\t0x6b6c80 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x168c0>\n  6b6de4: a8c27bfd     \tldp\tx29, x30, [sp], #0x20\n  6b6de8: d65f03c0     \tret\n  6b6dec: d10043ff     \tsub\tsp, sp, #0x10\n  6b6df0: f90007e0     \tstr\tx0, [sp, #0x8]\n  6b6df4: f94007e1     \tldr\tx1, [sp, #0x8]\n  6b6df8: d288ec00     \tmov\tx0, #0x4760             // =18272\n  6b6dfc: 8b000020     \tadd\tx0, x1, x0\n  6b6e00: 910043ff     \tadd\tsp, sp, #0x10\n  6b6e04: d65f03c0     \tret\n  6b6e08: d10043ff     \tsub\tsp, sp, #0x10\n  6b6e0c: f90007e0     \tstr\tx0, [sp, #0x8]\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=7894392",
+        "--stop-address=7894792",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:\n  787578: a9b87bfd     \tstp\tx29, x30, [sp, #-0x80]!\n  78757c: f0003e65     \tadrp\tx5, 0xf56000\n  787580: 910003fd     \tmov\tx29, sp\n  787584: a9046bf9     \tstp\tx25, x26, [sp, #0x40]\n  787588: d001c0f9     \tadrp\tx25, 0x3fa5000 <_ZNSt5ctypeIcE2idE+0x3041ed8>\n  78758c: a90363f7     \tstp\tx23, x24, [sp, #0x30]\n  787590: aa0203f7     \tmov\tx23, x2\n  787594: b9411322     \tldr\tw2, [x25, #0x110]\n  787598: a9025bf5     \tstp\tx21, x22, [sp, #0x20]\n  78759c: d001c115     \tadrp\tx21, 0x3fa9000 <_ZNSt5ctypeIcE2idE+0x3045ed8>\n  7875a0: 9124e2b5     \tadd\tx21, x21, #0x938\n  7875a4: 8b020842     \tadd\tx2, x2, x2, lsl #2\n  7875a8: b94072e4     \tldr\tw4, [x23, #0x70]\n  7875ac: a90153f3     \tstp\tx19, x20, [sp, #0x10]\n  7875b0: aa0103f8     \tmov\tx24, x1\n  7875b4: 8b020ea2     \tadd\tx2, x21, x2, lsl #3\n  7875b8: a90573fb     \tstp\tx27, x28, [sp, #0x50]\n  7875bc: aa0003f3     \tmov\tx19, x0\n  7875c0: aa0303f4     \tmov\tx20, x3\n  7875c4: b9001c5f     \tstr\twzr, [x2, #0x1c]\n  7875c8: 397650a0     \tldrb\tw0, [x5, #0xd94]\n  7875cc: 34000804     \tcbz\tw4, 0x7876cc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6d9a0>\n  7875d0: 51000496     \tsub\tw22, w4, #0x1\n  7875d4: b90072f6     \tstr\tw22, [x23, #0x70]\n  7875d8: 350025e0     \tcbnz\tw0, 0x787a94 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6dd68>\n  7875dc: 340007b6     \tcbz\tw22, 0x7876d0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6d9a4>\n  7875e0: 528034c1     \tmov\tw1, #0x1a6              // =422\n  7875e4: aa1303e0     \tmov\tx0, x19\n  7875e8: 97ffd75a     \tbl\t0x77d350 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x63624>\n  7875ec: b9006fe0     \tstr\tw0, [sp, #0x6c]\n  7875f0: 528034e1     \tmov\tw1, #0x1a7              // =423\n  7875f4: aa1303e0     \tmov\tx0, x19\n  7875f8: 97ffd756     \tbl\t0x77d350 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x63624>\n  7875fc: 2a0003fa     \tmov\tw26, w0\n  787600: 5280003b     \tmov\tw27, #0x1               // =1\n  787604: 52800022     \tmov\tw2, #0x1                // =1\n  787608: 528035e1     \tmov\tw1, #0x1af              // =431\n  78760c: aa1303e0     \tmov\tx0, x19\n  787610: 97ffd634     \tbl\t0x77cee0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x631b4>\n  787614: bd405a81     \tldr\ts1, [x20, #0x58]\n  787618: b001c116     \tadrp\tx22, 0x3fa8000 <_ZNSt5ctypeIcE2idE+0x3044ed8>\n  78761c: 2d4b8283     \tldp\ts3, s0, [x20, #0x5c]\n  787620: 911042d6     \tadd\tx22, x22, #0x410\n  787624: bd406e82     \tldr\ts2, [x20, #0x6c]\n  787628: 52800002     \tmov\tw2, #0x0                // =0\n  78762c: 7e21d821     \tucvtf\ts1, s1\n  787630: 9101c281     \tadd\tx1, x20, #0x70\n  787634: b94522c3     \tldr\tw3, [x22, #0x520]\n  787638: aa1303e0     \tmov\tx0, x19\n  78763c: 11000463     \tadd\tw3, w3, #0x1\n  787640: b90522c3     \tstr\tw3, [x22, #0x520]\n  787644: 1e230821     \tfmul\ts1, s1, s3\n  787648: 1e200820     \tfmul\ts0, s1, s0\n  78764c: 1e220800     \tfmul\ts0, s0, s2\n  787650: 97fff682     \tbl\t0x785058 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6b32c>\n  787654: 340006bb     \tcbz\tw27, 0x787728 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6d9fc>\n  787658: b940df00     \tldr\tw0, [x24, #0xdc]\n  78765c: 91001800     \tadd\tx0, x0, #0x6\n  787660: f8607b14     \tldr\tx20, [x24, x0, lsl #3]\n  787664: d360fe96     \tlsr\tx22, x20, #32\n  787668: b4003374     \tcbz\tx20, 0x787cd4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6dfa8>\n  78766c: b940db15     \tldr\tw21, [x24, #0xd8]\n  787670: 52800002     \tmov\tw2, #0x0                // =0\n  787674: 52800fe1     \tmov\tw1, #0x7f               // =127\n  787678: aa1303e0     \tmov\tx0, x19\n  78767c: 114012b5     \tadd\tw21, w21, #0x4, lsl #12 // =0x4000\n  787680: 97ffd618     \tbl\t0x77cee0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x631b4>\n  787684: 2a1503e2     \tmov\tw2, w21\n  787688: 528004e1     \tmov\tw1, #0x27               // =39\n  78768c: aa1303e0     \tmov\tx0, x19\n  787690: 97ffd325     \tbl\t0x77c324 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x625f8>\n  787694: 2a1603e2     \tmov\tw2, w22\n  787698: aa1303e0     \tmov\tx0, x19\n  78769c: 528004c1     \tmov\tw1, #0x26               // =38\n  7876a0: 97ffd321     \tbl\t0x77c324 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x625f8>\n  7876a4: 2a1403e2     \tmov\tw2, w20\n  7876a8: aa1303e0     \tmov\tx0, x19\n  7876ac: a94153f3     \tldp\tx19, x20, [sp, #0x10]\n  7876b0: 528004a1     \tmov\tw1, #0x25               // =37\n  7876b4: a9425bf5     \tldp\tx21, x22, [sp, #0x20]\n  7876b8: a94363f7     \tldp\tx23, x24, [sp, #0x30]\n  7876bc: a9446bf9     \tldp\tx25, x26, [sp, #0x40]\n  7876c0: a94573fb     \tldp\tx27, x28, [sp, #0x50]\n  7876c4: a8c87bfd     \tldp\tx29, x30, [sp], #0x80\n  7876c8: 17ffd317     \tb\t0x77c324 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x625f8>\n  7876cc: 35001b00     \tcbnz\tw0, 0x787a2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6dd00>\n  7876d0: 528035e1     \tmov\tw1, #0x1af              // =431\n  7876d4: aa1303e0     \tmov\tx0, x19\n  7876d8: 97ffd71e     \tbl\t0x77d350 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x63624>\n  7876dc: 7100041f     \tcmp\tw0, #0x1\n  7876e0: 54001bc1     \tb.ne\t0x787a58 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6dd2c>\n  7876e4: 528034c1     \tmov\tw1, #0x1a6              // =422\n  7876e8: aa1303e0     \tmov\tx0, x19\n  7876ec: 97ffd719     \tbl\t0x77d350 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x63624>\n  7876f0: 2a0003f6     \tmov\tw22, w0\n  7876f4: 528034e1     \tmov\tw1, #0x1a7              // =423\n  7876f8: aa1303e0     \tmov\tx0, x19\n  7876fc: b9006ff6     \tstr\tw22, [sp, #0x6c]\n  787700: 97ffd714     \tbl\t0x77d350 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x63624>\n  787704: 710002df     \tcmp\tw22, #0x0\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=7895072",
+        "--stop-address=7895196",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:\n  787820: b90010fc     \tstr\tw28, [x7, #0x10]\n  787824: 3902969f     \tstrb\twzr, [x20, #0xa5]\n  787828: 3902a77f     \tstrb\twzr, [x27, #0xa9]\n  78782c: 35001d01     \tcbnz\tw1, 0x787bcc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6dea0>\n  787830: 3942a360     \tldrb\tw0, [x27, #0xa8]\n  787834: 35001aa0     \tcbnz\tw0, 0x787b88 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6de5c>\n  787838: b940df04     \tldr\tw4, [x24, #0xdc]\n  78783c: 91024283     \tadd\tx3, x20, #0x90\n  787840: b9405ee5     \tldr\tw5, [x23, #0x5c]\n  787844: 91023282     \tadd\tx2, x20, #0x8c\n  787848: 91002884     \tadd\tx4, x4, #0xa\n  78784c: b9406fe6     \tldr\tw6, [sp, #0x6c]\n  787850: 6b1a00bf     \tcmp\tw5, w26\n  787854: 91022281     \tadd\tx1, x20, #0x88\n  787858: d37df084     \tlsl\tx4, x4, #3\n  78785c: 1a9ad0ba     \tcsel\tw26, w5, w26, le\n  787860: 8b040305     \tadd\tx5, x24, x4\n  787864: aa1303e0     \tmov\tx0, x19\n  787868: b8246b06     \tstr\tw6, [x24, x4]\n  78786c: b90004ba     \tstr\tw26, [x5, #0x4]\n  787870: b940df04     \tldr\tw4, [x24, #0xdc]\n  787874: 3cc182e0     \tldur\tq0, [x23, #0x18]\n  787878: 8b040484     \tadd\tx4, x4, x4, lsl #1\n  78787c: 8b040f06     \tadd\tx6, x24, x4, lsl #3\n  787880: 3c8780c0     \tstur\tq0, [x6, #0x78]\n  787884: 97fff435     \tbl\t0x784958 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6ac2c>\n  787888: 528001c1     \tmov\tw1, #0xe                // =14\n  78788c: aa1303e0     \tmov\tx0, x19\n  787890: 97ffd6b0     \tbl\t0x77d350 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x63624>\n  787894: 528001a1     \tmov\tw1, #0xd                // =13\n  787898: 2a0003fa     \tmov\tw26, w0\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=7968224",
+        "--stop-address=7968408",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:\n  7995e0: d2902782     \tmov\tx2, #0x813c             // =33084\n  7995e4: 8b020260     \tadd\tx0, x19, x2\n  7995e8: f9506262     \tldr\tx2, [x19, #0x20c0]\n  7995ec: f0002541     \tadrp\tx1, 0xc44000\n  7995f0: 52800083     \tmov\tw3, #0x4                // =4\n  7995f4: 0f03f601     \tfmov\tv1.2s, #1.00000000\n  7995f8: fd467022     \tldr\td2, [x1, #0xce0]\n  7995fc: 52800021     \tmov\tw1, #0x1                // =1\n  799600: fc44c043     \tldur\td3, [x2, #0x4c]\n  799604: 52800782     \tmov\tw2, #0x3c               // =60\n  799608: 1e2e1000     \tfmov\ts0, #1.00000000\n  79960c: fc164363     \tstur\td3, [x27, #-0x9c]\n  799610: fd23de62     \tstr\td2, [x19, #0x47b8]\n  799614: b9076f23     \tstr\tw3, [x25, #0x76c]\n  799618: 52800023     \tmov\tw3, #0x1                // =1\n  79961c: b907c322     \tstr\tw2, [x25, #0x7c0]\n  799620: 91401a62     \tadd\tx2, x19, #0x6, lsl #12  // =0x6000\n  799624: 391f5321     \tstrb\tw1, [x25, #0x7d4]\n  799628: d2800001     \tmov\tx1, #0x0                // =0\n  79962c: a9007c1f     \tstp\txzr, xzr, [x0]\n  799630: a9017c1f     \tstp\txzr, xzr, [x0, #0x10]\n  799634: f900101f     \tstr\txzr, [x0, #0x20]\n  799638: f9506664     \tldr\tx4, [x19, #0x20c8]\n  79963c: f9006080     \tstr\tx0, [x4, #0xc0]\n  799640: b9080f3f     \tstr\twzr, [x25, #0x80c]\n  799644: fd243e61     \tstr\td1, [x19, #0x4878]\n  799648: bd088320     \tstr\ts0, [x25, #0x880]\n  79964c: 79115b23     \tstrh\tw3, [x25, #0x8ac]\n  799650: 79116043     \tstrh\tw3, [x2, #0x8b0]\n  799654: b9083f3f     \tstr\twzr, [x25, #0x83c]\n  799658: b908533f     \tstr\twzr, [x25, #0x850]\n  79965c: bd086b20     \tstr\ts0, [x25, #0x868]\n  799660: f9506662     \tldr\tx2, [x19, #0x20c8]\n  799664: fc564360     \tldur\td0, [x27, #-0x9c]\n  799668: f923be7f     \tstr\txzr, [x19, #0x4778]\n  79966c: aa0203e0     \tmov\tx0, x2\n  799670: f923ca7f     \tstr\txzr, [x19, #0x4790]\n  799674: fd23c260     \tstr\td0, [x19, #0x4780]\n  799678: fd23ce60     \tstr\td0, [x19, #0x4798]\n  79967c: f9400042     \tldr\tx2, [x2]\n  799680: f9402442     \tldr\tx2, [x2, #0x48]\n  799684: d63f0040     \tblr\tx2\n  799688: b9016680     \tstr\tw0, [x20, #0x164]\n  79968c: d0002ec2     \tadrp\tx2, 0xd73000\n  799690: d0002ec0     \tadrp\tx0, 0xd73000\n  799694: 9120c042     \tadd\tx2, x2, #0x830\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=5371148",
+        "--stop-address=5371372",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:\n  51f50c: a9b87bfd     \tstp\tx29, x30, [sp, #-0x80]!\n  51f510: 910003fd     \tmov\tx29, sp\n  51f514: f9000bf3     \tstr\tx19, [sp, #0x10]\n  51f518: f90017e0     \tstr\tx0, [sp, #0x28]\n  51f51c: f90013e1     \tstr\tx1, [sp, #0x20]\n  51f520: f94017e2     \tldr\tx2, [sp, #0x28]\n  51f524: f94017e0     \tldr\tx0, [sp, #0x28]\n  51f528: f9400000     \tldr\tx0, [x0]\n  51f52c: 9102e000     \tadd\tx0, x0, #0xb8\n  51f530: f9400001     \tldr\tx1, [x0]\n  51f534: 910103e0     \tadd\tx0, sp, #0x40\n  51f538: aa0003e8     \tmov\tx8, x0\n  51f53c: aa0203e0     \tmov\tx0, x2\n  51f540: d63f0020     \tblr\tx1\n  51f544: f94017e0     \tldr\tx0, [sp, #0x28]\n  51f548: bd419000     \tldr\ts0, [x0, #0x190]\n  51f54c: 910083e0     \tadd\tx0, sp, #0x20\n  51f550: 97fefdfc     \tbl\t0x4ded40 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0xa8d94>\n  51f554: f90033e0     \tstr\tx0, [sp, #0x60]\n  51f558: f94017e0     \tldr\tx0, [sp, #0x28]\n  51f55c: 91044000     \tadd\tx0, x0, #0x110\n  51f560: 97fe953d     \tbl\t0x4c4a54 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x8eaa8>\n  51f564: f90037e0     \tstr\tx0, [sp, #0x68]\n  51f568: 9101a3e1     \tadd\tx1, sp, #0x68\n  51f56c: 910183e0     \tadd\tx0, sp, #0x60\n  51f570: 97fd1402     \tbl\t0x464578 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x2e5cc>\n  51f574: f9002fe0     \tstr\tx0, [sp, #0x58]\n  51f578: 910103e0     \tadd\tx0, sp, #0x40\n  51f57c: 97fd13d6     \tbl\t0x4644d4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x2e528>\n  51f580: f9003be0     \tstr\tx0, [sp, #0x70]\n  51f584: 9101c3e1     \tadd\tx1, sp, #0x70\n  51f588: 910163e0     \tadd\tx0, sp, #0x58\n  51f58c: 97fd13fb     \tbl\t0x464578 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x2e5cc>\n  51f590: f9001fe0     \tstr\tx0, [sp, #0x38]\n  51f594: f94017e0     \tldr\tx0, [sp, #0x28]\n  51f598: f9408400     \tldr\tx0, [x0, #0x108]\n  51f59c: 94065aec     \tbl\t0x6b614c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15d8c>\n  51f5a0: f9003fe0     \tstr\tx0, [sp, #0x78]\n  51f5a4: f9403fe0     \tldr\tx0, [sp, #0x78]\n  51f5a8: b9400400     \tldr\tw0, [x0, #0x4]\n  51f5ac: 1e220001     \tscvtf\ts1, w0\n  51f5b0: f94017e0     \tldr\tx0, [sp, #0x28]\n  51f5b4: bd419000     \tldr\ts0, [x0, #0x190]\n  51f5b8: 1e201820     \tfdiv\ts0, s1, s0\n  51f5bc: 5ea1b802     \tfcvtzs\ts2, s0\n  51f5c0: f9403fe0     \tldr\tx0, [sp, #0x78]\n  51f5c4: b9400800     \tldr\tw0, [x0, #0x8]\n  51f5c8: 1e220001     \tscvtf\ts1, w0\n  51f5cc: f94017e0     \tldr\tx0, [sp, #0x28]\n  51f5d0: bd419000     \tldr\ts0, [x0, #0x190]\n  51f5d4: 1e201820     \tfdiv\ts0, s1, s0\n  51f5d8: 5ea1b800     \tfcvtzs\ts0, s0\n  51f5dc: 9100c3e0     \tadd\tx0, sp, #0x30\n  51f5e0: 1e260002     \tfmov\tw2, s0\n  51f5e4: 1e260041     \tfmov\tw1, s2\n  51f5e8: 97fc485e     \tbl\t0x431760 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6lengthEv+0x18>\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=5375112",
+        "--stop-address=5375236",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:\n  520488: f9404fe0     \tldr\tx0, [sp, #0x98]\n  52048c: b9400401     \tldr\tw1, [x0, #0x4]\n  520490: b94063e0     \tldr\tw0, [sp, #0x60]\n  520494: 1ac00c20     \tsdiv\tw0, w1, w0\n  520498: b9008be0     \tstr\tw0, [sp, #0x88]\n  52049c: f9404fe0     \tldr\tx0, [sp, #0x98]\n  5204a0: b9400801     \tldr\tw1, [x0, #0x8]\n  5204a4: b94067e0     \tldr\tw0, [sp, #0x64]\n  5204a8: 1ac00c20     \tsdiv\tw0, w1, w0\n  5204ac: b9008fe0     \tstr\tw0, [sp, #0x8c]\n  5204b0: 910233e1     \tadd\tx1, sp, #0x8c\n  5204b4: 910223e0     \tadd\tx0, sp, #0x88\n  5204b8: 97fd77d0     \tbl\t0x47e3f8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x4844c>\n  5204bc: b9400000     \tldr\tw0, [x0]\n  5204c0: 1e220000     \tscvtf\ts0, w0\n  5204c4: f94017e0     \tldr\tx0, [sp, #0x28]\n  5204c8: bd019400     \tstr\ts0, [x0, #0x194]\n  5204cc: f94017e0     \tldr\tx0, [sp, #0x28]\n  5204d0: bd419400     \tldr\ts0, [x0, #0x194]\n  5204d4: f94017e0     \tldr\tx0, [sp, #0x28]\n  5204d8: 940000cf     \tbl\t0x520814 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x27764>\n  5204dc: f94017e0     \tldr\tx0, [sp, #0x28]\n  5204e0: f9407c00     \tldr\tx0, [x0, #0xf8]\n  5204e4: 52800001     \tmov\tw1, #0x0                // =0\n  5204e8: 97fe2f17     \tbl\t0x4ac144 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x76198>\n  5204ec: f94017e0     \tldr\tx0, [sp, #0x28]\n  5204f0: 91044013     \tadd\tx19, x0, #0x110\n  5204f4: 910243e0     \tadd\tx0, sp, #0x90\n  5204f8: 52800002     \tmov\tw2, #0x0                // =0\n  5204fc: 52800001     \tmov\tw1, #0x0                // =0\n  520500: 97fc4498     \tbl\t0x431760 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6lengthEv+0x18>\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=5376020",
+        "--stop-address=5376160",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:\n  520814: a9bd7bfd     \tstp\tx29, x30, [sp, #-0x30]!\n  520818: 910003fd     \tmov\tx29, sp\n  52081c: f9000bf3     \tstr\tx19, [sp, #0x10]\n  520820: f90017e0     \tstr\tx0, [sp, #0x28]\n  520824: bd0027e0     \tstr\ts0, [sp, #0x24]\n  520828: f94017e0     \tldr\tx0, [sp, #0x28]\n  52082c: bd419001     \tldr\ts1, [x0, #0x190]\n  520830: 1e2a1000     \tfmov\ts0, #0.25000000\n  520834: 1e202030     \tfcmpe\ts1, s0\n  520838: 540001c5     \tb.pl\t0x520870 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x277c0>\n  52083c: bd4027e0     \tldr\ts0, [sp, #0x24]\n  520840: 1e22c000     \tfcvt\td0, s0\n  520844: d00033c0     \tadrp\tx0, 0xb9a000\n  520848: 911fe003     \tadd\tx3, x0, #0x7f8\n  52084c: 52814e62     \tmov\tw2, #0xa73              // =2675\n  520850: d00033c0     \tadrp\tx0, 0xb9a000\n  520854: 91166001     \tadd\tx1, x0, #0x598\n  520858: 52800040     \tmov\tw0, #0x2                // =2\n  52085c: 9408973c     \tbl\t0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>\n  520860: f94017e0     \tldr\tx0, [sp, #0x28]\n  520864: 1e2a1000     \tfmov\ts0, #0.25000000\n  520868: bd019000     \tstr\ts0, [x0, #0x190]\n  52086c: 14000004     \tb\t0x52087c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x277cc>\n  520870: f94017e0     \tldr\tx0, [sp, #0x28]\n  520874: b94027e1     \tldr\tw1, [sp, #0x24]\n  520878: b9019001     \tstr\tw1, [x0, #0x190]\n  52087c: f94017e0     \tldr\tx0, [sp, #0x28]\n  520880: 91294013     \tadd\tx19, x0, #0xa50\n  520884: f94017e0     \tldr\tx0, [sp, #0x28]\n  520888: 97ffffd3     \tbl\t0x5207d4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x27724>\n  52088c: 2a0003e2     \tmov\tw2, w0\n  520890: d00033c0     \tadrp\tx0, 0xb9a000\n  520894: 91208001     \tadd\tx1, x0, #0x820\n  520898: aa1303e0     \tmov\tx0, x19\n  52089c: 97fba7d9     \tbl\t0x40a800 <sprintf@plt>\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=4681784",
+        "--stop-address=4682072",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n0000000000435fac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_>:\n  477038: a9a97bfd     \tstp\tx29, x30, [sp, #-0x170]!\n  47703c: 910003fd     \tmov\tx29, sp\n  477040: a90153f3     \tstp\tx19, x20, [sp, #0x10]\n  477044: fd0013e8     \tstr\td8, [sp, #0x20]\n  477048: aa0803f3     \tmov\tx19, x8\n  47704c: f90037e0     \tstr\tx0, [sp, #0x68]\n  477050: f90033e1     \tstr\tx1, [sp, #0x60]\n  477054: b9005fe2     \tstr\tw2, [sp, #0x5c]\n  477058: b9005be3     \tstr\tw3, [sp, #0x58]\n  47705c: f9002be4     \tstr\tx4, [sp, #0x50]\n  477060: b9004fe5     \tstr\tw5, [sp, #0x4c]\n  477064: f90023e6     \tstr\tx6, [sp, #0x40]\n  477068: f9001fe7     \tstr\tx7, [sp, #0x38]\n  47706c: f9402be0     \tldr\tx0, [sp, #0x50]\n  477070: b9400401     \tldr\tw1, [x0, #0x4]\n  477074: f9402be0     \tldr\tx0, [sp, #0x50]\n  477078: b9400802     \tldr\tw2, [x0, #0x8]\n  47707c: 9101e3e0     \tadd\tx0, sp, #0x78\n  477080: 2a0203e4     \tmov\tw4, w2\n  477084: 2a0103e3     \tmov\tw3, w1\n  477088: 52800002     \tmov\tw2, #0x0                // =0\n  47708c: 52800001     \tmov\tw1, #0x0                // =0\n  477090: 97ff8318     \tbl\t0x457cf0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21d44>\n  477094: aa1303e0     \tmov\tx0, x19\n  477098: 94001c2e     \tbl\t0x47e150 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x481a4>\n  47709c: 910243e0     \tadd\tx0, sp, #0x90\n  4770a0: f94033e1     \tldr\tx1, [sp, #0x60]\n  4770a4: 97ff832c     \tbl\t0x457d54 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21da8>\n  4770a8: 9101d3e1     \tadd\tx1, sp, #0x74\n  4770ac: 910243e0     \tadd\tx0, sp, #0x90\n  4770b0: aa0103e4     \tmov\tx4, x1\n  4770b4: aa1303e3     \tmov\tx3, x19\n  4770b8: b9404fe2     \tldr\tw2, [sp, #0x4c]\n  4770bc: f9402be1     \tldr\tx1, [sp, #0x50]\n  4770c0: 97ffff6b     \tbl\t0x476e6c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x40ec0>\n  4770c4: 910243e0     \tadd\tx0, sp, #0x90\n  4770c8: 97ff82f7     \tbl\t0x457ca4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21cf8>\n  4770cc: b9400a61     \tldr\tw1, [x19, #0x8]\n  4770d0: b9405fe0     \tldr\tw0, [sp, #0x5c]\n  4770d4: 0b000020     \tadd\tw0, w1, w0\n  4770d8: b9000a60     \tstr\tw0, [x19, #0x8]\n  4770dc: b9400e61     \tldr\tw1, [x19, #0xc]\n  4770e0: b9405be0     \tldr\tw0, [sp, #0x58]\n  4770e4: 0b000020     \tadd\tw0, w1, w0\n  4770e8: b9000e60     \tstr\tw0, [x19, #0xc]\n  4770ec: b9016fff     \tstr\twzr, [sp, #0x16c]\n  4770f0: b9016bff     \tstr\twzr, [sp, #0x168]\n  4770f4: b9404fe0     \tldr\tw0, [sp, #0x4c]\n  4770f8: 7101681f     \tcmp\tw0, #0x5a\n  4770fc: 54000520     \tb.eq\t0x4771a0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x411f4>\n  477100: b9404fe0     \tldr\tw0, [sp, #0x4c]\n  477104: 7101681f     \tcmp\tw0, #0x5a\n  477108: 540000a8     \tb.hi\t0x47711c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x41170>\n  47710c: b9404fe0     \tldr\tw0, [sp, #0x4c]\n  477110: 7100001f     \tcmp\tw0, #0x0\n  477114: 54000120     \tb.eq\t0x477138 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x4118c>\n  477118: 1400007c     \tb\t0x477308 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x4135c>\n  47711c: b9404fe0     \tldr\tw0, [sp, #0x4c]\n  477120: 7102d01f     \tcmp\tw0, #0xb4\n  477124: 54000780     \tb.eq\t0x477214 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x41268>\n  477128: b9404fe0     \tldr\tw0, [sp, #0x4c]\n  47712c: 7104381f     \tcmp\tw0, #0x10e\n  477130: 54000b20     \tb.eq\t0x477294 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x412e8>\n  477134: 14000075     \tb\t0x477308 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x4135c>\n  477138: b9400a60     \tldr\tw0, [x19, #0x8]\n  47713c: b9016fe0     \tstr\tw0, [sp, #0x16c]\n  477140: b9400e60     \tldr\tw0, [x19, #0xc]\n  477144: b9016be0     \tstr\tw0, [sp, #0x168]\n  477148: bd4077e8     \tldr\ts8, [sp, #0x74]\n  47714c: 910303e0     \tadd\tx0, sp, #0xc0\n  477150: f94023e1     \tldr\tx1, [sp, #0x40]\n  477154: 97ff8300     \tbl\t0x457d54 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21da8>\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=69468160",
+        "--stop-address=69468216",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .f1.0.3.text.iq4_f1_mode_get_01:\n\n0000000004240000 <iq4_f1_mode_get_01>:\n 4240000: 90000288     \tadrp\tx8, 0x4290000\n 4240004: b9400100     \tldr\tw0, [x8]\n 4240008: d65f03c0     \tret\n\nDisassembly of section .f1.0.5.text.iq4_f1_mode_set_on_ui_01:\n\n000000000424000c <iq4_f1_mode_set_on_ui_01>:\n 424000c: 7100101f     \tcmp\tw0, #0x4\n 4240010: 54000069     \tb.ls\t0x424001c <iq4_f1_mode_set_on_ui_01+0x10>\n 4240014: 2a1f03e0     \tmov\tw0, wzr\n 4240018: d65f03c0     \tret\n 424001c: 90000288     \tadrp\tx8, 0x4290000\n 4240020: b9000100     \tstr\tw0, [x8]\n 4240024: 52800020     \tmov\tw0, #0x1                // =1\n 4240028: d65f03c0     \tret\n\nDisassembly of section .f1.0.7.text.iq4_f1_menu_initialize_01:\n\n000000000424002c <iq4_f1_menu_initialize_01>:\n 424002c: 90000288     \tadrp\tx8, 0x4290000\n 4240030: b900011f     \tstr\twzr, [x8]\n 4240034: d65f03c0     \tret\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=69470508",
+        "--stop-address=69470768",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .f1.0.20.text.activate:\n\n000000000424092c <.f1.0.20.text.activate>:\n 424092c: b40006e0     \tcbz\tx0, 0x4240a08 <.f1.0.20.text.activate+0xdc>\n 4240930: 90000288     \tadrp\tx8, 0x4290000\n 4240934: f940d108     \tldr\tx8, [x8, #0x1a0]\n 4240938: eb08001f     \tcmp\tx0, x8\n 424093c: 540004e0     \tb.eq\t0x42409d8 <.f1.0.20.text.activate+0xac>\n 4240940: 90000288     \tadrp\tx8, 0x4290000\n 4240944: f940d508     \tldr\tx8, [x8, #0x1a8]\n 4240948: eb08001f     \tcmp\tx0, x8\n 424094c: 540004a0     \tb.eq\t0x42409e0 <.f1.0.20.text.activate+0xb4>\n 4240950: 90000288     \tadrp\tx8, 0x4290000\n 4240954: f940d908     \tldr\tx8, [x8, #0x1b0]\n 4240958: eb08001f     \tcmp\tx0, x8\n 424095c: 54000460     \tb.eq\t0x42409e8 <.f1.0.20.text.activate+0xbc>\n 4240960: 90000288     \tadrp\tx8, 0x4290000\n 4240964: f940dd08     \tldr\tx8, [x8, #0x1b8]\n 4240968: eb08001f     \tcmp\tx0, x8\n 424096c: 54000420     \tb.eq\t0x42409f0 <.f1.0.20.text.activate+0xc4>\n 4240970: 90000288     \tadrp\tx8, 0x4290000\n 4240974: f940e108     \tldr\tx8, [x8, #0x1c0]\n 4240978: eb08001f     \tcmp\tx0, x8\n 424097c: 540003e0     \tb.eq\t0x42409f8 <.f1.0.20.text.activate+0xcc>\n 4240980: 90000288     \tadrp\tx8, 0x4290000\n 4240984: f940e508     \tldr\tx8, [x8, #0x1c8]\n 4240988: eb08001f     \tcmp\tx0, x8\n 424098c: 54000260     \tb.eq\t0x42409d8 <.f1.0.20.text.activate+0xac>\n 4240990: 90000288     \tadrp\tx8, 0x4290000\n 4240994: f940e908     \tldr\tx8, [x8, #0x1d0]\n 4240998: eb08001f     \tcmp\tx0, x8\n 424099c: 54000220     \tb.eq\t0x42409e0 <.f1.0.20.text.activate+0xb4>\n 42409a0: 90000288     \tadrp\tx8, 0x4290000\n 42409a4: f940ed08     \tldr\tx8, [x8, #0x1d8]\n 42409a8: eb08001f     \tcmp\tx0, x8\n 42409ac: 540001e0     \tb.eq\t0x42409e8 <.f1.0.20.text.activate+0xbc>\n 42409b0: 90000288     \tadrp\tx8, 0x4290000\n 42409b4: f940f108     \tldr\tx8, [x8, #0x1e0]\n 42409b8: eb08001f     \tcmp\tx0, x8\n 42409bc: 540001a0     \tb.eq\t0x42409f0 <.f1.0.20.text.activate+0xc4>\n 42409c0: 90000288     \tadrp\tx8, 0x4290000\n 42409c4: f940f508     \tldr\tx8, [x8, #0x1e8]\n 42409c8: eb08001f     \tcmp\tx0, x8\n 42409cc: 54000160     \tb.eq\t0x42409f8 <.f1.0.20.text.activate+0xcc>\n 42409d0: 2a1f03e0     \tmov\tw0, wzr\n 42409d4: d65f03c0     \tret\n 42409d8: 2a1f03e8     \tmov\tw8, wzr\n 42409dc: 14000008     \tb\t0x42409fc <.f1.0.20.text.activate+0xd0>\n 42409e0: 52800028     \tmov\tw8, #0x1                // =1\n 42409e4: 14000006     \tb\t0x42409fc <.f1.0.20.text.activate+0xd0>\n 42409e8: 52800048     \tmov\tw8, #0x2                // =2\n 42409ec: 14000004     \tb\t0x42409fc <.f1.0.20.text.activate+0xd0>\n 42409f0: 52800068     \tmov\tw8, #0x3                // =3\n 42409f4: 14000002     \tb\t0x42409fc <.f1.0.20.text.activate+0xd0>\n 42409f8: 52800088     \tmov\tw8, #0x4                // =4\n 42409fc: 90000289     \tadrp\tx9, 0x4290000\n 4240a00: 52800020     \tmov\tw0, #0x1                // =1\n 4240a04: b9000128     \tstr\tw8, [x9]\n 4240a08: d65f03c0     \tret\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=69473344",
+        "--stop-address=69473392",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .f1.2.8.text.iq4_f1_after_stock_draw_13:\n\n0000000004241440 <iq4_f1_after_stock_draw_13>:\n 4241440: d10683ff     \tsub\tsp, sp, #0x1a0\n 4241444: a9167bfd     \tstp\tx29, x30, [sp, #0x160]\n 4241448: f900bbfc     \tstr\tx28, [sp, #0x170]\n 424144c: a91857f6     \tstp\tx22, x21, [sp, #0x180]\n 4241450: a9194ff4     \tstp\tx20, x19, [sp, #0x190]\n 4241454: 910583fd     \tadd\tx29, sp, #0x160\n 4241458: aa0003f3     \tmov\tx19, x0\n 424145c: 97fffae9     \tbl\t0x4240000 <iq4_f1_mode_get_01>\n 4241460: 528014c8     \tmov\tw8, #0xa6               // =166\n 4241464: b90007e8     \tstr\tw8, [sp, #0x4]\n 4241468: b40004b3     \tcbz\tx19, 0x42414fc <iq4_f1_after_stock_draw_13+0xbc>\n 424146c: 51000408     \tsub\tw8, w0, #0x1\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O2",
+        "-ffp-contract=off",
+        "-fno-strict-aliasing",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-DIQ4_F1_DISPLAY13_HOST",
+        "-I",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_stock_display_payload_13",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_stock_display_payload_13/payload.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_display13_no_effect_static_review_01/domain_counterexample.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_display13_no_effect_static_review_01/normal"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_display13_no_effect_static_review_01/normal"
+      ],
+      "exit": 0,
+      "stdout": "{\"schema\":\"iq4_f1_display13_domain_host_review_01\",\"camera_access\":false,\"native_executed\":false,\"cases\":[\n  {\"name\":\"baseline_off\",\"mode\":0,\"expected_reason\":0,\"actual_reason\":0,\"band_count\":0},\n  {\"name\":\"baseline_equal_domains\",\"mode\":1,\"expected_reason\":1,\"actual_reason\":1,\"band_count\":2},\n  {\"name\":\"baseline_equal_domains\",\"mode\":2,\"expected_reason\":1,\"actual_reason\":1,\"band_count\":2},\n  {\"name\":\"baseline_equal_domains\",\"mode\":3,\"expected_reason\":1,\"actual_reason\":1,\"band_count\":2},\n  {\"name\":\"baseline_equal_domains\",\"mode\":4,\"expected_reason\":1,\"actual_reason\":1,\"band_count\":2},\n  {\"name\":\"config_domain_only_differs\",\"mode\":1,\"expected_reason\":4,\"actual_reason\":4,\"band_count\":0},\n  {\"name\":\"roi_domain_only_differs\",\"mode\":1,\"expected_reason\":4,\"actual_reason\":4,\"band_count\":0},\n  {\"name\":\"full_config_roi_scale2_full_actual_rgb_projection\",\"mode\":1,\"expected_reason\":4,\"actual_reason\":4,\"band_count\":0},\n  {\"name\":\"full_config_roi_scale2_full_actual_rgb_projection\",\"mode\":2,\"expected_reason\":4,\"actual_reason\":4,\"band_count\":0},\n  {\"name\":\"full_config_roi_scale2_full_actual_rgb_projection\",\"mode\":3,\"expected_reason\":4,\"actual_reason\":4,\"band_count\":0},\n  {\"name\":\"full_config_roi_scale2_full_actual_rgb_projection\",\"mode\":4,\"expected_reason\":4,\"actual_reason\":4,\"band_count\":0}\n],\"case_count\":11,\"passed\":11,\"hypothetical_config\":[1280,960],\"actual_image_fixture\":[640,480],\"native_projection_fixture\":[80,0,640,480],\"actual_camera_field_values_observed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O2",
+        "-ffp-contract=off",
+        "-fno-strict-aliasing",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-DIQ4_F1_DISPLAY13_HOST",
+        "-I",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_stock_display_payload_13",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_stock_display_payload_13/payload.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_display13_no_effect_static_review_01/domain_counterexample.c",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_display13_no_effect_static_review_01/asan_ubsan"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_display13_no_effect_static_review_01/asan_ubsan"
+      ],
+      "exit": 0,
+      "stdout": "{\"schema\":\"iq4_f1_display13_domain_host_review_01\",\"camera_access\":false,\"native_executed\":false,\"cases\":[\n  {\"name\":\"baseline_off\",\"mode\":0,\"expected_reason\":0,\"actual_reason\":0,\"band_count\":0},\n  {\"name\":\"baseline_equal_domains\",\"mode\":1,\"expected_reason\":1,\"actual_reason\":1,\"band_count\":2},\n  {\"name\":\"baseline_equal_domains\",\"mode\":2,\"expected_reason\":1,\"actual_reason\":1,\"band_count\":2},\n  {\"name\":\"baseline_equal_domains\",\"mode\":3,\"expected_reason\":1,\"actual_reason\":1,\"band_count\":2},\n  {\"name\":\"baseline_equal_domains\",\"mode\":4,\"expected_reason\":1,\"actual_reason\":1,\"band_count\":2},\n  {\"name\":\"config_domain_only_differs\",\"mode\":1,\"expected_reason\":4,\"actual_reason\":4,\"band_count\":0},\n  {\"name\":\"roi_domain_only_differs\",\"mode\":1,\"expected_reason\":4,\"actual_reason\":4,\"band_count\":0},\n  {\"name\":\"full_config_roi_scale2_full_actual_rgb_projection\",\"mode\":1,\"expected_reason\":4,\"actual_reason\":4,\"band_count\":0},\n  {\"name\":\"full_config_roi_scale2_full_actual_rgb_projection\",\"mode\":2,\"expected_reason\":4,\"actual_reason\":4,\"band_count\":0},\n  {\"name\":\"full_config_roi_scale2_full_actual_rgb_projection\",\"mode\":3,\"expected_reason\":4,\"actual_reason\":4,\"band_count\":0},\n  {\"name\":\"full_config_roi_scale2_full_actual_rgb_projection\",\"mode\":4,\"expected_reason\":4,\"actual_reason\":4,\"band_count\":0}\n],\"case_count\":11,\"passed\":11,\"hypothetical_config\":[1280,960],\"actual_image_fixture\":[640,480],\"native_projection_fixture\":[80,0,640,480],\"actual_camera_field_values_observed\":false}\n",
+      "stderr": ""
+    }
+  ]
+}

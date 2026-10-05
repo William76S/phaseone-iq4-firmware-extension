@@ -1,0 +1,98 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_normal_fit_display_build_08/scaler_bridge.o:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000000000 <iq4_f1_scaler_bridge_08>:
+       0: d11003ff     	sub	sp, sp, #0x400
+       4: a908fbfd     	stp	x29, x30, [sp, #0x88]
+       8: a90407e0     	stp	x0, x1, [sp, #0x40]
+       c: a9050fe2     	stp	x2, x3, [sp, #0x50]
+      10: a90617e4     	stp	x4, x5, [sp, #0x60]
+      14: a9071fe6     	stp	x6, x7, [sp, #0x70]
+      18: f90043e8     	str	x8, [sp, #0x80]
+      1c: 911003e9     	add	x9, sp, #0x400
+      20: f9004fe9     	str	x9, [sp, #0x98]
+      24: d53bd04a     	mrs	x10, TPIDR_EL0
+      28: f90053ea     	str	x10, [sp, #0xa0]
+      2c: a9402d2a     	ldp	x10, x11, [x9]
+      30: a9002fea     	stp	x10, x11, [sp]
+      34: a9412d2a     	ldp	x10, x11, [x9, #0x10]
+      38: a9012fea     	stp	x10, x11, [sp, #0x10]
+      3c: f940112a     	ldr	x10, [x9, #0x20]
+      40: f90013ea     	str	x10, [sp, #0x20]
+      44: 90000010     	adrp	x16, 0x0 <iq4_f1_scaler_bridge_08>
+		0000000000000044:  R_AARCH64_ADR_PREL_PG_HI21	iq4_f1_scaler_trampoline_08
+      48: f9400210     	ldr	x16, [x16]
+		0000000000000048:  R_AARCH64_LDST64_ABS_LO12_NC	iq4_f1_scaler_trampoline_08
+      4c: d63f0200     	blr	x16
+      50: a90b07e0     	stp	x0, x1, [sp, #0xb0]
+      54: a90c0fe2     	stp	x2, x3, [sp, #0xc0]
+      58: a90d17e4     	stp	x4, x5, [sp, #0xd0]
+      5c: a90e1fe6     	stp	x6, x7, [sp, #0xe0]
+      60: a90f27e8     	stp	x8, x9, [sp, #0xf0]
+      64: a9102fea     	stp	x10, x11, [sp, #0x100]
+      68: a91137ec     	stp	x12, x13, [sp, #0x110]
+      6c: a9123fee     	stp	x14, x15, [sp, #0x120]
+      70: a91347f0     	stp	x16, x17, [sp, #0x130]
+      74: f900a3f2     	str	x18, [sp, #0x140]
+      78: ad0a87e0     	stp	q0, q1, [sp, #0x150]
+      7c: ad0b8fe2     	stp	q2, q3, [sp, #0x170]
+      80: ad0c97e4     	stp	q4, q5, [sp, #0x190]
+      84: ad0d9fe6     	stp	q6, q7, [sp, #0x1b0]
+      88: ad0ea7e8     	stp	q8, q9, [sp, #0x1d0]
+      8c: ad0fafea     	stp	q10, q11, [sp, #0x1f0]
+      90: ad10b7ec     	stp	q12, q13, [sp, #0x210]
+      94: ad11bfee     	stp	q14, q15, [sp, #0x230]
+      98: ad12c7f0     	stp	q16, q17, [sp, #0x250]
+      9c: ad13cff2     	stp	q18, q19, [sp, #0x270]
+      a0: ad14d7f4     	stp	q20, q21, [sp, #0x290]
+      a4: ad15dff6     	stp	q22, q23, [sp, #0x2b0]
+      a8: ad16e7f8     	stp	q24, q25, [sp, #0x2d0]
+      ac: ad17effa     	stp	q26, q27, [sp, #0x2f0]
+      b0: ad18f7fc     	stp	q28, q29, [sp, #0x310]
+      b4: ad19fffe     	stp	q30, q31, [sp, #0x330]
+      b8: d53b4209     	mrs	x9, NZCV
+      bc: f901abe9     	str	x9, [sp, #0x350]
+      c0: d53b4409     	mrs	x9, FPCR
+      c4: f901afe9     	str	x9, [sp, #0x358]
+      c8: d53b4429     	mrs	x9, FPSR
+      cc: f901b3e9     	str	x9, [sp, #0x360]
+      d0: 910003e0     	mov	x0, sp
+      d4: 94000000     	bl	0xd4 <iq4_f1_scaler_bridge_08+0xd4>
+		00000000000000d4:  R_AARCH64_CALL26	iq4_f1_scaler_after_08
+      d8: ad4a87e0     	ldp	q0, q1, [sp, #0x150]
+      dc: ad4b8fe2     	ldp	q2, q3, [sp, #0x170]
+      e0: ad4c97e4     	ldp	q4, q5, [sp, #0x190]
+      e4: ad4d9fe6     	ldp	q6, q7, [sp, #0x1b0]
+      e8: ad4ea7e8     	ldp	q8, q9, [sp, #0x1d0]
+      ec: ad4fafea     	ldp	q10, q11, [sp, #0x1f0]
+      f0: ad50b7ec     	ldp	q12, q13, [sp, #0x210]
+      f4: ad51bfee     	ldp	q14, q15, [sp, #0x230]
+      f8: ad52c7f0     	ldp	q16, q17, [sp, #0x250]
+      fc: ad53cff2     	ldp	q18, q19, [sp, #0x270]
+     100: ad54d7f4     	ldp	q20, q21, [sp, #0x290]
+     104: ad55dff6     	ldp	q22, q23, [sp, #0x2b0]
+     108: ad56e7f8     	ldp	q24, q25, [sp, #0x2d0]
+     10c: ad57effa     	ldp	q26, q27, [sp, #0x2f0]
+     110: ad58f7fc     	ldp	q28, q29, [sp, #0x310]
+     114: ad59fffe     	ldp	q30, q31, [sp, #0x330]
+     118: f941abe9     	ldr	x9, [sp, #0x350]
+     11c: d51b4209     	msr	NZCV, x9
+     120: f941afe9     	ldr	x9, [sp, #0x358]
+     124: d51b4409     	msr	FPCR, x9
+     128: f941b3e9     	ldr	x9, [sp, #0x360]
+     12c: d51b4429     	msr	FPSR, x9
+     130: a94b07e0     	ldp	x0, x1, [sp, #0xb0]
+     134: a94c0fe2     	ldp	x2, x3, [sp, #0xc0]
+     138: a94d17e4     	ldp	x4, x5, [sp, #0xd0]
+     13c: a94e1fe6     	ldp	x6, x7, [sp, #0xe0]
+     140: a94f27e8     	ldp	x8, x9, [sp, #0xf0]
+     144: a9502fea     	ldp	x10, x11, [sp, #0x100]
+     148: a95137ec     	ldp	x12, x13, [sp, #0x110]
+     14c: a9523fee     	ldp	x14, x15, [sp, #0x120]
+     150: a95347f0     	ldp	x16, x17, [sp, #0x130]
+     154: f940a3f2     	ldr	x18, [sp, #0x140]
+     158: a948fbfd     	ldp	x29, x30, [sp, #0x88]
+     15c: 911003ff     	add	sp, sp, #0x400
+     160: d65f03c0     	ret

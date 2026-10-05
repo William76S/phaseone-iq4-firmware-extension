@@ -1,0 +1,28 @@
+STATIC ONLY; exported proximity is not a private function identity.
+
+analysis/firmware/sys_exact16_argv_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   843e4: a9be53f3     	stp	x19, x20, [sp, #-0x20]!
+   843e8: d00001d3     	adrp	x19, 0xbe000
+   843ec: f947aa74     	ldr	x20, [x19, #0xf50]
+   843f0: a9017bf5     	stp	x21, x30, [sp, #0x10]
+   843f4: aa0003f5     	mov	x21, x0
+   843f8: b9402a81     	ldr	w1, [x20, #0x28]
+   843fc: f9400280     	ldr	x0, [x20]
+   84400: 12001c22     	and	w2, w1, #0xff
+   84404: 350000c2     	cbnz	w2, 0x8441c <.text+0x78c7c>
+   84408: 11040021     	add	w1, w1, #0x100
+   8440c: 937d7c21     	sbfiz	x1, x1, #3, #32
+   84410: 97fe24e0     	bl	0xd790 <.text+0x1ff0>
+   84414: b9402a81     	ldr	w1, [x20, #0x28]
+   84418: f9000280     	str	x0, [x20]
+   8441c: f947aa73     	ldr	x19, [x19, #0xf50]
+   84420: 11000422     	add	w2, w1, #0x1
+   84424: b9002a62     	str	w2, [x19, #0x28]
+   84428: f821d815     	str	x21, [x0, w1, sxtw #3]
+   8442c: a9417bf5     	ldp	x21, x30, [sp, #0x10]
+   84430: a8c253f3     	ldp	x19, x20, [sp], #0x20
+   84434: d65f03c0     	ret

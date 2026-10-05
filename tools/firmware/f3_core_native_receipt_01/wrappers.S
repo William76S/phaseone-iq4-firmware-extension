@@ -1,0 +1,212 @@
+/* Three exact original BL replacements; target code is never executed by the build. */
+.text
+.p2align 2
+.global iq4_f3_core_native_wrapper_01
+.type iq4_f3_core_native_wrapper_01,%function
+iq4_f3_core_native_wrapper_01:
+    .cfi_startproc
+    sub sp,sp,#0x180
+    .cfi_def_cfa_offset 0x180
+    stp x29,x30,[sp,#0xe0]
+    .cfi_offset x29,-160
+    .cfi_offset x30,-152
+    mov x29,sp
+    .cfi_def_cfa_register x29
+    stp x9,x10,[sp,#0x100]
+    stp x11,x12,[sp,#0x110]
+    stp x13,x14,[sp,#0x120]
+    stp x15,x16,[sp,#0x130]
+    stp x17,x18,[sp,#0x140]
+    stp x0,x1,[sp,#0x10]
+    stp x2,x3,[sp,#0x20]
+    stp x4,x5,[sp,#0x30]
+    stp x6,x7,[sp,#0x40]
+    str x8,[sp,#0x50]
+    mrs x9,nzcv
+    str x9,[sp,#0x58]
+    stp q0,q1,[sp,#0x60]
+    stp q2,q3,[sp,#0x80]
+    stp q4,q5,[sp,#0xa0]
+    stp q6,q7,[sp,#0xc0]
+    ldr x9,[sp,#0x180]
+    str x9,[sp]
+    add x0,sp,#0x10
+    mov x1,x9
+    ldr x2,[sp,#0xe8]
+    bl iq4_f3_core_before_01
+    ldp q0,q1,[sp,#0x60]
+    ldp q2,q3,[sp,#0x80]
+    ldp q4,q5,[sp,#0xa0]
+    ldp q6,q7,[sp,#0xc0]
+    ldr x9,[sp,#0x58]
+    msr nzcv,x9
+    ldp x0,x1,[sp,#0x10]
+    ldp x2,x3,[sp,#0x20]
+    ldp x4,x5,[sp,#0x30]
+    ldp x6,x7,[sp,#0x40]
+    ldr x8,[sp,#0x50]
+    ldp x9,x10,[sp,#0x100]
+    ldp x11,x12,[sp,#0x110]
+    ldp x13,x14,[sp,#0x120]
+    ldp x15,x16,[sp,#0x130]
+    ldp x17,x18,[sp,#0x140]
+    bl iq4_f3_original_core_01
+    stp x9,x10,[sp,#0x100]
+    stp x11,x12,[sp,#0x110]
+    stp x13,x14,[sp,#0x120]
+    stp x15,x16,[sp,#0x130]
+    stp x17,x18,[sp,#0x140]
+    stp x0,x1,[sp,#0x10]
+    stp x2,x3,[sp,#0x20]
+    stp x4,x5,[sp,#0x30]
+    stp x6,x7,[sp,#0x40]
+    str x8,[sp,#0x50]
+    mrs x9,nzcv
+    str x9,[sp,#0x58]
+    stp q0,q1,[sp,#0x60]
+    stp q2,q3,[sp,#0x80]
+    stp q4,q5,[sp,#0xa0]
+    stp q6,q7,[sp,#0xc0]
+    bl iq4_f3_core_after_01
+    ldp q0,q1,[sp,#0x60]
+    ldp q2,q3,[sp,#0x80]
+    ldp q4,q5,[sp,#0xa0]
+    ldp q6,q7,[sp,#0xc0]
+    ldr x9,[sp,#0x58]
+    msr nzcv,x9
+    ldp x0,x1,[sp,#0x10]
+    ldp x2,x3,[sp,#0x20]
+    ldp x4,x5,[sp,#0x30]
+    ldp x6,x7,[sp,#0x40]
+    ldr x8,[sp,#0x50]
+    ldp x9,x10,[sp,#0x100]
+    ldp x11,x12,[sp,#0x110]
+    ldp x13,x14,[sp,#0x120]
+    ldp x15,x16,[sp,#0x130]
+    ldp x17,x18,[sp,#0x140]
+    ldp x29,x30,[sp,#0xe0]
+    .cfi_def_cfa sp,0x180
+    .cfi_restore x29
+    .cfi_restore x30
+    add sp,sp,#0x180
+    .cfi_def_cfa_offset 0
+    ret
+    .cfi_endproc
+.size iq4_f3_core_native_wrapper_01,.-iq4_f3_core_native_wrapper_01
+.p2align 2
+.global iq4_f3_core_native_join_wrapper_01
+.type iq4_f3_core_native_join_wrapper_01,%function
+iq4_f3_core_native_join_wrapper_01:
+    .cfi_startproc
+    sub sp,sp,#0x180
+    .cfi_def_cfa_offset 0x180
+    stp x29,x30,[sp,#0xe0]
+    .cfi_offset x29,-160
+    .cfi_offset x30,-152
+    mov x29,sp
+    .cfi_def_cfa_register x29
+    str x0,[sp,#0x150]
+    bl iq4_f3_original_pool_join_01
+    stp x9,x10,[sp,#0x100]
+    stp x11,x12,[sp,#0x110]
+    stp x13,x14,[sp,#0x120]
+    stp x15,x16,[sp,#0x130]
+    stp x17,x18,[sp,#0x140]
+    stp x0,x1,[sp,#0x10]
+    stp x2,x3,[sp,#0x20]
+    stp x4,x5,[sp,#0x30]
+    stp x6,x7,[sp,#0x40]
+    str x8,[sp,#0x50]
+    mrs x9,nzcv
+    str x9,[sp,#0x58]
+    stp q0,q1,[sp,#0x60]
+    stp q2,q3,[sp,#0x80]
+    stp q4,q5,[sp,#0xa0]
+    stp q6,q7,[sp,#0xc0]
+    add x0,sp,#0x180
+    ldr x1,[sp,#0x150]
+    ldr x2,[sp,#0xe8]
+    bl iq4_f3_core_join_returned_01
+    ldp q0,q1,[sp,#0x60]
+    ldp q2,q3,[sp,#0x80]
+    ldp q4,q5,[sp,#0xa0]
+    ldp q6,q7,[sp,#0xc0]
+    ldr x9,[sp,#0x58]
+    msr nzcv,x9
+    ldp x0,x1,[sp,#0x10]
+    ldp x2,x3,[sp,#0x20]
+    ldp x4,x5,[sp,#0x30]
+    ldp x6,x7,[sp,#0x40]
+    ldr x8,[sp,#0x50]
+    ldp x9,x10,[sp,#0x100]
+    ldp x11,x12,[sp,#0x110]
+    ldp x13,x14,[sp,#0x120]
+    ldp x15,x16,[sp,#0x130]
+    ldp x17,x18,[sp,#0x140]
+    ldp x29,x30,[sp,#0xe0]
+    .cfi_def_cfa sp,0x180
+    .cfi_restore x29
+    .cfi_restore x30
+    add sp,sp,#0x180
+    .cfi_def_cfa_offset 0
+    ret
+    .cfi_endproc
+.size iq4_f3_core_native_join_wrapper_01,.-iq4_f3_core_native_join_wrapper_01
+.p2align 2
+.global iq4_f3_core_native_terminal_wrapper_01
+.type iq4_f3_core_native_terminal_wrapper_01,%function
+iq4_f3_core_native_terminal_wrapper_01:
+    .cfi_startproc
+    sub sp,sp,#0x180
+    .cfi_def_cfa_offset 0x180
+    stp x29,x30,[sp,#0xe0]
+    .cfi_offset x29,-160
+    .cfi_offset x30,-152
+    mov x29,sp
+    .cfi_def_cfa_register x29
+    bl iq4_f3_original_pipeline_clock_01
+    stp x9,x10,[sp,#0x100]
+    stp x11,x12,[sp,#0x110]
+    stp x13,x14,[sp,#0x120]
+    stp x15,x16,[sp,#0x130]
+    stp x17,x18,[sp,#0x140]
+    stp x0,x1,[sp,#0x10]
+    stp x2,x3,[sp,#0x20]
+    stp x4,x5,[sp,#0x30]
+    stp x6,x7,[sp,#0x40]
+    str x8,[sp,#0x50]
+    mrs x9,nzcv
+    str x9,[sp,#0x58]
+    stp q0,q1,[sp,#0x60]
+    stp q2,q3,[sp,#0x80]
+    stp q4,q5,[sp,#0xa0]
+    stp q6,q7,[sp,#0xc0]
+    add x0,sp,#0x180
+    ldr x1,[sp,#0xe8]
+    bl iq4_f3_core_terminal_01
+    ldp q0,q1,[sp,#0x60]
+    ldp q2,q3,[sp,#0x80]
+    ldp q4,q5,[sp,#0xa0]
+    ldp q6,q7,[sp,#0xc0]
+    ldr x9,[sp,#0x58]
+    msr nzcv,x9
+    ldp x0,x1,[sp,#0x10]
+    ldp x2,x3,[sp,#0x20]
+    ldp x4,x5,[sp,#0x30]
+    ldp x6,x7,[sp,#0x40]
+    ldr x8,[sp,#0x50]
+    ldp x9,x10,[sp,#0x100]
+    ldp x11,x12,[sp,#0x110]
+    ldp x13,x14,[sp,#0x120]
+    ldp x15,x16,[sp,#0x130]
+    ldp x17,x18,[sp,#0x140]
+    ldp x29,x30,[sp,#0xe0]
+    .cfi_def_cfa sp,0x180
+    .cfi_restore x29
+    .cfi_restore x30
+    add sp,sp,#0x180
+    .cfi_def_cfa_offset 0
+    ret
+    .cfi_endproc
+.size iq4_f3_core_native_terminal_wrapper_01,.-iq4_f3_core_native_terminal_wrapper_01
+.section .note.GNU-stack,"",%progbits

@@ -1,0 +1,15 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no camera access or target execution.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6b6dec: d10043ff     	sub	sp, sp, #0x10
+  6b6df0: f90007e0     	str	x0, [sp, #0x8]
+  6b6df4: f94007e1     	ldr	x1, [sp, #0x8]
+  6b6df8: d288ec00     	mov	x0, #0x4760             // =18272
+  6b6dfc: 8b000020     	add	x0, x1, x0
+  6b6e00: 910043ff     	add	sp, sp, #0x10
+  6b6e04: d65f03c0     	ret

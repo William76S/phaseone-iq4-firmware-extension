@@ -1,0 +1,100 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPCamera.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000001880 <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)>:
+    1880: 41 57                        	pushq	%r15
+    1882: 41 56                        	pushq	%r14
+    1884: 41 55                        	pushq	%r13
+    1886: 4c 8d af b0 04 00 00         	leaq	0x4b0(%rdi), %r13
+    188d: 41 54                        	pushq	%r12
+    188f: 49 89 f4                     	movq	%rsi, %r12
+    1892: 55                           	pushq	%rbp
+    1893: 53                           	pushq	%rbx
+    1894: 48 89 fb                     	movq	%rdi, %rbx
+    1897: 48 83 ec 68                  	subq	$0x68, %rsp
+    189b: 48 8b 2d 00 00 00 00         	movq	(%rip), %rbp            # 0x18a2 <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x22>
+		000000000000189e:  R_X86_64_REX_GOTPCRELX	__pthread_key_create-0x4
+    18a2: 48 85 ed                     	testq	%rbp, %rbp
+    18a5: 74 10                        	je	0x18b7 <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x37>
+    18a7: 4c 89 ef                     	movq	%r13, %rdi
+    18aa: e8 00 00 00 00               	callq	0x18af <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x2f>
+		00000000000018ab:  R_X86_64_PLT32	pthread_mutex_lock-0x4
+    18af: 85 c0                        	testl	%eax, %eax
+    18b1: 0f 85 e2 00 00 00            	jne	0x1999 <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x119>
+    18b7: 4c 8b b3 d8 04 00 00         	movq	0x4d8(%rbx), %r14
+    18be: 48 85 ed                     	testq	%rbp, %rbp
+    18c1: 74 08                        	je	0x18cb <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x4b>
+    18c3: 4c 89 ef                     	movq	%r13, %rdi
+    18c6: e8 00 00 00 00               	callq	0x18cb <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x4b>
+		00000000000018c7:  R_X86_64_PLT32	pthread_mutex_unlock-0x4
+    18cb: 4d 85 f6                     	testq	%r14, %r14
+    18ce: 0f 84 00 00 00 00            	je	0x18d4 <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x54>
+		00000000000018d0:  R_X86_64_PC32	.text.unlikely+0x286
+    18d4: 4c 89 e6                     	movq	%r12, %rsi
+    18d7: 48 89 e7                     	movq	%rsp, %rdi
+    18da: 4c 8d 74 24 40               	leaq	0x40(%rsp), %r14
+    18df: e8 00 00 00 00               	callq	0x18e4 <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x64>
+		00000000000018e0:  R_X86_64_PLT32	P1::IQP::Channel::GenerateAuthenticationToken(char const*)-0x4
+    18e4: 4c 8d a3 c8 02 00 00         	leaq	0x2c8(%rbx), %r12
+    18eb: 66 0f 6f 0c 24               	movdqa	(%rsp), %xmm1
+    18f0: 4c 89 f2                     	movq	%r14, %rdx
+    18f3: 66 0f 6f 44 24 10            	movdqa	0x10(%rsp), %xmm0
+    18f9: b9 05 00 00 00               	movl	$0x5, %ecx
+    18fe: 4c 89 e6                     	movq	%r12, %rsi
+    1901: bf 20 00 00 00               	movl	$0x20, %edi
+    1906: 0f 29 4c 24 20               	movaps	%xmm1, 0x20(%rsp)
+    190b: 0f 29 44 24 30               	movaps	%xmm0, 0x30(%rsp)
+    1910: 0f 29 4c 24 40               	movaps	%xmm1, 0x40(%rsp)
+    1915: 0f 29 44 24 50               	movaps	%xmm0, 0x50(%rsp)
+    191a: e8 00 00 00 00               	callq	0x191f <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x9f>
+		000000000000191b:  R_X86_64_PLT32	__atomic_store-0x4
+    191f: 48 85 ed                     	testq	%rbp, %rbp
+    1922: 74 0c                        	je	0x1930 <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0xb0>
+    1924: 4c 89 ef                     	movq	%r13, %rdi
+    1927: e8 00 00 00 00               	callq	0x192c <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0xac>
+		0000000000001928:  R_X86_64_PLT32	pthread_mutex_lock-0x4
+    192c: 85 c0                        	testl	%eax, %eax
+    192e: 75 70                        	jne	0x19a0 <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x120>
+    1930: 48 8b 83 d8 04 00 00         	movq	0x4d8(%rbx), %rax
+    1937: 48 85 c0                     	testq	%rax, %rax
+    193a: 74 41                        	je	0x197d <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0xfd>
+    193c: 4c 8d 78 38                  	leaq	0x38(%rax), %r15
+    1940: 48 8b 40 38                  	movq	0x38(%rax), %rax
+    1944: 4c 89 e6                     	movq	%r12, %rsi
+    1947: bf 20 00 00 00               	movl	$0x20, %edi
+    194c: b9 05 00 00 00               	movl	$0x5, %ecx
+    1951: 4c 89 f2                     	movq	%r14, %rdx
+    1954: 48 8b 58 10                  	movq	0x10(%rax), %rbx
+    1958: e8 00 00 00 00               	callq	0x195d <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0xdd>
+		0000000000001959:  R_X86_64_PLT32	__atomic_load-0x4
+    195d: 66 0f 6f 54 24 40            	movdqa	0x40(%rsp), %xmm2
+    1963: 48 8d 74 24 20               	leaq	0x20(%rsp), %rsi
+    1968: 4c 89 ff                     	movq	%r15, %rdi
+    196b: 66 0f 6f 5c 24 50            	movdqa	0x50(%rsp), %xmm3
+    1971: 0f 29 54 24 20               	movaps	%xmm2, 0x20(%rsp)
+    1976: 0f 29 5c 24 30               	movaps	%xmm3, 0x30(%rsp)
+    197b: ff d3                        	callq	*%rbx
+    197d: 48 85 ed                     	testq	%rbp, %rbp
+    1980: 74 08                        	je	0x198a <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x10a>
+    1982: 4c 89 ef                     	movq	%r13, %rdi
+    1985: e8 00 00 00 00               	callq	0x198a <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x10a>
+		0000000000001986:  R_X86_64_PLT32	pthread_mutex_unlock-0x4
+    198a: 48 83 c4 68                  	addq	$0x68, %rsp
+    198e: 5b                           	popq	%rbx
+    198f: 5d                           	popq	%rbp
+    1990: 41 5c                        	popq	%r12
+    1992: 41 5d                        	popq	%r13
+    1994: 41 5e                        	popq	%r14
+    1996: 41 5f                        	popq	%r15
+    1998: c3                           	retq
+    1999: 89 c7                        	movl	%eax, %edi
+    199b: e8 00 00 00 00               	callq	0x19a0 <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x120>
+		000000000000199c:  R_X86_64_PLT32	std::__throw_system_error(int)-0x4
+    19a0: 89 c7                        	movl	%eax, %edi
+    19a2: e8 00 00 00 00               	callq	0x19a7 <P1::IQP::Camera::SetDevelopmentAuthenticationPassword(char const*)+0x127>
+		00000000000019a3:  R_X86_64_PLT32	std::__throw_system_error(int)-0x4
+    19a7: 90                           	nop
+    19a8: 0f 1f 84 00 00 00 00 00      	nopl	(%rax,%rax)

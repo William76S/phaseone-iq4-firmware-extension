@@ -1,0 +1,29 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no camera access or target execution.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:
+  520488: f9404fe0     	ldr	x0, [sp, #0x98]
+  52048c: b9400401     	ldr	w1, [x0, #0x4]
+  520490: b94063e0     	ldr	w0, [sp, #0x60]
+  520494: 1ac00c20     	sdiv	w0, w1, w0
+  520498: b9008be0     	str	w0, [sp, #0x88]
+  52049c: f9404fe0     	ldr	x0, [sp, #0x98]
+  5204a0: b9400801     	ldr	w1, [x0, #0x8]
+  5204a4: b94067e0     	ldr	w0, [sp, #0x64]
+  5204a8: 1ac00c20     	sdiv	w0, w1, w0
+  5204ac: b9008fe0     	str	w0, [sp, #0x8c]
+  5204b0: 910233e1     	add	x1, sp, #0x8c
+  5204b4: 910223e0     	add	x0, sp, #0x88
+  5204b8: 97fd77d0     	bl	0x47e3f8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x4844c>
+  5204bc: b9400000     	ldr	w0, [x0]
+  5204c0: 1e220000     	scvtf	s0, w0
+  5204c4: f94017e0     	ldr	x0, [sp, #0x28]
+  5204c8: bd019400     	str	s0, [x0, #0x194]
+  5204cc: f94017e0     	ldr	x0, [sp, #0x28]
+  5204d0: bd419400     	ldr	s0, [x0, #0x194]
+  5204d4: f94017e0     	ldr	x0, [sp, #0x28]
+  5204d8: 940000cf     	bl	0x520814 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0x27764>

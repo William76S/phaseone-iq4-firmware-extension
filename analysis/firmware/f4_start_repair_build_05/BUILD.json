@@ -1,0 +1,780 @@
+{
+  "schema": "iq4_f4_start_repair_build_05",
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pthread",
+        "-DORIGINAL_BUSY_REPRO",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_source_02/movie_binding.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_card_bridge_06/card.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/movie_card_01/movie.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_mkv_software_zero_01/native_mkv.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/host_posix.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_save_transaction_01/transaction.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tests/f4_start_repair_05/test_chain.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/original_busy_repro"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/original_busy_repro",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "0"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":0,\"original_busy_permanent_hold_reproduced\":true,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pthread",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/movie_binding.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_card_bridge_06/card.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/movie_card_01/movie.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_mkv_software_zero_01/native_mkv.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/host_posix.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_save_transaction_01/transaction.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tests/f4_start_repair_05/test_chain.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_normal"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_normal",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "0"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":0,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n{\"published_path\":\"/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-0-41kA84/sd/LV-0000000000000001-00199bc2acc47fb0.MKV\",\"frames\":2,\"explicit_fixture_pts_ns\":[1000000000,1037000000],\"fixture_sequence\":[0,1],\"hardware_fps_proof\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_normal",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "1"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":1,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n{\"published_path\":\"/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-1-y5SHjZ/sd/LV-0000000000000001-00199bc2ada98880.MKV\",\"frames\":2,\"explicit_fixture_pts_ns\":[1000000000,1037000000],\"fixture_sequence\":[0,1],\"hardware_fps_proof\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_normal",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "2"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":2,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n{\"published_path\":\"/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-2-WxVlNR/sd/LV-0000000000000001-00199bc2ae5b6b90.MKV\",\"frames\":2,\"explicit_fixture_pts_ns\":[1000000000,1037000000],\"fixture_sequence\":[0,1],\"hardware_fps_proof\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_normal",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "3"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":3,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n{\"published_path\":\"/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-3-Et48ae/sd/LV-0000000000000001-00199bc2af066900.MKV\",\"frames\":2,\"explicit_fixture_pts_ns\":[1000000000,1037000000],\"fixture_sequence\":[0,1],\"hardware_fps_proof\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_normal",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "4"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":4,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_normal",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "5"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":5,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_normal",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "6"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":6,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n{\"published_path\":\"/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-6-KnQRB9/sd/LV-0000000000000002-00199bc2b080f340.MKV\",\"frames\":2,\"explicit_fixture_pts_ns\":[1000000000,1037000000],\"fixture_sequence\":[0,1],\"hardware_fps_proof\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_normal",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "7"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":7,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_normal",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "8"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":8,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-pthread",
+        "-fsanitize=address,undefined",
+        "-fno-sanitize-recover=all",
+        "-fno-omit-frame-pointer",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/movie_binding.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_card_bridge_06/card.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/movie_card_01/movie.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_mkv_software_zero_01/native_mkv.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_fs_adapter_04/host_posix.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_transaction_02/stream.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_save_transaction_01/transaction.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tests/f4_start_repair_05/test_chain.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_asan_ubsan"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_asan_ubsan",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "0"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":0,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n{\"published_path\":\"/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-0-CtOkBP/sd/LV-0000000000000001-00199bc2f2bf6688.MKV\",\"frames\":2,\"explicit_fixture_pts_ns\":[1000000000,1037000000],\"fixture_sequence\":[0,1],\"hardware_fps_proof\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_asan_ubsan",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "1"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":1,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n{\"published_path\":\"/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-1-37khtq/sd/LV-0000000000000001-00199bc2f540fca0.MKV\",\"frames\":2,\"explicit_fixture_pts_ns\":[1000000000,1037000000],\"fixture_sequence\":[0,1],\"hardware_fps_proof\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_asan_ubsan",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "2"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":2,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n{\"published_path\":\"/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-2-IPiijF/sd/LV-0000000000000001-00199bc2f74b9d98.MKV\",\"frames\":2,\"explicit_fixture_pts_ns\":[1000000000,1037000000],\"fixture_sequence\":[0,1],\"hardware_fps_proof\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_asan_ubsan",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "3"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":3,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n{\"published_path\":\"/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-3-jdvW5q/sd/LV-0000000000000001-00199bc2f95a7c80.MKV\",\"frames\":2,\"explicit_fixture_pts_ns\":[1000000000,1037000000],\"fixture_sequence\":[0,1],\"hardware_fps_proof\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_asan_ubsan",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "4"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":4,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_asan_ubsan",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "5"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":5,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_asan_ubsan",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "6"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":6,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n{\"published_path\":\"/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-6-kK1y3F/sd/LV-0000000000000002-00199bc2ff321f50.MKV\",\"frames\":2,\"explicit_fixture_pts_ns\":[1000000000,1037000000],\"fixture_sequence\":[0,1],\"hardware_fps_proof\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_asan_ubsan",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "7"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":7,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain_asan_ubsan",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/host_encoded_samples/strided_rgb.jpg",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05",
+        "8"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\"case\":8,\"passed\":true,\"actual_card_binding_movie_mux\":true,\"real_host_file_io\":true,\"native_mount_source_fixtures\":true,\"native_wait_calls\":0,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-show_entries",
+        "stream=codec_name,width,height:frame=best_effort_timestamp_time",
+        "-of",
+        "json",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-0-41kA84/sd/LV-0000000000000001-00199bc2acc47fb0.MKV"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\n    \"frames\": [\n        {\n            \"best_effort_timestamp_time\": \"0.000000\"\n        },\n        {\n            \"best_effort_timestamp_time\": \"0.037000\"\n        }\n    ],\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"mjpeg\",\n            \"width\": 96,\n            \"height\": 64\n        }\n    ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-0-41kA84/sd/LV-0000000000000001-00199bc2acc47fb0.MKV",
+        "-f",
+        "null",
+        "-"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-show_entries",
+        "stream=codec_name,width,height:frame=best_effort_timestamp_time",
+        "-of",
+        "json",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-1-y5SHjZ/sd/LV-0000000000000001-00199bc2ada98880.MKV"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\n    \"frames\": [\n        {\n            \"best_effort_timestamp_time\": \"0.000000\"\n        },\n        {\n            \"best_effort_timestamp_time\": \"0.037000\"\n        }\n    ],\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"mjpeg\",\n            \"width\": 96,\n            \"height\": 64\n        }\n    ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-1-y5SHjZ/sd/LV-0000000000000001-00199bc2ada98880.MKV",
+        "-f",
+        "null",
+        "-"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-show_entries",
+        "stream=codec_name,width,height:frame=best_effort_timestamp_time",
+        "-of",
+        "json",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-2-WxVlNR/sd/LV-0000000000000001-00199bc2ae5b6b90.MKV"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\n    \"frames\": [\n        {\n            \"best_effort_timestamp_time\": \"0.000000\"\n        },\n        {\n            \"best_effort_timestamp_time\": \"0.037000\"\n        }\n    ],\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"mjpeg\",\n            \"width\": 96,\n            \"height\": 64\n        }\n    ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-2-WxVlNR/sd/LV-0000000000000001-00199bc2ae5b6b90.MKV",
+        "-f",
+        "null",
+        "-"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-show_entries",
+        "stream=codec_name,width,height:frame=best_effort_timestamp_time",
+        "-of",
+        "json",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-3-Et48ae/sd/LV-0000000000000001-00199bc2af066900.MKV"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\n    \"frames\": [\n        {\n            \"best_effort_timestamp_time\": \"0.000000\"\n        },\n        {\n            \"best_effort_timestamp_time\": \"0.037000\"\n        }\n    ],\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"mjpeg\",\n            \"width\": 96,\n            \"height\": 64\n        }\n    ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-3-Et48ae/sd/LV-0000000000000001-00199bc2af066900.MKV",
+        "-f",
+        "null",
+        "-"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-show_entries",
+        "stream=codec_name,width,height:frame=best_effort_timestamp_time",
+        "-of",
+        "json",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-6-KnQRB9/sd/LV-0000000000000002-00199bc2b080f340.MKV"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\n    \"frames\": [\n        {\n            \"best_effort_timestamp_time\": \"0.000000\"\n        },\n        {\n            \"best_effort_timestamp_time\": \"0.037000\"\n        }\n    ],\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"mjpeg\",\n            \"width\": 96,\n            \"height\": 64\n        }\n    ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-6-KnQRB9/sd/LV-0000000000000002-00199bc2b080f340.MKV",
+        "-f",
+        "null",
+        "-"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-show_entries",
+        "stream=codec_name,width,height:frame=best_effort_timestamp_time",
+        "-of",
+        "json",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-0-CtOkBP/sd/LV-0000000000000001-00199bc2f2bf6688.MKV"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\n    \"frames\": [\n        {\n            \"best_effort_timestamp_time\": \"0.000000\"\n        },\n        {\n            \"best_effort_timestamp_time\": \"0.037000\"\n        }\n    ],\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"mjpeg\",\n            \"width\": 96,\n            \"height\": 64\n        }\n    ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-0-CtOkBP/sd/LV-0000000000000001-00199bc2f2bf6688.MKV",
+        "-f",
+        "null",
+        "-"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-show_entries",
+        "stream=codec_name,width,height:frame=best_effort_timestamp_time",
+        "-of",
+        "json",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-1-37khtq/sd/LV-0000000000000001-00199bc2f540fca0.MKV"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\n    \"frames\": [\n        {\n            \"best_effort_timestamp_time\": \"0.000000\"\n        },\n        {\n            \"best_effort_timestamp_time\": \"0.037000\"\n        }\n    ],\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"mjpeg\",\n            \"width\": 96,\n            \"height\": 64\n        }\n    ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-1-37khtq/sd/LV-0000000000000001-00199bc2f540fca0.MKV",
+        "-f",
+        "null",
+        "-"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-show_entries",
+        "stream=codec_name,width,height:frame=best_effort_timestamp_time",
+        "-of",
+        "json",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-2-IPiijF/sd/LV-0000000000000001-00199bc2f74b9d98.MKV"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\n    \"frames\": [\n        {\n            \"best_effort_timestamp_time\": \"0.000000\"\n        },\n        {\n            \"best_effort_timestamp_time\": \"0.037000\"\n        }\n    ],\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"mjpeg\",\n            \"width\": 96,\n            \"height\": 64\n        }\n    ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-2-IPiijF/sd/LV-0000000000000001-00199bc2f74b9d98.MKV",
+        "-f",
+        "null",
+        "-"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-show_entries",
+        "stream=codec_name,width,height:frame=best_effort_timestamp_time",
+        "-of",
+        "json",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-3-jdvW5q/sd/LV-0000000000000001-00199bc2f95a7c80.MKV"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\n    \"frames\": [\n        {\n            \"best_effort_timestamp_time\": \"0.000000\"\n        },\n        {\n            \"best_effort_timestamp_time\": \"0.037000\"\n        }\n    ],\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"mjpeg\",\n            \"width\": 96,\n            \"height\": 64\n        }\n    ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-3-jdvW5q/sd/LV-0000000000000001-00199bc2f95a7c80.MKV",
+        "-f",
+        "null",
+        "-"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "v:0",
+        "-show_entries",
+        "stream=codec_name,width,height:frame=best_effort_timestamp_time",
+        "-of",
+        "json",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-6-kK1y3F/sd/LV-0000000000000002-00199bc2ff321f50.MKV"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "{\n    \"frames\": [\n        {\n            \"best_effort_timestamp_time\": \"0.000000\"\n        },\n        {\n            \"best_effort_timestamp_time\": \"0.037000\"\n        }\n    ],\n    \"programs\": [\n\n    ],\n    \"stream_groups\": [\n\n    ],\n    \"streams\": [\n        {\n            \"codec_name\": \"mjpeg\",\n            \"width\": 96,\n            \"height\": 64\n        }\n    ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/bin/ffmpeg",
+        "-v",
+        "error",
+        "-i",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/chain-6-kK1y3F/sd/LV-0000000000000002-00199bc2ff321f50.MKV",
+        "-f",
+        "null",
+        "-"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-std=c11",
+        "-O2",
+        "-g0",
+        "-fPIC",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-mno-outline-atomics",
+        "-funwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-omit-frame-pointer",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/movie_binding.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_start_repair_05/movie_binding.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/movie_binding.o"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+        "-u",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/movie_binding.o"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "                 U f3_card_cancel_pending_06\n                 U f3_card_close_dirs_05\n                 U f3_card_hold_05\n                 U f3_card_linux_io_05\n                 U f3_card_native_calls_05\n                 U f3_card_native_try_calls_06\n                 U f3_card_poll_06\n                 U f3_card_release_requests_05\n                 U f3_card_request_06\n                 U f3_card_valid_05\n                 U f4_movie_abort_01\n                 U f4_movie_begin_01\n                 U f4_movie_finish_01\n                 U f4_movie_linux_api_01\n                 U iq4_f4_native_clock_02\n                 U iq4_f4_native_tid_02\n                 U iq4_f4_source_fence_02\n                 U iq4_f4_source_is_ui_02\n                 U memcmp\n                 U memset\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/file",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/movie_binding.o"
+      ],
+      "returncode": 0,
+      "exit": 0,
+      "stdout": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_start_repair_build_05/movie_binding.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped\n",
+      "stderr": ""
+    }
+  ],
+  "inputs": [
+    {
+      "path": "tools/firmware/f4_start_repair_05/movie_binding.c",
+      "bytes": 5514,
+      "sha256": "13e05645878a558c9a837c651ac551038a88d2d4d431f3f9f7dd107f5d45032d"
+    },
+    {
+      "path": "tools/firmware/f3_native_card_bridge_06/card.c",
+      "bytes": 13101,
+      "sha256": "9056e71bfc7ecb9271667e5efdfd50a095d4363038249596f3c20423ffeb2473"
+    },
+    {
+      "path": "tools/firmware/movie_card_01/movie.c",
+      "bytes": 9029,
+      "sha256": "89181dc5a086f131701d2506ab6037f9fffba1550856eb83c02e1291ced9ee7a"
+    },
+    {
+      "path": "tools/firmware/f4_mkv_software_zero_01/native_mkv.c",
+      "bytes": 9249,
+      "sha256": "05da62c5dda9ed74f1d7579d69d84520abdda171334df11305092359b2e9d507"
+    },
+    {
+      "path": "tools/firmware/f3_native_fs_adapter_04/host_posix.c",
+      "bytes": 2038,
+      "sha256": "1f38796b91da1156b73602f7006ec08ab163ac20f3d1dc41338d74a1364fe1d5"
+    },
+    {
+      "path": "tools/firmware/f3_stream_transaction_02/stream.c",
+      "bytes": 10513,
+      "sha256": "d00e96507d0596b8692591fc03969f88107b8b3f76776315c56073cad9a8b496"
+    },
+    {
+      "path": "tools/firmware/f3_save_transaction_01/transaction.c",
+      "bytes": 6606,
+      "sha256": "b6cea8c14282d800c53968e16709485a40ab82f3aff1feec4e511508b723eddd"
+    },
+    {
+      "path": "tests/f4_start_repair_05/test_chain.c",
+      "bytes": 9953,
+      "sha256": "16696e88102bc2a87e09e85f7beb35f9d39c2fcc2e49c68d06a68f261d763099"
+    }
+  ],
+  "object": {
+    "path": "analysis/firmware/f4_start_repair_build_05/movie_binding.o",
+    "bytes": 7176,
+    "sha256": "f28f8dd6c53cfbe5d532049adbb45554154311bf84944884625ffda3c9393c2a"
+  },
+  "original_failure_reproduced": true,
+  "normal_cases": 9,
+  "sanitized_cases": 9,
+  "actual_host_movie_decodes": 10,
+  "camera_accessed": false,
+  "target_executed": false
+}

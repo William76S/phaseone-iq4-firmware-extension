@@ -1,0 +1,29 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution or actual field read.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6b61fc: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  6b6200: 910003fd     	mov	x29, sp
+  6b6204: f9000fe0     	str	x0, [sp, #0x18]
+  6b6208: f9400fe0     	ldr	x0, [sp, #0x18]
+  6b620c: f9400400     	ldr	x0, [x0, #0x8]
+  6b6210: 940002cd     	bl	0x6b6d44 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16984>
+  6b6214: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  6b6218: d65f03c0     	ret
+  6b621c: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  6b6220: 910003fd     	mov	x29, sp
+  6b6224: f9000bf3     	str	x19, [sp, #0x10]
+  6b6228: aa0803f3     	mov	x19, x8
+  6b622c: f90017e0     	str	x0, [sp, #0x28]
+  6b6230: f94017e0     	ldr	x0, [sp, #0x28]
+  6b6234: f9400400     	ldr	x0, [x0, #0x8]
+  6b6238: aa1303e8     	mov	x8, x19
+  6b623c: 940002cb     	bl	0x6b6d68 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x169a8>
+  6b6240: aa1303e0     	mov	x0, x19
+  6b6244: f9400bf3     	ldr	x19, [sp, #0x10]
+  6b6248: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  6b624c: d65f03c0     	ret

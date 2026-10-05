@@ -1,0 +1,183 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPDevelopment.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000000950 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)>:
+     950: 41 57                        	pushq	%r15
+     952: 49 89 d7                     	movq	%rdx, %r15
+     955: 41 56                        	pushq	%r14
+     957: 4c 8d b7 18 0a 00 00         	leaq	0xa18(%rdi), %r14
+     95e: 41 55                        	pushq	%r13
+     960: 41 54                        	pushq	%r12
+     962: 41 89 cc                     	movl	%ecx, %r12d
+     965: 55                           	pushq	%rbp
+     966: 53                           	pushq	%rbx
+     967: 48 89 fb                     	movq	%rdi, %rbx
+     96a: 4c 89 f7                     	movq	%r14, %rdi
+     96d: 48 83 ec 48                  	subq	$0x48, %rsp
+     971: 89 74 24 08                  	movl	%esi, 0x8(%rsp)
+     975: 48 89 54 24 18               	movq	%rdx, 0x18(%rsp)
+     97a: 44 89 44 24 0c               	movl	%r8d, 0xc(%rsp)
+     97f: e8 00 00 00 00               	callq	0x984 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x34>
+		0000000000000980:  R_X86_64_PLT32	P1::Platform::Thread_Cpp::IsRunning() const-0x4
+     984: 84 c0                        	testb	%al, %al
+     986: 0f 84 0a 02 00 00            	je	0xb96 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x246>
+     98c: 4d 85 ff                     	testq	%r15, %r15
+     98f: b8 00 00 00 00               	movl	$0x0, %eax
+     994: 48 8d 7b 78                  	leaq	0x78(%rbx), %rdi
+     998: 44 0f 44 e0                  	cmovel	%eax, %r12d
+     99c: 4c 8d 6c 24 38               	leaq	0x38(%rsp), %r13
+     9a1: 4c 8d 7c 24 30               	leaq	0x30(%rsp), %r15
+     9a6: e8 00 00 00 00               	callq	0x9ab <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x5b>
+		00000000000009a7:  R_X86_64_PLT32	P1::IQP::IQPMessageProtocolInfo::GetNegotiatedMessageProtocolVersion() const-0x4
+     9ab: 48 8d 4c 24 26               	leaq	0x26(%rsp), %rcx
+     9b0: 4c 89 ea                     	movq	%r13, %rdx
+     9b3: 4c 89 fe                     	movq	%r15, %rsi
+     9b6: 48 8d 2d 00 00 00 00         	leaq	(%rip), %rbp            # 0x9bd <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x6d>
+		00000000000009b9:  R_X86_64_PC32	P1::IQP::DevelopmentProtocol::MessageHeader::versionHeaderSizes-0x4
+     9bd: 66 89 44 24 26               	movw	%ax, 0x26(%rsp)
+     9c2: 48 8d 7c 24 28               	leaq	0x28(%rsp), %rdi
+     9c7: 48 8d 45 04                  	leaq	0x4(%rbp), %rax
+     9cb: 48 89 6c 24 38               	movq	%rbp, 0x38(%rsp)
+     9d0: 48 89 44 24 30               	movq	%rax, 0x30(%rsp)
+     9d5: e8 00 00 00 00               	callq	0x9da <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x8a>
+		00000000000009d6:  R_X86_64_PLT32	auto std::__find_if<std::reverse_iterator<std::pair<P1::IQP::MessageProtocolVersion, unsigned short> const*>, __gnu_cxx::__ops::_Iter_pred<unsigned short P1::IQP::GetIqpVersionSizeConst<P1::IQP::DevelopmentProtocol::MessageHeader::versionHeaderSizes>(unsigned char, unsigned char)::'lambda'(auto const&)>>(auto, auto, __gnu_cxx::__ops::_Iter_pred<unsigned short P1::IQP::GetIqpVersionSizeConst<P1::IQP::DevelopmentProtocol::MessageHeader::versionHeaderSizes>(unsigned char, unsigned char)::'lambda'(auto const&)>, std::random_access_iterator_tag)-0x4
+     9da: 48 8b 44 24 28               	movq	0x28(%rsp), %rax
+     9df: 48 39 e8                     	cmpq	%rbp, %rax
+     9e2: 0f 84 08 02 00 00            	je	0xbf0 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x2a0>
+     9e8: 0f b7 50 fe                  	movzwl	-0x2(%rax), %edx
+     9ec: 89 d1                        	movl	%edx, %ecx
+     9ee: 42 8d 3c 22                  	leal	(%rdx,%r12), %edi
+     9f2: 89 4c 24 14                  	movl	%ecx, 0x14(%rsp)
+     9f6: 89 7c 24 10                  	movl	%edi, 0x10(%rsp)
+     9fa: e8 00 00 00 00               	callq	0x9ff <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0xaf>
+		00000000000009fb:  R_X86_64_PLT32	operator new[](unsigned long)-0x4
+     9ff: 8b 4c 24 14                  	movl	0x14(%rsp), %ecx
+     a03: 8b 54 24 10                  	movl	0x10(%rsp), %edx
+     a07: c7 00 11 22 33 44            	movl	$0x44332211, (%rax)     # imm = 0x44332211
+     a0d: 48 89 c5                     	movq	%rax, %rbp
+     a10: c6 40 04 ff                  	movb	$-0x1, 0x4(%rax)
+     a14: 0f b6 44 24 08               	movzbl	0x8(%rsp), %eax
+     a19: 66 89 4d 06                  	movw	%cx, 0x6(%rbp)
+     a1d: 88 45 05                     	movb	%al, 0x5(%rbp)
+     a20: 89 55 08                     	movl	%edx, 0x8(%rbp)
+     a23: c7 45 0c 00 00 00 00         	movl	$0x0, 0xc(%rbp)
+     a2a: 45 85 e4                     	testl	%r12d, %r12d
+     a2d: 0f 85 8d 01 00 00            	jne	0xbc0 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x270>
+     a33: 0f b6 54 24 08               	movzbl	0x8(%rsp), %edx
+     a38: 4c 89 ef                     	movq	%r13, %rdi
+     a3b: 44 89 e1                     	movl	%r12d, %ecx
+     a3e: 31 c0                        	xorl	%eax, %eax
+     a40: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0xa47 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0xf7>
+		0000000000000a43:  R_X86_64_PC32	.LC20-0x4
+     a47: e8 00 00 00 00               	callq	0xa4c <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0xfc>
+		0000000000000a48:  R_X86_64_PLT32	P1::Universal::StringFormat::StringFormat(wchar_t const*, ...)-0x4
+     a4c: bf 28 00 00 00               	movl	$0x28, %edi
+     a51: e8 00 00 00 00               	callq	0xa56 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x106>
+		0000000000000a52:  R_X86_64_PLT32	operator new(unsigned long)-0x4
+     a56: 49 89 c4                     	movq	%rax, %r12
+     a59: 48 8d 05 00 00 00 00         	leaq	(%rip), %rax            # 0xa60 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x110>
+		0000000000000a5c:  R_X86_64_PC32	vtable for P1::IQP::SendMessageCommand+0xc
+     a60: 4c 89 ef                     	movq	%r13, %rdi
+     a63: 49 89 04 24                  	movq	%rax, (%r12)
+     a67: 48 8d 05 92 f5 ff ff         	leaq	-0xa6e(%rip), %rax      # 0x0 <.text>
+     a6e: 49 89 44 24 10               	movq	%rax, 0x10(%r12)
+     a73: 8b 44 24 0c                  	movl	0xc(%rsp), %eax
+     a77: 49 89 6c 24 18               	movq	%rbp, 0x18(%r12)
+     a7c: 49 c7 44 24 08 00 00 00 00   	movq	$0x0, 0x8(%r12)
+     a85: 41 89 44 24 20               	movl	%eax, 0x20(%r12)
+     a8a: e8 00 00 00 00               	callq	0xa8f <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x13f>
+		0000000000000a8b:  R_X86_64_PLT32	P1::Universal::StringFormat::operator wchar_t const*() const-0x4
+     a8f: 49 8b 7c 24 08               	movq	0x8(%r12), %rdi
+     a94: 48 89 c5                     	movq	%rax, %rbp
+     a97: 48 39 f8                     	cmpq	%rdi, %rax
+     a9a: 74 7b                        	je	0xb17 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x1c7>
+     a9c: 48 85 ff                     	testq	%rdi, %rdi
+     a9f: 74 05                        	je	0xaa6 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x156>
+     aa1: e8 00 00 00 00               	callq	0xaa6 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x156>
+		0000000000000aa2:  R_X86_64_PLT32	operator delete[](void*)-0x4
+     aa6: 49 c7 44 24 08 00 00 00 00   	movq	$0x0, 0x8(%r12)
+     aaf: 48 85 ed                     	testq	%rbp, %rbp
+     ab2: 74 63                        	je	0xb17 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x1c7>
+     ab4: 8b 7d 00                     	movl	(%rbp), %edi
+     ab7: 85 ff                        	testl	%edi, %edi
+     ab9: 74 5c                        	je	0xb17 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x1c7>
+     abb: 31 c0                        	xorl	%eax, %eax
+     abd: 0f 1f 00                     	nopl	(%rax)
+     ac0: 48 89 c7                     	movq	%rax, %rdi
+     ac3: 48 83 c0 01                  	addq	$0x1, %rax
+     ac7: 8b 74 85 00                  	movl	(%rbp,%rax,4), %esi
+     acb: 85 f6                        	testl	%esi, %esi
+     acd: 75 f1                        	jne	0xac0 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x170>
+     acf: 48 b8 fe ff ff ff ff ff ff 1f	movabsq	$0x1ffffffffffffffe, %rax # imm = 0x1FFFFFFFFFFFFFFE
+     ad9: 48 83 c7 02                  	addq	$0x2, %rdi
+     add: 48 39 c7                     	cmpq	%rax, %rdi
+     ae0: 0f 87 00 00 00 00            	ja	0xae6 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x196>
+		0000000000000ae2:  R_X86_64_PC32	.text.unlikely+0x2c4
+     ae6: 48 c1 e7 02                  	shlq	$0x2, %rdi
+     aea: e8 00 00 00 00               	callq	0xaef <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x19f>
+		0000000000000aeb:  R_X86_64_PLT32	operator new[](unsigned long)-0x4
+     aef: 8b 4d 00                     	movl	(%rbp), %ecx
+     af2: 49 89 44 24 08               	movq	%rax, 0x8(%r12)
+     af7: 31 d2                        	xorl	%edx, %edx
+     af9: 85 c9                        	testl	%ecx, %ecx
+     afb: 0f 84 df 00 00 00            	je	0xbe0 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x290>
+     b01: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+     b08: 8b 4c 15 00                  	movl	(%rbp,%rdx), %ecx
+     b0c: 89 0c 10                     	movl	%ecx, (%rax,%rdx)
+     b0f: 48 83 c2 04                  	addq	$0x4, %rdx
+     b13: 85 c9                        	testl	%ecx, %ecx
+     b15: 75 f1                        	jne	0xb08 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x1b8>
+     b17: 4c 89 ef                     	movq	%r13, %rdi
+     b1a: 48 8d ab f0 0d 00 00         	leaq	0xdf0(%rbx), %rbp
+     b21: 4c 89 64 24 30               	movq	%r12, 0x30(%rsp)
+     b26: e8 00 00 00 00               	callq	0xb2b <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x1db>
+		0000000000000b27:  R_X86_64_PLT32	P1::Universal::StringFormat::~StringFormat()-0x4
+     b2b: 4c 89 fe                     	movq	%r15, %rsi
+     b2e: 48 89 ef                     	movq	%rbp, %rdi
+     b31: e8 00 00 00 00               	callq	0xb36 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x1e6>
+		0000000000000b32:  R_X86_64_PLT32	P1::IQP::SendMessageQueue::Add(std::unique_ptr<P1::IQP::SendMessageCommand, std::default_delete<P1::IQP::SendMessageCommand>>&)-0x4
+     b36: 4c 89 f7                     	movq	%r14, %rdi
+     b39: e8 00 00 00 00               	callq	0xb3e <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x1ee>
+		0000000000000b3a:  R_X86_64_PLT32	P1::Platform::Thread_Cpp::IsRunning() const-0x4
+     b3e: 84 c0                        	testb	%al, %al
+     b40: 74 66                        	je	0xba8 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x258>
+     b42: 48 8b 6c 24 30               	movq	0x30(%rsp), %rbp
+     b47: 48 85 ed                     	testq	%rbp, %rbp
+     b4a: 74 4a                        	je	0xb96 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x246>
+     b4c: 48 8b 45 00                  	movq	(%rbp), %rax
+     b50: 48 8d 15 00 00 00 00         	leaq	(%rip), %rdx            # 0xb57 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x207>
+		0000000000000b53:  R_X86_64_PC32	P1::IQP::SendMessageCommand::~SendMessageCommand()-0x4
+     b57: 48 8b 40 08                  	movq	0x8(%rax), %rax
+     b5b: 48 39 d0                     	cmpq	%rdx, %rax
+     b5e: 0f 85 9c 00 00 00            	jne	0xc00 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x2b0>
+     b64: 48 8b 7d 18                  	movq	0x18(%rbp), %rdi
+     b68: 48 8d 05 00 00 00 00         	leaq	(%rip), %rax            # 0xb6f <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x21f>
+		0000000000000b6b:  R_X86_64_PC32	vtable for P1::IQP::SendMessageCommand+0xc
+     b6f: 48 89 45 00                  	movq	%rax, (%rbp)
+     b73: 48 85 ff                     	testq	%rdi, %rdi
+     b76: 74 03                        	je	0xb7b <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x22b>
+     b78: ff 55 10                     	callq	*0x10(%rbp)
+     b7b: 48 8b 7d 08                  	movq	0x8(%rbp), %rdi
+     b7f: 48 85 ff                     	testq	%rdi, %rdi
+     b82: 74 05                        	je	0xb89 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x239>
+     b84: e8 00 00 00 00               	callq	0xb89 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x239>
+		0000000000000b85:  R_X86_64_PLT32	operator delete[](void*)-0x4
+     b89: be 28 00 00 00               	movl	$0x28, %esi
+     b8e: 48 89 ef                     	movq	%rbp, %rdi
+     b91: e8 00 00 00 00               	callq	0xb96 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x246>
+		0000000000000b92:  R_X86_64_PLT32	operator delete(void*, unsigned long)-0x4
+     b96: 48 83 c4 48                  	addq	$0x48, %rsp
+     b9a: 5b                           	popq	%rbx
+     b9b: 5d                           	popq	%rbp
+     b9c: 41 5c                        	popq	%r12
+     b9e: 41 5d                        	popq	%r13
+     ba0: 41 5e                        	popq	%r14
+     ba2: 41 5f                        	popq	%r15
+     ba4: c3                           	retq
+     ba5: 0f 1f 00                     	nopl	(%rax)
+     ba8: 48 89 ef                     	movq	%rbp, %rdi
+     bab: e8 00 00 00 00               	callq	0xbb0 <P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)+0x260>
+		0000000000000bac:  R_X86_64_PLT32	P1::IQP::SendMessageQueue::Clear()-0x4

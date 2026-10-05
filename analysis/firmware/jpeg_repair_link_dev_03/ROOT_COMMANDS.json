@@ -1,0 +1,74 @@
+[
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_f3_f4_user_integration_05/build.py",
+      "--spec",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_f3_f4_user_integration_05/INPUTS_JPEG_DEV_03.json",
+      "--spec-sha256",
+      "6fa0de04453388f081818eb8a03f55d6f18fcadf6fb9e657b15432c15670733f",
+      "--output",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/jpeg_repair_link_dev_03"
+    ],
+    "exit": 0,
+    "stdout": "13227744 actual linked User bytes, 65 objects; seal and review still required\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_linked_unwind_03/verify.py",
+      "--build",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/jpeg_repair_link_dev_03"
+    ],
+    "exit": 0,
+    "stdout": "544 own FDEs, 63 LSDAs; 4810 CFI operations; static only PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_linked_contract_02/seal.py",
+      "--build",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/jpeg_repair_link_dev_03",
+      "--loader-proof",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_init_repair_01/ABI_PROOF.json"
+    ],
+    "exit": 0,
+    "stdout": "142 actual immutable regions sealed; no target acceptance\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/native_linked_unwind_03/verify.py",
+      "--build",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/jpeg_repair_link_dev_03"
+    ],
+    "exit": 0,
+    "stdout": "544 own FDEs, 63 LSDAs; 4810 CFI operations; static only PASS\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_f3_f4_user_integration_05/verify_user.py",
+      "--build",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/jpeg_repair_link_dev_03"
+    ],
+    "exit": 0,
+    "stdout": "25 actual branches; 65 exact objects; finite inspection PASS; no target acceptance\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f1_f3_f4_user_integration_05/verify_runtime_pins.py",
+      "--build",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/jpeg_repair_link_dev_03"
+    ],
+    "exit": 0,
+    "stdout": "61 actual linked original-byte windows match\n",
+    "stderr": ""
+  }
+]

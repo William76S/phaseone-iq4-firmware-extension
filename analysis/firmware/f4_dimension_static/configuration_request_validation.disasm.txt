@@ -1,0 +1,113 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  86ab28: f94017e0     	ldr	x0, [sp, #0x28]
+  86ab2c: f946a400     	ldr	x0, [x0, #0xd48]
+  86ab30: 39402000     	ldrb	w0, [x0, #0x8]
+  86ab34: 52000000     	eor	w0, w0, #0x1
+  86ab38: 12001c00     	and	w0, w0, #0xff
+  86ab3c: 7100001f     	cmp	w0, #0x0
+  86ab40: 540001e0     	b.eq	0x86ab7c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x267b8>
+  86ab44: f94017e6     	ldr	x6, [sp, #0x28]
+  86ab48: f94017e0     	ldr	x0, [sp, #0x28]
+  86ab4c: f9436801     	ldr	x1, [x0, #0x6d0]
+  86ab50: f00029c0     	adrp	x0, 0xda5000
+  86ab54: 913f4005     	add	x5, x0, #0xfd0
+  86ab58: 52800024     	mov	w4, #0x1                // =1
+  86ab5c: 72a02004     	movk	w4, #0x100, lsl #16
+  86ab60: aa0103e3     	mov	x3, x1
+  86ab64: f9400fe2     	ldr	x2, [sp, #0x18]
+  86ab68: f94013e1     	ldr	x1, [sp, #0x20]
+  86ab6c: aa0603e0     	mov	x0, x6
+  86ab70: 97ffe871     	bl	0x864d34 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x20970>
+  86ab74: 52800000     	mov	w0, #0x0                // =0
+  86ab78: 1400011b     	b	0x86afe4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26c20>
+  86ab7c: f9400be0     	ldr	x0, [sp, #0x10]
+  86ab80: b9401401     	ldr	w1, [x0, #0x14]
+  86ab84: f9400be0     	ldr	x0, [sp, #0x10]
+  86ab88: b9401c00     	ldr	w0, [x0, #0x1c]
+  86ab8c: 0b000021     	add	w1, w1, w0
+  86ab90: f94017e0     	ldr	x0, [sp, #0x28]
+  86ab94: f946a400     	ldr	x0, [x0, #0xd48]
+  86ab98: b9404400     	ldr	w0, [x0, #0x44]
+  86ab9c: 6b00003f     	cmp	w1, w0
+  86aba0: 54000268     	b.hi	0x86abec <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26828>
+  86aba4: f9400be0     	ldr	x0, [sp, #0x10]
+  86aba8: b9401801     	ldr	w1, [x0, #0x18]
+  86abac: f9400be0     	ldr	x0, [sp, #0x10]
+  86abb0: b9402000     	ldr	w0, [x0, #0x20]
+  86abb4: 0b000021     	add	w1, w1, w0
+  86abb8: f94017e0     	ldr	x0, [sp, #0x28]
+  86abbc: f946a400     	ldr	x0, [x0, #0xd48]
+  86abc0: b9404800     	ldr	w0, [x0, #0x48]
+  86abc4: 6b00003f     	cmp	w1, w0
+  86abc8: 54000128     	b.hi	0x86abec <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26828>
+  86abcc: f9400be0     	ldr	x0, [sp, #0x10]
+  86abd0: b9401c00     	ldr	w0, [x0, #0x1c]
+  86abd4: 7100241f     	cmp	w0, #0x9
+  86abd8: 540000a9     	b.ls	0x86abec <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26828>
+  86abdc: f9400be0     	ldr	x0, [sp, #0x10]
+  86abe0: b9402000     	ldr	w0, [x0, #0x20]
+  86abe4: 7100241f     	cmp	w0, #0x9
+  86abe8: 540001e8     	b.hi	0x86ac24 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26860>
+  86abec: f94017e6     	ldr	x6, [sp, #0x28]
+  86abf0: f94017e0     	ldr	x0, [sp, #0x28]
+  86abf4: f9436801     	ldr	x1, [x0, #0x6d0]
+  86abf8: f00029c0     	adrp	x0, 0xda5000
+  86abfc: 913fa005     	add	x5, x0, #0xfe8
+  86ac00: 528000a4     	mov	w4, #0x5                // =5
+  86ac04: 72a02004     	movk	w4, #0x100, lsl #16
+  86ac08: aa0103e3     	mov	x3, x1
+  86ac0c: f9400fe2     	ldr	x2, [sp, #0x18]
+  86ac10: f94013e1     	ldr	x1, [sp, #0x20]
+  86ac14: aa0603e0     	mov	x0, x6
+  86ac18: 97ffe847     	bl	0x864d34 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x20970>
+  86ac1c: 52800000     	mov	w0, #0x0                // =0
+  86ac20: 140000f1     	b	0x86afe4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26c20>
+  86ac24: f9400be0     	ldr	x0, [sp, #0x10]
+  86ac28: b9403001     	ldr	w1, [x0, #0x30]
+  86ac2c: f94017e0     	ldr	x0, [sp, #0x28]
+  86ac30: b94d8000     	ldr	w0, [x0, #0xd80]
+  86ac34: 0a000020     	and	w0, w1, w0
+  86ac38: 7100001f     	cmp	w0, #0x0
+  86ac3c: 540001e1     	b.ne	0x86ac78 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x268b4>
+  86ac40: f94017e6     	ldr	x6, [sp, #0x28]
+  86ac44: f94017e0     	ldr	x0, [sp, #0x28]
+  86ac48: f9436801     	ldr	x1, [x0, #0x6d0]
+  86ac4c: f00029c0     	adrp	x0, 0xda5000
+  86ac50: 913fe005     	add	x5, x0, #0xff8
+  86ac54: 528000a4     	mov	w4, #0x5                // =5
+  86ac58: 72a02004     	movk	w4, #0x100, lsl #16
+  86ac5c: aa0103e3     	mov	x3, x1
+  86ac60: f9400fe2     	ldr	x2, [sp, #0x18]
+  86ac64: f94013e1     	ldr	x1, [sp, #0x20]
+  86ac68: aa0603e0     	mov	x0, x6
+  86ac6c: 97ffe832     	bl	0x864d34 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x20970>
+  86ac70: 52800000     	mov	w0, #0x0                // =0
+  86ac74: 140000dc     	b	0x86afe4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26c20>
+  86ac78: f9400be0     	ldr	x0, [sp, #0x10]
+  86ac7c: 3940d001     	ldrb	w1, [x0, #0x34]
+  86ac80: f94017e0     	ldr	x0, [sp, #0x28]
+  86ac84: 39761000     	ldrb	w0, [x0, #0xd84]
+  86ac88: 0a000020     	and	w0, w1, w0
+  86ac8c: 12001c00     	and	w0, w0, #0xff
+  86ac90: 7100001f     	cmp	w0, #0x0
+  86ac94: 540001e1     	b.ne	0x86acd0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2690c>
+  86ac98: f94017e6     	ldr	x6, [sp, #0x28]
+  86ac9c: f94017e0     	ldr	x0, [sp, #0x28]
+  86aca0: f9436801     	ldr	x1, [x0, #0x6d0]
+  86aca4: 900029e0     	adrp	x0, 0xda6000
+  86aca8: 91002005     	add	x5, x0, #0x8
+  86acac: 528000a4     	mov	w4, #0x5                // =5
+  86acb0: 72a02004     	movk	w4, #0x100, lsl #16
+  86acb4: aa0103e3     	mov	x3, x1
+  86acb8: f9400fe2     	ldr	x2, [sp, #0x18]
+  86acbc: f94013e1     	ldr	x1, [sp, #0x20]
+  86acc0: aa0603e0     	mov	x0, x6
+  86acc4: 97ffe81c     	bl	0x864d34 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x20970>
+  86acc8: 52800000     	mov	w0, #0x0                // =0
+  86accc: 140000c6     	b	0x86afe4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26c20>

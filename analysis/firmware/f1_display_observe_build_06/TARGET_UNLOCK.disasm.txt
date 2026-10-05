@@ -1,0 +1,294 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_display_observe_build_06/libiq4_f1_display_observe_06_default_off.so:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000001dd08 <pthread_mutex_unlock>:
+   1dd08: a9ba7bfd     	stp	x29, x30, [sp, #-0x60]!
+   1dd0c: a9016ffc     	stp	x28, x27, [sp, #0x10]
+   1dd10: a90267fa     	stp	x26, x25, [sp, #0x20]
+   1dd14: a9035ff8     	stp	x24, x23, [sp, #0x30]
+   1dd18: a90457f6     	stp	x22, x21, [sp, #0x40]
+   1dd1c: a9054ff4     	stp	x20, x19, [sp, #0x50]
+   1dd20: 910003fd     	mov	x29, sp
+   1dd24: d14007ff     	sub	sp, sp, #0x1, lsl #12   // =0x1000
+   1dd28: d102c3ff     	sub	sp, sp, #0xb0
+   1dd2c: d50320ff     	xpaclri
+   1dd30: d503201f     	nop
+   1dd34: 10110638     	adr	x24, 0x3fdf8 <_ZN12_GLOBAL__N_115original_unlockE.0>
+   1dd38: c8dfff16     	ldar	x22, [x24]
+   1dd3c: aa0003f5     	mov	x21, x0
+   1dd40: aa1e03f4     	mov	x20, x30
+   1dd44: 94000313     	bl	0x1e990 <__errno_location@plt>
+   1dd48: b9400017     	ldr	w23, [x0]
+   1dd4c: aa0003f3     	mov	x19, x0
+   1dd50: b5000096     	cbnz	x22, 0x1dd60 <pthread_mutex_unlock+0x58>
+   1dd54: 97fffdfb     	bl	0x1d540 <_ZN12_GLOBAL__N_116resolve_originalEv>
+   1dd58: 36002140     	tbz	w0, #0x0, 0x1e180 <pthread_mutex_unlock+0x478>
+   1dd5c: c8dfff16     	ldar	x22, [x24]
+   1dd60: b9000277     	str	w23, [x19]
+   1dd64: aa1503e0     	mov	x0, x21
+   1dd68: d63f02c0     	blr	x22
+   1dd6c: 529d1588     	mov	w8, #0xe8ac             // =59564
+   1dd70: b9400276     	ldr	w22, [x19]
+   1dd74: 72a00d68     	movk	w8, #0x6b, lsl #16
+   1dd78: eb08029f     	cmp	x20, x8
+   1dd7c: 54001ee1     	b.ne	0x1e158 <pthread_mutex_unlock+0x450>
+   1dd80: 35001ec0     	cbnz	w0, 0x1e158 <pthread_mutex_unlock+0x450>
+   1dd84: d503201f     	nop
+   1dd88: 1011b098     	adr	x24, 0x41398 <_ZN12_GLOBAL__N_116diagnostic_readyE.0>
+   1dd8c: 08dfff09     	ldarb	w9, [x24]
+   1dd90: 36001e49     	tbz	w9, #0x0, 0x1e158 <pthread_mutex_unlock+0x450>
+   1dd94: 2a0003f7     	mov	w23, w0
+   1dd98: b0000080     	adrp	x0, 0x2e000 <_ZN12_GLOBAL__N_16insideE+0x2e000>
+   1dd9c: f9472001     	ldr	x1, [x0, #0xe40]
+   1dda0: 91390000     	add	x0, x0, #0xe40
+   1dda4: d63f0020     	blr	x1
+   1dda8: aa0003f4     	mov	x20, x0
+   1ddac: d53bd059     	mrs	x25, TPIDR_EL0
+   1ddb0: 2a1703e0     	mov	w0, w23
+   1ddb4: 38746b29     	ldrb	w9, [x25, x20]
+   1ddb8: 37001d09     	tbnz	w9, #0x0, 0x1e158 <pthread_mutex_unlock+0x450>
+   1ddbc: 52800029     	mov	w9, #0x1                // =1
+   1ddc0: 38346b29     	strb	w9, [x25, x20]
+   1ddc4: 2a1f03e1     	mov	w1, wzr
+   1ddc8: d53bd049     	mrs	x9, TPIDR_EL0
+   1ddcc: a93d77a8     	stp	x8, x29, [x29, #-0x30]
+   1ddd0: 913b63e8     	add	x8, sp, #0xed8
+   1ddd4: a93e57a9     	stp	x9, x21, [x29, #-0x20]
+   1ddd8: d2800035     	mov	x21, #0x1               // =1
+   1dddc: 91002100     	add	x0, x8, #0x8
+   1dde0: f2c03515     	movk	x21, #0x1a8, lsl #32
+   1dde4: 52803402     	mov	w2, #0x1a0              // =416
+   1dde8: b81f03bf     	stur	wzr, [x29, #-0x10]
+   1ddec: f9076ff5     	str	x21, [sp, #0xed8]
+   1ddf0: 940002d4     	bl	0x1e940 <memset@plt>
+   1ddf4: f000011a     	adrp	x26, 0x40000 <_ZN12_GLOBAL__N_114module_storageE+0x200>
+   1ddf8: 913b63e1     	add	x1, sp, #0xed8
+   1ddfc: f941db40     	ldr	x0, [x26, #0x3b0]
+   1de00: 97fff1f4     	bl	0x1a5d0 <_ZNK3iq42f17entry016Module8snapshotERNS1_11ObservationE>
+   1de04: f941db48     	ldr	x8, [x26, #0x3b0]
+   1de08: 2a0003fb     	mov	w27, w0
+   1de0c: d100c3a1     	sub	x1, x29, #0x30
+   1de10: aa0803e0     	mov	x0, x8
+   1de14: 97fff102     	bl	0x1a21c <_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE>
+   1de18: 9134c3e8     	add	x8, sp, #0xd30
+   1de1c: 2a1f03e1     	mov	w1, wzr
+   1de20: 52803402     	mov	w2, #0x1a0              // =416
+   1de24: 91002100     	add	x0, x8, #0x8
+   1de28: f9069bf5     	str	x21, [sp, #0xd30]
+   1de2c: 940002c5     	bl	0x1e940 <memset@plt>
+   1de30: f941db40     	ldr	x0, [x26, #0x3b0]
+   1de34: 9134c3e1     	add	x1, sp, #0xd30
+   1de38: 97fff1e6     	bl	0x1a5d0 <_ZNK3iq42f17entry016Module8snapshotERNS1_11ObservationE>
+   1de3c: 360018a0     	tbz	w0, #0x0, 0x1e150 <pthread_mutex_unlock+0x448>
+   1de40: b000009a     	adrp	x26, 0x2e000 <_ZN12_GLOBAL__N_16insideE+0x2e000>
+   1de44: 912923f5     	add	x21, sp, #0xa48
+   1de48: f9470f5a     	ldr	x26, [x26, #0xe18]
+   1de4c: 885fff48     	ldaxr	w8, [x26]
+   1de50: 11000508     	add	w8, w8, #0x1
+   1de54: 8809ff48     	stlxr	w9, w8, [x26]
+   1de58: 35ffffa9     	cbnz	w9, 0x1de4c <pthread_mutex_unlock+0x144>
+   1de5c: 91004340     	add	x0, x26, #0x10
+   1de60: 9134c3e1     	add	x1, sp, #0xd30
+   1de64: 52803502     	mov	w2, #0x1a8              // =424
+   1de68: 940002be     	bl	0x1e960 <memcpy@plt>
+   1de6c: 885f7f48     	ldxr	w8, [x26]
+   1de70: 11000508     	add	w8, w8, #0x1
+   1de74: 8809ff48     	stlxr	w9, w8, [x26]
+   1de78: 35ffffa9     	cbnz	w9, 0x1de6c <pthread_mutex_unlock+0x164>
+   1de7c: b94ddfe8     	ldr	w8, [sp, #0xddc]
+   1de80: b90017fb     	str	w27, [sp, #0x14]
+   1de84: 7100fd1f     	cmp	w8, #0x3f
+   1de88: 54000108     	b.hi	0x1dea8 <pthread_mutex_unlock+0x1a0>
+   1de8c: f946a7e8     	ldr	x8, [sp, #0xd48]
+   1de90: f100fd1f     	cmp	x8, #0x3f
+   1de94: 540000a8     	b.hi	0x1dea8 <pthread_mutex_unlock+0x1a0>
+   1de98: b94d3fe8     	ldr	w8, [sp, #0xd3c]
+   1de9c: 121f7908     	and	w8, w8, #0xfffffffe
+   1dea0: 7100111f     	cmp	w8, #0x4
+   1dea4: 54000041     	b.ne	0x1deac <pthread_mutex_unlock+0x1a4>
+   1dea8: 089fff1f     	stlrb	wzr, [x24]
+   1deac: d2800088     	mov	x8, #0x4                // =4
+   1deb0: d503201f     	nop
+   1deb4: 10f192a9     	adr	x9, 0x1108 <_ZN3iq42f17stack058HomeNodeE+0x60>
+   1deb8: f2c05d08     	movk	x8, #0x2e8, lsl #32
+   1debc: 2a1f03e1     	mov	w1, wzr
+   1dec0: 52804a02     	mov	w2, #0x250              // =592
+   1dec4: f90527e8     	str	x8, [sp, #0xa48]
+   1dec8: 52800108     	mov	w8, #0x8                // =8
+   1decc: b90a53e8     	str	w8, [sp, #0xa50]
+   1ded0: a940212a     	ldp	x10, x8, [x9]
+   1ded4: f800c2bf     	stur	xzr, [x21, #0xc]
+   1ded8: f80142bf     	stur	xzr, [x21, #0x14]
+   1dedc: aa0803fb     	mov	x27, x8
+   1dee0: f90547e8     	str	x8, [sp, #0xa88]
+   1dee4: a941212b     	ldp	x11, x8, [x9, #0x10]
+   1dee8: d2800029     	mov	x9, #0x1                // =1
+   1deec: f2c03509     	movk	x9, #0x1a8, lsl #32
+   1def0: f801c2bf     	stur	xzr, [x21, #0x1c]
+   1def4: f80242bf     	stur	xzr, [x21, #0x24]
+   1def8: f9000fe8     	str	x8, [sp, #0x18]
+   1defc: f9054fe8     	str	x8, [sp, #0xa98]
+   1df00: 52861e08     	mov	w8, #0x30f0             // =12528
+   1df04: 72a016a8     	movk	w8, #0xb5, lsl #16
+   1df08: f802c2bf     	stur	xzr, [x21, #0x2c]
+   1df0c: aa0a03f5     	mov	x21, x10
+   1df10: f90553e8     	str	x8, [sp, #0xaa0]
+   1df14: 912923e8     	add	x8, sp, #0xa48
+   1df18: 91026100     	add	x0, x8, #0x98
+   1df1c: b90a7fff     	str	wzr, [sp, #0xa7c]
+   1df20: f90543ea     	str	x10, [sp, #0xa80]
+   1df24: f90007eb     	str	x11, [sp, #0x8]
+   1df28: f9054beb     	str	x11, [sp, #0xa90]
+   1df2c: f90567ff     	str	xzr, [sp, #0xac8]
+   1df30: f90563ff     	str	xzr, [sp, #0xac0]
+   1df34: f9055fff     	str	xzr, [sp, #0xab8]
+   1df38: f9055bff     	str	xzr, [sp, #0xab0]
+   1df3c: f90557ff     	str	xzr, [sp, #0xaa8]
+   1df40: f9056bff     	str	xzr, [sp, #0xad0]
+   1df44: f9056fe9     	str	x9, [sp, #0xad8]
+   1df48: 9400027e     	bl	0x1e940 <memset@plt>
+   1df4c: f0000108     	adrp	x8, 0x40000 <_ZN12_GLOBAL__N_114module_storageE+0x200>
+   1df50: f9435d00     	ldr	x0, [x8, #0x6b8]
+   1df54: b40002c0     	cbz	x0, 0x1dfac <pthread_mutex_unlock+0x2a4>
+   1df58: 91002348     	add	x8, x26, #0x8
+   1df5c: d100c3a1     	sub	x1, x29, #0x30
+   1df60: 9134c3e2     	add	x2, sp, #0xd30
+   1df64: 88dffd03     	ldar	w3, [x8]
+   1df68: 912923e4     	add	x4, sp, #0xa48
+   1df6c: 97ffe59e     	bl	0x175e4 <_ZN3iq42f19observe049Collector7captureERKNS0_11native_ui0213BoundaryInputERKNS0_7entry0111ObservationEjRNS1_8MetadataE>
+   1df70: 360001e0     	tbz	w0, #0x0, 0x1dfac <pthread_mutex_unlock+0x2a4>
+   1df74: d503201f     	nop
+   1df78: 1010895c     	adr	x28, 0x3f0a0 <iq4_f1_geometry_observed_04>
+   1df7c: 885fff88     	ldaxr	w8, [x28]
+   1df80: 11000508     	add	w8, w8, #0x1
+   1df84: 8809ff88     	stlxr	w9, w8, [x28]
+   1df88: 35ffffa9     	cbnz	w9, 0x1df7c <pthread_mutex_unlock+0x274>
+   1df8c: 91004380     	add	x0, x28, #0x10
+   1df90: 912923e1     	add	x1, sp, #0xa48
+   1df94: 52805d02     	mov	w2, #0x2e8              // =744
+   1df98: 94000272     	bl	0x1e960 <memcpy@plt>
+   1df9c: 885f7f88     	ldxr	w8, [x28]
+   1dfa0: 11000508     	add	w8, w8, #0x1
+   1dfa4: 8809ff88     	stlxr	w9, w8, [x28]
+   1dfa8: 35ffffa9     	cbnz	w9, 0x1df9c <pthread_mutex_unlock+0x294>
+   1dfac: d28000a8     	mov	x8, #0x5                // =5
+   1dfb0: f94007fc     	ldr	x28, [sp, #0x8]
+   1dfb4: d2800029     	mov	x9, #0x1                // =1
+   1dfb8: f2c09308     	movk	x8, #0x498, lsl #32
+   1dfbc: f2c03509     	movk	x9, #0x1a8, lsl #32
+   1dfc0: 2a1f03e1     	mov	w1, wzr
+   1dfc4: f902dbe8     	str	x8, [sp, #0x5b0]
+   1dfc8: f9400fe8     	ldr	x8, [sp, #0x18]
+   1dfcc: 52807c02     	mov	w2, #0x3e0              // =992
+   1dfd0: f902dfff     	str	xzr, [sp, #0x5b8]
+   1dfd4: f90307e8     	str	x8, [sp, #0x608]
+   1dfd8: 52861e08     	mov	w8, #0x30f0             // =12528
+   1dfdc: 72a016a8     	movk	w8, #0xb5, lsl #16
+   1dfe0: f902e3ff     	str	xzr, [sp, #0x5c0]
+   1dfe4: f9030be8     	str	x8, [sp, #0x610]
+   1dfe8: 9116c3e8     	add	x8, sp, #0x5b0
+   1dfec: 9102e100     	add	x0, x8, #0xb8
+   1dff0: f902e7ff     	str	xzr, [sp, #0x5c8]
+   1dff4: f902ebff     	str	xzr, [sp, #0x5d0]
+   1dff8: f902efff     	str	xzr, [sp, #0x5d8]
+   1dffc: f902f3ff     	str	xzr, [sp, #0x5e0]
+   1e000: f902f7ff     	str	xzr, [sp, #0x5e8]
+   1e004: f902fbf5     	str	x21, [sp, #0x5f0]
+   1e008: f902fffb     	str	x27, [sp, #0x5f8]
+   1e00c: f90303fc     	str	x28, [sp, #0x600]
+   1e010: f9032fff     	str	xzr, [sp, #0x658]
+   1e014: f9032bff     	str	xzr, [sp, #0x650]
+   1e018: f90327ff     	str	xzr, [sp, #0x648]
+   1e01c: f90323ff     	str	xzr, [sp, #0x640]
+   1e020: f9031fff     	str	xzr, [sp, #0x638]
+   1e024: f9031bff     	str	xzr, [sp, #0x630]
+   1e028: f90317ff     	str	xzr, [sp, #0x628]
+   1e02c: f90313ff     	str	xzr, [sp, #0x620]
+   1e030: f9030fff     	str	xzr, [sp, #0x618]
+   1e034: f90333e9     	str	x9, [sp, #0x660]
+   1e038: 94000242     	bl	0x1e940 <memset@plt>
+   1e03c: d0000108     	adrp	x8, 0x40000 <_ZN12_GLOBAL__N_114module_storageE+0x200>
+   1e040: b94017e9     	ldr	w9, [sp, #0x14]
+   1e044: f945b900     	ldr	x0, [x8, #0xb70]
+   1e048: f100001f     	cmp	x0, #0x0
+   1e04c: 1a9f07e8     	cset	w8, ne
+   1e050: 0a080128     	and	w8, w9, w8
+   1e054: 7100051f     	cmp	w8, #0x1
+   1e058: 540007c1     	b.ne	0x1e150 <pthread_mutex_unlock+0x448>
+   1e05c: 91002348     	add	x8, x26, #0x8
+   1e060: d100c3a1     	sub	x1, x29, #0x30
+   1e064: 913b63e2     	add	x2, sp, #0xed8
+   1e068: 88dffd04     	ldar	w4, [x8]
+   1e06c: 9134c3e3     	add	x3, sp, #0xd30
+   1e070: 9116c3e5     	add	x5, sp, #0x5b0
+   1e074: 97ffe183     	bl	0x16680 <_ZN3iq42f17stack059Collector7captureERKNS0_11native_ui0213BoundaryInputERKNS0_7entry0111ObservationESA_jRNS1_8MetadataE>
+   1e078: 360006c0     	tbz	w0, #0x0, 0x1e150 <pthread_mutex_unlock+0x448>
+   1e07c: d503201f     	nop
+   1e080: 101098da     	adr	x26, 0x3f398 <iq4_f1_stack_observed_05>
+   1e084: 885fff48     	ldaxr	w8, [x26]
+   1e088: 11000508     	add	w8, w8, #0x1
+   1e08c: 8809ff48     	stlxr	w9, w8, [x26]
+   1e090: 35ffffa9     	cbnz	w9, 0x1e084 <pthread_mutex_unlock+0x37c>
+   1e094: 91004340     	add	x0, x26, #0x10
+   1e098: 9116c3e1     	add	x1, sp, #0x5b0
+   1e09c: 52809302     	mov	w2, #0x498              // =1176
+   1e0a0: 94000230     	bl	0x1e960 <memcpy@plt>
+   1e0a4: 885f7f48     	ldxr	w8, [x26]
+   1e0a8: 11000508     	add	w8, w8, #0x1
+   1e0ac: 8809ff48     	stlxr	w9, w8, [x26]
+   1e0b0: 35ffffa9     	cbnz	w9, 0x1e0a4 <pthread_mutex_unlock+0x39c>
+   1e0b4: d28000c8     	mov	x8, #0x6                // =6
+   1e0b8: 52861e09     	mov	w9, #0x30f0             // =12528
+   1e0bc: 2a1f03e1     	mov	w1, wzr
+   1e0c0: f2c0b208     	movk	x8, #0x590, lsl #32
+   1e0c4: 72a016a9     	movk	w9, #0xb5, lsl #16
+   1e0c8: 5280ab02     	mov	w2, #0x558              // =1368
+   1e0cc: a9027fe8     	stp	x8, xzr, [sp, #0x20]
+   1e0d0: f9400fe8     	ldr	x8, [sp, #0x18]
+   1e0d4: a9036ff5     	stp	x21, x27, [sp, #0x30]
+   1e0d8: a90423fc     	stp	x28, x8, [sp, #0x40]
+   1e0dc: 910083e8     	add	x8, sp, #0x20
+   1e0e0: 9100e100     	add	x0, x8, #0x38
+   1e0e4: f9002be9     	str	x9, [sp, #0x50]
+   1e0e8: 94000216     	bl	0x1e940 <memset@plt>
+   1e0ec: f0000108     	adrp	x8, 0x41000 <_ZN12_GLOBAL__N_115display_storageE+0x480>
+   1e0f0: f941c109     	ldr	x9, [x8, #0x380]
+   1e0f4: b4000269     	cbz	x9, 0x1e140 <pthread_mutex_unlock+0x438>
+   1e0f8: d503201f     	nop
+   1e0fc: 10119515     	adr	x21, 0x4139c <_ZN12_GLOBAL__N_112display_busyE>
+   1e100: 52800029     	mov	w9, #0x1                // =1
+   1e104: 085ffeaa     	ldaxrb	w10, [x21]
+   1e108: 080b7ea9     	stxrb	w11, w9, [x21]
+   1e10c: 35ffffcb     	cbnz	w11, 0x1e104 <pthread_mutex_unlock+0x3fc>
+   1e110: 3700018a     	tbnz	w10, #0x0, 0x1e140 <pthread_mutex_unlock+0x438>
+   1e114: f941c100     	ldr	x0, [x8, #0x380]
+   1e118: d100c3a1     	sub	x1, x29, #0x30
+   1e11c: 9116c3e2     	add	x2, sp, #0x5b0
+   1e120: 910083e3     	add	x3, sp, #0x20
+   1e124: 97ffdb42     	bl	0x14e2c <_ZN3iq42f19display069Collector16capture_boundaryERKNS0_11native_ui0213BoundaryInputERKNS0_7stack058MetadataERNS1_8MetadataE>
+   1e128: 360000a0     	tbz	w0, #0x0, 0x1e13c <pthread_mutex_unlock+0x434>
+   1e12c: 90000080     	adrp	x0, 0x2e000 <_ZN12_GLOBAL__N_16insideE+0x2e000>
+   1e130: 910083e1     	add	x1, sp, #0x20
+   1e134: f9471400     	ldr	x0, [x0, #0xe28]
+   1e138: 97ffdefb     	bl	0x15d24 <_ZN3iq42f19display067publishERNS1_9PublishedERKNS1_8MetadataE>
+   1e13c: 089ffebf     	stlrb	wzr, [x21]
+   1e140: f942e3e8     	ldr	x8, [sp, #0x5c0]
+   1e144: f101011f     	cmp	x8, #0x40
+   1e148: 54000043     	b.lo	0x1e150 <pthread_mutex_unlock+0x448>
+   1e14c: 089fff1f     	stlrb	wzr, [x24]
+   1e150: 2a1703e0     	mov	w0, w23
+   1e154: 38346b3f     	strb	wzr, [x25, x20]
+   1e158: b9000276     	str	w22, [x19]
+   1e15c: 914007ff     	add	sp, sp, #0x1, lsl #12   // =0x1000
+   1e160: 9102c3ff     	add	sp, sp, #0xb0
+   1e164: a9454ff4     	ldp	x20, x19, [sp, #0x50]
+   1e168: a94457f6     	ldp	x22, x21, [sp, #0x40]
+   1e16c: a9435ff8     	ldp	x24, x23, [sp, #0x30]
+   1e170: a94267fa     	ldp	x26, x25, [sp, #0x20]
+   1e174: a9416ffc     	ldp	x28, x27, [sp, #0x10]
+   1e178: a8c67bfd     	ldp	x29, x30, [sp], #0x60
+   1e17c: d65f03c0     	ret
+   1e180: 94000002     	bl	0x1e188 <_ZN12_GLOBAL__N_115unresolved_holdEv>
+   1e184: 97ffd24d     	bl	0x12ab8 <__clang_call_terminate>

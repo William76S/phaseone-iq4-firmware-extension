@@ -1,0 +1,106 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+SCOPE complete_unwind_function
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  7b2488: a9b57bfd     	stp	x29, x30, [sp, #-0xb0]!
+  7b248c: f001c085     	adrp	x5, 0x3fc5000 <_ZNSt5ctypeIcE2idE+0x3061ed8>
+  7b2490: 9132c0a5     	add	x5, x5, #0xcb0
+  7b2494: 910003fd     	mov	x29, sp
+  7b2498: a9025bf5     	stp	x21, x22, [sp, #0x20]
+  7b249c: 2a0203f6     	mov	w22, w2
+  7b24a0: b940d8a4     	ldr	w4, [x5, #0xd8]
+  7b24a4: 529999a3     	mov	w3, #0xcccd             // =52429
+  7b24a8: a90153f3     	stp	x19, x20, [sp, #0x10]
+  7b24ac: 11000484     	add	w4, w4, #0x1
+  7b24b0: 0b1606d3     	add	w19, w22, w22, lsl #1
+  7b24b4: 72b99983     	movk	w3, #0xcccc, lsl #16
+  7b24b8: 2a0103f4     	mov	w20, w1
+  7b24bc: b0002e82     	adrp	x2, 0xd83000
+  7b24c0: 912cc042     	add	x2, x2, #0xb30
+  7b24c4: b0002e86     	adrp	x6, 0xd83000
+  7b24c8: 1b137c27     	mul	w7, w1, w19
+  7b24cc: 910840c6     	add	x6, x6, #0x210
+  7b24d0: 9ba37c81     	umull	x1, w4, w3
+  7b24d4: a90363f7     	stp	x23, x24, [sp, #0x30]
+  7b24d8: b840f04a     	ldur	w10, [x2, #0xf]
+  7b24dc: a9402448     	ldp	x8, x9, [x2]
+  7b24e0: d363fc21     	lsr	x1, x1, #35
+  7b24e4: f9403cc2     	ldr	x2, [x6, #0x78]
+  7b24e8: 0b010823     	add	w3, w1, w1, lsl #2
+  7b24ec: f847e0cb     	ldur	x11, [x6, #0x7e]
+  7b24f0: 4b030483     	sub	w3, w4, w3, lsl #1
+  7b24f4: 1100d8e7     	add	w7, w7, #0x36
+  7b24f8: 1100c063     	add	w3, w3, #0x30
+  7b24fc: f90033e2     	str	x2, [sp, #0x60]
+  7b2500: 1100c022     	add	w2, w1, #0x30
+  7b2504: 52800306     	mov	w6, #0x18               // =24
+  7b2508: a90727e8     	stp	x8, x9, [sp, #0x70]
+  7b250c: 52800509     	mov	w9, #0x28               // =40
+  7b2510: 52800028     	mov	w8, #0x1                // =1
+  7b2514: a908ffff     	stp	xzr, xzr, [sp, #0x88]
+  7b2518: aa0003f8     	mov	x24, x0
+  7b251c: b0002e81     	adrp	x1, 0xd83000
+  7b2520: 9101c3e0     	add	x0, sp, #0x70
+  7b2524: 912ca021     	add	x1, x1, #0xb28
+  7b2528: 7900b3ff     	strh	wzr, [sp, #0x58]
+  7b252c: 39016bff     	strb	wzr, [sp, #0x5a]
+  7b2530: b80623e7     	stur	w7, [sp, #0x62]
+  7b2534: f80663eb     	stur	x11, [sp, #0x66]
+  7b2538: 3901f3e2     	strb	w2, [sp, #0x7c]
+  7b253c: 3901f7e3     	strb	w3, [sp, #0x7d]
+  7b2540: b807f3ea     	stur	w10, [sp, #0x7f]
+  7b2544: 390223e9     	strb	w9, [sp, #0x88]
+  7b2548: 2911dbf4     	stp	w20, w22, [sp, #0x8c]
+  7b254c: 390253e8     	strb	w8, [sp, #0x94]
+  7b2550: 39025be6     	strb	w6, [sp, #0x96]
+  7b2554: a909ffff     	stp	xzr, xzr, [sp, #0x98]
+  7b2558: f90057ff     	str	xzr, [sp, #0xa8]
+  7b255c: b900d8a4     	str	w4, [x5, #0xd8]
+  7b2560: 97f15db8     	bl	0x409c40 <fopen@plt>
+  7b2564: d28001c2     	mov	x2, #0xe                // =14
+  7b2568: aa0003e3     	mov	x3, x0
+  7b256c: aa0003f5     	mov	x21, x0
+  7b2570: d2800021     	mov	x1, #0x1                // =1
+  7b2574: 910183e0     	add	x0, sp, #0x60
+  7b2578: 97f1605a     	bl	0x40a6e0 <fwrite@plt>
+  7b257c: aa1503e3     	mov	x3, x21
+  7b2580: d2800502     	mov	x2, #0x28               // =40
+  7b2584: d2800021     	mov	x1, #0x1                // =1
+  7b2588: 910223e0     	add	x0, sp, #0x88
+  7b258c: 97f16055     	bl	0x40a6e0 <fwrite@plt>
+  7b2590: 34000336     	cbz	w22, 0x7b25f4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x988c8>
+  7b2594: 0b140697     	add	w23, w20, w20, lsl #1
+  7b2598: 51000e73     	sub	w19, w19, #0x3
+  7b259c: 4b1703f7     	neg	w23, w23
+  7b25a0: a9046bf9     	stp	x25, x26, [sp, #0x40]
+  7b25a4: 924006f7     	and	x23, x23, #0x3
+  7b25a8: 2a1403fa     	mov	w26, w20
+  7b25ac: 4b140a99     	sub	w25, w20, w20, lsl #2
+  7b25b0: 1b147e73     	mul	w19, w19, w20
+  7b25b4: 52800014     	mov	w20, #0x0               // =0
+  7b25b8: aa1503e3     	mov	x3, x21
+  7b25bc: aa1a03e2     	mov	x2, x26
+  7b25c0: d2800061     	mov	x1, #0x3                // =3
+  7b25c4: 8b334300     	add	x0, x24, w19, uxtw
+  7b25c8: 97f16046     	bl	0x40a6e0 <fwrite@plt>
+  7b25cc: 11000694     	add	w20, w20, #0x1
+  7b25d0: aa1503e3     	mov	x3, x21
+  7b25d4: aa1703e2     	mov	x2, x23
+  7b25d8: d2800021     	mov	x1, #0x1                // =1
+  7b25dc: 910163e0     	add	x0, sp, #0x58
+  7b25e0: 97f16040     	bl	0x40a6e0 <fwrite@plt>
+  7b25e4: 0b190273     	add	w19, w19, w25
+  7b25e8: 6b16029f     	cmp	w20, w22
+  7b25ec: 54fffe61     	b.ne	0x7b25b8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x9888c>
+  7b25f0: a9446bf9     	ldp	x25, x26, [sp, #0x40]
+  7b25f4: aa1503e0     	mov	x0, x21
+  7b25f8: 97f161d2     	bl	0x40ad40 <fclose@plt>
+  7b25fc: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  7b2600: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+  7b2604: a94363f7     	ldp	x23, x24, [sp, #0x30]
+  7b2608: a8cb7bfd     	ldp	x29, x30, [sp], #0xb0
+  7b260c: d65f03c0     	ret

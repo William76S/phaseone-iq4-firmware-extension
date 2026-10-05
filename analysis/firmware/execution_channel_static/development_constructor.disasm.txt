@@ -1,0 +1,132 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPDevelopment.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000000660 <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)>:
+     660: 41 57                        	pushq	%r15
+     662: 41 56                        	pushq	%r14
+     664: 41 55                        	pushq	%r13
+     666: 41 54                        	pushq	%r12
+     668: 49 89 f4                     	movq	%rsi, %r12
+     66b: 55                           	pushq	%rbp
+     66c: 48 89 fd                     	movq	%rdi, %rbp
+     66f: 53                           	pushq	%rbx
+     670: 48 83 ec 18                  	subq	$0x18, %rsp
+     674: e8 00 00 00 00               	callq	0x679 <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x19>
+		0000000000000675:  R_X86_64_PLT32	P1::Universal::ErrorDispatcher::ErrorDispatcher()-0x4
+     679: 48 8d 7d 38                  	leaq	0x38(%rbp), %rdi
+     67d: 4c 89 e1                     	movq	%r12, %rcx
+     680: 31 d2                        	xorl	%edx, %edx
+     682: be ff 00 00 00               	movl	$0xff, %esi
+     687: e8 00 00 00 00               	callq	0x68c <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x2c>
+		0000000000000688:  R_X86_64_PLT32	P1::IQP::BaseAgent::BaseAgent(unsigned char, unsigned char, P1::IQP::ChannelTransport&)-0x4
+     68c: 48 8d 05 00 00 00 00         	leaq	(%rip), %rax            # 0x693 <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x33>
+		000000000000068f:  R_X86_64_PC32	vtable for P1::IQP::DevelopmentAgent+0xc
+     693: 66 0f ef c0                  	pxor	%xmm0, %xmm0
+     697: 48 c7 85 08 0a 00 00 00 00 00 00     	movq	$0x0, 0xa08(%rbp)
+     6a2: 4c 8d ad 18 0a 00 00         	leaq	0xa18(%rbp), %r13
+     6a9: 48 89 45 00                  	movq	%rax, (%rbp)
+     6ad: 48 83 c0 40                  	addq	$0x40, %rax
+     6b1: 4c 89 ef                     	movq	%r13, %rdi
+     6b4: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x6bb <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x5b>
+		00000000000006b7:  R_X86_64_PC32	.LC17-0x4
+     6bb: 48 89 45 38                  	movq	%rax, 0x38(%rbp)
+     6bf: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x6c6 <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x66>
+		00000000000006c2:  R_X86_64_REX_GOTPCRELX	vtable for P1::Platform::Mutex_Cpp-0x4
+     6c6: 0f 11 85 f8 09 00 00         	movups	%xmm0, 0x9f8(%rbp)
+     6cd: 48 83 c0 10                  	addq	$0x10, %rax
+     6d1: 0f 11 85 e8 09 00 00         	movups	%xmm0, 0x9e8(%rbp)
+     6d8: 48 89 85 e0 09 00 00         	movq	%rax, 0x9e0(%rbp)
+     6df: c7 85 f8 09 00 00 01 00 00 00	movl	$0x1, 0x9f8(%rbp)
+     6e9: 48 c7 85 10 0a 00 00 00 00 00 00     	movq	$0x0, 0xa10(%rbp)
+     6f4: e8 00 00 00 00               	callq	0x6f9 <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x99>
+		00000000000006f5:  R_X86_64_PLT32	P1::Platform::Thread_Cpp::Thread_Cpp(wchar_t const*)-0x4
+     6f9: 4c 8d b5 80 0b 00 00         	leaq	0xb80(%rbp), %r14
+     700: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0x707 <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0xa7>
+		0000000000000703:  R_X86_64_PC32	.LC18-0x4
+     707: 4c 89 f7                     	movq	%r14, %rdi
+     70a: e8 00 00 00 00               	callq	0x70f <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0xaf>
+		000000000000070b:  R_X86_64_PLT32	P1::Platform::Thread_Cpp::Thread_Cpp(wchar_t const*)-0x4
+     70f: 48 8b 05 00 00 00 00         	movq	(%rip), %rax            # 0x716 <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0xb6>
+		0000000000000712:  R_X86_64_REX_GOTPCRELX	vtable for P1::Platform::EventCondition_Cpp-0x4
+     716: 66 0f ef c0                  	pxor	%xmm0, %xmm0
+     71a: c6 85 f8 0c 00 00 00         	movb	$0x0, 0xcf8(%rbp)
+     721: 48 8d 9d f0 0d 00 00         	leaq	0xdf0(%rbp), %rbx
+     728: 0f 11 85 00 0d 00 00         	movups	%xmm0, 0xd00(%rbp)
+     72f: 48 89 df                     	movq	%rbx, %rdi
+     732: 4c 8d bd 40 0d 00 00         	leaq	0xd40(%rbp), %r15
+     739: 48 8d 50 48                  	leaq	0x48(%rax), %rdx
+     73d: 48 83 c0 10                  	addq	$0x10, %rax
+     741: 0f 11 85 10 0d 00 00         	movups	%xmm0, 0xd10(%rbp)
+     748: 66 48 0f 6e c8               	movq	%rax, %xmm1
+     74d: 48 8d 85 28 0d 00 00         	leaq	0xd28(%rbp), %rax
+     754: 66 48 0f 6e da               	movq	%rdx, %xmm3
+     759: 0f 11 85 58 0d 00 00         	movups	%xmm0, 0xd58(%rbp)
+     760: 66 48 0f 6e d0               	movq	%rax, %xmm2
+     765: 48 8d 85 80 0d 00 00         	leaq	0xd80(%rbp), %rax
+     76c: 0f 11 85 68 0d 00 00         	movups	%xmm0, 0xd68(%rbp)
+     773: 66 0f 6c cb                  	punpcklqdq	%xmm3, %xmm1    # xmm1 = xmm1[0],xmm3[0]
+     777: 66 0f 6c d2                  	punpcklqdq	%xmm2, %xmm2    # xmm2 = xmm2[0,0]
+     77b: 0f 11 85 b0 0d 00 00         	movups	%xmm0, 0xdb0(%rbp)
+     782: 0f 11 95 28 0d 00 00         	movups	%xmm2, 0xd28(%rbp)
+     789: 66 48 0f 6e d0               	movq	%rax, %xmm2
+     78e: 48 8d 85 d8 0d 00 00         	leaq	0xdd8(%rbp), %rax
+     795: 0f 11 85 c0 0d 00 00         	movups	%xmm0, 0xdc0(%rbp)
+     79c: 66 48 0f 6e c0               	movq	%rax, %xmm0
+     7a1: 66 0f 6c d2                  	punpcklqdq	%xmm2, %xmm2    # xmm2 = xmm2[0,0]
+     7a5: 48 c7 85 20 0d 00 00 00 00 00 00     	movq	$0x0, 0xd20(%rbp)
+     7b0: 66 0f 6c c0                  	punpcklqdq	%xmm0, %xmm0    # xmm0 = xmm0[0,0]
+     7b4: 48 c7 85 38 0d 00 00 00 00 00 00     	movq	$0x0, 0xd38(%rbp)
+     7bf: c6 85 50 0d 00 00 00         	movb	$0x0, 0xd50(%rbp)
+     7c6: 48 c7 85 78 0d 00 00 00 00 00 00     	movq	$0x0, 0xd78(%rbp)
+     7d1: 48 c7 85 90 0d 00 00 00 00 00 00     	movq	$0x0, 0xd90(%rbp)
+     7dc: c6 85 a8 0d 00 00 00         	movb	$0x0, 0xda8(%rbp)
+     7e3: 48 c7 85 d0 0d 00 00 00 00 00 00     	movq	$0x0, 0xdd0(%rbp)
+     7ee: 48 c7 85 e8 0d 00 00 00 00 00 00     	movq	$0x0, 0xde8(%rbp)
+     7f9: 0f 11 8d e8 0c 00 00         	movups	%xmm1, 0xce8(%rbp)
+     800: 0f 11 95 80 0d 00 00         	movups	%xmm2, 0xd80(%rbp)
+     807: 0f 11 8d 40 0d 00 00         	movups	%xmm1, 0xd40(%rbp)
+     80e: 0f 11 85 d8 0d 00 00         	movups	%xmm0, 0xdd8(%rbp)
+     815: 0f 11 8d 98 0d 00 00         	movups	%xmm1, 0xd98(%rbp)
+     81c: e8 00 00 00 00               	callq	0x821 <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x1c1>
+		000000000000081d:  R_X86_64_PLT32	P1::IQP::SendMessageQueue::SendMessageQueue()-0x4
+     821: 4c 8d 65 40                  	leaq	0x40(%rbp), %r12
+     825: 4c 89 e7                     	movq	%r12, %rdi
+     828: e8 00 00 00 00               	callq	0x82d <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x1cd>
+		0000000000000829:  R_X86_64_PLT32	P1::IQP::Channel::Initialize()-0x4
+     82d: 4c 89 ff                     	movq	%r15, %rdi
+     830: e8 00 00 00 00               	callq	0x835 <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x1d5>
+		0000000000000831:  R_X86_64_PLT32	P1::Platform::EventCondition_Cpp::Set()-0x4
+     835: 48 83 c4 18                  	addq	$0x18, %rsp
+     839: 48 8d 7d 78                  	leaq	0x78(%rbp), %rdi
+     83d: be 01 00 00 00               	movl	$0x1, %esi
+     842: 5b                           	popq	%rbx
+     843: 5d                           	popq	%rbp
+     844: 41 5c                        	popq	%r12
+     846: 41 5d                        	popq	%r13
+     848: 41 5e                        	popq	%r14
+     84a: 41 5f                        	popq	%r15
+     84c: e9 00 00 00 00               	jmp	0x851 <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x1f1>
+		000000000000084d:  R_X86_64_PLT32	P1::IQP::IQPMessageProtocolInfo::AddMessageProtocolVersion(P1::IQP::MessageProtocolVersion)-0x4
+     851: 48 89 c3                     	movq	%rax, %rbx
+     854: e9 00 00 00 00               	jmp	0x859 <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x1f9>
+		0000000000000855:  R_X86_64_PC32	.text.unlikely+0x2b4
+     859: 48 89 44 24 08               	movq	%rax, 0x8(%rsp)
+     85e: e9 00 00 00 00               	jmp	0x863 <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x203>
+		000000000000085f:  R_X86_64_PC32	.text.unlikely+0x216
+     863: 48 89 c3                     	movq	%rax, %rbx
+     866: 4c 8d 65 40                  	leaq	0x40(%rbp), %r12
+     86a: e9 00 00 00 00               	jmp	0x86f <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x20f>
+		000000000000086b:  R_X86_64_PC32	.text.unlikely+0x24b
+     86f: 48 89 c3                     	movq	%rax, %rbx
+     872: 4c 8d 65 40                  	leaq	0x40(%rbp), %r12
+     876: e9 00 00 00 00               	jmp	0x87b <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x21b>
+		0000000000000877:  R_X86_64_PC32	.text.unlikely+0x223
+     87b: 48 89 c3                     	movq	%rax, %rbx
+     87e: 4c 8d 65 40                  	leaq	0x40(%rbp), %r12
+     882: e9 00 00 00 00               	jmp	0x887 <P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)+0x227>
+		0000000000000883:  R_X86_64_PC32	.text.unlikely+0x253
+     887: 90                           	nop
+     888: 0f 1f 84 00 00 00 00 00      	nopl	(%rax,%rax)

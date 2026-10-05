@@ -1,0 +1,164 @@
+{
+  "kind": "finite offline read-only review",
+  "inputs": [
+    {
+      "path": "tools/firmware/f3_stream_export_04/SOURCE_SHA256.json",
+      "bytes": 4988,
+      "sha256": "6e305e017c884549d437019383ee391cbe84beaf9b77406a24d487432bca84a8"
+    },
+    {
+      "path": "tools/firmware/f3_stream_export_03/SOURCE_SHA256.json",
+      "bytes": 4963,
+      "sha256": "4ff0ab6a5b39a5188311f7ce173e137d18b7b488d2f7d824ef02553db5ec85ea"
+    },
+    {
+      "path": "tools/firmware/f3_stream_export_04/jpeg_export.c",
+      "bytes": 7049,
+      "sha256": "836c514f30eb5cbb7f3c9728054f442f214431d85d2112628bcab834cc6e5898"
+    },
+    {
+      "path": "tools/firmware/f3_stream_export_04/stream_export.c",
+      "bytes": 12721,
+      "sha256": "42987788eba4c89401427803303cd90c0b1f033dddb9503e8a0a3b622168c633"
+    },
+    {
+      "path": "tools/firmware/f3_stream_export_04/stream_export.h",
+      "bytes": 1724,
+      "sha256": "771450f18e7b7faa83d106681d677b293296b9502dd92dedd33d045df329be3f"
+    },
+    {
+      "path": "tools/firmware/f3_stream_export_04/freeze.py",
+      "bytes": 2585,
+      "sha256": "6ff9174798b393806672f4de41a478e0d752385f13672e6c59007f9602c5aab9"
+    },
+    {
+      "path": "tools/firmware/f3_native_render_02/adapter.cpp",
+      "bytes": 11020,
+      "sha256": "3e4632b7ec0273ebcf0500eaa370c37a6e155b172acdba210ac8deed4dc740ed"
+    },
+    {
+      "path": "tools/firmware/f3_native_render_02/adapter.hpp",
+      "bytes": 4896,
+      "sha256": "6491494587601e96af3bd8ba71eaf7ab8f465beff601cba9aa1128f05afacae0"
+    },
+    {
+      "path": "tools/firmware/f3_save_coordinator_06/coordinator.h",
+      "bytes": 2696,
+      "sha256": "2a08edebd09c67efb50f97b4e50fc66cc839f15c0f9b1347b5bf0d58b7e12b4c"
+    },
+    {
+      "path": "tools/firmware/f3_native_executor_01/executor.cpp",
+      "bytes": 11543,
+      "sha256": "674d6de1969391e05cd219b2761b9d50f14486895f6807e7e377110edff2e584"
+    },
+    {
+      "path": "tools/firmware/f3_save_coordinator_06/coordinator.cpp",
+      "bytes": 24297,
+      "sha256": "994aa13bb503c06a137380fd2dd5195ec37ea3a92057954baa53f53c798e4606"
+    }
+  ],
+  "immediate_export04_freeze_members_verified": 26,
+  "recursive_export03_members_verified": 27,
+  "findings": [
+    {
+      "priority": 1,
+      "scope": "required coordinator sink routing",
+      "renderer_lines": [
+        163,
+        165
+      ],
+      "cleanup_lines": [
+        65,
+        69
+      ],
+      "requirement": "throw SinkHold only after checked C export returns Unknown, retain entire external job ownership graph",
+      "coordinator06_implementation_present_at_review": true,
+      "coordinator_source_routing_requirement_satisfied": true,
+      "coordinator_sink_lines": [
+        176,
+        177
+      ],
+      "coordinator_Hold_return_lines": [
+        262,
+        266
+      ],
+      "coordinator_static_job_lines": [
+        34,
+        42
+      ],
+      "coordinator_cleanup_guard_line": 116,
+      "coordinator_frozen": false,
+      "target_behavior_accepted": false,
+      "coordinator_exact_statements": [
+        " auto r=f3_export_stream_encode_03(&j.export_stream,&config.jpeg,&input,&j.encoder);",
+        " if(!r||r->saved.status==F3_UNKNOWN_HOLD||j.save_session.hold||j.ledger.hold){hold(j);throw Retain06{};}",
+        "  if(p==N::Result::Hold||j.render->state().quarantined||j.hold)throw Retain06{};",
+        " }catch(const Retain06&){hold(j);return -1;}catch(int){if(j.hold)return -1;j.status=F3_FAILED_RAW_RETAINED;}",
+        " if(!cleanup(j)){hold(j);return -1;}j.phase=4;publish(j);__atomic_store_n(&reservation,0,__ATOMIC_RELEASE);return successful?1:0;",
+        " if(j.hold)return false;"
+      ]
+    },
+    {
+      "priority": 2,
+      "scope": "transitive source freeze",
+      "requirement": "recursively verify and include export03 members; immediate export04 verify alone omits dependency bodies",
+      "dependencies_current_exact_verified": [
+        {
+          "path": "src/codec/stream_rgb32.h",
+          "bytes": 1784,
+          "sha256": "bfccd67ff2b430ef04356976d1496283455b9fe9fadaf3c5967d1a7d53ab7a59"
+        },
+        {
+          "path": "src/codec/bounded_jpeg.h",
+          "bytes": 2418,
+          "sha256": "1be26d8743655280bd507e86f973810b32df568a811f619976f6a3e1adf8a18e"
+        },
+        {
+          "path": "src/codec/vendor/libjpeg-turbo-1.5.3/jconfig.h",
+          "bytes": 677,
+          "sha256": "8d818d1693a7feaac054fe5c0ac9b1167d96372a5f7045b3440bfa3789947154"
+        },
+        {
+          "path": "src/codec/vendor/libjpeg-turbo-1.5.3/jmorecfg.h",
+          "bytes": 15049,
+          "sha256": "8e75f16e1baa8b0797485d5b5ee6a0a4b6b48be47f0217488e857c62fb380351"
+        },
+        {
+          "path": "src/codec/vendor/libjpeg-turbo-1.5.3/jpeglib.h",
+          "bytes": 49875,
+          "sha256": "e63b27b40fb779d5c65a206ce81a256a4e08f173bcc29890134dad4fbdf3dea0"
+        },
+        {
+          "path": "tools/firmware/f3_stream_transaction_02/stream.h",
+          "bytes": 2817,
+          "sha256": "26ec74ffaf719d1761965b1ce77f27440a33f44bbfa6d1beee578f4d37c62a0b"
+        },
+        {
+          "path": "tools/firmware/f3_stream_transaction_02/sha256.h",
+          "bytes": 2835,
+          "sha256": "8283433dc000e6224636117c0285bf7a632a758bccc79b6c40a5f289515a1aa1"
+        },
+        {
+          "path": "tools/firmware/f3_save_transaction_01/transaction.h",
+          "bytes": 2980,
+          "sha256": "576c5bb2337dcb237a057e17385d85966bad0359bd9182b193a69af2edcab881"
+        },
+        {
+          "path": "src/codec/stream_rgb32.c",
+          "bytes": 6454,
+          "sha256": "a32167334c549d8e5099682e70a81e80472979ac1c7e66ab21b7a4f5a6f6e7dd"
+        }
+      ]
+    }
+  ],
+  "new_C_longjmp_context_defect_found": false,
+  "existing_behavior_tests_repeated": false,
+  "target_executed": false,
+  "camera_accessed": false,
+  "frozen_sources_changed": false,
+  "review": {
+    "path": "analysis/firmware/f3_export04_retention_review_01/REVIEW.md",
+    "bytes": 4320,
+    "sha256": "d0d8cb26fbaa3a0ea7a628b750d301e0a92959585f0054a88792352ff8ae59f6"
+  }
+}

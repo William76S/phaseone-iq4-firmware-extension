@@ -1,0 +1,83 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_card_boot_failure_review_01/ld-2.28.so.analysis_only:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000000085c8 <_dl_rtld_di_serinfo>:
+    d770: 394c7004     	ldrb	w4, [x0, #0x31c]
+    d774: f9400405     	ldr	x5, [x0, #0x8]
+    d778: 321d0084     	orr	w4, w4, #0x8
+    d77c: 390c7004     	strb	w4, [x0, #0x31c]
+    d780: 394000a6     	ldrb	w6, [x5]
+    d784: 340007a6     	cbz	w6, 0xd878 <_dl_rtld_di_serinfo+0x52b0>
+    d788: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+    d78c: 910003fd     	mov	x29, sp
+    d790: a90153f3     	stp	x19, x20, [sp, #0x10]
+    d794: aa0003f3     	mov	x19, x0
+    d798: f9405000     	ldr	x0, [x0, #0xa0]
+    d79c: a9025bf5     	stp	x21, x22, [sp, #0x20]
+    d7a0: aa0203f6     	mov	x22, x2
+    d7a4: f9001bf7     	str	x23, [sp, #0x30]
+    d7a8: 2a0103f5     	mov	w21, w1
+    d7ac: aa0303f7     	mov	x23, x3
+    d7b0: b4000480     	cbz	x0, 0xd840 <_dl_rtld_di_serinfo+0x5278>
+    d7b4: d0000101     	adrp	x1, 0x2f000
+    d7b8: b9472021     	ldr	w1, [x1, #0x720]
+    d7bc: 370804e1     	tbnz	w1, #0x1, 0xd858 <_dl_rtld_di_serinfo+0x5290>
+    d7c0: f9400404     	ldr	x4, [x0, #0x8]
+    d7c4: aa1703e2     	mov	x2, x23
+    d7c8: f9400263     	ldr	x3, [x19]
+    d7cc: aa1603e1     	mov	x1, x22
+    d7d0: 2a1503e0     	mov	w0, w21
+    d7d4: 8b040063     	add	x3, x3, x4
+    d7d8: d63f0060     	blr	x3
+    d7dc: f9408662     	ldr	x2, [x19, #0x108]
+    d7e0: b4000262     	cbz	x2, 0xd82c <_dl_rtld_di_serinfo+0x5264>
+    d7e4: f9408e60     	ldr	x0, [x19, #0x118]
+    d7e8: f9400261     	ldr	x1, [x19]
+    d7ec: f9400400     	ldr	x0, [x0, #0x8]
+    d7f0: f9400453     	ldr	x19, [x2, #0x8]
+    d7f4: d343fc00     	lsr	x0, x0, #3
+    d7f8: 8b010273     	add	x19, x19, x1
+    d7fc: 34000180     	cbz	w0, 0xd82c <_dl_rtld_di_serinfo+0x5264>
+    d800: 51000414     	sub	w20, w0, #0x1
+    d804: 91000694     	add	x20, x20, #0x1
+    d808: 8b140e74     	add	x20, x19, x20, lsl #3
+    d80c: d503201f     	nop
+    d810: f8408663     	ldr	x3, [x19], #0x8
+    d814: aa1703e2     	mov	x2, x23
+    d818: aa1603e1     	mov	x1, x22
+    d81c: 2a1503e0     	mov	w0, w21
+    d820: d63f0060     	blr	x3
+    d824: eb13029f     	cmp	x20, x19
+    d828: 54ffff41     	b.ne	0xd810 <_dl_rtld_di_serinfo+0x5248>
+    d82c: a94153f3     	ldp	x19, x20, [sp, #0x10]
+    d830: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+    d834: f9401bf7     	ldr	x23, [sp, #0x30]
+    d838: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+    d83c: d65f03c0     	ret
+    d840: f9408662     	ldr	x2, [x19, #0x108]
+    d844: b4ffff42     	cbz	x2, 0xd82c <_dl_rtld_di_serinfo+0x5264>
+    d848: d0000100     	adrp	x0, 0x2f000
+    d84c: b9472000     	ldr	w0, [x0, #0x720]
+    d850: 360ffca0     	tbz	w0, #0x1, 0xd7e4 <_dl_rtld_di_serinfo+0x521c>
+    d854: d503201f     	nop
+    d858: 34000166     	cbz	w6, 0xd884 <_dl_rtld_di_serinfo+0x52bc>
+    d85c: aa0503e1     	mov	x1, x5
+    d860: b0000060     	adrp	x0, 0x1a000
+    d864: 910f0000     	add	x0, x0, #0x3c0
+    d868: 94000336     	bl	0xe540 <_dl_debug_state+0x770>
+    d86c: f9405260     	ldr	x0, [x19, #0xa0]
+    d870: b4fffb60     	cbz	x0, 0xd7dc <_dl_rtld_di_serinfo+0x5214>
+    d874: 17ffffd3     	b	0xd7c0 <_dl_rtld_di_serinfo+0x51f8>
+    d878: f240049f     	tst	x4, #0x3
+    d87c: 54fff861     	b.ne	0xd788 <_dl_rtld_di_serinfo+0x51c0>
+    d880: d65f03c0     	ret
+    d884: 90000121     	adrp	x1, 0x31000 <_dl_argv>
+    d888: f0000040     	adrp	x0, 0x18000
+    d88c: 911d0000     	add	x0, x0, #0x740
+    d890: f9400021     	ldr	x1, [x1]
+    d894: f9400025     	ldr	x5, [x1]
+    d898: f10000bf     	cmp	x5, #0x0
+    d89c: 9a850005     	csel	x5, x0, x5, eq
+    d8a0: 17ffffef     	b	0xd85c <_dl_rtld_di_serinfo+0x5294>

@@ -1,0 +1,36 @@
+{
+  "schema": "iq4_f3_stream_rgb32_narrow_review_01",
+  "read_only": true,
+  "p0_p1_found": [],
+  "files": [
+    {
+      "path": "src/codec/stream_rgb32.c",
+      "sha256": "a32167334c549d8e5099682e70a81e80472979ac1c7e66ab21b7a4f5a6f6e7dd"
+    },
+    {
+      "path": "src/codec/stream_rgb32.h",
+      "sha256": "bfccd67ff2b430ef04356976d1496283455b9fe9fadaf3c5967d1a7d53ab7a59"
+    }
+  ],
+  "checked": [
+    "C99 heap context survives setjmp/longjmp",
+    "width/height/stride/lastrow complete bounds before input read",
+    "native RGB32 byte order +1/+2/+3",
+    "synchronous one-row input borrow through write_scanlines",
+    "destination budget before writes and exact shortwrite failure",
+    "destroying latch prevents repeated destructor after longjmp",
+    "failure jpeg_bytes0 even after flushed invalid prefix"
+  ],
+  "lines": {
+    "input_bounds": "78..91",
+    "borrow_copy": "112..118",
+    "finish_cleanup": "120..128"
+  },
+  "limits": [
+    "No complete-RAW source/render proof",
+    "Internal libjpeg heap is not a bounded native render arena",
+    "private file ownership/close/sync/publish/RAW retention remain caller responsibilities"
+  ],
+  "raw_decoded": false,
+  "camera_accessed": false
+}

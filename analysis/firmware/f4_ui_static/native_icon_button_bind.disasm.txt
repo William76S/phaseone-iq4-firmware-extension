@@ -1,0 +1,42 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; private names and recovered types are provisional.
+  518ed0: 9105e3e2     	add	x2, sp, #0x178
+  518ed4: f001cc60     	adrp	x0, 0x3ea7000
+  518ed8: 9103c001     	add	x1, x0, #0xf0
+  518edc: aa0203e0     	mov	x0, x2
+  518ee0: 97fcfa98     	bl	0x457940
+  518ee4: 9105e3f4     	add	x20, sp, #0x178
+  518ee8: d2801900     	mov	x0, #0xc8
+  518eec: 97fbc3dd     	bl	0x409e60
+  518ef0: aa0003f3     	mov	x19, x0
+  518ef4: f94147e0     	ldr	x0, [sp, #0x288]
+  518ef8: f9400400     	ldr	x0, [x0, #0x8]
+  518efc: 390003ff     	strb	wzr, [sp]
+  518f00: aa1403e7     	mov	x7, x20
+  518f04: 52800006     	mov	w6, #0x0
+  518f08: 5280ac45     	mov	w5, #0x562
+  518f0c: 5280ac44     	mov	w4, #0x562
+  518f10: aa0003e3     	mov	x3, x0
+  518f14: 52800c82     	mov	w2, #0x64
+  518f18: 528012c1     	mov	w1, #0x96
+  518f1c: aa1303e0     	mov	x0, x19
+  518f20: 97feebf4     	bl	0x4d3ef0
+  518f24: f900d7f3     	str	x19, [sp, #0x1a8]
+  518f28: f940d7e5     	ldr	x5, [sp, #0x1a8]
+  518f2c: f940d7e0     	ldr	x0, [sp, #0x1a8]
+  518f30: f9400000     	ldr	x0, [x0]
+  518f34: 91046000     	add	x0, x0, #0x118
+  518f38: f9400004     	ldr	x4, [x0]
+  518f3c: f9405fe0     	ldr	x0, [sp, #0xb8]
+  518f40: 9103a000     	add	x0, x0, #0xe8
+  518f44: 52800123     	mov	w3, #0x9
+  518f48: f9407fe2     	ldr	x2, [sp, #0xf8]
+  518f4c: aa0003e1     	mov	x1, x0
+  518f50: aa0503e0     	mov	x0, x5
+  518f54: d63f0080     	blr	x4
+  518f58: f940d7e0     	ldr	x0, [sp, #0x1a8]
+  518f5c: 52800021     	mov	w1, #0x1
+  518f60: 97fe4c79     	bl	0x4ac144
+  518f64: f9405fe0     	ldr	x0, [sp, #0xb8]
+  518f68: f940d7e1     	ldr	x1, [sp, #0x1a8]
+  518f6c: f901c401     	str	x1, [x0, #0x388]

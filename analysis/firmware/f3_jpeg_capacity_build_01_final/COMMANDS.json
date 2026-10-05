@@ -1,0 +1,176 @@
+[
+  {
+    "argv": [
+      "/usr/bin/xcrun",
+      "--show-sdk-path"
+    ],
+    "exit": 0,
+    "stdout": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DIQ4_OLD_CAPACITY_COUNTEREXAMPLE",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_jpeg_capacity_01/test_capacity.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_export_04/stream_export.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_export_04/jpeg_export.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/stream_rgb32.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_pixels.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/build/libjpeg8/.libs/libjpeg.a",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_jpeg_capacity_build_01_final/capacity_old"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_jpeg_capacity_build_01_final/capacity_old"
+    ],
+    "exit": 0,
+    "stdout": "{\"groups\":62,\"passed\":true,\"real_host_entropy_decoded_geometry_cases\":24,\"actual_RAW_decode\":false,\"device_accessed\":false}\nPASS quality100 file capacity boundaries; streaming, no RAW deletion\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-include",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_jpeg_capacity_01/limits.h",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_jpeg_capacity_01/test_capacity.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_export_04/stream_export.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_export_04/jpeg_export.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/stream_rgb32.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_pixels.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/build/libjpeg8/.libs/libjpeg.a",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_jpeg_capacity_build_01_final/capacity_new"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_jpeg_capacity_build_01_final/capacity_new"
+    ],
+    "exit": 0,
+    "stdout": "{\"groups\":62,\"passed\":true,\"real_host_entropy_decoded_geometry_cases\":24,\"actual_RAW_decode\":false,\"device_accessed\":false}\nPASS quality100 file capacity boundaries; streaming, no RAW deletion\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-include",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_jpeg_capacity_01/limits.h",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_jpeg_capacity_01/test_capacity.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_export_04/stream_export.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_export_04/jpeg_export.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/stream_rgb32.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_pixels.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/export_geometry.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/build/libjpeg8_sanitized/.libs/libjpeg.a",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_jpeg_capacity_build_01_final/capacity_san"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_jpeg_capacity_build_01_final/capacity_san"
+    ],
+    "exit": 0,
+    "stdout": "{\"groups\":62,\"passed\":true,\"real_host_entropy_decoded_geometry_cases\":24,\"actual_RAW_decode\":false,\"device_accessed\":false}\nPASS quality100 file capacity boundaries; streaming, no RAW deletion\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-fPIC",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-include",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_jpeg_capacity_01/limits.h",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_stream_export_04/stream_export.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_jpeg_capacity_build_01_final/stream_export.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-funwind-tables",
+      "-fno-omit-frame-pointer",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_jpeg_capacity_build_01_final/coordinator.o.d",
+      "-include",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_jpeg_capacity_01/limits.h",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_save_coordinator_08/coordinator.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_jpeg_capacity_build_01_final/coordinator.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

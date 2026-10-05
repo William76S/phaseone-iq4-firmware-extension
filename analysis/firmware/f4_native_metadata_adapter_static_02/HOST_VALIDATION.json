@@ -1,0 +1,165 @@
+{
+  "action": "host_fault_tests_and_production_aarch64_objects",
+  "host_tests": [
+    {
+      "name": "normal",
+      "return_code": 0,
+      "receipt": "30 synthetic adapter fault groups passed; zero device/vendor execution\n",
+      "binary_sha256": "e48bb5defb7fad9f00ccac94d0f07a30dda7ef628f40ce6eded7190df8f2e8a2"
+    },
+    {
+      "name": "asan_ubsan",
+      "return_code": 0,
+      "receipt": "30 synthetic adapter fault groups passed; zero device/vendor execution\n",
+      "binary_sha256": "31cb7dedc060338f473beb3f81ddc2360695c11eebb88528a64d6e2ecf464a6b"
+    }
+  ],
+  "target_objects": [
+    {
+      "path": "adapter.aarch64.o",
+      "size": 85808,
+      "sha256": "82417e58e59833c3c7ae508104f689390bdcd1d6825fdce14431a77de4be048e",
+      "format": "ELF64LE AArch64 relocatable",
+      "executed": false
+    },
+    {
+      "path": "runtime_linux.aarch64.o",
+      "size": 74704,
+      "sha256": "05e24ac7fa4b2ac863189c499ecc0b80b1c3206df73a00d2bd836a5f2c77b321",
+      "format": "ELF64LE AArch64 relocatable",
+      "executed": false
+    },
+    {
+      "path": "owned_copy_pool.aarch64.o",
+      "size": 180056,
+      "sha256": "0202c5216ffe9311c0d61d22c8b04c9baca6ade48fe9869552de90033291d213",
+      "format": "ELF64LE AArch64 relocatable",
+      "executed": false
+    }
+  ],
+  "source_lock_sha256": "e6672e2b355dd38574de480d15c0c1846d5d47a7edca7993ef719abd9ac656c2",
+  "commands": [
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "version"
+    ],
+    [
+      "xcrun",
+      "--show-sdk-path"
+    ],
+    [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-UNDEBUG",
+      "-pthread",
+      "-isystem",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+      "-DIQ4_F4_ADAPTER_SYNTHETIC_HOST=1",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_metadata_adapter_01/adapter.cpp",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/owned_copy_pool.cpp",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_metadata_adapter_01/test_adapter.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f4_native_metadata_adapter_host_02/host_normal"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f4_native_metadata_adapter_host_02/host_normal"
+    ],
+    [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-UNDEBUG",
+      "-pthread",
+      "-isystem",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "-DIQ4_F4_ADAPTER_SYNTHETIC_HOST=1",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_metadata_adapter_01/adapter.cpp",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/owned_copy_pool.cpp",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_metadata_adapter_01/test_adapter.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f4_native_metadata_adapter_host_02/host_asan_ubsan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f4_native_metadata_adapter_host_02/host_asan_ubsan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-fPIC",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-pthread",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_metadata_adapter_01/adapter.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f4_native_metadata_adapter_host_02/adapter.aarch64.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-fPIC",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-pthread",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_native_metadata_adapter_01/runtime_linux.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f4_native_metadata_adapter_host_02/runtime_linux.aarch64.o"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "c++",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c++17",
+      "-O2",
+      "-fPIC",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-pthread",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_owned_copy_pool_01/owned_copy_pool.cpp",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f4_native_metadata_adapter_host_02/owned_copy_pool.aarch64.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-t",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f4_native_metadata_adapter_host_02/adapter.aarch64.o"
+    ]
+  ],
+  "sdk_loaded": false,
+  "camera_access": false,
+  "vendor_executed": false,
+  "target_executed": false,
+  "deployment_performed": false,
+  "native_abi_runtime_verified": false,
+  "production_pixel_copy_available": false,
+  "hardware_layout_color_capacity_receipts_present": false,
+  "real_60fps_proven": false
+}

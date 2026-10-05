@@ -1,0 +1,61 @@
+{
+  "schema": "iq4_f4_ram_host_validation_v2",
+  "host_tests_run": 20,
+  "host_tests_passed": true,
+  "failures": 0,
+  "errors": 0,
+  "verbatim_production_C_functions": [
+    "all_write",
+    "hash_fd",
+    "plain_fd",
+    "file_hash",
+    "fsync_dir",
+    "runner_check",
+    "mutation_lock",
+    "restore_core",
+    "create_bytes",
+    "env_valid",
+    "ack"
+  ],
+  "verbatim_functions_sha256": "469d922e0790f9a17b97f17961f73e1a30e569ad7249cbfadb6aa89f15a2126f",
+  "source_sha256": "1996b23c3c05f887734e9718b3ca62e9b4f937732ac4293bf003335fcad7a8f9",
+  "host_C_syscall_fixture_adaptations": [
+    "macOS flistxattr signature and automatic provenance only",
+    "AF_UNIX datagram pair for message ACK, not target seqpacket or credentials"
+  ],
+  "target_imports": {
+    "entry": [
+      "__libc_start_main",
+      "abort",
+      "fprintf",
+      "stderr",
+      "umask"
+    ],
+    "marker": [
+      "close",
+      "send"
+    ],
+    "readonly_facts": [
+      "__errno_location",
+      "__fxstat",
+      "__libc_start_main",
+      "abort",
+      "close",
+      "flistxattr",
+      "fprintf",
+      "geteuid",
+      "getuid",
+      "lseek",
+      "memcpy",
+      "memset",
+      "open",
+      "printf",
+      "read",
+      "stderr",
+      "strcmp"
+    ]
+  },
+  "target_device_accessed": false,
+  "target_executed": false,
+  "actual_mount_User_exit_module_or_recovery_acceptance": false
+}

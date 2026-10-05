@@ -1,0 +1,99 @@
+analysis/firmware/f4_ram_loader_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   8541c:      	stp	x29, x30, [sp, #-0x60]!
+   85420:      	mov	x29, sp
+   85424:      	stp	x21, x22, [sp, #0x20]
+   85428:      	adrp	x21, 0xbe000
+   8542c:      	ldr	x1, [x21, #0xf68]
+   85430:      	stp	x19, x20, [sp, #0x10]
+   85434:      	mov	x19, x0
+   85438:      	ldr	x2, [x1]
+   8543c:      	str	x2, [x29, #0x58]
+   85440:      	mov	x2, #0x0                // =0
+   85444:      	stp	x23, x24, [sp, #0x30]
+   85448:      	stp	x25, x26, [sp, #0x40]
+   8544c:      	bl	0xa350 <strlen@plt>
+   85450:      	add	w0, w0, #0x8
+   85454:      	ldrb	w22, [x19]
+   85458:      	adrp	x1, 0xa3000
+   8545c:      	add	x1, x1, #0xe8
+   85460:      	lsr	w2, w0, #1
+   85464:      	add	x0, x0, #0xf
+   85468:      	and	x0, x0, #0x1fffffff0
+   8546c:      	cmp	w22, #0x2d
+   85470:      	lsl	x2, x2, #3
+   85474:      	sub	sp, sp, x0
+   85478:      	add	x2, x2, #0xf
+   8547c:      	cset	x24, eq
+   85480:      	and	x0, x2, #0x7fffffff0
+   85484:      	mov	x23, sp
+   85488:      	add	x25, x19, x24
+   8548c:      	sub	sp, sp, x0
+   85490:      	mov	x20, sp
+   85494:      	mov	x0, x25
+   85498:      	bl	0xaa50 <strpbrk@plt>
+   8549c:      	cbz	x0, 0x85538 <.text+0x79d98>
+   854a0:      	mov	w1, #0x1                // =1
+   854a4:      	mov	x4, x25
+   854a8:      	adrp	x3, 0xa3000
+   854ac:      	mov	x2, #-0x1               // =-1
+   854b0:      	add	x3, x3, #0x100
+   854b4:      	mov	x0, x23
+   854b8:      	bl	0xa380 <__sprintf_chk@plt>
+   854bc:      	adrp	x19, 0xa3000
+   854c0:      	cmp	w22, #0x2d
+   854c4:      	add	x1, x19, #0xd9
+   854c8:      	adrp	x0, 0xa3000
+   854cc:      	add	x0, x0, #0xd8
+   854d0:      	mov	x19, x1
+   854d4:      	csel	x1, x1, x0, ne
+   854d8:      	adrp	x0, 0x97000
+   854dc:      	add	x0, x0, #0xaa0
+   854e0:      	stp	x1, x0, [x20]
+   854e4:      	stp	x23, xzr, [x20, #0x10]
+   854e8:      	mov	x1, x20
+   854ec:      	mov	x0, x19
+   854f0:      	bl	0xae10 <execvp@plt>
+   854f4:      	mov	w0, #0x3                // =3
+   854f8:      	adrp	x1, 0xa3000
+   854fc:      	mov	x2, x19
+   85500:      	add	x1, x1, #0x108
+   85504:      	bl	0x85064 <.text+0x798c4>
+   85508:      	ldr	x21, [x21, #0xf68]
+   8550c:      	ldr	x1, [x29, #0x58]
+   85510:      	ldr	x0, [x21]
+   85514:      	eor	x0, x1, x0
+   85518:      	cbnz	x0, 0x85584 <.text+0x79de4>
+   8551c:      	mov	sp, x29
+   85520:      	ldp	x19, x20, [sp, #0x10]
+   85524:      	ldp	x21, x22, [sp, #0x20]
+   85528:      	ldp	x23, x24, [sp, #0x30]
+   8552c:      	ldp	x25, x26, [sp, #0x40]
+   85530:      	ldp	x29, x30, [sp], #0x60
+   85534:      	ret
+   85538:      	mov	x1, x19
+   8553c:      	mov	x0, x23
+   85540:      	add	x26, x29, #0x50
+   85544:      	bl	0xb240 <strcpy@plt>
+   85548:      	adrp	x23, 0x96000
+   8554c:      	mov	x19, x0
+   85550:      	add	x23, x23, #0xa40
+   85554:      	mov	x22, #0x0               // =0
+   85558:      	str	x0, [x29, #0x50]
+   8555c:      	mov	w25, w22
+   85560:      	mov	x1, x23
+   85564:      	mov	x0, x26
+   85568:      	bl	0xae00 <strsep@plt>
+   8556c:      	cbz	x0, 0x85588 <.text+0x79de8>
+   85570:      	ldrb	w1, [x0]
+   85574:      	cbz	w1, 0x85560 <.text+0x79dc0>
+   85578:      	str	x0, [x20, x22, lsl #3]
+   8557c:      	add	x22, x22, #0x1
+   85580:      	b	0x8555c <.text+0x79dbc>
+   85584:      	bl	0xac80 <__stack_chk_fail@plt>
+   85588:      	add	x19, x19, x24
+   8558c:      	str	xzr, [x20, w25, sxtw #3]
+   85590:      	b	0x854e8 <.text+0x79d48>

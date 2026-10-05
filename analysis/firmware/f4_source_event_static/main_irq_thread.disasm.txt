@@ -1,0 +1,39 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  422758: d2800400     	mov	x0, #0x20               // =32
+  42275c: 97ff9dc1     	bl	0x409e60 <_Znwm@plt>
+  422760: aa0003f3     	mov	x19, x0
+  422764: f0001b20     	adrp	x0, 0x789000 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6f2d4>
+  422768: 911ca000     	add	x0, x0, #0x728
+  42276c: f9019be0     	str	x0, [sp, #0x330]
+  422770: f9019fff     	str	xzr, [sp, #0x338]
+  422774: 911003e0     	add	x0, sp, #0x400
+  422778: a9730c02     	ldp	x2, x3, [x0, #-0xd0]
+  42277c: f949a7e1     	ldr	x1, [sp, #0x1348]
+  422780: aa1303e0     	mov	x0, x19
+  422784: 9400416c     	bl	0x432d34 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6lengthEv+0x15ec>
+  422788: f909a3f3     	str	x19, [sp, #0x1340]
+  42278c: 52800020     	mov	w0, #0x1                // =1
+  422790: 914007e1     	add	x1, sp, #0x1, lsl #12   // =0x1000
+  422794: 91014021     	add	x1, x1, #0x50
+  422798: 390bbc20     	strb	w0, [x1, #0x2ef]
+  42279c: d2803700     	mov	x0, #0x1b8              // =440
+  4227a0: 97ff9db0     	bl	0x409e60 <_Znwm@plt>
+  4227a4: aa0003f3     	mov	x19, x0
+  4227a8: f949a3e0     	ldr	x0, [sp, #0x1340]
+  4227ac: 528000a4     	mov	w4, #0x5                // =5
+  4227b0: 52800023     	mov	w3, #0x1                // =1
+  4227b4: aa0003e2     	mov	x2, x0
+  4227b8: f0002e80     	adrp	x0, 0x9f5000
+  4227bc: 911c6001     	add	x1, x0, #0x718
+  4227c0: aa1303e0     	mov	x0, x19
+  4227c4: 97ffcbb1     	bl	0x415688 <.text+0xa458>
+  4227c8: f9099bf3     	str	x19, [sp, #0x1330]
+  4227cc: f9499be0     	ldr	x0, [sp, #0x1330]
+  4227d0: 97ffbcea     	bl	0x411b78 <.text+0x6948>
+  4227d4: f949a7e0     	ldr	x0, [sp, #0x1348]

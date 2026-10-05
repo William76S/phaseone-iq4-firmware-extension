@@ -1,0 +1,156 @@
+{
+  "schema": "iq4_f3_menu05_build",
+  "source_inputs": [
+    {
+      "path": "tools/firmware/f3_capture_menu_05/build.py",
+      "bytes": 4106,
+      "sha256": "a4169ccd64efe0738f768cc3da05f85fba3b87ecbec1aeab5835b5be8f96a3c9"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_05/runtime.c",
+      "bytes": 10858,
+      "sha256": "5f93970df16d6f8eb2047e0e0d3f409bb6d34b01e6fb625f8fd13192ff547b72"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_05/test_scope.c",
+      "bytes": 6236,
+      "sha256": "06929a8f9c7fe1a753468c811629e4a16868527068e7a8f07cd7438e1b639edc"
+    }
+  ],
+  "frozen_inputs": [
+    {
+      "path": "tools/firmware/f3_capture_menu_04/SOURCE_SHA256.json",
+      "bytes": 5584,
+      "sha256": "ace424331f55fd434a8b528992b9b9a8e44b574899d7459f6554370bd8e95989"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/LINK_INPUT.json",
+      "bytes": 1370,
+      "sha256": "ea74ed190555331afe77a77b3337dbf70d67a3019419a2385e140155a5ec7bd1"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/runtime.c",
+      "bytes": 10702,
+      "sha256": "b639726f585000e70142aaa0449edcba93ec1d4a4a79bc7310c7f82ae150ebc3"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/policy.c",
+      "bytes": 4376,
+      "sha256": "dc4218ac400d08c4641011dca5d1fe80a18bc3ebb583701f90c3c015589e6a42"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/code_pins.h",
+      "bytes": 3434,
+      "sha256": "6efedcdccce5426904917520324f14e6ffb57df30fe8993c452e0c4823107d31"
+    }
+  ],
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_05/menu.o",
+      "bytes": 28360,
+      "sha256": "c32653443af58ce0c51d8fd53e4cc1c42cfa6d8e5d54e6babb9b2533b9e74091",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 10000
+        },
+        {
+          "name": ".rodata.cst8",
+          "type": 1,
+          "flags": 18,
+          "bytes": 16
+        },
+        {
+          "name": ".bss",
+          "type": 8,
+          "flags": 3,
+          "bytes": 548
+        },
+        {
+          "name": ".data.rel.ro",
+          "type": 1,
+          "flags": 3,
+          "bytes": 288
+        },
+        {
+          "name": ".rodata",
+          "type": 1,
+          "flags": 2,
+          "bytes": 592
+        },
+        {
+          "name": ".rodata.str1.1",
+          "type": 1,
+          "flags": 50,
+          "bytes": 290
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 400
+        }
+      ],
+      "relocation_types": [
+        257,
+        261,
+        275,
+        277,
+        278,
+        282,
+        283,
+        285,
+        286,
+        311,
+        312
+      ],
+      "undefined_symbols": [
+        "f3_coordinator_manual_prepare_06",
+        "f3_coordinator_ready_06",
+        "f3_coordinator_view_06",
+        "f3_coordinator_worker_run_06",
+        "iq4_activity_snapshot_01",
+        "iq4_f3_executor_begin_on_ui_01",
+        "iq4_f3_executor_cancel_on_ui_01",
+        "iq4_f3_executor_finish_on_ui_01",
+        "iq4_f3_executor_hold_01",
+        "iq4_f3_executor_selection_on_ui_01",
+        "iq4_f3_executor_submit_on_ui_01",
+        "iq4_f3_executor_view_on_ui_01",
+        "iq4_f3_mode_set_on_ui_01",
+        "iq4_f3_quality_set_on_ui_03",
+        "iq4_f3_scale_set_on_ui_01",
+        "iq4_f3_settings_snapshot_04",
+        "iq4_f4_menu_append_03",
+        "iq4_f4_menu_ctor_03",
+        "iq4_f4_menu_new_03",
+        "iq4_f4_native_current_02",
+        "iq4_f4_native_event_notify_02",
+        "iq4_native_self_read_01",
+        "memcmp",
+        "memcpy"
+      ],
+      "executed": false
+    }
+  ],
+  "tests": [
+    {
+      "variant": "normal",
+      "stdout": "PASS8 actual scope/known JPEG-only RAW preservation status groups\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "stdout": "PASS8 actual scope/known JPEG-only RAW preservation status groups\n"
+    }
+  ],
+  "normalized_runtime_identical": true,
+  "undefined_symbols_identical": true,
+  "only_scope_strings_and_RAW_kept_status_changed": true,
+  "camera_access": false,
+  "target_executed": false,
+  "sdk_loaded": false
+}

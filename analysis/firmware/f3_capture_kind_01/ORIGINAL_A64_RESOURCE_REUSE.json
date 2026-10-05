@@ -1,0 +1,68 @@
+{
+  "stock_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "level": "host_original_A64_emulation",
+  "device_executed": false,
+  "fixtures": [
+    "mutex guard",
+    "active-list bookkeeping"
+  ],
+  "scope": "Existing non-null resource branch only; no full calibration pipeline execution",
+  "cases": [
+    {
+      "kind": "raw",
+      "initial_refs": 1,
+      "final_refs": 2,
+      "same_node_resource": true,
+      "same_payload_pointer": true,
+      "allocation_path_entered": false,
+      "passed": true,
+      "trace": [
+        "fixture lock acquired",
+        "fixture active-list bookkeeping of same resource",
+        "fixture lock released"
+      ]
+    },
+    {
+      "kind": "raw",
+      "initial_refs": 7,
+      "final_refs": 8,
+      "same_node_resource": true,
+      "same_payload_pointer": true,
+      "allocation_path_entered": false,
+      "passed": true,
+      "trace": [
+        "fixture lock acquired",
+        "fixture active-list bookkeeping of same resource",
+        "fixture lock released"
+      ]
+    },
+    {
+      "kind": "metadata",
+      "initial_refs": 1,
+      "final_refs": 2,
+      "same_node_resource": true,
+      "same_payload_pointer": true,
+      "allocation_path_entered": false,
+      "passed": true,
+      "trace": [
+        "fixture lock acquired",
+        "fixture active-list bookkeeping of same resource",
+        "fixture lock released"
+      ]
+    },
+    {
+      "kind": "metadata",
+      "initial_refs": 7,
+      "final_refs": 8,
+      "same_node_resource": true,
+      "same_payload_pointer": true,
+      "allocation_path_entered": false,
+      "passed": true,
+      "trace": [
+        "fixture lock acquired",
+        "fixture active-list bookkeeping of same resource",
+        "fixture lock released"
+      ]
+    }
+  ]
+}

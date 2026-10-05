@@ -1,0 +1,52 @@
+STATIC ONLY; linked VAs; nearest exported labels are not recovered private names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  41497c: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  414980: 910003fd     	mov	x29, sp
+  414984: f9000fe0     	str	x0, [sp, #0x18]
+  414988: 910083e0     	add	x0, sp, #0x20
+  41498c: 97ffde61     	bl	0x40c310 <.text+0x10e0>
+  414990: f9400fe0     	ldr	x0, [sp, #0x18]
+  414994: 39430000     	ldrb	w0, [x0, #0xc0]
+  414998: 3900bfe0     	strb	w0, [sp, #0x2f]
+  41499c: 910083e0     	add	x0, sp, #0x20
+  4149a0: 97ffde68     	bl	0x40c340 <.text+0x1110>
+  4149a4: 3940bfe0     	ldrb	w0, [sp, #0x2f]
+  4149a8: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  4149ac: d65f03c0     	ret
+  4149b0: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  4149b4: 910003fd     	mov	x29, sp
+  4149b8: f9000bf3     	str	x19, [sp, #0x10]
+  4149bc: f90017e0     	str	x0, [sp, #0x28]
+  4149c0: 39009fe1     	strb	w1, [sp, #0x27]
+  4149c4: 9100e3e0     	add	x0, sp, #0x38
+  4149c8: 97ffde52     	bl	0x40c310 <.text+0x10e0>
+  4149cc: f94017e0     	ldr	x0, [sp, #0x28]
+  4149d0: b940c400     	ldr	w0, [x0, #0xc4]
+  4149d4: 7100041f     	cmp	w0, #0x1
+  4149d8: 54000101     	b.ne	0x4149f8 <.text+0x97c8>
+  4149dc: f94017e0     	ldr	x0, [sp, #0x28]
+  4149e0: 39430000     	ldrb	w0, [x0, #0xc0]
+  4149e4: 39409fe1     	ldrb	w1, [sp, #0x27]
+  4149e8: 6b00003f     	cmp	w1, w0
+  4149ec: 54000061     	b.ne	0x4149f8 <.text+0x97c8>
+  4149f0: 52800013     	mov	w19, #0x0               // =0
+  4149f4: 14000005     	b	0x414a08 <.text+0x97d8>
+  4149f8: f94017e0     	ldr	x0, [sp, #0x28]
+  4149fc: 39409fe1     	ldrb	w1, [sp, #0x27]
+  414a00: 39030001     	strb	w1, [x0, #0xc0]
+  414a04: 52800033     	mov	w19, #0x1               // =1
+  414a08: 9100e3e0     	add	x0, sp, #0x38
+  414a0c: 97ffde4d     	bl	0x40c340 <.text+0x1110>
+  414a10: 7100067f     	cmp	w19, #0x1
+  414a14: 54000081     	b.ne	0x414a24 <.text+0x97f4>
+  414a18: f94017e0     	ldr	x0, [sp, #0x28]
+  414a1c: 91002000     	add	x0, x0, #0x8
+  414a20: 940bea36     	bl	0x70f2f8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x21278>
+  414a24: f9400bf3     	ldr	x19, [sp, #0x10]
+  414a28: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  414a2c: d65f03c0     	ret

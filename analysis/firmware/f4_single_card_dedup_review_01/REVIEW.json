@@ -1,0 +1,113 @@
+{
+  "schema": "iq4_f4_single_card_dedup_review_01",
+  "input_pins": [
+    {
+      "path": "tools/firmware/f3_native_card_bridge_06/SOURCE_SHA256.json",
+      "bytes": 7421,
+      "sha256": "483b9cf229389eec68ee900a1a6879f8cafa67d92156fed434feea9fdf83196a"
+    },
+    {
+      "path": "tools/firmware/f3_native_card_bridge_06/card.c",
+      "bytes": 13101,
+      "sha256": "9056e71bfc7ecb9271667e5efdfd50a095d4363038249596f3c20423ffeb2473"
+    },
+    {
+      "path": "tools/firmware/f3_native_card_bridge_06/test_async.c",
+      "bytes": 3597,
+      "sha256": "97063a956c55ddfdb35ba928b79302bb049c9f15ae7d99622f33bc4356e5a6af"
+    },
+    {
+      "path": "tools/firmware/f3_native_card_bridge_05/test_card.c",
+      "bytes": 5964,
+      "sha256": "3971d11458b4d416a26b28a40f9b09e1405a3993d8b3692c16686fce5bda0665"
+    },
+    {
+      "path": "tools/firmware/f4_single_card_dedup_review_01/test_dedup.c",
+      "bytes": 2821,
+      "sha256": "fcc05cee775682d4a7f1b3178d94a50a0485072f620c7646ee75f6394635edcd"
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_card_bridge_06/card.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_single_card_dedup_review_01/test_dedup.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_single_card_dedup_review_01/dedup_normal"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_single_card_dedup_review_01/dedup_normal",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "{\"selected_id\":10,\"jobs\":2,\"register_calls\":1,\"request_calls\":2,\"release_calls\":2,\"unselected_disabled_and_not_ready\":true,\"mounted_view_fixture\":true,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_single_card_dedup_review_01/dedup_normal",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "1"
+      ],
+      "returncode": 0,
+      "stdout": "{\"selected_id\":11,\"jobs\":2,\"register_calls\":1,\"request_calls\":2,\"release_calls\":2,\"unselected_disabled_and_not_ready\":true,\"mounted_view_fixture\":true,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_card_bridge_06/card.c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f4_single_card_dedup_review_01/test_dedup.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_single_card_dedup_review_01/dedup_asan_ubsan"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_single_card_dedup_review_01/dedup_asan_ubsan",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "0"
+      ],
+      "returncode": 0,
+      "stdout": "{\"selected_id\":10,\"jobs\":2,\"register_calls\":1,\"request_calls\":2,\"release_calls\":2,\"unselected_disabled_and_not_ready\":true,\"mounted_view_fixture\":true,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_single_card_dedup_review_01/dedup_asan_ubsan",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin",
+        "1"
+      ],
+      "returncode": 0,
+      "stdout": "{\"selected_id\":11,\"jobs\":2,\"register_calls\":1,\"request_calls\":2,\"release_calls\":2,\"unselected_disabled_and_not_ready\":true,\"mounted_view_fixture\":true,\"target_executed\":false}\n",
+      "stderr": ""
+    }
+  ],
+  "normal_selected_cases": 2,
+  "sanitized_selected_cases": 2,
+  "source_card06_unchanged": true,
+  "device_or_SDK_or_target_executed": false,
+  "initial_test_compile_rejected": "nested main macro/redefinition, own test corrected without frozen source change"
+}

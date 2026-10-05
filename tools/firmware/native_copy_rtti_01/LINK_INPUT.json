@@ -1,0 +1,27 @@
+{
+  "schema": "iq4_native_copy_rtti_link_01",
+  "source": {
+    "path": "tools/firmware/native_copy_rtti_01/SOURCE_SHA256.json",
+    "bytes": 3469,
+    "sha256": "ef5b7e4e5d120a24cda3364d0ee9e429f35f6558f5d735661466cb1abfb54099"
+  },
+  "objects": [
+    {
+      "path": "analysis/firmware/native_copy_rtti_build_01/rtti.o",
+      "bytes": 10824,
+      "sha256": "ae928f227bd6748870e00f0769b72ce23b403e9e5032d61364815dc15bc1fbd3"
+    }
+  ],
+  "loader_abi_proof": {
+    "path": "tools/firmware/native_copy_rtti_01/ABI_PROOF.json",
+    "bytes": 2294,
+    "sha256": "a9ae87c76f989388bc08c16475da7ecb7ab3e66159fcb9229ab4506fd8dde30e"
+  },
+  "runtime_verifier_symbol": "iq4_native_copy_rtti_current_01",
+  "undefined_symbols": [
+    "memcmp",
+    "memcpy"
+  ],
+  "integration": "combine current immutable linked-ELF seal with exact COPY RTTI selfread at every admission/ready/worker call",
+  "target_executed": false
+}

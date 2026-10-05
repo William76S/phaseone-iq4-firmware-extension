@@ -1,0 +1,134 @@
+{
+  "schema": "iq4_f1_actual_projection_host_run_01",
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O2",
+        "-ffp-contract=off",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_actual_projection_review_01/geometry_tests.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_actual_projection_review_01/normal"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_actual_projection_review_01/normal"
+      ],
+      "exit": 0,
+      "stdout": "{\"schema\":\"iq4_f1_actual_projection_geometry_host_01\",\"source_of_actual_values\":\"root_device_receipt\",\"native_executed\":false,\"camera_access\":false,\"pixel_canvas_used\":false,\"native_fresh_coverage_proved\":false,\n\"destination\":[77,0,645,484],\"projected\":[77,0,645,483],\"visible_geometric_intersection\":[77,0,645,480],\"static_native_write_rectangle\":[77,0,645,479],\"clipped_source_height\":476,\"native_output_height\":479,\"binary32_fit_bits\":\"3f810000\",\"untruncated_height\":483.75,\"modes\":[\n{\"clip_kind\":\"geometric_intersection480_not_fresh\",\"mode\":0,\"band_count\":0,\"full_frame_keep\":[0,0,0,0],\"visible_bands\":[],\"mask_area\":0},\n{\"clip_kind\":\"geometric_intersection480_not_fresh\",\"mode\":1,\"band_count\":2,\"full_frame_keep\":[77,122,645,238],\"visible_bands\":[[77,0,645,122],[77,360,645,120]],\"mask_area\":156090},\n{\"clip_kind\":\"geometric_intersection480_not_fresh\",\"mode\":2,\"band_count\":2,\"full_frame_keep\":[77,60,645,362],\"visible_bands\":[[77,0,645,60],[77,422,645,58]],\"mask_area\":76110},\n{\"clip_kind\":\"geometric_intersection480_not_fresh\",\"mode\":3,\"band_count\":2,\"full_frame_keep\":[77,26,645,430],\"visible_bands\":[[77,0,645,26],[77,456,645,24]],\"mask_area\":32250},\n{\"clip_kind\":\"geometric_intersection480_not_fresh\",\"mode\":4,\"band_count\":2,\"full_frame_keep\":[158,0,483,483],\"visible_bands\":[[77,0,81,480],[641,0,81,480]],\"mask_area\":77760},\n{\"clip_kind\":\"static_native_write479\",\"mode\":0,\"band_count\":0,\"full_frame_keep\":[0,0,0,0],\"visible_bands\":[],\"mask_area\":0},\n{\"clip_kind\":\"static_native_write479\",\"mode\":1,\"band_count\":2,\"full_frame_keep\":[77,122,645,238],\"visible_bands\":[[77,0,645,122],[77,360,645,119]],\"mask_area\":155445},\n{\"clip_kind\":\"static_native_write479\",\"mode\":2,\"band_count\":2,\"full_frame_keep\":[77,60,645,362],\"visible_bands\":[[77,0,645,60],[77,422,645,57]],\"mask_area\":75465},\n{\"clip_kind\":\"static_native_write479\",\"mode\":3,\"band_count\":2,\"full_frame_keep\":[77,26,645,430],\"visible_bands\":[[77,0,645,26],[77,456,645,23]],\"mask_area\":31605},\n{\"clip_kind\":\"static_native_write479\",\"mode\":4,\"band_count\":2,\"full_frame_keep\":[158,0,483,483],\"visible_bands\":[[77,0,81,479],[641,0,81,479]],\"mask_area\":77598}\n],\"mode_cases_passed\":10,\"projection_case_passed\":true,\"native_clipping_counts_case_passed\":true,\"cropped_bottom_rows_geometry\":3,\"cropped_bottom_rows_static_native_write\":4}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/clang",
+        "-std=c11",
+        "-O2",
+        "-ffp-contract=off",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-g",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_actual_projection_review_01/geometry_tests.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_actual_projection_review_01/asan_ubsan"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_actual_projection_review_01/asan_ubsan"
+      ],
+      "exit": 0,
+      "stdout": "{\"schema\":\"iq4_f1_actual_projection_geometry_host_01\",\"source_of_actual_values\":\"root_device_receipt\",\"native_executed\":false,\"camera_access\":false,\"pixel_canvas_used\":false,\"native_fresh_coverage_proved\":false,\n\"destination\":[77,0,645,484],\"projected\":[77,0,645,483],\"visible_geometric_intersection\":[77,0,645,480],\"static_native_write_rectangle\":[77,0,645,479],\"clipped_source_height\":476,\"native_output_height\":479,\"binary32_fit_bits\":\"3f810000\",\"untruncated_height\":483.75,\"modes\":[\n{\"clip_kind\":\"geometric_intersection480_not_fresh\",\"mode\":0,\"band_count\":0,\"full_frame_keep\":[0,0,0,0],\"visible_bands\":[],\"mask_area\":0},\n{\"clip_kind\":\"geometric_intersection480_not_fresh\",\"mode\":1,\"band_count\":2,\"full_frame_keep\":[77,122,645,238],\"visible_bands\":[[77,0,645,122],[77,360,645,120]],\"mask_area\":156090},\n{\"clip_kind\":\"geometric_intersection480_not_fresh\",\"mode\":2,\"band_count\":2,\"full_frame_keep\":[77,60,645,362],\"visible_bands\":[[77,0,645,60],[77,422,645,58]],\"mask_area\":76110},\n{\"clip_kind\":\"geometric_intersection480_not_fresh\",\"mode\":3,\"band_count\":2,\"full_frame_keep\":[77,26,645,430],\"visible_bands\":[[77,0,645,26],[77,456,645,24]],\"mask_area\":32250},\n{\"clip_kind\":\"geometric_intersection480_not_fresh\",\"mode\":4,\"band_count\":2,\"full_frame_keep\":[158,0,483,483],\"visible_bands\":[[77,0,81,480],[641,0,81,480]],\"mask_area\":77760},\n{\"clip_kind\":\"static_native_write479\",\"mode\":0,\"band_count\":0,\"full_frame_keep\":[0,0,0,0],\"visible_bands\":[],\"mask_area\":0},\n{\"clip_kind\":\"static_native_write479\",\"mode\":1,\"band_count\":2,\"full_frame_keep\":[77,122,645,238],\"visible_bands\":[[77,0,645,122],[77,360,645,119]],\"mask_area\":155445},\n{\"clip_kind\":\"static_native_write479\",\"mode\":2,\"band_count\":2,\"full_frame_keep\":[77,60,645,362],\"visible_bands\":[[77,0,645,60],[77,422,645,57]],\"mask_area\":75465},\n{\"clip_kind\":\"static_native_write479\",\"mode\":3,\"band_count\":2,\"full_frame_keep\":[77,26,645,430],\"visible_bands\":[[77,0,645,26],[77,456,645,23]],\"mask_area\":31605},\n{\"clip_kind\":\"static_native_write479\",\"mode\":4,\"band_count\":2,\"full_frame_keep\":[158,0,483,483],\"visible_bands\":[[77,0,81,479],[641,0,81,479]],\"mask_area\":77598}\n],\"mode_cases_passed\":10,\"projection_case_passed\":true,\"native_clipping_counts_case_passed\":true,\"cropped_bottom_rows_geometry\":3,\"cropped_bottom_rows_static_native_write\":4}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=4675296",
+        "--stop-address=4675372",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n0000000000435fac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_>:\n  4756e0: 1e220000     \tscvtf\ts0, w0\n  4756e4: 1e202030     \tfcmpe\ts1, s0\n  4756e8: 540001ad     \tb.le\t0x47571c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x3f770>\n  4756ec: f94037e0     \tldr\tx0, [sp, #0x68]\n  4756f0: b9400c01     \tldr\tw1, [x0, #0xc]\n  4756f4: f94037e0     \tldr\tx0, [sp, #0x68]\n  4756f8: b9401400     \tldr\tw0, [x0, #0x14]\n  4756fc: 0b000021     \tadd\tw1, w1, w0\n  475700: b94083e0     \tldr\tw0, [sp, #0x80]\n  475704: 4b000020     \tsub\tw0, w1, w0\n  475708: 1e220001     \tscvtf\ts1, w0\n  47570c: bd407fe0     \tldr\ts0, [sp, #0x7c]\n  475710: 1e201820     \tfdiv\ts0, s1, s0\n  475714: 1e380000     \tfcvtzs\tw0, s0\n  475718: b900afe0     \tstr\tw0, [sp, #0xac]\n  47571c: f94047e0     \tldr\tx0, [sp, #0x88]\n  475720: f9401c01     \tldr\tx1, [x0, #0x38]\n  475724: f94047e0     \tldr\tx0, [sp, #0x88]\n  475728: b9401402     \tldr\tw2, [x0, #0x14]\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=4675732",
+        "--stop-address=4675776",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n0000000000435fac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_>:\n  475894: 1e220021     \tscvtf\ts1, w1\n  475898: bd407fe0     \tldr\ts0, [sp, #0x7c]\n  47589c: 1e200820     \tfmul\ts0, s1, s0\n  4758a0: 1e380002     \tfcvtzs\tw2, s0\n  4758a4: b940afe1     \tldr\tw1, [sp, #0xac]\n  4758a8: 1e220021     \tscvtf\ts1, w1\n  4758ac: bd407fe0     \tldr\ts0, [sp, #0x7c]\n  4758b0: 1e200820     \tfmul\ts0, s1, s0\n  4758b4: 1e380003     \tfcvtzs\tw3, s0\n  4758b8: f94047e1     \tldr\tx1, [sp, #0x88]\n  4758bc: b9401421     \tldr\tw1, [x1, #0x14]\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=4716768",
+        "--stop-address=4716880",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n0000000000435fac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_>:\n  47f8e0: 8b000339     \tadd\tx25, x25, x0\n  47f8e4: 8b0002b5     \tadd\tx21, x21, x0\n  47f8e8: eb19003f     \tcmp\tx1, x25\n  47f8ec: 54fffce1     \tb.ne\t0x47f888 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x498dc>\n  47f8f0: a94153f3     \tldp\tx19, x20, [sp, #0x10]\n  47f8f4: a9425bf5     \tldp\tx21, x22, [sp, #0x20]\n  47f8f8: a94363f7     \tldp\tx23, x24, [sp, #0x30]\n  47f8fc: a94573fb     \tldp\tx27, x28, [sp, #0x50]\n  47f900: a9446bf9     \tldp\tx25, x26, [sp, #0x40]\n  47f904: a8c87bfd     \tldp\tx29, x30, [sp], #0x80\n  47f908: d65f03c0     \tret\n  47f90c: d503201f     \tnop\n  47f910: d10403ff     \tsub\tsp, sp, #0x100\n  47f914: a9057bfd     \tstp\tx29, x30, [sp, #0x50]\n  47f918: 910143fd     \tadd\tx29, sp, #0x50\n  47f91c: a90863f7     \tstp\tx23, x24, [sp, #0x80]\n  47f920: b9410bf8     \tldr\tw24, [sp, #0x108]\n  47f924: a90653f3     \tstp\tx19, x20, [sp, #0x60]\n  47f928: aa0203f4     \tmov\tx20, x2\n  47f92c: aa0403f3     \tmov\tx19, x4\n  47f930: a9075bf5     \tstp\tx21, x22, [sp, #0x70]\n  47f934: 2a0103f5     \tmov\tw21, w1\n  47f938: b94113f6     \tldr\tw22, [sp, #0x110]\n  47f93c: 52800021     \tmov\tw1, #0x1                // =1\n  47f940: a9096bf9     \tstp\tx25, x26, [sp, #0x90]\n  47f944: 2a0603fa     \tmov\tw26, w6\n  47f948: 2a0703f9     \tmov\tw25, w7\n  47f94c: a90a73fb     \tstp\tx27, x28, [sp, #0xa0]\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=4716816",
+        "--stop-address=4717372",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ],
+      "exit": 0,
+      "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n0000000000435fac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_>:\n  47f910: d10403ff     \tsub\tsp, sp, #0x100\n  47f914: a9057bfd     \tstp\tx29, x30, [sp, #0x50]\n  47f918: 910143fd     \tadd\tx29, sp, #0x50\n  47f91c: a90863f7     \tstp\tx23, x24, [sp, #0x80]\n  47f920: b9410bf8     \tldr\tw24, [sp, #0x108]\n  47f924: a90653f3     \tstp\tx19, x20, [sp, #0x60]\n  47f928: aa0203f4     \tmov\tx20, x2\n  47f92c: aa0403f3     \tmov\tx19, x4\n  47f930: a9075bf5     \tstp\tx21, x22, [sp, #0x70]\n  47f934: 2a0103f5     \tmov\tw21, w1\n  47f938: b94113f6     \tldr\tw22, [sp, #0x110]\n  47f93c: 52800021     \tmov\tw1, #0x1                // =1\n  47f940: a9096bf9     \tstp\tx25, x26, [sp, #0x90]\n  47f944: 2a0603fa     \tmov\tw26, w6\n  47f948: 2a0703f9     \tmov\tw25, w7\n  47f94c: a90a73fb     \tstp\tx27, x28, [sp, #0xa0]\n  47f950: aa0003fb     \tmov\tx27, x0\n  47f954: 2a0503fc     \tmov\tw28, w5\n  47f958: 910383e0     \tadd\tx0, sp, #0xe0\n  47f95c: b900b3e3     \tstr\tw3, [sp, #0xb0]\n  47f960: 940a312c     \tbl\t0x70be10 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x1dd90>\n  47f964: 7100031f     \tcmp\tw24, #0x0\n  47f968: 7a40cac4     \tccmp\tw22, #0x0, #0x4, gt\n  47f96c: 54000ead     \tb.le\t0x47fb40 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49b94>\n  47f970: 7100035f     \tcmp\tw26, #0x0\n  47f974: 1a9fc7f7     \tcset\tw23, le\n  47f978: 7100033f     \tcmp\tw25, #0x0\n  47f97c: 1a9fc7e0     \tcset\tw0, le\n  47f980: 2a0002f7     \torr\tw23, w23, w0\n  47f984: 35000df7     \tcbnz\tw23, 0x47fb40 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49b94>\n  47f988: 71000b9f     \tcmp\tw28, #0x2\n  47f98c: 540011e0     \tb.eq\t0x47fbc8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49c1c>\n  47f990: 7100279f     \tcmp\tw28, #0x9\n  47f994: 540010c0     \tb.eq\t0x47fbac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49c00>\n  47f998: 3400129c     \tcbz\tw28, 0x47fbe8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49c3c>\n  47f99c: 52800037     \tmov\tw23, #0x1               // =1\n  47f9a0: 2a1703e4     \tmov\tw4, w23\n  47f9a4: 12800007     \tmov\tw7, #-0x1               // =-1\n  47f9a8: 52800081     \tmov\tw1, #0x4                // =4\n  47f9ac: f9005bff     \tstr\txzr, [sp, #0xb0]\n  47f9b0: 71016abf     \tcmp\tw21, #0x5a\n  47f9b4: 54001480     \tb.eq\t0x47fc44 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49c98>\n  47f9b8: 54000d8d     \tb.le\t0x47fb68 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49bbc>\n  47f9bc: 7102d2bf     \tcmp\tw21, #0xb4\n  47f9c0: 540015e0     \tb.eq\t0x47fc7c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49cd0>\n  47f9c4: 71043abf     \tcmp\tw21, #0x10e\n  47f9c8: 54000e81     \tb.ne\t0x47fb98 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49bec>\n  47f9cc: b94103e5     \tldr\tw5, [sp, #0x100]\n  47f9d0: 51000723     \tsub\tw3, w25, #0x1\n  47f9d4: 4b1903e2     \tneg\tw2, w25\n  47f9d8: 2a0403e7     \tmov\tw7, w4\n  47f9dc: 1ad60f40     \tsdiv\tw0, w26, w22\n  47f9e0: 4b0503e5     \tneg\tw5, w5\n  47f9e4: b900c7e5     \tstr\tw5, [sp, #0xc4]\n  47f9e8: 1ad80c42     \tsdiv\tw2, w2, w24\n  47f9ec: b94103e5     \tldr\tw5, [sp, #0x100]\n  47f9f0: 1ad80f26     \tsdiv\tw6, w25, w24\n  47f9f4: 1b057c63     \tmul\tw3, w3, w5\n  47f9f8: 1b16e805     \tmsub\tw5, w0, w22, w26\n  47f9fc: 1b047c00     \tmul\tw0, w0, w4\n  47fa00: 8b23c273     \tadd\tx19, x19, w3, sxtw\n  47fa04: b94103e3     \tldr\tw3, [sp, #0x100]\n  47fa08: 1b037c42     \tmul\tw2, w2, w3\n  47fa0c: 29170be5     \tstp\tw5, w2, [sp, #0xb8]\n  47fa10: 1b18e4c2     \tmsub\tw2, w6, w24, w25\n  47fa14: b900c3e2     \tstr\tw2, [sp, #0xc0]\n  47fa18: f9400363     \tldr\tx3, [x27]\n  47fa1c: f0ffffe2     \tadrp\tx2, 0x47e000 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x48054>\n  47fa20: 91274042     \tadd\tx2, x2, #0x9d0\n  47fa24: f9400c68     \tldr\tx8, [x3, #0x18]\n  47fa28: eb02011f     \tcmp\tx8, x2\n  47fa2c: 54000561     \tb.ne\t0x47fad8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49b2c>\n  47fa30: 1b187c21     \tmul\tw1, w1, w24\n  47fa34: 93407c00     \tsxtw\tx0, w0\n  47fa38: f90067e0     \tstr\tx0, [sp, #0xc8]\n  47fa3c: 93407ce0     \tsxtw\tx0, w7\n  47fa40: 2a1603fa     \tmov\tw26, w22\n  47fa44: 52800015     \tmov\tw21, #0x0               // =0\n  47fa48: d280001c     \tmov\tx28, #0x0               // =0\n  47fa4c: b9811bf9     \tldrsw\tx25, [sp, #0x118]\n  47fa50: f9006be0     \tstr\tx0, [sp, #0xd0]\n  47fa54: 93407c20     \tsxtw\tx0, w1\n  47fa58: f9006fe0     \tstr\tx0, [sp, #0xd8]\n  47fa5c: 14000017     \tb\t0x47fab8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49b0c>\n  47fa60: 295797e4     \tldp\tw4, w5, [sp, #0xbc]\n  47fa64: 2a1803e3     \tmov\tw3, w24\n  47fa68: b940c7e6     \tldr\tw6, [sp, #0xc4]\n  47fa6c: aa1303e2     \tmov\tx2, x19\n  47fa70: f9405be8     \tldr\tx8, [sp, #0xb0]\n  47fa74: aa1403e1     \tmov\tx1, x20\n  47fa78: f94093e7     \tldr\tx7, [sp, #0x120]\n  47fa7c: aa1b03e0     \tmov\tx0, x27\n  47fa80: d63f0100     \tblr\tx8\n  47fa84: aa1303fc     \tmov\tx28, x19\n  47fa88: b940bbe0     \tldr\tw0, [sp, #0xb8]\n  47fa8c: 8b190294     \tadd\tx20, x20, x25\n  47fa90: 0b0002b5     \tadd\tw21, w21, w0\n  47fa94: f94067e0     \tldr\tx0, [sp, #0xc8]\n  47fa98: 6b1502df     \tcmp\tw22, w21\n  47fa9c: 8b000273     \tadd\tx19, x19, x0\n  47faa0: 5400008c     \tb.gt\t0x47fab0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49b04>\n  47faa4: f9406be0     \tldr\tx0, [sp, #0xd0]\n  47faa8: 4b1602b5     \tsub\tw21, w21, w22\n  47faac: 8b000273     \tadd\tx19, x19, x0\n  47fab0: 7100075a     \tsubs\tw26, w26, #0x1\n  47fab4: 54000420     \tb.eq\t0x47fb38 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49b8c>\n  47fab8: 710002ff     \tcmp\tw23, #0x0\n  47fabc: fa531380     \tccmp\tx28, x19, #0x0, ne\n  47fac0: 54fffd01     \tb.ne\t0x47fa60 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49ab4>\n  47fac4: f9406fe2     \tldr\tx2, [sp, #0xd8]\n  47fac8: cb190281     \tsub\tx1, x20, x25\n  47facc: aa1403e0     \tmov\tx0, x20\n  47fad0: 97fe2a98     \tbl\t0x40a530 <memcpy@plt>\n  47fad4: 17ffffed     \tb\t0x47fa88 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x49adc>\n  47fad8: b940c3e2     \tldr\tw2, [sp, #0xc0]\n  47fadc: 2a1603e6     \tmov\tw6, w22\n  47fae0: b90003e1     \tstr\tw1, [sp]\n  47fae4: 2a1803e5     \tmov\tw5, w24\n  47fae8: b90013e0     \tstr\tw0, [sp, #0x10]\n  47faec: aa1403e3     \tmov\tx3, x20\n  47faf0: b940bbe0     \tldr\tw0, [sp, #0xb8]\n  47faf4: b90023e7     \tstr\tw7, [sp, #0x20]\n  47faf8: b9411be7     \tldr\tw7, [sp, #0x118]\n  47fafc: f9405be1     \tldr\tx1, [sp, #0xb0]\n  47fb00: b9001be0     \tstr\tw0, [sp, #0x18]\n  47fb04: f94093e9     \tldr\tx9, [sp, #0x120]\n  47fb08: b90033e2     \tstr\tw2, [sp, #0x30]\n  47fb0c: b940bfe0     \tldr\tw0, [sp, #0xbc]\n  47fb10: b940c7e2     \tldr\tw2, [sp, #0xc4]\n  47fb14: b9000be4     \tstr\tw4, [sp, #0x8]\n  47fb18: aa1303e4     \tmov\tx4, x19\n  47fb1c: b9002be0     \tstr\tw0, [sp, #0x28]\n  47fb20: aa1b03e0     \tmov\tx0, x27\n  47fb24: b9003be2     \tstr\tw2, [sp, #0x38]\n  47fb28: d2800002     \tmov\tx2, #0x0                // =0\n  47fb2c: 390103f7     \tstrb\tw23, [sp, #0x40]\n  47fb30: f90027e9     \tstr\tx9, [sp, #0x48]\n  47fb34: d63f0100     \tblr\tx8\n  47fb38: 910383e0     \tadd\tx0, sp, #0xe0\n",
+      "stderr": ""
+    }
+  ],
+  "native_executed": false,
+  "camera_access": false,
+  "pixel_canvas_used": false,
+  "tests_each": "10 mode cases + projection + clipping counts",
+  "original_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "native_static_windows": [
+    {
+      "path": "analysis/firmware/f1_actual_projection_review_01/Native_clipped_source_height.txt",
+      "start_va": "0x4756e0",
+      "end_va_exclusive": "0x47572c",
+      "raw_sha256": "ffa8b75a352f176a4420643887074b2a972fef471886c976c301ffa8c182ea9a",
+      "disassembly_sha256": "6d2e0f93a9da968a82acf578b7777073be995eb1d802b29a64154a1aa6f172b9"
+    },
+    {
+      "path": "analysis/firmware/f1_actual_projection_review_01/Native_output_height_after_clipping.txt",
+      "start_va": "0x475894",
+      "end_va_exclusive": "0x4758c0",
+      "raw_sha256": "1390e5dd8c696fffcebbcfa0888acb318fa104d1970b9d062486e1987710912e",
+      "disassembly_sha256": "88e8c221cc12fdcb6cd5510fb2bad316a97f41a99cc3a2a7c32fa27000275e58"
+    },
+    {
+      "path": "analysis/firmware/f1_actual_projection_review_01/Native_output_row_count.txt",
+      "start_va": "0x47f910",
+      "end_va_exclusive": "0x47fb3c",
+      "raw_sha256": "216b451d97e5fffc06dc1d12ffb1a9499fb390a383882500a24af133e3cc415f",
+      "disassembly_sha256": "72acc3c89b8792015db10ffe4a96040d0493781d0ae637be042fa0862e814fdf"
+    }
+  ]
+}

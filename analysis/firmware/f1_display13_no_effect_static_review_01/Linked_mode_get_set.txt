@@ -1,0 +1,28 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin:	file format elf64-littleaarch64
+
+Disassembly of section .f1.0.3.text.iq4_f1_mode_get_01:
+
+0000000004240000 <iq4_f1_mode_get_01>:
+ 4240000: 90000288     	adrp	x8, 0x4290000
+ 4240004: b9400100     	ldr	w0, [x8]
+ 4240008: d65f03c0     	ret
+
+Disassembly of section .f1.0.5.text.iq4_f1_mode_set_on_ui_01:
+
+000000000424000c <iq4_f1_mode_set_on_ui_01>:
+ 424000c: 7100101f     	cmp	w0, #0x4
+ 4240010: 54000069     	b.ls	0x424001c <iq4_f1_mode_set_on_ui_01+0x10>
+ 4240014: 2a1f03e0     	mov	w0, wzr
+ 4240018: d65f03c0     	ret
+ 424001c: 90000288     	adrp	x8, 0x4290000
+ 4240020: b9000100     	str	w0, [x8]
+ 4240024: 52800020     	mov	w0, #0x1                // =1
+ 4240028: d65f03c0     	ret
+
+Disassembly of section .f1.0.7.text.iq4_f1_menu_initialize_01:
+
+000000000424002c <iq4_f1_menu_initialize_01>:
+ 424002c: 90000288     	adrp	x8, 0x4290000
+ 4240030: b900011f     	str	wzr, [x8]
+ 4240034: d65f03c0     	ret

@@ -1,0 +1,68 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  86a390: a9bb7bfd     	stp	x29, x30, [sp, #-0x50]!
+  86a394: 910003fd     	mov	x29, sp
+  86a398: f90017e0     	str	x0, [sp, #0x28]
+  86a39c: f90013e1     	str	x1, [sp, #0x20]
+  86a3a0: f9000fe2     	str	x2, [sp, #0x18]
+  86a3a4: f9000be3     	str	x3, [sp, #0x10]
+  86a3a8: f9400be0     	ldr	x0, [sp, #0x10]
+  86a3ac: 39401000     	ldrb	w0, [x0, #0x4]
+  86a3b0: 7101a41f     	cmp	w0, #0x69
+  86a3b4: 54000140     	b.eq	0x86a3dc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26018>
+  86a3b8: 52802a43     	mov	w3, #0x152              // =338
+  86a3bc: f00029c0     	adrp	x0, 0xda5000
+  86a3c0: 9136c002     	add	x2, x0, #0xdb0
+  86a3c4: f00029c0     	adrp	x0, 0xda5000
+  86a3c8: 913bc001     	add	x1, x0, #0xef0
+  86a3cc: f00029c0     	adrp	x0, 0xda5000
+  86a3d0: 91398000     	add	x0, x0, #0xe60
+  86a3d4: 97ee806b     	bl	0x40a580 <printf@plt>
+  86a3d8: 97fc08cc     	bl	0x76c708 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x529dc>
+  86a3dc: f9400be0     	ldr	x0, [sp, #0x10]
+  86a3e0: 39401400     	ldrb	w0, [x0, #0x5]
+  86a3e4: 7100101f     	cmp	w0, #0x4
+  86a3e8: 540004e0     	b.eq	0x86a484 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x260c0>
+  86a3ec: 7100101f     	cmp	w0, #0x4
+  86a3f0: 5400010c     	b.gt	0x86a410 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2604c>
+  86a3f4: 7100081f     	cmp	w0, #0x2
+  86a3f8: 54000220     	b.eq	0x86a43c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26078>
+  86a3fc: 7100081f     	cmp	w0, #0x2
+  86a400: 5400026c     	b.gt	0x86a44c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26088>
+  86a404: 7100041f     	cmp	w0, #0x1
+  86a408: 54000120     	b.eq	0x86a42c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26068>
+  86a40c: 1400003c     	b	0x86a4fc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26138>
+  86a410: 7100181f     	cmp	w0, #0x6
+  86a414: 540005c0     	b.eq	0x86a4cc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26108>
+  86a418: 7100181f     	cmp	w0, #0x6
+  86a41c: 540003cb     	b.lt	0x86a494 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x260d0>
+  86a420: 71001c1f     	cmp	w0, #0x7
+  86a424: 540005c0     	b.eq	0x86a4dc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26118>
+  86a428: 14000035     	b	0x86a4fc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26138>
+  86a42c: f9400fe1     	ldr	x1, [sp, #0x18]
+  86a430: f94017e0     	ldr	x0, [sp, #0x28]
+  86a434: 94000055     	bl	0x86a588 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x261c4>
+  86a438: 14000051     	b	0x86a57c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x261b8>
+  86a43c: f9400fe1     	ldr	x1, [sp, #0x18]
+  86a440: f94017e0     	ldr	x0, [sp, #0x28]
+  86a444: 940000e4     	bl	0x86a7d4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26410>
+  86a448: 1400004d     	b	0x86a57c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x261b8>
+  86a44c: f9400be0     	ldr	x0, [sp, #0x10]
+  86a450: f90027e0     	str	x0, [sp, #0x48]
+  86a454: f94027e3     	ldr	x3, [sp, #0x48]
+  86a458: f9400be2     	ldr	x2, [sp, #0x10]
+  86a45c: f9400fe1     	ldr	x1, [sp, #0x18]
+  86a460: f94017e0     	ldr	x0, [sp, #0x28]
+  86a464: 940001ab     	bl	0x86ab10 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2674c>
+  86a468: 12001c00     	and	w0, w0, #0xff
+  86a46c: 7100001f     	cmp	w0, #0x0
+  86a470: 54000800     	b.eq	0x86a570 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x261ac>
+  86a474: f9400fe1     	ldr	x1, [sp, #0x18]
+  86a478: f94017e0     	ldr	x0, [sp, #0x28]
+  86a47c: 940000d6     	bl	0x86a7d4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x26410>
+  86a480: 1400003c     	b	0x86a570 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x261ac>

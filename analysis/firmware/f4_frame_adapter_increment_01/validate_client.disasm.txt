@@ -1,0 +1,36 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+SCOPE complete_unwind_function
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6b59fc: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  6b5a00: 910003fd     	mov	x29, sp
+  6b5a04: f9000fe0     	str	x0, [sp, #0x18]
+  6b5a08: b90017e1     	str	w1, [sp, #0x14]
+  6b5a0c: b94017e0     	ldr	w0, [sp, #0x14]
+  6b5a10: 7100101f     	cmp	w0, #0x4
+  6b5a14: 54000168     	b.hi	0x6b5a40 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15680>
+  6b5a18: f9400fe1     	ldr	x1, [sp, #0x18]
+  6b5a1c: b94017e0     	ldr	w0, [sp, #0x14]
+  6b5a20: 91005800     	add	x0, x0, #0x16
+  6b5a24: d37df000     	lsl	x0, x0, #3
+  6b5a28: 8b000020     	add	x0, x1, x0
+  6b5a2c: f9400400     	ldr	x0, [x0, #0x8]
+  6b5a30: f100001f     	cmp	x0, #0x0
+  6b5a34: 54000060     	b.eq	0x6b5a40 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15680>
+  6b5a38: 52800020     	mov	w0, #0x1                // =1
+  6b5a3c: 1400000a     	b	0x6b5a64 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x156a4>
+  6b5a40: b94017e4     	ldr	w4, [sp, #0x14]
+  6b5a44: d0002a80     	adrp	x0, 0xc07000
+  6b5a48: 91294003     	add	x3, x0, #0xa50
+  6b5a4c: 52800ae2     	mov	w2, #0x57               // =87
+  6b5a50: d0002a80     	adrp	x0, 0xc07000
+  6b5a54: 9127a001     	add	x1, x0, #0x9e8
+  6b5a58: 52800040     	mov	w0, #0x2                // =2
+  6b5a5c: 940242bc     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  6b5a60: 52800000     	mov	w0, #0x0                // =0
+  6b5a64: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  6b5a68: d65f03c0     	ret

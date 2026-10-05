@@ -1,0 +1,51 @@
+Exact User SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution.
+  500780: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  500784: 910003fd     	mov	x29, sp
+  500788: f9000fe0     	str	x0, [sp, #0x18]
+  50078c: 900034a0     	adrp	x0, 0xb94000
+  500790: 913fa001     	add	x1, x0, #0xfe8
+  500794: f9400fe0     	ldr	x0, [sp, #0x18]
+  500798: f9000001     	str	x1, [x0]
+  50079c: b00034a0     	adrp	x0, 0xb95000
+  5007a0: 91072001     	add	x1, x0, #0x1c8
+  5007a4: f9400fe0     	ldr	x0, [sp, #0x18]
+  5007a8: f9004001     	str	x1, [x0, #0x80]
+  5007ac: b00034a0     	adrp	x0, 0xb95000
+  5007b0: 91080001     	add	x1, x0, #0x200
+  5007b4: f9400fe0     	ldr	x0, [sp, #0x18]
+  5007b8: f9004401     	str	x1, [x0, #0x88]
+  5007bc: b00034a0     	adrp	x0, 0xb95000
+  5007c0: 91098001     	add	x1, x0, #0x260
+  5007c4: f9400fe0     	ldr	x0, [sp, #0x18]
+  5007c8: f9006801     	str	x1, [x0, #0xd0]
+  5007cc: f9400fe0     	ldr	x0, [sp, #0x18]
+  5007d0: 91034000     	add	x0, x0, #0xd0
+  5007d4: 97ff0f76     	bl	0x4c45ac
+  5007d8: f9400fe0     	ldr	x0, [sp, #0x18]
+  5007dc: 97ff8279     	bl	0x4e11c0
+  5007e0: d503201f     	nop
+  5007e4: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  5007e8: d65f03c0     	ret
+  5007ec: d1022000     	sub	x0, x0, #0x88
+  5007f0: 17ffffe4     	b	0x500780
+  5007f4: d1020000     	sub	x0, x0, #0x80
+  5007f8: 17ffffe2     	b	0x500780
+  5007fc: d1034000     	sub	x0, x0, #0xd0
+  500800: 17ffffe0     	b	0x500780
+  500804: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  500808: 910003fd     	mov	x29, sp
+  50080c: f9000fe0     	str	x0, [sp, #0x18]
+  500810: f9400fe0     	ldr	x0, [sp, #0x18]
+  500814: 97ffffdb     	bl	0x500780
+  500818: d2801d01     	mov	x1, #0xe8
+  50081c: f9400fe0     	ldr	x0, [sp, #0x18]
+  500820: 97fc2570     	bl	0x409de0
+  500824: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  500828: d65f03c0     	ret
+  50082c: d1034000     	sub	x0, x0, #0xd0
+  500830: 17fffff5     	b	0x500804
+  500834: d1022000     	sub	x0, x0, #0x88
+  500838: 17fffff3     	b	0x500804
+  50083c: d1020000     	sub	x0, x0, #0x80
+  500840: 17fffff1     	b	0x500804

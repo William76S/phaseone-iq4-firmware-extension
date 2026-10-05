@@ -1,0 +1,49 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  863570: a9ba7bfd     	stp	x29, x30, [sp, #-0x60]!
+  863574: 910003fd     	mov	x29, sp
+  863578: f9000fe0     	str	x0, [sp, #0x18]
+  86357c: f9000be1     	str	x1, [sp, #0x10]
+  863580: 910083e0     	add	x0, sp, #0x20
+  863584: f9400be2     	ldr	x2, [sp, #0x10]
+  863588: 52800161     	mov	w1, #0xb                // =11
+  86358c: 97eebc91     	bl	0x4127d0 <.text+0x75a0>
+  863590: f9400fe0     	ldr	x0, [sp, #0x18]
+  863594: f9401405     	ldr	x5, [x0, #0x28]
+  863598: f9400fe0     	ldr	x0, [sp, #0x18]
+  86359c: f9401400     	ldr	x0, [x0, #0x28]
+  8635a0: f9400000     	ldr	x0, [x0]
+  8635a4: 9100c000     	add	x0, x0, #0x30
+  8635a8: f9400004     	ldr	x4, [x0]
+  8635ac: 910083e0     	add	x0, sp, #0x20
+  8635b0: 52807d03     	mov	w3, #0x3e8              // =1000
+  8635b4: 529d4c02     	mov	w2, #0xea60             // =60000
+  8635b8: aa0003e1     	mov	x1, x0
+  8635bc: aa0503e0     	mov	x0, x5
+  8635c0: d63f0080     	blr	x4
+  8635c4: 12001c00     	and	w0, w0, #0xff
+  8635c8: 39017fe0     	strb	w0, [sp, #0x5f]
+  8635cc: 39417fe0     	ldrb	w0, [sp, #0x5f]
+  8635d0: 52000000     	eor	w0, w0, #0x1
+  8635d4: 12001c00     	and	w0, w0, #0xff
+  8635d8: 7100001f     	cmp	w0, #0x0
+  8635dc: 54000180     	b.eq	0x86360c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x1f248>
+  8635e0: b0002a00     	adrp	x0, 0xda4000
+  8635e4: 91040004     	add	x4, x0, #0x100
+  8635e8: 90002a00     	adrp	x0, 0xda3000
+  8635ec: 913ea003     	add	x3, x0, #0xfa8
+  8635f0: 52802302     	mov	w2, #0x118              // =280
+  8635f4: 90002a00     	adrp	x0, 0xda3000
+  8635f8: 91334001     	add	x1, x0, #0xcd0
+  8635fc: 52800040     	mov	w0, #0x2                // =2
+  863600: 97fb8bd3     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  863604: f9400be0     	ldr	x0, [sp, #0x10]
+  863608: 97fff99d     	bl	0x861c7c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x1d8b8>
+  86360c: d503201f     	nop
+  863610: a8c67bfd     	ldp	x29, x30, [sp], #0x60
+  863614: d65f03c0     	ret

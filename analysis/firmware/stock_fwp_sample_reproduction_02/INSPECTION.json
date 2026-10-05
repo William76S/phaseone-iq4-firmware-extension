@@ -1,0 +1,215 @@
+{
+  "schema": "iq4_stock_fwp_offline_inspection_v1",
+  "original_fwp_bytes": 80158711,
+  "original_fwp_sha256": "3dfb12c9417d60a0838a5abbfe3adccba2f242a79bab5f9ffa312be097571252",
+  "original_outer_manifest_sha256": "29081a1b7be5753e91648f00abe2b478e3c040ced65b11c963361d296e96f575",
+  "all_ZIP4_CRCs_checked": true,
+  "inner_fwr_byte_identical": true,
+  "members": [
+    {
+      "name": "FW5.00.5.FWR",
+      "bytes": 1564949,
+      "compressed_bytes": 1564423,
+      "sha256": "70211868097d0015133ed2bdd100d41157af8c3baff031ceec704a477cbf96fe",
+      "CRC32": "826e84db",
+      "method": 8,
+      "flags": 0,
+      "local_header_offset": 0
+    },
+    {
+      "name": "IQ4_6.03.18.FWR",
+      "bytes": 78351289,
+      "compressed_bytes": 78348511,
+      "sha256": "a52758ffb163023e5323297e450450f91002175b69bed7590fe2cd037c2ab300",
+      "CRC32": "04f67d45",
+      "method": 8,
+      "flags": 0,
+      "local_header_offset": 1564465
+    },
+    {
+      "name": "manifest.xml",
+      "bytes": 492,
+      "compressed_bytes": 238,
+      "sha256": "29081a1b7be5753e91648f00abe2b478e3c040ced65b11c963361d296e96f575",
+      "CRC32": "e446b3f4",
+      "method": 8,
+      "flags": 0,
+      "local_header_offset": 79913021
+    },
+    {
+      "name": "XS1.01.4.FWR",
+      "bytes": 245394,
+      "compressed_bytes": 245111,
+      "sha256": "23102f6de1063459c9b76b41b15e586749eb5fcefa24286a30d8190893309a30",
+      "CRC32": "c1805004",
+      "method": 8,
+      "flags": 0,
+      "local_header_offset": 79913301
+    }
+  ],
+  "outer_root_attributes": {
+    "compatible_version": "2",
+    "name": "XFSystem",
+    "version": "8.02.0",
+    "date": "2022-07-21"
+  },
+  "back_attributes": {
+    "model_ids": "0x125,0x126,0x122",
+    "hw_revisions": "1,2,3",
+    "version": "6.03.18"
+  },
+  "User_ELF": {
+    "original_user_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+    "original_user_bytes": 11874544,
+    "entry_va": 4240268,
+    "program_header_file_offset": 64,
+    "program_header_count": 10,
+    "program_header_entry_bytes": 56,
+    "program_header_end": 624,
+    "interpreter_file_offset": 624,
+    "spare_contiguous_program_header_bytes_before_interp": 0,
+    "programs": [
+      {
+        "index": 0,
+        "type": 6,
+        "flags": 4,
+        "file_offset": 64,
+        "va": 4194368,
+        "file_size": 560,
+        "memory_size": 560,
+        "alignment": 8
+      },
+      {
+        "index": 1,
+        "type": 3,
+        "flags": 4,
+        "file_offset": 624,
+        "va": 4194928,
+        "file_size": 27,
+        "memory_size": 27,
+        "alignment": 1
+      },
+      {
+        "index": 2,
+        "type": 1,
+        "flags": 5,
+        "file_offset": 0,
+        "va": 4194304,
+        "file_size": 11736914,
+        "memory_size": 11736914,
+        "alignment": 65536
+      },
+      {
+        "index": 3,
+        "type": 1,
+        "flags": 6,
+        "file_offset": 11738528,
+        "va": 15998368,
+        "file_size": 133716,
+        "memory_size": 53459488,
+        "alignment": 65536
+      },
+      {
+        "index": 4,
+        "type": 2,
+        "flags": 6,
+        "file_offset": 11742600,
+        "va": 16002440,
+        "file_size": 592,
+        "memory_size": 592,
+        "alignment": 8
+      },
+      {
+        "index": 5,
+        "type": 4,
+        "flags": 4,
+        "file_offset": 652,
+        "va": 4194956,
+        "file_size": 68,
+        "memory_size": 68,
+        "alignment": 4
+      },
+      {
+        "index": 6,
+        "type": 7,
+        "flags": 4,
+        "file_offset": 11738528,
+        "va": 15998368,
+        "file_size": 0,
+        "memory_size": 8,
+        "alignment": 8
+      },
+      {
+        "index": 7,
+        "type": 1685382480,
+        "flags": 4,
+        "file_offset": 10332452,
+        "va": 14526756,
+        "file_size": 259652,
+        "memory_size": 259652,
+        "alignment": 4
+      },
+      {
+        "index": 8,
+        "type": 1685382481,
+        "flags": 6,
+        "file_offset": 0,
+        "va": 0,
+        "file_size": 0,
+        "memory_size": 0,
+        "alignment": 16
+      },
+      {
+        "index": 9,
+        "type": 1685382482,
+        "flags": 4,
+        "file_offset": 11738528,
+        "va": 15998368,
+        "file_size": 4704,
+        "memory_size": 4704,
+        "alignment": 1
+      }
+    ],
+    "DT_INIT": 4234128,
+    "DT_FINI": 10416472,
+    "DT_INIT_ARRAY": 15998368,
+    "DT_INIT_ARRAYSZ": 2720,
+    "original_init_array_entries": 340,
+    "DT_FINI_ARRAY": 16001088,
+    "DT_FINI_ARRAYSZ": 8,
+    "pthread_symbols": [
+      {
+        "name": "pthread_mutex_unlock",
+        "dynsym_index": 181,
+        "st_info": 34,
+        "weak_binding": true,
+        "section_index": 0,
+        "value": 0,
+        "size": 0,
+        "version_index": 2,
+        "relocation_type": 1026,
+        "relocation_va": 16004528,
+        "relocation_file_offset": 35600,
+        "addend": 0
+      },
+      {
+        "name": "pthread_mutex_lock",
+        "dynsym_index": 239,
+        "st_info": 34,
+        "weak_binding": true,
+        "section_index": 0,
+        "value": 0,
+        "size": 0,
+        "version_index": 2,
+        "relocation_type": 1026,
+        "relocation_va": 16005000,
+        "relocation_file_offset": 37016,
+        "addend": 0
+      }
+    ],
+    "original_code_or_ELF_executed": false
+  },
+  "camera_access": false,
+  "vendor_or_target_execution": false,
+  "modified_package_acceptance_or_recovery_verified": false
+}

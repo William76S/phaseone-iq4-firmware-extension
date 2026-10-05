@@ -1,0 +1,34 @@
+{
+  "schema": "iq4_f3_saved_raw_capture_02_link",
+  "source": {
+    "path": "tools/firmware/f3_saved_raw_capture_02/SOURCE_SHA256.json",
+    "bytes": 4984,
+    "sha256": "c0f8a9425a14b3976ba62252f185e88227d0d07cd29dd6fcdcc9e646f3fea2be"
+  },
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_saved_raw_capture_build_02/runtime.o",
+      "bytes": 14208,
+      "sha256": "95db7c6184c601bbf15f3f767751fa7f70cd9ebf73f6a844fe11c6c635538470"
+    }
+  ],
+  "reference_manifests": [
+    {
+      "path": "tools/firmware/f3_capture_menu_04/SOURCE_SHA256.json",
+      "bytes": 5584,
+      "sha256": "ace424331f55fd434a8b528992b9b9a8e44b574899d7459f6554370bd8e95989"
+    },
+    {
+      "path": "tools/firmware/f3_saved_raw_capture_01/LINK_INPUT.json",
+      "bytes": 1653,
+      "sha256": "4350aa4fe154a053a0d30a403ca80f7344807374cbb67d3a86b3408936d7d36a"
+    },
+    {
+      "path": "tools/firmware/f3_saved_raw_capture_01/SOURCE_SHA256.json",
+      "bytes": 11041,
+      "sha256": "8e4198e8bf06833f533f67159802e333b346af9e9355fecd33054e4dc38ca3bb"
+    }
+  ],
+  "integration": "replace Capture01 runtime.o only; same original bindings and other four objects",
+  "target_executed": false
+}

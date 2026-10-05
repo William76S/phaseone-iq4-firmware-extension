@@ -1,0 +1,59 @@
+{
+  "schema": "iq4_f4_native_page_bridge01_host_v1",
+  "tests": {
+    "normal": {
+      "groups": 22,
+      "exit_code": 0,
+      "receipt": "22 own-code page groups passed; no vendor/UI/device calls"
+    },
+    "asan_ubsan": {
+      "groups": 22,
+      "exit_code": 0,
+      "receipt": "22 own-code page groups passed; no vendor/UI/device calls"
+    },
+    "tsan": {
+      "groups": 22,
+      "exit_code": 0,
+      "receipt": "22 own-code page groups passed; no vendor/UI/device calls"
+    },
+    "production": {
+      "groups": 1,
+      "exit_code": 0,
+      "receipt": "production reject: zero ports/backend/native calls"
+    }
+  },
+  "target": {
+    "ELF_type": 1,
+    "machine": 183,
+    "sha256": "f8dc817dccc081964af2a7bd45c30f2b596f91cc89e1fcb01edcdef3c81bde74",
+    "bytes": 114480,
+    "undefined_symbols": [
+      "_ZN3iq47runtime8Recorder11reset_errorEv",
+      "_ZN3iq47runtime8Recorder4stopEv",
+      "_ZN3iq47runtime8Recorder5startEv",
+      "_ZN3iq47runtime8Recorder9exit_pageEv",
+      "_ZSt9terminatev",
+      "__cxa_begin_catch",
+      "__cxa_end_catch",
+      "__gxx_personality_v0",
+      "memset"
+    ],
+    "needed": [],
+    "glibc_versions": [],
+    "interpreter": null
+  },
+  "production_native_binding_enabled": false,
+  "vendor_code_executed": false,
+  "device_accessed": false,
+  "target_executed": false,
+  "actual_page_enter_touch_keys_return_or_undo_verified": false,
+  "actual_worker_card_source_verified": false,
+  "actual_mode_or_1080p60_verified": false,
+  "sources": {
+    "tools/firmware/f4_native_page_bridge_01/page_bridge.cpp": "b36b939c45784bef65dec24152e1b5d2130d3b0614ee60e793b7000ab3a9116a",
+    "src/runtime/recording.cpp": "8c105341e5413de729c86832109f6135adc7a1f63ca44bab4b1ff73c6674d975",
+    "tools/firmware/f4_native_page_bridge_01/test_page.cpp": "541a5c51c2705bddaf84380a59936b0f69557d78fe75a1c427c4bac9426b47b5",
+    "tools/firmware/f4_native_page_bridge_01/page_bridge.hpp": "af6d2dffe2bd21cc116c0a6852e500ec479dfcc307da4839bef3a7b485feb2bf",
+    "tools/firmware/f4_native_page_bridge_01/native_abi.hpp": "d97f258fd97131cb8fa4808632e214b914fb616ef8aaf5f8cdca390c7c475075"
+  }
+}

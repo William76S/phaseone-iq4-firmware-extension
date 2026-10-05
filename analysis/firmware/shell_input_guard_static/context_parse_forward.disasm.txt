@@ -1,0 +1,25 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  73fb60: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  73fb64: 910003fd     	mov	x29, sp
+  73fb68: f90017e0     	str	x0, [sp, #0x28]
+  73fb6c: f90013e1     	str	x1, [sp, #0x20]
+  73fb70: b9001fe2     	str	w2, [sp, #0x1c]
+  73fb74: b001c300     	adrp	x0, 0x3fa0000 <_ZNSt5ctypeIcE2idE+0x303ced8>
+  73fb78: 91399400     	add	x0, x0, #0xe65
+  73fb7c: 39400001     	ldrb	w1, [x0]
+  73fb80: f94017e0     	ldr	x0, [sp, #0x28]
+  73fb84: 390a6001     	strb	w1, [x0, #0x298]
+  73fb88: f94017e0     	ldr	x0, [sp, #0x28]
+  73fb8c: b9401fe2     	ldr	w2, [sp, #0x1c]
+  73fb90: f94013e1     	ldr	x1, [sp, #0x20]
+  73fb94: 94000146     	bl	0x7400ac <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x26380>
+  73fb98: d503201f     	nop
+  73fb9c: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  73fba0: d65f03c0     	ret
+  73fba4: d12483ff     	sub	sp, sp, #0x920

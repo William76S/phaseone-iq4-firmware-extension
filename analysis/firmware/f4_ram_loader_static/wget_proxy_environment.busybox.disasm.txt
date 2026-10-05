@@ -1,0 +1,21 @@
+analysis/firmware/f4_ram_loader_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   2663c:      	ldr	x2, [sp, #0x110]
+   26640:      	adrp	x1, 0x99000
+   26644:      	add	x1, x1, #0x930
+   26648:      	adrp	x0, 0x99000
+   2664c:      	add	x0, x0, #0x920
+   26650:      	ldrb	w2, [x2]
+   26654:      	cmp	w2, #0x66
+   26658:      	csel	x0, x0, x1, eq
+   2665c:      	bl	0xb620 <getenv@plt>
+   26660:      	cbz	x0, 0x25c00 <.text+0x1a460>
+   26664:      	ldrb	w1, [x0]
+   26668:      	cbz	w1, 0x25c00 <.text+0x1a460>
+   2666c:      	add	x1, sp, #0xc8
+   26670:      	mov	w25, #0x1               // =1
+   26674:      	bl	0x25300 <.text+0x19b60>
+   26678:      	b	0x25c20 <.text+0x1a480>

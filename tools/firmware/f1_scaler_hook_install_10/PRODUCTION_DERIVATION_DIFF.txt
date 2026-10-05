@@ -1,0 +1,565 @@
+--- tools/firmware/f1_native_entry_binding_07/binding.cpp
++++ tools/firmware/f1_scaler_hook_install_10/entry_binding_10.cpp
+@@ -1,14 +1,14 @@
+-#include "binding.hpp"
++#include "entry_binding_10.hpp"
+ #include "../f1_display_observe_06/native_layout.hpp"
+ #include <cstring>
+ #include <limits>
+-namespace iq4::f1::entry07 {
++namespace iq4::f1::entry10 {
+ namespace {
+-constexpr unsigned OwnTag=0x463107;
+-constexpr const char* Names[6]={"IQ4 F1 07 Off","IQ4 F1 07 XPan","IQ4 F1 07 16:9","IQ4 F1 07 3:2","IQ4 F1 07 1:1","IQ4 F1 07 private Open"};
++constexpr unsigned OwnTag=0x463110;
++constexpr const char* Names[6]={"IQ4 F1 10 Off","IQ4 F1 10 XPan","IQ4 F1 10 16:9","IQ4 F1 10 3:2","IQ4 F1 10 1:1","IQ4 F1 10 private Open"};
+ constexpr const char* Labels[5]={"Off / native","XPan 65:24","16:9","3:2","1:1"};
+ constexpr MaskMode Modes[5]={MaskMode::Off,MaskMode::XPan65_24,MaskMode::Ratio16_9,MaskMode::Ratio3_2,MaskMode::Ratio1_1};
+-constexpr char ButtonLabel[]="F1 mask",ObserverName[]="IQ4 F1 07 private UI";
++constexpr char ButtonLabel[]="F1 mask",ObserverName[]="IQ4 F1 10 private UI";
+ bool overlaps(const Rectangle24&a,std::int32_t x,std::int32_t y)noexcept{return a.width>0&&a.height>0&&std::int64_t(a.x)<std::int64_t(x)+128&&std::int64_t(a.y)<std::int64_t(y)+128&&std::int64_t(a.x)+a.width>x&&std::int64_t(a.y)+a.height>y;}
+ bool contains(native_overlay::PixelRect a,native_overlay::PixelRect b)noexcept{return a.width>0&&a.height>0&&b.width>0&&b.height>0&&a.x<=b.x&&a.y<=b.y&&std::int64_t(a.x)+a.width>=std::int64_t(b.x)+b.width&&std::int64_t(a.y)+a.height>=std::int64_t(b.y)+b.height;}
+ }
+--- tools/firmware/f1_native_entry_binding_07/binding.hpp
++++ tools/firmware/f1_scaler_hook_install_10/entry_binding_10.hpp
+@@ -2,7 +2,7 @@
+ #include "../f1_module_entry_01/module.hpp"
+ #include "../f1_display_observe_06/observe.hpp"
+ #include <array>
+-namespace iq4::f1::entry07 {
++namespace iq4::f1::entry10 {
+ using namespace native_ui02;
+ // Root must hold these actual constructor/restore admission facts. Default is
+ // OFF; none comes from a successful compile or display scalar publication.
+@@ -17,7 +17,7 @@
+  // taken here. Must hide on native zoom/pan and retain original paint once.
+  SelectResult(*apply_on_ui)(void*,MaskMode,std::uint64_t request_generation)noexcept{};
+ };
+-struct Status {std::uint32_t schema{7},bytes{sizeof(Status)},phase{},mask_state_known{},mask_enabled{},reserved{};std::uint64_t callbacks{},open_requests{},selections{},rejected{},generation{},detach_epoch{};MaskMode selected{MaskMode::Off};std::uint32_t retained_until_User_exit{1},stock_toolbar_1_8_preserved{1},embedded_popup_preserved{1},stock_paint_restored{1},ui_mutation_attempted{};};
++struct Status {std::uint32_t schema{10},bytes{sizeof(Status)},phase{},mask_state_known{},mask_enabled{},reserved{};std::uint64_t callbacks{},open_requests{},selections{},rejected{},generation{},detach_epoch{};MaskMode selected{MaskMode::Off};std::uint32_t retained_until_User_exit{1},stock_toolbar_1_8_preserved{1},embedded_popup_preserved{1},stock_paint_restored{1},ui_mutation_attempted{};};
+ struct Published {std::atomic<unsigned>sequence{0};unsigned bytes{sizeof(Published)};Status metadata{};};
+ static_assert(sizeof(Status)==96&&sizeof(Published)==104&&offsetof(Published,metadata)==8);
+ struct ControlObserver {entry_ports01::ControlObserverNative native{};void*extension{};};
+@@ -34,6 +34,8 @@
+  bool observe_stock_paint_on_ui(const PaintReceipt&)noexcept;
+  bool detach_on_ui(std::uint64_t dispatch_epoch)noexcept;
+  Status status_on_ui()const noexcept{return status_;}
++ // Existing validated Binding TLS/listener port; independent of Module cap.
++ Native persistent_ports_on_ui()noexcept{return configured_&&status_.phase!=static_cast<unsigned>(Phase::Hold)&&status_.phase!=static_cast<unsigned>(Phase::DetachedRetained)&&on_ui()&&actual_owner()?native_:Native{};}
+  Address own_button()const noexcept{return reinterpret_cast<Address>(button_.data());}
+  Address own_popup()const noexcept{return reinterpret_cast<Address>(popup_.data());}
+  Address own_root()const noexcept{return reinterpret_cast<Address>(root_.data());}
+@@ -74,7 +76,7 @@
+  std::array<std::array<char,33>,5>labels_{};
+  // Saved fields of original embedded Navigator; never written by this binder.
+  std::array<unsigned char,0x18>stock_menu_head_{};std::array<unsigned char,0x58>stock_menu_stack_{};
+-#ifdef IQ4_F1_ENTRY07_OWNED_HOST_FIXTURE
++#ifdef IQ4_F1_ENTRY10_OWNED_HOST_FIXTURE
+  friend struct OwnedFixture;
+ #endif
+ };
+--- tools/firmware/f1_native_entry_binding_07/bridge.hpp
++++ tools/firmware/f1_scaler_hook_install_10/entry_bridge_10.hpp
+@@ -1,6 +1,6 @@
+ #pragma once
+-#include "binding.hpp"
+-namespace iq4::f1::entry07 {
++#include "entry_binding_10.hpp"
++namespace iq4::f1::entry10 {
+ // Own-runtime integration: call after the exact original unlock has returned
+ // and Module::after_unlock has published the actual owner. This is never called
+ // from a host setter, timer, constructor UI thread guess or borrowed input.
+--- tools/firmware/f1_normal_fit_display_09/fixed_plan.cpp
++++ tools/firmware/f1_scaler_hook_install_10/fixed_plan.cpp
+@@ -2,7 +2,7 @@
+ #include <algorithm>
+ #include <cmath>
+ #include <limits>
+-namespace iq4::f1::normal09 {
++namespace iq4::f1::normal10 {
+ namespace {
+ bool raster(double l,double t,double r,double b,Rect&out)noexcept{
+  if(!std::isfinite(l)||!std::isfinite(t)||!std::isfinite(r)||!std::isfinite(b)||r<l||b<t)return false;
+--- tools/firmware/f1_normal_fit_display_09/hook_capture.cpp
++++ tools/firmware/f1_scaler_hook_install_10/hook_capture.cpp
+@@ -5,18 +5,18 @@
+ #include <cstring>
+ // Not an installer/export, not a provider getter, and not a token issuer.
+ // Retained OWN storage only. Actual hook dispatch is not enabled or loaded.
+-extern "C" {__attribute__((visibility("default"))) iq4::f1::normal09::PublishedIngress iq4_f1_normal_fit_ingress_observed_09;}
++extern "C" {__attribute__((visibility("default"))) iq4::f1::normal10::PublishedIngress iq4_f1_normal_fit_ingress_observed_10;}
+ namespace {
+- std::atomic_flag busy=ATOMIC_FLAG_INIT;std::atomic<unsigned>sequence{0};iq4::f1::normal09::RawWriteObservation observed{};
+- struct Consumer {iq4::f1::normal09::ProvenProviderAdapter*provider{};iq4::f1::normal09::Renderer*renderer{};};
++ std::atomic_flag busy=ATOMIC_FLAG_INIT;std::atomic<unsigned>sequence{0};iq4::f1::normal10::RawWriteObservation observed{};
++ struct Consumer {iq4::f1::normal10::ProvenProviderAdapter*provider{};iq4::f1::normal10::Renderer*renderer{};};
+  Consumer retained{};std::atomic<Consumer*>consumer{nullptr};
+ }
+-namespace iq4::f1::normal09 {
++namespace iq4::f1::normal10 {
+ void publish_ingress_on_ui(const IngressStatus&s)noexcept{
+- iq4_f1_normal_fit_ingress_observed_09.sequence.fetch_add(1,std::memory_order_acq_rel);
+- iq4_f1_normal_fit_ingress_observed_09.metadata=s;
+- iq4_f1_normal_fit_ingress_observed_09.raw={};
+- iq4_f1_normal_fit_ingress_observed_09.sequence.fetch_add(1,std::memory_order_release);
++ iq4_f1_normal_fit_ingress_observed_10.sequence.fetch_add(1,std::memory_order_acq_rel);
++ iq4_f1_normal_fit_ingress_observed_10.metadata=s;
++ iq4_f1_normal_fit_ingress_observed_10.raw={};
++ iq4_f1_normal_fit_ingress_observed_10.sequence.fetch_add(1,std::memory_order_release);
+ }
+ bool install_capture_consumer_once_on_ui(ProvenProviderAdapter&p,Renderer&r)noexcept{
+  // Root must already hold its quiescence receipt. The renderer itself checks
+@@ -25,7 +25,7 @@
+  retained={&p,&r};Consumer*empty=nullptr;return consumer.compare_exchange_strong(empty,&retained,std::memory_order_release,std::memory_order_acquire);
+ }
+ }
+-extern "C" __attribute__((visibility("hidden"))) void iq4_f1_scaler_after_09(const iq4::f1::normal09::ScalerCapture*c)noexcept{
++extern "C" __attribute__((visibility("hidden"))) void iq4_f1_scaler_after_10(const iq4::f1::normal10::ScalerCapture*c)noexcept{
+  const int saved=errno;
+  if(c&&!busy.test_and_set(std::memory_order_acquire)){
+   sequence.fetch_add(1,std::memory_order_acq_rel);
+@@ -42,10 +42,10 @@
+   if(auto*p=consumer.load(std::memory_order_acquire)){
+    if(p->provider->rendering_contract_bound())(void)p->provider->dispatch_scaler_return_on_ui(*c,*p->renderer);
+    else (void)p->provider->observe_scaler_return_on_ui(*c);
+-   iq4_f1_normal_fit_ingress_observed_09.sequence.fetch_add(1,std::memory_order_acq_rel);
+-   iq4_f1_normal_fit_ingress_observed_09.metadata=p->provider->status_on_ui();
+-   iq4_f1_normal_fit_ingress_observed_09.raw=observed;
+-   iq4_f1_normal_fit_ingress_observed_09.sequence.fetch_add(1,std::memory_order_release);
++   iq4_f1_normal_fit_ingress_observed_10.sequence.fetch_add(1,std::memory_order_acq_rel);
++   iq4_f1_normal_fit_ingress_observed_10.metadata=p->provider->status_on_ui();
++   iq4_f1_normal_fit_ingress_observed_10.raw=observed;
++   iq4_f1_normal_fit_ingress_observed_10.sequence.fetch_add(1,std::memory_order_release);
+   }
+   busy.clear(std::memory_order_release);
+  }
+--- tools/firmware/f1_normal_fit_display_09/hook_capture.hpp
++++ tools/firmware/f1_scaler_hook_install_10/hook_capture.hpp
+@@ -1,7 +1,7 @@
+ #pragma once
+ #include <cstddef>
+ #include <cstdint>
+-namespace iq4::f1::normal09 {
++namespace iq4::f1::normal10 {
+ // Assembly frame is 1024B. These offsets are independently checked against
+ // actual AArch64 object bytes/disassembly; the trailing 144B is not published.
+ struct alignas(16) ScalerCapture {
+@@ -23,4 +23,4 @@
+  std::uint32_t normal_original_return{},full_source{},surface_lease{},mask_enabled{};
+ };
+ }
+-extern "C" void iq4_f1_scaler_after_09(const iq4::f1::normal09::ScalerCapture*)noexcept;
++extern "C" void iq4_f1_scaler_after_10(const iq4::f1::normal10::ScalerCapture*)noexcept;
+--- tools/firmware/f1_normal_fit_display_09/integration.cpp
++++ tools/firmware/f1_scaler_hook_install_10/integration.cpp
+@@ -1,5 +1,5 @@
+ #include "integration.hpp"
+ // Compile-only own runtime bridge bodies. Hidden C++ ports, no constructor,
+ // SDK RPC/native event setter/target loader/process exit or patch installer.
+-bool iq4_f1_ui09_after_original_boundary(iq4::f1::normal09::UI09Bridge&bridge,iq4::f1::native_ui02::Memory memory,iq4::f1::entry01::Module&module,iq4::f1::entry07::Binding&entry,const iq4::f1::native_ui02::BoundaryInput&input)noexcept{return bridge.after_original_boundary_on_ui(memory,module,entry,input);}
+-bool iq4_f1_ui09_bind_actual_provider_before_patch(iq4::f1::normal09::UI09Bridge&bridge,iq4::f1::native_ui02::Memory memory,iq4::f1::entry01::Module&module,const iq4::f1::normal09::ActualProviderContract&contract)noexcept{return bridge.bind_actual_provider_before_patch_on_ui(memory,module,contract);}
++bool iq4_f1_ui10_after_original_boundary(iq4::f1::normal10::UI10Bridge&bridge,iq4::f1::native_ui02::Memory memory,iq4::f1::entry01::Module&module,iq4::f1::entry10::Binding&entry,const iq4::f1::native_ui02::BoundaryInput&input)noexcept{return bridge.after_original_boundary_on_ui(memory,module,entry,input);}
++bool iq4_f1_ui10_bind_actual_provider_before_patch(iq4::f1::normal10::UI10Bridge&bridge,iq4::f1::native_ui02::Memory memory,iq4::f1::entry01::Module&module,const iq4::f1::normal10::ActualProviderContract&contract)noexcept{return bridge.bind_actual_provider_before_patch_on_ui(memory,module,contract);}
+--- tools/firmware/f1_normal_fit_display_09/integration.hpp
++++ tools/firmware/f1_scaler_hook_install_10/integration.hpp
+@@ -1,13 +1,13 @@
+ #pragma once
+ #include "provider.hpp"
+-namespace iq4::f1::normal09 {
++namespace iq4::f1::normal10 {
+ // Concrete finite integration for a new derivative runtime, independent of
+ // frozen UI07/Loader07. No global ctor/paint installer is introduced.
+-class UI09Bridge {
++class UI10Bridge {
+ public:
+- bool after_original_boundary_on_ui(native_ui02::Memory memory,entry01::Module&module,entry07::Binding&entry,const native_ui02::BoundaryInput&input)noexcept{
++ bool after_original_boundary_on_ui(native_ui02::Memory memory,entry01::Module&module,entry10::Binding&entry,const native_ui02::BoundaryInput&input)noexcept{
+   if(!install_after_original_boundary(renderer_,input,module,entry,memory))return false;
+-  if(!observing_){if(!provider_.bind_observation_on_actual_ui(memory,module.selector_ports(),module.observed_owner()))return false;observing_=true;}
++  if(!observing_){persistent_=entry.persistent_ports_on_ui();if(!persistent_.current_thread||!provider_.bind_observation_on_actual_ui(memory,persistent_,module.observed_owner()))return false;observing_=true;}
+   if(!registered_){if(!install_capture_consumer_once_on_ui(provider_,renderer_))return false;registered_=true;}
+   (void)provider_.sample_boundary_scalars_on_actual_ui();publish_ingress_on_ui(provider_.status_on_ui());
+   return true;
+@@ -17,11 +17,11 @@
+  bool bind_actual_provider_before_patch_on_ui(native_ui02::Memory memory,entry01::Module&module,const ActualProviderContract&contract)noexcept{
+   if(!observing_||!registered_||renderer_.status_on_ui().phase!=Phase::OffClean)return false;
+   const auto&o=module.observed_owner();if(contract.owner.queue!=o.queue||contract.owner.manager!=o.manager||contract.owner.data!=o.data||contract.owner.lv!=o.lv||contract.owner.popup!=o.popup)return false;
+-  return provider_.configure_on_actual_ui(memory,module.selector_ports(),contract);
++  return provider_.configure_on_actual_ui(memory,persistent_,contract);
+  }
+  Renderer&renderer()noexcept{return renderer_;}
+  ProvenProviderAdapter&provider()noexcept{return provider_;}
+ private:
+- Renderer renderer_{};ProvenProviderAdapter provider_{};bool observing_{},registered_{};
++ native_ui02::Native persistent_{};Renderer renderer_{};ProvenProviderAdapter provider_{};bool observing_{},registered_{};
+ };
+ }
+--- tools/firmware/f1_normal_fit_display_09/normal_fit.cpp
++++ tools/firmware/f1_scaler_hook_install_10/normal_fit.cpp
+@@ -3,7 +3,7 @@
+ #include <cmath>
+ #include <cstring>
+ #include <limits>
+-namespace iq4::f1::normal09 {
++namespace iq4::f1::normal10 {
+ namespace {
+ bool positive(Rect r)noexcept{return r.width>0&&r.height>0&&r.width<=4096&&r.height<=4096&&r.x>=0&&r.y>=0&&std::int64_t(r.x)+r.width<=4096&&std::int64_t(r.y)+r.height<=4096;}
+ bool same(Rect a,Rect b)noexcept{return a.x==b.x&&a.y==b.y&&a.width==b.width&&a.height==b.height;}
+@@ -46,25 +46,25 @@
+  if(stack.normal_count==2&&(!p.word(stack.dialogs[0],v)||v!=0xb94fd8||stack.node_vtables[0]!=0xb951f0))return false;
+  return stack.node_vtables[stack.normal_count-1]==0xb9abf8;
+ }
+-bool Renderer::bind_once_on_ui(native_ui02::Memory m,native_ui02::Native n,native_overlay::FillWrapper f,const native_ui02::Owner&o,entry07::Binding*e)noexcept{
++bool Renderer::bind_once_on_ui(native_ui02::Memory m,native_ui02::Native n,native_overlay::FillWrapper f,const native_ui02::Owner&o,entry10::Binding*e)noexcept{
+  if(status_.phase!=Phase::Unbound||!m.read||!n.current_thread||!n.invalidate||!f||!o.queue||!o.lv||!o.manager||n.current_thread(n.context)!=o.queue)return false;
+  memory_=m;native_=n;fill_=f;owner_=o;entry_=e;status_.phase=Phase::OffClean;
+  if(!current()){status_.phase=Phase::Unbound;return false;}return true;
+ }
+-bool Renderer::install_selection_once_on_ui(entry07::Binding&e)noexcept{
++bool Renderer::install_selection_once_on_ui(entry10::Binding&e)noexcept{
+  if(status_.selection_installed||!current()||status_.phase!=Phase::OffClean||status_.actual_geometry_known)return false;
+  if(!e.install_selection_once_on_ui(selection_port()))return false;entry_=&e;status_.selection_installed=1;return true;
+ }
+-entry07::SelectResult Renderer::apply(void*p,MaskMode m,std::uint64_t g)noexcept{return p?static_cast<Renderer*>(p)->select(m,g):entry07::SelectResult::Rejected;}
+-entry07::SelectResult Renderer::select(MaskMode m,std::uint64_t generation)noexcept{
+- if(!current()||busy_||status_.phase==Phase::Hold||status_.phase==Phase::Detached||!mode(m)||!generation||generation<=status_.generation){++status_.rejected;return entry07::SelectResult::Rejected;}
+- if(m==MaskMode::Off&&status_.factory_restored&&!positive(required_clean_)){status_.requested=m;status_.generation=generation;return entry07::SelectResult::AlreadyOff;}
+- if(m!=MaskMode::Off&&!status_.actual_geometry_known){++status_.rejected;return entry07::SelectResult::Rejected;}
++entry10::SelectResult Renderer::apply(void*p,MaskMode m,std::uint64_t g)noexcept{return p?static_cast<Renderer*>(p)->select(m,g):entry10::SelectResult::Rejected;}
++entry10::SelectResult Renderer::select(MaskMode m,std::uint64_t generation)noexcept{
++ if(!current()||busy_||status_.phase==Phase::Hold||status_.phase==Phase::Detached||!mode(m)||!generation||generation<=status_.generation){++status_.rejected;return entry10::SelectResult::Rejected;}
++ if(m==MaskMode::Off&&status_.factory_restored&&!positive(required_clean_)){status_.requested=m;status_.generation=generation;return entry10::SelectResult::AlreadyOff;}
++ if(m!=MaskMode::Off&&!status_.actual_geometry_known){++status_.rejected;return entry10::SelectResult::Rejected;}
+  // The callback does not touch pixels. The next actual complete stock write
+  // must restore old/new union before any new alpha fills are allowed.
+  status_.requested=m;status_.generation=generation;status_.factory_restored=0;status_.phase=Phase::Waiting;
+- try{native_.invalidate(reinterpret_cast<void*>(owner_.lv),false);}catch(...){hold();return entry07::SelectResult::Rejected;}
+- return entry07::SelectResult::AwaitingStockPaint;
++ try{native_.invalidate(reinterpret_cast<void*>(owner_.lv),false);}catch(...){hold();return entry10::SelectResult::Rejected;}
++ return entry10::SelectResult::AwaitingStockPaint;
+ }
+ bool Renderer::surface(const WriteFacts&w)const noexcept{
+  if(!w.surface||!w.draw||!w.provider||!w.provider_vtable||!w.getter_target||!w.manager_frame)return false;
+@@ -103,7 +103,7 @@
+  busy_=false;plan_=next;required_clean_=next.count?coverage:Rect{};status_.last_paint=w.paint_serial;status_.geometry_epoch=w.geometry_epoch;
+  status_.actual_geometry_known=kind==GeometryResult::NormalFullView;
+  status_.factory_restored=next.count==0;status_.phase=status_.requested==MaskMode::Off?Phase::OffClean:kind==GeometryResult::NormalFullView?Phase::Shown:Phase::Hidden;
+- if(entry_&&entry_->status_on_ui().phase==static_cast<unsigned>(entry07::Phase::AwaitingStockPaint)){
++ if(entry_&&entry_->status_on_ui().phase==static_cast<unsigned>(entry10::Phase::AwaitingStockPaint)){
+   // These legacy booleans are derived only here from the sealed actual token;
+   // there is no public external three-boolean/native-return input adapter.
+   const native_ui02::PaintReceipt receipt{w.lv,w.surface,status_.generation,w.paint_serial,coverage,clean,true,true,true};
+@@ -115,10 +115,10 @@
+  if(!current()||busy_||status_.requested!=MaskMode::Off||!status_.factory_restored||status_.phase!=Phase::OffClean||!epoch)return false;
+  if(entry_&&!entry_->detach_on_ui(epoch))return false;status_.phase=Phase::Detached;return true;
+ }
+-bool install_after_original_boundary(Renderer&r,const entry07::BoundaryInput&in,entry01::Module&m,entry07::Binding&e,native_ui02::Memory memory)noexcept{
+- if(in.original_result||in.caller_pc!=0x6be8ac||e.status_on_ui().phase!=static_cast<unsigned>(entry07::Phase::Ready))return false;
++bool install_after_original_boundary(Renderer&r,const entry10::BoundaryInput&in,entry01::Module&m,entry10::Binding&e,native_ui02::Memory memory)noexcept{
++ if(in.original_result||in.caller_pc!=0x6be8ac||e.status_on_ui().phase!=static_cast<unsigned>(entry10::Phase::Ready))return false;
+  entry01::Observation observed{};if(!m.snapshot(observed)||!observed.dispatch_epoch||observed.lv!=m.observed_owner().lv)return false;
+- if(r.status_on_ui().phase==Phase::Unbound&&!r.bind_once_on_ui(memory,m.selector_ports(),m.overlay_ports().fill,m.observed_owner(),&e))return false;
++ if(r.status_on_ui().phase==Phase::Unbound&&!r.bind_once_on_ui(memory,e.persistent_ports_on_ui(),m.overlay_ports().fill,m.observed_owner(),&e))return false;
+  return r.status_on_ui().selection_installed||r.install_selection_once_on_ui(e);
+ }
+ }
+--- tools/firmware/f1_normal_fit_display_09/normal_fit.hpp
++++ tools/firmware/f1_scaler_hook_install_10/normal_fit.hpp
+@@ -1,8 +1,8 @@
+ #pragma once
+-#include "../f1_native_entry_binding_07/binding.hpp"
++#include "entry_binding_10.hpp"
+ #include "../f1_geometry_probe_03/probe.hpp"
+ 
+-namespace iq4::f1::normal09 {
++namespace iq4::f1::normal10 {
+ using Address=native_ui02::Address;
+ using Rect=native_overlay::PixelRect;
+ using Rectangle=native_ui02::Rectangle24;
+@@ -39,13 +39,13 @@
+  explicit PaintToken(const WriteFacts&f)noexcept:facts_(f){}
+  WriteFacts facts_{};
+  friend class ProvenProviderAdapter;
+-#ifdef IQ4_F1_NORMAL09_OWNED_HOST_FIXTURE
++#ifdef IQ4_F1_NORMAL10_OWNED_HOST_FIXTURE
+  friend struct OwnedFixture;
+ #endif
+ };
+ enum class Phase:std::uint32_t {Unbound,OffClean,Waiting,Shown,Hidden,Hold,Detached};
+ struct Status {
+- std::uint32_t schema{9},bytes{sizeof(Status)};
++ std::uint32_t schema{10},bytes{sizeof(Status)};
+  Phase phase{Phase::Unbound};MaskMode requested{MaskMode::Off};
+  std::uint64_t generation{},last_paint{},fills{},rejected{},geometry_epoch{};
+  std::uint32_t actual_geometry_known{},factory_restored{1},module_retained{1},selection_installed{};
+@@ -55,30 +55,31 @@
+ // one from an LV paint return. One token is callback-local and cannot escape.
+ class Renderer {
+ public:
+- bool bind_once_on_ui(native_ui02::Memory,native_ui02::Native,native_overlay::FillWrapper,const native_ui02::Owner&,entry07::Binding*)noexcept;
+- entry07::Selection selection_port()noexcept{return {this,apply};}
+- bool install_selection_once_on_ui(entry07::Binding&)noexcept;
++ bool bind_once_on_ui(native_ui02::Memory,native_ui02::Native,native_overlay::FillWrapper,const native_ui02::Owner&,entry10::Binding*)noexcept;
++ entry10::Selection selection_port()noexcept{return {this,apply};}
++ bool install_selection_once_on_ui(entry10::Binding&)noexcept;
+  bool after_native_write_on_ui(const PaintToken&)noexcept;
+  bool off_and_detach_on_ui(std::uint64_t dispatch_epoch)noexcept;
+  Status status_on_ui()const noexcept{return status_;}
++ const Status* status_address_on_actual_ui()const noexcept{return on_ui()?&status_:nullptr;}
+  const native_overlay::FixedPlan&plan_on_ui()const noexcept{return plan_;}
+ private:
+- static entry07::SelectResult apply(void*,MaskMode,std::uint64_t)noexcept;
+- entry07::SelectResult select(MaskMode,std::uint64_t)noexcept;
++ static entry10::SelectResult apply(void*,MaskMode,std::uint64_t)noexcept;
++ entry10::SelectResult select(MaskMode,std::uint64_t)noexcept;
+  bool on_ui()const noexcept;
+  bool current()const noexcept;
+  bool surface(const WriteFacts&)const noexcept;
+  void hold()noexcept{status_.phase=Phase::Hold;}
+  native_ui02::Memory memory_{};native_ui02::Native native_{};
+- native_overlay::FillWrapper fill_{};native_ui02::Owner owner_{};entry07::Binding*entry_{};
++ native_overlay::FillWrapper fill_{};native_ui02::Owner owner_{};entry10::Binding*entry_{};
+  Status status_{};native_overlay::FixedPlan plan_{};
+  Rect required_clean_{};bool busy_{};
+-#ifdef IQ4_F1_NORMAL09_OWNED_HOST_FIXTURE
++#ifdef IQ4_F1_NORMAL10_OWNED_HOST_FIXTURE
+  friend struct OwnedFixture;
+ #endif
+ };
+ // Called at the existing original-unlock UI boundary, after UI07 is Ready.
+ // No target constructor/getter/vtable/text patch is introduced by this bridge.
+-bool install_after_original_boundary(Renderer&,entry07::BoundaryInput const&,
+- entry01::Module&,entry07::Binding&,native_ui02::Memory)noexcept;
++bool install_after_original_boundary(Renderer&,entry10::BoundaryInput const&,
++ entry01::Module&,entry10::Binding&,native_ui02::Memory)noexcept;
+ }
+--- tools/firmware/f1_normal_fit_display_09/provider.cpp
++++ tools/firmware/f1_scaler_hook_install_10/provider.cpp
+@@ -2,7 +2,7 @@
+ #include <cmath>
+ #include <cstring>
+ #include <limits>
+-namespace iq4::f1::normal09 {
++namespace iq4::f1::normal10 {
+ namespace {
+ bool digest(const char*s)noexcept{if(!s||s[64])return false;bool any=false;for(unsigned i=0;i<64;i++){if(!((s[i]>='0'&&s[i]<='9')||(s[i]>='a'&&s[i]<='f')))return false;any|=s[i]!='0';}return any;}
+ bool jump(Address from,Address to,std::uint32_t&word)noexcept{
+@@ -49,7 +49,7 @@
+  return status_.result=result;
+ }
+ bool ProvenProviderAdapter::configure_on_actual_ui(native_ui02::Memory memory,native_ui02::Native native,const ActualProviderContract&c)noexcept{
+- if(configured_||!memory.read||!native.current_thread||c.schema!=9||c.profile!=ProviderProfile::RootReviewedInlineUIRetainedUntilPresent||std::memcmp(c.actual_UserSHA,native_overlay::UserSHA,65)||!digest(c.owner_review_sha256)||!digest(c.hook_quiescence_receipt_sha256)||!c.owner.lv||!c.owner.manager||!c.owner.queue||native.current_thread(native.context)!=c.owner.queue||!c.provider||!c.provider_vtable||!c.getter||!c.present||!c.own_bridge||c.inline_surface_offset>4095||(c.inline_surface_offset&7))return false;
++ if(configured_||!memory.read||!native.current_thread||c.schema!=10||c.profile!=ProviderProfile::RootReviewedInlineUIRetainedUntilPresent||std::memcmp(c.actual_UserSHA,native_overlay::UserSHA,65)||!digest(c.owner_review_sha256)||!digest(c.hook_quiescence_receipt_sha256)||!c.owner.lv||!c.owner.manager||!c.owner.queue||native.current_thread(native.context)!=c.owner.queue||!c.provider||!c.provider_vtable||!c.getter||!c.present||!c.own_bridge||c.inline_surface_offset>4095||(c.inline_surface_offset&7))return false;
+  std::uint32_t p{},b{};if(!jump(0x47f910,c.near_entry,p)||!jump(c.near_trampoline+4,0x47f914,b)||(c.near_entry<c.near_trampoline+8&&c.near_trampoline<c.near_entry+16))return false;
+  ProvenProviderAdapter candidate;candidate.memory_=memory;candidate.native_=native;candidate.contract_=c;
+  Address provider{},vt{},getter{},present{};
+--- tools/firmware/f1_normal_fit_display_09/provider.hpp
++++ tools/firmware/f1_scaler_hook_install_10/provider.hpp
+@@ -1,14 +1,14 @@
+ #pragma once
+ #include "normal_fit.hpp"
+ #include "hook_capture.hpp"
+-namespace iq4::f1::normal09 {
++namespace iq4::f1::normal10 {
+ enum class ProviderProfile:std::uint32_t {Unknown,RootReviewedInlineUIRetainedUntilPresent};
+ enum class InlineGetterShape:std::uint32_t {Unknown,LeafAddRet8,OriginalO0StackAddRet24};
+ // Only Root's protected actual admission may supply this contract. Hash syntax
+ // is checked here; the caller must have reviewed the referenced actual receipt.
+ // Off observations cannot fill profile/owner_review_sha256 by themselves.
+ struct ActualProviderContract {
+- std::uint32_t schema{9};ProviderProfile profile{ProviderProfile::Unknown};
++ std::uint32_t schema{10};ProviderProfile profile{ProviderProfile::Unknown};
+  char actual_UserSHA[65]{};char owner_review_sha256[65]{},hook_quiescence_receipt_sha256[65]{};
+  native_ui02::Owner owner{};
+  Address provider{},provider_vtable{},getter{},present{},near_entry{},near_trampoline{},own_bridge{};
+@@ -16,7 +16,7 @@
+  InlineGetterShape getter_shape{InlineGetterShape::Unknown};
+ };
+ enum class IngressResult:std::uint32_t {Disabled,WrongOwner,PatchMismatch,UnsupportedCall,NoWrite,ReadFailed,ScopeMismatch,UnknownLease,PartialSource,UnsupportedFormat,InvalidGeometry,RendererRejected,Emitted,Observed,BoundaryObserved};
+-struct IngressStatus {std::uint32_t schema{9},bytes{sizeof(IngressStatus)};IngressResult result{};std::uint32_t emitted{},normal_returns{},reserved{};std::uint64_t serial{};WriteFacts last{};};
++struct IngressStatus {std::uint32_t schema{10},bytes{sizeof(IngressStatus)};IngressResult result{};std::uint32_t emitted{},normal_returns{},reserved{};std::uint64_t serial{};WriteFacts last{};};
+ class ProvenProviderAdapter {
+ public:
+  bool bind_observation_on_actual_ui(native_ui02::Memory,native_ui02::Native,const native_ui02::Owner&)noexcept;
+@@ -45,4 +45,4 @@
+ bool install_capture_consumer_once_on_ui(ProvenProviderAdapter&,Renderer&)noexcept;
+ void publish_ingress_on_ui(const IngressStatus&)noexcept;
+ }
+-extern "C" iq4::f1::normal09::PublishedIngress iq4_f1_normal_fit_ingress_observed_09;
++extern "C" iq4::f1::normal10::PublishedIngress iq4_f1_normal_fit_ingress_observed_10;
+--- tools/firmware/f1_normal_fit_display_09/runtime_linux.cpp
++++ tools/firmware/f1_scaler_hook_install_10/runtime_prepare_10.cpp
+@@ -1,5 +1,5 @@
+-#include "../f1_native_entry_binding_07/bridge.hpp"
+-#include "../f1_normal_fit_display_09/integration.hpp"
++#include "entry_bridge_10.hpp"
++#include "prepare.hpp"
+ // Target-only Linux/AArch64 wrapper. Never executed by the host validation tool.
+ #include "../f1_observe_geometry_04/observe.hpp"
+ #include "../f1_observe_stack_05/observe.hpp"
+@@ -20,8 +20,8 @@
+ #error This runtime binds only the fixed IQ4 AArch64 Linux original
+ #endif
+ extern "C" unsigned iq4_f1_role_ctor_status;
+-extern "C" __attribute__((visibility("default"))) iq4::f1::entry07::Published iq4_f1_entry_binding_observed_07;
+-iq4::f1::entry07::Published iq4_f1_entry_binding_observed_07;
++extern "C" __attribute__((visibility("default"))) iq4::f1::entry10::Published iq4_f1_entry_binding_observed_10;
++iq4::f1::entry10::Published iq4_f1_entry_binding_observed_10;
+ extern "C" {__attribute__((visibility("default"))) iq4::f1::entry01::PublishedObservation iq4_f1_entry_observed;
+ __attribute__((visibility("default"))) iq4::f1::observe04::Published iq4_f1_geometry_observed_04;
+ __attribute__((visibility("default"))) iq4::f1::stack05::Published iq4_f1_stack_observed_05;
+@@ -59,10 +59,10 @@
+     return m.inode==static_cast<std::uint64_t>(s.st_ino)&&m.major==major&&m.minor==minor;
+ }
+ std::atomic<Address> original_unlock{}, original_try_lock{};int memory_fd=-1;
+-alignas(iq4::f1::entry07::BoundaryBridge) unsigned char entry07_storage[sizeof(iq4::f1::entry07::BoundaryBridge)]{};
+-iq4::f1::entry07::BoundaryBridge* entry07_bridge=nullptr;
+-alignas(iq4::f1::normal09::UI09Bridge) unsigned char ui09_storage[sizeof(iq4::f1::normal09::UI09Bridge)]{};
+-iq4::f1::normal09::UI09Bridge* ui09_bridge=nullptr;
++alignas(iq4::f1::entry10::BoundaryBridge) unsigned char entry10_storage[sizeof(iq4::f1::entry10::BoundaryBridge)]{};
++iq4::f1::entry10::BoundaryBridge* entry10_bridge=nullptr;
++alignas(iq4::f1::normal10::UI10Bridge) unsigned char ui10_storage[sizeof(iq4::f1::normal10::UI10Bridge)]{};
++iq4::f1::normal10::UI10Bridge* ui10_bridge=nullptr;
+ alignas(Module) unsigned char module_storage[sizeof(Module)]{};Module* module=nullptr;
+ alignas(iq4::f1::observe04::Collector) unsigned char geometry_storage[sizeof(iq4::f1::observe04::Collector)]{};
+ iq4::f1::observe04::Collector* geometry=nullptr;
+@@ -139,9 +139,9 @@
+ // Protected default-OFF entry/finite-observation admission for this new UI09
+ // deployment contract. Absence/unknown/failure stays OFF. This file does not
+ // attest geometry, source coverage, paint freshness, or Surface lifetime.
+-bool entry08_admission(iq4::f1::entry07::Placement& placement) noexcept {
++bool entry10_admission(iq4::f1::entry10::Placement& placement) noexcept {
+     if(iq4_f1_role_ctor_status!=4)return false;
+-    const char*path="/run/iq4_f1_observe02/ui09.entry";
++    const char*path="/run/iq4_f1_observe02/ui10.entry";
+     struct stat d{},a{},b{},c{};
+     if(::lstat("/run/iq4_f1_observe02",&d)||!S_ISDIR(d.st_mode)||d.st_uid||d.st_gid||(d.st_mode&07777)!=0700||
+        ::lstat(path,&a)||!S_ISREG(a.st_mode)||a.st_uid||a.st_gid||(a.st_mode&07777)!=0600||a.st_nlink!=1||a.st_size<=0||a.st_size>=96)return false;
+@@ -150,8 +150,8 @@
+     long n=ok?raw_call(SYS_read,fd,reinterpret_cast<long>(text),b.st_size):-1;char extra{};
+     ok=ok&&n==b.st_size&&raw_call(SYS_read,fd,reinterpret_cast<long>(&extra),1)==0&&!::fstat(fd,&c)&&b.st_dev==c.st_dev&&b.st_ino==c.st_ino&&b.st_size==c.st_size&&b.st_mtim.tv_sec==c.st_mtim.tv_sec&&b.st_mtim.tv_nsec==c.st_mtim.tv_nsec;
+     rclose(fd);int x=-1,y=-1;char tail{};
+-    if(!ok||::sscanf(text,"IQ4_F1_UI09_ENTRY_OBSERVE_ONLY %d %d%c",&x,&y,&tail)!=3||tail!='\n'||x<0||y<0||x>32767||y>32767)return false;
+-    int size=::snprintf(canonical,sizeof canonical,"IQ4_F1_UI09_ENTRY_OBSERVE_ONLY %d %d\n",x,y);
++    if(!ok||::sscanf(text,"IQ4_F1_UI10_ENTRY_OBSERVE_ONLY %d %d%c",&x,&y,&tail)!=3||tail!='\n'||x<0||y<0||x>32767||y>32767)return false;
++    int size=::snprintf(canonical,sizeof canonical,"IQ4_F1_UI10_ENTRY_OBSERVE_ONLY %d %d\n",x,y);
+     if(size!=n||std::memcmp(text,canonical,static_cast<std::size_t>(n))||::lstat(path,&c)||b.st_dev!=c.st_dev||b.st_ino!=c.st_ino||b.st_size!=c.st_size)return false;
+     placement={x,y};return true;
+ }
+@@ -168,8 +168,8 @@
+     geometry=new(geometry_storage)iq4::f1::observe04::Collector({nullptr,self_read},0);
+     stack_collector=new(stack_storage)iq4::f1::stack05::Collector({nullptr,self_read},0);
+     display_collector=new(display_storage)iq4::f1::display06::Collector({nullptr,self_read},0,reinterpret_cast<Address>(&iq4_f1_display_paint_callback_06));
+-    entry07_bridge=new(entry07_storage)iq4::f1::entry07::BoundaryBridge;
+-    ui09_bridge=new(ui09_storage)iq4::f1::normal09::UI09Bridge;
++    entry10_bridge=new(entry10_storage)iq4::f1::entry10::BoundaryBridge;
++    ui10_bridge=new(ui10_storage)iq4::f1::normal10::UI10Bridge;
+     original_paint.store(0x51da0c,std::memory_order_release);
+     iq4::f1::display06::publish(iq4_f1_display_observed_06,display_collector->snapshot());
+     if(module->configure({nullptr,self_read},{true,true,true,true,0},reinterpret_cast<int(*)(void*)>(original_try_lock.load(std::memory_order_acquire)),reinterpret_cast<int(*)(void*)>(original_unlock.load(std::memory_order_acquire)))){diagnostic_ready.store(true,std::memory_order_release);iq4_f1_entry_observed.startup.store(4,std::memory_order_release);}
+@@ -185,7 +185,7 @@
+     errno=incoming;
+     const int result=reinterpret_cast<int(*)(void*)>(address)(mutex); // EXACTLY ONCE, first.
+     const int saved=errno;
+-    if(caller==0x6be8ac && result==0 && (diagnostic_ready.load(std::memory_order_acquire) || (entry07_bridge&&entry07_bridge->admitted())) && !inside) {
++    if(caller==0x6be8ac && result==0 && (diagnostic_ready.load(std::memory_order_acquire) || (entry10_bridge&&entry10_bridge->admitted())) && !inside) {
+         inside=true;Address tp{};asm volatile("mrs %0, tpidr_el0":"=r"(tp));
+         const BoundaryInput input{caller,reinterpret_cast<Address>(__builtin_frame_address(0)),tp,reinterpret_cast<Address>(mutex),result};
+         iq4::f1::entry01::Observation before{};
+@@ -221,21 +221,25 @@
+                 if(stack_facts.attempts>=64)diagnostic_ready.store(false,std::memory_order_release);
+             }
+         }
+-        if(entry07_bridge&&display_collector){
+-            iq4::f1::entry07::Placement placement{};
+-            if(!entry07_bridge->admitted()&&entry08_admission(placement))
+-                (void)entry07_bridge->admit_once({true,true,true,true},placement);
+-            entry07_bridge->after_original_unlock_on_ui({nullptr,self_read},*module,*display_collector,input,
++        if(entry10_bridge&&display_collector){
++            iq4::f1::entry10::Placement placement{};
++            if(!entry10_bridge->admitted()&&entry10_admission(placement))
++                (void)entry10_bridge->admit_once({true,true,true,true},placement);
++            entry10_bridge->after_original_unlock_on_ui({nullptr,self_read},*module,*display_collector,input,
+                 {reinterpret_cast<int(*)(void*)>(original_try_lock.load(std::memory_order_acquire)),reinterpret_cast<int(*)(void*)>(original_unlock.load(std::memory_order_acquire))});
+-            // Actual caller closes the source port. No provider contract is
+-            // configured here, no text hook is installed, and no token is issued.
+-            if(ui09_bridge&&entry07_bridge->admitted())
+-                (void)ui09_bridge->after_original_boundary_on_ui(
+-                    {nullptr,self_read},*module,entry07_bridge->binding(),input);
+-            iq4_f1_entry_binding_observed_07.sequence.fetch_add(1,std::memory_order_acq_rel);
+-            iq4_f1_entry_binding_observed_07.metadata=entry07_bridge->binding().status_on_ui();
+-            iq4_f1_entry_binding_observed_07.sequence.fetch_add(1,std::memory_order_release);
+-            if(iq4_f1_entry_binding_observed_07.metadata.ui_mutation_attempted){
++            // Live UI caller binds the finite observer, then consumes the
++            // protected actual preparation input once. No text is patched here.
++            if(ui10_bridge&&entry10_bridge->admitted()) {
++                const bool ready=ui10_bridge->after_original_boundary_on_ui(
++                    {nullptr,self_read},*module,entry10_bridge->binding(),input);
++                // Allocation/configuration is on the live admitted UI, before
++                // the external controller pauses all TIDs including this UI.
++                if(ready)iq4::f1::hook10::prepare_once_at_live_ui(*ui10_bridge,*module,{nullptr,self_read});
++            }
++            iq4_f1_entry_binding_observed_10.sequence.fetch_add(1,std::memory_order_acq_rel);
++            iq4_f1_entry_binding_observed_10.metadata=entry10_bridge->binding().status_on_ui();
++            iq4_f1_entry_binding_observed_10.sequence.fetch_add(1,std::memory_order_release);
++            if(iq4_f1_entry_binding_observed_10.metadata.ui_mutation_attempted){
+                 auto changed=display_collector->snapshot();changed.native_ui_mutation_called=1;
+                 iq4::f1::display06::publish(iq4_f1_display_observed_06,changed);
+             }
+--- tools/firmware/f1_normal_fit_display_09/scaler_bridge.S
++++ tools/firmware/f1_scaler_hook_install_10/scaler_bridge.S
+@@ -1,10 +1,10 @@
+ // Compile-only AArch64 ABI bridge. No installer; trampoline starts NULL.
+ .text
+ .p2align 2
+-.global iq4_f1_scaler_bridge_09
+-.hidden iq4_f1_scaler_bridge_09
+-.type iq4_f1_scaler_bridge_09,%function
+-iq4_f1_scaler_bridge_09:
++.global iq4_f1_scaler_bridge_10
++.hidden iq4_f1_scaler_bridge_10
++.type iq4_f1_scaler_bridge_10,%function
++iq4_f1_scaler_bridge_10:
+ .cfi_startproc
+  sub sp,sp,#1024
+ .cfi_def_cfa_offset 1024
+@@ -26,8 +26,8 @@
+  stp x10,x11,[sp,#16]
+  ldr x10,[x9,#32]
+  str x10,[sp,#32]
+- adrp x16,iq4_f1_scaler_trampoline_09
+- ldr x16,[x16,:lo12:iq4_f1_scaler_trampoline_09]
++ adrp x16,iq4_f1_scaler_trampoline_10
++ ldr x16,[x16,:lo12:iq4_f1_scaler_trampoline_10]
+  blr x16
+ // Reached only after a normal original return; preserve all ordinary results.
+  stp x0,x1,[sp,#176]
+@@ -63,7 +63,7 @@
+  mrs x9,fpsr
+  str x9,[sp,#864]
+  mov x0,sp
+- bl iq4_f1_scaler_after_09
++ bl iq4_f1_scaler_after_10
+  ldp q0,q1,[sp,#336]
+  ldp q2,q3,[sp,#368]
+  ldp q4,q5,[sp,#400]
+@@ -103,13 +103,13 @@
+ .cfi_def_cfa_offset 0
+  ret
+ .cfi_endproc
+-.size iq4_f1_scaler_bridge_09,.-iq4_f1_scaler_bridge_09
++.size iq4_f1_scaler_bridge_10,.-iq4_f1_scaler_bridge_10
+ .data
+ .p2align 3
+-.global iq4_f1_scaler_trampoline_09
+-.hidden iq4_f1_scaler_trampoline_09
+-.type iq4_f1_scaler_trampoline_09,%object
+-iq4_f1_scaler_trampoline_09:
++.global iq4_f1_scaler_trampoline_10
++.hidden iq4_f1_scaler_trampoline_10
++.type iq4_f1_scaler_trampoline_10,%object
++iq4_f1_scaler_trampoline_10:
+ .quad 0
+-.size iq4_f1_scaler_trampoline_09,8
++.size iq4_f1_scaler_trampoline_10,8
+ .section .note.GNU-stack,"",%progbits

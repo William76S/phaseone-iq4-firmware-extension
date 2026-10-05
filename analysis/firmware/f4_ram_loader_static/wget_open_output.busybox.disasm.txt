@@ -1,0 +1,12 @@
+analysis/firmware/f4_ram_loader_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   25f08:      	ldr	w0, [x19, #0x78]
+   25f0c:      	mov	x25, x20
+   25f10:      	tbz	w0, #0x1f, 0x25f24 <.text+0x1a784>
+   25f14:      	ldr	w1, [x19, #0x7c]
+   25f18:      	ldr	x0, [x19, #0x58]
+   25f1c:      	bl	0xd8e8 <.text+0x2148>
+   25f20:      	str	w0, [x19, #0x78]

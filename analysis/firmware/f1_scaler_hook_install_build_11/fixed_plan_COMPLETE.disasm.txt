@@ -1,0 +1,266 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_scaler_hook_install_build_11/fixed_plan.o:	file format elf64-littleaarch64
+
+Disassembly of section .text._ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE:
+
+0000000000000000 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE>:
+       0: d104c3ff     	sub	sp, sp, #0x130
+       4: a9107bfd     	stp	x29, x30, [sp, #0x100]
+       8: f9008bfc     	str	x28, [sp, #0x110]
+       c: a9124ff4     	stp	x20, x19, [sp, #0x120]
+      10: 910403fd     	add	x29, sp, #0x100
+      14: 6f00e400     	movi	v0.2d, #0000000000000000
+      18: 52800028     	mov	w8, #0x1                // =1
+      1c: 2a0103f4     	mov	w20, w1
+      20: b9005c48     	str	w8, [x2, #0x5c]
+      24: d2e7fe08     	mov	x8, #0x3ff0000000000000 // =4607182418800017408
+      28: 910203e1     	add	x1, sp, #0x80
+      2c: aa0203f3     	mov	x19, x2
+      30: a90c7fe8     	stp	x8, xzr, [sp, #0xc0]
+      34: a90d23ff     	stp	xzr, x8, [sp, #0xd0]
+      38: 3c849040     	stur	q0, [x2, #0x49]
+      3c: ad008040     	stp	q0, q0, [x2, #0x10]
+      40: ad018040     	stp	q0, q0, [x2, #0x30]
+      44: 3d800040     	str	q0, [x2]
+      48: 3cc2c001     	ldur	q1, [x0, #0x2c]
+      4c: ad0403e0     	stp	q0, q0, [sp, #0x80]
+      50: ad0503e0     	stp	q0, q0, [sp, #0xa0]
+      54: 3c848041     	stur	q1, [x2, #0x48]
+      58: a90e7fff     	stp	xzr, xzr, [sp, #0xe0]
+      5c: 7901e3ff     	strh	wzr, [sp, #0xf0]
+      60: 94000000     	bl	0x60 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x60>
+		0000000000000060:  R_AARCH64_CALL26	_ZN3iq42f18normal1014normal_mappingERKNS1_8GeometryERNS_7display11ViewMappingE
+      64: 7100041f     	cmp	w0, #0x1
+      68: 2a1f03e0     	mov	w0, wzr
+      6c: 54001be1     	b.ne	0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+      70: 7100069f     	cmp	w20, #0x1
+      74: 2a1f03e0     	mov	w0, wzr
+      78: 5400012d     	b.le	0x9c <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x9c>
+      7c: 71000a9f     	cmp	w20, #0x2
+      80: 540001a0     	b.eq	0xb4 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0xb4>
+      84: 71000e9f     	cmp	w20, #0x3
+      88: 540001c0     	b.eq	0xc0 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0xc0>
+      8c: 7100129f     	cmp	w20, #0x4
+      90: 54001ac1     	b.ne	0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+      94: 1e6e1000     	fmov	d0, #1.00000000
+      98: 1400000b     	b	0xc4 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0xc4>
+      9c: 34001a34     	cbz	w20, 0x3e0 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e0>
+      a0: 7100069f     	cmp	w20, #0x1
+      a4: 54001a21     	b.ne	0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+      a8: 90000008     	adrp	x8, 0x0 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE>
+		00000000000000a8:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst8+0x8
+      ac: fd400100     	ldr	d0, [x8]
+		00000000000000ac:  R_AARCH64_LDST64_ABS_LO12_NC	.rodata.cst8+0x8
+      b0: 14000005     	b	0xc4 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0xc4>
+      b4: 90000008     	adrp	x8, 0x0 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE>
+		00000000000000b4:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst8
+      b8: fd400100     	ldr	d0, [x8]
+		00000000000000b8:  R_AARCH64_LDST64_ABS_LO12_NC	.rodata.cst8
+      bc: 14000002     	b	0xc4 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0xc4>
+      c0: 1e6f1000     	fmov	d0, #1.50000000
+      c4: 6d4907e2     	ldp	d2, d1, [sp, #0x90]
+      c8: 1e6c1005     	fmov	d5, #0.50000000
+      cc: 6d481fe6     	ldp	d6, d7, [sp, #0x80]
+      d0: 528014c9     	mov	w9, #0xa6               // =166
+      d4: 39016269     	strb	w9, [x19, #0x58]
+      d8: d2effe09     	mov	x9, #0x7ff0000000000000 // =9218868437227405312
+      dc: aa1f03e8     	mov	x8, xzr
+      e0: 1e610803     	fmul	d3, d0, d1
+      e4: 92f0020a     	mov	x10, #0x7fefffffffffffff // =9218868437227405311
+      e8: d2e8160b     	mov	x11, #0x40b0000000000000 // =4661225614328463360
+      ec: 1e662850     	fadd	d16, d2, d6
+      f0: b9005e7f     	str	wzr, [x19, #0x5c]
+      f4: 6d001fe6     	stp	d6, d7, [sp]
+      f8: 1e622060     	fcmp	d3, d2
+      fc: 1e624c63     	fcsel	d3, d3, d2, mi
+     100: 1e601860     	fdiv	d0, d3, d0
+     104: 1e633844     	fsub	d4, d2, d3
+     108: 1e650884     	fmul	d4, d4, d5
+     10c: 1e6428c4     	fadd	d4, d6, d4
+     110: 1e643a10     	fsub	d16, d16, d4
+     114: 1e663892     	fsub	d18, d4, d6
+     118: 1e633a10     	fsub	d16, d16, d3
+     11c: 1e642863     	fadd	d3, d3, d4
+     120: 1e603831     	fsub	d17, d1, d0
+     124: 1e672821     	fadd	d1, d1, d7
+     128: 6d0503f2     	stp	d18, d0, [sp, #0x50]
+     12c: 6d0703f0     	stp	d16, d0, [sp, #0x70]
+     130: 1e650a25     	fmul	d5, d17, d5
+     134: 1e6528e5     	fadd	d5, d7, d5
+     138: 1e653821     	fsub	d1, d1, d5
+     13c: 6d0417e6     	stp	d6, d5, [sp, #0x40]
+     140: 1e6738a4     	fsub	d4, d5, d7
+     144: 6d0617e3     	stp	d3, d5, [sp, #0x60]
+     148: 1e652803     	fadd	d3, d0, d5
+     14c: 1e603825     	fsub	d5, d1, d0
+     150: 6f07f400     	fmov	v0.2d, #-0.50000000
+     154: 6d0113e2     	stp	d2, d4, [sp, #0x10]
+     158: 6d020fe6     	stp	d6, d3, [sp, #0x20]
+     15c: 4e080d21     	dup	v1.2d, x9
+     160: 3dc03be4     	ldr	q4, [sp, #0xe0]
+     164: 910003e9     	mov	x9, sp
+     168: 6d0317e2     	stp	d2, d5, [sp, #0x30]
+     16c: ad460fe2     	ldp	q2, q3, [sp, #0xc0]
+     170: 1400000a     	b	0x198 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x198>
+     174: 91000611     	add	x17, x16, #0x1
+     178: 8b101270     	add	x16, x19, x16, lsl #4
+     17c: aa0f81ce     	orr	x14, x14, x15, lsl #32
+     180: aa0d818c     	orr	x12, x12, x13, lsl #32
+     184: f9002271     	str	x17, [x19, #0x40]
+     188: a900320e     	stp	x14, x12, [x16]
+     18c: 91008108     	add	x8, x8, #0x20
+     190: f102011f     	cmp	x8, #0x80
+     194: 54001220     	b.eq	0x3d8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3d8>
+     198: 8b08012c     	add	x12, x9, x8
+     19c: fd400985     	ldr	d5, [x12, #0x10]
+     1a0: 1e6020a8     	fcmp	d5, #0.0
+     1a4: 54ffff49     	b.ls	0x18c <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x18c>
+     1a8: fd400d87     	ldr	d7, [x12, #0x18]
+     1ac: 1e6020e8     	fcmp	d7, #0.0
+     1b0: 54fffee9     	b.ls	0x18c <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x18c>
+     1b4: 8b08012c     	add	x12, x9, x8
+     1b8: 2a1f03e0     	mov	w0, wzr
+     1bc: fd400586     	ldr	d6, [x12, #0x8]
+     1c0: 1e6628f0     	fadd	d16, d7, d6
+     1c4: fd400187     	ldr	d7, [x12]
+     1c8: 1e6728a5     	fadd	d5, d5, d7
+     1cc: 4fd09070     	fmul	v16.2d, v3.2d, v16.d[0]
+     1d0: 4fc51050     	fmla	v16.2d, v2.2d, v5.d[0]
+     1d4: 4e70d485     	fadd	v5.2d, v4.2d, v16.2d
+     1d8: 9e6600ac     	fmov	x12, d5
+     1dc: 9240f98c     	and	x12, x12, #0x7fffffffffffffff
+     1e0: eb0a019f     	cmp	x12, x10
+     1e4: 5400102c     	b.gt	0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     1e8: 4fc69066     	fmul	v6.2d, v3.2d, v6.d[0]
+     1ec: 4fc71046     	fmla	v6.2d, v2.2d, v7.d[0]
+     1f0: 4e66d486     	fadd	v6.2d, v4.2d, v6.2d
+     1f4: 4ee0f8c7     	fabs	v7.2d, v6.2d
+     1f8: 6ee1e4f0     	fcmgt	v16.2d, v7.2d, v1.2d
+     1fc: 6ee7e427     	fcmgt	v7.2d, v1.2d, v7.2d
+     200: 4eb01ce7     	orr	v7.16b, v7.16b, v16.16b
+     204: 0ea128e7     	xtn	v7.2s, v7.2d
+     208: 0e0c04f0     	dup	v16.2s, v7.s[1]
+     20c: 0e301ce7     	and	v7.8b, v7.8b, v16.8b
+     210: 1e2600ec     	fmov	w12, s7
+     214: 36000eac     	tbz	w12, #0x0, 0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     218: 6ee5e4c7     	fcmgt	v7.2d, v6.2d, v5.2d
+     21c: 5e1804b0     	mov	d16, v5.d[1]
+     220: 2a1f03e0     	mov	w0, wzr
+     224: 0ea128e7     	xtn	v7.2s, v7.2d
+     228: 9e66020c     	fmov	x12, d16
+     22c: 9240f98c     	and	x12, x12, #0x7fffffffffffffff
+     230: 0e0c3ced     	mov	w13, v7.s[1]
+     234: eb0a019f     	cmp	x12, x10
+     238: 1a9fd7ec     	cset	w12, gt
+     23c: 37000d6d     	tbnz	w13, #0x0, 0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     240: 1e2600ed     	fmov	w13, s7
+     244: 37000d2d     	tbnz	w13, #0x0, 0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     248: 37000d0c     	tbnz	w12, #0x0, 0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     24c: 4e60d4c6     	fadd	v6.2d, v6.2d, v0.2d
+     250: 4e60d4a7     	fadd	v7.2d, v5.2d, v0.2d
+     254: 2a1f03e0     	mov	w0, wzr
+     258: 4ee188c5     	frintp	v5.2d, v6.2d
+     25c: 4ee188e6     	frintp	v6.2d, v7.2d
+     260: 6ee6e4a7     	fcmgt	v7.2d, v5.2d, v6.2d
+     264: 0ea128e7     	xtn	v7.2s, v7.2d
+     268: 0e0c3cec     	mov	w12, v7.s[1]
+     26c: 37000bec     	tbnz	w12, #0x0, 0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     270: 1e2600ec     	fmov	w12, s7
+     274: 37000bac     	tbnz	w12, #0x0, 0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     278: 5e1804d0     	mov	d16, v6.d[1]
+     27c: 9e670167     	fmov	d7, x11
+     280: 1e672200     	fcmp	d16, d7
+     284: 1e67d4c0     	fccmp	d6, d7, #0x0, le
+     288: 54000b0c     	b.gt	0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     28c: 1e6020a8     	fcmp	d5, #0.0
+     290: 54000ac4     	b.mi	0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     294: 5e1804a7     	mov	d7, v5.d[1]
+     298: 1e6020e8     	fcmp	d7, #0.0
+     29c: 54000a64     	b.mi	0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     2a0: 4ee5d4c6     	fsub	v6.2d, v6.2d, v5.2d
+     2a4: 1e673a10     	fsub	d16, d16, d7
+     2a8: 1e7800cc     	fcvtzs	w12, d6
+     2ac: 1e78020d     	fcvtzs	w13, d16
+     2b0: 7100019f     	cmp	w12, #0x0
+     2b4: 7a4019a4     	ccmp	w13, #0x0, #0x4, ne
+     2b8: 54fff6a0     	b.eq	0x18c <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x18c>
+     2bc: 1e7800ae     	fcvtzs	w14, d5
+     2c0: b9404a70     	ldr	w16, [x19, #0x48]
+     2c4: 2a1f03e0     	mov	w0, wzr
+     2c8: 6b0e021f     	cmp	w16, w14
+     2cc: 540008ec     	b.gt	0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     2d0: 1e7800ef     	fcvtzs	w15, d7
+     2d4: b9404e61     	ldr	w1, [x19, #0x4c]
+     2d8: 6b0f003f     	cmp	w1, w15
+     2dc: 5400086c     	b.gt	0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     2e0: b9405271     	ldr	w17, [x19, #0x50]
+     2e4: 0b0e0192     	add	w18, w12, w14
+     2e8: 0b100230     	add	w16, w17, w16
+     2ec: 6b10025f     	cmp	w18, w16
+     2f0: 5400070c     	b.gt	0x3d0 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3d0>
+     2f4: b9405670     	ldr	w16, [x19, #0x54]
+     2f8: 0b0f01b1     	add	w17, w13, w15
+     2fc: 0b010210     	add	w16, w16, w1
+     300: 6b10023f     	cmp	w17, w16
+     304: 5400066c     	b.gt	0x3d0 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3d0>
+     308: f9402270     	ldr	x16, [x19, #0x40]
+     30c: f1000e1f     	cmp	x16, #0x3
+     310: 54000608     	b.hi	0x3d0 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3d0>
+     314: b4fff310     	cbz	x16, 0x174 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x174>
+     318: b9400260     	ldr	w0, [x19]
+     31c: b9400a61     	ldr	w1, [x19, #0x8]
+     320: 0b000021     	add	w1, w1, w0
+     324: 6b0e003f     	cmp	w1, w14
+     328: 5400014d     	b.le	0x350 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x350>
+     32c: 6b00025f     	cmp	w18, w0
+     330: 5400010d     	b.le	0x350 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x350>
+     334: b9400660     	ldr	w0, [x19, #0x4]
+     338: b9400e61     	ldr	w1, [x19, #0xc]
+     33c: 0b000021     	add	w1, w1, w0
+     340: 6b0f003f     	cmp	w1, w15
+     344: 5400006d     	b.le	0x350 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x350>
+     348: 6b00023f     	cmp	w17, w0
+     34c: 5400042c     	b.gt	0x3d0 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3d0>
+     350: f100061f     	cmp	x16, #0x1
+     354: 54fff100     	b.eq	0x174 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x174>
+     358: b9401260     	ldr	w0, [x19, #0x10]
+     35c: b9401a61     	ldr	w1, [x19, #0x18]
+     360: 0b000021     	add	w1, w1, w0
+     364: 6b0e003f     	cmp	w1, w14
+     368: 5400014d     	b.le	0x390 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x390>
+     36c: 6b00025f     	cmp	w18, w0
+     370: 5400010d     	b.le	0x390 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x390>
+     374: b9401660     	ldr	w0, [x19, #0x14]
+     378: b9401e61     	ldr	w1, [x19, #0x1c]
+     37c: 0b000021     	add	w1, w1, w0
+     380: 6b0f003f     	cmp	w1, w15
+     384: 5400006d     	b.le	0x390 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x390>
+     388: 6b00023f     	cmp	w17, w0
+     38c: 5400022c     	b.gt	0x3d0 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3d0>
+     390: f1000a1f     	cmp	x16, #0x2
+     394: 54ffef00     	b.eq	0x174 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x174>
+     398: b9402260     	ldr	w0, [x19, #0x20]
+     39c: b9402a61     	ldr	w1, [x19, #0x28]
+     3a0: 0b000021     	add	w1, w1, w0
+     3a4: 6b0e003f     	cmp	w1, w14
+     3a8: 54ffee6d     	b.le	0x174 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x174>
+     3ac: 6b00025f     	cmp	w18, w0
+     3b0: 54ffee2d     	b.le	0x174 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x174>
+     3b4: b9402672     	ldr	w18, [x19, #0x24]
+     3b8: b9402e60     	ldr	w0, [x19, #0x2c]
+     3bc: 0b120000     	add	w0, w0, w18
+     3c0: 6b0f001f     	cmp	w0, w15
+     3c4: 54ffed8d     	b.le	0x174 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x174>
+     3c8: 6b12023f     	cmp	w17, w18
+     3cc: 54ffed4d     	b.le	0x174 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x174>
+     3d0: 2a1f03e0     	mov	w0, wzr
+     3d4: 14000005     	b	0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     3d8: 52800020     	mov	w0, #0x1                // =1
+     3dc: 14000003     	b	0x3e8 <_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE+0x3e8>
+     3e0: 52800020     	mov	w0, #0x1                // =1
+     3e4: b9005e60     	str	w0, [x19, #0x5c]
+     3e8: a9524ff4     	ldp	x20, x19, [sp, #0x120]
+     3ec: f9408bfc     	ldr	x28, [sp, #0x110]
+     3f0: a9507bfd     	ldp	x29, x30, [sp, #0x100]
+     3f4: 9104c3ff     	add	sp, sp, #0x130
+     3f8: d65f03c0     	ret

@@ -1,0 +1,97 @@
+{
+  "schema": "iq4_display_payload_link_input_13",
+  "stock_user": {
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "objects": [
+    {
+      "path": "analysis/firmware/f1_stock_display_payload_build_13/payload.o",
+      "bytes": 5728,
+      "sha256": "02b73b6eecfdfa0ffe7a20acfdf3e20c9dafb4a6770b2986a2a9292f5540fd8c"
+    },
+    {
+      "path": "analysis/firmware/f1_stock_display_payload_build_13/wrapper.o",
+      "bytes": 1296,
+      "sha256": "d5dc48a15ea46935fe94fdea4cb590840d685b1f7b2b86035cfb588c0f1958d2"
+    }
+  ],
+  "entry_symbol": "iq4_f1_lv_draw_wrapper_13",
+  "patches": [
+    {
+      "va": "0x51ddcc",
+      "expected_le_hex": "9b64fd97",
+      "kind": "BL26",
+      "symbol": "iq4_f1_lv_draw_wrapper_13"
+    }
+  ],
+  "peer_symbol": "iq4_f1_mode_get_01",
+  "peer_header": {
+    "path": "tools/firmware/f1_user_ui_entry_01/state.h",
+    "bytes": 943,
+    "sha256": "5219328b04dd33c4e455830d196eb9fd0e55964a284bf22591e0aa752285188a"
+  },
+  "fixed_original_calls": [
+    {
+      "va": "0x477038",
+      "role": "native_draw_image",
+      "entry_bytes_hex": "fd7ba9a9fd030091f35301a9e81300fd"
+    },
+    {
+      "va": "0x46f370",
+      "role": "native_fill_rect",
+      "entry_bytes_hex": "fd7bb9a9fd030091f35301a9f55b02a9"
+    }
+  ],
+  "suggested_rx_base": "0x4240000",
+  "display_mutable_RW_globals": false,
+  "new_EH_must_be_merged": true,
+  "executed_target": false,
+  "installer": false,
+  "native_signature_lock": {
+    "path": "tools/firmware/f1_stock_display_payload_13/native_signature_lock.json",
+    "bytes": 7954,
+    "sha256": "f76d9d01873d534be1126ff03ac267228b44f86d812e2eef00f758d71c8016b3"
+  },
+  "accepted_surface": {
+    "class": "IQ4DisplaySurface",
+    "primary_vt": "0xb7cf90",
+    "screen_offset": "0x58",
+    "screen_vt": "0xb7cfc0",
+    "pitch_pixels": 800,
+    "height": 480,
+    "manager_provider_matches_screen_subobject": true,
+    "complete_runtime_vtable_checks": true
+  },
+  "rejected_surfaces": [
+    "base Surface",
+    "HdmiSurface",
+    "unknown"
+  ],
+  "undefined": {
+    "payload": [
+      "iq4_f1_mode_get_01"
+    ],
+    "wrapper": [
+      "iq4_f1_after_stock_draw_13"
+    ]
+  },
+  "alloc_relocation_types": [
+    261,
+    275,
+    283,
+    299
+  ],
+  "dependency_files": [
+    {
+      "path": "analysis/firmware/f1_stock_display_payload_build_13/payload.d",
+      "bytes": 499,
+      "sha256": "1edea5be8bbbac933f3d2628091e6b53c84f0cc403b8980d3e02309af7c5c49a"
+    },
+    {
+      "path": "analysis/firmware/f1_stock_display_payload_build_13/wrapper.d",
+      "bytes": 242,
+      "sha256": "c303977b334ddcbfe0b20b0ad71504bbc39cfcf7807a771979632fdb153c3ce9"
+    }
+  ]
+}

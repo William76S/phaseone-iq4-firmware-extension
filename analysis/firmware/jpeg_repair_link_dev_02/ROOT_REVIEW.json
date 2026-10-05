@@ -1,0 +1,51 @@
+{
+  "schema": "iq4_internal_jpeg_repair_integrated_review02",
+  "User": {
+    "path": "analysis/firmware/jpeg_repair_link_dev_02/P1Linux_RatioMask_JPEG_LVRecording_6.03.34.bin",
+    "bytes": 13227688,
+    "sha256": "54d39029452f61b93ad24b25ca9e9103c92a6dbd6260c821191217fb35d37bda"
+  },
+  "checks": [
+    [
+      "link",
+      "65 objects; finite bound96; zero new dependencies"
+    ],
+    [
+      "unwind",
+      "543 FDEs / 63 LSDAs / 4808 CFI operations"
+    ],
+    [
+      "sealed_host_readback",
+      "11 actual ELF positive/negative cases"
+    ],
+    [
+      "initializer",
+      "6 normal + 6 sanitizer paths, native and seal rejection preserved"
+    ],
+    [
+      "menu09",
+      "30 normal + 30 sanitizer; 59 policy groups each"
+    ],
+    [
+      "reproduction",
+      "all target objects source recompiled; sealed User byte-identical"
+    ]
+  ],
+  "receipt_paths": [
+    "LINKED_UNWIND_STATIC.json",
+    "ROOT_INSPECTION.json",
+    "F3_INSTALL_INPUT_AUDIT.json",
+    "../jpeg_repair_reproduce_dev_02/REPRO_IDENTITY.json",
+    "../f3_capture_menu_build_09_native_size/BUILD.json",
+    "../f3_initialization_status_02/COMMANDS.json"
+  ],
+  "known_incomplete": [
+    "native storage setting and legacy JPEG unification",
+    "BlackRef compatibility closure",
+    "Dual Exposure sensor closure",
+    "no-card RAW source and automatic Host bridge",
+    "actual recording and full-RAW JPEG hardware acceptance"
+  ],
+  "FWP_created": false,
+  "hardware_executed": false
+}

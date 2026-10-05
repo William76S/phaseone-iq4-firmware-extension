@@ -1,0 +1,56 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_display_observe_build_06/libiq4_f1_display_observe_06_default_off.so:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000001dc40 <iq4_f1_display_paint_callback_06>:
+   1dc40: d10183ff     	sub	sp, sp, #0x60
+   1dc44: a9047bfd     	stp	x29, x30, [sp, #0x40]
+   1dc48: a9054ff4     	stp	x20, x19, [sp, #0x50]
+   1dc4c: 910103fd     	add	x29, sp, #0x40
+   1dc50: d503201f     	nop
+   1dc54: 1011b9a9     	adr	x9, 0x41388 <_ZN12_GLOBAL__N_114original_paintE.0>
+   1dc58: aa0303e4     	mov	x4, x3
+   1dc5c: aa0203e3     	mov	x3, x2
+   1dc60: aa0103e2     	mov	x2, x1
+   1dc64: aa0003e1     	mov	x1, x0
+   1dc68: c8dffd20     	ldar	x0, [x9]
+   1dc6c: b40003a0     	cbz	x0, 0x1dce0 <iq4_f1_display_paint_callback_06+0xa0>
+   1dc70: d53bd049     	mrs	x9, TPIDR_EL0
+   1dc74: a900f7e9     	stp	x9, x29, [sp, #0x8]
+   1dc78: d50320ff     	xpaclri
+   1dc7c: d503201f     	nop
+   1dc80: 1011b8f3     	adr	x19, 0x4139c <_ZN12_GLOBAL__N_112display_busyE>
+   1dc84: 52800029     	mov	w9, #0x1                // =1
+   1dc88: a9028fe2     	stp	x2, x3, [sp, #0x28]
+   1dc8c: f9001fe4     	str	x4, [sp, #0x38]
+   1dc90: a90187fe     	stp	x30, x1, [sp, #0x18]
+   1dc94: 085ffe74     	ldaxrb	w20, [x19]
+   1dc98: 080a7e69     	stxrb	w10, w9, [x19]
+   1dc9c: 35ffffca     	cbnz	w10, 0x1dc94 <iq4_f1_display_paint_callback_06+0x54>
+   1dca0: 90000129     	adrp	x9, 0x41000 <_ZN12_GLOBAL__N_115display_storageE+0x480>
+   1dca4: b000008a     	adrp	x10, 0x2e000 <_ZN12_GLOBAL__N_16insideE+0x2e000>
+   1dca8: 7200029f     	tst	w20, #0x1
+   1dcac: f941c129     	ldr	x9, [x9, #0x380]
+   1dcb0: f947154a     	ldr	x10, [x10, #0xe28]
+   1dcb4: 910023eb     	add	x11, sp, #0x8
+   1dcb8: 9a8b13e6     	csel	x6, xzr, x11, ne
+   1dcbc: 9a8913e5     	csel	x5, xzr, x9, ne
+   1dcc0: 9a8a13e7     	csel	x7, xzr, x10, ne
+   1dcc4: 97ffe02a     	bl	0x15d6c <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE>
+   1dcc8: 37000054     	tbnz	w20, #0x0, 0x1dcd0 <iq4_f1_display_paint_callback_06+0x90>
+   1dccc: 089ffe7f     	stlrb	wzr, [x19]
+   1dcd0: a9454ff4     	ldp	x20, x19, [sp, #0x50]
+   1dcd4: a9447bfd     	ldp	x29, x30, [sp, #0x40]
+   1dcd8: 910183ff     	add	sp, sp, #0x60
+   1dcdc: d65f03c0     	ret
+   1dce0: 9400012a     	bl	0x1e188 <_ZN12_GLOBAL__N_115unresolved_holdEv>
+   1dce4: 94000323     	bl	0x1e970 <__cxa_begin_catch@plt>
+   1dce8: 37000054     	tbnz	w20, #0x0, 0x1dcf0 <iq4_f1_display_paint_callback_06+0xb0>
+   1dcec: 089ffe7f     	stlrb	wzr, [x19]
+   1dcf0: 9400032c     	bl	0x1e9a0 <__cxa_rethrow@plt>
+   1dcf4: aa0003f3     	mov	x19, x0
+   1dcf8: 9400032e     	bl	0x1e9b0 <__cxa_end_catch@plt>
+   1dcfc: aa1303e0     	mov	x0, x19
+   1dd00: 94000330     	bl	0x1e9c0 <_Unwind_Resume@plt>
+   1dd04: 97ffd36d     	bl	0x12ab8 <__clang_call_terminate>

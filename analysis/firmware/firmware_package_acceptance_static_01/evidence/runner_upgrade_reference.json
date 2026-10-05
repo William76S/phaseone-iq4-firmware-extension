@@ -1,0 +1,378 @@
+{
+  "evidence_level": "packaged_rootfs_static_only",
+  "source_ramdisk_sha256": "2ca2a497fb22cb3b16009f5dab2aad1f744982aaafb6c928ac688c0a3f9dbccb",
+  "path": "/p1/scripts/boot_run_p1linux.sh",
+  "whole_source_bytes": 5105,
+  "whole_source_sha256": "fe57b899f3a583e1058e4e856cf80704d902d6989b802154d02e77bc93305e88",
+  "not_actual_runtime_runner_backup": true,
+  "lines": [
+    {
+      "line": 20,
+      "text": "ESSENTIAL_BOOT_DONE_FILE=/run/essential_boot_done"
+    },
+    {
+      "line": 21,
+      "text": ""
+    },
+    {
+      "line": 22,
+      "text": "# === Wait for boot to complete ==="
+    },
+    {
+      "line": 23,
+      "text": "WERBOSE_NOTIFY_DELAY=0"
+    },
+    {
+      "line": 24,
+      "text": "while [ ! -f ${ESSENTIAL_BOOT_DONE_FILE} ] ; do"
+    },
+    {
+      "line": 25,
+      "text": "  if [[ $WERBOSE_NOTIFY_DELAY = 0 ]] ; then"
+    },
+    {
+      "line": 26,
+      "text": "    WERBOSE_NOTIFY_DELAY=10"
+    },
+    {
+      "line": 27,
+      "text": "    echo -e \"\\n\\e[33m$0: Waiting for boot to complete\\e[0m\" "
+    },
+    {
+      "line": 28,
+      "text": "    echo -en \"\\e[33mTo abort type: 'abort<Enter>'\\e[0m\""
+    },
+    {
+      "line": 29,
+      "text": "  else"
+    },
+    {
+      "line": 30,
+      "text": "    let WERBOSE_NOTIFY_DELAY--"
+    },
+    {
+      "line": 31,
+      "text": "    echo -n \".\""
+    },
+    {
+      "line": 32,
+      "text": "  fi"
+    },
+    {
+      "line": 33,
+      "text": "  read -t 1 responce"
+    },
+    {
+      "line": 34,
+      "text": "  if [[ \"$responce\" == \"abort\" ]] ; then"
+    },
+    {
+      "line": 35,
+      "text": "    /sbin/sulogin -p"
+    },
+    {
+      "line": 36,
+      "text": "  fi"
+    },
+    {
+      "line": 37,
+      "text": "done"
+    },
+    {
+      "line": 38,
+      "text": ""
+    },
+    {
+      "line": 39,
+      "text": ""
+    },
+    {
+      "line": 40,
+      "text": "USER_STORAGE=\"/run/media/storage\""
+    },
+    {
+      "line": 41,
+      "text": ""
+    },
+    {
+      "line": 42,
+      "text": "runtime_logs=\"/var/log/*\""
+    },
+    {
+      "line": 43,
+      "text": "file_debug=\"${USER_STORAGE}/debug\""
+    },
+    {
+      "line": 44,
+      "text": ""
+    },
+    {
+      "line": 45,
+      "text": "USERMODE_PATH=\"${USER_STORAGE}/User\""
+    },
+    {
+      "line": 46,
+      "text": "FACTORYMODE_PATH=\"${USER_STORAGE}/Factory\""
+    },
+    {
+      "line": 47,
+      "text": ""
+    },
+    {
+      "line": 48,
+      "text": "# === USER OR FACTORY ==="
+    },
+    {
+      "line": 49,
+      "text": "# These are created from /etc/init.d/p1-create-user-or-factory-state.sh:"
+    },
+    {
+      "line": 50,
+      "text": "IS_USER_FILE=/run/boot_is_user"
+    },
+    {
+      "line": 51,
+      "text": "IS_FACTORY_FILE=/run/boot_is_factory"
+    },
+    {
+      "line": 52,
+      "text": ""
+    },
+    {
+      "line": 53,
+      "text": "if [ -f $IS_FACTORY_FILE ] ; then"
+    },
+    {
+      "line": 54,
+      "text": "    #    echo -en \"\\e[31m\" # RED"
+    },
+    {
+      "line": 55,
+      "text": "    echo -en \"\\e[7m\"  # INVERSE"
+    },
+    {
+      "line": 56,
+      "text": "    echo -e \"===========================================\""
+    },
+    {
+      "line": 57,
+      "text": "    echo -e \"======= Info: Booting from Factory ========\""
+    },
+    {
+      "line": 58,
+      "text": "    echo -e \"===========================================\""
+    },
+    {
+      "line": 59,
+      "text": "    echo -en \"\\e[0m\""
+    },
+    {
+      "line": 60,
+      "text": "    "
+    },
+    {
+      "line": 61,
+      "text": "    P1LINUX_PATH=${FACTORYMODE_PATH}/p1linux"
+    },
+    {
+      "line": 62,
+      "text": "else"
+    },
+    {
+      "line": 63,
+      "text": "    # We could check if the user-file is there, but for now, we only have those two possibilities."
+    },
+    {
+      "line": 64,
+      "text": "    echo \"Info: Booting from User\""
+    },
+    {
+      "line": 65,
+      "text": "    P1LINUX_PATH=${USERMODE_PATH}/p1linux"
+    },
+    {
+      "line": 66,
+      "text": "fi"
+    },
+    {
+      "line": 67,
+      "text": ""
+    },
+    {
+      "line": 68,
+      "text": "# === SUPPORT FOR UNHANDLED FW UPGRADE ARTIFACT === "
+    },
+    {
+      "line": 69,
+      "text": "P1LINUX_FWUPGR_PATH=${P1LINUX_PATH}.bin"
+    },
+    {
+      "line": 70,
+      "text": ""
+    },
+    {
+      "line": 90,
+      "text": "# ...or if simply not there, we also skip (both fw-upgrade or main-file)"
+    },
+    {
+      "line": 91,
+      "text": "if [ ! -f ${P1LINUX_PATH} ] && [ ! -f ${P1LINUX_FWUPGR_PATH} ]; then"
+    },
+    {
+      "line": 92,
+      "text": "  echo -e \"\\e[33mWarning: p1linux executable missing: ${P1LINUX_PATH}. Not starting application.\\e[0m\" "
+    },
+    {
+      "line": 93,
+      "text": "  skip_p1_even_if_there=1"
+    },
+    {
+      "line": 94,
+      "text": "fi"
+    },
+    {
+      "line": 95,
+      "text": ""
+    },
+    {
+      "line": 96,
+      "text": "# === UPGRADE ARTIFACT HANDLING - regardless if we are going to start it or not ==="
+    },
+    {
+      "line": 97,
+      "text": "# Check if we have an upgrade file lying around"
+    },
+    {
+      "line": 98,
+      "text": "if [ -f ${P1LINUX_FWUPGR_PATH} ]; then"
+    },
+    {
+      "line": 99,
+      "text": "    echo \"P1Linux upgrade file detected (${P1LINUX_FWUPGR_PATH}) - handling...\""
+    },
+    {
+      "line": 100,
+      "text": ""
+    },
+    {
+      "line": 101,
+      "text": "    # We check if it's gzip'ed:"
+    },
+    {
+      "line": 102,
+      "text": "    gunzip -t ${P1LINUX_FWUPGR_PATH} 2> /dev/null"
+    },
+    {
+      "line": 103,
+      "text": "    if [ $? -eq 0 ]; then"
+    },
+    {
+      "line": 104,
+      "text": "\techo \"...it's compressed, so we uncompress...\""
+    },
+    {
+      "line": 105,
+      "text": ""
+    },
+    {
+      "line": 106,
+      "text": "\t# We simply overwrite the p1linux file - leaving the .bin file behind, in case we power-fail here:"
+    },
+    {
+      "line": 107,
+      "text": "\tgunzip -c ${P1LINUX_FWUPGR_PATH} > ${P1LINUX_PATH}"
+    },
+    {
+      "line": 108,
+      "text": ""
+    },
+    {
+      "line": 109,
+      "text": "\t# ...and sync, to make sure we have it"
+    },
+    {
+      "line": 110,
+      "text": "\tsync"
+    },
+    {
+      "line": 111,
+      "text": ""
+    },
+    {
+      "line": 112,
+      "text": "\t# ...and then we remove the fw-artifact:"
+    },
+    {
+      "line": 113,
+      "text": "\trm -f ${P1LINUX_FWUPGR_PATH}"
+    },
+    {
+      "line": 114,
+      "text": "\tsync"
+    },
+    {
+      "line": 115,
+      "text": "    else"
+    },
+    {
+      "line": 116,
+      "text": "\techo \"...it's not compressed, so we simply overwrite the old one...\""
+    },
+    {
+      "line": 117,
+      "text": "\tmv ${P1LINUX_FWUPGR_PATH} ${P1LINUX_PATH}"
+    },
+    {
+      "line": 118,
+      "text": "\tsync"
+    },
+    {
+      "line": 119,
+      "text": "    fi"
+    },
+    {
+      "line": 120,
+      "text": "fi"
+    },
+    {
+      "line": 121,
+      "text": ""
+    },
+    {
+      "line": 122,
+      "text": "chmod +x ${P1LINUX_PATH}"
+    },
+    {
+      "line": 123,
+      "text": ""
+    },
+    {
+      "line": 124,
+      "text": "# === STARTING ==="
+    },
+    {
+      "line": 125,
+      "text": ""
+    },
+    {
+      "line": 126,
+      "text": "if [ \"${skip_p1_even_if_there}\" = \"1\" ]; then"
+    },
+    {
+      "line": 127,
+      "text": "    /sbin/sulogin -p"
+    },
+    {
+      "line": 128,
+      "text": "else"
+    },
+    {
+      "line": 129,
+      "text": ""
+    },
+    {
+      "line": 130,
+      "text": "    # All the above tests relates to booting (maybe except from the debug-file - it's in the grey zone)."
+    }
+  ]
+}

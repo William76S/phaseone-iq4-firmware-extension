@@ -1,0 +1,184 @@
+{
+  "actual_csu_count": 340,
+  "actual_csu_end": "0xf42840",
+  "actual_csu_reads_dynamic_tags": false,
+  "actual_csu_start": "0xf41da0",
+  "actual_csu_whole_body_unchanged": true,
+  "actual_start_passes_init_x3": "0x9ef0b0",
+  "appended_initializer": "0x4240080",
+  "camera_access": false,
+  "candidate": {
+    "bytes": 12365792,
+    "path": "build/f1_user_elf_candidate_02/P1Linux_IQ4_F1_6.03.22.bin",
+    "sha256": "aa9c594ac60f594ed7e14b8cc5d765c356d759b72001f1c4ec5469087aa8d115"
+  },
+  "candidate_stock_code_window_hashes": [
+    {
+      "bytes": 978108,
+      "candidate_matches_expected": true,
+      "sha256": "d4a42e53f94aba829414b53d34b157624fde551d814bb3791c2907f2fd0dcbb0",
+      "va": "0x400270"
+    },
+    {
+      "bytes": 192156,
+      "candidate_matches_expected": true,
+      "sha256": "cf86a52a1013e45a01aebccee6c3849c8d6cef9c065da34cd6004961d7c41893",
+      "va": "0x4eef30"
+    },
+    {
+      "bytes": 1706712,
+      "candidate_matches_expected": true,
+      "sha256": "103faaeb71f6bc64f928e6df8f585701871183bc5d6b39bb85f54785caa7720a",
+      "va": "0x51ddd0"
+    },
+    {
+      "bytes": 7454676,
+      "candidate_matches_expected": true,
+      "sha256": "f1fe5e15c278d684ced9fd768f731a64edfaee0868ea5f15162344bd1d4d316e",
+      "va": "0x6be8ac"
+    },
+    {
+      "bytes": 1404622,
+      "candidate_matches_expected": true,
+      "sha256": "ba9def7fc8b5515a563cb0b598581f9de169dde16d7c9122d9c2c037742389db",
+      "va": "0xdda884"
+    }
+  ],
+  "definite_defect": "DT_INIT_ARRAY was extended but the actual executable CSU startup loop retains its original fixed 340-entry span.",
+  "dynamic_DT_INIT": "0x409b90",
+  "dynamic_DT_INIT_ARRAY": "0x42a1ba8",
+  "dynamic_DT_INIT_ARRAYSZ": 2728,
+  "dynamic_constructor_count": 341,
+  "exact_windows": [
+    {
+      "bytes": 80,
+      "disassembly": {
+        "bytes": 1132,
+        "path": "analysis/firmware/f1_card_boot_failure_review_01/candidate_start.txt",
+        "sha256": "8dd52a5fba08084234757e7c09602c7c86b74b0057c3f94e00a82099d3593eee"
+      },
+      "exact_window_sha256": "8aff6edeeaff858311c19e71ce967945748349cd52a96bb6aef7c810db532db1",
+      "file_offset": "0xb38c",
+      "name": "candidate_start",
+      "source": {
+        "bytes": 12365792,
+        "path": "build/f1_user_elf_candidate_02/P1Linux_IQ4_F1_6.03.22.bin",
+        "sha256": "aa9c594ac60f594ed7e14b8cc5d765c356d759b72001f1c4ec5469087aa8d115"
+      },
+      "va": "0x40b38c"
+    },
+    {
+      "bytes": 124,
+      "disassembly": {
+        "bytes": 1558,
+        "path": "analysis/firmware/f1_card_boot_failure_review_01/candidate_csu_init.txt",
+        "sha256": "d4e0ddbde61081f7f596f47dc36e5236082ee498775c4caae84defc647fa49b7"
+      },
+      "exact_window_sha256": "e72c447b8bfb20da687a2d71d87eec58e643278f35e736b4027134677c1848cb",
+      "file_offset": "0x5ef0b0",
+      "name": "candidate_csu_init",
+      "source": {
+        "bytes": 12365792,
+        "path": "build/f1_user_elf_candidate_02/P1Linux_IQ4_F1_6.03.22.bin",
+        "sha256": "aa9c594ac60f594ed7e14b8cc5d765c356d759b72001f1c4ec5469087aa8d115"
+      },
+      "va": "0x9ef0b0"
+    },
+    {
+      "bytes": 3200,
+      "disassembly": {
+        "bytes": 40351,
+        "path": "analysis/firmware/f1_card_boot_failure_review_01/candidate_initializer.txt",
+        "sha256": "e583d79cf2189eac4f16261585c733661792f1ee4c8c2cacb32db1d6c26ebac5"
+      },
+      "exact_window_sha256": "1f8238c7576915204b31f2b74ed896ebab91bee7af92827d03c32bd9ff3f5859",
+      "file_offset": "0xb60080",
+      "name": "candidate_initializer",
+      "source": {
+        "bytes": 12365792,
+        "path": "build/f1_user_elf_candidate_02/P1Linux_IQ4_F1_6.03.22.bin",
+        "sha256": "aa9c594ac60f594ed7e14b8cc5d765c356d759b72001f1c4ec5469087aa8d115"
+      },
+      "va": "0x4240080"
+    },
+    {
+      "bytes": 472,
+      "disassembly": {
+        "bytes": 5866,
+        "path": "analysis/firmware/f1_card_boot_failure_review_01/libc_start_main.txt",
+        "sha256": "8d586a2dffb8cbc2e0b7392faaf52a2225563659a503266a6f0974efa40b9eb2"
+      },
+      "exact_window_sha256": "6a5b4e201750a8a2eb9db6f196f0c54bddbc82be12949d7d994b9b77bd3f809a",
+      "file_offset": "0x20c00",
+      "name": "libc_start_main",
+      "source": {
+        "bytes": 1410840,
+        "path": "analysis/firmware/f1_card_boot_failure_review_01/libc-2.28.so.analysis_only",
+        "sha256": "0618e1d7f7731c5e07a201cb89e6a9e62db34ff0ee96e80fee781ac4193437dd"
+      },
+      "va": "0x20c00"
+    },
+    {
+      "bytes": 144,
+      "disassembly": {
+        "bytes": 1813,
+        "path": "analysis/firmware/f1_card_boot_failure_review_01/ld_start_user.txt",
+        "sha256": "7fe62995aaff7df74467a202571a5890862fca44f89a9874c98be927590639f4"
+      },
+      "exact_window_sha256": "2d97b0ac1cc98f427509558b26e1c1d820c90c8ac7f56e9dc16996ec443bc962",
+      "file_offset": "0x1040",
+      "name": "ld_start_user",
+      "source": {
+        "bytes": 136792,
+        "path": "analysis/firmware/f1_card_boot_failure_review_01/ld-2.28.so.analysis_only",
+        "sha256": "9be1d9704ad489d8d573f6a9fb851d4522f92481de5795d9defee99ba96dce8f"
+      },
+      "va": "0x1040"
+    },
+    {
+      "bytes": 308,
+      "disassembly": {
+        "bytes": 3741,
+        "path": "analysis/firmware/f1_card_boot_failure_review_01/ld_call_init.txt",
+        "sha256": "f3dd4a9a0040d3e468757266984b6c763dd1a333dee844dbb2fdcf181ea6b7f2"
+      },
+      "exact_window_sha256": "c55573195c1dfa0deea81775604b19d0972cb3f36cca6a043e66a906e2e8f5b3",
+      "file_offset": "0xd770",
+      "name": "ld_call_init",
+      "source": {
+        "bytes": 136792,
+        "path": "analysis/firmware/f1_card_boot_failure_review_01/ld-2.28.so.analysis_only",
+        "sha256": "9be1d9704ad489d8d573f6a9fb851d4522f92481de5795d9defee99ba96dce8f"
+      },
+      "va": "0xd770"
+    },
+    {
+      "bytes": 340,
+      "disassembly": {
+        "bytes": 4235,
+        "path": "analysis/firmware/f1_card_boot_failure_review_01/ld_init.txt",
+        "sha256": "658f95d18bcc5d16a6b6397fc9e7df30d9b9611bdccf5111d8cb4c3770e879bb"
+      },
+      "exact_window_sha256": "95a6ca0388a9bb2b5d8a3714e04592c85aadf3d0ee3aaf21ee53a512b166af0d",
+      "file_offset": "0xd8a8",
+      "name": "ld_init",
+      "source": {
+        "bytes": 136792,
+        "path": "analysis/firmware/f1_card_boot_failure_review_01/ld-2.28.so.analysis_only",
+        "sha256": "9be1d9704ad489d8d573f6a9fb851d4522f92481de5795d9defee99ba96dce8f"
+      },
+      "va": "0xd8a8"
+    }
+  ],
+  "ld_call_init_empty_name_type0_returns_without_DT_INIT_or_ARRAY": true,
+  "libc_nonzero_init_calls_provided_x3": true,
+  "original_340_prefix_preserved": true,
+  "runtime_failure_code_observed": false,
+  "schema": "iq4_f1_startup_actual_candidate_review_01",
+  "stock": {
+    "bytes": 11874544,
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "target_executed": false
+}

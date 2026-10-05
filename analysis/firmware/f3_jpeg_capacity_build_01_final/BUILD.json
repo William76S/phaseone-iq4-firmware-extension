@@ -1,0 +1,46 @@
+{
+  "objects": [
+    {
+      "replaces": {
+        "path": "analysis/firmware/f3_stream_export_build_04_attempt01/stream_export.o",
+        "bytes": 17912,
+        "sha256": "1ca79bffecbf3da333d28bffe26bab1276882ecd3c4bd87721e6afc3c016e23d"
+      },
+      "replacement": {
+        "path": "analysis/firmware/f3_jpeg_capacity_build_01_final/stream_export.o",
+        "bytes": 17912,
+        "sha256": "a240b65203b6b2b5756f014a90e1f6f4b2894e13ee0b3e038e7e3016fcfe5ae8"
+      }
+    },
+    {
+      "replaces": {
+        "path": "analysis/firmware/f3_save_coordinator_build_08_attempt04/coordinator.o",
+        "bytes": 525976,
+        "sha256": "de4afb7d5a976c445ae79ab072db05a27d3a846c35be86ef7a26deb51a52d43b"
+      },
+      "replacement": {
+        "path": "analysis/firmware/f3_jpeg_capacity_build_01_final/coordinator.o",
+        "bytes": 525976,
+        "sha256": "db5268ade3029735ec5da7715d14f8e5dc72bddf67cc891292f1888c917ebfdc"
+      }
+    }
+  ],
+  "tests": [
+    {
+      "name": "old",
+      "stdout": "{\"groups\":62,\"passed\":true,\"real_host_entropy_decoded_geometry_cases\":24,\"actual_RAW_decode\":false,\"device_accessed\":false}\nPASS quality100 file capacity boundaries; streaming, no RAW deletion"
+    },
+    {
+      "name": "new",
+      "stdout": "{\"groups\":62,\"passed\":true,\"real_host_entropy_decoded_geometry_cases\":24,\"actual_RAW_decode\":false,\"device_accessed\":false}\nPASS quality100 file capacity boundaries; streaming, no RAW deletion"
+    },
+    {
+      "name": "san",
+      "stdout": "{\"groups\":62,\"passed\":true,\"real_host_entropy_decoded_geometry_cases\":24,\"actual_RAW_decode\":false,\"device_accessed\":false}\nPASS quality100 file capacity boundaries; streaming, no RAW deletion"
+    }
+  ],
+  "limit": 1073741824,
+  "file_ceiling_only": true,
+  "no_full_packet_allocation": true,
+  "target_executed": false
+}

@@ -1,0 +1,90 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_03/candidates.o:	file format elf64-littleaarch64
+
+Disassembly of section .text._ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE:
+
+0000000000000000 <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE>:
+       0: d10143ff     	sub	sp, sp, #0x50
+       4: a9017bfd     	stp	x29, x30, [sp, #0x10]
+       8: a9025ff8     	stp	x24, x23, [sp, #0x20]
+       c: a90357f6     	stp	x22, x21, [sp, #0x30]
+      10: a9044ff4     	stp	x20, x19, [sp, #0x40]
+      14: 910043fd     	add	x29, sp, #0x10
+      18: 6f00e400     	movi	v0.2d, #0000000000000000
+      1c: aa0003f5     	mov	x21, x0
+      20: 2a1f03e0     	mov	w0, wzr
+      24: ad000060     	stp	q0, q0, [x3]
+      28: ad010060     	stp	q0, q0, [x3, #0x20]
+      2c: ad020060     	stp	q0, q0, [x3, #0x40]
+      30: b4000681     	cbz	x1, 0x100 <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE+0x100>
+      34: 92816788     	mov	x8, #-0xb3d             // =-2877
+      38: aa0203f3     	mov	x19, x2
+      3c: f2bff1c8     	movk	x8, #0xff8e, lsl #16
+      40: eb08005f     	cmp	x2, x8
+      44: 540005e8     	b.hi	0x100 <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE+0x100>
+      48: aa0103f4     	mov	x20, x1
+      4c: aa0303f6     	mov	x22, x3
+      50: 90000017     	adrp	x23, 0x0 <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE>
+		0000000000000050:  R_AARCH64_ADR_PREL_PG_HI21	_ZN3iq42f111native_ui0211EntryChecksE+0x8
+      54: 910002f7     	add	x23, x23, #0x0
+		0000000000000054:  R_AARCH64_ADD_ABS_LO12_NC	_ZN3iq42f111native_ui0211EntryChecksE+0x8
+      58: 52802418     	mov	w24, #0x120             // =288
+      5c: f85f82e8     	ldur	x8, [x23, #-0x8]
+      60: 910003e2     	mov	x2, sp
+      64: aa1503e0     	mov	x0, x21
+      68: 52800203     	mov	w3, #0x10               // =16
+      6c: a9007fff     	stp	xzr, xzr, [sp]
+      70: 8b130101     	add	x1, x8, x19
+      74: d63f0280     	blr	x20
+      78: 36000420     	tbz	w0, #0x0, 0xfc <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE+0xfc>
+      7c: a9402ee8     	ldp	x8, x11, [x23]
+      80: a9402be9     	ldp	x9, x10, [sp]
+      84: eb08013f     	cmp	x9, x8
+      88: fa4b0140     	ccmp	x10, x11, #0x0, eq
+      8c: 54000381     	b.ne	0xfc <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE+0xfc>
+      90: f1006318     	subs	x24, x24, #0x18
+      94: 910062f7     	add	x23, x23, #0x18
+      98: 54fffe21     	b.ne	0x5c <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE+0x5c>
+      9c: 90000008     	adrp	x8, 0x0 <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE>
+		000000000000009c:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16
+      a0: 4e080e60     	dup	v0.2d, x19
+      a4: 52800020     	mov	w0, #0x1                // =1
+      a8: 3dc00101     	ldr	q1, [x8]
+		00000000000000a8:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16
+      ac: 90000008     	adrp	x8, 0x0 <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE>
+		00000000000000ac:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16+0x10
+      b0: 3dc00102     	ldr	q2, [x8]
+		00000000000000b0:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16+0x10
+      b4: 90000008     	adrp	x8, 0x0 <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE>
+		00000000000000b4:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16+0x20
+      b8: 3dc00103     	ldr	q3, [x8]
+		00000000000000b8:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16+0x20
+      bc: 90000008     	adrp	x8, 0x0 <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE>
+		00000000000000bc:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16+0x30
+      c0: 4ee18401     	add	v1.2d, v0.2d, v1.2d
+      c4: 3dc00104     	ldr	q4, [x8]
+		00000000000000c4:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16+0x30
+      c8: 90000008     	adrp	x8, 0x0 <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE>
+		00000000000000c8:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16+0x40
+      cc: 4ee28402     	add	v2.2d, v0.2d, v2.2d
+      d0: 3dc00105     	ldr	q5, [x8]
+		00000000000000d0:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16+0x40
+      d4: 90000008     	adrp	x8, 0x0 <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE>
+		00000000000000d4:  R_AARCH64_ADR_PREL_PG_HI21	.rodata.cst16+0x50
+      d8: 4ee38403     	add	v3.2d, v0.2d, v3.2d
+      dc: 3dc00106     	ldr	q6, [x8]
+		00000000000000dc:  R_AARCH64_LDST128_ABS_LO12_NC	.rodata.cst16+0x50
+      e0: 4ee48404     	add	v4.2d, v0.2d, v4.2d
+      e4: ad000ac1     	stp	q1, q2, [x22]
+      e8: 4ee58401     	add	v1.2d, v0.2d, v5.2d
+      ec: 4ee68400     	add	v0.2d, v0.2d, v6.2d
+      f0: ad0112c3     	stp	q3, q4, [x22, #0x20]
+      f4: ad0202c1     	stp	q1, q0, [x22, #0x40]
+      f8: 14000002     	b	0x100 <_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE+0x100>
+      fc: 2a1f03e0     	mov	w0, wzr
+     100: a9444ff4     	ldp	x20, x19, [sp, #0x40]
+     104: a94357f6     	ldp	x22, x21, [sp, #0x30]
+     108: a9425ff8     	ldp	x24, x23, [sp, #0x20]
+     10c: a9417bfd     	ldp	x29, x30, [sp, #0x10]
+     110: 910143ff     	add	sp, sp, #0x50
+     114: d65f03c0     	ret

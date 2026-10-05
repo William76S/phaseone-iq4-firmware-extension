@@ -1,0 +1,107 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const>:
+  778244: a9b77bfd     	stp	x29, x30, [sp, #-0x90]!
+  778248: 910003fd     	mov	x29, sp
+  77824c: f90017e0     	str	x0, [sp, #0x28]
+  778250: f90013e1     	str	x1, [sp, #0x20]
+  778254: f9000fe2     	str	x2, [sp, #0x18]
+  778258: f94017e4     	ldr	x4, [sp, #0x28]
+  77825c: d0002640     	adrp	x0, 0xc42000
+  778260: 913fa003     	add	x3, x0, #0xfe8
+  778264: d0002640     	adrp	x0, 0xc42000
+  778268: 91374002     	add	x2, x0, #0xdd0
+  77826c: 528006a1     	mov	w1, #0x35               // =53
+  778270: d0002640     	adrp	x0, 0xc42000
+  778274: 91378000     	add	x0, x0, #0xde0
+  778278: 97ff3889     	bl	0x74649c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x2c770>
+  77827c: d0002640     	adrp	x0, 0xc42000
+  778280: 91382001     	add	x1, x0, #0xe08
+  778284: f94017e0     	ldr	x0, [sp, #0x28]
+  778288: 97f24ab2     	bl	0x40ad50 <popen@plt>
+  77828c: f90043e0     	str	x0, [sp, #0x80]
+  778290: f94043e0     	ldr	x0, [sp, #0x80]
+  778294: f100001f     	cmp	x0, #0x0
+  778298: 540001a1     	b.ne	0x7782cc <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x5e5a0>
+  77829c: 97f24891     	bl	0x40a4e0 <__errno_location@plt>
+  7782a0: b9400000     	ldr	w0, [x0]
+  7782a4: 2a0003e4     	mov	w4, w0
+  7782a8: d0002640     	adrp	x0, 0xc42000
+  7782ac: 91384003     	add	x3, x0, #0xe10
+  7782b0: 52800762     	mov	w2, #0x3b               // =59
+  7782b4: d0002640     	adrp	x0, 0xc42000
+  7782b8: 91378001     	add	x1, x0, #0xde0
+  7782bc: 52800040     	mov	w0, #0x2                // =2
+  7782c0: 97ff38a3     	bl	0x74654c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x2c820>
+  7782c4: 52800000     	mov	w0, #0x0                // =0
+  7782c8: 14000059     	b	0x77842c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x5e700>
+  7782cc: 52800020     	mov	w0, #0x1                // =1
+  7782d0: 39023fe0     	strb	w0, [sp, #0x8f]
+  7782d4: 9100c3e0     	add	x0, sp, #0x30
+  7782d8: f94043e2     	ldr	x2, [sp, #0x80]
+  7782dc: 52800821     	mov	w1, #0x41               // =65
+  7782e0: 97f24828     	bl	0x40a380 <fgets@plt>
+  7782e4: f9003fe0     	str	x0, [sp, #0x78]
+  7782e8: f9403fe0     	ldr	x0, [sp, #0x78]
+  7782ec: f100001f     	cmp	x0, #0x0
+  7782f0: 540001a1     	b.ne	0x778324 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x5e5f8>
+  7782f4: 97f2487b     	bl	0x40a4e0 <__errno_location@plt>
+  7782f8: b9400000     	ldr	w0, [x0]
+  7782fc: 7100101f     	cmp	w0, #0x4
+  778300: 54000121     	b.ne	0x778324 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x5e5f8>
+  778304: f94017e3     	ldr	x3, [sp, #0x28]
+  778308: d0002640     	adrp	x0, 0xc42000
+  77830c: 9138e002     	add	x2, x0, #0xe38
+  778310: 52800961     	mov	w1, #0x4b               // =75
+  778314: d0002640     	adrp	x0, 0xc42000
+  778318: 91378000     	add	x0, x0, #0xde0
+  77831c: 97ff3860     	bl	0x74649c <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x2c770>
+  778320: 14000018     	b	0x778380 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x5e654>
+  778324: f9403fe0     	ldr	x0, [sp, #0x78]
+  778328: f100001f     	cmp	x0, #0x0
+  77832c: 540002a0     	b.eq	0x778380 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x5e654>
+  778330: 39423fe0     	ldrb	w0, [sp, #0x8f]
+  778334: 7100001f     	cmp	w0, #0x0
+  778338: 54000240     	b.eq	0x778380 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x5e654>
+  77833c: f94013e0     	ldr	x0, [sp, #0x20]
+  778340: f100001f     	cmp	x0, #0x0
+  778344: 540001e0     	b.eq	0x778380 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x5e654>
+  778348: f94013e0     	ldr	x0, [sp, #0x20]
+  77834c: f9400000     	ldr	x0, [x0]
+  778350: 91004000     	add	x0, x0, #0x10
+  778354: f9400002     	ldr	x2, [x0]
+  778358: 9100c3e0     	add	x0, sp, #0x30
+  77835c: aa0003e1     	mov	x1, x0
+  778360: f94013e0     	ldr	x0, [sp, #0x20]
+  778364: d63f0040     	blr	x2
+  778368: 12001c01     	and	w1, w0, #0xff
+  77836c: 39423fe0     	ldrb	w0, [sp, #0x8f]
+  778370: 0a010000     	and	w0, w0, w1
+  778374: 7100001f     	cmp	w0, #0x0
+  778378: 1a9f07e0     	cset	w0, ne
+  77837c: 39023fe0     	strb	w0, [sp, #0x8f]
+  778380: f9403fe0     	ldr	x0, [sp, #0x78]
+  778384: f100001f     	cmp	x0, #0x0
+  778388: 54000040     	b.eq	0x778390 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x5e664>
+  77838c: 17ffffd2     	b	0x7782d4 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x5e5a8>
+  778390: f94043e0     	ldr	x0, [sp, #0x80]
+  778394: 97f246f7     	bl	0x409f70 <pclose@plt>
+  778398: b90077e0     	str	w0, [sp, #0x74]
+  77839c: b94077e0     	ldr	w0, [sp, #0x74]
+  7783a0: 7100001f     	cmp	w0, #0x0
+  7783a4: 1a9f17e0     	cset	w0, eq
+  7783a8: 3901cfe0     	strb	w0, [sp, #0x73]
+  7783ac: f9400fe0     	ldr	x0, [sp, #0x18]
+  7783b0: f100001f     	cmp	x0, #0x0
+  7783b4: 54000220     	b.eq	0x7783f8 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::copy(char*, unsigned long, unsigned long) const+0x5e6cc>
+  7783b8: b94077e0     	ldr	w0, [sp, #0x74]
+  7783bc: 13087c01     	asr	w1, w0, #8
+  7783c0: f9400fe0     	ldr	x0, [sp, #0x18]
+  7783c4: b9000001     	str	w1, [x0]
+  7783c8: d001ad80     	adrp	x0, 0x3d2a000 <std::ctype<char>::id+0x2dc6ed8>
+  7783cc: 91046000     	add	x0, x0, #0x118
+  7783d0: b9400000     	ldr	w0, [x0]

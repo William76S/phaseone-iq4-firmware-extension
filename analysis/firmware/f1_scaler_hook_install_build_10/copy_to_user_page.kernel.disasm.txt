@@ -1,0 +1,28 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_scaler_hook_install_build_10/kernel_narrow.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+ffffff800809ba88 <copy_to_user_page>:
+ffffff800809ba88: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+ffffff800809ba8c: aa0403e1     	mov	x1, x4
+ffffff800809ba90: aa0503e2     	mov	x2, x5
+ffffff800809ba94: 910003fd     	mov	x29, sp
+ffffff800809ba98: a90153f3     	stp	x19, x20, [sp, #0x10]
+ffffff800809ba9c: aa0003f4     	mov	x20, x0
+ffffff800809baa0: aa0503f3     	mov	x19, x5
+ffffff800809baa4: aa0303e0     	mov	x0, x3
+ffffff800809baa8: 941eafd6     	bl	0xffffff8008847a00 <memcpy>
+ffffff800809baac: aa0003e3     	mov	x3, x0
+ffffff800809bab0: f9402a80     	ldr	x0, [x20, #0x50]
+ffffff800809bab4: 37100080     	tbnz	w0, #0x2, 0xffffff800809bac4 <copy_to_user_page+0x3c>
+ffffff800809bab8: a94153f3     	ldp	x19, x20, [sp, #0x10]
+ffffff800809babc: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+ffffff800809bac0: d65f03c0     	ret
+ffffff800809bac4: aa1303e1     	mov	x1, x19
+ffffff800809bac8: aa0303e0     	mov	x0, x3
+ffffff800809bacc: 97ffffa1     	bl	0xffffff800809b950 <sync_icache_aliases>
+ffffff800809bad0: a94153f3     	ldp	x19, x20, [sp, #0x10]
+ffffff800809bad4: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+ffffff800809bad8: d65f03c0     	ret
+ffffff800809badc: 00000000     	udf	#0x0

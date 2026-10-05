@@ -1,0 +1,29 @@
+INPUT_SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC_ONLY_NEAREST_LABELS_NOT_AUTHORITATIVE
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008a682c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIPKcS4_EESA_>:
+  9043c8: b9401c01     	ldr	w1, [x0, #0x1c]
+  9043cc: b9400c02     	ldr	w2, [x0, #0xc]
+  9043d0: 51000421     	sub	w1, w1, #0x1
+  9043d4: 7100483f     	cmp	w1, #0x12
+  9043d8: 54000168     	b.hi	0x904404 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIPKcS4_EESA_+0x5dbd8>
+  9043dc: 90002603     	adrp	x3, 0xdc4000
+  9043e0: 9118a063     	add	x3, x3, #0x628
+  9043e4: b9401004     	ldr	w4, [x0, #0x10]
+  9043e8: b8615861     	ldr	w1, [x3, w1, uxtw #2]
+  9043ec: b9402403     	ldr	w3, [x0, #0x24]
+  9043f0: f9401400     	ldr	x0, [x0, #0x28]
+  9043f4: 1b047c21     	mul	w1, w1, w4
+  9043f8: 1b030442     	madd	w2, w2, w3, w1
+  9043fc: 8b22c000     	add	x0, x0, w2, sxtw
+  904400: d65f03c0     	ret
+  904404: b9402403     	ldr	w3, [x0, #0x24]
+  904408: 52800001     	mov	w1, #0x0                // =0
+  90440c: f9401400     	ldr	x0, [x0, #0x28]
+  904410: 1b030442     	madd	w2, w2, w3, w1
+  904414: 8b22c000     	add	x0, x0, w2, sxtw
+  904418: d65f03c0     	ret

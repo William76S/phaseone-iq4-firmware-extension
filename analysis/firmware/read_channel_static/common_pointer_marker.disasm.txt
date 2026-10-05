@@ -1,0 +1,25 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; private nearest-symbol labels are not authoritative.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  856b00: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  856b04: 910003fd     	mov	x29, sp
+  856b08: f9000fe0     	str	x0, [sp, #0x18]
+  856b0c: f9400fe0     	ldr	x0, [sp, #0x18]
+  856b10: 97ffd59a     	bl	0x84c178 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x7db4>
+  856b14: f90017e0     	str	x0, [sp, #0x28]
+  856b18: f94017e0     	ldr	x0, [sp, #0x28]
+  856b1c: b9400001     	ldr	w1, [x0]
+  856b20: 52844220     	mov	w0, #0x2211             // =8721
+  856b24: 72a88660     	movk	w0, #0x4433, lsl #16
+  856b28: 6b00003f     	cmp	w1, w0
+  856b2c: 54000060     	b.eq	0x856b38 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x12774>
+  856b30: d2800000     	mov	x0, #0x0                // =0
+  856b34: 14000002     	b	0x856b3c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x12778>
+  856b38: f94017e0     	ldr	x0, [sp, #0x28]
+  856b3c: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  856b40: d65f03c0     	ret

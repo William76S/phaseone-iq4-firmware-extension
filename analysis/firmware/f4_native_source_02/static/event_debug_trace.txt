@@ -1,0 +1,77 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006ee080 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_>:
+  70fafc: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  70fb00: 910003fd     	mov	x29, sp
+  70fb04: f9000bf3     	str	x19, [sp, #0x10]
+  70fb08: f90017e0     	str	x0, [sp, #0x28]
+  70fb0c: f90013e1     	str	x1, [sp, #0x20]
+  70fb10: b001bce0     	adrp	x0, 0x3eac000 <_ZNSt5ctypeIcE2idE+0x2f48ed8>
+  70fb14: 91240000     	add	x0, x0, #0x900
+  70fb18: 39400000     	ldrb	w0, [x0]
+  70fb1c: 7100001f     	cmp	w0, #0x0
+  70fb20: 54000740     	b.eq	0x70fc08 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x21b88>
+  70fb24: f94017e0     	ldr	x0, [sp, #0x28]
+  70fb28: 97febba6     	bl	0x6be9c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1e600>
+  70fb2c: 12001c00     	and	w0, w0, #0xff
+  70fb30: 7100001f     	cmp	w0, #0x0
+  70fb34: 540006a0     	b.eq	0x70fc08 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x21b88>
+  70fb38: 52800020     	mov	w0, #0x1                // =1
+  70fb3c: b90037e0     	str	w0, [sp, #0x34]
+  70fb40: 528000a0     	mov	w0, #0x5                // =5
+  70fb44: b90033e0     	str	w0, [sp, #0x30]
+  70fb48: b001bce0     	adrp	x0, 0x3eac000 <_ZNSt5ctypeIcE2idE+0x2f48ed8>
+  70fb4c: 91244000     	add	x0, x0, #0x910
+  70fb50: b94037e2     	ldr	w2, [sp, #0x34]
+  70fb54: 885ffc01     	ldaxr	w1, [x0]
+  70fb58: 0b020023     	add	w3, w1, w2
+  70fb5c: 8804fc03     	stlxr	w4, w3, [x0]
+  70fb60: 35ffffa4     	cbnz	w4, 0x70fb54 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x21ad4>
+  70fb64: b9003fe1     	str	w1, [sp, #0x3c]
+  70fb68: b001bce0     	adrp	x0, 0x3eac000 <_ZNSt5ctypeIcE2idE+0x2f48ed8>
+  70fb6c: 91245000     	add	x0, x0, #0x914
+  70fb70: b9400001     	ldr	w1, [x0]
+  70fb74: b9403fe0     	ldr	w0, [sp, #0x3c]
+  70fb78: 1ac10802     	udiv	w2, w0, w1
+  70fb7c: 1b017c41     	mul	w1, w2, w1
+  70fb80: 4b010000     	sub	w0, w0, w1
+  70fb84: b9003be0     	str	w0, [sp, #0x38]
+  70fb88: b001bce0     	adrp	x0, 0x3eac000 <_ZNSt5ctypeIcE2idE+0x2f48ed8>
+  70fb8c: 91242000     	add	x0, x0, #0x908
+  70fb90: f9400001     	ldr	x1, [x0]
+  70fb94: b9403be0     	ldr	w0, [sp, #0x38]
+  70fb98: d37be800     	lsl	x0, x0, #5
+  70fb9c: 8b000033     	add	x19, x1, x0
+  70fba0: 940003db     	bl	0x710b0c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x22a8c>
+  70fba4: f9000260     	str	x0, [x19]
+  70fba8: b001bce0     	adrp	x0, 0x3eac000 <_ZNSt5ctypeIcE2idE+0x2f48ed8>
+  70fbac: 91242000     	add	x0, x0, #0x908
+  70fbb0: f9400001     	ldr	x1, [x0]
+  70fbb4: b9403be0     	ldr	w0, [sp, #0x38]
+  70fbb8: d37be800     	lsl	x0, x0, #5
+  70fbbc: 8b000020     	add	x0, x1, x0
+  70fbc0: f94017e1     	ldr	x1, [sp, #0x28]
+  70fbc4: f9000401     	str	x1, [x0, #0x8]
+  70fbc8: b001bce0     	adrp	x0, 0x3eac000 <_ZNSt5ctypeIcE2idE+0x2f48ed8>
+  70fbcc: 91242000     	add	x0, x0, #0x908
+  70fbd0: f9400001     	ldr	x1, [x0]
+  70fbd4: b9403be0     	ldr	w0, [sp, #0x38]
+  70fbd8: d37be800     	lsl	x0, x0, #5
+  70fbdc: 8b000033     	add	x19, x1, x0
+  70fbe0: 94001da9     	bl	0x717284 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x29204>
+  70fbe4: b9001a60     	str	w0, [x19, #0x18]
+  70fbe8: b001bce0     	adrp	x0, 0x3eac000 <_ZNSt5ctypeIcE2idE+0x2f48ed8>
+  70fbec: 91242000     	add	x0, x0, #0x908
+  70fbf0: f9400001     	ldr	x1, [x0]
+  70fbf4: b9403be0     	ldr	w0, [sp, #0x38]
+  70fbf8: d37be800     	lsl	x0, x0, #5
+  70fbfc: 8b000020     	add	x0, x1, x0
+  70fc00: f94013e1     	ldr	x1, [sp, #0x20]
+  70fc04: f9000801     	str	x1, [x0, #0x10]
+  70fc08: d503201f     	nop
+  70fc0c: f9400bf3     	ldr	x19, [sp, #0x10]
+  70fc10: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  70fc14: d65f03c0     	ret

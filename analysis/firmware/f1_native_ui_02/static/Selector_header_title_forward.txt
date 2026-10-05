@@ -1,0 +1,13 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual callable binding.
+  4fa688: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  4fa68c: 910003fd     	mov	x29, sp
+  4fa690: f9000fe0     	str	x0, [sp, #0x18]
+  4fa694: b90017e1     	str	w1, [sp, #0x14]
+  4fa698: f9400fe0     	ldr	x0, [sp, #0x18]
+  4fa69c: f9407000     	ldr	x0, [x0, #0xe0]
+  4fa6a0: b94017e1     	ldr	w1, [sp, #0x14]
+  4fa6a4: 940000ee     	bl	0x4faa5c
+  4fa6a8: d503201f     	nop
+  4fa6ac: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  4fa6b0: d65f03c0     	ret

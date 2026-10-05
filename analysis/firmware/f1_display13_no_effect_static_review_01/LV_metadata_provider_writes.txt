@@ -1,0 +1,52 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  7995e0: d2902782     	mov	x2, #0x813c             // =33084
+  7995e4: 8b020260     	add	x0, x19, x2
+  7995e8: f9506262     	ldr	x2, [x19, #0x20c0]
+  7995ec: f0002541     	adrp	x1, 0xc44000
+  7995f0: 52800083     	mov	w3, #0x4                // =4
+  7995f4: 0f03f601     	fmov	v1.2s, #1.00000000
+  7995f8: fd467022     	ldr	d2, [x1, #0xce0]
+  7995fc: 52800021     	mov	w1, #0x1                // =1
+  799600: fc44c043     	ldur	d3, [x2, #0x4c]
+  799604: 52800782     	mov	w2, #0x3c               // =60
+  799608: 1e2e1000     	fmov	s0, #1.00000000
+  79960c: fc164363     	stur	d3, [x27, #-0x9c]
+  799610: fd23de62     	str	d2, [x19, #0x47b8]
+  799614: b9076f23     	str	w3, [x25, #0x76c]
+  799618: 52800023     	mov	w3, #0x1                // =1
+  79961c: b907c322     	str	w2, [x25, #0x7c0]
+  799620: 91401a62     	add	x2, x19, #0x6, lsl #12  // =0x6000
+  799624: 391f5321     	strb	w1, [x25, #0x7d4]
+  799628: d2800001     	mov	x1, #0x0                // =0
+  79962c: a9007c1f     	stp	xzr, xzr, [x0]
+  799630: a9017c1f     	stp	xzr, xzr, [x0, #0x10]
+  799634: f900101f     	str	xzr, [x0, #0x20]
+  799638: f9506664     	ldr	x4, [x19, #0x20c8]
+  79963c: f9006080     	str	x0, [x4, #0xc0]
+  799640: b9080f3f     	str	wzr, [x25, #0x80c]
+  799644: fd243e61     	str	d1, [x19, #0x4878]
+  799648: bd088320     	str	s0, [x25, #0x880]
+  79964c: 79115b23     	strh	w3, [x25, #0x8ac]
+  799650: 79116043     	strh	w3, [x2, #0x8b0]
+  799654: b9083f3f     	str	wzr, [x25, #0x83c]
+  799658: b908533f     	str	wzr, [x25, #0x850]
+  79965c: bd086b20     	str	s0, [x25, #0x868]
+  799660: f9506662     	ldr	x2, [x19, #0x20c8]
+  799664: fc564360     	ldur	d0, [x27, #-0x9c]
+  799668: f923be7f     	str	xzr, [x19, #0x4778]
+  79966c: aa0203e0     	mov	x0, x2
+  799670: f923ca7f     	str	xzr, [x19, #0x4790]
+  799674: fd23c260     	str	d0, [x19, #0x4780]
+  799678: fd23ce60     	str	d0, [x19, #0x4798]
+  79967c: f9400042     	ldr	x2, [x2]
+  799680: f9402442     	ldr	x2, [x2, #0x48]
+  799684: d63f0040     	blr	x2
+  799688: b9016680     	str	w0, [x20, #0x164]
+  79968c: d0002ec2     	adrp	x2, 0xd73000
+  799690: d0002ec0     	adrp	x0, 0xd73000
+  799694: 9120c042     	add	x2, x2, #0x830

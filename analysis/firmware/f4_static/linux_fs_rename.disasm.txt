@@ -1,0 +1,58 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest private-function symbol labels are not authoritative.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000007bbfc8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_>:
+  8267dc: d108c3ff     	sub	sp, sp, #0x230
+  8267e0: a9007bfd     	stp	x29, x30, [sp]
+  8267e4: 910003fd     	mov	x29, sp
+  8267e8: f90017e0     	str	x0, [sp, #0x28]
+  8267ec: f90013e1     	str	x1, [sp, #0x20]
+  8267f0: f9000fe2     	str	x2, [sp, #0x18]
+  8267f4: 9104c3e0     	add	x0, sp, #0x130
+  8267f8: aa0003e2     	mov	x2, x0
+  8267fc: f94013e1     	ldr	x1, [sp, #0x20]
+  826800: f94017e0     	ldr	x0, [sp, #0x28]
+  826804: 940002d1     	bl	0x827348 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_+0x6b380>
+  826808: 12001c00     	and	w0, w0, #0xff
+  82680c: 7100001f     	cmp	w0, #0x0
+  826810: 540001c0     	b.eq	0x826848 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_+0x6a880>
+  826814: 9100c3e0     	add	x0, sp, #0x30
+  826818: aa0003e2     	mov	x2, x0
+  82681c: f9400fe1     	ldr	x1, [sp, #0x18]
+  826820: f94017e0     	ldr	x0, [sp, #0x28]
+  826824: 940002c9     	bl	0x827348 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_+0x6b380>
+  826828: 12001c00     	and	w0, w0, #0xff
+  82682c: 7100001f     	cmp	w0, #0x0
+  826830: 540000c0     	b.eq	0x826848 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_+0x6a880>
+  826834: 9100c3e1     	add	x1, sp, #0x30
+  826838: 9104c3e0     	add	x0, sp, #0x130
+  82683c: 97ef8d75     	bl	0x409e10 <rename@plt>
+  826840: 7100001f     	cmp	w0, #0x0
+  826844: 54000060     	b.eq	0x826850 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_+0x6a888>
+  826848: 52800020     	mov	w0, #0x1                // =1
+  82684c: 14000002     	b	0x826854 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_+0x6a88c>
+  826850: 52800000     	mov	w0, #0x0                // =0
+  826854: 7100001f     	cmp	w0, #0x0
+  826858: 540001a0     	b.eq	0x82688c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_+0x6a8c4>
+  82685c: 97ef8f21     	bl	0x40a4e0 <__errno_location@plt>
+  826860: b9400000     	ldr	w0, [x0]
+  826864: 2a0003e4     	mov	w4, w0
+  826868: d0002b40     	adrp	x0, 0xd90000
+  82686c: 91342003     	add	x3, x0, #0xd08
+  826870: 52802be2     	mov	w2, #0x15f              // =351
+  826874: d0002b40     	adrp	x0, 0xd90000
+  826878: 911ee001     	add	x1, x0, #0x7b8
+  82687c: 52800080     	mov	w0, #0x4                // =4
+  826880: 97fc7f33     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  826884: 52800000     	mov	w0, #0x0                // =0
+  826888: 14000004     	b	0x826898 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_+0x6a8d0>
+  82688c: f94017e0     	ldr	x0, [sp, #0x28]
+  826890: 9400054d     	bl	0x827dc4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC2EPKcmRKS3_+0x6bdfc>
+  826894: 52800020     	mov	w0, #0x1                // =1
+  826898: a9407bfd     	ldp	x29, x30, [sp]
+  82689c: 9108c3ff     	add	sp, sp, #0x230
+  8268a0: d65f03c0     	ret

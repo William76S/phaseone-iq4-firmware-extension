@@ -1,0 +1,87 @@
+STATIC ONLY; synthetic section view, not a target executable.
+SOURCE BOOT SHA256 7a3a3d6f62c61e7d627a9f55d844d74be9111b26eb7a7fa42f5bdd7be7dabe9e
+analysis/firmware/bootstrap_recovery_static/fsbl_view.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000fffc0000 <.text>:
+fffd0a00: 92402c04     	and	x4, x0, #0xfff
+fffd0a04: b200c3e8     	mov	x8, #0x101010101010101  // =72340172838076673
+fffd0a08: f13fc09f     	cmp	x4, #0xff0
+fffd0a0c: 5400082c     	b.gt	0xfffd0b10 <.text+0x10b10>
+fffd0a10: a9400c02     	ldp	x2, x3, [x0]
+fffd0a14: cb080044     	sub	x4, x2, x8
+fffd0a18: b200d845     	orr	x5, x2, #0x7f7f7f7f7f7f7f7f
+fffd0a1c: cb080066     	sub	x6, x3, x8
+fffd0a20: b200d867     	orr	x7, x3, #0x7f7f7f7f7f7f7f7f
+fffd0a24: ea250084     	bics	x4, x4, x5
+fffd0a28: 8a2700c5     	bic	x5, x6, x7
+fffd0a2c: fa4008a0     	ccmp	x5, #0x0, #0x0, eq
+fffd0a30: 54000100     	b.eq	0xfffd0a50 <.text+0x10a50>
+fffd0a34: 9a853084     	csel	x4, x4, x5, lo
+fffd0a38: d2800100     	mov	x0, #0x8                // =8
+fffd0a3c: dac00c84     	rev	x4, x4
+fffd0a40: dac01084     	clz	x4, x4
+fffd0a44: 9a8033e0     	csel	x0, xzr, x0, lo
+fffd0a48: 8b440c00     	add	x0, x0, x4, lsr #3
+fffd0a4c: d65f03c0     	ret
+fffd0a50: 927cec01     	and	x1, x0, #0xfffffffffffffff0
+fffd0a54: d1004021     	sub	x1, x1, #0x10
+fffd0a58: a9c20c22     	ldp	x2, x3, [x1, #0x20]!
+fffd0a5c: cb080044     	sub	x4, x2, x8
+fffd0a60: cb080066     	sub	x6, x3, x8
+fffd0a64: aa060085     	orr	x5, x4, x6
+fffd0a68: ea081cbf     	tst	x5, x8, lsl #7
+fffd0a6c: 54000101     	b.ne	0xfffd0a8c <.text+0x10a8c>
+fffd0a70: a9410c22     	ldp	x2, x3, [x1, #0x10]
+fffd0a74: cb080044     	sub	x4, x2, x8
+fffd0a78: cb080066     	sub	x6, x3, x8
+fffd0a7c: aa060085     	orr	x5, x4, x6
+fffd0a80: ea081cbf     	tst	x5, x8, lsl #7
+fffd0a84: 54fffea0     	b.eq	0xfffd0a58 <.text+0x10a58>
+fffd0a88: 91004021     	add	x1, x1, #0x10
+fffd0a8c: b200d845     	orr	x5, x2, #0x7f7f7f7f7f7f7f7f
+fffd0a90: b200d867     	orr	x7, x3, #0x7f7f7f7f7f7f7f7f
+fffd0a94: ea250084     	bics	x4, x4, x5
+fffd0a98: 8a2700c5     	bic	x5, x6, x7
+fffd0a9c: fa4008a0     	ccmp	x5, #0x0, #0x0, eq
+fffd0aa0: 54000120     	b.eq	0xfffd0ac4 <.text+0x10ac4>
+fffd0aa4: 9a853084     	csel	x4, x4, x5, lo
+fffd0aa8: cb000020     	sub	x0, x1, x0
+fffd0aac: dac00c84     	rev	x4, x4
+fffd0ab0: 91002005     	add	x5, x0, #0x8
+fffd0ab4: dac01084     	clz	x4, x4
+fffd0ab8: 9a853000     	csel	x0, x0, x5, lo
+fffd0abc: 8b440c00     	add	x0, x0, x4, lsr #3
+fffd0ac0: d65f03c0     	ret
+fffd0ac4: a9c10c22     	ldp	x2, x3, [x1, #0x10]!
+fffd0ac8: cb080044     	sub	x4, x2, x8
+fffd0acc: b200d845     	orr	x5, x2, #0x7f7f7f7f7f7f7f7f
+fffd0ad0: cb080066     	sub	x6, x3, x8
+fffd0ad4: b200d867     	orr	x7, x3, #0x7f7f7f7f7f7f7f7f
+fffd0ad8: ea250084     	bics	x4, x4, x5
+fffd0adc: 8a2700c5     	bic	x5, x6, x7
+fffd0ae0: fa4008a0     	ccmp	x5, #0x0, #0x0, eq
+fffd0ae4: 54fffe01     	b.ne	0xfffd0aa4 <.text+0x10aa4>
+fffd0ae8: a9c10c22     	ldp	x2, x3, [x1, #0x10]!
+fffd0aec: cb080044     	sub	x4, x2, x8
+fffd0af0: b200d845     	orr	x5, x2, #0x7f7f7f7f7f7f7f7f
+fffd0af4: cb080066     	sub	x6, x3, x8
+fffd0af8: b200d867     	orr	x7, x3, #0x7f7f7f7f7f7f7f7f
+fffd0afc: ea250084     	bics	x4, x4, x5
+fffd0b00: 8a2700c5     	bic	x5, x6, x7
+fffd0b04: fa4008a0     	ccmp	x5, #0x0, #0x0, eq
+fffd0b08: 54fffde0     	b.eq	0xfffd0ac4 <.text+0x10ac4>
+fffd0b0c: 17ffffe6     	b	0xfffd0aa4 <.text+0x10aa4>
+fffd0b10: 927cec01     	and	x1, x0, #0xfffffffffffffff0
+fffd0b14: a9400c22     	ldp	x2, x3, [x1]
+fffd0b18: d37df004     	lsl	x4, x0, #3
+fffd0b1c: 92800007     	mov	x7, #-0x1               // =-1
+fffd0b20: 9ac420e4     	lsl	x4, x7, x4
+fffd0b24: b201c084     	orr	x4, x4, #0x8080808080808080
+fffd0b28: aa240042     	orn	x2, x2, x4
+fffd0b2c: aa240065     	orn	x5, x3, x4
+fffd0b30: f27d001f     	tst	x0, #0x8
+fffd0b34: 9a870042     	csel	x2, x2, x7, eq
+fffd0b38: 9a850063     	csel	x3, x3, x5, eq
+fffd0b3c: 17ffffc8     	b	0xfffd0a5c <.text+0x10a5c>

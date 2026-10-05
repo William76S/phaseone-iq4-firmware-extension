@@ -1,0 +1,175 @@
+{
+  "schema": "iq4_f4_source05_queue_lock_build",
+  "compiler": {
+    "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+    "bytes": 188226560,
+    "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c"
+  },
+  "objects": [
+    {
+      "path": "analysis/firmware/f4_native_source_build_05_final02/source.o",
+      "bytes": 22480,
+      "sha256": "b2993d3c4207b469ad89e39e2649869e1f8300ca380092eb6bc529a3f0a7d8c3",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 9328
+        },
+        {
+          "name": ".rodata.cst16",
+          "type": 1,
+          "flags": 18,
+          "bytes": 32
+        },
+        {
+          "name": ".rodata.str1.1",
+          "type": 1,
+          "flags": 50,
+          "bytes": 77
+        },
+        {
+          "name": ".data.rel.ro",
+          "type": 1,
+          "flags": 3,
+          "bytes": 936
+        },
+        {
+          "name": ".rodata",
+          "type": 1,
+          "flags": 2,
+          "bytes": 3656
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 792
+        }
+      ],
+      "relocation_types": [
+        257,
+        261,
+        275,
+        277,
+        282,
+        283,
+        299
+      ],
+      "undefined_symbols": [
+        "iq4_f4_native_clock_02",
+        "iq4_f4_native_construct_observer_02",
+        "iq4_f4_native_current_02",
+        "iq4_f4_native_event_construct_02",
+        "iq4_f4_native_event_notify_02",
+        "iq4_f4_native_id_02",
+        "iq4_f4_native_lock_02",
+        "iq4_f4_native_mutex_unlock_02",
+        "iq4_f4_native_queue_lock_05",
+        "iq4_f4_native_size_02",
+        "iq4_f4_native_subscribe_02",
+        "iq4_f4_native_tid_02",
+        "iq4_f4_native_unlock_02",
+        "iq4_f4_native_unsubscribe_02",
+        "memcmp",
+        "memcpy",
+        "memset"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f4_native_source_build_05_final02/native_calls.o",
+      "bytes": 6032,
+      "sha256": "dffe33acf1c43f24be20a79cf675316f4e101b392992e1cf9d9c8bebb9380f2a",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 892
+        },
+        {
+          "name": ".gcc_except_table",
+          "type": 1,
+          "flags": 2,
+          "bytes": 312
+        },
+        {
+          "name": ".data.DW.ref.__gxx_personality_v0",
+          "type": 1,
+          "flags": 515,
+          "bytes": 8
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 560
+        }
+      ],
+      "relocation_types": [
+        257,
+        260,
+        261,
+        283
+      ],
+      "undefined_symbols": [
+        "__cxa_begin_catch",
+        "__cxa_end_catch",
+        "__gxx_personality_v0"
+      ],
+      "executed": false
+    }
+  ],
+  "tests": [
+    {
+      "name": "old",
+      "variant": "normal",
+      "stdout": "old source04 actual pthread EBUSY rejects before registration; session04 init maps this to permanent Hold\n"
+    },
+    {
+      "name": "new",
+      "variant": "normal",
+      "stdout": "7 source05 real pthread contention/recursion/unknown/fence/pin groups PASS; no device\n"
+    },
+    {
+      "name": "barrier",
+      "variant": "normal",
+      "stdout": "3 real C++ exception barrier groups PASS; no original target calls\n"
+    },
+    {
+      "name": "old",
+      "variant": "asan_ubsan",
+      "stdout": "old source04 actual pthread EBUSY rejects before registration; session04 init maps this to permanent Hold\n"
+    },
+    {
+      "name": "new",
+      "variant": "asan_ubsan",
+      "stdout": "7 source05 real pthread contention/recursion/unknown/fence/pin groups PASS; no device\n"
+    },
+    {
+      "name": "barrier",
+      "variant": "asan_ubsan",
+      "stdout": "3 real C++ exception barrier groups PASS; no original target calls\n"
+    }
+  ],
+  "normal_new_groups": 10,
+  "asan_ubsan_new_groups": 10,
+  "normal_old_contention_reproduced": true,
+  "asan_old_contention_reproduced": true,
+  "original": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "native_ports_synthetic": true,
+  "target_executed": false,
+  "sdk_loaded": false,
+  "camera_access": false,
+  "reported_camera_hold_root_cause_proven": false
+}

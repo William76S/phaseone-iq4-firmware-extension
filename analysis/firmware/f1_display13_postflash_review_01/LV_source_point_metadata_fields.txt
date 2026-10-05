@@ -1,0 +1,36 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution or actual field read.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:
+  51f57c: 97fd13d6     	bl	0x4644d4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x2e528>
+  51f580: f9003be0     	str	x0, [sp, #0x70]
+  51f584: 9101c3e1     	add	x1, sp, #0x70
+  51f588: 910163e0     	add	x0, sp, #0x58
+  51f58c: 97fd13fb     	bl	0x464578 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x2e5cc>
+  51f590: f9001fe0     	str	x0, [sp, #0x38]
+  51f594: f94017e0     	ldr	x0, [sp, #0x28]
+  51f598: f9408400     	ldr	x0, [x0, #0x108]
+  51f59c: 94065aec     	bl	0x6b614c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15d8c>
+  51f5a0: f9003fe0     	str	x0, [sp, #0x78]
+  51f5a4: f9403fe0     	ldr	x0, [sp, #0x78]
+  51f5a8: b9400400     	ldr	w0, [x0, #0x4]
+  51f5ac: 1e220001     	scvtf	s1, w0
+  51f5b0: f94017e0     	ldr	x0, [sp, #0x28]
+  51f5b4: bd419000     	ldr	s0, [x0, #0x190]
+  51f5b8: 1e201820     	fdiv	s0, s1, s0
+  51f5bc: 5ea1b802     	fcvtzs	s2, s0
+  51f5c0: f9403fe0     	ldr	x0, [sp, #0x78]
+  51f5c4: b9400800     	ldr	w0, [x0, #0x8]
+  51f5c8: 1e220001     	scvtf	s1, w0
+  51f5cc: f94017e0     	ldr	x0, [sp, #0x28]
+  51f5d0: bd419000     	ldr	s0, [x0, #0x190]
+  51f5d4: 1e201820     	fdiv	s0, s1, s0
+  51f5d8: 5ea1b800     	fcvtzs	s0, s0
+  51f5dc: 9100c3e0     	add	x0, sp, #0x30
+  51f5e0: 1e260002     	fmov	w2, s0
+  51f5e4: 1e260041     	fmov	w1, s2
+  51f5e8: 97fc485e     	bl	0x431760 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6lengthEv+0x18>

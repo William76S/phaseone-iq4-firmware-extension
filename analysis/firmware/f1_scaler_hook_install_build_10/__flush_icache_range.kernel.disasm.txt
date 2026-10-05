@@ -1,0 +1,39 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_scaler_hook_install_build_10/kernel_narrow.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+ffffff800809b664 <__flush_icache_range>:
+ffffff800809b664: d503201f     	nop
+ffffff800809b668: d503201f     	nop
+ffffff800809b66c: d53b0023     	mrs	x3, CTR_EL0
+ffffff800809b670: d503201f     	nop
+ffffff800809b674: d3504c63     	ubfx	x3, x3, #16, #4
+ffffff800809b678: d2800082     	mov	x2, #0x4        // =4
+ffffff800809b67c: 9ac32042     	lsl	x2, x2, x3
+ffffff800809b680: d1000443     	sub	x3, x2, #0x1
+ffffff800809b684: 8a230004     	bic	x4, x0, x3
+ffffff800809b688: d50b7b24     	dc	cvau, x4
+ffffff800809b68c: 8b020084     	add	x4, x4, x2
+ffffff800809b690: eb01009f     	cmp	x4, x1
+ffffff800809b694: 54ffffa3     	b.lo	0xffffff800809b688 <__flush_icache_range+0x24>
+ffffff800809b698: d5033b9f     	dsb	ish
+ffffff800809b69c: d503201f     	nop
+ffffff800809b6a0: d503201f     	nop
+ffffff800809b6a4: d53b0023     	mrs	x3, CTR_EL0
+ffffff800809b6a8: d503201f     	nop
+ffffff800809b6ac: 92400c63     	and	x3, x3, #0xf
+ffffff800809b6b0: d2800082     	mov	x2, #0x4        // =4
+ffffff800809b6b4: 9ac32042     	lsl	x2, x2, x3
+ffffff800809b6b8: d1000443     	sub	x3, x2, #0x1
+ffffff800809b6bc: 8a230003     	bic	x3, x0, x3
+ffffff800809b6c0: d50b7523     	ic	ivau, x3
+ffffff800809b6c4: 8b020063     	add	x3, x3, x2
+ffffff800809b6c8: eb01007f     	cmp	x3, x1
+ffffff800809b6cc: 54ffffa3     	b.lo	0xffffff800809b6c0 <__flush_icache_range+0x5c>
+ffffff800809b6d0: d5033b9f     	dsb	ish
+ffffff800809b6d4: d5033fdf     	isb
+ffffff800809b6d8: d2800000     	mov	x0, #0x0        // =0
+ffffff800809b6dc: d65f03c0     	ret
+ffffff800809b6e0: 928001a0     	mov	x0, #-0xe       // =-14
+ffffff800809b6e4: 17fffffe     	b	0xffffff800809b6dc <__flush_icache_range+0x78>

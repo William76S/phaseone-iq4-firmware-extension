@@ -1,0 +1,69 @@
+{
+  "original_SHA256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "windows": [
+    {
+      "name": "Core",
+      "va": "0x919d58",
+      "end": "0x91b278",
+      "bytes": 5408,
+      "sha256": "77e86359f9ce8209cbf2d8a415b2d291b814df8b4ed0baf971b589156933de7d",
+      "asm": "analysis/firmware/f3_core_native_receipt_static_01_combined_decode/Core.asm",
+      "asm_sha256": "08e2e5ce948c80a7454981c4cae0367603af9b53b81e9a56d6cf70c08cad995b"
+    },
+    {
+      "name": "Preview",
+      "va": "0x963a28",
+      "end": "0x964b10",
+      "bytes": 4328,
+      "sha256": "902984879410943a7093333fd5a455f06e33f41322d67b9812c9aa0a35675970",
+      "asm": "analysis/firmware/f3_core_native_receipt_static_01_combined_decode/Preview.asm",
+      "asm_sha256": "42a8ee375ac6595836488a2d737d10df4d69920916063723c45ebfffe41d4242"
+    },
+    {
+      "name": "Join",
+      "va": "0x716e60",
+      "end": "0x717024",
+      "bytes": 452,
+      "sha256": "6adc70fe16e8e364db6cec5ed3435208beab13faf9a06840e9b8ae8c8564ab04",
+      "asm": "analysis/firmware/f3_core_native_receipt_static_01_combined_decode/Join.asm",
+      "asm_sha256": "8cdba4d5fcb763c3337526c97800724859a6f27b3c8ecc629359b63f7d3d21e9"
+    },
+    {
+      "name": "ClockPLT",
+      "va": "0x40a8f0",
+      "end": "0x40a900",
+      "bytes": 16,
+      "sha256": "22c9032d348728c04657bb69ee32d39d9bcbb1f0e89d3a8c66c5ed5f8ea1993c",
+      "asm": "analysis/firmware/f3_core_native_receipt_static_01_combined_decode/ClockPLT.asm",
+      "asm_sha256": "3ade7b95e10f2217b038fc220b06b8dc5505216204f100106d2504d79ba3dc52"
+    }
+  ],
+  "patch_sites": [
+    {
+      "va": "0x964860",
+      "original_target": "0x919d58",
+      "old_bytes": "3ed5fe97",
+      "wrapper": "iq4_f3_core_native_wrapper_01"
+    },
+    {
+      "va": "0x91a78c",
+      "original_target": "0x716e60",
+      "old_bytes": "b5f1f797",
+      "wrapper": "iq4_f3_core_native_join_wrapper_01"
+    },
+    {
+      "va": "0x91a964",
+      "original_target": "0x40a8f0",
+      "old_bytes": "e3bfeb97",
+      "wrapper": "iq4_f3_core_native_terminal_wrapper_01"
+    },
+    {
+      "va": "0x963d28",
+      "original_target": "0x9227b0",
+      "old_bytes": "a2fafe97",
+      "wrapper": "iq4_f3_decode_native_reader_wrapper_02"
+    }
+  ],
+  "pins_header_SHA256": "3425df9f532db8e90f070ed3082ca567182e227d4da608e2cb6884b5f2b4841d",
+  "target_executed": false
+}

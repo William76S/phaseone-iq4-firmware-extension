@@ -1,0 +1,98 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+SCOPE complete_leaf_assembly_return_boundary
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000009db97c <zError>:
+  9e9598: 52801fe9     	mov	w9, #0xff               // =255
+  9e959c: 4e010d20     	dup	v0.16b, w9
+  9e95a0: 52800006     	mov	w6, #0x0                // =0
+  9e95a4: 2a0203e7     	mov	w7, w2
+  9e95a8: 0d402021     	ld3	{ v1.b, v2.b, v3.b }[0], [x1]
+  9e95ac: 8b23c021     	add	x1, x1, w3, sxtw
+  9e95b0: 0b0400c6     	add	w6, w6, w4
+  9e95b4: 6b0200df     	cmp	w6, w2
+  9e95b8: 5400006b     	b.lt	0x9e95c4 <zError+0xdc48>
+  9e95bc: cb0200c6     	sub	x6, x6, x2
+  9e95c0: 8b25c021     	add	x1, x1, w5, sxtw
+  9e95c4: 0d402421     	ld3	{ v1.b, v2.b, v3.b }[1], [x1]
+  9e95c8: 8b23c021     	add	x1, x1, w3, sxtw
+  9e95cc: 0b0400c6     	add	w6, w6, w4
+  9e95d0: 6b0200df     	cmp	w6, w2
+  9e95d4: 5400006b     	b.lt	0x9e95e0 <zError+0xdc64>
+  9e95d8: cb0200c6     	sub	x6, x6, x2
+  9e95dc: 8b25c021     	add	x1, x1, w5, sxtw
+  9e95e0: 0d402821     	ld3	{ v1.b, v2.b, v3.b }[2], [x1]
+  9e95e4: 8b23c021     	add	x1, x1, w3, sxtw
+  9e95e8: 0b0400c6     	add	w6, w6, w4
+  9e95ec: 6b0200df     	cmp	w6, w2
+  9e95f0: 5400006b     	b.lt	0x9e95fc <zError+0xdc80>
+  9e95f4: cb0200c6     	sub	x6, x6, x2
+  9e95f8: 8b25c021     	add	x1, x1, w5, sxtw
+  9e95fc: 0d402c21     	ld3	{ v1.b, v2.b, v3.b }[3], [x1]
+  9e9600: 8b23c021     	add	x1, x1, w3, sxtw
+  9e9604: 0b0400c6     	add	w6, w6, w4
+  9e9608: 6b0200df     	cmp	w6, w2
+  9e960c: 5400006b     	b.lt	0x9e9618 <zError+0xdc9c>
+  9e9610: cb0200c6     	sub	x6, x6, x2
+  9e9614: 8b25c021     	add	x1, x1, w5, sxtw
+  9e9618: 0d403021     	ld3	{ v1.b, v2.b, v3.b }[4], [x1]
+  9e961c: 8b23c021     	add	x1, x1, w3, sxtw
+  9e9620: 0b0400c6     	add	w6, w6, w4
+  9e9624: 6b0200df     	cmp	w6, w2
+  9e9628: 5400006b     	b.lt	0x9e9634 <zError+0xdcb8>
+  9e962c: cb0200c6     	sub	x6, x6, x2
+  9e9630: 8b25c021     	add	x1, x1, w5, sxtw
+  9e9634: 0d403421     	ld3	{ v1.b, v2.b, v3.b }[5], [x1]
+  9e9638: 8b23c021     	add	x1, x1, w3, sxtw
+  9e963c: 0b0400c6     	add	w6, w6, w4
+  9e9640: 6b0200df     	cmp	w6, w2
+  9e9644: 5400006b     	b.lt	0x9e9650 <zError+0xdcd4>
+  9e9648: cb0200c6     	sub	x6, x6, x2
+  9e964c: 8b25c021     	add	x1, x1, w5, sxtw
+  9e9650: 0d403821     	ld3	{ v1.b, v2.b, v3.b }[6], [x1]
+  9e9654: 8b23c021     	add	x1, x1, w3, sxtw
+  9e9658: 0b0400c6     	add	w6, w6, w4
+  9e965c: 6b0200df     	cmp	w6, w2
+  9e9660: 5400006b     	b.lt	0x9e966c <zError+0xdcf0>
+  9e9664: cb0200c6     	sub	x6, x6, x2
+  9e9668: 8b25c021     	add	x1, x1, w5, sxtw
+  9e966c: 0d403c21     	ld3	{ v1.b, v2.b, v3.b }[7], [x1]
+  9e9670: 8b23c021     	add	x1, x1, w3, sxtw
+  9e9674: 0b0400c6     	add	w6, w6, w4
+  9e9678: 6b0200df     	cmp	w6, w2
+  9e967c: 5400006b     	b.lt	0x9e9688 <zError+0xdd0c>
+  9e9680: cb0200c6     	sub	x6, x6, x2
+  9e9684: 8b25c021     	add	x1, x1, w5, sxtw
+  9e9688: 710020ff     	cmp	w7, #0x8
+  9e968c: 5400008b     	b.lt	0x9e969c <zError+0xdd20>
+  9e9690: 0c9f0000     	st4	{ v0.8b, v1.8b, v2.8b, v3.8b }, [x0], #32
+  9e9694: 510020e7     	sub	w7, w7, #0x8
+  9e9698: 17ffffc4     	b	0x9e95a8 <zError+0xdc2c>
+  9e969c: 710004e7     	subs	w7, w7, #0x1
+  9e96a0: 540002e4     	b.mi	0x9e96fc <zError+0xdd80>
+  9e96a4: 0dbf2000     	st4	{ v0.b, v1.b, v2.b, v3.b }[0], [x0], #4
+  9e96a8: 710004e7     	subs	w7, w7, #0x1
+  9e96ac: 54000284     	b.mi	0x9e96fc <zError+0xdd80>
+  9e96b0: 0dbf2400     	st4	{ v0.b, v1.b, v2.b, v3.b }[1], [x0], #4
+  9e96b4: 710004e7     	subs	w7, w7, #0x1
+  9e96b8: 54000224     	b.mi	0x9e96fc <zError+0xdd80>
+  9e96bc: 0dbf2800     	st4	{ v0.b, v1.b, v2.b, v3.b }[2], [x0], #4
+  9e96c0: 710004e7     	subs	w7, w7, #0x1
+  9e96c4: 540001c4     	b.mi	0x9e96fc <zError+0xdd80>
+  9e96c8: 0dbf2c00     	st4	{ v0.b, v1.b, v2.b, v3.b }[3], [x0], #4
+  9e96cc: 710004e7     	subs	w7, w7, #0x1
+  9e96d0: 54000164     	b.mi	0x9e96fc <zError+0xdd80>
+  9e96d4: 0dbf3000     	st4	{ v0.b, v1.b, v2.b, v3.b }[4], [x0], #4
+  9e96d8: 710004e7     	subs	w7, w7, #0x1
+  9e96dc: 54000104     	b.mi	0x9e96fc <zError+0xdd80>
+  9e96e0: 0dbf3400     	st4	{ v0.b, v1.b, v2.b, v3.b }[5], [x0], #4
+  9e96e4: 710004e7     	subs	w7, w7, #0x1
+  9e96e8: 540000a4     	b.mi	0x9e96fc <zError+0xdd80>
+  9e96ec: 0dbf3800     	st4	{ v0.b, v1.b, v2.b, v3.b }[6], [x0], #4
+  9e96f0: 710004e7     	subs	w7, w7, #0x1
+  9e96f4: 54000044     	b.mi	0x9e96fc <zError+0xdd80>
+  9e96f8: 0dbf3c00     	st4	{ v0.b, v1.b, v2.b, v3.b }[7], [x0], #4
+  9e96fc: d65f03c0     	ret

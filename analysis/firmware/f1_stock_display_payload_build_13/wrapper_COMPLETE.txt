@@ -1,0 +1,93 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_stock_display_payload_build_13/wrapper.o:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000000000 <iq4_f1_lv_draw_wrapper_13>:
+       0: d10c83ff     	sub	sp, sp, #0x320
+       4: a90007e0     	stp	x0, x1, [sp]
+       8: a9010fe2     	stp	x2, x3, [sp, #0x10]
+       c: a90217e4     	stp	x4, x5, [sp, #0x20]
+      10: a9031fe6     	stp	x6, x7, [sp, #0x30]
+      14: f90023e8     	str	x8, [sp, #0x40]
+      18: 910c83f0     	add	x16, sp, #0x320
+      1c: f90027f0     	str	x16, [sp, #0x48]
+      20: f9002bfd     	str	x29, [sp, #0x50]
+      24: f9002ffe     	str	x30, [sp, #0x58]
+      28: f9018bfd     	str	x29, [sp, #0x310]
+      2c: f9018ffe     	str	x30, [sp, #0x318]
+      30: 910003fd     	mov	x29, sp
+      34: d28e0710     	mov	x16, #0x7038            // =28728
+      38: f2a008f0     	movk	x16, #0x47, lsl #16
+      3c: d63f0200     	blr	x16
+      40: a90607e0     	stp	x0, x1, [sp, #0x60]
+      44: a9070fe2     	stp	x2, x3, [sp, #0x70]
+      48: a90817e4     	stp	x4, x5, [sp, #0x80]
+      4c: a9091fe6     	stp	x6, x7, [sp, #0x90]
+      50: a90a27e8     	stp	x8, x9, [sp, #0xa0]
+      54: a90b2fea     	stp	x10, x11, [sp, #0xb0]
+      58: a90c37ec     	stp	x12, x13, [sp, #0xc0]
+      5c: a90d3fee     	stp	x14, x15, [sp, #0xd0]
+      60: a90e47f0     	stp	x16, x17, [sp, #0xe0]
+      64: f9007bf2     	str	x18, [sp, #0xf0]
+      68: d53b4210     	mrs	x16, NZCV
+      6c: f9007ff0     	str	x16, [sp, #0xf8]
+      70: d53b4410     	mrs	x16, FPCR
+      74: f90083f0     	str	x16, [sp, #0x100]
+      78: d53b4430     	mrs	x16, FPSR
+      7c: f90087f0     	str	x16, [sp, #0x108]
+      80: ad0887e0     	stp	q0, q1, [sp, #0x110]
+      84: ad098fe2     	stp	q2, q3, [sp, #0x130]
+      88: ad0a97e4     	stp	q4, q5, [sp, #0x150]
+      8c: ad0b9fe6     	stp	q6, q7, [sp, #0x170]
+      90: ad0ca7e8     	stp	q8, q9, [sp, #0x190]
+      94: ad0dafea     	stp	q10, q11, [sp, #0x1b0]
+      98: ad0eb7ec     	stp	q12, q13, [sp, #0x1d0]
+      9c: ad0fbfee     	stp	q14, q15, [sp, #0x1f0]
+      a0: ad10c7f0     	stp	q16, q17, [sp, #0x210]
+      a4: ad11cff2     	stp	q18, q19, [sp, #0x230]
+      a8: ad12d7f4     	stp	q20, q21, [sp, #0x250]
+      ac: ad13dff6     	stp	q22, q23, [sp, #0x270]
+      b0: ad14e7f8     	stp	q24, q25, [sp, #0x290]
+      b4: ad15effa     	stp	q26, q27, [sp, #0x2b0]
+      b8: ad16f7fc     	stp	q28, q29, [sp, #0x2d0]
+      bc: ad17fffe     	stp	q30, q31, [sp, #0x2f0]
+      c0: 910003e0     	mov	x0, sp
+      c4: 94000000     	bl	0xc4 <iq4_f1_lv_draw_wrapper_13+0xc4>
+		00000000000000c4:  R_AARCH64_CALL26	iq4_f1_after_stock_draw_13
+      c8: ad4887e0     	ldp	q0, q1, [sp, #0x110]
+      cc: ad498fe2     	ldp	q2, q3, [sp, #0x130]
+      d0: ad4a97e4     	ldp	q4, q5, [sp, #0x150]
+      d4: ad4b9fe6     	ldp	q6, q7, [sp, #0x170]
+      d8: ad4ca7e8     	ldp	q8, q9, [sp, #0x190]
+      dc: ad4dafea     	ldp	q10, q11, [sp, #0x1b0]
+      e0: ad4eb7ec     	ldp	q12, q13, [sp, #0x1d0]
+      e4: ad4fbfee     	ldp	q14, q15, [sp, #0x1f0]
+      e8: ad50c7f0     	ldp	q16, q17, [sp, #0x210]
+      ec: ad51cff2     	ldp	q18, q19, [sp, #0x230]
+      f0: ad52d7f4     	ldp	q20, q21, [sp, #0x250]
+      f4: ad53dff6     	ldp	q22, q23, [sp, #0x270]
+      f8: ad54e7f8     	ldp	q24, q25, [sp, #0x290]
+      fc: ad55effa     	ldp	q26, q27, [sp, #0x2b0]
+     100: ad56f7fc     	ldp	q28, q29, [sp, #0x2d0]
+     104: ad57fffe     	ldp	q30, q31, [sp, #0x2f0]
+     108: f94083f0     	ldr	x16, [sp, #0x100]
+     10c: d51b4410     	msr	FPCR, x16
+     110: f94087f0     	ldr	x16, [sp, #0x108]
+     114: d51b4430     	msr	FPSR, x16
+     118: f9407ff0     	ldr	x16, [sp, #0xf8]
+     11c: d51b4210     	msr	NZCV, x16
+     120: a94607e0     	ldp	x0, x1, [sp, #0x60]
+     124: a9470fe2     	ldp	x2, x3, [sp, #0x70]
+     128: a94817e4     	ldp	x4, x5, [sp, #0x80]
+     12c: a9491fe6     	ldp	x6, x7, [sp, #0x90]
+     130: a94a27e8     	ldp	x8, x9, [sp, #0xa0]
+     134: a94b2fea     	ldp	x10, x11, [sp, #0xb0]
+     138: a94c37ec     	ldp	x12, x13, [sp, #0xc0]
+     13c: a94d3fee     	ldp	x14, x15, [sp, #0xd0]
+     140: a94e47f0     	ldp	x16, x17, [sp, #0xe0]
+     144: f9407bf2     	ldr	x18, [sp, #0xf0]
+     148: f9418bfd     	ldr	x29, [sp, #0x310]
+     14c: f9418ffe     	ldr	x30, [sp, #0x318]
+     150: 910c83ff     	add	sp, sp, #0x320
+     154: d65f03c0     	ret

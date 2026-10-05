@@ -1,0 +1,161 @@
+{
+  "schema": "iq4_F3_current_scope_audit_02",
+  "review_kind": "offline-source-only",
+  "claims": [
+    {
+      "id": "manual_ui_actual_worker",
+      "conclusion": "source_chain_present_not_target_accepted",
+      "source": "tools/firmware/f3_capture_menu_05/runtime.c",
+      "lines": [
+        60,
+        76
+      ],
+      "details": "Actual UI selected getter -> original IFM/index -> actual reservation -> Coordinator manual_prepare -> actual Executor Task(sequence) -> original IFM worker. No arbitrary global filename/empty callback. Manual coordinator forces RAW_JPEG and cannot call discard_public."
+    },
+    {
+      "id": "six_sizes_quality",
+      "conclusion": "source_selectable",
+      "source": "tools/firmware/f3_capture_menu_05/runtime.c",
+      "lines": [
+        15,
+        19,
+        79,
+        80,
+        93,
+        99
+      ],
+      "details": "Full,75%,50%,25%,long-edge3840/7680 actual six leaves. Quality +/-1 clamped1..100/reset95. One atomic policy snapshot per request; render receives full RGB32 before Root stream exporter resize."
+    },
+    {
+      "id": "JPEG_only_cleanup_delete",
+      "conclusion": "source_order_and_identity_guard_present",
+      "source": "tools/firmware/f3_save_coordinator_07/coordinator.cpp",
+      "lines": [
+        92,
+        118
+      ],
+      "details": "Only successful checked published JPEG and nonmanual newly captured SD RAW can reach discard; actual render/native join/dtor and SourceBundle cleanup verified first, native Reader/source/card still held. public_raw.c21..46 NOREPLACE quarantine -> actual sameinode/wholeSHA -> private unlink; foreign replacement never deleted. Unknown retains owners."
+    },
+    {
+      "id": "mailbox_FINISHED_previous_blocker",
+      "conclusion": "fixed_by_executor02",
+      "source": "tools/firmware/f3_native_executor_02/executor.cpp",
+      "lines": [
+        72,
+        99,
+        135,
+        159
+      ],
+      "details": "CAS retire normal finished manual tasks on next UI/SD admission. Borrowed capture ACK remains actualowner-owned. UI/SD race BUSY is no enqueue and no retry."
+    },
+    {
+      "id": "noenqueue_previous_Hold_blocker",
+      "conclusion": "fixed_by_coordinator07",
+      "source": "tools/firmware/f3_save_coordinator_07/coordinator.cpp",
+      "lines": [
+        175,
+        191,
+        274,
+        278
+      ],
+      "details": "Exact BUSY/REJECTED only with prepared noresource job -> known RAW-retained ACK; original Capture02 lines85..95 performs actual file/card/activity cleanup. Unknown/liveowned job remains Hold."
+    },
+    {
+      "id": "same_worker_deadlock",
+      "conclusion": "bounded_source_rejection_preserved",
+      "source": "tools/firmware/f3_native_executor_02/executor.cpp",
+      "lines": [
+        130,
+        141
+      ],
+      "details": "Actual native Current equals IFM queue or actual VTb805c0/UIb91f48 rejected before Notify/wait. New known-noenqueue handling preserves RAW and normal capture cleanup. No host fixture proves actual camera thread distribution."
+    },
+    {
+      "id": "nonzero_embedded_profile",
+      "conclusion": "remaining_explicit_safe_rejection",
+      "source": "tools/firmware/f3_native_render_02/adapter.cpp",
+      "lines": [
+        92,
+        94
+      ],
+      "details": "Session rejects a nonzero embedded profile as UnsupportedProfile until original parser binding exists. RAW preserved. Cannot describe arbitrary existing IIQ as supported merely because full dimensions are present."
+    },
+    {
+      "id": "other_IIQ_codecs",
+      "conclusion": "remaining_explicit_safe_rejection",
+      "source": "tools/firmware/f3_native_render_02/adapter.cpp",
+      "lines": [
+        96,
+        100
+      ],
+      "details": "Actual native render admission accepts raw format8 only. SourceBuilder can inspect3/5/6/8/9 but that is not evidence Session renders those other formats. Existing non8 IIQ export fails safe/RAW retained."
+    },
+    {
+      "id": "raw_capture_return_and_gallery",
+      "conclusion": "catalog_acceptance_not_established",
+      "source": "tools/firmware/f3_saved_raw_capture_02/runtime.cpp",
+      "lines": [
+        78,
+        95
+      ],
+      "details": "Wrapper returns original RAW Store bool even after JPEGOnly removal. No own catalog/file-presence update appears in this path. Subsequent native gallery behavior for deleted RAW and separately named F3 JPEG is not established by source review; verify on device and do not claim native catalog integration."
+    }
+  ],
+  "inputs": [
+    {
+      "path": "tools/firmware/f3_native_executor_02/executor.cpp",
+      "bytes": 14221,
+      "sha256": "19ea50b3e655c195cbedb1c46632dc00320538bf04080fe6e28a56c4901a241a"
+    },
+    {
+      "path": "tools/firmware/f3_native_executor_02/LINK_OVERLAY.json",
+      "bytes": 5572,
+      "sha256": "d98f50878f493765b86b95721d381a68c1eceb26ebc12e530532aa684f6fb255"
+    },
+    {
+      "path": "tools/firmware/f3_save_coordinator_07/coordinator.cpp",
+      "bytes": 24760,
+      "sha256": "b20eebdbe631755e2699e5c1dea56fe1a4a0f2eca7d8973e13981084798aa4c1"
+    },
+    {
+      "path": "tools/firmware/f3_save_coordinator_07/LINK_OVERLAY.json",
+      "bytes": 12154,
+      "sha256": "e96d8f7dd23524f9b7344b2fb1c000325f0309d512d2fe45ad14d1f80ec46ea4"
+    },
+    {
+      "path": "tools/firmware/f3_native_render_02/adapter.cpp",
+      "bytes": 11020,
+      "sha256": "3e4632b7ec0273ebcf0500eaa370c37a6e155b172acdba210ac8deed4dc740ed"
+    },
+    {
+      "path": "tools/firmware/f3_raw_file_source_01/source_builder.cpp",
+      "bytes": 18041,
+      "sha256": "38ca862686d2665a3a9c41ee01ae14a526a0b5d51e01d8d2977cfc81ec4e5d95"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_05/runtime.c",
+      "bytes": 10858,
+      "sha256": "5f93970df16d6f8eb2047e0e0d3f409bb6d34b01e6fb625f8fd13192ff547b72"
+    },
+    {
+      "path": "tools/firmware/f3_saved_raw_capture_02/runtime.cpp",
+      "bytes": 8924,
+      "sha256": "a20e8d446aaa770044f03372e1ef0e53934a9adc58d780e9943f694acfc7f4d5"
+    },
+    {
+      "path": "tools/firmware/f3_save_coordinator_06/public_raw.c",
+      "bytes": 3981,
+      "sha256": "b3d534e0bb6d719ae6467b1db59cbfec4a94d85a16b6454b90866e6df0fc9c84"
+    }
+  ],
+  "excluded_known_limitations": [
+    "XQD automatic capture",
+    "hardware acceptance",
+    "persistent settings",
+    "recovery route"
+  ],
+  "SDK_executed": false,
+  "target_executed": false,
+  "camera_access": false,
+  "modifies_frozen_files": false
+}

@@ -1,0 +1,17 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest private-function symbol labels are not authoritative.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000009770a0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm>:
+  98ddd0: d10043ff     	sub	sp, sp, #0x10
+  98ddd4: f90007e0     	str	x0, [sp, #0x8]
+  98ddd8: b0002200     	adrp	x0, 0xdce000
+  98dddc: 9105c001     	add	x1, x0, #0x170
+  98dde0: f94007e0     	ldr	x0, [sp, #0x8]
+  98dde4: f9000001     	str	x1, [x0]
+  98dde8: d503201f     	nop
+  98ddec: 910043ff     	add	sp, sp, #0x10
+  98ddf0: d65f03c0     	ret

@@ -1,0 +1,98 @@
+{
+  "evidence_level": "host_only_plan_not_camera_acceptance",
+  "camera_accessed": false,
+  "outgoing_wire_created": false,
+  "not_a_demonstrated_channel_or_tool": true,
+  "commands": [
+    {
+      "label": "p1linux_pid",
+      "host_text": "\"Sys printf IQ4B_23ea96b761; /bin/pidof p1linux && printf IQ4E_23ea96b761\"",
+      "begin_marker": "IQ4B_23ea96b761",
+      "end_marker": "IQ4E_23ea96b761",
+      "expected_bytes": null,
+      "offset": null,
+      "parser_checks": {
+        "outer_tokens": 2,
+        "inner_tokens": 8,
+        "sys_bytes_with_leading_space": 69
+      },
+      "transport_not_included": true,
+      "runtime_tool_options_verified": false
+    },
+    {
+      "label": "eeprom_dynamic_paths",
+      "host_text": "\"Sys printf IQ4B_d8237a0164; /bin/ls -d /sys/devices/platform/amba/ff030000.i2c/i2c-[0-9]/[0-9]-0057/eeprom && printf IQ4E_d8237a0164\"",
+      "begin_marker": "IQ4B_d8237a0164",
+      "end_marker": "IQ4E_d8237a0164",
+      "expected_bytes": null,
+      "offset": null,
+      "parser_checks": {
+        "outer_tokens": 2,
+        "inner_tokens": 9,
+        "sys_bytes_with_leading_space": 129
+      },
+      "transport_not_included": true,
+      "runtime_tool_options_verified": false
+    },
+    {
+      "label": "od_runtime_help",
+      "host_text": "\"Sys printf IQ4B_73e698b8db; /usr/bin/od --help 2>&1 && printf IQ4E_73e698b8db\"",
+      "begin_marker": "IQ4B_73e698b8db",
+      "end_marker": "IQ4E_73e698b8db",
+      "expected_bytes": null,
+      "offset": null,
+      "parser_checks": {
+        "outer_tokens": 2,
+        "inner_tokens": 9,
+        "sys_bytes_with_leading_space": 74
+      },
+      "transport_not_included": true,
+      "runtime_tool_options_verified": false
+    },
+    {
+      "label": "stat_runtime_help",
+      "host_text": "\"Sys printf IQ4B_4ffc87073e; /bin/stat --help 2>&1 && printf IQ4E_4ffc87073e\"",
+      "begin_marker": "IQ4B_4ffc87073e",
+      "end_marker": "IQ4E_4ffc87073e",
+      "expected_bytes": null,
+      "offset": null,
+      "parser_checks": {
+        "outer_tokens": 2,
+        "inner_tokens": 9,
+        "sys_bytes_with_leading_space": 72
+      },
+      "transport_not_included": true,
+      "runtime_tool_options_verified": false
+    },
+    {
+      "label": "readlink_runtime_help",
+      "host_text": "\"Sys printf IQ4B_cd35e6dbc9; /usr/bin/readlink --help 2>&1 && printf IQ4E_cd35e6dbc9\"",
+      "begin_marker": "IQ4B_cd35e6dbc9",
+      "end_marker": "IQ4E_cd35e6dbc9",
+      "expected_bytes": null,
+      "offset": null,
+      "parser_checks": {
+        "outer_tokens": 2,
+        "inner_tokens": 9,
+        "sys_bytes_with_leading_space": 80
+      },
+      "transport_not_included": true,
+      "runtime_tool_options_verified": false
+    },
+    {
+      "label": "sha256_runtime_help",
+      "host_text": "\"Sys printf IQ4B_ca4904bf35; /usr/bin/sha256sum --help 2>&1 && printf IQ4E_ca4904bf35\"",
+      "begin_marker": "IQ4B_ca4904bf35",
+      "end_marker": "IQ4E_ca4904bf35",
+      "expected_bytes": null,
+      "offset": null,
+      "parser_checks": {
+        "outer_tokens": 2,
+        "inner_tokens": 9,
+        "sys_bytes_with_leading_space": 81
+      },
+      "transport_not_included": true,
+      "runtime_tool_options_verified": false
+    }
+  ]
+}

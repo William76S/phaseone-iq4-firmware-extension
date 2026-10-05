@@ -1,0 +1,37 @@
+STATIC ONLY; linked VAs; exported nearest labels are not recovered private names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:
+  5b4f08: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  5b4f0c: 910003fd     	mov	x29, sp
+  5b4f10: f9000bf3     	str	x19, [sp, #0x10]
+  5b4f14: f90017e0     	str	x0, [sp, #0x28]
+  5b4f18: 39009fe1     	strb	w1, [sp, #0x27]
+  5b4f1c: 9100e3e0     	add	x0, sp, #0x38
+  5b4f20: 9405761c     	bl	0x712790 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x24710>
+  5b4f24: f94017e0     	ldr	x0, [sp, #0x28]
+  5b4f28: f9406800     	ldr	x0, [x0, #0xd0]
+  5b4f2c: b9400001     	ldr	w1, [x0]
+  5b4f30: 39409fe0     	ldrb	w0, [sp, #0x27]
+  5b4f34: 6b00003f     	cmp	w1, w0
+  5b4f38: 54000061     	b.ne	0x5b4f44 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0xbbe94>
+  5b4f3c: 52800013     	mov	w19, #0x0               // =0
+  5b4f40: 14000006     	b	0x5b4f58 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0xbbea8>
+  5b4f44: f94017e0     	ldr	x0, [sp, #0x28]
+  5b4f48: f9406800     	ldr	x0, [x0, #0xd0]
+  5b4f4c: 39409fe1     	ldrb	w1, [sp, #0x27]
+  5b4f50: b9000001     	str	w1, [x0]
+  5b4f54: 52800033     	mov	w19, #0x1               // =1
+  5b4f58: 9100e3e0     	add	x0, sp, #0x38
+  5b4f5c: 9405761a     	bl	0x7127c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x24744>
+  5b4f60: 7100067f     	cmp	w19, #0x1
+  5b4f64: 54000081     	b.ne	0x5b4f74 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0xbbec4>
+  5b4f68: f94017e0     	ldr	x0, [sp, #0x28]
+  5b4f6c: 91002000     	add	x0, x0, #0x8
+  5b4f70: 940568e2     	bl	0x70f2f8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x21278>
+  5b4f74: f9400bf3     	ldr	x19, [sp, #0x10]
+  5b4f78: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  5b4f7c: d65f03c0     	ret

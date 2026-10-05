@@ -1,0 +1,17 @@
+{
+  "schema": "iq4_root_inspector_implementation_corrections_01",
+  "corrections": [
+    {
+      "initial": "referred to nonexistent helper decode_bl",
+      "fixed": "independent local original BL immediate decode",
+      "candidate_bytes_changed": false
+    },
+    {
+      "initial": "read preserved old .init_array instead of active .f1.init_array",
+      "fixed": "read active array and independently decode actual CSU ADRP/ADD bounds",
+      "candidate_bytes_changed": false
+    }
+  ],
+  "final_inspection": "ROOT_INSPECTION.json",
+  "target_executed": false
+}

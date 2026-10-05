@@ -1,0 +1,115 @@
+{
+  "schema": "iq4_f4_recording_reuse_review_v1",
+  "source_lock_sha256": "830ae388ac2dda6d9585dace76bdf3090004af25cb34150efa5b199ed913407c",
+  "source_windows": [
+    {
+      "role": "exclusive_lease_validations_copy_release_publication",
+      "path": "tools/firmware/f4_owned_copy_pool_01/owned_copy_pool.cpp",
+      "file_sha256": "b70462f3525e7cf46a52e67c41d0b95f70deeafdb8f2bb4c3006f1007f244b5e",
+      "line_begin": 123,
+      "line_end_inclusive": 202,
+      "window_sha256": "4bb3e7033a9872553ad9660c5c8ca33e66f072bf9595e89db05b31f34dcfa003"
+    },
+    {
+      "role": "worker_shape_color_clock_and_owned_transfer",
+      "path": "tools/firmware/f4_owned_copy_pool_01/recorder_worker.cpp",
+      "file_sha256": "3e6c42c895d2b7d68562d8d787cc3f6f3eb1ae3f89ce6044d7398b99fd6540f0",
+      "line_begin": 7,
+      "line_end_inclusive": 54,
+      "window_sha256": "f4dec3088acfffa4513b38b73769eb3d03337437f004e34b699390984a3be64d"
+    },
+    {
+      "role": "worker_only_rgb_jpeg_lifecycle",
+      "path": "src/recording/rgb_jpeg_backend.cpp",
+      "file_sha256": "867102a62f550adf9e56d6857d6593c39f0283c135cb140e42f6e9d89e1db13c",
+      "line_begin": 12,
+      "line_end_inclusive": 75,
+      "window_sha256": "eea4a559b1dea7257d399d685f21063c7296e3a76b9147049b5aa5abe8cb3c24"
+    },
+    {
+      "role": "recording_exclusive_no_replace_rename",
+      "path": "src/recording/mjpeg_avi.cpp",
+      "file_sha256": "0d9a5e2b2a0713d88288a9723ee71b12badfad67af35db9f7270da8608b04826",
+      "line_begin": 23,
+      "line_end_inclusive": 32,
+      "window_sha256": "48b2226f15dd8b610156ea1dcbd90beca5da3a2171af92abda03b1406800dc7b"
+    },
+    {
+      "role": "recording_partial_publish_stages",
+      "path": "src/recording/mjpeg_avi.cpp",
+      "file_sha256": "0d9a5e2b2a0713d88288a9723ee71b12badfad67af35db9f7270da8608b04826",
+      "line_begin": 85,
+      "line_end_inclusive": 115,
+      "window_sha256": "4ab65182fed6d0def5adfd8fd3d9855d8159e5f4f12fa0e196718e74e9023123"
+    },
+    {
+      "role": "strict_cfr_no_silent_retiming",
+      "path": "src/recording/mjpeg_avi.cpp",
+      "file_sha256": "0d9a5e2b2a0713d88288a9723ee71b12badfad67af35db9f7270da8608b04826",
+      "line_begin": 130,
+      "line_end_inclusive": 154,
+      "window_sha256": "627f6b6a7b63755b78db19bb0689c854cdfa09bd4762c98735581bf71940d920"
+    },
+    {
+      "role": "vfr_observed_pts_preservation",
+      "path": "src/recording/mjpeg_avi.cpp",
+      "file_sha256": "0d9a5e2b2a0713d88288a9723ee71b12badfad67af35db9f7270da8608b04826",
+      "line_begin": 209,
+      "line_end_inclusive": 219,
+      "window_sha256": "e79806f052e5194b25f0f2dbbe3cf5457abaef1d775f24ef244072bc1d32a584"
+    },
+    {
+      "role": "recorder_stop_exit_source_loss",
+      "path": "src/runtime/recording.cpp",
+      "file_sha256": "8c105341e5413de729c86832109f6135adc7a1f63ca44bab4b1ff73c6674d975",
+      "line_begin": 56,
+      "line_end_inclusive": 77,
+      "window_sha256": "e9bdd0cf727932141e2fe265f1eaa04b85450ebc65484a0e1f024dd2f561568e"
+    }
+  ],
+  "runtime_chain": [
+    "original_ui_owner_verified",
+    "native_metadata_only_currently",
+    "future_pixel_receipt_not_present",
+    "existing_CopyPool_release_then_publish",
+    "existing_RecorderWorker_owned_frame_transfer",
+    "existing_Recorder_serial_lifecycle",
+    "existing_RgbJpegBackend_bounded_C_JPEG",
+    "existing_MjpegMatroskaBackend_variable_observed_PTS",
+    "existing_ExclusiveFile_no_replace_rename"
+  ],
+  "unresolved_target_gates": {
+    "pixel_copy": {
+      "current_production_call": "request_pixel_copy returns NeedsHardwareReceipts",
+      "raw_fields_are_receipts": false,
+      "mode_bound": false,
+      "allocation_capacity_bound": false,
+      "packing_color_mapping_bound": false
+    },
+    "jpeg": {
+      "api82_584_static_and_object_match": true,
+      "actual_library_table_or_runtime_bound": false,
+      "binding_abi_verified_is_a_caller_assertion": true,
+      "original_cpp_wrapper_not_capacity_safe": true
+    },
+    "card": {
+      "existing_ExclusiveFile_reusable": true,
+      "uses_hardlink": false,
+      "target_renameat2_support_verified": false,
+      "actual_card_directory_verified": false,
+      "original_storage_write_lease_bound": false
+    },
+    "worker_and_ui": {
+      "existing_bridge_types_compatible": true,
+      "native_worker_page_start_stop_error_exit_bound": false,
+      "adapter_hold_restores_ui_proven": false
+    }
+  },
+  "observed_completion_clock_is_sensor_timestamp": false,
+  "software_id_assigned_to_Recorder_source_sequence": false,
+  "nominal_avi_fps_is_source_capability": false,
+  "camera_access": false,
+  "target_executed": false,
+  "real_60fps_proven": false,
+  "deployment_performed": false
+}

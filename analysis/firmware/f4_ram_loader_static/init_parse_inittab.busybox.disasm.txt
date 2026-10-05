@@ -1,0 +1,134 @@
+analysis/firmware/f4_ram_loader_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   851a8:      	stp	x19, x20, [sp, #-0x80]!
+   851ac:      	adrp	x1, 0xc000 <.text+0x860>
+   851b0:      	adrp	x0, 0xa3000
+   851b4:      	stp	x21, x22, [sp, #0x10]
+   851b8:      	adrp	x21, 0xbe000
+   851bc:      	add	x1, x1, #0xe54
+   851c0:      	ldr	x2, [x21, #0xf68]
+   851c4:      	add	x0, x0, #0x218
+   851c8:      	stp	x23, x24, [sp, #0x20]
+   851cc:      	ldr	x3, [x2]
+   851d0:      	str	x3, [sp, #0x78]
+   851d4:      	mov	x3, #0x0                // =0
+   851d8:      	stp	x25, x26, [sp, #0x30]
+   851dc:      	stp	x27, x30, [sp, #0x40]
+   851e0:      	bl	0x8e7d4 <.text+0x83034>
+   851e4:      	cbz	x0, 0x852e8 <.text+0x79b48>
+   851e8:      	adrp	x24, 0xa3000
+   851ec:      	adrp	x23, 0xab000
+   851f0:      	mov	w26, #0x4               // =4
+   851f4:      	mov	x22, x0
+   851f8:      	add	x24, x24, #0x298
+   851fc:      	add	x23, x23, #0x7ce
+   85200:      	add	x19, sp, #0x58
+   85204:      	adrp	x27, 0xa3000
+   85208:      	movk	w26, #0x44, lsl #16
+   8520c:      	add	x3, x27, #0x2b8
+   85210:      	mov	w2, w26
+   85214:      	mov	x1, x19
+   85218:      	mov	x0, x22
+   8521c:      	bl	0x8e868 <.text+0x830c8>
+   85220:      	cbnz	w0, 0x8525c <.text+0x79abc>
+   85224:      	mov	x0, x22
+   85228:      	bl	0x8e834 <.text+0x83094>
+   8522c:      	ldr	x21, [x21, #0xf68]
+   85230:      	ldr	x1, [sp, #0x78]
+   85234:      	ldr	x0, [x21]
+   85238:      	eor	x0, x1, x0
+   8523c:      	cbnz	x0, 0x85258 <.text+0x79ab8>
+   85240:      	ldp	x21, x22, [sp, #0x10]
+   85244:      	ldp	x23, x24, [sp, #0x20]
+   85248:      	ldp	x25, x26, [sp, #0x30]
+   8524c:      	ldp	x27, x30, [sp, #0x40]
+   85250:      	ldp	x19, x20, [sp], #0x80
+   85254:      	ret
+   85258:      	bl	0xac80 <__stack_chk_fail@plt>
+   8525c:      	ldr	x0, [x19, #0x18]
+   85260:      	cbnz	x0, 0x85278 <.text+0x79ad8>
+   85264:      	ldr	w2, [x22, #0x30]
+   85268:      	mov	x1, x24
+   8526c:      	mov	w0, #0x3                // =3
+   85270:      	bl	0x85064 <.text+0x798c4>
+   85274:      	b	0x8520c <.text+0x79a6c>
+   85278:      	ldr	x1, [x19, #0x10]
+   8527c:      	mov	x0, x23
+   85280:      	ldr	x20, [x19]
+   85284:      	bl	0xc3e8 <.text+0xc48>
+   85288:      	mov	w25, w0
+   8528c:      	tbnz	w0, #0x1f, 0x85264 <.text+0x79ac4>
+   85290:      	ldr	x1, [x19, #0x18]
+   85294:      	ldrb	w0, [x1]
+   85298:      	cbz	w0, 0x85264 <.text+0x79ac4>
+   8529c:      	ldrb	w0, [x20]
+   852a0:      	cbz	w0, 0x852c4 <.text+0x79b24>
+   852a4:      	mov	x0, x20
+   852a8:      	bl	0xc9ec <.text+0x124c>
+   852ac:      	adrp	x2, 0x95000 <.text+0x89860>
+   852b0:      	mov	x1, x0
+   852b4:      	add	x0, x2, #0xbd0
+   852b8:      	bl	0x86218 <.text+0x7aa78>
+   852bc:      	mov	x20, x0
+   852c0:      	ldr	x1, [x19, #0x18]
+   852c4:      	mov	w0, #0x1                // =1
+   852c8:      	lsl	w0, w0, w25
+   852cc:      	mov	x2, x20
+   852d0:      	bl	0x84e58 <.text+0x796b8>
+   852d4:      	ldrb	w0, [x20]
+   852d8:      	cbz	w0, 0x8520c <.text+0x79a6c>
+   852dc:      	mov	x0, x20
+   852e0:      	bl	0xaf90 <free@plt>
+   852e4:      	b	0x8520c <.text+0x79a6c>
+   852e8:      	adrp	x19, 0x97000
+   852ec:      	add	x19, x19, #0x2c8
+   852f0:      	mov	x2, x19
+   852f4:      	mov	w0, #0x1                // =1
+   852f8:      	adrp	x1, 0xa3000
+   852fc:      	adrp	x20, 0xa9000
+   85300:      	add	x1, x1, #0x228
+   85304:      	add	x20, x20, #0x62a
+   85308:      	bl	0x84e58 <.text+0x796b8>
+   8530c:      	mov	x2, x19
+   85310:      	mov	x1, x20
+   85314:      	mov	w0, #0x10               // =16
+   85318:      	bl	0x84e58 <.text+0x796b8>
+   8531c:      	mov	x1, x20
+   85320:      	mov	w0, #0x10               // =16
+   85324:      	adrp	x2, 0xa3000
+   85328:      	add	x2, x2, #0x238
+   8532c:      	bl	0x84e58 <.text+0x796b8>
+   85330:      	mov	x1, x20
+   85334:      	mov	w0, #0x10               // =16
+   85338:      	adrp	x2, 0xa3000
+   8533c:      	add	x2, x2, #0x248
+   85340:      	bl	0x84e58 <.text+0x796b8>
+   85344:      	mov	x1, x20
+   85348:      	mov	w0, #0x10               // =16
+   8534c:      	adrp	x2, 0xa3000
+   85350:      	add	x2, x2, #0x258
+   85354:      	bl	0x84e58 <.text+0x796b8>
+   85358:      	mov	x2, x19
+   8535c:      	mov	w0, #0x20               // =32
+   85360:      	adrp	x1, 0xa3000
+   85364:      	add	x1, x1, #0x268
+   85368:      	bl	0x84e58 <.text+0x796b8>
+   8536c:      	mov	x2, x19
+   85370:      	mov	w0, #0x40               // =64
+   85374:      	adrp	x1, 0xa3000
+   85378:      	add	x1, x1, #0x270
+   8537c:      	bl	0x84e58 <.text+0x796b8>
+   85380:      	mov	x2, x19
+   85384:      	mov	w0, #0x40               // =64
+   85388:      	adrp	x1, 0xa3000
+   8538c:      	add	x1, x1, #0x280
+   85390:      	bl	0x84e58 <.text+0x796b8>
+   85394:      	adrp	x1, 0xa3000
+   85398:      	mov	x2, x19
+   8539c:      	add	x1, x1, #0x290
+   853a0:      	mov	w0, #-0x80              // =-128
+   853a4:      	bl	0x84e58 <.text+0x796b8>
+   853a8:      	b	0x8522c <.text+0x79a8c>

@@ -1,0 +1,33 @@
+analysis/firmware/f4_ram_loader_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+   85c4c:      	bl	0x8582c <.text+0x7a08c>
+   85c50:      	mov	w19, w0
+   85c54:      	mov	w0, #0x18               // =24
+   85c58:      	bl	0x856e8 <.text+0x79f48>
+   85c5c:      	bl	0x8582c <.text+0x7a08c>
+   85c60:      	orr	w19, w19, w0
+   85c64:      	mov	w0, #0x1                // =1
+   85c68:      	bl	0xaae0 <sleep@plt>
+   85c6c:      	bl	0x8582c <.text+0x7a08c>
+   85c70:      	orr	w0, w19, w0
+   85c74:      	cmp	w0, #0x0
+   85c78:      	cset	w19, ne
+   85c7c:      	mov	w2, w19
+   85c80:      	mov	x1, #0x0                // =0
+   85c84:      	mov	w0, #-0x1               // =-1
+   85c88:      	bl	0xb700 <waitpid@plt>
+   85c8c:      	mov	w21, w0
+   85c90:      	cmp	w0, #0x0
+   85c94:      	b.le	0x85c4c <.text+0x7a4ac>
+   85c98:      	bl	0x84f78 <.text+0x797d8>
+   85c9c:      	mov	w19, #0x1               // =1
+   85ca0:      	cbz	x0, 0x85c7c <.text+0x7a4dc>
+   85ca4:      	add	x2, x0, #0x2d
+   85ca8:      	mov	w3, w21
+   85cac:      	mov	x1, x20
+   85cb0:      	mov	w0, w19
+   85cb4:      	bl	0x85064 <.text+0x798c4>
+   85cb8:      	b	0x85c7c <.text+0x7a4dc>

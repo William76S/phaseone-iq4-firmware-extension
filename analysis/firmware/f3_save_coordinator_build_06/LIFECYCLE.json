@@ -1,0 +1,74 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/clang++",
+        "-std=c++17",
+        "-isysroot",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-isystem",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wl,-dead_strip",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_save_coordinator_06/test_lifecycle.cpp",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_save_coordinator_build_06/test_lifecycle_normal"
+      ],
+      "label": "compile_normal",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_save_coordinator_build_06/test_lifecycle_normal"
+      ],
+      "label": "run_normal",
+      "exit_code": 0,
+      "stdout": "{\"cases\":16,\"passed\":true,\"actual_coordinator_cleanup_body\":true,\"native_and_file_callbacks_are_fixtures\":true,\"target_executed\":false}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/clang++",
+        "-std=c++17",
+        "-isysroot",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-isystem",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1",
+        "-O1",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-Wl,-dead_strip",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_save_coordinator_06/test_lifecycle.cpp",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_save_coordinator_build_06/test_lifecycle_san"
+      ],
+      "label": "compile_san",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_save_coordinator_build_06/test_lifecycle_san"
+      ],
+      "label": "run_san",
+      "exit_code": 0,
+      "stdout": "{\"cases\":16,\"passed\":true,\"actual_coordinator_cleanup_body\":true,\"native_and_file_callbacks_are_fixtures\":true,\"target_executed\":false}\n",
+      "stderr": ""
+    }
+  ],
+  "native_are_fixtures": true,
+  "actual_cleanup_and_sink_bodies": true
+}

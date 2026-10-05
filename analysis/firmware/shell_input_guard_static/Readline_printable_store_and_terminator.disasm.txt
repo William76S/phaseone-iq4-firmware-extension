@@ -1,0 +1,25 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  7441bc: 394e2be0     	ldrb	w0, [sp, #0x38a]
+  7441c0: 97f31788     	bl	0x409fe0 <isprint@plt>
+  7441c4: 7100001f     	cmp	w0, #0x0
+  7441c8: 54000820     	b.eq	0x7442cc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2a5a0>
+  7441cc: 394e2be2     	ldrb	w2, [sp, #0x38a]
+  7441d0: b94387e0     	ldr	w0, [sp, #0x384]
+  7441d4: 11000401     	add	w1, w0, #0x1
+  7441d8: b90387e1     	str	w1, [sp, #0x384]
+  7441dc: 93407c00     	sxtw	x0, w0
+  7441e0: f9401be1     	ldr	x1, [sp, #0x30]
+  7441e4: 8b000020     	add	x0, x1, x0
+  7441e8: 2a0203e1     	mov	w1, w2
+  7441ec: 39000001     	strb	w1, [x0]
+  7441f0: b98387e0     	ldrsw	x0, [sp, #0x384]
+  7441f4: f9401be1     	ldr	x1, [sp, #0x30]
+  7441f8: 8b000020     	add	x0, x1, x0
+  7441fc: 3900001f     	strb	wzr, [x0]
+  744200: 394e2be0     	ldrb	w0, [sp, #0x38a]

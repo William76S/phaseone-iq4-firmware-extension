@@ -1,0 +1,44 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  863b3c: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  863b40: 910003fd     	mov	x29, sp
+  863b44: f9000bf3     	str	x19, [sp, #0x10]
+  863b48: f9001fe0     	str	x0, [sp, #0x38]
+  863b4c: 790063e1     	strh	w1, [sp, #0x30]
+  863b50: 3900dfe2     	strb	w2, [sp, #0x37]
+  863b54: b9002fe3     	str	w3, [sp, #0x2c]
+  863b58: f9401ff3     	ldr	x19, [sp, #0x38]
+  863b5c: 794063e0     	ldrh	w0, [sp, #0x30]
+  863b60: 94000013     	bl	0x863bac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x1f7e8>
+  863b64: 12003c00     	and	w0, w0, #0xffff
+  863b68: 2a0003e3     	mov	w3, w0
+  863b6c: 3940dfe2     	ldrb	w2, [sp, #0x37]
+  863b70: 12800001     	mov	w1, #-0x1               // =-1
+  863b74: aa1303e0     	mov	x0, x19
+  863b78: 97ff9ef1     	bl	0x84b73c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x7378>
+  863b7c: f9401fe0     	ldr	x0, [sp, #0x38]
+  863b80: 97ffd914     	bl	0x859fd0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x15c0c>
+  863b84: 12003c00     	and	w0, w0, #0xffff
+  863b88: 2a0003e1     	mov	w1, w0
+  863b8c: b9402fe0     	ldr	w0, [sp, #0x2c]
+  863b90: 0b000021     	add	w1, w1, w0
+  863b94: f9401fe0     	ldr	x0, [sp, #0x38]
+  863b98: b9000801     	str	w1, [x0, #0x8]
+  863b9c: d503201f     	nop
+  863ba0: f9400bf3     	ldr	x19, [sp, #0x10]
+  863ba4: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  863ba8: d65f03c0     	ret
+  863bac: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  863bb0: 910003fd     	mov	x29, sp
+  863bb4: 790033e0     	strh	w0, [sp, #0x18]
+  863bb8: 394063e0     	ldrb	w0, [sp, #0x18]
+  863bbc: 394067e1     	ldrb	w1, [sp, #0x19]
+  863bc0: 94000004     	bl	0x863bd0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x1f80c>
+  863bc4: 12003c00     	and	w0, w0, #0xffff
+  863bc8: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  863bcc: d65f03c0     	ret

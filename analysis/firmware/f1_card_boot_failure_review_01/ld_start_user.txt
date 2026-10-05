@@ -1,0 +1,42 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_card_boot_failure_review_01/ld-2.28.so.analysis_only:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000001040 <.text>:
+    1040: 910003e0     	mov	x0, sp
+    1044: 9400022f     	bl	0x1900 <.text+0x8c0>
+    1048: aa0003f5     	mov	x21, x0
+    104c: f94003e1     	ldr	x1, [sp]
+    1050: 910023e2     	add	x2, sp, #0x8
+    1054: 90000184     	adrp	x4, 0x31000 <_dl_argv>
+    1058: b9413084     	ldr	w4, [x4, #0x130]
+    105c: 7100009f     	cmp	w4, #0x0
+    1060: 54000260     	b.eq	0x10ac <.text+0x6c>
+    1064: cb040021     	sub	x1, x1, x4
+    1068: f90003e1     	str	x1, [sp]
+    106c: aa0203e3     	mov	x3, x2
+    1070: 8b040c44     	add	x4, x2, x4, lsl #3
+    1074: f8408485     	ldr	x5, [x4], #0x8
+    1078: f8008465     	str	x5, [x3], #0x8
+    107c: f10000bf     	cmp	x5, #0x0
+    1080: 54ffffa1     	b.ne	0x1074 <.text+0x34>
+    1084: f8408485     	ldr	x5, [x4], #0x8
+    1088: f8008465     	str	x5, [x3], #0x8
+    108c: f10000bf     	cmp	x5, #0x0
+    1090: 54ffffa1     	b.ne	0x1084 <.text+0x44>
+    1094: a9c11480     	ldp	x0, x5, [x4, #0x10]!
+    1098: a8811460     	stp	x0, x5, [x3], #0x10
+    109c: f100001f     	cmp	x0, #0x0
+    10a0: 54ffffa1     	b.ne	0x1094 <.text+0x54>
+    10a4: 90000183     	adrp	x3, 0x31000 <_dl_argv>
+    10a8: f9000062     	str	x2, [x3]
+    10ac: 8b010c43     	add	x3, x2, x1, lsl #3
+    10b0: 91002063     	add	x3, x3, #0x8
+    10b4: f0000170     	adrp	x16, 0x30000 <_rtld_global>
+    10b8: 91000210     	add	x16, x16, #0x0
+    10bc: f9400200     	ldr	x0, [x16]
+    10c0: 940031fa     	bl	0xd8a8 <_dl_rtld_di_serinfo+0x52e0>
+    10c4: 90000060     	adrp	x0, 0xd000 <_dl_rtld_di_serinfo+0x4a38>
+    10c8: 91280000     	add	x0, x0, #0xa00
+    10cc: d61f02a0     	br	x21

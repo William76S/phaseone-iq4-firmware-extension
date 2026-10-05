@@ -1,0 +1,147 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPCamera.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000006580 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)>:
+    73b6: 48 8b 8d 90 02 00 00         	movq	0x290(%rbp), %rcx
+    73bd: 48 39 cb                     	cmpq	%rcx, %rbx
+    73c0: 0f 84 1c 02 00 00            	je	0x75e2 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x1062>
+    73c6: 66 2e 0f 1f 84 00 00 00 00 00	nopw	%cs:(%rax,%rax)
+    73d0: 48 8b 41 20                  	movq	0x20(%rcx), %rax
+    73d4: 48 8d 71 20                  	leaq	0x20(%rcx), %rsi
+    73d8: 48 39 f0                     	cmpq	%rsi, %rax
+    73db: 75 17                        	jne	0x73f4 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xe74>
+    73dd: e9 b6 02 00 00               	jmp	0x7698 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x1118>
+    73e2: 66 0f 1f 44 00 00            	nopw	(%rax,%rax)
+    73e8: 48 8b 00                     	movq	(%rax), %rax
+    73eb: 48 39 c6                     	cmpq	%rax, %rsi
+    73ee: 0f 84 a4 02 00 00            	je	0x7698 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x1118>
+    73f4: 48 8b 50 10                  	movq	0x10(%rax), %rdx
+    73f8: 80 7a 0c ff                  	cmpb	$-0x1, 0xc(%rdx)
+    73fc: 75 ea                        	jne	0x73e8 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xe68>
+    73fe: 80 7a 0d 00                  	cmpb	$0x0, 0xd(%rdx)
+    7402: 75 e4                        	jne	0x73e8 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xe68>
+    7404: 4c 8b 69 18                  	movq	0x18(%rcx), %r13
+    7408: 4d 85 ed                     	testq	%r13, %r13
+    740b: 0f 84 d1 01 00 00            	je	0x75e2 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x1062>
+    7411: 48 8d 3d 00 00 00 00         	leaq	(%rip), %rdi            # 0x7418 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xe98>
+		0000000000007414:  R_X86_64_PC32	.LC106-0x4
+    7418: 31 c0                        	xorl	%eax, %eax
+    741a: e8 00 00 00 00               	callq	0x741f <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xe9f>
+		000000000000741b:  R_X86_64_PLT32	P1::Universal::LogMsgInfo(wchar_t const*, ...)-0x4
+    741f: 48 8d bd b0 04 00 00         	leaq	0x4b0(%rbp), %rdi
+    7426: c6 44 24 28 00               	movb	$0x0, 0x28(%rsp)
+    742b: 48 83 3d 00 00 00 00 00      	cmpq	$0x0, (%rip)            # 0x7433 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xeb3>
+		000000000000742e:  R_X86_64_GOTPCREL	__pthread_key_create-0x5
+    7433: 48 89 7c 24 20               	movq	%rdi, 0x20(%rsp)
+    7438: 74 0d                        	je	0x7447 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xec7>
+    743a: e8 00 00 00 00               	callq	0x743f <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xebf>
+		000000000000743b:  R_X86_64_PLT32	pthread_mutex_lock-0x4
+    743f: 85 c0                        	testl	%eax, %eax
+    7441: 0f 85 df 03 00 00            	jne	0x7826 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x12a6>
+    7447: bf 20 0f 00 00               	movl	$0xf20, %edi            # imm = 0xF20
+    744c: c6 44 24 28 01               	movb	$0x1, 0x28(%rsp)
+    7451: e8 00 00 00 00               	callq	0x7456 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xed6>
+		0000000000007452:  R_X86_64_PLT32	operator new(unsigned long)-0x4
+    7456: 4c 89 ee                     	movq	%r13, %rsi
+    7459: 48 89 c7                     	movq	%rax, %rdi
+    745c: 49 89 c4                     	movq	%rax, %r12
+    745f: e8 00 00 00 00               	callq	0x7464 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xee4>
+		0000000000007460:  R_X86_64_PLT32	P1::IQP::DevelopmentAgent::DevelopmentAgent(P1::IQP::ChannelTransport&)-0x4
+    7464: 49 8d 74 24 38               	leaq	0x38(%r12), %rsi
+    7469: 31 c9                        	xorl	%ecx, %ecx
+    746b: ba ff 00 00 00               	movl	$0xff, %edx
+    7470: 48 89 ef                     	movq	%rbp, %rdi
+    7473: 4c 89 a5 d8 04 00 00         	movq	%r12, 0x4d8(%rbp)
+    747a: e8 00 00 00 00               	callq	0x747f <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xeff>
+		000000000000747b:  R_X86_64_PLT32	P1::IQP::Camera::SetAgentProtocolVersion(P1::IQP::BaseAgent&, unsigned char, unsigned char)-0x4
+    747f: 4c 8d 64 24 50               	leaq	0x50(%rsp), %r12
+    7484: b9 05 00 00 00               	movl	$0x5, %ecx
+    7489: bf 20 00 00 00               	movl	$0x20, %edi
+    748e: 48 8b 85 d8 04 00 00         	movq	0x4d8(%rbp), %rax
+    7495: 48 8d b5 c8 02 00 00         	leaq	0x2c8(%rbp), %rsi
+    749c: 4c 89 e2                     	movq	%r12, %rdx
+    749f: 4c 8d 6c 24 30               	leaq	0x30(%rsp), %r13
+    74a4: 4c 8d 78 38                  	leaq	0x38(%rax), %r15
+    74a8: 48 8b 40 38                  	movq	0x38(%rax), %rax
+    74ac: 48 8b 58 10                  	movq	0x10(%rax), %rbx
+    74b0: e8 00 00 00 00               	callq	0x74b5 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xf35>
+		00000000000074b1:  R_X86_64_PLT32	__atomic_load-0x4
+    74b5: 66 0f 6f 44 24 50            	movdqa	0x50(%rsp), %xmm0
+    74bb: 4c 89 ff                     	movq	%r15, %rdi
+    74be: 4c 89 ee                     	movq	%r13, %rsi
+    74c1: 66 0f 6f 4c 24 60            	movdqa	0x60(%rsp), %xmm1
+    74c7: 0f 29 44 24 30               	movaps	%xmm0, 0x30(%rsp)
+    74cc: 0f 29 4c 24 40               	movaps	%xmm1, 0x40(%rsp)
+    74d1: ff d3                        	callq	*%rbx
+    74d3: 4c 8b bd d8 04 00 00         	movq	0x4d8(%rbp), %r15
+    74da: 4c 89 e6                     	movq	%r12, %rsi
+    74dd: 4c 89 ef                     	movq	%r13, %rdi
+    74e0: 49 8b 07                     	movq	(%r15), %rax
+    74e3: 48 8b 58 10                  	movq	0x10(%rax), %rbx
+    74e7: 48 8d 05 00 00 00 00         	leaq	(%rip), %rax            # 0x74ee <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xf6e>
+		00000000000074ea:  R_X86_64_PC32	vtable for P1::Universal::MemberFunctionObject1<P1::IQP::Camera, void, P1::Universal::UniversalError const&>+0xc
+    74ee: 48 89 6c 24 58               	movq	%rbp, 0x58(%rsp)
+    74f3: 48 89 44 24 50               	movq	%rax, 0x50(%rsp)
+    74f8: 48 8d 05 00 00 00 00         	leaq	(%rip), %rax            # 0x74ff <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xf7f>
+		00000000000074fb:  R_X86_64_PC32	P1::IQP::Camera::MemberErrorCallback(P1::Universal::UniversalError const&)-0x4
+    74ff: 48 89 44 24 60               	movq	%rax, 0x60(%rsp)
+    7504: 48 c7 44 24 68 00 00 00 00   	movq	$0x0, 0x68(%rsp)
+    750d: e8 00 00 00 00               	callq	0x7512 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xf92>
+		000000000000750e:  R_X86_64_PLT32	P1::Universal::FunctionPointer1<void, P1::Universal::UniversalError const&>::FunctionPointer1(P1::Universal::FunctionInterface1<void, P1::Universal::UniversalError const&> const&)-0x4
+    7512: 4c 89 ee                     	movq	%r13, %rsi
+    7515: 4c 89 e7                     	movq	%r12, %rdi
+    7518: e8 00 00 00 00               	callq	0x751d <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xf9d>
+		0000000000007519:  R_X86_64_PLT32	P1::Universal::FunctionPointer1<void, P1::Universal::UniversalError const&>::FunctionPointer1(P1::Universal::FunctionPointer1<void, P1::Universal::UniversalError const&> const&)-0x4
+    751d: 4c 89 e6                     	movq	%r12, %rsi
+    7520: 4c 89 ff                     	movq	%r15, %rdi
+    7523: ff d3                        	callq	*%rbx
+    7525: 48 8b 7c 24 50               	movq	0x50(%rsp), %rdi
+    752a: 48 c7 44 24 50 00 00 00 00   	movq	$0x0, 0x50(%rsp)
+    7533: 48 85 ff                     	testq	%rdi, %rdi
+    7536: 74 06                        	je	0x753e <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xfbe>
+    7538: 48 8b 07                     	movq	(%rdi), %rax
+    753b: ff 50 08                     	callq	*0x8(%rax)
+    753e: 48 8b 7c 24 30               	movq	0x30(%rsp), %rdi
+    7543: 48 c7 44 24 30 00 00 00 00   	movq	$0x0, 0x30(%rsp)
+    754c: 48 85 ff                     	testq	%rdi, %rdi
+    754f: 74 06                        	je	0x7557 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xfd7>
+    7551: 48 8b 07                     	movq	(%rdi), %rax
+    7554: ff 50 08                     	callq	*0x8(%rax)
+    7557: 48 8d 05 00 00 00 00         	leaq	(%rip), %rax            # 0x755e <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xfde>
+		000000000000755a:  R_X86_64_PC32	vtable for P1::Universal::MemberFunctionObject3<P1::IQP::Camera, void, unsigned char, void const*, unsigned int>+0xc
+    755e: 4c 89 e6                     	movq	%r12, %rsi
+    7561: 4c 89 ef                     	movq	%r13, %rdi
+    7564: 48 89 6c 24 58               	movq	%rbp, 0x58(%rsp)
+    7569: 48 89 44 24 50               	movq	%rax, 0x50(%rsp)
+    756e: 48 8d 05 00 00 00 00         	leaq	(%rip), %rax            # 0x7575 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0xff5>
+		0000000000007571:  R_X86_64_PC32	P1::IQP::Camera::DevelopmentMessageCallback(unsigned char, void const*, unsigned int)-0x4
+    7575: 4c 8b bd d8 04 00 00         	movq	0x4d8(%rbp), %r15
+    757c: 48 89 44 24 60               	movq	%rax, 0x60(%rsp)
+    7581: 48 c7 44 24 68 00 00 00 00   	movq	$0x0, 0x68(%rsp)
+    758a: e8 00 00 00 00               	callq	0x758f <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x100f>
+		000000000000758b:  R_X86_64_PLT32	P1::Universal::FunctionPointer3<void, unsigned char, void const*, unsigned int>::FunctionPointer3(P1::Universal::FunctionInterface3<void, unsigned char, void const*, unsigned int> const&)-0x4
+    758f: 4c 89 ee                     	movq	%r13, %rsi
+    7592: 4c 89 e7                     	movq	%r12, %rdi
+    7595: e8 00 00 00 00               	callq	0x759a <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x101a>
+		0000000000007596:  R_X86_64_PLT32	P1::Universal::FunctionPointer3<void, unsigned char, void const*, unsigned int>::FunctionPointer3(P1::Universal::FunctionPointer3<void, unsigned char, void const*, unsigned int> const&)-0x4
+    759a: 4c 89 e6                     	movq	%r12, %rsi
+    759d: 4c 89 ff                     	movq	%r15, %rdi
+    75a0: e8 00 00 00 00               	callq	0x75a5 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x1025>
+		00000000000075a1:  R_X86_64_PLT32	P1::IQP::DevelopmentAgent::SetMessageReceiver(P1::Universal::FunctionPointer<void (unsigned char, void const*, unsigned int)> const&)-0x4
+    75a5: 48 8b 7c 24 50               	movq	0x50(%rsp), %rdi
+    75aa: 48 c7 44 24 50 00 00 00 00   	movq	$0x0, 0x50(%rsp)
+    75b3: 48 85 ff                     	testq	%rdi, %rdi
+    75b6: 74 06                        	je	0x75be <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x103e>
+    75b8: 48 8b 07                     	movq	(%rdi), %rax
+    75bb: ff 50 08                     	callq	*0x8(%rax)
+    75be: 48 8b 7c 24 30               	movq	0x30(%rsp), %rdi
+    75c3: 48 c7 44 24 30 00 00 00 00   	movq	$0x0, 0x30(%rsp)
+    75cc: 48 85 ff                     	testq	%rdi, %rdi
+    75cf: 74 06                        	je	0x75d7 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x1057>
+    75d1: 48 8b 07                     	movq	(%rdi), %rax
+    75d4: ff 50 08                     	callq	*0x8(%rax)
+    75d7: 80 7c 24 28 00               	cmpb	$0x0, 0x28(%rsp)
+    75dc: 0f 85 90 01 00 00            	jne	0x7772 <P1::IQP::Camera::Open(P1::IQP::IAllocator<unsigned char>*)+0x11f2>

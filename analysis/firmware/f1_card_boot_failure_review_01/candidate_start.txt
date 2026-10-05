@@ -1,0 +1,26 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_user_elf_candidate_02/P1Linux_IQ4_F1_6.03.22.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000040b230 <.text>:
+  40b38c: d280001d     	mov	x29, #0x0               // =0
+  40b390: d280001e     	mov	x30, #0x0               // =0
+  40b394: aa0003e5     	mov	x5, x0
+  40b398: f94003e1     	ldr	x1, [sp]
+  40b39c: 910023e2     	add	x2, sp, #0x8
+  40b3a0: 910003e6     	mov	x6, sp
+  40b3a4: d2e00000     	movz	x0, #0x0, lsl #48
+  40b3a8: f2c00000     	movk	x0, #0x0, lsl #32
+  40b3ac: f2a00800     	movk	x0, #0x40, lsl #16
+  40b3b0: f2969d00     	movk	x0, #0xb4e8
+  40b3b4: d2e00003     	movz	x3, #0x0, lsl #48
+  40b3b8: f2c00003     	movk	x3, #0x0, lsl #32
+  40b3bc: f2a013c3     	movk	x3, #0x9e, lsl #16
+  40b3c0: f29e1603     	movk	x3, #0xf0b0
+  40b3c4: d2e00004     	movz	x4, #0x0, lsl #48
+  40b3c8: f2c00004     	movk	x4, #0x0, lsl #32
+  40b3cc: f2a013c4     	movk	x4, #0x9e, lsl #16
+  40b3d0: f29e2604     	movk	x4, #0xf130
+  40b3d4: 97fffd1b     	bl	0x40a840 <__libc_start_main@plt>
+  40b3d8: 97fffcd2     	bl	0x40a720 <abort@plt>

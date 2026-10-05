@@ -1,0 +1,781 @@
+{
+  "schema": "iq4_f1_normal10_independent_static_review",
+  "source_sha256": "5793c044638b7f88a8fabae547b2b56b5c6ce17ac02c1ff23551a9048ed68b1e",
+  "checked_reference_rows": 609,
+  "groups": {
+    "members": 30,
+    "frozen_refs": 524,
+    "review_artifacts": 55
+  },
+  "SO": {
+    "path": "analysis/firmware/f1_scaler_hook_install_build_10/libiq4_f1_normal_fit_hook_10_authenticated_candidate_load_only.so",
+    "bytes": 118048,
+    "sha256": "88417d06b6cb8ca2553ad1ae76a3444e4014829d75e6c1b66a3946fbd05d7c5c",
+    "DT_NEEDED": [
+      "libpthread.so.0",
+      "libc.so.6"
+    ],
+    "exports": [
+      "iq4_f1_display_observed_06",
+      "iq4_f1_display_paint_callback_06",
+      "iq4_f1_entry_binding_observed_10",
+      "iq4_f1_entry_observed",
+      "iq4_f1_geometry_observed_04",
+      "iq4_f1_hook_preparation_observed_10",
+      "iq4_f1_normal_fit_ingress_observed_10",
+      "iq4_f1_role_ctor_status",
+      "iq4_f1_stack_observed_05",
+      "pthread_mutex_unlock"
+    ],
+    "undefined": [
+      "_Unwind_Resume",
+      "_ZSt9terminatev",
+      "__cxa_begin_catch",
+      "__cxa_end_catch",
+      "__cxa_rethrow",
+      "__errno_location",
+      "__fxstat",
+      "__gxx_personality_v0",
+      "__isoc99_sscanf",
+      "__lxstat",
+      "close",
+      "getenv",
+      "getpeername",
+      "getpid",
+      "getsockopt",
+      "memchr",
+      "mmap",
+      "mprotect",
+      "open",
+      "pread",
+      "read",
+      "readlink",
+      "send",
+      "snprintf",
+      "strchr",
+      "strcmp",
+      "strlen",
+      "strrchr",
+      "strtoull",
+      "syscall",
+      "sysconf"
+    ],
+    "init_array_order": [
+      "_ZN12_GLOBAL__N_17prepareEv",
+      "_ZN12_GLOBAL__N_116role_constructorEv"
+    ],
+    "publication": {
+      "iq4_f1_normal_fit_ingress_observed_10": {
+        "info": 17,
+        "section": 22,
+        "va": 308024,
+        "size": 496,
+        "file_backed_RW_load": [
+          1,
+          6,
+          111408,
+          308016,
+          308016,
+          4648,
+          16468,
+          65536
+        ]
+      },
+      "iq4_f1_hook_preparation_observed_10": {
+        "info": 17,
+        "section": 22,
+        "va": 308520,
+        "size": 192,
+        "file_backed_RW_load": [
+          1,
+          6,
+          111408,
+          308016,
+          308016,
+          4648,
+          16468,
+          65536
+        ]
+      },
+      "iq4_f1_entry_binding_observed_10": {
+        "info": 17,
+        "section": 22,
+        "va": 308712,
+        "size": 104,
+        "file_backed_RW_load": [
+          1,
+          6,
+          111408,
+          308016,
+          308016,
+          4648,
+          16468,
+          65536
+        ]
+      }
+    },
+    "trampoline_initial": {
+      "info": 1,
+      "section": 22,
+      "va": 312656,
+      "size": 8
+    },
+    "trampoline_initial_value": 0,
+    "retained_functions": {
+      "prepare_once_at_live_ui": {
+        "name": "_ZN3iq42f16hook1023prepare_once_at_live_uiERNS0_8normal1010UI10BridgeERNS0_7entry016ModuleENS0_14native_overlay6MemoryE",
+        "info": 2,
+        "section": 13,
+        "va": 154524,
+        "size": 2572,
+        "body_sha256": "dbf814f4cdbcf3412d27a5a3c712a81ec1250a3e51157c8f00b6863725858f9c",
+        "direct_BL_calls": [
+          {
+            "at": 154572,
+            "target": 175120,
+            "names": []
+          },
+          {
+            "at": 154632,
+            "target": 174312,
+            "names": [
+              "lstat",
+              "__lstat"
+            ]
+          },
+          {
+            "at": 154720,
+            "target": 175200,
+            "names": []
+          },
+          {
+            "at": 154732,
+            "target": 175216,
+            "names": []
+          },
+          {
+            "at": 154924,
+            "target": 174312,
+            "names": [
+              "lstat",
+              "__lstat"
+            ]
+          },
+          {
+            "at": 155216,
+            "target": 157096,
+            "names": [
+              "_ZN3iq42f16hook1012_GLOBAL__N_19read_rootEPKcPvmb"
+            ]
+          },
+          {
+            "at": 155240,
+            "target": 157096,
+            "names": [
+              "_ZN3iq42f16hook1012_GLOBAL__N_19read_rootEPKcPvmb"
+            ]
+          },
+          {
+            "at": 155372,
+            "target": 174508,
+            "names": [
+              "memcpy"
+            ]
+          },
+          {
+            "at": 155400,
+            "target": 158396,
+            "names": []
+          },
+          {
+            "at": 155464,
+            "target": 174756,
+            "names": [
+              "memset"
+            ]
+          },
+          {
+            "at": 155476,
+            "target": 158396,
+            "names": []
+          },
+          {
+            "at": 155504,
+            "target": 174756,
+            "names": [
+              "memset"
+            ]
+          },
+          {
+            "at": 155528,
+            "target": 158396,
+            "names": []
+          },
+          {
+            "at": 155700,
+            "target": 175184,
+            "names": []
+          },
+          {
+            "at": 155936,
+            "target": 175232,
+            "names": []
+          },
+          {
+            "at": 155972,
+            "target": 157820,
+            "names": [
+              "_ZN3iq42f16hook1012_GLOBAL__N_15ticksERm"
+            ]
+          },
+          {
+            "at": 156016,
+            "target": 127948,
+            "names": [
+              "_ZNK3iq42f18normal108Renderer5on_uiEv"
+            ]
+          },
+          {
+            "at": 156232,
+            "target": 175248,
+            "names": []
+          },
+          {
+            "at": 156384,
+            "target": 174328,
+            "names": [
+              "__clear_cache"
+            ]
+          },
+          {
+            "at": 156408,
+            "target": 175264,
+            "names": []
+          },
+          {
+            "at": 157064,
+            "target": 158192,
+            "names": [
+              "_ZN3iq42f18normal1010UI10Bridge39bind_actual_provider_before_patch_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE"
+            ]
+          }
+        ]
+      },
+      "bind_actual_provider_before_patch_on_ui": {
+        "name": "_ZN3iq42f18normal1010UI10Bridge39bind_actual_provider_before_patch_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE",
+        "info": 2,
+        "section": 13,
+        "va": 158192,
+        "size": 204,
+        "body_sha256": "ec3fbbd472cd8ffb21f8d19da81a107f02e84b9a112a92928ae7d4a6f9244fe7",
+        "direct_BL_calls": [
+          {
+            "at": 158364,
+            "target": 139544,
+            "names": [
+              "_ZN3iq42f18normal1021ProvenProviderAdapter22configure_on_actual_uiENS0_14native_overlay6MemoryENS0_11native_ui026NativeERKNS1_22ActualProviderContractE"
+            ]
+          }
+        ]
+      },
+      "configure_on_actual_ui": {
+        "name": "_ZN3iq42f18normal1021ProvenProviderAdapter22configure_on_actual_uiENS0_14native_overlay6MemoryENS0_11native_ui026NativeERKNS1_22ActualProviderContractE",
+        "info": 2,
+        "section": 13,
+        "va": 139544,
+        "size": 1076,
+        "body_sha256": "1edd251181f5147fa275d30416de97402416f4124ce13d27efdcd44b8c0f8257",
+        "direct_BL_calls": [
+          {
+            "at": 139664,
+            "target": 174988,
+            "names": [
+              "$x",
+              "bcmp"
+            ]
+          },
+          {
+            "at": 140292,
+            "target": 174508,
+            "names": [
+              "memcpy"
+            ]
+          },
+          {
+            "at": 140548,
+            "target": 140620,
+            "names": [
+              "_ZNK3iq42f18normal1021ProvenProviderAdapter19exact_inline_getterEv"
+            ]
+          },
+          {
+            "at": 140604,
+            "target": 174508,
+            "names": [
+              "memcpy"
+            ]
+          }
+        ]
+      },
+      "after_original_boundary_on_ui": {
+        "name": "_ZN3iq42f18normal1010UI10Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry107BindingERKNS0_11native_ui0213BoundaryInputE",
+        "info": 2,
+        "section": 13,
+        "va": 142880,
+        "size": 400,
+        "body_sha256": "75c6bf0d5aa5905f80d0f9486777b5ec769ef50f316852e2052208bf680df610",
+        "direct_BL_calls": [
+          {
+            "at": 142948,
+            "target": 131032,
+            "names": [
+              "_ZN3iq42f18normal1031install_after_original_boundaryERNS1_8RendererERKNS0_11native_ui0213BoundaryInputERNS0_7entry016ModuleERNS0_7entry107BindingENS0_14native_overlay6MemoryE"
+            ]
+          },
+          {
+            "at": 142996,
+            "target": 143956,
+            "names": [
+              "_ZNK3iq42f17entry107Binding5on_uiEv"
+            ]
+          },
+          {
+            "at": 143008,
+            "target": 145284,
+            "names": [
+              "_ZNK3iq42f17entry107Binding12actual_ownerEv"
+            ]
+          },
+          {
+            "at": 143164,
+            "target": 132688,
+            "names": [
+              "_ZN3iq42f18normal1021ProvenProviderAdapter29bind_observation_on_actual_uiENS0_14native_overlay6MemoryENS0_11native_ui026NativeERKNS5_5OwnerE"
+            ]
+          },
+          {
+            "at": 143196,
+            "target": 142284,
+            "names": [
+              "_ZN3iq42f18normal1035install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE"
+            ]
+          },
+          {
+            "at": 143216,
+            "target": 132908,
+            "names": [
+              "_ZN3iq42f18normal1021ProvenProviderAdapter36sample_boundary_scalars_on_actual_uiEv"
+            ]
+          },
+          {
+            "at": 143232,
+            "target": 174508,
+            "names": [
+              "memcpy"
+            ]
+          },
+          {
+            "at": 143240,
+            "target": 142180,
+            "names": [
+              "_ZN3iq42f18normal1021publish_ingress_on_uiERKNS1_13IngressStatusE"
+            ]
+          }
+        ]
+      },
+      "Binding14native_current": {
+        "name": "_ZN3iq42f17entry107Binding14native_currentEPv",
+        "info": 2,
+        "section": 13,
+        "va": 149008,
+        "size": 64,
+        "body_sha256": "94464abd872a0c82feac58a463014d33d7cd4c143376a7a90b6c7d51acc6da0e",
+        "direct_BL_calls": [
+          {
+            "at": 149048,
+            "target": 175088,
+            "names": []
+          },
+          {
+            "at": 149052,
+            "target": 175152,
+            "names": []
+          },
+          {
+            "at": 149068,
+            "target": 84824,
+            "names": [
+              "__clang_call_terminate"
+            ]
+          }
+        ]
+      },
+      "install_after_original_boundary": {
+        "name": "_ZN3iq42f18normal1031install_after_original_boundaryERNS1_8RendererERKNS0_11native_ui0213BoundaryInputERNS0_7entry016ModuleERNS0_7entry107BindingENS0_14native_overlay6MemoryE",
+        "info": 2,
+        "section": 13,
+        "va": 131032,
+        "size": 636,
+        "body_sha256": "8b7ee328bbfba326648b8bc5ba184f5d706426aa18bf9841f5a334e41ca2a9ff",
+        "direct_BL_calls": [
+          {
+            "at": 131244,
+            "target": 116964,
+            "names": [
+              "_ZNK3iq42f17entry016Module8snapshotERNS1_11ObservationE"
+            ]
+          },
+          {
+            "at": 131340,
+            "target": 143956,
+            "names": [
+              "_ZNK3iq42f17entry107Binding5on_uiEv"
+            ]
+          },
+          {
+            "at": 131352,
+            "target": 145284,
+            "names": [
+              "_ZNK3iq42f17entry107Binding12actual_ownerEv"
+            ]
+          },
+          {
+            "at": 131440,
+            "target": 115976,
+            "names": [
+              "_ZN3iq42f17entry016Module13overlay_portsEv"
+            ]
+          },
+          {
+            "at": 131600,
+            "target": 128024,
+            "names": [
+              "_ZNK3iq42f18normal108Renderer7currentEv"
+            ]
+          },
+          {
+            "at": 131660,
+            "target": 128764,
+            "names": [
+              "_ZN3iq42f18normal108Renderer28install_selection_once_on_uiERNS0_7entry107BindingE"
+            ]
+          }
+        ]
+      },
+      "dispatch_scaler_return_on_ui": {
+        "name": "_ZN3iq42f18normal1021ProvenProviderAdapter28dispatch_scaler_return_on_uiERKNS1_13ScalerCaptureERNS1_8RendererE",
+        "info": 2,
+        "section": 13,
+        "va": 141812,
+        "size": 368,
+        "body_sha256": "35f3f88aa3b796b7d63ee2573c1c78cefc71b9b400c069eba9d8d42decd0f315",
+        "direct_BL_calls": [
+          {
+            "at": 141928,
+            "target": 140908,
+            "names": [
+              "_ZNK3iq42f18normal1021ProvenProviderAdapter17exact_patch_routeEv"
+            ]
+          },
+          {
+            "at": 142024,
+            "target": 134860,
+            "names": [
+              "_ZNK3iq42f18normal1021ProvenProviderAdapter6gatherERKNS1_13ScalerCaptureERNS1_10WriteFactsEb"
+            ]
+          },
+          {
+            "at": 142064,
+            "target": 174508,
+            "names": [
+              "memcpy"
+            ]
+          },
+          {
+            "at": 142080,
+            "target": 174508,
+            "names": [
+              "memcpy"
+            ]
+          },
+          {
+            "at": 142092,
+            "target": 129564,
+            "names": [
+              "_ZN3iq42f18normal108Renderer24after_native_write_on_uiERKNS1_10PaintTokenE"
+            ]
+          }
+        ]
+      },
+      "after_native_write_on_ui": {
+        "name": "_ZN3iq42f18normal108Renderer24after_native_write_on_uiERKNS1_10PaintTokenE",
+        "info": 2,
+        "section": 13,
+        "va": 129564,
+        "size": 1092,
+        "body_sha256": "324c5e9edd74abc97ddb2b8f7fb93842066f0d0bec8f641fa5360474ff0a15b3",
+        "direct_BL_calls": [
+          {
+            "at": 129604,
+            "target": 128024,
+            "names": [
+              "_ZNK3iq42f18normal108Renderer7currentEv"
+            ]
+          },
+          {
+            "at": 129704,
+            "target": 129152,
+            "names": [
+              "_ZNK3iq42f18normal108Renderer7surfaceERKNS1_10WriteFactsE"
+            ]
+          },
+          {
+            "at": 129720,
+            "target": 126956,
+            "names": [
+              "_ZN3iq42f18normal1014normal_mappingERKNS1_8GeometryERNS_7display11ViewMappingE"
+            ]
+          },
+          {
+            "at": 129776,
+            "target": 127732,
+            "names": [
+              "_ZN3iq42f18normal1012_GLOBAL__N_18containsENS0_14native_overlay9PixelRectES4_"
+            ]
+          },
+          {
+            "at": 129800,
+            "target": 127732,
+            "names": [
+              "_ZN3iq42f18normal1012_GLOBAL__N_18containsENS0_14native_overlay9PixelRectES4_"
+            ]
+          },
+          {
+            "at": 129820,
+            "target": 127644,
+            "names": [
+              "_ZN3iq42f18normal1012_GLOBAL__N_18positiveENS0_14native_overlay9PixelRectE"
+            ]
+          },
+          {
+            "at": 129844,
+            "target": 127732,
+            "names": [
+              "_ZN3iq42f18normal1012_GLOBAL__N_18containsENS0_14native_overlay9PixelRectES4_"
+            ]
+          },
+          {
+            "at": 129876,
+            "target": 127732,
+            "names": [
+              "_ZN3iq42f18normal1012_GLOBAL__N_18containsENS0_14native_overlay9PixelRectES4_"
+            ]
+          },
+          {
+            "at": 129960,
+            "target": 127732,
+            "names": [
+              "_ZN3iq42f18normal1012_GLOBAL__N_18containsENS0_14native_overlay9PixelRectES4_"
+            ]
+          },
+          {
+            "at": 130016,
+            "target": 131668,
+            "names": [
+              "_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE"
+            ]
+          },
+          {
+            "at": 130068,
+            "target": 130656,
+            "names": [
+              "_ZN3iq42f18normal1012_GLOBAL__N_15uniteENS0_14native_overlay9PixelRectES4_RS4_"
+            ]
+          },
+          {
+            "at": 130096,
+            "target": 127732,
+            "names": [
+              "_ZN3iq42f18normal1012_GLOBAL__N_18containsENS0_14native_overlay9PixelRectES4_"
+            ]
+          },
+          {
+            "at": 130120,
+            "target": 127732,
+            "names": [
+              "_ZN3iq42f18normal1012_GLOBAL__N_18containsENS0_14native_overlay9PixelRectES4_"
+            ]
+          },
+          {
+            "at": 130232,
+            "target": 127732,
+            "names": [
+              "_ZN3iq42f18normal1012_GLOBAL__N_18containsENS0_14native_overlay9PixelRectES4_"
+            ]
+          },
+          {
+            "at": 130592,
+            "target": 153700,
+            "names": [
+              "_ZN3iq42f17entry107Binding25observe_stock_paint_on_uiERKNS0_11native_ui0212PaintReceiptE"
+            ]
+          },
+          {
+            "at": 130624,
+            "target": 175088,
+            "names": []
+          },
+          {
+            "at": 130640,
+            "target": 175152,
+            "names": []
+          },
+          {
+            "at": 130652,
+            "target": 84824,
+            "names": [
+              "__clang_call_terminate"
+            ]
+          }
+        ]
+      },
+      "fixed_normal_plan": {
+        "name": "_ZN3iq42f18normal1017fixed_normal_planERKNS1_8GeometryENS_8MaskModeERNS0_14native_overlay9FixedPlanE",
+        "info": 2,
+        "section": 13,
+        "va": 131668,
+        "size": 1020,
+        "body_sha256": "0aa891cb317df32b22b641ea90125a510b658861d0de6e9af1d6b892dae7dedc",
+        "direct_BL_calls": [
+          {
+            "at": 131764,
+            "target": 126956,
+            "names": [
+              "_ZN3iq42f18normal1014normal_mappingERKNS1_8GeometryERNS_7display11ViewMappingE"
+            ]
+          }
+        ]
+      },
+      "iq4_f1_scaler_bridge_10": {
+        "name": "iq4_f1_scaler_bridge_10",
+        "info": 2,
+        "section": 13,
+        "va": 168504,
+        "size": 356,
+        "body_sha256": "64caa1c4a01ddfb21ed5e0182c8f9316d7a4fc3d980d2ca8580ac11cb459aaf3",
+        "direct_BL_calls": [
+          {
+            "at": 168716,
+            "target": 142468,
+            "names": [
+              "iq4_f1_scaler_after_10"
+            ]
+          }
+        ]
+      },
+      "iq4_f1_scaler_after_10": {
+        "name": "iq4_f1_scaler_after_10",
+        "info": 2,
+        "section": 13,
+        "va": 142468,
+        "size": 412,
+        "body_sha256": "89826ab1cc3af8bd1a9488abbe704e08901e318ace7882b73a5fc4a83ea95ca6",
+        "direct_BL_calls": [
+          {
+            "at": 142492,
+            "target": 175120,
+            "names": []
+          },
+          {
+            "at": 142724,
+            "target": 141812,
+            "names": [
+              "_ZN3iq42f18normal1021ProvenProviderAdapter28dispatch_scaler_return_on_uiERKNS1_13ScalerCaptureERNS1_8RendererE"
+            ]
+          },
+          {
+            "at": 142736,
+            "target": 134556,
+            "names": [
+              "_ZN3iq42f18normal1021ProvenProviderAdapter27observe_scaler_return_on_uiERKNS1_13ScalerCaptureE"
+            ]
+          },
+          {
+            "at": 142780,
+            "target": 174508,
+            "names": [
+              "memcpy"
+            ]
+          }
+        ]
+      }
+    },
+    "original_unlock": {
+      "va": 163592,
+      "bytes": 2668,
+      "body_sha256": "c507e2f2a7e8ae9f05136e5d9f65c1a210f1b3576062604c13cc59ceb3bbcd30",
+      "original_BLR_count": 1,
+      "original_BLR_at": 163688,
+      "errno_stores": [
+        163680,
+        165296
+      ],
+      "boundary_call": {
+        "at": 165108,
+        "target": 142880,
+        "names": [
+          "_ZN3iq42f18normal1010UI10Bridge29after_original_boundary_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERNS0_7entry107BindingERKNS0_11native_ui0213BoundaryInputE"
+        ]
+      },
+      "preparation_call": {
+        "at": 165136,
+        "target": 154524,
+        "names": [
+          "_ZN3iq42f16hook1023prepare_once_at_live_uiERNS0_8normal1010UI10BridgeERNS0_7entry016ModuleENS0_14native_overlay6MemoryE"
+        ]
+      }
+    },
+    "prepare_configure_call": {
+      "at": 157064,
+      "target": 158192,
+      "names": [
+        "_ZN3iq42f18normal1010UI10Bridge39bind_actual_provider_before_patch_on_uiENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS1_22ActualProviderContractE"
+      ]
+    },
+    "prepare_release_store": {
+      "at": 157076,
+      "word": 3365928756
+    },
+    "prepare_explicit_barriers": [
+      {
+        "at": 156388,
+        "word": 3573758879
+      },
+      {
+        "at": 156392,
+        "word": 3573759967
+      }
+    ]
+  },
+  "source_persistent_ports_3_paths_present": true,
+  "source_original_observation_cap_preserved": true,
+  "source_slot_before_Prepared_and_external_readback_present": true,
+  "new_state_propagation_gap": {
+    "binding_Hold_rechecked_by_captured_current_thunk": false,
+    "locations": [
+      "entry_binding_10.hpp:38",
+      "entry_binding_10.cpp:88",
+      "normal_fit.cpp:39",
+      "provider.cpp:115"
+    ],
+    "scope": "source conditional path, not an observed camera failure"
+  },
+  "target_loaded": false,
+  "mask_accepted": false,
+  "new_or_old_test_or_build_executed": false,
+  "SDK_or_Windows_or_network_used": false,
+  "ELF_parser": {
+    "path": "analysis/firmware/f1_entry_observe_independent_review_08/collect.py",
+    "sha256": "703a092b1b7da043262d930ca802f4f10771d9e804852dd07fd38468a7d2b58c"
+  }
+}

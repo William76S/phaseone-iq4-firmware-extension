@@ -1,0 +1,31 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006ee080 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_>:
+  713918: f94017e0     	ldr	x0, [sp, #0x28]
+  71391c: 3903001f     	strb	wzr, [x0, #0xc0]
+  713920: f94017e0     	ldr	x0, [sp, #0x28]
+  713924: 91010000     	add	x0, x0, #0x40
+  713928: 52800021     	mov	w1, #0x1                // =1
+  71392c: 97fff2b1     	bl	0x7103f0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x22370>
+  713930: f90037e0     	str	x0, [sp, #0x68]
+  713934: f94037e0     	ldr	x0, [sp, #0x68]
+  713938: 940002d6     	bl	0x714490 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x26410>
+  71393c: 12001c00     	and	w0, w0, #0xff
+  713940: 52000000     	eor	w0, w0, #0x1
+  713944: 12001c00     	and	w0, w0, #0xff
+  713948: 7100001f     	cmp	w0, #0x0
+  71394c: 54fffa80     	b.eq	0x71389c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x2581c>
+  713950: f90037ff     	str	xzr, [sp, #0x68]
+  713954: 17ffffd2     	b	0x71389c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x2581c>
+  713958: f94037e0     	ldr	x0, [sp, #0x68]
+  71395c: 97fff3c2     	bl	0x710864 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x227e4>
+  713960: f94037f3     	ldr	x19, [sp, #0x68]
+  713964: 9100e3e0     	add	x0, sp, #0x38
+  713968: 97feace7     	bl	0x6bed04 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1e944>
+  71396c: 910123e0     	add	x0, sp, #0x48
+  713970: 9400032d     	bl	0x714624 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x265a4>
+  713974: aa1303e0     	mov	x0, x19

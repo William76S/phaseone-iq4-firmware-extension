@@ -1,0 +1,27 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  743bf4: b94387e0     	ldr	w0, [sp, #0x384]
+  743bf8: 11000401     	add	w1, w0, #0x1
+  743bfc: b90387e1     	str	w1, [sp, #0x384]
+  743c00: 93407c00     	sxtw	x0, w0
+  743c04: f9401be1     	ldr	x1, [sp, #0x30]
+  743c08: 8b000020     	add	x0, x1, x0
+  743c0c: 3900001f     	strb	wzr, [x0]
+  743c10: 90002780     	adrp	x0, 0xc33000
+  743c14: 9101c001     	add	x1, x0, #0x70
+  743c18: f9401fe0     	ldr	x0, [sp, #0x38]
+  743c1c: 94000223     	bl	0x7444a8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2a77c>
+  743c20: b001c2e0     	adrp	x0, 0x3fa0000 <_ZNSt5ctypeIcE2idE+0x303ced8>
+  743c24: 9139a000     	add	x0, x0, #0xe68
+  743c28: f9400001     	ldr	x1, [x0]
+  743c2c: b001c2e0     	adrp	x0, 0x3fa0000 <_ZNSt5ctypeIcE2idE+0x303ced8>
+  743c30: 9139a000     	add	x0, x0, #0xe68
+  743c34: f9400000     	ldr	x0, [x0]
+  743c38: b9540821     	ldr	w1, [x1, #0x1408]
+  743c3c: b9140401     	str	w1, [x0, #0x1404]
+  743c40: 140001a4     	b	0x7442d0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2a5a4>

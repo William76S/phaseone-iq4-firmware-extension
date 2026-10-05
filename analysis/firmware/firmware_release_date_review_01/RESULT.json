@@ -1,0 +1,75 @@
+{
+  "schema": "iq4_firmware_release_date_review_01",
+  "review_scope": "exact-original-static-only",
+  "target_executed": false,
+  "camera_access": false,
+  "sdk_executed": false,
+  "network_access": false,
+  "frozen_sources_modified": false,
+  "original_user": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "ui_date_source": "installed_inner_manifest.xml release@release_date",
+  "inner_date_attribute_va": "0xc3de90",
+  "active_manifest_pointer_offset": "0x53978",
+  "active_release_year_month_day_offsets": [
+    "0x484",
+    "0x488",
+    "0x48c"
+  ],
+  "installed_parser_body_offset": "0x8",
+  "record_body_date_offset": "0x47c",
+  "getter_va": "0x752368",
+  "ui_call_va": "0x504628",
+  "getter_buffer_offset": "0x539b4",
+  "format": "%02u.%02u.%04u",
+  "requested_release_date": "2026-10-05",
+  "expected_formatted_date": "05.10.2026",
+  "expected_date_is_static_under_successful_inner_manifest_install_and_user_selection": true,
+  "outer_date_alone_updates_this_ui_row": false,
+  "rtc_or_image_header_timestamp_patch_required_for_closed_ui_chain": false,
+  "actual_install_or_display_measured": false,
+  "validations": {
+    "original_sha_verified": true,
+    "elf64_aarch64_verified": true,
+    "load_address_mapping_unique": true,
+    "exact_collection_repeated_identically": true,
+    "code_windows": 12,
+    "strings": 6,
+    "fixed_file_records": 2
+  },
+  "read_only_references": [
+    {
+      "path": "tools/firmware/user_only_package_stock_wrapper_03/package.py",
+      "bytes": 4933,
+      "sha256": "4c43c2fd0683d23254c733fb0d927c505c401c3be3aaea3bbe720f9b532c9c31"
+    },
+    {
+      "path": "tools/firmware/user_only_package_stock_wrapper_03/README.md",
+      "bytes": 779,
+      "sha256": "e63d7362885bdc12e41ed80c4d07cebf34a6cabf7eb4cbc050ffe28760bb111b"
+    },
+    {
+      "path": "tools/firmware/user_only_package_stock_wrapper_03/SOURCE_SHA256.json",
+      "bytes": 1379,
+      "sha256": "64483c20a4e6d5d96c0cc735cce935a23a11ecc7b7b026ec568c19021d78b571"
+    },
+    {
+      "path": "analysis/firmware/FIRMWARE_PACKAGE_ACCEPTANCE_STATIC_01.md",
+      "bytes": 11111,
+      "sha256": "4af0c3710541c4fb6674adc77d0087cedfa7a92618fe625ca85b4cb3aabc6dc3"
+    },
+    {
+      "path": "analysis/firmware/firmware_package_acceptance_static_01/evidence/manifest.json",
+      "bytes": 10686,
+      "sha256": "d884f9c0cb47bc296c1baf5d410b73033e9fb1081d50e1e5b8f6754d96a7dff6"
+    },
+    {
+      "path": "analysis/firmware/firmware_package_acceptance_static_01/evidence/exact_bytes.json",
+      "bytes": 150611,
+      "sha256": "23e7da3f52a948b9af17540b4208a35ab80ef8d486e78e87b5fa99a8bcaf8468"
+    }
+  ]
+}

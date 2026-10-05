@@ -1,0 +1,101 @@
+{
+  "schema": "iq4_f1_display13_domain_host_review_01",
+  "camera_access": false,
+  "native_executed": false,
+  "cases": [
+    {
+      "name": "baseline_off",
+      "mode": 0,
+      "expected_reason": 0,
+      "actual_reason": 0,
+      "band_count": 0
+    },
+    {
+      "name": "baseline_equal_domains",
+      "mode": 1,
+      "expected_reason": 1,
+      "actual_reason": 1,
+      "band_count": 2
+    },
+    {
+      "name": "baseline_equal_domains",
+      "mode": 2,
+      "expected_reason": 1,
+      "actual_reason": 1,
+      "band_count": 2
+    },
+    {
+      "name": "baseline_equal_domains",
+      "mode": 3,
+      "expected_reason": 1,
+      "actual_reason": 1,
+      "band_count": 2
+    },
+    {
+      "name": "baseline_equal_domains",
+      "mode": 4,
+      "expected_reason": 1,
+      "actual_reason": 1,
+      "band_count": 2
+    },
+    {
+      "name": "config_domain_only_differs",
+      "mode": 1,
+      "expected_reason": 4,
+      "actual_reason": 4,
+      "band_count": 0
+    },
+    {
+      "name": "roi_domain_only_differs",
+      "mode": 1,
+      "expected_reason": 4,
+      "actual_reason": 4,
+      "band_count": 0
+    },
+    {
+      "name": "full_config_roi_scale2_full_actual_rgb_projection",
+      "mode": 1,
+      "expected_reason": 4,
+      "actual_reason": 4,
+      "band_count": 0
+    },
+    {
+      "name": "full_config_roi_scale2_full_actual_rgb_projection",
+      "mode": 2,
+      "expected_reason": 4,
+      "actual_reason": 4,
+      "band_count": 0
+    },
+    {
+      "name": "full_config_roi_scale2_full_actual_rgb_projection",
+      "mode": 3,
+      "expected_reason": 4,
+      "actual_reason": 4,
+      "band_count": 0
+    },
+    {
+      "name": "full_config_roi_scale2_full_actual_rgb_projection",
+      "mode": 4,
+      "expected_reason": 4,
+      "actual_reason": 4,
+      "band_count": 0
+    }
+  ],
+  "case_count": 11,
+  "passed": 11,
+  "hypothetical_config": [
+    1280,
+    960
+  ],
+  "actual_image_fixture": [
+    640,
+    480
+  ],
+  "native_projection_fixture": [
+    80,
+    0,
+    640,
+    480
+  ],
+  "actual_camera_field_values_observed": false
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "iq4_root_inspector_reporting_failure_correction_01",
+  "operation": "verify_user.py --build actual_final02",
+  "actual_error": "AttributeError: 'int' object has no attribute 'report_name'",
+  "cause": "Parser namespace a was shadowed by a per-hook file-offset integer before writing the optional report name",
+  "fixed": "capture report_name before the hook loop",
+  "same_actual_User_before_and_after": {
+    "path": "analysis/firmware/f1_f3_f4_user_integration_build_01_final02/P1Linux_RatioMask_JPEG_LVRecording_6.03.30.bin",
+    "bytes": 13221320,
+    "sha256": "912e9e28cd685693a6481d3d4b63afa376a75dd93a58b519f69134bfaef2d398"
+  },
+  "production_User_changed": false,
+  "actual_rerun_exit": 0,
+  "actual_16_branches_and_63_objects_passed": true,
+  "target_executed": false
+}

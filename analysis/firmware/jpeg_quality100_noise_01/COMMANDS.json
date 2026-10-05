@@ -1,0 +1,39 @@
+[
+  {
+    "argv": [
+      "/usr/bin/xcrun",
+      "--show-sdk-path"
+    ],
+    "exit": 0,
+    "stdout": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "src/codec/stream_rgb32.c",
+      "tests/codec/quality100/test_quality100.c",
+      "evidence/codec/build/libjpeg8/.libs/libjpeg.a",
+      "-o",
+      "analysis/firmware/jpeg_quality100_noise_01/quality100"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "analysis/firmware/jpeg_quality100_noise_01/quality100"
+    ],
+    "exit": 0,
+    "stdout": "{\"width\":14204,\"height\":10652,\"quality\":100,\"all_quantizers\":1,\"jpeg_bytes\":299235877,\"fits_previous_256MiB\":false,\"decoded_rows\":10652,\"input\":\"deterministic independent RGB noise\",\"hardware\":false}\n{\"width\":10653,\"height\":7989,\"quality\":100,\"all_quantizers\":1,\"jpeg_bytes\":168369737,\"fits_previous_256MiB\":true,\"decoded_rows\":7989,\"input\":\"deterministic independent RGB noise\",\"hardware\":false}\n{\"width\":7102,\"height\":5326,\"quality\":100,\"all_quantizers\":1,\"jpeg_bytes\":74811797,\"fits_previous_256MiB\":true,\"decoded_rows\":5326,\"input\":\"deterministic independent RGB noise\",\"hardware\":false}\n",
+    "stderr": ""
+  }
+]

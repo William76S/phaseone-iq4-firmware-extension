@@ -1,0 +1,22 @@
+Exact User SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution.
+  70bcc0: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  70bcc4: 910003fd     	mov	x29, sp
+  70bcc8: f9000fe0     	str	x0, [sp, #0x18]
+  70bccc: f9400fe0     	ldr	x0, [sp, #0x18]
+  70bcd0: f9400000     	ldr	x0, [x0]
+  70bcd4: 9100a000     	add	x0, x0, #0x28
+  70bcd8: f9400001     	ldr	x1, [x0]
+  70bcdc: f9400fe0     	ldr	x0, [sp, #0x18]
+  70bce0: d63f0020     	blr	x1
+  70bce4: 12001c00     	and	w0, w0, #0xff
+  70bce8: 7100001f     	cmp	w0, #0x0
+  70bcec: 54000060     	b.eq	0x70bcf8
+  70bcf0: d2800000     	mov	x0, #0x0
+  70bcf4: 14000005     	b	0x70bd08
+  70bcf8: f9400fe0     	ldr	x0, [sp, #0x18]
+  70bcfc: 91002000     	add	x0, x0, #0x8
+  70bd00: 97f551a5     	bl	0x460394
+  70bd04: d503201f     	nop
+  70bd08: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  70bd0c: d65f03c0     	ret

@@ -1,0 +1,178 @@
+{
+  "schema": "iq4_f3_menu06_two_object_overlay",
+  "replacements": [
+    {
+      "replace_only": {
+        "path": "analysis/firmware/f3_capture_menu_build_05/menu.o",
+        "bytes": 28360,
+        "sha256": "c32653443af58ce0c51d8fd53e4cc1c42cfa6d8e5d54e6babb9b2533b9e74091"
+      },
+      "replacement": {
+        "path": "analysis/firmware/f3_capture_menu_build_06/menu.o",
+        "bytes": 31408,
+        "sha256": "0b8059982b93330922b5af8fcb1d9dacc0bc1598353fe4a4fe473dc2b40410e9",
+        "type": "ET_REL",
+        "machine": 183,
+        "alloc_sections": [
+          {
+            "name": ".text",
+            "type": 1,
+            "flags": 6,
+            "bytes": 10912
+          },
+          {
+            "name": ".rodata.cst8",
+            "type": 1,
+            "flags": 18,
+            "bytes": 16
+          },
+          {
+            "name": ".bss",
+            "type": 8,
+            "flags": 3,
+            "bytes": 588
+          },
+          {
+            "name": ".data.rel.ro",
+            "type": 1,
+            "flags": 3,
+            "bytes": 288
+          },
+          {
+            "name": ".rodata",
+            "type": 1,
+            "flags": 2,
+            "bytes": 600
+          },
+          {
+            "name": ".rodata.str1.1",
+            "type": 1,
+            "flags": 50,
+            "bytes": 339
+          },
+          {
+            "name": ".eh_frame",
+            "type": 1,
+            "flags": 2,
+            "bytes": 408
+          }
+        ],
+        "relocation_types": [
+          257,
+          261,
+          275,
+          277,
+          278,
+          282,
+          283,
+          285,
+          286,
+          311,
+          312
+        ],
+        "undefined_symbols": [
+          "f3_capture_backend_capabilities_03",
+          "f3_coordinator_manual_prepare_06",
+          "f3_coordinator_ready_06",
+          "f3_coordinator_view_06",
+          "f3_coordinator_worker_run_06",
+          "iq4_activity_snapshot_01",
+          "iq4_f3_executor_begin_on_ui_01",
+          "iq4_f3_executor_cancel_on_ui_01",
+          "iq4_f3_executor_finish_on_ui_01",
+          "iq4_f3_executor_hold_01",
+          "iq4_f3_executor_selection_on_ui_01",
+          "iq4_f3_executor_submit_on_ui_01",
+          "iq4_f3_executor_view_on_ui_01",
+          "iq4_f3_mode_set_for_card_on_ui_06",
+          "iq4_f3_quality_set_on_ui_03",
+          "iq4_f3_scale_set_on_ui_01",
+          "iq4_f3_settings_snapshot_06",
+          "iq4_f4_menu_append_03",
+          "iq4_f4_menu_ctor_03",
+          "iq4_f4_menu_new_03",
+          "iq4_f4_native_current_02",
+          "iq4_f4_native_event_notify_02",
+          "iq4_native_self_read_01",
+          "memcmp",
+          "memcpy"
+        ],
+        "executed": false
+      }
+    },
+    {
+      "replace_only": {
+        "path": "analysis/firmware/f3_capture_menu_build_04/policy.o",
+        "bytes": 3872,
+        "sha256": "d272ce9dc423401c763a0c2c93e6d88cc795afacd9a6e02962c91f1b2146cb97"
+      },
+      "replacement": {
+        "path": "analysis/firmware/f3_capture_menu_build_06/policy.o",
+        "bytes": 4688,
+        "sha256": "5ee382efcf39bf8d415917c5409f348e60cadf5fe08c29f87c17f07431661240",
+        "type": "ET_REL",
+        "machine": 183,
+        "alloc_sections": [
+          {
+            "name": ".text",
+            "type": 1,
+            "flags": 6,
+            "bytes": 1472
+          },
+          {
+            "name": ".bss",
+            "type": 8,
+            "flags": 3,
+            "bytes": 4
+          },
+          {
+            "name": ".eh_frame",
+            "type": 1,
+            "flags": 2,
+            "bytes": 304
+          }
+        ],
+        "relocation_types": [
+          261,
+          275,
+          277,
+          283,
+          285
+        ],
+        "undefined_symbols": [
+          "iq4_export_geometry"
+        ],
+        "executed": false
+      }
+    }
+  ],
+  "wrapper04_unchanged": {
+    "path": "analysis/firmware/f3_capture_menu_build_04/wrapper.o",
+    "bytes": 1120,
+    "sha256": "d68a9c9980a80601469ad5c65ed1bf7f580fdeabe58e8747dfe85ff7c02e2385"
+  },
+  "new_BL": [],
+  "additional_aliases": [],
+  "additional_objects": [],
+  "required_actual_consumers": [
+    "f3_saved_raw_capture_03:single snapshot06 at actual acquisition and actual native fanout",
+    "f3_save_coordinator_08:original _06 C ABI and complete per-card file lifecycle",
+    "f3_native_executor_03:serialized actual native IFM worker and shared group lifetime"
+  ],
+  "new_external_function": "f3_capture_backend_capabilities_03",
+  "capability_bits": {
+    "1": "SD installed/codepins valid, not card presence",
+    "2": "XQD installed/codepins valid, not card presence"
+  },
+  "legacy_04_snapshot_SD_only": true,
+  "boot_settings": {
+    "SD_mode": 0,
+    "XQD_mode": 0,
+    "size": 0,
+    "quality": 95
+  },
+  "manual_existing_RAW_always_retained": true,
+  "actual_capture_tested": false,
+  "target_executed": false,
+  "camera_access": false
+}

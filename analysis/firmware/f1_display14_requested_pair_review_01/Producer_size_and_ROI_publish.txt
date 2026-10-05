@@ -1,0 +1,27 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no camera access or target execution.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  787838: b940df04     	ldr	w4, [x24, #0xdc]
+  78783c: 91024283     	add	x3, x20, #0x90
+  787840: b9405ee5     	ldr	w5, [x23, #0x5c]
+  787844: 91023282     	add	x2, x20, #0x8c
+  787848: 91002884     	add	x4, x4, #0xa
+  78784c: b9406fe6     	ldr	w6, [sp, #0x6c]
+  787850: 6b1a00bf     	cmp	w5, w26
+  787854: 91022281     	add	x1, x20, #0x88
+  787858: d37df084     	lsl	x4, x4, #3
+  78785c: 1a9ad0ba     	csel	w26, w5, w26, le
+  787860: 8b040305     	add	x5, x24, x4
+  787864: aa1303e0     	mov	x0, x19
+  787868: b8246b06     	str	w6, [x24, x4]
+  78786c: b90004ba     	str	w26, [x5, #0x4]
+  787870: b940df04     	ldr	w4, [x24, #0xdc]
+  787874: 3cc182e0     	ldur	q0, [x23, #0x18]
+  787878: 8b040484     	add	x4, x4, x4, lsl #1
+  78787c: 8b040f06     	add	x6, x24, x4, lsl #3
+  787880: 3c8780c0     	stur	q0, [x6, #0x78]

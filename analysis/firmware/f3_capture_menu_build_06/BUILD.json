@@ -1,0 +1,935 @@
+{
+  "schema": "iq4_f3_dual_card_menu06_build",
+  "source_inputs": [
+    {
+      "path": "tools/firmware/f3_capture_menu_06/backend.h",
+      "bytes": 355,
+      "sha256": "76acb08f549daa5d24266df285427f16cc0752a9cd897a897c5a0d067047501e"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_06/build.py",
+      "bytes": 5889,
+      "sha256": "4859dce5eed8de6044054d540e5fd1bef5d8eb2b180ae70a51e6c06b72290bd4"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_06/policy.c",
+      "bytes": 5159,
+      "sha256": "4ef5f1e98b58b1fc160ce75ed912868b43d4da9ccec1c8c5937c3282b8bcbc4a"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_06/policy.h",
+      "bytes": 1002,
+      "sha256": "c2d576c92289cb0695b137403ca53bd626e6bc9372fdc3f81b9163b7fce5bda9"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_06/runtime.c",
+      "bytes": 11933,
+      "sha256": "9588556da36d816cd38a043ada96b38275a57a4d1de929f3c6a6c3d7efc92c24"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_06/test_menu.c",
+      "bytes": 12071,
+      "sha256": "16d463fbe07c06fc76472af05f4f967adf9494f626662ada879683d9efd548a2"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_06/test_policy.c",
+      "bytes": 3944,
+      "sha256": "ffb9c5f2e942e6a08c3c7ffbb6471f8ccb2e2243805b1003cd7eaa15eebe7541"
+    }
+  ],
+  "frozen_inputs": [
+    {
+      "path": "tools/firmware/f3_capture_menu_05/SOURCE_SHA256.json",
+      "bytes": 3280,
+      "sha256": "84867595656aa7ba40c1015eae0a76d7afb6d1f89325a1327a5bdff0c5ecbbf5"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_05/LINK_OVERLAY.json",
+      "bytes": 2943,
+      "sha256": "171ff0537f9ceb646490d66b02b0be89882859e14c756daf9bbafd46d782b3a8"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_05/runtime.c",
+      "bytes": 10858,
+      "sha256": "5f93970df16d6f8eb2047e0e0d3f409bb6d34b01e6fb625f8fd13192ff547b72"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/SOURCE_SHA256.json",
+      "bytes": 5584,
+      "sha256": "ace424331f55fd434a8b528992b9b9a8e44b574899d7459f6554370bd8e95989"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/LINK_INPUT.json",
+      "bytes": 1370,
+      "sha256": "ea74ed190555331afe77a77b3337dbf70d67a3019419a2385e140155a5ec7bd1"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/policy.c",
+      "bytes": 4376,
+      "sha256": "dc4218ac400d08c4641011dca5d1fe80a18bc3ebb583701f90c3c015589e6a42"
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "src/codec/bounded_jpeg.h",
+      "bytes": 2418,
+      "sha256": "1be26d8743655280bd507e86f973810b32df568a811f619976f6a3e1adf8a18e"
+    },
+    {
+      "path": "src/codec/export_geometry.h",
+      "bytes": 906,
+      "sha256": "917b058ef2b572f8f37eef13fcfd680ef2c801f786dabf910772fb9287b33759"
+    },
+    {
+      "path": "src/codec/vendor/libjpeg-turbo-1.5.3/jconfig.h",
+      "bytes": 677,
+      "sha256": "8d818d1693a7feaac054fe5c0ac9b1167d96372a5f7045b3440bfa3789947154"
+    },
+    {
+      "path": "src/codec/vendor/libjpeg-turbo-1.5.3/jmorecfg.h",
+      "bytes": 15049,
+      "sha256": "8e75f16e1baa8b0797485d5b5ee6a0a4b6b48be47f0217488e857c62fb380351"
+    },
+    {
+      "path": "src/codec/vendor/libjpeg-turbo-1.5.3/jpeglib.h",
+      "bytes": 49875,
+      "sha256": "e63b27b40fb779d5c65a206ce81a256a4e08f173bcc29890134dad4fbdf3dea0"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/code_pins.h",
+      "bytes": 3434,
+      "sha256": "6efedcdccce5426904917520324f14e6ffb57df30fe8993c452e0c4823107d31"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/menu.h",
+      "bytes": 469,
+      "sha256": "e578c769be91fc66dbc2560a66ae680dcc03fe7ac61aa65ba7b9ab994095373c"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_04/policy.h",
+      "bytes": 2319,
+      "sha256": "0b650b8efd69f04c343a3a2d876cd95b8ab386062905d1ad55cf49add8d7f666"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_06/backend.h",
+      "bytes": 355,
+      "sha256": "76acb08f549daa5d24266df285427f16cc0752a9cd897a897c5a0d067047501e"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_06/policy.c",
+      "bytes": 5159,
+      "sha256": "4ef5f1e98b58b1fc160ce75ed912868b43d4da9ccec1c8c5937c3282b8bcbc4a"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_06/policy.h",
+      "bytes": 1002,
+      "sha256": "c2d576c92289cb0695b137403ca53bd626e6bc9372fdc3f81b9163b7fce5bda9"
+    },
+    {
+      "path": "tools/firmware/f3_capture_menu_06/runtime.c",
+      "bytes": 11933,
+      "sha256": "9588556da36d816cd38a043ada96b38275a57a4d1de929f3c6a6c3d7efc92c24"
+    },
+    {
+      "path": "tools/firmware/f3_native_card_bridge_05/card.h",
+      "bytes": 2763,
+      "sha256": "5864d4a16b227cfb702deef77b8972e2b0725276ec4a1175dc8adc578683e8af"
+    },
+    {
+      "path": "tools/firmware/f3_native_card_bridge_06/card.h",
+      "bytes": 968,
+      "sha256": "8bb905a3d2e62d0eddeca7fcccecbb927967db6289028ad57d107b4373dde1db"
+    },
+    {
+      "path": "tools/firmware/f3_native_executor_01/executor.h",
+      "bytes": 4120,
+      "sha256": "4cb79a7fe3ad4db66eb0cc879fdbcdcd3da3f2415536e0b5fd2bc6969cece8a2"
+    },
+    {
+      "path": "tools/firmware/f3_native_fs_adapter_04/fs.h",
+      "bytes": 3339,
+      "sha256": "1e96f6ba0dedb9af9ddb6c32709fe44d2ef7ff6a0325f5943a46329c9a3c4813"
+    },
+    {
+      "path": "tools/firmware/f3_save_coordinator_06/coordinator.h",
+      "bytes": 2731,
+      "sha256": "af33decbdfd77723611ca4cbe5aa84e40394fce8e3c271e9eacf75317c5aab51"
+    },
+    {
+      "path": "tools/firmware/f3_save_transaction_01/transaction.h",
+      "bytes": 2980,
+      "sha256": "576c5bb2337dcb237a057e17385d85966bad0359bd9182b193a69af2edcab881"
+    },
+    {
+      "path": "tools/firmware/f3_saved_raw_capture_01/capture.h",
+      "bytes": 3344,
+      "sha256": "93b678d01289b4c20eae97432e293b2d71f32a2811d31d5ba482aed9d0b46111"
+    },
+    {
+      "path": "tools/firmware/f3_stream_transaction_02/sha256.h",
+      "bytes": 2835,
+      "sha256": "8283433dc000e6224636117c0285bf7a632a758bccc79b6c40a5f289515a1aa1"
+    },
+    {
+      "path": "tools/firmware/f3_stream_transaction_02/stream.h",
+      "bytes": 2817,
+      "sha256": "26ec74ffaf719d1761965b1ce77f27440a33f44bbfa6d1beee578f4d37c62a0b"
+    },
+    {
+      "path": "tools/firmware/f4_native_menu_03/native_calls.h",
+      "bytes": 490,
+      "sha256": "91094929f93e4d0db4fe305e3037c09962a3adc3a4f28811b3ea65d9f7b30093"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/native_calls.h",
+      "bytes": 959,
+      "sha256": "88f593540be70ff1878e938204432b5359dccfcd333a33f64aca3b3187245054"
+    },
+    {
+      "path": "tools/firmware/native_activity_01/activity.h",
+      "bytes": 1423,
+      "sha256": "697241a13a5e8e333c6df4d1cd56f525af738d099d45a2cb7d637f11a1e297c1"
+    },
+    {
+      "path": "tools/firmware/native_runtime_01/self_read.h",
+      "bytes": 436,
+      "sha256": "c63a805a5b698bf1795be51dffdaf2315f77ab3bb07f4dcd828d7a0418b12f77"
+    }
+  ],
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_06/policy.o",
+      "bytes": 4688,
+      "sha256": "5ee382efcf39bf8d415917c5409f348e60cadf5fe08c29f87c17f07431661240",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 1472
+        },
+        {
+          "name": ".bss",
+          "type": 8,
+          "flags": 3,
+          "bytes": 4
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 304
+        }
+      ],
+      "relocation_types": [
+        261,
+        275,
+        277,
+        283,
+        285
+      ],
+      "undefined_symbols": [
+        "iq4_export_geometry"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_06/menu.o",
+      "bytes": 31408,
+      "sha256": "0b8059982b93330922b5af8fcb1d9dacc0bc1598353fe4a4fe473dc2b40410e9",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 10912
+        },
+        {
+          "name": ".rodata.cst8",
+          "type": 1,
+          "flags": 18,
+          "bytes": 16
+        },
+        {
+          "name": ".bss",
+          "type": 8,
+          "flags": 3,
+          "bytes": 588
+        },
+        {
+          "name": ".data.rel.ro",
+          "type": 1,
+          "flags": 3,
+          "bytes": 288
+        },
+        {
+          "name": ".rodata",
+          "type": 1,
+          "flags": 2,
+          "bytes": 600
+        },
+        {
+          "name": ".rodata.str1.1",
+          "type": 1,
+          "flags": 50,
+          "bytes": 339
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 408
+        }
+      ],
+      "relocation_types": [
+        257,
+        261,
+        275,
+        277,
+        278,
+        282,
+        283,
+        285,
+        286,
+        311,
+        312
+      ],
+      "undefined_symbols": [
+        "f3_capture_backend_capabilities_03",
+        "f3_coordinator_manual_prepare_06",
+        "f3_coordinator_ready_06",
+        "f3_coordinator_view_06",
+        "f3_coordinator_worker_run_06",
+        "iq4_activity_snapshot_01",
+        "iq4_f3_executor_begin_on_ui_01",
+        "iq4_f3_executor_cancel_on_ui_01",
+        "iq4_f3_executor_finish_on_ui_01",
+        "iq4_f3_executor_hold_01",
+        "iq4_f3_executor_selection_on_ui_01",
+        "iq4_f3_executor_submit_on_ui_01",
+        "iq4_f3_executor_view_on_ui_01",
+        "iq4_f3_mode_set_for_card_on_ui_06",
+        "iq4_f3_quality_set_on_ui_03",
+        "iq4_f3_scale_set_on_ui_01",
+        "iq4_f3_settings_snapshot_06",
+        "iq4_f4_menu_append_03",
+        "iq4_f4_menu_ctor_03",
+        "iq4_f4_menu_new_03",
+        "iq4_f4_native_current_02",
+        "iq4_f4_native_event_notify_02",
+        "iq4_native_self_read_01",
+        "memcmp",
+        "memcpy"
+      ],
+      "executed": false
+    }
+  ],
+  "tests": [
+    {
+      "variant": "normal",
+      "kind": "policy",
+      "result": {
+        "policy_groups": 59,
+        "atomic_4writer_concurrency": true,
+        "snapshot_is_native_ownership": false,
+        "target_executed": false
+      }
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "1"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "2"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "3"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "4"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "5"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "6"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "7"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "8"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "9"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "10"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "11"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "12"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "13"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "14"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "15"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "16"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "17"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "18"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "19"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "20"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "21"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "22"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "23"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "--append-failure"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "--sd-cap-only"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "--xqd-cap-only"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "--bad-cap"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "--submit-unknown"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "--submit-reject-after-prepare"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "--cancel-unknown"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "--notify-unknown"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "--begin-unknown"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "--wrong-ui-action"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "normal",
+      "kind": "menu",
+      "args": [
+        "--completed-callback-fence"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "policy",
+      "result": {
+        "policy_groups": 59,
+        "atomic_4writer_concurrency": true,
+        "snapshot_is_native_ownership": false,
+        "target_executed": false
+      }
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "1"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "2"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "3"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "4"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "5"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "6"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "7"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "8"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "9"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "10"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "11"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "12"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "13"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "14"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "15"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "16"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "17"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "18"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "19"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "20"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "21"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "22"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "23"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "--append-failure"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "--sd-cap-only"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "--xqd-cap-only"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "--bad-cap"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "--submit-unknown"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "--submit-reject-after-prepare"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "--cancel-unknown"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "--notify-unknown"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "--begin-unknown"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "--wrong-ui-action"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    },
+    {
+      "variant": "asan_ubsan",
+      "kind": "menu",
+      "args": [
+        "--completed-callback-fence"
+      ],
+      "stdout": "PASS native dual-card menu ABI/actual capability/immutable request/Hold fixture\n"
+    }
+  ],
+  "menu_runs_each": 35,
+  "unchanged_native_helpers": [
+    "rd",
+    "word",
+    "pins",
+    "on_ui",
+    "put",
+    "text",
+    "number",
+    "idx",
+    "present",
+    "hold",
+    "refresh",
+    "retire_finished",
+    "settings_idle",
+    "status",
+    "construct"
+  ],
+  "sole_atomic_state": true,
+  "capture_capability_is_actual_backend": true,
+  "source_or_card_ownership_from_ui": false,
+  "new_BL": [],
+  "additional_aliases": [],
+  "camera_access": false,
+  "target_executed": false,
+  "sdk_loaded": false
+}

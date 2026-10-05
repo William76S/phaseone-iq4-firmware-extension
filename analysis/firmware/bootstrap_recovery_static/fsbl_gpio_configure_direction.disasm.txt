@@ -1,0 +1,44 @@
+STATIC ONLY; synthetic section view, not a target executable.
+SOURCE BOOT SHA256 7a3a3d6f62c61e7d627a9f55d844d74be9111b26eb7a7fa42f5bdd7be7dabe9e
+analysis/firmware/bootstrap_recovery_static/fsbl_view.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000fffc0000 <.text>:
+fffc36dc: aa0003e6     	mov	x6, x0
+fffc36e0: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+fffc36e4: 2a0203e7     	mov	w7, w2
+fffc36e8: 910003fd     	mov	x29, sp
+fffc36ec: b94008c2     	ldr	w2, [x6, #0x8]
+fffc36f0: 2a0103e0     	mov	w0, w1
+fffc36f4: 3200e3e1     	mov	w1, #0x11111111         // =286331153
+fffc36f8: 6b01005f     	cmp	w2, w1
+fffc36fc: 540000c1     	b.ne	0xfffc3714 <.text+0x3714>
+fffc3700: b94024c1     	ldr	w1, [x6, #0x24]
+fffc3704: 6b00003f     	cmp	w1, w0
+fffc3708: 540000e8     	b.hi	0xfffc3724 <.text+0x3724>
+fffc370c: 528035a1     	mov	w1, #0x1ad              // =429
+fffc3710: 14000002     	b	0xfffc3718 <.text+0x3718>
+fffc3714: 52803581     	mov	w1, #0x1ac              // =428
+fffc3718: f0000060     	adrp	x0, 0xfffd2000 <.text+0x12000>
+fffc371c: 913c6800     	add	x0, x0, #0xf1a
+fffc3720: 97fffa46     	bl	0xfffc2038 <.text+0x2038>
+fffc3724: 91007fe2     	add	x2, sp, #0x1f
+fffc3728: 91007be1     	add	x1, sp, #0x1e
+fffc372c: 97fff64a     	bl	0xfffc1054 <.text+0x1054>
+fffc3730: b94004c1     	ldr	w1, [x6, #0x4]
+fffc3734: 39407be0     	ldrb	w0, [sp, #0x1e]
+fffc3738: 52800022     	mov	w2, #0x1                // =1
+fffc373c: 710000ff     	cmp	w7, #0x0
+fffc3740: 531a6400     	lsl	w0, w0, #6
+fffc3744: 11081000     	add	w0, w0, #0x204
+fffc3748: 0b010000     	add	w0, w0, w1
+fffc374c: 39407fe1     	ldrb	w1, [sp, #0x1f]
+fffc3750: b9400003     	ldr	w3, [x0]
+fffc3754: 1ac12041     	lsl	w1, w2, w1
+fffc3758: 2a030022     	orr	w2, w1, w3
+fffc375c: 0a210061     	bic	w1, w3, w1
+fffc3760: 1a820021     	csel	w1, w1, w2, eq
+fffc3764: b9000001     	str	w1, [x0]
+fffc3768: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+fffc376c: d65f03c0     	ret

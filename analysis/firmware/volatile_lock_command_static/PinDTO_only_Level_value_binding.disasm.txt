@@ -1,0 +1,30 @@
+STATIC ONLY; linked VAs; exported nearest labels are not recovered private names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:
+  63de0c: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  63de10: 910003fd     	mov	x29, sp
+  63de14: f9000fe0     	str	x0, [sp, #0x18]
+  63de18: f9000be1     	str	x1, [sp, #0x10]
+  63de1c: b0002d20     	adrp	x0, 0xbe2000
+  63de20: 9109a001     	add	x1, x0, #0x268
+  63de24: f9400fe0     	ldr	x0, [sp, #0x18]
+  63de28: f9000001     	str	x1, [x0]
+  63de2c: f9400fe0     	ldr	x0, [sp, #0x18]
+  63de30: 91002006     	add	x6, x0, #0x8
+  63de34: f9400be0     	ldr	x0, [sp, #0x10]
+  63de38: 910a8001     	add	x1, x0, #0x2a0
+  63de3c: 52800005     	mov	w5, #0x0                // =0
+  63de40: 52800084     	mov	w4, #0x4                // =4
+  63de44: d00048a0     	adrp	x0, 0xf53000
+  63de48: 913be003     	add	x3, x0, #0xef8
+  63de4c: 52805de2     	mov	w2, #0x2ef              // =751
+  63de50: aa0603e0     	mov	x0, x6
+  63de54: 97fec494     	bl	0x5ef0a4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0xf5ff4>
+  63de58: d503201f     	nop
+  63de5c: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  63de60: d65f03c0     	ret
+  63de64: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!

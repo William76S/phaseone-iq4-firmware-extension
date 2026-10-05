@@ -1,0 +1,52 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; private names and recovered types are provisional.
+  70c9bc: d10043ff     	sub	sp, sp, #0x10
+  70c9c0: f90007e0     	str	x0, [sp, #0x8]
+  70c9c4: f94007e0     	ldr	x0, [sp, #0x8]
+  70c9c8: f9400400     	ldr	x0, [x0, #0x8]
+  70c9cc: f100001f     	cmp	x0, #0x0
+  70c9d0: 54000280     	b.eq	0x70ca20
+  70c9d4: f94007e0     	ldr	x0, [sp, #0x8]
+  70c9d8: f9400400     	ldr	x0, [x0, #0x8]
+  70c9dc: f9400800     	ldr	x0, [x0, #0x10]
+  70c9e0: f94007e1     	ldr	x1, [sp, #0x8]
+  70c9e4: eb00003f     	cmp	x1, x0
+  70c9e8: 540001c1     	b.ne	0x70ca20
+  70c9ec: f94007e0     	ldr	x0, [sp, #0x8]
+  70c9f0: f9401000     	ldr	x0, [x0, #0x20]
+  70c9f4: f100001f     	cmp	x0, #0x0
+  70c9f8: 540000e0     	b.eq	0x70ca14
+  70c9fc: f94007e0     	ldr	x0, [sp, #0x8]
+  70ca00: f9400400     	ldr	x0, [x0, #0x8]
+  70ca04: f94007e1     	ldr	x1, [sp, #0x8]
+  70ca08: f9401021     	ldr	x1, [x1, #0x20]
+  70ca0c: f9000801     	str	x1, [x0, #0x10]
+  70ca10: 14000004     	b	0x70ca20
+  70ca14: f94007e0     	ldr	x0, [sp, #0x8]
+  70ca18: f9400400     	ldr	x0, [x0, #0x8]
+  70ca1c: f900081f     	str	xzr, [x0, #0x10]
+  70ca20: f94007e0     	ldr	x0, [sp, #0x8]
+  70ca24: f9400c00     	ldr	x0, [x0, #0x18]
+  70ca28: f100001f     	cmp	x0, #0x0
+  70ca2c: 540000c0     	b.eq	0x70ca44
+  70ca30: f94007e0     	ldr	x0, [sp, #0x8]
+  70ca34: f9400c00     	ldr	x0, [x0, #0x18]
+  70ca38: f94007e1     	ldr	x1, [sp, #0x8]
+  70ca3c: f9401021     	ldr	x1, [x1, #0x20]
+  70ca40: f9001001     	str	x1, [x0, #0x20]
+  70ca44: f94007e0     	ldr	x0, [sp, #0x8]
+  70ca48: f9401000     	ldr	x0, [x0, #0x20]
+  70ca4c: f100001f     	cmp	x0, #0x0
+  70ca50: 540000c0     	b.eq	0x70ca68
+  70ca54: f94007e0     	ldr	x0, [sp, #0x8]
+  70ca58: f9401000     	ldr	x0, [x0, #0x20]
+  70ca5c: f94007e1     	ldr	x1, [sp, #0x8]
+  70ca60: f9400c21     	ldr	x1, [x1, #0x18]
+  70ca64: f9000c01     	str	x1, [x0, #0x18]
+  70ca68: f94007e0     	ldr	x0, [sp, #0x8]
+  70ca6c: f9000c1f     	str	xzr, [x0, #0x18]
+  70ca70: f94007e0     	ldr	x0, [sp, #0x8]
+  70ca74: f900101f     	str	xzr, [x0, #0x20]
+  70ca78: d503201f     	nop
+  70ca7c: 910043ff     	add	sp, sp, #0x10
+  70ca80: d65f03c0     	ret

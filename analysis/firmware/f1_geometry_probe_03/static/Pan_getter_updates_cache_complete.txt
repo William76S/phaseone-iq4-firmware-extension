@@ -1,0 +1,26 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual owner/lease/fresh/mapping proof.
+  4c4a54: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  4c4a58: 910003fd     	mov	x29, sp
+  4c4a5c: f9000bf3     	str	x19, [sp, #0x10]
+  4c4a60: f90017e0     	str	x0, [sp, #0x28]
+  4c4a64: f94017e0     	ldr	x0, [sp, #0x28]
+  4c4a68: 91008000     	add	x0, x0, #0x20
+  4c4a6c: 9400014f     	bl	0x4c4fa8
+  4c4a70: 12001c00     	and	w0, w0, #0xff
+  4c4a74: 7100001f     	cmp	w0, #0x0
+  4c4a78: 54000140     	b.eq	0x4c4aa0
+  4c4a7c: f94017e0     	ldr	x0, [sp, #0x28]
+  4c4a80: 91008000     	add	x0, x0, #0x20
+  4c4a84: 94000114     	bl	0x4c4ed4
+  4c4a88: f9001fe0     	str	x0, [sp, #0x38]
+  4c4a8c: f94017f3     	ldr	x19, [sp, #0x28]
+  4c4a90: f9401fe1     	ldr	x1, [sp, #0x38]
+  4c4a94: f94017e0     	ldr	x0, [sp, #0x28]
+  4c4a98: 94000094     	bl	0x4c4ce8
+  4c4a9c: f9000660     	str	x0, [x19, #0x8]
+  4c4aa0: f94017e0     	ldr	x0, [sp, #0x28]
+  4c4aa4: f9400400     	ldr	x0, [x0, #0x8]
+  4c4aa8: f9400bf3     	ldr	x19, [sp, #0x10]
+  4c4aac: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  4c4ab0: d65f03c0     	ret

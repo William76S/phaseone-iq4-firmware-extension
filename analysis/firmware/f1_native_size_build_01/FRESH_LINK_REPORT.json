@@ -1,0 +1,1169 @@
+{
+  "schema": "iq4_f1_user_elf_append_02",
+  "baseline_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "baseline_bytes": 11874544,
+  "candidate_sha256": "d985ee07c4376f69c99004002357649ea57e364a8cddb5da4ec036ecafff5d31",
+  "candidate_bytes": 12265920,
+  "app_version": [
+    6,
+    3,
+    26
+  ],
+  "objects": [
+    {
+      "label": "build/reproduction_01/menu.o",
+      "bytes": 18664,
+      "sha256": "52cc28649f09950e4a755d7b80fe231cfae7ae8eeda80cea813f9a5f8eb97819"
+    },
+    {
+      "label": "build/reproduction_01/menu_wrapper.o",
+      "bytes": 1152,
+      "sha256": "8cada919cc6c5563920b4c72ca3c842d22bb9fab4b0e7ad2657c8baf8f3da3c8"
+    },
+    {
+      "label": "build/reproduction_01/display.o",
+      "bytes": 6752,
+      "sha256": "52632d1c53390993ae598db7349544398a4becd31c5d31bdcb37f12fbf77e92b"
+    },
+    {
+      "label": "build/reproduction_01/display_wrapper.o",
+      "bytes": 1296,
+      "sha256": "39dbaf2f0817210075e93525170debdd9eea6448fc0ce7872e5b0998ae485122"
+    }
+  ],
+  "hooks": [
+    {
+      "va": 5365196,
+      "file_offset": 1170892,
+      "old_bytes": "9b64fd97",
+      "old_target": 4681784,
+      "new_target": 69478984,
+      "new_bytes": "1f93f494",
+      "symbol": "iq4_f1_lv_draw_wrapper_15"
+    },
+    {
+      "va": 5171800,
+      "file_offset": 977496,
+      "old_bytes": "43320094",
+      "old_target": 5223268,
+      "new_target": 69474792,
+      "new_bytes": "e44bf594",
+      "symbol": "iq4_f1_native_menu_wrapper_03"
+    },
+    {
+      "va": 5171072,
+      "file_offset": 976768,
+      "old_bytes": "f9320094",
+      "old_target": 5223268,
+      "new_target": 69474792,
+      "new_bytes": "9a4cf594",
+      "symbol": "iq4_f1_native_menu_wrapper_03"
+    }
+  ],
+  "initializer_va": 69468548,
+  "original_init_entries_preserved": 340,
+  "new_init_entries": 1,
+  "actual_CSU_startup": {
+    "start": 69796712,
+    "end": 69799440,
+    "count": 341,
+    "main_startup_init_callback_va": 10416304,
+    "provided_by_executable_entry": true,
+    "dynamic_array_matches_actual_CSU": true,
+    "target_executed": false
+  },
+  "CSU_bound_instruction_changes": [
+    {
+      "va": 10416316,
+      "file_offset": 6222012,
+      "old_bytes": "942a00f0",
+      "new_bytes": "14c501b0",
+      "register": 20,
+      "pair_address": 69799440
+    },
+    {
+      "va": 10416320,
+      "file_offset": 6222016,
+      "old_bytes": "94022191",
+      "new_bytes": "94423891",
+      "register": 20,
+      "pair_address": 69799440
+    },
+    {
+      "va": 10416328,
+      "file_offset": 6222024,
+      "old_bytes": "952a00d0",
+      "new_bytes": "15c501b0",
+      "register": 21,
+      "pair_address": 69796712
+    },
+    {
+      "va": 10416332,
+      "file_offset": 6222028,
+      "old_bytes": "b5823691",
+      "new_bytes": "b5a20d91",
+      "register": 21,
+      "pair_address": 69796712
+    }
+  ],
+  "DT_INIT_unchanged": 4234128,
+  "dynamic_changes": [
+    {
+      "tag": 25,
+      "file_offset": 11742784,
+      "old": 15998368,
+      "new": 69796712
+    },
+    {
+      "tag": 27,
+      "file_offset": 11742800,
+      "old": 2720,
+      "new": 2728
+    }
+  ],
+  "phdr_file_offset": 11736920,
+  "AT_PHDR_expected_va": 15931224,
+  "program_headers": [
+    [
+      6,
+      4,
+      11736920,
+      15931224,
+      15931224,
+      672,
+      672,
+      8
+    ],
+    [
+      3,
+      4,
+      624,
+      4194928,
+      4194928,
+      27,
+      27,
+      1
+    ],
+    [
+      1,
+      5,
+      0,
+      4194304,
+      4194304,
+      11737592,
+      11737592,
+      65536
+    ],
+    [
+      1,
+      6,
+      11738528,
+      15998368,
+      15998368,
+      133716,
+      53459488,
+      65536
+    ],
+    [
+      2,
+      6,
+      11742600,
+      16002440,
+      16002440,
+      592,
+      592,
+      8
+    ],
+    [
+      4,
+      4,
+      652,
+      4194956,
+      4194956,
+      68,
+      68,
+      4
+    ],
+    [
+      7,
+      4,
+      11738528,
+      15998368,
+      15998368,
+      0,
+      8,
+      8
+    ],
+    [
+      1685382480,
+      4,
+      11938784,
+      69479392,
+      69479392,
+      259844,
+      259844,
+      4
+    ],
+    [
+      1685382481,
+      6,
+      0,
+      0,
+      0,
+      0,
+      0,
+      16
+    ],
+    [
+      1685382482,
+      4,
+      11738528,
+      15998368,
+      15998368,
+      4704,
+      4704,
+      1
+    ],
+    [
+      1,
+      5,
+      11927552,
+      69468160,
+      69468160,
+      271372,
+      271372,
+      65536
+    ],
+    [
+      1,
+      6,
+      12255232,
+      69795840,
+      69795840,
+      3600,
+      3600,
+      65536
+    ]
+  ],
+  "original_EH_entries_preserved": 32455,
+  "own_EH_entries": 24,
+  "new_EH_entries": 32479,
+  "own_fde_pairs": [
+    [
+      69468160,
+      69474388
+    ],
+    [
+      69468472,
+      69474428
+    ],
+    [
+      69468484,
+      69474448
+    ],
+    [
+      69468548,
+      69474468
+    ],
+    [
+      69468560,
+      69474488
+    ],
+    [
+      69469524,
+      69474536
+    ],
+    [
+      69469732,
+      69474556
+    ],
+    [
+      69469896,
+      69474576
+    ],
+    [
+      69469996,
+      69474596
+    ],
+    [
+      69470140,
+      69474628
+    ],
+    [
+      69472520,
+      69474660
+    ],
+    [
+      69472604,
+      69474688
+    ],
+    [
+      69473184,
+      69474708
+    ],
+    [
+      69473316,
+      69474728
+    ],
+    [
+      69473604,
+      69474748
+    ],
+    [
+      69473780,
+      69474768
+    ],
+    [
+      69474792,
+      69474932
+    ],
+    [
+      69474976,
+      69478812
+    ],
+    [
+      69476976,
+      69478868
+    ],
+    [
+      69477092,
+      69478888
+    ],
+    [
+      69477348,
+      69478908
+    ],
+    [
+      69477504,
+      69478928
+    ],
+    [
+      69478496,
+      69478964
+    ],
+    [
+      69478984,
+      69479348
+    ]
+  ],
+  "original_import_bindings": {
+    "iq4_stock_menu_set_01": {
+      "va": 5223268,
+      "kind": "native_SetMenu",
+      "proof_va": 5223268,
+      "proof_bytes": "fd7bbea9fd030091e00f00f9e10b00f9"
+    }
+  },
+  "new_dynamic_import": null,
+  "own_symbols": {
+    "iq4_f1_report_15": 69468160,
+    "iq4_f1_mode_get_01": 69468472,
+    "iq4_f1_mode_set_on_ui_01": 69468484,
+    "iq4_f1_menu_initialize_03": 69468548,
+    "iq4_f1_before_native_menu_03": 69468560,
+    "iq4_f1_native_menu_wrapper_03": 69474792,
+    "iq4_f1_plan_15": 69474976,
+    "iq4_f1_after_stock_draw_15": 69477504,
+    "iq4_f1_lv_draw_wrapper_15": 69478984
+  },
+  "changed_original_spans": [
+    {
+      "offset": 32,
+      "bytes": 3,
+      "original_hex": "400000",
+      "candidate_hex": "5817b3"
+    },
+    {
+      "offset": 40,
+      "bytes": 3,
+      "original_hex": "3029b5",
+      "candidate_hex": "8015bb"
+    },
+    {
+      "offset": 56,
+      "bytes": 1,
+      "original_hex": "0a",
+      "candidate_hex": "0c"
+    },
+    {
+      "offset": 60,
+      "bytes": 1,
+      "original_hex": "1f",
+      "candidate_hex": "51"
+    },
+    {
+      "offset": 976768,
+      "bytes": 3,
+      "original_hex": "f93200",
+      "candidate_hex": "9a4cf5"
+    },
+    {
+      "offset": 977496,
+      "bytes": 3,
+      "original_hex": "433200",
+      "candidate_hex": "e44bf5"
+    },
+    {
+      "offset": 1170892,
+      "bytes": 4,
+      "original_hex": "9b64fd97",
+      "candidate_hex": "1f93f494"
+    },
+    {
+      "offset": 6222012,
+      "bytes": 4,
+      "original_hex": "942a00f0",
+      "candidate_hex": "14c501b0"
+    },
+    {
+      "offset": 6222017,
+      "bytes": 2,
+      "original_hex": "0221",
+      "candidate_hex": "4238"
+    },
+    {
+      "offset": 6222024,
+      "bytes": 4,
+      "original_hex": "952a00d0",
+      "candidate_hex": "15c501b0"
+    },
+    {
+      "offset": 6222029,
+      "bytes": 2,
+      "original_hex": "8236",
+      "candidate_hex": "a20d"
+    },
+    {
+      "offset": 10332290,
+      "bytes": 1,
+      "original_hex": "15",
+      "candidate_hex": "1a"
+    },
+    {
+      "offset": 11736920,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "06"
+    },
+    {
+      "offset": 11736924,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11736928,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "5817b3"
+    },
+    {
+      "offset": 11736936,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "5817f3"
+    },
+    {
+      "offset": 11736944,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "5817f3"
+    },
+    {
+      "offset": 11736952,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "a002"
+    },
+    {
+      "offset": 11736960,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "a002"
+    },
+    {
+      "offset": 11736968,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "08"
+    },
+    {
+      "offset": 11736976,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "03"
+    },
+    {
+      "offset": 11736980,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11736984,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "7002"
+    },
+    {
+      "offset": 11736992,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "700240"
+    },
+    {
+      "offset": 11737000,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "700240"
+    },
+    {
+      "offset": 11737008,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "1b"
+    },
+    {
+      "offset": 11737016,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "1b"
+    },
+    {
+      "offset": 11737024,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737032,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737036,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "05"
+    },
+    {
+      "offset": 11737050,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "40"
+    },
+    {
+      "offset": 11737058,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "40"
+    },
+    {
+      "offset": 11737064,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "f819b3"
+    },
+    {
+      "offset": 11737072,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "f819b3"
+    },
+    {
+      "offset": 11737082,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737088,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737092,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "06"
+    },
+    {
+      "offset": 11737096,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01db3"
+    },
+    {
+      "offset": 11737104,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01df4"
+    },
+    {
+      "offset": 11737112,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01df4"
+    },
+    {
+      "offset": 11737120,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "540a02"
+    },
+    {
+      "offset": 11737128,
+      "bytes": 4,
+      "original_hex": "00000000",
+      "candidate_hex": "20ba2f03"
+    },
+    {
+      "offset": 11737138,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737144,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "02"
+    },
+    {
+      "offset": 11737148,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "06"
+    },
+    {
+      "offset": 11737152,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "882db3"
+    },
+    {
+      "offset": 11737160,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "882df4"
+    },
+    {
+      "offset": 11737168,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "882df4"
+    },
+    {
+      "offset": 11737176,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "5002"
+    },
+    {
+      "offset": 11737184,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "5002"
+    },
+    {
+      "offset": 11737192,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "08"
+    },
+    {
+      "offset": 11737200,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11737204,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11737208,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "8c02"
+    },
+    {
+      "offset": 11737216,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "8c0240"
+    },
+    {
+      "offset": 11737224,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "8c0240"
+    },
+    {
+      "offset": 11737232,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "44"
+    },
+    {
+      "offset": 11737240,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "44"
+    },
+    {
+      "offset": 11737248,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11737256,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "07"
+    },
+    {
+      "offset": 11737260,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11737264,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01db3"
+    },
+    {
+      "offset": 11737272,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01df4"
+    },
+    {
+      "offset": 11737280,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01df4"
+    },
+    {
+      "offset": 11737296,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "08"
+    },
+    {
+      "offset": 11737304,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "08"
+    },
+    {
+      "offset": 11737312,
+      "bytes": 5,
+      "original_hex": "0000000000",
+      "candidate_hex": "50e5746404"
+    },
+    {
+      "offset": 11737320,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "e02bb6"
+    },
+    {
+      "offset": 11737328,
+      "bytes": 4,
+      "original_hex": "00000000",
+      "candidate_hex": "e02b2404"
+    },
+    {
+      "offset": 11737336,
+      "bytes": 4,
+      "original_hex": "00000000",
+      "candidate_hex": "e02b2404"
+    },
+    {
+      "offset": 11737344,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "04f703"
+    },
+    {
+      "offset": 11737352,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "04f703"
+    },
+    {
+      "offset": 11737360,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "04"
+    },
+    {
+      "offset": 11737368,
+      "bytes": 5,
+      "original_hex": "0000000000",
+      "candidate_hex": "51e5746406"
+    },
+    {
+      "offset": 11737416,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "10"
+    },
+    {
+      "offset": 11737424,
+      "bytes": 5,
+      "original_hex": "0000000000",
+      "candidate_hex": "52e5746404"
+    },
+    {
+      "offset": 11737432,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01db3"
+    },
+    {
+      "offset": 11737440,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01df4"
+    },
+    {
+      "offset": 11737448,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "a01df4"
+    },
+    {
+      "offset": 11737456,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "6012"
+    },
+    {
+      "offset": 11737464,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "6012"
+    },
+    {
+      "offset": 11737472,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737480,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737484,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "05"
+    },
+    {
+      "offset": 11737490,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "b6"
+    },
+    {
+      "offset": 11737498,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "2404"
+    },
+    {
+      "offset": 11737506,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "2404"
+    },
+    {
+      "offset": 11737512,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "0c2404"
+    },
+    {
+      "offset": 11737520,
+      "bytes": 3,
+      "original_hex": "000000",
+      "candidate_hex": "0c2404"
+    },
+    {
+      "offset": 11737530,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737536,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11737540,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "06"
+    },
+    {
+      "offset": 11737546,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "bb"
+    },
+    {
+      "offset": 11737554,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "2904"
+    },
+    {
+      "offset": 11737562,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "2904"
+    },
+    {
+      "offset": 11737568,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "100e"
+    },
+    {
+      "offset": 11737576,
+      "bytes": 2,
+      "original_hex": "0000",
+      "candidate_hex": "100e"
+    },
+    {
+      "offset": 11737586,
+      "bytes": 1,
+      "original_hex": "00",
+      "candidate_hex": "01"
+    },
+    {
+      "offset": 11742784,
+      "bytes": 4,
+      "original_hex": "a01df400",
+      "candidate_hex": "68032904"
+    },
+    {
+      "offset": 11742800,
+      "bytes": 1,
+      "original_hex": "a0",
+      "candidate_hex": "a8"
+    }
+  ],
+  "allowed_original_spans": [
+    [
+      0,
+      64,
+      "ELF header"
+    ],
+    [
+      11736920,
+      672,
+      "relocated active PHDR"
+    ],
+    [
+      10332288,
+      4,
+      "explicit appversion"
+    ],
+    [
+      1170892,
+      4,
+      "exact BL iq4_f1_lv_draw_wrapper_15"
+    ],
+    [
+      977496,
+      4,
+      "exact BL iq4_f1_native_menu_wrapper_03"
+    ],
+    [
+      976768,
+      4,
+      "exact BL iq4_f1_native_menu_wrapper_03"
+    ],
+    [
+      6222012,
+      4,
+      "exact CSU array bound"
+    ],
+    [
+      6222016,
+      4,
+      "exact CSU array bound"
+    ],
+    [
+      6222024,
+      4,
+      "exact CSU array bound"
+    ],
+    [
+      6222028,
+      4,
+      "exact CSU array bound"
+    ],
+    [
+      11742784,
+      8,
+      "DT_INIT_ARRAY metadata"
+    ],
+    [
+      11742800,
+      8,
+      "DT_INIT_ARRAY metadata"
+    ]
+  ],
+  "original_body_preservation_verified": true,
+  "ELF_inspection_only": true,
+  "target_executed": false,
+  "camera_access": false,
+  "firmware_accepted": false,
+  "restoration_verified": false,
+  "F1_camera_acceptance": false,
+  "native_menu_contract": {
+    "path": "tools/firmware/f1_stock_menu_03/NATIVE_CONTRACT.json",
+    "bytes": 2837,
+    "sha256": "4059ef8e4a05a81a067f53dd6830ffad34fbf7185eee5bd4887f7c5d6b5f586e"
+  },
+  "old_independent_button_and_queue_hooks_removed": true,
+  "build_commands": [
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "version"
+      ],
+      "exit": 0,
+      "stdout": "0.15.2\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-std=c11",
+        "-O2",
+        "-g0",
+        "-ffp-contract=off",
+        "-fno-strict-aliasing",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-mno-outline-atomics",
+        "-funwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-omit-frame-pointer",
+        "-fno-optimize-sibling-calls",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fPIC",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card05_fresh_source/build/reproduction_01/menu.o.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card05_fresh_source/tools/firmware/f1_stock_menu_03/runtime.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card05_fresh_source/build/reproduction_01/menu.o"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-g0",
+        "-fPIC",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card05_fresh_source/build/reproduction_01/menu_wrapper.o.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card05_fresh_source/tools/firmware/f1_stock_menu_03/wrapper.S",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card05_fresh_source/build/reproduction_01/menu_wrapper.o"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-std=c11",
+        "-O2",
+        "-g0",
+        "-ffp-contract=off",
+        "-fno-strict-aliasing",
+        "-ffreestanding",
+        "-fno-stack-protector",
+        "-mno-outline-atomics",
+        "-funwind-tables",
+        "-fno-asynchronous-unwind-tables",
+        "-fno-omit-frame-pointer",
+        "-fno-optimize-sibling-calls",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-fPIC",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card05_fresh_source/build/reproduction_01/display.o.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card05_fresh_source/tools/firmware/f1_stock_display_payload_15/payload.c",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card05_fresh_source/build/reproduction_01/display.o"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+        "cc",
+        "-target",
+        "aarch64-linux-gnu.2.28",
+        "-g0",
+        "-fPIC",
+        "-MMD",
+        "-MF",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card05_fresh_source/build/reproduction_01/display_wrapper.o.d",
+        "-c",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card05_fresh_source/tools/firmware/f1_stock_display_payload_15/wrapper.S",
+        "-o",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card05_fresh_source/build/reproduction_01/display_wrapper.o"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

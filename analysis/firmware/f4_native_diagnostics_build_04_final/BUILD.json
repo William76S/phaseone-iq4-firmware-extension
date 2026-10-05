@@ -1,0 +1,686 @@
+{
+  "schema": "iq4_f4_native_diagnostics04_build",
+  "compiler": {
+    "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+    "bytes": 188226560,
+    "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c"
+  },
+  "objects": [
+    {
+      "path": "analysis/firmware/f4_native_diagnostics_build_04_final/source.o",
+      "bytes": 21880,
+      "sha256": "e9ec4dbeac59003fbeaefd6cf615e42aed58bb7574e4567b73a643fab4a608c8",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 9348
+        },
+        {
+          "name": ".rodata.cst16",
+          "type": 1,
+          "flags": 18,
+          "bytes": 32
+        },
+        {
+          "name": ".rodata.str1.1",
+          "type": 1,
+          "flags": 50,
+          "bytes": 77
+        },
+        {
+          "name": ".data.rel.ro",
+          "type": 1,
+          "flags": 3,
+          "bytes": 816
+        },
+        {
+          "name": ".rodata",
+          "type": 1,
+          "flags": 2,
+          "bytes": 3468
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 792
+        }
+      ],
+      "relocation_types": [
+        257,
+        261,
+        275,
+        277,
+        282,
+        283,
+        299
+      ],
+      "undefined_symbols": [
+        "iq4_f4_native_clock_02",
+        "iq4_f4_native_construct_observer_02",
+        "iq4_f4_native_current_02",
+        "iq4_f4_native_event_construct_02",
+        "iq4_f4_native_event_notify_02",
+        "iq4_f4_native_id_02",
+        "iq4_f4_native_lock_02",
+        "iq4_f4_native_mutex_unlock_02",
+        "iq4_f4_native_size_02",
+        "iq4_f4_native_subscribe_02",
+        "iq4_f4_native_tid_02",
+        "iq4_f4_native_trylock_02",
+        "iq4_f4_native_unlock_02",
+        "iq4_f4_native_unsubscribe_02",
+        "memcmp",
+        "memcpy",
+        "memset"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f4_native_diagnostics_build_04_final/session.o",
+      "bytes": 10664,
+      "sha256": "d2add0054f4d4c7eb994a9e7cc9708fd34b99a0038c4e2cb322fa204b1a426c0",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 5256
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 416
+        }
+      ],
+      "relocation_types": [
+        261,
+        275,
+        277,
+        282,
+        283
+      ],
+      "undefined_symbols": [
+        "iq4_f4_menu_finish_exit_on_ui_03",
+        "iq4_f4_menu_page_guard_03",
+        "iq4_f4_menu_refresh_on_ui_03",
+        "iq4_f4_native_clock_02",
+        "iq4_f4_source_attach_on_ui_02",
+        "iq4_f4_source_bind_handoff_on_ui_02",
+        "iq4_f4_source_fence_02",
+        "iq4_f4_source_is_ui_02",
+        "iq4_f4_source_measure_on_ui_02",
+        "iq4_f4_source_post_control_02",
+        "iq4_f4_source_request_stop_02",
+        "iq4_f4_source_start_on_ui_02",
+        "iq4_f4_source_status_on_ui_02",
+        "iq4_f4_source_stop_on_ui_02",
+        "iq4_f4_source_worker_claim_02",
+        "iq4_f4_source_worker_release_02",
+        "iq4_f4_thread_create_02",
+        "iq4_f4_thread_join_02",
+        "iq4_f4_thread_pins_02",
+        "iq4_f4_thread_wait_02",
+        "iq4_f4_thread_wake_02",
+        "iq4_f4_worker_init_02",
+        "iq4_f4_worker_pump_one_02",
+        "memcmp",
+        "memset"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f4_native_diagnostics_build_04_final/entry.o",
+      "bytes": 11496,
+      "sha256": "ad3bd5a4d54b3b3fa6509bedc3d42ffb13965db7c574f5121d52333143acd670",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 2604
+        },
+        {
+          "name": ".bss",
+          "type": 8,
+          "flags": 3,
+          "bytes": 208
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 192
+        }
+      ],
+      "relocation_types": [
+        261,
+        275,
+        277,
+        278,
+        283,
+        285,
+        286,
+        311,
+        312
+      ],
+      "undefined_symbols": [
+        "iq4_activity_hold_01",
+        "iq4_activity_release_01",
+        "iq4_activity_try_01",
+        "iq4_activity_valid_01",
+        "iq4_f4_menu_bind_ports_on_ui_03",
+        "iq4_f4_menu_connect_on_ui_03",
+        "iq4_f4_menu_install_03",
+        "iq4_f4_menu_new_03",
+        "iq4_f4_movie_binding_init_on_ui_02",
+        "iq4_f4_movie_binding_ports_02",
+        "iq4_f4_session_diagnostics_04",
+        "iq4_f4_session_init_on_ui_02",
+        "iq4_f4_session_menu_ports_02",
+        "iq4_f4_session_storage_bytes_02",
+        "iq4_f4_source_diagnostics_04",
+        "iq4_f4_source_fence_02",
+        "iq4_f4_source_init_02",
+        "iq4_f4_source_storage_bytes_02",
+        "iq4_native_self_read_01",
+        "memset"
+      ],
+      "executed": false
+    },
+    {
+      "path": "analysis/firmware/f4_native_diagnostics_build_04_final/menu.o",
+      "bytes": 30072,
+      "sha256": "b111f4cfbe930ae351466c93dacb9549d60d47737d945fb49ccb7fd07bf36a8c",
+      "type": "ET_REL",
+      "machine": 183,
+      "alloc_sections": [
+        {
+          "name": ".text",
+          "type": 1,
+          "flags": 6,
+          "bytes": 10628
+        },
+        {
+          "name": ".rodata.cst8",
+          "type": 1,
+          "flags": 18,
+          "bytes": 8
+        },
+        {
+          "name": ".bss",
+          "type": 8,
+          "flags": 3,
+          "bytes": 656
+        },
+        {
+          "name": ".data.rel.ro",
+          "type": 1,
+          "flags": 3,
+          "bytes": 416
+        },
+        {
+          "name": ".rodata",
+          "type": 1,
+          "flags": 2,
+          "bytes": 2144
+        },
+        {
+          "name": ".rodata.str1.1",
+          "type": 1,
+          "flags": 50,
+          "bytes": 289
+        },
+        {
+          "name": ".eh_frame",
+          "type": 1,
+          "flags": 2,
+          "bytes": 512
+        }
+      ],
+      "relocation_types": [
+        257,
+        261,
+        275,
+        277,
+        278,
+        282,
+        283,
+        286,
+        311,
+        312
+      ],
+      "undefined_symbols": [
+        "iq4_f4_entry_diagnostics_04",
+        "iq4_f4_menu_append_03",
+        "iq4_f4_menu_close_03",
+        "iq4_f4_menu_ctor_03",
+        "iq4_f4_menu_new_03",
+        "iq4_f4_menu_pop_03",
+        "iq4_f4_menu_pop_passthrough_03",
+        "iq4_f4_native_current_02",
+        "iq4_f4_native_event_notify_02",
+        "iq4_f4_source_bind_page_guard_on_ui_02",
+        "iq4_f4_source_fence_02",
+        "iq4_f4_source_request_stop_02",
+        "memcmp",
+        "memcpy"
+      ],
+      "executed": false
+    }
+  ],
+  "tests": [
+    {
+      "name": "source",
+      "variant": "normal",
+      "args": [],
+      "stdout": "32 synthetic fault groups PASS; no target/SDK/device\n"
+    },
+    {
+      "name": "session",
+      "variant": "normal",
+      "args": [
+        "0"
+      ],
+      "stdout": "session scenario 0: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "normal",
+      "args": [
+        "1"
+      ],
+      "stdout": "session scenario 1: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "normal",
+      "args": [
+        "2"
+      ],
+      "stdout": "unknown card poll: retained/no retry/no cleanup PASS\n"
+    },
+    {
+      "name": "session",
+      "variant": "normal",
+      "args": [
+        "3"
+      ],
+      "stdout": "session scenario 3: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "normal",
+      "args": [
+        "4"
+      ],
+      "stdout": "session scenario 4: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "normal",
+      "args": [
+        "5"
+      ],
+      "stdout": "unknown finalizer: all owners retained/no release PASS\n"
+    },
+    {
+      "name": "session",
+      "variant": "normal",
+      "args": [
+        "6"
+      ],
+      "stdout": "session scenario 6: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "normal",
+      "args": [
+        "7"
+      ],
+      "stdout": "session scenario 7: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "normal",
+      "args": [
+        "8"
+      ],
+      "stdout": "session scenario 8: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "normal",
+      "args": [
+        "9"
+      ],
+      "stdout": "unknown page during worker timer: Hold, no frames/finalizer/cleanup PASS\n"
+    },
+    {
+      "name": "entry",
+      "variant": "normal",
+      "args": [
+        "normal"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "normal",
+      "args": [
+        "jpeg-busy"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "normal",
+      "args": [
+        "alloc-unknown"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "normal",
+      "args": [
+        "init-unknown"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "normal",
+      "args": [
+        "control-unknown"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "normal",
+      "args": [
+        "read-unknown"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "normal",
+      "args": [
+        "session-hold"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "normal",
+      "args": [
+        "idle-with-card"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "normal",
+      "args": [
+        "idle-no-fence"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "normal",
+      "args": [
+        "source-fence-unknown"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "normal",
+      "args": [
+        "empty-cancel"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "menu",
+      "variant": "normal",
+      "args": [],
+      "stdout": "12 native menu ABI/fault groups PASS; simulated calls only\n"
+    },
+    {
+      "name": "menu",
+      "variant": "normal",
+      "args": [
+        "heap-failure"
+      ],
+      "stdout": "heap failure retained/no install/no retry PASS\n"
+    },
+    {
+      "name": "source",
+      "variant": "asan_ubsan",
+      "args": [],
+      "stdout": "32 synthetic fault groups PASS; no target/SDK/device\n"
+    },
+    {
+      "name": "session",
+      "variant": "asan_ubsan",
+      "args": [
+        "0"
+      ],
+      "stdout": "session scenario 0: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "asan_ubsan",
+      "args": [
+        "1"
+      ],
+      "stdout": "session scenario 1: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "asan_ubsan",
+      "args": [
+        "2"
+      ],
+      "stdout": "unknown card poll: retained/no retry/no cleanup PASS\n"
+    },
+    {
+      "name": "session",
+      "variant": "asan_ubsan",
+      "args": [
+        "3"
+      ],
+      "stdout": "session scenario 3: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "asan_ubsan",
+      "args": [
+        "4"
+      ],
+      "stdout": "session scenario 4: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "asan_ubsan",
+      "args": [
+        "5"
+      ],
+      "stdout": "unknown finalizer: all owners retained/no release PASS\n"
+    },
+    {
+      "name": "session",
+      "variant": "asan_ubsan",
+      "args": [
+        "6"
+      ],
+      "stdout": "session scenario 6: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "asan_ubsan",
+      "args": [
+        "7"
+      ],
+      "stdout": "session scenario 7: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "asan_ubsan",
+      "args": [
+        "8"
+      ],
+      "stdout": "session scenario 8: one pthread, actual UI/worker separation, task fence, single release/join PASS (synthetic native/card/codec)\n"
+    },
+    {
+      "name": "session",
+      "variant": "asan_ubsan",
+      "args": [
+        "9"
+      ],
+      "stdout": "unknown page during worker timer: Hold, no frames/finalizer/cleanup PASS\n"
+    },
+    {
+      "name": "entry",
+      "variant": "asan_ubsan",
+      "args": [
+        "normal"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "asan_ubsan",
+      "args": [
+        "jpeg-busy"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "asan_ubsan",
+      "args": [
+        "alloc-unknown"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "asan_ubsan",
+      "args": [
+        "init-unknown"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "asan_ubsan",
+      "args": [
+        "control-unknown"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "asan_ubsan",
+      "args": [
+        "read-unknown"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "asan_ubsan",
+      "args": [
+        "session-hold"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "asan_ubsan",
+      "args": [
+        "idle-with-card"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "asan_ubsan",
+      "args": [
+        "idle-no-fence"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "asan_ubsan",
+      "args": [
+        "source-fence-unknown"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "entry",
+      "variant": "asan_ubsan",
+      "args": [
+        "empty-cancel"
+      ],
+      "stdout": "PASS fixed entry03 activity/actual completion/refusal/unknown synthetic fixture\n"
+    },
+    {
+      "name": "menu",
+      "variant": "asan_ubsan",
+      "args": [],
+      "stdout": "12 native menu ABI/fault groups PASS; simulated calls only\n"
+    },
+    {
+      "name": "menu",
+      "variant": "asan_ubsan",
+      "args": [
+        "heap-failure"
+      ],
+      "stdout": "heap failure retained/no install/no retry PASS\n"
+    }
+  ],
+  "old_source_lineage": [
+    {
+      "path": "tools/firmware/f4_native_source_03/source.c",
+      "bytes": 18473,
+      "sha256": "81b3c096134a9c2d76cbb16003766350b51758d9eeb5ea57456868b684b91a81"
+    },
+    {
+      "path": "tools/firmware/f4_native_source_02/session.c",
+      "bytes": 13489,
+      "sha256": "adcd73f967cbe48116a79c0bc048a1626568d42f92205fe87bac63d3143b262d"
+    },
+    {
+      "path": "tools/firmware/f4_native_entry_03/entry.c",
+      "bytes": 5331,
+      "sha256": "9ec863a62cd029ef67be539a3f1eccf3ee117b75541cef6836586f6242253ddd"
+    },
+    {
+      "path": "tools/firmware/f4_native_menu_03/menu.c",
+      "bytes": 8338,
+      "sha256": "d97e27f8a59acb0f06200522e992b645c2da61b9842ce32a68d21793b8f69b51"
+    }
+  ],
+  "ABI02_03_preserved": true,
+  "native_start_added": false,
+  "target_executed": false,
+  "sdk_loaded": false,
+  "camera_access": false
+}

@@ -1,0 +1,22 @@
+STATIC ONLY; synthetic section view, not a target executable.
+SOURCE BOOT SHA256 7a3a3d6f62c61e7d627a9f55d844d74be9111b26eb7a7fa42f5bdd7be7dabe9e
+analysis/firmware/bootstrap_recovery_static/fsbl_view.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000fffc0000 <.text>:
+fffd0b44: a9ac7bfd     	stp	x29, x30, [sp, #-0x140]!
+fffd0b48: 910003fd     	mov	x29, sp
+fffd0b4c: a9025bf5     	stp	x21, x22, [sp, #0x20]
+fffd0b50: 90000095     	adrp	x21, 0xfffe0000 <.text+0x20000>
+fffd0b54: 911902b5     	add	x21, x21, #0x640
+fffd0b58: d10042a0     	sub	x0, x21, #0x10
+fffd0b5c: a90153f3     	stp	x19, x20, [sp, #0x10]
+fffd0b60: 52800014     	mov	w20, #0x0               // =0
+fffd0b64: 52800013     	mov	w19, #0x0               // =0
+fffd0b68: a90363f7     	stp	x23, x24, [sp, #0x30]
+fffd0b6c: 52800038     	mov	w24, #0x1               // =1
+fffd0b70: a9046bf9     	stp	x25, x26, [sp, #0x40]
+fffd0b74: a90573fb     	stp	x27, x28, [sp, #0x50]
+fffd0b78: f9003be0     	str	x0, [sp, #0x70]
+fffd0b7c: fd0033e8     	str	d8, [sp, #0x60]

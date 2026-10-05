@@ -1,0 +1,53 @@
+{
+  "schema": "iq4_native_storage_pthread_ABI_01",
+  "rootfs": {
+    "path": "analysis/firmware/P1_ramdisk.ext2",
+    "bytes": 134217728,
+    "sha256": "2ca2a497fb22cb3b16009f5dab2aad1f744982aaafb6c928ac688c0a3f9dbccb"
+  },
+  "provider": {
+    "path": "analysis/firmware/f3_native_storage_bridge_01/libpthread_original.analysis.elf",
+    "bytes": 105736,
+    "sha256": "9305ff30980749a3f64b3e445764db2bc378d14d1ef8bbe004d0ecc768d00f77"
+  },
+  "target_path": "/lib/libpthread-2.28.so",
+  "imports": [
+    {
+      "name": "pthread_mutex_lock",
+      "va": 4238048
+    },
+    {
+      "name": "pthread_mutex_unlock",
+      "va": 4237104
+    }
+  ],
+  "finite_windows": [
+    {
+      "name": "pthread_init",
+      "va": 37672,
+      "bytes": 444,
+      "sha256": "dd19bc356efcb8197a2542afaf87cc8f597a2e53dc357ec5d9a82769bf34388f"
+    },
+    {
+      "name": "pthread_lock",
+      "va": 39688,
+      "bytes": 640,
+      "sha256": "dfd25b67c7025214ee8f3b8c36673b4da65703ef564d76f89feb0d28e773bafc"
+    },
+    {
+      "name": "pthread_unlock",
+      "va": 45288,
+      "bytes": 360,
+      "sha256": "1e87b897f7c8f836045449c67123ebd7ab70adec17046a8ab92a3511d440a915"
+    }
+  ],
+  "default_init_48_exact_zero": true,
+  "surrounding_canaries_unchanged": true,
+  "default_kind_offset": 16,
+  "lock_word_offset": 0,
+  "target_alignment_static_assert": 8,
+  "actual_stock_uncontended_lock_unlock_cycles": 3,
+  "host_emulation": true,
+  "tls_thread_id_fixture": 77,
+  "camera_accessed": false
+}

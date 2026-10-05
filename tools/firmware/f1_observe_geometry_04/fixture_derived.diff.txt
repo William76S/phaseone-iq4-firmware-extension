@@ -1,0 +1,22 @@
+--- frozen/geometry03/test_probe.cpp/fixture
++++ new/observe04/fixture.hpp
+@@ -1,3 +1,10 @@
++#pragma once
++#include "observe.hpp"
++#include <array>
++#include <cstring>
++#include <vector>
++namespace iq4::f1::observe04::test {
++using namespace geometry03;
+ struct Span {Address at{};std::size_t size{};};
+ struct Fixture {
+     alignas(16)std::array<unsigned char,0xd50>q{};
+@@ -57,6 +64,7 @@
+       paint={thread,own_frame,0x4abe94,live,a(surface),control_frame+0xb8,control_frame+0xd0};
+     }
+     Memory memory(){return {this,read};}
+-    Result owner(Observation&out){return Probe(memory(),0).collect_owner(thread,live,out);}
++    geometry03::Result owner(Observation&out){return Probe(memory(),0).collect_owner(thread,live,out);}
+     void slot(unsigned s=1){value(buffer+0xe8,std::uint32_t(s));value(buffer+0x50+8*s,std::array<std::int32_t,2>{1024,764});value(buffer+0x70+24*s,Rectangle24{0xb73b98,0,0,3200,2400});value(buffer+0xf4,std::uint32_t(17));}
+ };
++}

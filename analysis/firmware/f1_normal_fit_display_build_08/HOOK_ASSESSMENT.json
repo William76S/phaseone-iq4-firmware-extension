@@ -1,0 +1,136 @@
+{
+  "schema": "iq4_f1_normalfit08_static_hook_assessment",
+  "source": {
+    "disassembly": "analysis/firmware/f1_geometry_probe_03/static/Scaler_dispatch_complete.txt",
+    "sha256": "cd6ddefadd4df6d48733294befe8e31671f63574f79782124ea86d8f944bc753",
+    "exact_bytes_manifest": "analysis/firmware/f1_geometry_probe_03/static/exact_bytes.json",
+    "manifest_sha256": "fd2da13a9d867bdef9e44a0fe7eea6ce8174f73dcff4efbc2a3fb9f319d86a01",
+    "manifest_schema": "iq4_f1_geometry03_exact_v1"
+  },
+  "exact_original_functions": [
+    {
+      "name": "Scaler_dispatch_complete",
+      "start_va": "0x47f910",
+      "end_va_exclusive": "0x47fd60",
+      "file_offset": "0x7f910",
+      "sha256": "08233bf3c453a8c6cc0c9752f1c87e26ac3dacaf1d54769ef3e82d267e055d09",
+      "disassembly": "analysis/firmware/f1_geometry_probe_03/static/Scaler_dispatch_complete.txt",
+      "disassembly_sha256": "cd6ddefadd4df6d48733294befe8e31671f63574f79782124ea86d8f944bc753"
+    },
+    {
+      "name": "Default_multirow_complete",
+      "start_va": "0x47e9d0",
+      "end_va_exclusive": "0x47ebc8",
+      "file_offset": "0x7e9d0",
+      "sha256": "1e1b134f668591b8a432b5eeac7122e598583dc521ca297eb35cadd7e284ab23",
+      "disassembly": "analysis/firmware/f1_geometry_probe_03/static/Default_multirow_complete.txt",
+      "disassembly_sha256": "f3e6f2192ace4c06513277ff2c75ec47a75e6cb7bee7addd537828aa9d9f5419"
+    },
+    {
+      "name": "RGB24_row_wrapper_complete",
+      "start_va": "0x47e930",
+      "end_va_exclusive": "0x47e9d0",
+      "file_offset": "0x7e930",
+      "sha256": "560ef58aece8b2a9aaeff7491f14a366eaef1d4706f7c379aea1e90ededd8d1f",
+      "disassembly": "analysis/firmware/f1_geometry_probe_03/static/RGB24_row_wrapper_complete.txt",
+      "disassembly_sha256": "0ba5d2de756401733873424bb366f0d7d62e0c9702ca18c866eb4a0a2e52481d"
+    },
+    {
+      "name": "RGB24_row_leaf_complete",
+      "start_va": "0x9e9598",
+      "end_va_exclusive": "0x9e9700",
+      "file_offset": "0x5e9598",
+      "sha256": "4ab9a2bd16882a91dc2092da2ce3c164d35400f8a8b36d5d6f076d0a3cd2138d",
+      "disassembly": "analysis/firmware/f1_geometry_probe_03/static/RGB24_row_leaf_complete.txt",
+      "disassembly_sha256": "720988966bff92b53c3a6743475ee0bd7f334c901e7f3849ea9c393013a64919"
+    },
+    {
+      "name": "Blit_zero_clip_and_return_complete",
+      "start_va": "0x47552c",
+      "end_va_exclusive": "0x475a7c",
+      "file_offset": "0x7552c",
+      "sha256": "01aea515b976aadca59419efb516b5fef86d7e621d896249c8a572c3afeb5e8e",
+      "disassembly": "analysis/firmware/f1_geometry_probe_03/static/Blit_zero_clip_and_return_complete.txt",
+      "disassembly_sha256": "74df2b1b6ccd2a2009c582a896a62b3522fbce726c859d218bd0965a894cb27c"
+    },
+    {
+      "name": "Blit_quarterturn_dispatch_complete",
+      "start_va": "0x477038",
+      "end_va_exclusive": "0x477384",
+      "file_offset": "0x77038",
+      "sha256": "5ceb24d8ff2c186794d7a5f7685f9ee1166dac20cd5ecd07d0d5106163b7a26b",
+      "disassembly": "analysis/firmware/f1_geometry_probe_03/static/Blit_quarterturn_dispatch_complete.txt",
+      "disassembly_sha256": "e141d9c3ee03566a77cc1fd2375fbaac0aa20ec8685837efabe7f412d91d8de7"
+    },
+    {
+      "name": "Manager_draw_scope_complete",
+      "start_va": "0x4e32d4",
+      "end_va_exclusive": "0x4e36b8",
+      "file_offset": "0xe32d4",
+      "sha256": "784bc3e16fa8cfb5cbbb25eb085d4aa08274da60caeca0c8064baef03a7735eb",
+      "disassembly": "analysis/firmware/f1_geometry_probe_03/static/Manager_draw_scope_complete.txt",
+      "disassembly_sha256": "e4827e1f2735d66610864a92454858dc622d56405fe958a3db52c8137776028a"
+    },
+    {
+      "name": "LV_paint_complete",
+      "start_va": "0x51da0c",
+      "end_va_exclusive": "0x51df64",
+      "file_offset": "0x11da0c",
+      "sha256": "587710fe5c1d8a997cc3f6eab988438e8e69892068d1628da8ff733e320a20ce",
+      "disassembly": "analysis/firmware/f1_geometry_probe_03/static/LV_paint_complete.txt",
+      "disassembly_sha256": "5777762d046a7a0d65ee158e61c493136c435ae31be86a6637dec7c9a4e1644e"
+    }
+  ],
+  "original_entry_first_word": "0xd10403ff",
+  "first_instruction": "sub sp,sp,#0x100",
+  "original_body_bytes": 1104,
+  "original_stack_argument_extent_bytes": 40,
+  "accepted_original_call_return_pcs_for_zero_rotation_RGB24_only": [
+    "0x475908"
+  ],
+  "rejected_other_zero_rotation_formats": [
+    "0x475838",
+    "0x4759cc"
+  ],
+  "original_fp_saved_return_chain": [
+    "caller 47552c FP+8 = 0x47718c",
+    "caller 477038 FP+8 = 0x51ddd0",
+    "LV paint FP+8 = 0x4abe94",
+    "Control Draw FP+8 = 0x4e33bc"
+  ],
+  "synthetic_byte_plan": {
+    "schema": "iq4_f1_scaler_entry_static_plan_v8",
+    "UserSHA": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+    "entry": 4716816,
+    "original_word": 3506701311,
+    "patch_hex": "bc010214",
+    "near_entry": 5242880,
+    "near_veneer_hex": "5000005800021fd6000000f0ff7f0000",
+    "near_trampoline": 5243136,
+    "original_trampoline_hex": "ff0304d104fefd17",
+    "own_bridge": 140737219919872,
+    "target_loaded": false,
+    "target_text_written": false,
+    "ready_to_install": false,
+    "requires_actual": [
+      "exact_User_exe_inode_whole_hash_and_all_executable_mapping_bytes",
+      "sole_controller_current_UI_owner_and_no_other_thread_in_entry_or_trampoline",
+      "actual_near_mmap_RW_to_RX_policy_and_addresses_with_no_MAP_FIXED_clobber",
+      "target_page_exact_current_permissions_and_W_to_RX_restore",
+      "single_aligned_instruction_atomic_store_and_AArch64_Dcache_Icache_barriers_on_all_relevant_cores",
+      "atomic_unpatch_only_when_all_hook_calls_quiescent_then_verified_original_word",
+      "original_provider_target_complete_body_and_Surface_lifetime_scope",
+      "callback_unwind_registration_accepted_and_no_unhandled_callback_throw"
+    ]
+  },
+  "entry_word_relocation_possible": true,
+  "transparent_installation_proven": false,
+  "actual_write_token_issuer_present": true,
+  "supported_provider_profile": "RootReviewedInlineUIRetainedUntilPresent",
+  "actual_provider_contract_received": false,
+  "production_provider_getter_called": false,
+  "production_native_blit_or_fill_called": false,
+  "target_text_written": false,
+  "target_loaded": false,
+  "default_mask_enabled": false
+}

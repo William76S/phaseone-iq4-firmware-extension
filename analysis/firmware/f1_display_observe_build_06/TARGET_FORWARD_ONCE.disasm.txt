@@ -1,0 +1,164 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_display_observe_build_06/libiq4_f1_display_observe_06_default_off.so:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000015d6c <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE>:
+   15d6c: a9ba7bfd     	stp	x29, x30, [sp, #-0x60]!
+   15d70: a9016ffc     	stp	x28, x27, [sp, #0x10]
+   15d74: a90267fa     	stp	x26, x25, [sp, #0x20]
+   15d78: a9035ff8     	stp	x24, x23, [sp, #0x30]
+   15d7c: a90457f6     	stp	x22, x21, [sp, #0x40]
+   15d80: a9054ff4     	stp	x20, x19, [sp, #0x50]
+   15d84: 910003fd     	mov	x29, sp
+   15d88: d12d43ff     	sub	sp, sp, #0xb50
+   15d8c: aa0703f3     	mov	x19, x7
+   15d90: aa0603f6     	mov	x22, x6
+   15d94: aa0503f5     	mov	x21, x5
+   15d98: a90113e3     	stp	x3, x4, [sp, #0x10]
+   15d9c: aa0203fb     	mov	x27, x2
+   15da0: aa0103fc     	mov	x28, x1
+   15da4: f90007e0     	str	x0, [sp, #0x8]
+   15da8: aa0803f7     	mov	x23, x8
+   15dac: 940022f9     	bl	0x1e990 <__errno_location@plt>
+   15db0: f0ffff48     	adrp	x8, 0x0 <strrchr>
+   15db4: d503201f     	nop
+   15db8: 10f59a89     	adr	x9, 0x1108 <_ZN3iq42f17stack058HomeNodeE+0x60>
+   15dbc: 3dc32d01     	ldr	q1, [x8, #0xcb0]
+   15dc0: 52861e08     	mov	w8, #0x30f0             // =12528
+   15dc4: aa0003f4     	mov	x20, x0
+   15dc8: ad400122     	ldp	q2, q0, [x9]
+   15dcc: 72a016a8     	movk	w8, #0xb5, lsl #16
+   15dd0: f902f3e8     	str	x8, [sp, #0x5e0]
+   15dd4: 9116c3e8     	add	x8, sp, #0x5b0
+   15dd8: b9400019     	ldr	w25, [x0]
+   15ddc: 9100e100     	add	x0, x8, #0x38
+   15de0: 2a1f03e1     	mov	w1, wzr
+   15de4: 5280ab02     	mov	w2, #0x558              // =1368
+   15de8: 3d8177e0     	str	q0, [sp, #0x5d0]
+   15dec: 3d816fe1     	str	q1, [sp, #0x5b0]
+   15df0: 3d8173e2     	str	q2, [sp, #0x5c0]
+   15df4: 940022d3     	bl	0x1e940 <memset@plt>
+   15df8: b4000195     	cbz	x21, 0x15e28 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0xbc>
+   15dfc: b4000176     	cbz	x22, 0x15e28 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0xbc>
+   15e00: f94156ba     	ldr	x26, [x21, #0x2a8]
+   15e04: 9116c3e2     	add	x2, sp, #0x5b0
+   15e08: aa1503e0     	mov	x0, x21
+   15e0c: aa1603e1     	mov	x1, x22
+   15e10: 97fffe70     	bl	0x157d0 <_ZN3iq42f19display069Collector12before_paintERKNS0_10geometry0310PaintInputERNS1_8MetadataE>
+   15e14: 2a0003f8     	mov	w24, w0
+   15e18: b4000113     	cbz	x19, 0x15e38 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0xcc>
+   15e1c: 36000138     	tbz	w24, #0x0, 0x15e40 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0xd4>
+   15e20: 9116c3e1     	add	x1, sp, #0x5b0
+   15e24: 1400000b     	b	0x15e50 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0xe4>
+   15e28: f100027f     	cmp	x19, #0x0
+   15e2c: 2a1f03f8     	mov	w24, wzr
+   15e30: 1a9f07fa     	cset	w26, ne
+   15e34: 14000019     	b	0x15e98 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x12c>
+   15e38: 2a1f03fa     	mov	w26, wzr
+   15e3c: 14000017     	b	0x15e98 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x12c>
+   15e40: f94156a8     	ldr	x8, [x21, #0x2a8]
+   15e44: eb1a011f     	cmp	x8, x26
+   15e48: 54000249     	b.ls	0x15e90 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x124>
+   15e4c: 9109a2a1     	add	x1, x21, #0x268
+   15e50: 910083e0     	add	x0, sp, #0x20
+   15e54: 5280b202     	mov	w2, #0x590              // =1424
+   15e58: 940022c2     	bl	0x1e960 <memcpy@plt>
+   15e5c: 885ffe68     	ldaxr	w8, [x19]
+   15e60: 11000508     	add	w8, w8, #0x1
+   15e64: 8809fe68     	stlxr	w9, w8, [x19]
+   15e68: 35ffffa9     	cbnz	w9, 0x15e5c <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0xf0>
+   15e6c: 91004260     	add	x0, x19, #0x10
+   15e70: 910083e1     	add	x1, sp, #0x20
+   15e74: 5280b202     	mov	w2, #0x590              // =1424
+   15e78: 940022ba     	bl	0x1e960 <memcpy@plt>
+   15e7c: 885f7e68     	ldxr	w8, [x19]
+   15e80: 11000508     	add	w8, w8, #0x1
+   15e84: 8809fe68     	stlxr	w9, w8, [x19]
+   15e88: 35ffffa9     	cbnz	w9, 0x15e7c <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x110>
+   15e8c: 14000002     	b	0x15e94 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x128>
+   15e90: 2a1f03f8     	mov	w24, wzr
+   15e94: 5280003a     	mov	w26, #0x1               // =1
+   15e98: b9000299     	str	w25, [x20]
+   15e9c: a900feff     	stp	xzr, xzr, [x23, #0x8]
+   15ea0: f90002ff     	str	xzr, [x23]
+   15ea4: a9410fe2     	ldp	x2, x3, [sp, #0x10]
+   15ea8: 910083e8     	add	x8, sp, #0x20
+   15eac: f94007e9     	ldr	x9, [sp, #0x8]
+   15eb0: aa1c03e0     	mov	x0, x28
+   15eb4: aa1b03e1     	mov	x1, x27
+   15eb8: d63f0120     	blr	x9
+   15ebc: 3dc00be0     	ldr	q0, [sp, #0x20]
+   15ec0: f9401be8     	ldr	x8, [sp, #0x30]
+   15ec4: b9400299     	ldr	w25, [x20]
+   15ec8: 3d8002e0     	str	q0, [x23]
+   15ecc: f9000ae8     	str	x8, [x23, #0x10]
+   15ed0: b40002f5     	cbz	x21, 0x15f2c <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x1c0>
+   15ed4: 52000308     	eor	w8, w24, #0x1
+   15ed8: 370002a8     	tbnz	w8, #0x0, 0x15f2c <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x1c0>
+   15edc: 9116c3e3     	add	x3, sp, #0x5b0
+   15ee0: aa1503e0     	mov	x0, x21
+   15ee4: aa1603e1     	mov	x1, x22
+   15ee8: aa1703e2     	mov	x2, x23
+   15eec: 97fffebc     	bl	0x159dc <_ZN3iq42f19display069Collector11after_paintERKNS0_10geometry0310PaintInputERKNS0_14native_overlay11Rectangle24ERNS1_8MetadataE>
+   15ef0: 0a000348     	and	w8, w26, w0
+   15ef4: 7100051f     	cmp	w8, #0x1
+   15ef8: 540001a1     	b.ne	0x15f2c <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x1c0>
+   15efc: 885ffe68     	ldaxr	w8, [x19]
+   15f00: 11000508     	add	w8, w8, #0x1
+   15f04: 8809fe68     	stlxr	w9, w8, [x19]
+   15f08: 35ffffa9     	cbnz	w9, 0x15efc <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x190>
+   15f0c: 91004260     	add	x0, x19, #0x10
+   15f10: 9116c3e1     	add	x1, sp, #0x5b0
+   15f14: 5280b202     	mov	w2, #0x590              // =1424
+   15f18: 94002292     	bl	0x1e960 <memcpy@plt>
+   15f1c: 885f7e68     	ldxr	w8, [x19]
+   15f20: 11000508     	add	w8, w8, #0x1
+   15f24: 8809fe68     	stlxr	w9, w8, [x19]
+   15f28: 35ffffa9     	cbnz	w9, 0x15f1c <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x1b0>
+   15f2c: b9000299     	str	w25, [x20]
+   15f30: 912d43ff     	add	sp, sp, #0xb50
+   15f34: a9454ff4     	ldp	x20, x19, [sp, #0x50]
+   15f38: a94457f6     	ldp	x22, x21, [sp, #0x40]
+   15f3c: a9435ff8     	ldp	x24, x23, [sp, #0x30]
+   15f40: a94267fa     	ldp	x26, x25, [sp, #0x20]
+   15f44: a9416ffc     	ldp	x28, x27, [sp, #0x10]
+   15f48: a8c67bfd     	ldp	x29, x30, [sp], #0x60
+   15f4c: d65f03c0     	ret
+   15f50: 94002288     	bl	0x1e970 <__cxa_begin_catch@plt>
+   15f54: b9400296     	ldr	w22, [x20]
+   15f58: b4000395     	cbz	x21, 0x15fc8 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x25c>
+   15f5c: 52000308     	eor	w8, w24, #0x1
+   15f60: 37000348     	tbnz	w8, #0x0, 0x15fc8 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x25c>
+   15f64: 528000a8     	mov	w8, #0x5                // =5
+   15f68: 9116c3e0     	add	x0, sp, #0x5b0
+   15f6c: 9109a2a1     	add	x1, x21, #0x268
+   15f70: 5280b202     	mov	w2, #0x590              // =1424
+   15f74: 3908a6bf     	strb	wzr, [x21, #0x229]
+   15f78: b902eabf     	str	wzr, [x21, #0x2e8]
+   15f7c: b907e2bf     	str	wzr, [x21, #0x7e0]
+   15f80: f903bebf     	str	xzr, [x21, #0x778]
+   15f84: f903c6bf     	str	xzr, [x21, #0x788]
+   15f88: f903c2bf     	str	xzr, [x21, #0x780]
+   15f8c: b90272a8     	str	w8, [x21, #0x270]
+   15f90: 94002274     	bl	0x1e960 <memcpy@plt>
+   15f94: 340001ba     	cbz	w26, 0x15fc8 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x25c>
+   15f98: 885ffe68     	ldaxr	w8, [x19]
+   15f9c: 11000508     	add	w8, w8, #0x1
+   15fa0: 8809fe68     	stlxr	w9, w8, [x19]
+   15fa4: 35ffffa9     	cbnz	w9, 0x15f98 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x22c>
+   15fa8: 91004260     	add	x0, x19, #0x10
+   15fac: 9116c3e1     	add	x1, sp, #0x5b0
+   15fb0: 5280b202     	mov	w2, #0x590              // =1424
+   15fb4: 9400226b     	bl	0x1e960 <memcpy@plt>
+   15fb8: 885f7e68     	ldxr	w8, [x19]
+   15fbc: 11000508     	add	w8, w8, #0x1
+   15fc0: 8809fe68     	stlxr	w9, w8, [x19]
+   15fc4: 35ffffa9     	cbnz	w9, 0x15fb8 <_ZN3iq42f19display0612forward_onceEPFNS0_14native_overlay11Rectangle24EPvS4_PKS3_PS3_ES4_S4_S6_S7_PNS1_9CollectorEPKNS0_10geometry0310PaintInputEPNS1_9PublishedE+0x24c>
+   15fc8: b9000296     	str	w22, [x20]
+   15fcc: 94002275     	bl	0x1e9a0 <__cxa_rethrow@plt>
+   15fd0: aa0003f3     	mov	x19, x0
+   15fd4: 94002277     	bl	0x1e9b0 <__cxa_end_catch@plt>
+   15fd8: aa1303e0     	mov	x0, x19
+   15fdc: 94002279     	bl	0x1e9c0 <_Unwind_Resume@plt>
+   15fe0: 97fff2b6     	bl	0x12ab8 <__clang_call_terminate>

@@ -1,0 +1,38 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)>:
+  85d108: d10283ff     	sub	sp, sp, #0xa0
+  85d10c: a9047bfd     	stp	x29, x30, [sp, #0x40]
+  85d110: 910103fd     	add	x29, sp, #0x40
+  85d114: a90553f3     	stp	x19, x20, [sp, #0x50]
+  85d118: f90047e0     	str	x0, [sp, #0x88]
+  85d11c: f90043e1     	str	x1, [sp, #0x80]
+  85d120: 3901ffe2     	strb	w2, [sp, #0x7f]
+  85d124: 3901fbe3     	strb	w3, [sp, #0x7e]
+  85d128: 3901f7e4     	strb	w4, [sp, #0x7d]
+  85d12c: f9003be5     	str	x5, [sp, #0x70]
+  85d130: f90037e6     	str	x6, [sp, #0x68]
+  85d134: f90033e7     	str	x7, [sp, #0x60]
+  85d138: 3941fbe0     	ldrb	w0, [sp, #0x7e]
+  85d13c: 71000c1f     	cmp	w0, #0x3
+  85d140: 54001d80     	b.eq	0x85d4f0 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x1912c>
+  85d144: 71000c1f     	cmp	w0, #0x3
+  85d148: 5400010c     	b.gt	0x85d168 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x18da4>
+  85d14c: 7100041f     	cmp	w0, #0x1
+  85d150: 54000ac0     	b.eq	0x85d2a8 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x18ee4>
+  85d154: 7100041f     	cmp	w0, #0x1
+  85d158: 540012ec     	b.gt	0x85d3b4 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x18ff0>
+  85d15c: 7100001f     	cmp	w0, #0x0
+  85d160: 54000120     	b.eq	0x85d184 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x18dc0>
+  85d164: 140002b9     	b	0x85dc48 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x19884>
+  85d168: 7100141f     	cmp	w0, #0x5
+  85d16c: 540038a0     	b.eq	0x85d880 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x194bc>
+  85d170: 7100141f     	cmp	w0, #0x5
+  85d174: 5400244b     	b.lt	0x85d5fc <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x19238>
+  85d178: 7103fc1f     	cmp	w0, #0xff
+  85d17c: 54004dc0     	b.eq	0x85db34 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x19770>
+  85d180: 140002b2     	b	0x85dc48 <std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>::assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)+0x19884>

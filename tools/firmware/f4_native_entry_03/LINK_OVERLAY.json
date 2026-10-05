@@ -1,0 +1,134 @@
+{
+  "schema": "iq4_f4_entry03_single_object_overlay",
+  "frozen_source02": {
+    "path": "tools/firmware/f4_native_source_02/SOURCE_SHA256.json",
+    "bytes": 16039,
+    "sha256": "d2e4cff35e7e524f30c56bd8881fc57b4eb96ee309aee2c66b0de214a8fb3c9a"
+  },
+  "frozen_link02": {
+    "path": "tools/firmware/f4_native_source_02/LINK_INPUT.json",
+    "bytes": 19244,
+    "sha256": "3c0587eec78ff08abec9eead777d2fa2a652357844cb88eda45e6f67bd856871"
+  },
+  "replace_only": {
+    "path": "analysis/firmware/f4_native_source_build_02_release_complete/entry.o",
+    "bytes": 6336,
+    "sha256": "b8cf224ee856d58591cc34591acac892431a220047b7b0ebb52493947d379563",
+    "type": "ET_REL",
+    "machine": 183,
+    "alloc_sections": [
+      {
+        "name": ".text",
+        "type": 1,
+        "flags": 6,
+        "bytes": 1100
+      },
+      {
+        "name": ".bss",
+        "type": 8,
+        "flags": 3,
+        "bytes": 104
+      },
+      {
+        "name": ".eh_frame",
+        "type": 1,
+        "flags": 2,
+        "bytes": 128
+      }
+    ],
+    "relocation_types": [
+      261,
+      275,
+      277,
+      278,
+      283,
+      285,
+      286,
+      311,
+      312
+    ],
+    "undefined_symbols": [
+      "iq4_f4_menu_bind_ports_on_ui_03",
+      "iq4_f4_menu_connect_on_ui_03",
+      "iq4_f4_menu_install_03",
+      "iq4_f4_menu_new_03",
+      "iq4_f4_movie_binding_init_on_ui_02",
+      "iq4_f4_movie_binding_ports_02",
+      "iq4_f4_session_init_on_ui_02",
+      "iq4_f4_session_menu_ports_02",
+      "iq4_f4_session_storage_bytes_02",
+      "iq4_f4_source_init_02",
+      "iq4_f4_source_storage_bytes_02",
+      "iq4_native_self_read_01",
+      "memset"
+    ],
+    "executed": false
+  },
+  "replacement": {
+    "path": "analysis/firmware/f4_native_entry_build_03/entry.o",
+    "bytes": 8576,
+    "sha256": "6545e0a5326e066d537160235630a40234f884538d5da490eeaf16aad6d7ae40",
+    "type": "ET_REL",
+    "machine": 183,
+    "alloc_sections": [
+      {
+        "name": ".text",
+        "type": 1,
+        "flags": 6,
+        "bytes": 1720
+      },
+      {
+        "name": ".bss",
+        "type": 8,
+        "flags": 3,
+        "bytes": 128
+      },
+      {
+        "name": ".eh_frame",
+        "type": 1,
+        "flags": 2,
+        "bytes": 160
+      }
+    ],
+    "relocation_types": [
+      261,
+      275,
+      277,
+      278,
+      283,
+      285,
+      286,
+      311,
+      312
+    ],
+    "undefined_symbols": [
+      "iq4_activity_hold_01",
+      "iq4_activity_release_01",
+      "iq4_activity_try_01",
+      "iq4_activity_valid_01",
+      "iq4_f4_menu_bind_ports_on_ui_03",
+      "iq4_f4_menu_connect_on_ui_03",
+      "iq4_f4_menu_install_03",
+      "iq4_f4_menu_new_03",
+      "iq4_f4_movie_binding_init_on_ui_02",
+      "iq4_f4_movie_binding_ports_02",
+      "iq4_f4_session_init_on_ui_02",
+      "iq4_f4_session_menu_ports_02",
+      "iq4_f4_session_storage_bytes_02",
+      "iq4_f4_source_fence_02",
+      "iq4_f4_source_init_02",
+      "iq4_f4_source_storage_bytes_02",
+      "iq4_native_self_read_01",
+      "memset"
+    ],
+    "executed": false
+  },
+  "other_eight_objects_unchanged": true,
+  "ABI02_unchanged": true,
+  "required_additional_object": "native_activity_01/activity.o (exactly one shared instance)",
+  "additional_aliases": [],
+  "new_BL": [],
+  "actual_combined_activity_tested": false,
+  "camera_access": false,
+  "target_executed": false
+}

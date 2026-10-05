@@ -1,0 +1,47 @@
+STATIC ONLY; linked VAs; nearest exported labels are not recovered private names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000004f90b0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv>:
+  63db5c: f94017e0     	ldr	x0, [sp, #0x28]
+  63db60: 911da004     	add	x4, x0, #0x768
+  63db64: 52800023     	mov	w3, #0x1                // =1
+  63db68: 52800002     	mov	w2, #0x0                // =0
+  63db6c: 90002d20     	adrp	x0, 0xbe1000
+  63db70: 9130e001     	add	x1, x0, #0xc38
+  63db74: aa0403e0     	mov	x0, x4
+  63db78: 97f75df7     	bl	0x415354 <.text+0xa124>
+  63db7c: f94017e0     	ldr	x0, [sp, #0x28]
+  63db80: 91210004     	add	x4, x0, #0x840
+  63db84: 52800023     	mov	w3, #0x1                // =1
+  63db88: 52800002     	mov	w2, #0x0                // =0
+  63db8c: 90002d20     	adrp	x0, 0xbe1000
+  63db90: 91312001     	add	x1, x0, #0xc48
+  63db94: aa0403e0     	mov	x0, x4
+  63db98: 97f75def     	bl	0x415354 <.text+0xa124>
+  63db9c: f94017e0     	ldr	x0, [sp, #0x28]
+  63dba0: 91246004     	add	x4, x0, #0x918
+  63dba4: 52800023     	mov	w3, #0x1                // =1
+  63dba8: 52800002     	mov	w2, #0x0                // =0
+  63dbac: 90002d20     	adrp	x0, 0xbe1000
+  63dbb0: 91318001     	add	x1, x0, #0xc60
+  63dbb4: aa0403e0     	mov	x0, x4
+  63dbb8: 97f75de7     	bl	0x415354 <.text+0xa124>
+  63dbbc: f94017e0     	ldr	x0, [sp, #0x28]
+  63dbc0: 9127c004     	add	x4, x0, #0x9f0
+  63dbc4: 52800023     	mov	w3, #0x1                // =1
+  63dbc8: 52800002     	mov	w2, #0x0                // =0
+  63dbcc: 90002d20     	adrp	x0, 0xbe1000
+  63dbd0: 9131c001     	add	x1, x0, #0xc70
+  63dbd4: aa0403e0     	mov	x0, x4
+  63dbd8: 97f75ddf     	bl	0x415354 <.text+0xa124>
+  63dbdc: f94017e0     	ldr	x0, [sp, #0x28]
+  63dbe0: 912b2004     	add	x4, x0, #0xac8
+  63dbe4: 52800023     	mov	w3, #0x1                // =1
+  63dbe8: 52800002     	mov	w2, #0x0                // =0
+  63dbec: 90002d20     	adrp	x0, 0xbe1000
+  63dbf0: 91320001     	add	x1, x0, #0xc80
+  63dbf4: aa0403e0     	mov	x0, x4
+  63dbf8: 97f75dd7     	bl	0x415354 <.text+0xa124>

@@ -1,0 +1,317 @@
+--- tools/firmware/f1_module_entry_01/module.hpp
++++ tools/firmware/f1_user_ui_entry_01/module.hpp
+@@ -6,10 +6,10 @@
+ namespace iq4::f1::entry01 {
+ using namespace native_ui02;
+ inline constexpr char TemporaryOpenEvent[]="IQ4_F1_OPEN_MASK_01";
+-// This revision's executable stage is observation only. It supplies real native
+-// ports for the separately reviewed selector/geometry binding, never a fake
+-// owner or completion flag. No subscribing, vptr writing or filling occurs.
+-struct ImageGate {bool enabled{},whole_user{},mapped_ro{},original_pthread{};Address bias{};};
++// Firmware derivation: this Module keeps the bounded metadata cap and real
++// native ports. New runtime separately calls the persistent production
++// Binding; this Module itself never subscribes, writes vptrs or fills pixels.
++struct ImageGate {bool enabled{},immutable_stock_code_windows{},mapped_ro{},original_pthread{};Address bias{};};
+ enum class Phase:std::uint32_t {Disabled,Waiting,OwnerObserved,LVNotCurrent,Stopped,Hold};
+ struct StackFacts {
+     Address priority_first{},priority_last{},normal_first{},normal_last{};
+--- tools/firmware/f1_module_entry_01/module.cpp
++++ tools/firmware/f1_user_ui_entry_01/module.cpp
+@@ -25,10 +25,10 @@
+ bool Module::configure(Memory memory,ImageGate gate,int(*trylock)(void*),int(*unlock)(void*))noexcept{
+     if(configured_)return false;configured_=true;memory_=memory;image_=gate;
+     if(!gate.enabled)return true;
+-    if(!gate.whole_user||!gate.mapped_ro||!gate.original_pthread||!memory.read||!trylock||!unlock||
++    if(!gate.immutable_stock_code_windows||!gate.mapped_ro||!gate.original_pthread||!memory.read||!trylock||!unlock||
+        !resolve_static_candidates(memory,gate.bias,candidates_)){observation_.phase=static_cast<unsigned>(Phase::Hold);return false;}
+     // All 19 additional ports are actual exact User input, not addresses from
+-    // another camera/repository. Full User RO verification is required above.
++    // another camera/repository. Exact immutable mapped stock-code windows are verified above.
+     for(const auto&e:entry_ports01::Entries){unsigned char bytes[16]{};if(!memory.read(memory.context,gate.bias+e.captured_va,bytes,16)||std::memcmp(bytes,e.first16,16)){observation_.phase=static_cast<unsigned>(Phase::Hold);return false;}}
+ #define F1_PORT(field,type,va) button_candidates_.field=reinterpret_cast<entry_ports01::type>(gate.bias+va)
+     F1_PORT(text_button_ctor,TextButtonCtor,0x545cf0);F1_PORT(own_popup_ctor,PopupCtor,0x4fad38);
+@@ -87,7 +87,7 @@
+     StackFacts stack{},second_stack{};
+     if(!observe_stack(memory_,image_.bias,boundary.owner,stack)||!observe_stack(memory_,image_.bias,boundary.owner,second_stack)||std::memcmp(&stack,&second_stack,sizeof stack)||!stack.priority_empty||!stack.lv_at_tail){++observation_.rejected_boundaries;inside_.clear(std::memory_order_release);return;}
+     // Genuine original TLS getter is called only at the exact qualified
+-    // dispatch boundary, after full User/mapped-code/pthread verification.
++    // dispatch boundary, after immutable stock-code/mapped-code/pthread verification.
+     if(current(this)!=boundary.owner.queue){observation_.phase=static_cast<unsigned>(Phase::Hold);inside_.clear(std::memory_order_release);return;}
+     LayoutSnapshot layout{};std::int32_t cached_pan[2]{};
+     // +110 is the pan object, not a Point. +118 is its cached point;
+--- tools/firmware/f1_scaler_hook_install_11/entry_binding_10.hpp
++++ tools/firmware/f1_user_ui_entry_01/entry_binding_10.hpp
+@@ -1,12 +1,11 @@
+ #pragma once
+-#include "../f1_module_entry_01/module.hpp"
+-#include "../f1_display_observe_06/observe.hpp"
++#include "module.hpp"
+ #include <array>
+ namespace iq4::f1::entry10 {
+ using namespace native_ui02;
+-// Root must hold these actual constructor/restore admission facts. Default is
+-// OFF; none comes from a successful compile or display scalar publication.
+-struct Admission {bool native_object_construction_reviewed{},registry_quiescence_held{},retain_until_User_exit{},RAM_restore_route_held{};};
++// Computed firmware admission: exact stock windows, actual UI boundary and
++// held original recursive registry mutex. No Root-supplied runtime flags.
++struct Admission {bool immutable_UI_ABI_verified{},actual_registry_mutex_held{},retain_until_User_exit{},stock_fallback_retained{};};
+ struct Placement {std::int32_t x{},y{};};
+ struct Synchronization {int(*try_lock)(void*){};int(*original_unlock)(void*){};};
+ enum class Phase:std::uint32_t {Disabled,Bound,Building,Ready,Open,AwaitingStockPaint,Detaching,DetachedRetained,Hold};
+@@ -15,7 +14,7 @@
+  void*context{};
+  // Concrete future normal-fit display adapter; no full/fresh/lease boolean is
+  // taken here. Must hide on native zoom/pan and retain original paint once.
+- SelectResult(*apply_on_ui)(void*,MaskMode,std::uint64_t request_generation)noexcept{};
++ bool(*apply_on_ui)(void*,MaskMode,std::uint64_t request_generation)noexcept{};
+ };
+ struct Status {std::uint32_t schema{10},bytes{sizeof(Status)},phase{},mask_state_known{},mask_enabled{},reserved{};std::uint64_t callbacks{},open_requests{},selections{},rejected{},generation{},detach_epoch{};MaskMode selected{MaskMode::Off};std::uint32_t retained_until_User_exit{1},stock_toolbar_1_8_preserved{1},embedded_popup_preserved{1},stock_paint_restored{1},ui_mutation_attempted{};};
+ struct Published {std::atomic<unsigned>sequence{0};unsigned bytes{sizeof(Published)};Status metadata{};};
+@@ -26,7 +25,7 @@
+ class Binding {
+ public:
+  Binding()noexcept;
+- bool bind_on_actual_boundary(Memory,entry01::Module&,const BoundaryInput&,Admission,Placement,Selection={},const display06::Collector* = nullptr,Synchronization={})noexcept;
++ bool bind_on_actual_boundary(Memory,entry01::Module&,const BoundaryInput&,Admission,Placement,Selection={},Synchronization={})noexcept;
+  bool build_on_ui()noexcept;
+  bool install_selection_once_on_ui(Selection selection)noexcept;
+  bool after_actual_boundary(const BoundaryInput&,std::uint64_t dispatch_epoch)noexcept;
+@@ -64,7 +63,7 @@
+  static void queue_destroy(Observer*)noexcept;
+  static Address native_current(void*)noexcept;
+  static Triple native_triple(void*,Address,Address,const Observer*)noexcept;
+- Memory memory_{};entry01::Module*module_{};const display06::Collector*display_{};Native native_{};entry_ports01::Candidates ports_{};Owner owner_{};Selection selection_{};Placement placement_{};Status status_{};
++ Memory memory_{};entry01::Module*module_{};Native native_{};entry_ports01::Candidates ports_{};Owner owner_{};Selection selection_{};Placement placement_{};Status status_{};
+  Address resource_{},home_{};std::uint32_t title_{};unsigned registered_{},callback_depth_{};bool open_pending_{},configured_{};std::uint64_t last_paint_{};
+  iq4::f4::bootstrap::Bootstrap listener_inspector_{};
+  ControlTable control_table_{};ControlObserver control_{};ObserverTable queue_table_{};Observer queue_{};
+--- tools/firmware/f1_scaler_hook_install_11/entry_binding_10.cpp
++++ tools/firmware/f1_user_ui_entry_01/entry_binding_10.cpp
+@@ -1,5 +1,4 @@
+ #include "entry_binding_10.hpp"
+-#include "../f1_display_observe_06/native_layout.hpp"
+ #include <cstring>
+ #include <limits>
+ namespace iq4::f1::entry10 {
+@@ -34,13 +33,7 @@
+  Inspector p(memory_,0);Address v{};
+  for(auto check:std::array<std::array<Address,2>,10>{{{owner_.queue,0xb91f48},{owner_.queue+0x1c8,owner_.manager},{owner_.manager,0xb8f358},{owner_.manager+8,owner_.queue},{owner_.queue+0x9b8,owner_.data},{owner_.manager+0x790,owner_.data},{owner_.queue+0x8c0,owner_.lv},{owner_.lv+0xb0,owner_.manager},{owner_.popup,0xb931b0},{owner_.popup+0xb0,owner_.manager}}})if(!p.word(check[0],v)||v!=check[1])return false;
+  if(!p.word(owner_.popup+0x128,v)||v!=0xb90020||!p.word(owner_.lv,v))return false;
+- if(v==0xb9a9d8)return true;
+- if(!display_||v!=display_->shadow_address_point())return false;
+- const auto meta=display_->snapshot();if(meta.owner_before.owner.lv!=owner_.lv||meta.own_shadow_address_point!=v||!meta.own_paint_callback)return false;
+- for(unsigned i=0;i<display06::OriginalLVTable.size();i++){
+-  const Address expected=i==display06::PaintWord?meta.own_paint_callback:display06::OriginalLVTable[i];Address actual{};if(!p.word(v-16+8*i,actual)||actual!=expected)return false;
+- }
+- return true;
++ return v==0xb9a9d8;
+ }
+ bool Binding::boundary_matches(const BoundaryInput&in,Address&popped)const noexcept{
+  Inspector p(memory_,0);Address q{};if(in.original_result||in.caller_pc!=0x6be8ac||!p.word(in.thread_pointer+0x10,q)||q!=owner_.queue||in.mutex!=q+0xf8||!actual_owner())return false;
+@@ -67,19 +60,19 @@
+  }
+  Address again{};return p.word(owner_.lv+0x10,again)&&again==first;
+ }
+-bool Binding::bind_on_actual_boundary(Memory memory,entry01::Module&m,const BoundaryInput&in,Admission permit,Placement placement,Selection selection,const display06::Collector*display,Synchronization sync)noexcept{
+- if(configured_||!permit.native_object_construction_reviewed||!permit.registry_quiescence_held||!permit.retain_until_User_exit||!permit.RAM_restore_route_held||!sync.try_lock||!sync.original_unlock)return false;
++bool Binding::bind_on_actual_boundary(Memory memory,entry01::Module&m,const BoundaryInput&in,Admission permit,Placement placement,Selection selection,Synchronization sync)noexcept{
++ if(configured_||!permit.immutable_UI_ABI_verified||!permit.actual_registry_mutex_held||!permit.retain_until_User_exit||!permit.stock_fallback_retained||!sync.try_lock||!sync.original_unlock)return false;
+  entry01::Observation observed{};Boundary b{};Inspector p(memory,0);
+  if(!m.snapshot(observed)||!observed.qualified_boundaries||observed.caller_pc!=in.caller_pc||observed.frame_pointer!=in.frame_pointer||observed.thread_pointer!=in.thread_pointer||observed.mutex!=in.mutex||!p.boundary(in,b)||b.owner.queue!=observed.queue||b.owner.lv!=observed.lv||in.original_result)return false;
+  auto n=m.selector_ports();auto ports=m.button_ports();if(!n.current_thread||!n.inspect_triple||!n.invalidate||n.current_thread(n.context)!=b.owner.queue||!ports.text_button_ctor||!ports.own_popup_ctor||!ports.control_observer_ctor||!ports.queue_observer_ctor||!ports.event_ctor||!ports.subscribe||!ports.unsubscribe||!ports.notify||!ports.control_bind||!ports.control_attach||!ports.control_detach||!ports.set_menu||!ports.show||!ports.close||!ports.submenu_ctor||!ports.item_ctor||!ports.append_item)return false;
+- memory_=memory;module_=&m;display_=display;native_=n;ports_=ports;owner_=b.owner;placement_=placement;selection_=selection;
++ memory_=memory;module_=&m;native_=n;ports_=ports;owner_=b.owner;placement_=placement;selection_=selection;
+  entry01::StackFacts stack{};if(!entry01::observe_stack(memory_,0,owner_,stack)||!stack.priority_empty||!stack.lv_at_tail||!(stack.normal_count==1||stack.normal_count==2))return false;
+  if(stack.normal_count==2){Address vt{};if(stack.node_vtables[0]!=0xb951f0||!p.word(stack.dialogs[0],vt)||vt!=0xb94fd8)return false;home_=stack.dialogs[0];}
+  Address wrapper{},lvwrapper{},provider{},controlrtti{},queuertti{};
+  if(!p.word(owner_.manager+0x788,wrapper)||!p.word(owner_.lv+0xf0,lvwrapper)||wrapper!=lvwrapper||!p.word(wrapper+0x10,provider)||provider<4096||!p.word(entry_ports01::ControlObserverVT-8,controlrtti)||!p.word(entry_ports01::QueueObserverVT-8,queuertti)||!p.popup_title(owner_,title_)||!p.read(owner_.popup+0x128,stock_menu_head_.data(),stock_menu_head_.size())||!p.read(owner_.popup+0x128+0x300,stock_menu_stack_.data(),stock_menu_stack_.size()))return false;
+  resource_=provider;control_table_.rtti=reinterpret_cast<void*>(controlrtti);queue_table_.rtti=reinterpret_cast<void*>(queuertti);configured_=true;
+  iq4::f4::bootstrap::Native listener_native{};listener_native.try_lock=sync.try_lock;listener_native.unlock=sync.original_unlock;
+- if(!listener_inspector_.configure({memory_.context,memory_.read},listener_native,{false,true,true,true,0})){configured_=false;return false;}
++ if(!listener_inspector_.configure({memory_.context,memory_.read},listener_native,{false,false,false,true,0})){configured_=false;return false;}
+  // Persistent UI ports have their own validated TLS/listener inspector.
+  // Frozen Module's 64-observation cap cannot disable or strand this UI.
+  native_.context=this;native_.current_thread=native_current;native_.inspect_triple=native_triple;
+@@ -161,13 +154,13 @@
+  if(status_.phase!=static_cast<unsigned>(Phase::Open)||!current(true)||status_.generation==UINT64_MAX){++status_.rejected;--callback_depth_;return;}
+  if(!selection_.apply_on_ui&&i!=0){++status_.rejected;--callback_depth_;return;}
+  if(!close_private()){--callback_depth_;return;}++status_.generation;
+- const auto applied=selection_.apply_on_ui?selection_.apply_on_ui(selection_.context,Modes[i],status_.generation):SelectResult::AlreadyOff;
+- if(applied==SelectResult::Rejected){++status_.rejected;status_.phase=static_cast<unsigned>(Phase::Ready);--callback_depth_;return;}
+- if(applied==SelectResult::AlreadyOff&&i!=0){hold();--callback_depth_;return;}
++ const bool applied=selection_.apply_on_ui&&selection_.apply_on_ui(selection_.context,Modes[i],status_.generation);
++ if(!applied){++status_.rejected;status_.phase=static_cast<unsigned>(Phase::Ready);--callback_depth_;return;}
+  status_.selected=Modes[i];++status_.selections;
+  // No success value certifies new sensor frames or a completed image write.
+- status_.stock_paint_restored=applied==SelectResult::AlreadyOff;
+- status_.phase=static_cast<unsigned>(applied==SelectResult::AlreadyOff?Phase::Ready:Phase::AwaitingStockPaint);--callback_depth_;
++ status_.stock_paint_restored=0; // Firmware UI does not issue pixel receipts.
++ status_.mask_state_known=0;status_.mask_enabled=0;
++ status_.phase=static_cast<unsigned>(Phase::Ready);--callback_depth_;
+ }
+ void Binding::control_notify(ControlObserver*o,void*s,const void*e,std::uint32_t t)noexcept{if(o&&o->extension)static_cast<Binding*>(o->extension)->control_notification(s,e,t);}
+ void Binding::control_destroy(ControlObserver*o)noexcept{if(o&&o->extension)static_cast<Binding*>(o->extension)->hold();}
+--- tools/firmware/f1_native_ui_02/ui.cpp
++++ tools/firmware/f1_user_ui_entry_01/inspector.cpp
+@@ -1,4 +1,4 @@
+-#include "ui.hpp"
++#include "../f1_native_ui_02/ui.hpp"
+ #include <cmath>
+ #include <cstring>
+ 
+@@ -6,13 +6,7 @@
+ namespace {
+ bool ptr(Address p)noexcept{return p>=4096&&p<=UINTPTR_MAX-0x2000&&(p&7)==0;}
+ bool same(const Owner&a,const Owner&b)noexcept{return a.queue==b.queue&&a.manager==b.manager&&a.data==b.data&&a.lv==b.lv&&a.popup==b.popup;}
+-constexpr std::array<MaskMode,5>Modes={MaskMode::Off,MaskMode::XPan65_24,MaskMode::Ratio16_9,MaskMode::Ratio3_2,MaskMode::Ratio1_1};
+-constexpr const char* Labels[5]={"Off / native","XPan 65:24","16:9","3:2","1:1"};
+-constexpr const char* EventNames[5]={"IQ4 F1 mask Off","IQ4 F1 mask XPan","IQ4 F1 mask 16:9","IQ4 F1 mask 3:2","IQ4 F1 mask 1:1"};
+-constexpr char ObserverName[]="IQ4 F1 five choice selector";
+-bool contains(native_overlay::PixelRect a,native_overlay::PixelRect b)noexcept{
+-    return a.width>0&&a.height>0&&b.width>0&&b.height>0&&a.x<=b.x&&a.y<=b.y&&std::int64_t(a.x)+a.width>=std::int64_t(b.x)+b.width&&std::int64_t(a.y)+a.height>=std::int64_t(b.y)+b.height;
+-}
++
+ }
+ bool Inspector::read(Address p,void*out,std::size_t n)const noexcept{return memory_.read&&p>=4096&&n&&n<=0x1000&&p<=UINTPTR_MAX-n&&memory_.read(memory_.context,p,out,n);}
+ bool Inspector::word(Address p,Address&v)const noexcept{return read(p,&v,8);}
+@@ -80,140 +74,4 @@
+        !read(o.lv+0x1b8,&out.countdown,4)||!read(o.lv+0x6f,&shown,1)||shown>1||!read(o.lv+0x104,&running,1)||running>1)return false;
+     out.visible=shown;out.live_view_running=running;return true;
+ }
+-Selector::Selector()noexcept:table_{0,nullptr,destroy,destroy,notify}{for(unsigned i=0;i<5;++i)std::strncpy(labels_[i].data(),Labels[i],32);}
+-bool OverlaySelectionBridge::select(void*context,MaskMode mode)noexcept{
+-    auto&bridge=*static_cast<OverlaySelectionBridge*>(context);display::ViewMapping mapping{};std::uint64_t epoch{};
+-    if(!bridge.lv_||!bridge.geometry_.actual_snapshot||!bridge.geometry_.actual_snapshot(bridge.geometry_.context,bridge.lv_,mapping,epoch)||!epoch||!mapping.fullSourceMappingKnown)return false;
+-    const auto result=bridge.overlay_.select_on_ui(mode,mapping,epoch);
+-    return result==native_overlay::Result::Ok||result==native_overlay::Result::Pending;
+ }
+-bool Selector::configure(Memory m,Native n,SelectionPort s,const char*sha,Address bias,const BoundaryInput&in)noexcept{
+-#ifndef IQ4_F1_UI02_SYNTHETIC_HOST
+-    (void)m;(void)n;(void)s;(void)sha;(void)bias;(void)in;return false;
+-#else
+-    if(configured_||!sha||std::strcmp(sha,UserSHA)||!m.read||!n.event_ctor||!n.observer_ctor||!n.subscribe||!n.unsubscribe||!n.submenu_ctor||!n.item_ctor||!n.append||
+-       !n.set_menu||!n.show||!n.close||!n.invalidate||!n.current_thread||!n.inspect_triple||!s.select)return false;
+-    Boundary b{};Inspector inspector(m,bias);if(!inspector.boundary(in,b)||!inspector.idle_popup(b.owner)||!inspector.popup_title(b.owner,original_popup_title_)||n.current_thread(n.context)!=b.owner.queue)return false;
+-    memory_=m;native_=n;selection_=s;bias_=bias;owner_=b.owner;configured_=true;status_.phase=Phase::Bound;return true;
+-#endif
+-}
+-bool Selector::on_ui()const noexcept{return configured_&&native_.current_thread&&native_.current_thread(native_.context)==owner_.queue;}
+-bool Selector::owner(bool popup)const noexcept{return on_ui()&&Inspector(memory_,bias_).current(owner_,popup);}
+-bool Selector::triples(Triple expected)const noexcept{
+-    for(unsigned i=0;i<registered_;++i)if(native_.inspect_triple(native_.context,owner_.queue,event_for_test(i),&observer_)!=expected)return false;
+-    return true;
+-}
+-bool Selector::check_items()const noexcept{
+-    Inspector p(memory_,bias_);Address v{};
+-    std::uint32_t menu_title{};
+-    if(!p.word(menu_for_test(),v)||v!=bias_+0xb8f9b8||!p.read(menu_for_test()+0x14,&menu_title,4)||menu_title!=original_popup_title_)return false;
+-    for(unsigned i=0;i<5;++i){
+-        Address a=reinterpret_cast<Address>(items_[i].data());std::uint32_t id{};
+-        if(!p.word(a,v)||v!=bias_+0xb90748||!p.word(a+0x18,v)||v!=event_for_test(i)||!p.word(a+0x20,v)||v||!p.word(a+0x30,v)||v!=reinterpret_cast<Address>(labels_[i].data())||
+-           !p.read(a+0x14,&id,4)||id!=UINT32_MAX)return false;
+-    }
+-    const Address menu=menu_for_test(),head=menu+0x28;Address first{},last{},prior=head;
+-    if(!p.word(menu+0x18,v)||v!=bias_+0xb8faa0||!p.word(menu+0x20,v)||v!=bias_+0xc22908||!p.word(head,v)||v!=bias_+0xc22960||!p.word(head+8,first)||!p.word(head+16,last))return false;
+-    std::array<bool,5>seen{};
+-    for(unsigned i=0;i<5;++i){
+-        Address next{},prev{},item{};if(!ptr(first)||first==head||!p.word(first,v)||v!=bias_+0xb8f958||!p.word(first+8,next)||!p.word(first+16,prev)||prev!=prior||!p.word(first+24,item))return false;
+-        unsigned k=0;for(;k<5;++k)if(item==reinterpret_cast<Address>(items_[k].data()))break;
+-        if(k==5||seen[k])return false;seen[k]=true;prior=first;first=next;
+-    }return first==head&&prior==last;
+-}
+-Result Selector::build_on_ui()noexcept{
+-    if(!configured_)return Result::Disabled;if(!on_ui())return Result::WrongThread;
+-    if(status_.phase!=Phase::Bound||!Inspector(memory_,bias_).idle_popup(owner_))return Result::Rejected;
+-    status_.phase=Phase::Building;
+-    try{
+-        native_.observer_ctor(&observer_,ObserverName,reinterpret_cast<void*>(owner_.queue));
+-        if(observer_.queue!=reinterpret_cast<void*>(owner_.queue)||observer_.name!=ObserverName){hold();return Result::Hold;}
+-        table_.rtti=reinterpret_cast<void*>(bias_+0xc23ab0);observer_.extension=this;observer_.address_point=&table_.destroy;
+-        // Preserve the observed existing popup header's resource value; no
+-        // invented title/resource ID and no header text replacement.
+-        native_.submenu_ctor(menu_.data(),original_popup_title_,nullptr,nullptr);
+-        for(unsigned i=0;i<5;++i){
+-            native_.event_ctor(events_[i].data(),EventNames[i]);
+-            native_.item_ctor(items_[i].data(),UINT32_MAX,events_[i].data(),nullptr);
+-            // The sole field update is in project-owned native item storage.
+-            const char*label=labels_[i].data();std::memcpy(items_[i].data()+0x30,&label,8);
+-            Inspector p(memory_,bias_);Address vt{};
+-            if(!p.word(event_for_test(i),vt)||vt!=bias_+0xc237a0||native_.inspect_triple(native_.context,owner_.queue,event_for_test(i),&observer_)!=Triple::Absent){hold();return Result::Hold;}
+-            ++registered_;native_.subscribe(&observer_,events_[i].data());
+-            if(!triples(Triple::Present)){hold();return Result::Hold;}
+-            native_.append(menu_.data(),items_[i].data());
+-        }
+-    }catch(...){hold();return Result::Hold;}
+-    if(!check_items()||!owner(false)){hold();return Result::Hold;}
+-    status_.phase=Phase::Ready;return Result::Ok;
+-}
+-Result Selector::open_on_ui()noexcept{
+-    if(!configured_)return Result::Disabled;if(!on_ui())return Result::WrongThread;
+-    if(status_.phase!=Phase::Ready||!Inspector(memory_,bias_).idle_popup(owner_)||!check_items()||!triples(Triple::Present))return Result::Rejected;
+-    try{
+-        // Record intent before a native call; any partial/unknown call retains.
+-        status_.phase=Phase::Open;status_.menu_restored=false;
+-        native_.set_menu(reinterpret_cast<void*>(owner_.popup),menu_.data());
+-        if(!Inspector(memory_,bias_).popup_menu(owner_,menu_for_test())||native_.inspect_triple(native_.context,owner_.queue,menu_for_test()+0x60,reinterpret_cast<const Observer*>(owner_.popup+0x128))!=Triple::Present){hold();return Result::Hold;}
+-        native_.show(reinterpret_cast<void*>(owner_.popup));
+-    }catch(...){hold();return Result::Hold;}
+-    std::uint32_t title{};if(!owner(true)||!Inspector(memory_,bias_).popup_title(owner_,title)||title!=original_popup_title_){hold();return Result::Hold;}return Result::Ok;
+-}
+-Result Selector::restore_popup_on_ui()noexcept{
+-    Inspector p(memory_,bias_);
+-    const bool opened=p.current(owner_,true);
+-    if(!opened&&!p.current(owner_,false)){hold();return Result::Hold;}
+-    status_.phase=Phase::RestoringMenu;
+-    try{
+-        if(opened)native_.close(reinterpret_cast<void*>(owner_.popup));
+-        if(!owner(false)){hold();return Result::Hold;}
+-        native_.set_menu(reinterpret_cast<void*>(owner_.popup),nullptr);
+-    }catch(...){hold();return Result::Hold;}
+-    std::uint32_t title{};
+-    if(!p.idle_popup(owner_)||!p.popup_title(owner_,title)||title!=original_popup_title_||native_.inspect_triple(native_.context,owner_.queue,menu_for_test()+0x60,reinterpret_cast<const Observer*>(owner_.popup+0x128))!=Triple::Absent){hold();return Result::Hold;}
+-    status_.menu_restored=true;return request_repaint_on_ui();
+-}
+-Result Selector::request_repaint_on_ui()noexcept{
+-    if(!owner(false)||generation_==UINT64_MAX){hold();return Result::Hold;}
+-    ++generation_;painting_complete_=false;status_.factory_repaint_confirmed=false;status_.phase=Phase::AwaitingPaint;
+-    try{native_.invalidate(reinterpret_cast<void*>(owner_.lv),false);++status_.repaint_requests;}catch(...){hold();return Result::Hold;}
+-    return Result::Pending;
+-}
+-void Selector::notification(void*event)noexcept{
+-    ++callback_depth_;
+-    if(status_.phase!=Phase::Open||!owner(true)||!triples(Triple::Present)){++status_.rejected;--callback_depth_;return;}
+-    unsigned i=0;for(;i<5;++i)if(reinterpret_cast<Address>(event)==event_for_test(i))break;
+-    if(i==5){++status_.rejected;--callback_depth_;return;}
+-    if(!selection_.select(selection_.context,Modes[i])){hold();--callback_depth_;return;}
+-    status_.selected=Modes[i];++status_.actions;cancelled_=false;(void)restore_popup_on_ui();--callback_depth_;
+-}
+-void Selector::notify(Observer*o,void*e)noexcept{if(o&&o->extension)static_cast<Selector*>(o->extension)->notification(e);}
+-void Selector::destroy(Observer*o)noexcept{if(o&&o->extension)static_cast<Selector*>(o->extension)->hold();}
+-Result Selector::cancel_on_ui()noexcept{
+-    if(!configured_)return Result::Disabled;if(!on_ui())return Result::WrongThread;
+-    if(status_.phase!=Phase::Open)return Result::Rejected;
+-    cancelled_=true;return restore_popup_on_ui(); // Native hardware Back may already have closed it.
+-}
+-Result Selector::observe_paint_on_ui(const PaintReceipt&r)noexcept{
+-    if(!configured_)return Result::Disabled;if(!on_ui())return Result::WrongThread;
+-    if(status_.phase!=Phase::AwaitingPaint||r.lv!=owner_.lv||!r.surface||r.request_generation!=generation_||!r.ui_paint_serial||r.ui_paint_serial<=last_paint_||!owner(false))return Result::Rejected;
+-    last_paint_=r.ui_paint_serial;
+-    if(!r.original_returned_normally||!r.display_lease_live){hold();return Result::Hold;}
+-    if(!r.native_image_blit_completed||!contains(r.actual_stock_coverage,r.image_viewport))return Result::Pending;
+-    painting_complete_=true;++status_.fresh_receipts;status_.factory_repaint_confirmed=status_.selected==MaskMode::Off;
+-    status_.phase=Phase::Ready;return Result::Ok;
+-}
+-Result Selector::detach_on_ui(std::uint64_t epoch)noexcept{
+-    if(!configured_)return Result::Disabled;if(!on_ui())return Result::WrongThread;
+-    if(status_.phase!=Phase::Ready||callback_depth_||epoch==0||!owner(false)||!status_.menu_restored||!painting_complete_||status_.selected!=MaskMode::Off||!status_.factory_repaint_confirmed)return Result::Rejected;
+-    detach_epoch_=epoch;status_.phase=Phase::Detaching;
+-    try{for(unsigned i=0;i<registered_;++i)native_.unsubscribe(&observer_,events_[i].data());}catch(...){hold();return Result::Hold;}
+-    if(!triples(Triple::Absent)){hold();return Result::Hold;}return Result::Pending;
+-}
+-Result Selector::confirm_later_boundary(const BoundaryInput&in,std::uint64_t epoch)noexcept{
+-    if(!configured_)return Result::Disabled;if(!on_ui())return Result::WrongThread;
+-    Boundary b{};Inspector p(memory_,bias_);
+-    if(status_.phase!=Phase::Detaching||epoch<=detach_epoch_||!p.boundary(in,b)||!same(owner_,b.owner)||b.popped_observer==reinterpret_cast<Address>(&observer_)||callback_depth_||!triples(Triple::Absent)||!p.idle_popup(owner_))return Result::Pending;
+-    status_.phase=Phase::DetachedRetained;return Result::Ok;
+-}
+-}

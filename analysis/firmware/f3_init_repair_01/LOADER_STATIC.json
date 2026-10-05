@@ -1,0 +1,72 @@
+{
+  "schema": "iq4_original_loader_bias_01",
+  "loader": {
+    "path": "analysis/firmware/f4_ram_loader_static/ld-2.28.analysis.elf",
+    "bytes": 136792,
+    "sha256": "9be1d9704ad489d8d573f6a9fb851d4522f92481de5795d9defee99ba96dce8f"
+  },
+  "kernel": {
+    "path": "analysis/firmware/kernel.config.txt",
+    "bytes": 115842,
+    "sha256": "da0ad7799b5836a54d4790af89e0215f35aba31821e779d5aaa199b5dbe7fc34"
+  },
+  "runtime_page_bytes": 4096,
+  "library_PT_LOAD_p_align": 65536,
+  "windows": [
+    {
+      "name": "load_segment_alignment",
+      "va": 22852,
+      "bytes": 168,
+      "hex": "a3821c91881b40f9660c40f9c30400d11f0103ea810c00548bb740a9080500d1a9010bcb3f0108ea810e0054c9fa7fd3e60306cb2801168bb001068a6b01068ad106009108ed7cd33f0600f12a03088b306b28f88e2342a94b1100f9ae010e8b63000e8b6600068a46b900a906010d8b460d00f98900005443815df87f0010eb1803801a2301168b800740b9f60311aa2313038b00081e53e029c01a000c0012602800b933ffff17",
+      "sha256": "57a4a026622534040e24f60b3ea59cd67387258a57e649dc0a68174d857d4e02"
+    },
+    {
+      "name": "et_dyn_mapping_and_bias",
+      "va": 22328,
+      "bytes": 140,
+      "hex": "a0d740b91f0c007181450054e00400d1a2821c912e2b40b90401261e0004008b430081522d0340f92113008be00302aae2030e2a251340f9ab5700f93c0c40f9acb300b900d040f99c030dcbe1031caaa7b70ba9a001008aaecb00b9cd43009460a701f91f0400b1acb340b9aecb40b9ab5740f9a7b74ba9000b00540d000dcb00001c8b6d0300f960ab01f9",
+      "sha256": "1122b2b5ef1f56d3d6286b79f0075083ec5d3703f042776ad80eb4fb22d09c3e"
+    },
+    {
+      "name": "mmap_syscall",
+      "va": 91848,
+      "bytes": 80,
+      "hex": "bf2c40f221010054427c4093637c4093847c4093c81b80d2010000d41f0440b1e8000054c0035fd6c10000f0c202805200008092223401b9c0035fd6c10000f0e203004b00008092223401b9c0035fd6",
+      "sha256": "aa9cbc5017d546e843cfa3993b6441271be02f19c6e7492653106e4c9780a3aa"
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x5944",
+        "--stop-address=0x59ec",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_ram_loader_static/ld-2.28.analysis.elf"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x5738",
+        "--stop-address=0x57c4",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_ram_loader_static/ld-2.28.analysis.elf"
+      ],
+      "exit": 0
+    },
+    {
+      "argv": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x166c8",
+        "--stop-address=0x16718",
+        "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f4_ram_loader_static/ld-2.28.analysis.elf"
+      ],
+      "exit": 0
+    }
+  ],
+  "conclusion": "p_align tests file VA/offset congruence; original ET_DYN mapping records unrounded mmap return as load bias",
+  "target_executed": false
+}

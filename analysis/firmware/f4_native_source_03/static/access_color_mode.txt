@@ -1,0 +1,36 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6b6528: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  6b652c: 910003fd     	mov	x29, sp
+  6b6530: f9000fe0     	str	x0, [sp, #0x18]
+  6b6534: b90017e1     	str	w1, [sp, #0x14]
+  6b6538: b90013e2     	str	w2, [sp, #0x10]
+  6b653c: f9400fe0     	ldr	x0, [sp, #0x18]
+  6b6540: b940b000     	ldr	w0, [x0, #0xb0]
+  6b6544: b94017e1     	ldr	w1, [sp, #0x14]
+  6b6548: 6b00003f     	cmp	w1, w0
+  6b654c: 540001c0     	b.eq	0x6b6584 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x161c4>
+  6b6550: b94017e1     	ldr	w1, [sp, #0x14]
+  6b6554: f9400fe0     	ldr	x0, [sp, #0x18]
+  6b6558: 97fffd10     	bl	0x6b5998 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x155d8>
+  6b655c: aa0003e4     	mov	x4, x0
+  6b6560: b0002a80     	adrp	x0, 0xc07000
+  6b6564: 9132a003     	add	x3, x0, #0xca8
+  6b6568: 52802c62     	mov	w2, #0x163              // =355
+  6b656c: b0002a80     	adrp	x0, 0xc07000
+  6b6570: 9127a001     	add	x1, x0, #0x9e8
+  6b6574: 52800040     	mov	w0, #0x2                // =2
+  6b6578: 94023ff5     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  6b657c: 52800000     	mov	w0, #0x0                // =0
+  6b6580: 14000006     	b	0x6b6598 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x161d8>
+  6b6584: f9400fe0     	ldr	x0, [sp, #0x18]
+  6b6588: f9400400     	ldr	x0, [x0, #0x8]
+  6b658c: b94013e1     	ldr	w1, [sp, #0x10]
+  6b6590: 940387de     	bl	0x798508 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7e7dc>
+  6b6594: 52800020     	mov	w0, #0x1                // =1
+  6b6598: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  6b659c: d65f03c0     	ret

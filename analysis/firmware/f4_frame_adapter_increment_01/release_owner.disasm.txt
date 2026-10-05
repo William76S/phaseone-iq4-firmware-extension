@@ -1,0 +1,70 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest-symbol labels are not private-function names.
+SCOPE complete_unwind_function
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6b5c44: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  6b5c48: 910003fd     	mov	x29, sp
+  6b5c4c: f9000bf3     	str	x19, [sp, #0x10]
+  6b5c50: f90017e0     	str	x0, [sp, #0x28]
+  6b5c54: b90027e1     	str	w1, [sp, #0x24]
+  6b5c58: f94017e0     	ldr	x0, [sp, #0x28]
+  6b5c5c: b940b000     	ldr	w0, [x0, #0xb0]
+  6b5c60: b94027e1     	ldr	w1, [sp, #0x24]
+  6b5c64: 6b00003f     	cmp	w1, w0
+  6b5c68: 54000280     	b.eq	0x6b5cb8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x158f8>
+  6b5c6c: b94027e1     	ldr	w1, [sp, #0x24]
+  6b5c70: f94017e0     	ldr	x0, [sp, #0x28]
+  6b5c74: 97ffff49     	bl	0x6b5998 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x155d8>
+  6b5c78: aa0003f3     	mov	x19, x0
+  6b5c7c: f94017e0     	ldr	x0, [sp, #0x28]
+  6b5c80: b940b000     	ldr	w0, [x0, #0xb0]
+  6b5c84: 2a0003e1     	mov	w1, w0
+  6b5c88: f94017e0     	ldr	x0, [sp, #0x28]
+  6b5c8c: 97ffff43     	bl	0x6b5998 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x155d8>
+  6b5c90: aa0003e5     	mov	x5, x0
+  6b5c94: aa1303e4     	mov	x4, x19
+  6b5c98: d0002a80     	adrp	x0, 0xc07000
+  6b5c9c: 912c4003     	add	x3, x0, #0xb10
+  6b5ca0: 52801142     	mov	w2, #0x8a               // =138
+  6b5ca4: d0002a80     	adrp	x0, 0xc07000
+  6b5ca8: 9127a001     	add	x1, x0, #0x9e8
+  6b5cac: 52800040     	mov	w0, #0x2                // =2
+  6b5cb0: 94024227     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  6b5cb4: 1400001f     	b	0x6b5d30 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15970>
+  6b5cb8: b94027e1     	ldr	w1, [sp, #0x24]
+  6b5cbc: f94017e0     	ldr	x0, [sp, #0x28]
+  6b5cc0: 97ffff36     	bl	0x6b5998 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x155d8>
+  6b5cc4: aa0003e3     	mov	x3, x0
+  6b5cc8: d0002a80     	adrp	x0, 0xc07000
+  6b5ccc: 912d6002     	add	x2, x0, #0xb58
+  6b5cd0: 528011c1     	mov	w1, #0x8e               // =142
+  6b5cd4: d0002a80     	adrp	x0, 0xc07000
+  6b5cd8: 9127a000     	add	x0, x0, #0x9e8
+  6b5cdc: 940241f0     	bl	0x74649c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c770>
+  6b5ce0: 52800022     	mov	w2, #0x1                // =1
+  6b5ce4: b94027e1     	ldr	w1, [sp, #0x24]
+  6b5ce8: f94017e0     	ldr	x0, [sp, #0x28]
+  6b5cec: 94000077     	bl	0x6b5ec8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x15b08>
+  6b5cf0: f94017e0     	ldr	x0, [sp, #0x28]
+  6b5cf4: 12800001     	mov	w1, #-0x1               // =-1
+  6b5cf8: b900b001     	str	w1, [x0, #0xb0]
+  6b5cfc: f94017e0     	ldr	x0, [sp, #0x28]
+  6b5d00: f9403403     	ldr	x3, [x0, #0x68]
+  6b5d04: f94017e0     	ldr	x0, [sp, #0x28]
+  6b5d08: f9403400     	ldr	x0, [x0, #0x68]
+  6b5d0c: f9400000     	ldr	x0, [x0]
+  6b5d10: 91012000     	add	x0, x0, #0x48
+  6b5d14: f9400002     	ldr	x2, [x0]
+  6b5d18: 52800001     	mov	w1, #0x0                // =0
+  6b5d1c: aa0303e0     	mov	x0, x3
+  6b5d20: d63f0040     	blr	x2
+  6b5d24: f94017e0     	ldr	x0, [sp, #0x28]
+  6b5d28: 91004000     	add	x0, x0, #0x10
+  6b5d2c: 94017136     	bl	0x712204 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x24184>
+  6b5d30: f9400bf3     	ldr	x19, [sp, #0x10]
+  6b5d34: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  6b5d38: d65f03c0     	ret

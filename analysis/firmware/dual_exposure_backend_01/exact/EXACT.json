@@ -1,0 +1,581 @@
+{
+  "schema": "iq4_dual_ratio_hardware_forward_static_01",
+  "source": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "windows": [
+    {
+      "name": "Main_status",
+      "va": 4301080,
+      "bytes": 24,
+      "file_offset": 106776,
+      "sha256": "fbae47672bdefa0bd74e5cc75921d661f396aec44dc3ce7d1234e10330e6ccd6",
+      "hex_LE": "004882d251bfff97f30300aae00313aa9e9e0694f35f0ef9",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Main_status.asm",
+        "bytes": 477,
+        "sha256": "34fcbc5108ca790f8efc19a88fff85427fa5afae6a87a9c6246cb02d9844ef22"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x41a118",
+        "--stop-address=0x41a130",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Status_dual_fields",
+      "va": 6037012,
+      "bytes": 96,
+      "file_offset": 1842708,
+      "sha256": "7c51d86da5bffd9403142725ee300a8f6ace1c27360685c515b831614bf25b5f",
+      "hex_LE": "01400691e00304aac029f997e11740f9001082d22300008b220080520010241ee02f00f001800691e00303aae3c1f997e11740f9002c82d22400008b23008052020a8052e02f00f001e00691e00304aaae29f99767000014f30300aae11740f9",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Status_dual_fields.asm",
+        "bytes": 1421,
+        "sha256": "b21eff2a13c942b91d328fe92ae47e82405a3014a9ab10bf1b37bbe32e8b50bd"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x5c1e14",
+        "--stop-address=0x5c1e74",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Main_sensors",
+      "va": 4318544,
+      "bytes": 192,
+      "file_offset": 124240,
+      "sha256": "706c341851cdf4b75443983b63b9680a72caabb0c5ac8a89dbb582996367c032",
+      "hex_LE": "f37b03f94d000014a02e00f002600b9121328152a02e00b000003991cc9f0c94003580d23baeff97f30300aae0474ff901200091e0fb4bf9020040f9e0fb4bf9000c40f9e5a74ef9e40300aae3ab4ef9e00313aabce20f94f37b03f937000014a02e00f002c00b91c1328152a02e00b000003991b69f0c94003580d225aeff97f30300aae0474ff901200091e0fb4bf9020040f9e0fb4bf9000c40f9e5a74ef9e40300aae3ab4ef9e00313aab2fc0f94f37b03f921000014e0ab4ef9003440b9",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Main_sensors.asm",
+        "bytes": 2563,
+        "sha256": "aa12d6141ceaa20b098666cc5568c4375d102cf6716b79545986094d51c4f948"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x41e550",
+        "--stop-address=0x41e610",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Main_controller_arguments",
+      "va": 4319300,
+      "bytes": 368,
+      "file_offset": 124996,
+      "sha256": "5d23d64b81e5810fc4519bcda929f94983763f732f9fce4ebe691643551d1613",
+      "hex_LE": "110040f9f27b43f9f3bb43f9e0fb4bf9000c40f9f50300aae7af43f9e0534ef9080440f9e0074cf909a00891e1af43f9003883d22a00008be04b4ef90b200091e04b4ef90c800391e04b4ef90d002691e04b4ef90e602991e04b4ef90fe02c91f0934ff9e1af43f900c883d22600008be04b4ef905e00d91e04b4ef904401191e04b4ef903c01491e1af43f9008d82d22200008be0834ff901800991e0c34ef900602e91e07300f9e0234cf9e06f00f9e16b00f9e07f4af9e06700f9e26300f9e06f4af9e05f00f9e35b00f9e45700f9e55300f9e64f00f9f04b00f9e0634af9e04700f9e0674af9e04300f9e06b4af9e03f00f9ef3b00f9ee3700f9ed3300f9ec2f00f9eb2b00f9e0734af9e02700f9e08f4af9e02300f9e0934af9e01f00f9ea1b00f9e91700f9e81300f9e0434ef9e00f00f9e04f4ef9e00b00f9e70700f9e05f4ef9e00300f9e70315aae67b4af9e5ab4ef9e40313aae30312aae20311aae1b74af9e00314aacde70d94f40f03f9",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Main_controller_arguments.asm",
+        "bytes": 4296,
+        "sha256": "2d0c8cd44866dedc1ff333ef9d20c690014772aaf977c9b44027a944580ba063"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x41e844",
+        "--stop-address=0x41e9b4",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Controller_ctor_arguments",
+      "va": 7964896,
+      "bytes": 108,
+      "file_offset": 3770592,
+      "sha256": "66991dd42032621b1ab2d07ec9d8ee400b5a3fb185be925d4f7a323716b7819f",
+      "hex_LE": "ffc309d1fd7b00a9fd030091f35301a9f30300aa14a00691e827066da800679ec900679eea2f076d4b00679e8a00679eec4300fd2c00679e82008052040080d2c12e00f021c02a91f76303a9f96b04a9fb7305a9fb0303aa03008252f46700f9f93f41f9fa4f41f9f85341f9",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Controller_ctor_arguments.asm",
+        "bytes": 1408,
+        "sha256": "8f24546df5ca553f92192cbdd9453233590e134c88ea7b99b8e356e22a183255"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x7988e0",
+        "--stop-address=0x79894c",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Controller_sensor_field",
+      "va": 7967456,
+      "bytes": 44,
+      "file_offset": 3773152,
+      "sha256": "22d18b5566aeb9cd74e90da0d9be2d6e87cf151a24d5f28ec4e75daf1c73e127",
+      "hex_LE": "430080d26c5610fd850080526b5a10fd2400c0d26a5e10fd084f84d2686210fd6300c0f27b6610f96002088b",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Controller_sensor_field.asm",
+        "bytes": 769,
+        "sha256": "d5a317da9f6c8ac14be1ffb0f7c877c65172ddfde39f6034fd4796ed74ac2b74"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x7992e0",
+        "--stop-address=0x79930c",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Controller_status_field",
+      "va": 7967624,
+      "bytes": 144,
+      "file_offset": 3773320,
+      "sha256": "cc5292ef6ec8643e177a9f63d79d5b2e5d254d3725ffdcc9c4cb25fb6bbe2ae9",
+      "hex_LE": "7b02048b05ec88d20004004f6002058be13b41fd7f4316f878ba23f9e21f8052e34741f96083973c410080522204084e78c623f9e14341fd78d223f960e6913d74224091221f184e60839a3c79124091064090d22104084e7fde23f962631db87ff623f9019000b9210080d2611c184e2300805223eb0f797ffe23f91fa000b96002068be28341f982828e3c81828f3c",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Controller_status_field.asm",
+        "bytes": 1944,
+        "sha256": "f2c40f48cf9be11aaf783419514b050156ee3487776bbdd0437053cbd1730d50"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x799388",
+        "--stop-address=0x799418",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Controller_ratio_subscription",
+      "va": 7968076,
+      "bytes": 48,
+      "file_offset": 3773772,
+      "sha256": "074e96ed6510727ad038a9f0507d0f0e71faf8338505ce15a1314e53630018a1",
+      "hex_LE": "e20313aaf5dbfd97001180d242c2f197817640f9031182d2f80300aae20313aa2100038beddbfd97210080d29ffe0ba9",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Controller_ratio_subscription.asm",
+        "bytes": 989,
+        "sha256": "0b2dc7657c591211e3263a2fe7f3e239a7ee4c74e5eb3d5488ddc437b41e49d7"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x79954c",
+        "--stop-address=0x79957c",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Controller_initial_ratio",
+      "va": 7945200,
+      "bytes": 56,
+      "file_offset": 3750896,
+      "sha256": "6ac2f0c5fc96c8d0c8cd5e855502443edaba04d885806c7e3ecea1f283e5dbbe",
+      "hex_LE": "615000f8c1edfd97616650f9827640f9e00301aa210040f9404051bd214040f920003fd6645a50f903008052228f805201008052e00304aa",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Controller_initial_ratio.asm",
+        "bytes": 947,
+        "sha256": "58534419ec8d1ec58e959162c781e4294703caf5b242a3288f9bf0e2a5b000ee"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x793bf0",
+        "--stop-address=0x793c28",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Controller_ratio_event",
+      "va": 7981832,
+      "bytes": 176,
+      "file_offset": 3787528,
+      "sha256": "35f9b1d1d8be3795266168c1ebf8651db0baed663b099d993f4503f2b1f01fe2",
+      "hex_LE": "fd7bb6a90bfa83d2fd030091f35301a9f30300aaf55b02a9f60301aa01000b8bdf0201eb002100540a2883d275020a8b74224091bf0216ebe01e0054807640f9091182d20100098bdf0201eb2002005460024b39e0020034604e50f9000400b476022391c0024339c0000034f76303a977a21f91e0024339c0060035f76343a9f35341a9f55b42a9fd7bcaa8c0035fd6616650f9004051bde00301aa210040f9214040f920003fd660024b3960fdff35",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Controller_ratio_event.asm",
+        "bytes": 2742,
+        "sha256": "669b977f4c860aa4ea01bb998ed8b423142aeac8aa6edc49d04c137673c6be37"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x79cb08",
+        "--stop-address=0x79cbb8",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Sensor_ratio_setter",
+      "va": 8447892,
+      "bytes": 108,
+      "file_offset": 4253588,
+      "sha256": "4f5c91a310bbc009c48fbca2cfb363db88ea5ba7174429843a41ddb3f3982d34",
+      "hex_LE": "ff4300d1e00700f9e00700bde00740bd1820201ea8000054e00740f900102e1e003801bd0e000014e10740bd00102e1e3020201ee5000054e00740bd01102e1e2018201ee00740f9003801bd04000014e00740f9e10740b9013801b91f2003d5ff430091c0035fd6ff4300d1",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Sensor_ratio_setter.asm",
+        "bytes": 1605,
+        "sha256": "77c0286c1db9b0a87b4aa4b3ee21f4d13cc6782d9d622fa36ae17d1af91ad4cc"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x80e794",
+        "--stop-address=0x80e800",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "IMX411_ratio_product",
+      "va": 8530652,
+      "bytes": 40,
+      "file_offset": 4336348,
+      "sha256": "996c1397f713c87604a0aee5bb0db1950ca279a14ff09df1aa9e463bcf57162b",
+      "hex_LE": "e01740b90100231ee00f40f9003841bd2008201e0000391ee05700b9e00f40f900a840f900084039",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/IMX411_ratio_product.asm",
+        "bytes": 625,
+        "sha256": "c83b20a3f73e017f8e47b3316d0324e2b17b68b1ff1877cfd14266807b4eecae"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x822adc",
+        "--stop-address=0x822b04",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "IMX461_ratio_product",
+      "va": 8503744,
+      "bytes": 40,
+      "file_offset": 4309440,
+      "sha256": "996c1397f713c87604a0aee5bb0db1950ca279a14ff09df1aa9e463bcf57162b",
+      "hex_LE": "e01740b90100231ee00f40f9003841bd2008201e0000391ee05700b9e00f40f900a840f900084039",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/IMX461_ratio_product.asm",
+        "bytes": 625,
+        "sha256": "0f3c4709447b607f8baff57f9d2d29989557926075427db4a0b4f54f5e383a1a"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x81c1c0",
+        "--stop-address=0x81c1e8",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Ratio_config",
+      "va": 6042708,
+      "bytes": 176,
+      "file_offset": 1848404,
+      "sha256": "d24437f76e489374d9bbbeac228ba543b249968559722ac7973eeb44bf198fdd",
+      "hex_LE": "e12740f9006e82d23300008be12340f9001082d23400008b000180d27c1af997f50300aae00315aa4a010094e60315aa0500805284008052604c00f003c02d9182748052e10314aae00313aabf010094e12740f9008d82d23400008be12340f9002c82d23500008b2033009000500691160040b9000180d2651af997f30300aa7f0200f9e00313aa05010094e60313aa05008052e403162a003300f00360139182018052e10315aae00314aa4e650594",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Ratio_config.asm",
+        "bytes": 2447,
+        "sha256": "e7d1dbfb82606c582fc84f64ed0a85ad25400af471a0d114814c564d2c36ac89"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x5c3454",
+        "--stop-address=0x5c3504",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Float_current_getter",
+      "va": 4399892,
+      "bytes": 56,
+      "file_offset": 205588,
+      "sha256": "c9a6551ffd43268402ca0f604739e4b183e30c7cd518ab8e2afb6233ee503f03",
+      "hex_LE": "fd7bbda9fd030091e00f00f9e0830091fb67ff97e00f40f900c040b9e02f00b9e08300910268ff97e02f40b90000271efd7bc3a8c0035fd6",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Float_current_getter.asm",
+        "bytes": 806,
+        "sha256": "006c383d845bae92acf0eadf14876d747bb10d6bb3e8eba2a8e905a019757b78"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x432314",
+        "--stop-address=0x43234c",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Float_setter",
+      "va": 4461420,
+      "bytes": 128,
+      "file_offset": 267116,
+      "sha256": "1f34abf3349d00cfc0ba76fe422cf1a85fe5f912350e8ecbb204a23c2fb8396f",
+      "hex_LE": "fd7bbca9fd030091f30b00f9e01700f9e02700bde0e30091e32bff97e01740f900c840b91f04007101010054e01740f900c040bde12740bd2020201e610000541300805205000014e01740f9e12740b901c000b933008052e0e30091de2bff977f06007181000054e01740f900200091c7370b94f30b40f9fd7bc4a8c0035fd6",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Float_setter.asm",
+        "bytes": 2063,
+        "sha256": "602d8ce78113b5db9d6293fa4a75d955fb372371c15ba59a7183504ed324fa3f"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x44136c",
+        "--stop-address=0x4413ec",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "U32_current_getter",
+      "va": 4245632,
+      "bytes": 52,
+      "file_offset": 51328,
+      "sha256": "73a68ba6757c289b417a6fe17b5c7e595f1dd3e9664409075af823ea46dd0fa3",
+      "hex_LE": "fd7bbda9fd030091e00f00f9e0830091a0feff97e00f40f900c040b9e02f00b9e0830091a7feff97e02f40b9fd7bc3a8c0035fd6",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/U32_current_getter.asm",
+        "bytes": 712,
+        "sha256": "2ab2a0704d4f72b100b90c7998d86c8589cfdd053e7b0f0378f53ffc2af45ec6"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x40c880",
+        "--stop-address=0x40c8b4",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Original_dual_update",
+      "va": 5473484,
+      "bytes": 440,
+      "file_offset": 1279180,
+      "sha256": "1f6d6c2f4f8fdf9b471b3831d8bf88c90237ed1dabfa1b39cbcb3879489d935c",
+      "hex_LE": "fd7bbaa9fd030091e00f00f9e00f40f9005840f953a5fe97001840f9e02b00f9e02b40f900a00391e350fb97e04f00b9e04f40b90e8c0794e04b00bde12b40f9002c82d22000008bdb50fb97e02f00b9e12b40f9001082d22000008b7be7fb970140201ee04b40bd0008211ee04700bde04740bdb18c0794e02f00b9e00f40f902f041f9e00f40f900f041f9000040f900e00391010040f9e00302aa20003fd6e02b00b9e00f40f902f041f9e00f40f900f041f9000040f900000491010040f9e00302aa20003fd6e02700b9e1b30091e0a300919617fd97000040b9e02f00b9e1930091e0b30091cb9efc97000040b9e02f00b9e12b40f9002c82d22000008be12f40b9b950fb97e02f40b9e14f40b92000004b0100221e0010251e2018201ee04300bde00f40f9005840f9d0f8fe97e01f00f9e01f40f9000840f9e01b00f9e01b40f9000040f900400091020040f9618c8052e01b40f940003fd6e02f00f9e02f40f91f0000f181000054403300d000401391e02f00f9e04340bd00c0221ee22f40f9010480d280cb019000a005913546fb97e00f40f902e441f980cb019001a00591e00302aa277dfc971f2003d5fd7bc6a8c0035fd6",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Original_dual_update.asm",
+        "bytes": 5652,
+        "sha256": "ab0f717159c22a8e10be84b5d244d3aea106ac7e39e65c406ea66919b75de8b2"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x5384cc",
+        "--stop-address=0x538684",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Native_base_bounds",
+      "va": 5473924,
+      "bytes": 464,
+      "file_offset": 1279620,
+      "sha256": "9bf041dd560a36092d8cab78f45b0f2d24b89232858d601a4b0ecab5f94ad10f",
+      "hex_LE": "fd7bbba9fd030091f30b00f9e01700f9e01740f9005840f9e4a4fe97011040f900c884d22000008b1f71fb97e04f00b9e04f40b91f00007101010054403300d002601391215e8052403300d000400d91723708945c000014e04f40b90000231e408fa8520100271e0018211ee04b00bde04b40bd438c0794e03f00b9e03f40b98d8b0794e04700bde14740bde04b40bd3020201e49010054e03f40b900080011e03f00b9e04f40b90000231ee14740bd3020201e6d000054f1ffff171f2003d5e13f40b9e01740f9011804b9e01740f9010844b9e01740f9011c04b9e01740f92100805201401039e01740f904ec41f9e01740f900ec41f9000040f900c00391030040f9e01740f9011844b9e01740f9001c44b9e203002ae00304aa60003fd6e01740f902501091e01740f900201091e10300aae00302aa499efc97e10300aae0f300910c17fd97000040b9e04300b9e01740f902ec41f9e01740f900ec41f9000040f900600491010040f9e00302aa20003fd6e30300aa600040f900200191020040f9e14340b9e00303aa40003fd6e01740f9005840f984a4fe97001840f913c02991e01740f901301091e0f30091f116fd97000040b9e103002ae00313aa1c50fb97f30b40f9fd7bc5a8c0035fd6",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Native_base_bounds.asm",
+        "bytes": 6043,
+        "sha256": "a75b0d8be36650e8ccb356b92264e1c90d9b8ae7d350f0d2ac4db8dd573f4719"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x538684",
+        "--stop-address=0x538854",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Main_sequence_group",
+      "va": 4301244,
+      "bytes": 24,
+      "file_offset": 106940,
+      "sha256": "1da48c6b7769d2de5bafadc82e6d4f70c037ffb77e6871218603732d15b4b9b1",
+      "hex_LE": "002982d228bfff97f30300aae00313aadc7e0794f3470ef9",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Main_sequence_group.asm",
+        "bytes": 478,
+        "sha256": "fd5ee4dd901a4d59ddae94da5d24e3b545e787d8f753c8fa4e152b04ad94881c"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x41a1bc",
+        "--stop-address=0x41a1d4",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Main_CoreUiData_sequence",
+      "va": 4353512,
+      "bytes": 8,
+      "file_offset": 159208,
+      "sha256": "709447bde76a09e08212998bd376f644799038ac5b337c669d4134df91318b23",
+      "hex_LE": "e6474ef9e62701f9",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Main_CoreUiData_sequence.asm",
+        "bytes": 231,
+        "sha256": "301d706b588b67d55a94a61fc55c810cb1c561e42430c0ed88153002e41c7293"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x426de8",
+        "--stop-address=0x426df0",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "CoreUiData_sequence_field",
+      "va": 4395568,
+      "bytes": 12,
+      "file_offset": 201264,
+      "sha256": "3db9b5c73444cb9bf809645155456384784a3d347ceea0494ed6b2ba6cec53e6",
+      "hex_LE": "e01f40f9e14741f9013c01f9",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/CoreUiData_sequence_field.asm",
+        "bytes": 274,
+        "sha256": "bebff8cafb77236e84c7085088274e8195179d78c63ea3d27685babf543d4a78"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x431230",
+        "--stop-address=0x43123c",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Dual_busy_pointer",
+      "va": 5465256,
+      "bytes": 24,
+      "file_offset": 1270952,
+      "sha256": "a74fdd286859b794f69e325300cf0567995080b1c46a7c9c82b5ab4458048faa",
+      "hex_LE": "e04f40f960adfe97003c41f901600a91e05740f901c001f9",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Dual_busy_pointer.asm",
+        "bytes": 542,
+        "sha256": "2181f911b8ccf7bf660a44b12a985ec14bd45260ccc119e3c79fcfe310c0f46f"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x5364a8",
+        "--stop-address=0x5364c0",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "Dual_busy_dispatch",
+      "va": 5470432,
+      "bytes": 120,
+      "file_offset": 1276128,
+      "sha256": "257d493f258f299a142ec1e1668570efa6ccb10ab3094e5170a3ddbbac78e074",
+      "hex_LE": "fd7bbda9fd030091e01700f9e11300f9e20f00f9e31700b9e01740f902c041f9e01740f900c041f9000040f900000191010040f9e00302aa20003fd6001c00121f000071810d0054e01740b91f04007160060054e01740b91f00007100010054e01740b91f080071e0080054e01740b91f0c0071400a0054",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/Dual_busy_dispatch.asm",
+        "bytes": 1779,
+        "sha256": "fbf0d74404936ff5b8439469ff0447a91539a2375895a13fe471a0b34da675c5"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x5378e0",
+        "--stop-address=0x537958",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    },
+    {
+      "name": "RunningSequence_ctor",
+      "va": 6266172,
+      "bytes": 160,
+      "file_offset": 2071868,
+      "sha256": "57f35e4709f602fa620cadc64743db101e643506d140e85144e8538808a75c9b",
+      "hex_LE": "fd7bbda9fd030091f30b00f9e01700f9a02e00f001e02891e01740f9010000f9e01740f9042000912300805202008012a02e00f001401d91e00304aa71010094e01740f904a003912300805202008052a02e00f001a01d91e00304aa6f6df897e01740f9040007912300805222008052a02e00f001e01d91e00304aa676df897e01740f904600a912300805202008052a02e00f001401e91e00304aa5f6df897",
+      "disassembly": {
+        "path": "analysis/firmware/dual_exposure_backend_01/exact/RunningSequence_ctor.asm",
+        "bytes": 2093,
+        "sha256": "b37a862dbf6c5b59aad5893caa088c736dda68a41e3e3086d46e0214e73295cd"
+      },
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+        "-d",
+        "--start-address=0x5f9d3c",
+        "--stop-address=0x5f9ddc",
+        "analysis/firmware/extracted/P1Linux_6.03.21.bin"
+      ]
+    }
+  ],
+  "sensor_vtables": [
+    {
+      "vtable": 14210368,
+      "RTTI": 14210664,
+      "name_va": 14210688,
+      "name": "11ISCtrl_Sony",
+      "slot80": 8447892,
+      "window_va": 14210352,
+      "bytes": 152,
+      "file_offset": 10016048,
+      "hex_LE": "000000000000000068d6d8000000000030ad40000000000030ad40000000000030ad400000000000f0da80000000000034f180000000000068f180000000000030ad4000000000003ce2800000000000f4de80000000000030ad40000000000030ad400000000000fce780000000000010e8800000000000c8e680000000000094f9800000000000acf980000000000094e7800000000000",
+      "sha256": "6acb53017c3b8febc39e5ce855f5427b39e02e6017f4113112f75b0f81239c69"
+    },
+    {
+      "vtable": 14211288,
+      "RTTI": 14211584,
+      "name_va": 14211608,
+      "name": "13ISCtrl_IMX161",
+      "slot80": 8447892,
+      "window_va": 14211272,
+      "bytes": 152,
+      "file_offset": 10016968,
+      "hex_LE": "000000000000000000dad80000000000e4058100000000007c04810000000000e406810000000000f0da80000000000034f180000000000068f1800000000000740d8100000000003ce2800000000000f4de800000000000680c8100000000006817810000000000fce780000000000010e8800000000000ac1181000000000094f9800000000000acf980000000000094e7800000000000",
+      "sha256": "4dee33b81552dc03a2e9260ee4a5f7b257b8d0f9527a3ebe98e8132c6644ffb1"
+    },
+    {
+      "vtable": 14212504,
+      "RTTI": 14212800,
+      "name_va": 14212824,
+      "name": "13ISCtrl_IMX211",
+      "slot80": 8447892,
+      "window_va": 14212488,
+      "bytes": 152,
+      "file_offset": 10018184,
+      "hex_LE": "0000000000000000c0ded80000000000043981000000000074368100000000009839810000000000f0da80000000000034f180000000000068f180000000000074458100000000003ce2800000000000f4de8000000000004c44810000000000a851810000000000fce780000000000010e8800000000000e04a81000000000094f9800000000000acf980000000000094e7800000000000",
+      "sha256": "7c51258dca4822f871ce78bd5c2999d0a09774fabdc113105773b9af6fbfc545"
+    },
+    {
+      "vtable": 14216928,
+      "RTTI": 14217224,
+      "name_va": 14217248,
+      "name": "13ISCtrl_IMX461",
+      "slot80": 8447892,
+      "window_va": 14216912,
+      "bytes": 152,
+      "file_offset": 10022608,
+      "hex_LE": "000000000000000008f0d800000000001c96810000000000108f810000000000349b810000000000f0da80000000000034f180000000000068f18000000000004cae8100000000003ce2800000000000f4de800000000000a0ac810000000000bccf81000000000000d78100000000006cd781000000000044b881000000000094f9800000000000acf980000000000094e7800000000000",
+      "sha256": "6a6c361bbd49a450645caa4fcf814c05867ec808734549457427fb87fe91e66a"
+    },
+    {
+      "vtable": 14221352,
+      "RTTI": 14221648,
+      "name_va": 14221672,
+      "name": "13ISCtrl_IMX411",
+      "slot80": 8447892,
+      "window_va": 14221336,
+      "bytes": 152,
+      "file_offset": 10027032,
+      "hex_LE": "00000000000000005001d900000000005001820000000000dcf98100000000006806820000000000f0da80000000000034f180000000000068f180000000000068178200000000003ce2800000000000f4de800000000000bc1582000000000038388200000000000c558200000000007855820000000000602182000000000094f9800000000000acf980000000000094e7800000000000",
+      "sha256": "23528cc0ab5469e090507f6f2e5098978db4b46c8da6ec523862ace61ac1e4f2"
+    }
+  ],
+  "RunningSequence_string": {
+    "va": 12388240,
+    "bytes": 16,
+    "file_offset": 8193936,
+    "hex_LE": "52756e6e696e6753657175656e636500"
+  },
+  "level": "static_analysis",
+  "target_executed": false,
+  "camera_accessed": false
+}

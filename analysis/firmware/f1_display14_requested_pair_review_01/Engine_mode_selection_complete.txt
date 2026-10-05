@@ -1,0 +1,82 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no camera access or target execution.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  7973c0: a9b97bfd     	stp	x29, x30, [sp, #-0x70]!
+  7973c4: 910003fd     	mov	x29, sp
+  7973c8: a90153f3     	stp	x19, x20, [sp, #0x10]
+  7973cc: 91401014     	add	x20, x0, #0x4, lsl #12  // =0x4000
+  7973d0: 52800013     	mov	w19, #0x0               // =0
+  7973d4: a9025bf5     	stp	x21, x22, [sp, #0x20]
+  7973d8: aa0003f5     	mov	x21, x0
+  7973dc: 2a0103f6     	mov	w22, w1
+  7973e0: f9001bf7     	str	x23, [sp, #0x30]
+  7973e4: 2a0203f7     	mov	w23, w2
+  7973e8: 910123e2     	add	x2, sp, #0x48
+  7973ec: 7100067f     	cmp	w19, #0x1
+  7973f0: f95062a0     	ldr	x0, [x21, #0x20c0]
+  7973f4: 54000620     	b.eq	0x7974b8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d78c>
+  7973f8: 71000a7f     	cmp	w19, #0x2
+  7973fc: 54000381     	b.ne	0x79746c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d740>
+  797400: 528000a1     	mov	w1, #0x5                // =5
+  797404: 97f2dd6b     	bl	0x44e9b0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x18a04>
+  797408: b9405fe1     	ldr	w1, [sp, #0x5c]
+  79740c: b9478280     	ldr	w0, [x20, #0x780]
+  797410: 53017c21     	lsr	w1, w1, #1
+  797414: 6b01001f     	cmp	w0, w1
+  797418: 54000169     	b.ls	0x797444 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d718>
+  79741c: bd478681     	ldr	s1, [x20, #0x784]
+  797420: 1e220002     	scvtf	s2, w0
+  797424: 1e220020     	scvtf	s0, w1
+  797428: 2a0103e0     	mov	w0, w1
+  79742c: b9078281     	str	w1, [x20, #0x780]
+  797430: 5e21d821     	scvtf	s1, s1
+  797434: 1e221821     	fdiv	s1, s1, s2
+  797438: 1e210800     	fmul	s0, s0, s1
+  79743c: 1e380001     	fcvtzs	w1, s0
+  797440: b9078681     	str	w1, [x20, #0x784]
+  797444: b9404fe1     	ldr	w1, [sp, #0x4c]
+  797448: 1ac10800     	udiv	w0, w0, w1
+  79744c: 6b0002df     	cmp	w22, w0
+  797450: 540001c9     	b.ls	0x797488 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d75c>
+  797454: 528000a0     	mov	w0, #0x5                // =5
+  797458: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  79745c: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+  797460: f9401bf7     	ldr	x23, [sp, #0x30]
+  797464: a8c77bfd     	ldp	x29, x30, [sp], #0x70
+  797468: d65f03c0     	ret
+  79746c: 52800061     	mov	w1, #0x3                // =3
+  797470: 97f2dd50     	bl	0x44e9b0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x18a04>
+  797474: b9478280     	ldr	w0, [x20, #0x780]
+  797478: b9404fe1     	ldr	w1, [sp, #0x4c]
+  79747c: 1ac10800     	udiv	w0, w0, w1
+  797480: 6b16001f     	cmp	w0, w22
+  797484: 540000c3     	b.lo	0x79749c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d770>
+  797488: b9478680     	ldr	w0, [x20, #0x784]
+  79748c: b94053e1     	ldr	w1, [sp, #0x50]
+  797490: 1ac10800     	udiv	w0, w0, w1
+  797494: 6b17001f     	cmp	w0, w23
+  797498: 54000222     	b.hs	0x7974dc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d7b0>
+  79749c: 11000673     	add	w19, w19, #0x1
+  7974a0: 71000e7f     	cmp	w19, #0x3
+  7974a4: 54fffd80     	b.eq	0x797454 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d728>
+  7974a8: 910123e2     	add	x2, sp, #0x48
+  7974ac: 7100067f     	cmp	w19, #0x1
+  7974b0: f95062a0     	ldr	x0, [x21, #0x20c0]
+  7974b4: 54fffa21     	b.ne	0x7973f8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d6cc>
+  7974b8: 52800081     	mov	w1, #0x4                // =4
+  7974bc: 97f2dd3d     	bl	0x44e9b0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x18a04>
+  7974c0: b9478280     	ldr	w0, [x20, #0x780]
+  7974c4: b9404fe1     	ldr	w1, [sp, #0x4c]
+  7974c8: 1ac10800     	udiv	w0, w0, w1
+  7974cc: 6b0002df     	cmp	w22, w0
+  7974d0: 54fffdc9     	b.ls	0x797488 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d75c>
+  7974d4: 52800053     	mov	w19, #0x2               // =2
+  7974d8: 17ffffc4     	b	0x7973e8 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d6bc>
+  7974dc: b9404be0     	ldr	w0, [sp, #0x48]
+  7974e0: 17ffffde     	b	0x797458 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d72c>
+  7974e4: d503201f     	nop

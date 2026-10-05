@@ -1,0 +1,53 @@
+Exact User SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution.
+  70bb78: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  70bb7c: 910003fd     	mov	x29, sp
+  70bb80: f9000fe0     	str	x0, [sp, #0x18]
+  70bb84: f9000be1     	str	x1, [sp, #0x10]
+  70bb88: f9400be0     	ldr	x0, [sp, #0x10]
+  70bb8c: f100001f     	cmp	x0, #0x0
+  70bb90: 54000141     	b.ne	0x70bbb8
+  70bb94: 52800a03     	mov	w3, #0x50
+  70bb98: f00028a0     	adrp	x0, 0xc22000
+  70bb9c: 91228002     	add	x2, x0, #0x8a0
+  70bba0: f00028a0     	adrp	x0, 0xc22000
+  70bba4: 91230001     	add	x1, x0, #0x8c0
+  70bba8: f00028a0     	adrp	x0, 0xc22000
+  70bbac: 91234000     	add	x0, x0, #0x8d0
+  70bbb0: 97f3fa74     	bl	0x40a580
+  70bbb4: 940182d5     	bl	0x76c708
+  70bbb8: f9400be2     	ldr	x2, [sp, #0x10]
+  70bbbc: f9400be0     	ldr	x0, [sp, #0x10]
+  70bbc0: f9400000     	ldr	x0, [x0]
+  70bbc4: 91004000     	add	x0, x0, #0x10
+  70bbc8: f9400001     	ldr	x1, [x0]
+  70bbcc: aa0203e0     	mov	x0, x2
+  70bbd0: d63f0020     	blr	x1
+  70bbd4: f9400be0     	ldr	x0, [sp, #0x10]
+  70bbd8: f9400fe1     	ldr	x1, [sp, #0x18]
+  70bbdc: f9000401     	str	x1, [x0, #0x8]
+  70bbe0: f9400be0     	ldr	x0, [sp, #0x10]
+  70bbe4: f9400fe1     	ldr	x1, [sp, #0x18]
+  70bbe8: f9400821     	ldr	x1, [x1, #0x10]
+  70bbec: f9000801     	str	x1, [x0, #0x10]
+  70bbf0: f9400fe0     	ldr	x0, [sp, #0x18]
+  70bbf4: f9400800     	ldr	x0, [x0, #0x10]
+  70bbf8: f9400be1     	ldr	x1, [sp, #0x10]
+  70bbfc: f9000401     	str	x1, [x0, #0x8]
+  70bc00: f9400be1     	ldr	x1, [sp, #0x10]
+  70bc04: f9400fe0     	ldr	x0, [sp, #0x18]
+  70bc08: f9000801     	str	x1, [x0, #0x10]
+  70bc0c: d503201f     	nop
+  70bc10: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  70bc14: d65f03c0     	ret
+  70bc18: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  70bc1c: 910003fd     	mov	x29, sp
+  70bc20: f9000fe0     	str	x0, [sp, #0x18]
+  70bc24: f9000be1     	str	x1, [sp, #0x10]
+  70bc28: f9400fe0     	ldr	x0, [sp, #0x18]
+  70bc2c: 91002000     	add	x0, x0, #0x8
+  70bc30: f9400be1     	ldr	x1, [sp, #0x10]
+  70bc34: 97ffffd1     	bl	0x70bb78
+  70bc38: d503201f     	nop
+  70bc3c: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  70bc40: d65f03c0     	ret

@@ -1,0 +1,25 @@
+analysis/firmware/f4_ram_loader_static/ld-2.28.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000013ec0 <_dl_var_init>:
+   14af0:      	ldr	x1, [x0]
+   14af4:      	mov	x3, x0
+   14af8:      	ldr	x0, [x1]
+   14afc:      	cbnz	x0, 0x14b0c <_dl_var_init+0xc4c>
+   14b00:      	b	0x14b3c <_dl_var_init+0xc7c>
+   14b04:      	ldr	x0, [x1, #0x8]!
+   14b08:      	cbz	x0, 0x14b3c <_dl_var_init+0xc7c>
+   14b0c:      	ldrb	w2, [x0]
+   14b10:      	cmp	w2, #0x4c
+   14b14:      	b.ne	0x14b04 <_dl_var_init+0xc44>
+   14b18:      	ldrb	w2, [x0, #0x1]
+   14b1c:      	cmp	w2, #0x44
+   14b20:      	b.ne	0x14b04 <_dl_var_init+0xc44>
+   14b24:      	ldrb	w2, [x0, #0x2]
+   14b28:      	cmp	w2, #0x5f
+   14b2c:      	b.ne	0x14b04 <_dl_var_init+0xc44>
+   14b30:      	add	x0, x0, #0x3
+   14b34:      	add	x1, x1, #0x8
+   14b38:      	str	x1, [x3]
+   14b3c:      	ret

@@ -1,0 +1,165 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; private nearest-symbol labels are not authoritative.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000008443c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_>:
+  870a2c: a9bb7bfd     	stp	x29, x30, [sp, #-0x50]!
+  870a30: 910003fd     	mov	x29, sp
+  870a34: f9001fe0     	str	x0, [sp, #0x38]
+  870a38: b90037e1     	str	w1, [sp, #0x34]
+  870a3c: b90033e2     	str	w2, [sp, #0x30]
+  870a40: f90017e3     	str	x3, [sp, #0x28]
+  870a44: b90027e4     	str	w4, [sp, #0x24]
+  870a48: f9000fe5     	str	x5, [sp, #0x18]
+  870a4c: f9400fe0     	ldr	x0, [sp, #0x18]
+  870a50: b900001f     	str	wzr, [x0]
+  870a54: f9401fe0     	ldr	x0, [sp, #0x38]
+  870a58: 395e4000     	ldrb	w0, [x0, #0x790]
+  870a5c: 7100001f     	cmp	w0, #0x0
+  870a60: 540000a0     	b.eq	0x870a74 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2c6b0>
+  870a64: f9401fe0     	ldr	x0, [sp, #0x38]
+  870a68: f943cc00     	ldr	x0, [x0, #0x798]
+  870a6c: f100001f     	cmp	x0, #0x0
+  870a70: 540001a1     	b.ne	0x870aa4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2c6e0>
+  870a74: f9401fe0     	ldr	x0, [sp, #0x38]
+  870a78: 97ee8468     	bl	0x411c18 <.text+0x69e8>
+  870a7c: aa0003e4     	mov	x4, x0
+  870a80: f00029a0     	adrp	x0, 0xda7000
+  870a84: 910a4003     	add	x3, x0, #0x290
+  870a88: 52802762     	mov	w2, #0x13b              // =315
+  870a8c: d00029a0     	adrp	x0, 0xda6000
+  870a90: 9138c001     	add	x1, x0, #0xe30
+  870a94: 52800040     	mov	w0, #0x2                // =2
+  870a98: 97fb56ad     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  870a9c: 52800000     	mov	w0, #0x0                // =0
+  870aa0: 1400007e     	b	0x870c98 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2c8d4>
+  870aa4: f9401fe0     	ldr	x0, [sp, #0x38]
+  870aa8: b947a000     	ldr	w0, [x0, #0x7a0]
+  870aac: b94037e1     	ldr	w1, [sp, #0x34]
+  870ab0: 6b00003f     	cmp	w1, w0
+  870ab4: 54000240     	b.eq	0x870afc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2c738>
+  870ab8: f9401fe0     	ldr	x0, [sp, #0x38]
+  870abc: 97ee8457     	bl	0x411c18 <.text+0x69e8>
+  870ac0: aa0003e1     	mov	x1, x0
+  870ac4: f9401fe0     	ldr	x0, [sp, #0x38]
+  870ac8: b947a000     	ldr	w0, [x0, #0x7a0]
+  870acc: 2a0003e6     	mov	w6, w0
+  870ad0: b94037e5     	ldr	w5, [sp, #0x34]
+  870ad4: aa0103e4     	mov	x4, x1
+  870ad8: f00029a0     	adrp	x0, 0xda7000
+  870adc: 910b4003     	add	x3, x0, #0x2d0
+  870ae0: 52802822     	mov	w2, #0x141              // =321
+  870ae4: d00029a0     	adrp	x0, 0xda6000
+  870ae8: 9138c001     	add	x1, x0, #0xe30
+  870aec: 52800040     	mov	w0, #0x2                // =2
+  870af0: 97fb5697     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  870af4: 52800000     	mov	w0, #0x0                // =0
+  870af8: 14000068     	b	0x870c98 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2c8d4>
+  870afc: f9401fe0     	ldr	x0, [sp, #0x38]
+  870b00: b9478800     	ldr	w0, [x0, #0x788]
+  870b04: b94033e1     	ldr	w1, [sp, #0x30]
+  870b08: 6b00003f     	cmp	w1, w0
+  870b0c: 54000221     	b.ne	0x870b50 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2c78c>
+  870b10: f9401fe0     	ldr	x0, [sp, #0x38]
+  870b14: 97ee8441     	bl	0x411c18 <.text+0x69e8>
+  870b18: aa0003e1     	mov	x1, x0
+  870b1c: f9401fe0     	ldr	x0, [sp, #0x38]
+  870b20: b9478800     	ldr	w0, [x0, #0x788]
+  870b24: 2a0003e5     	mov	w5, w0
+  870b28: b94033e4     	ldr	w4, [sp, #0x30]
+  870b2c: aa0103e3     	mov	x3, x1
+  870b30: f00029a0     	adrp	x0, 0xda7000
+  870b34: 910cc002     	add	x2, x0, #0x330
+  870b38: 52802901     	mov	w1, #0x148              // =328
+  870b3c: d00029a0     	adrp	x0, 0xda6000
+  870b40: 9138c000     	add	x0, x0, #0xe30
+  870b44: 97fb5656     	bl	0x74649c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c770>
+  870b48: 52800000     	mov	w0, #0x0                // =0
+  870b4c: 14000053     	b	0x870c98 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2c8d4>
+  870b50: f9401fe0     	ldr	x0, [sp, #0x38]
+  870b54: b9478800     	ldr	w0, [x0, #0x788]
+  870b58: b94033e1     	ldr	w1, [sp, #0x30]
+  870b5c: 6b00003f     	cmp	w1, w0
+  870b60: 54000249     	b.ls	0x870ba8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2c7e4>
+  870b64: f9401fe0     	ldr	x0, [sp, #0x38]
+  870b68: 97ee842c     	bl	0x411c18 <.text+0x69e8>
+  870b6c: aa0003e1     	mov	x1, x0
+  870b70: f9401fe0     	ldr	x0, [sp, #0x38]
+  870b74: b9478800     	ldr	w0, [x0, #0x788]
+  870b78: 2a0003e6     	mov	w6, w0
+  870b7c: b94033e5     	ldr	w5, [sp, #0x30]
+  870b80: aa0103e4     	mov	x4, x1
+  870b84: f00029a0     	adrp	x0, 0xda7000
+  870b88: 910de003     	add	x3, x0, #0x378
+  870b8c: 528029e2     	mov	w2, #0x14f              // =335
+  870b90: d00029a0     	adrp	x0, 0xda6000
+  870b94: 9138c001     	add	x1, x0, #0xe30
+  870b98: 52800040     	mov	w0, #0x2                // =2
+  870b9c: 97fb566c     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  870ba0: 52800000     	mov	w0, #0x0                // =0
+  870ba4: 1400003d     	b	0x870c98 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2c8d4>
+  870ba8: f9401fe0     	ldr	x0, [sp, #0x38]
+  870bac: f943cc00     	ldr	x0, [x0, #0x798]
+  870bb0: f100001f     	cmp	x0, #0x0
+  870bb4: 54000141     	b.ne	0x870bdc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2c818>
+  870bb8: 52802a63     	mov	w3, #0x153              // =339
+  870bbc: d00029a0     	adrp	x0, 0xda6000
+  870bc0: 9138c002     	add	x2, x0, #0xe30
+  870bc4: f00029a0     	adrp	x0, 0xda7000
+  870bc8: 910f2001     	add	x1, x0, #0x3c8
+  870bcc: d00029a0     	adrp	x0, 0xda6000
+  870bd0: 913a0000     	add	x0, x0, #0xe80
+  870bd4: 97ee666b     	bl	0x40a580 <printf@plt>
+  870bd8: 97fbeecc     	bl	0x76c708 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x529dc>
+  870bdc: f9401fe0     	ldr	x0, [sp, #0x38]
+  870be0: f943cc05     	ldr	x5, [x0, #0x798]
+  870be4: f9401fe0     	ldr	x0, [sp, #0x38]
+  870be8: f943cc00     	ldr	x0, [x0, #0x798]
+  870bec: f9400000     	ldr	x0, [x0]
+  870bf0: 91004000     	add	x0, x0, #0x10
+  870bf4: f9400004     	ldr	x4, [x0]
+  870bf8: b94027e0     	ldr	w0, [sp, #0x24]
+  870bfc: b94033e3     	ldr	w3, [sp, #0x30]
+  870c00: 2a0003e2     	mov	w2, w0
+  870c04: f94017e1     	ldr	x1, [sp, #0x28]
+  870c08: aa0503e0     	mov	x0, x5
+  870c0c: d63f0080     	blr	x4
+  870c10: b9004fe0     	str	w0, [sp, #0x4c]
+  870c14: b94033e1     	ldr	w1, [sp, #0x30]
+  870c18: b9404fe0     	ldr	w0, [sp, #0x4c]
+  870c1c: 0b000020     	add	w0, w1, w0
+  870c20: b9004be0     	str	w0, [sp, #0x48]
+  870c24: f9401fe0     	ldr	x0, [sp, #0x38]
+  870c28: b9478800     	ldr	w0, [x0, #0x788]
+  870c2c: b9404be1     	ldr	w1, [sp, #0x48]
+  870c30: 6b00003f     	cmp	w1, w0
+  870c34: 54000309     	b.ls	0x870c94 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2c8d0>
+  870c38: f9401fe0     	ldr	x0, [sp, #0x38]
+  870c3c: b9478800     	ldr	w0, [x0, #0x788]
+  870c40: 2a0003e6     	mov	w6, w0
+  870c44: b9404be5     	ldr	w5, [sp, #0x48]
+  870c48: b9404fe4     	ldr	w4, [sp, #0x4c]
+  870c4c: f00029a0     	adrp	x0, 0xda7000
+  870c50: 910f8003     	add	x3, x0, #0x3e0
+  870c54: 52802bc2     	mov	w2, #0x15e              // =350
+  870c58: d00029a0     	adrp	x0, 0xda6000
+  870c5c: 9138c001     	add	x1, x0, #0xe30
+  870c60: 52800040     	mov	w0, #0x2                // =2
+  870c64: 97fb563a     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  870c68: f9401fe0     	ldr	x0, [sp, #0x38]
+  870c6c: f943cc02     	ldr	x2, [x0, #0x798]
+  870c70: f9401fe0     	ldr	x0, [sp, #0x38]
+  870c74: f943cc00     	ldr	x0, [x0, #0x798]
+  870c78: f9400000     	ldr	x0, [x0]
+  870c7c: 91008000     	add	x0, x0, #0x20
+  870c80: f9400001     	ldr	x1, [x0]
+  870c84: aa0203e0     	mov	x0, x2
+  870c88: d63f0020     	blr	x1
+  870c8c: 52800000     	mov	w0, #0x0                // =0
+  870c90: 14000002     	b	0x870c98 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6assignEOS4_+0x2c8d4>
+  870c94: b9404fe0     	ldr	w0, [sp, #0x4c]
+  870c98: a8c57bfd     	ldp	x29, x30, [sp], #0x50
+  870c9c: d65f03c0     	ret

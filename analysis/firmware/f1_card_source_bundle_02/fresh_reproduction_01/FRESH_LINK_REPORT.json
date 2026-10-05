@@ -1,0 +1,1734 @@
+{
+  "AT_PHDR_expected_va": 15931224,
+  "CSU_bound_instruction_changes": [
+    {
+      "file_offset": 6222012,
+      "new_bytes": "94c501f0",
+      "old_bytes": "942a00f0",
+      "pair_address": 69871232,
+      "register": 20,
+      "va": 10416316
+    },
+    {
+      "file_offset": 6222016,
+      "new_bytes": "94021a91",
+      "old_bytes": "94022191",
+      "pair_address": 69871232,
+      "register": 20,
+      "va": 10416320
+    },
+    {
+      "file_offset": 6222024,
+      "new_bytes": "95c501d0",
+      "old_bytes": "952a00d0",
+      "pair_address": 69868504,
+      "register": 21,
+      "va": 10416328
+    },
+    {
+      "file_offset": 6222028,
+      "new_bytes": "b5622f91",
+      "old_bytes": "b5823691",
+      "pair_address": 69868504,
+      "register": 21,
+      "va": 10416332
+    }
+  ],
+  "DT_INIT_unchanged": 4234128,
+  "ELF_inspection_only": true,
+  "F1_camera_acceptance": false,
+  "actual_CSU_startup": {
+    "count": 341,
+    "dynamic_array_matches_actual_CSU": true,
+    "end": 69871232,
+    "main_startup_init_callback_va": 10416304,
+    "provided_by_executable_entry": true,
+    "start": 69868504,
+    "target_executed": false
+  },
+  "actual_payload_lock_sha256": "bb8de0b0fd4f5de47013466584502a7949801fa291d3e5821ade8eed40272d7a",
+  "allowed_original_spans": [
+    [
+      0,
+      64,
+      "ELF header"
+    ],
+    [
+      11736920,
+      672,
+      "relocated active PHDR"
+    ],
+    [
+      10332288,
+      4,
+      "explicit appversion"
+    ],
+    [
+      1170892,
+      4,
+      "exact BL iq4_f1_lv_draw_wrapper_13"
+    ],
+    [
+      2877608,
+      4,
+      "exact BL iq4_f1_firmware_unlock_01"
+    ],
+    [
+      978732,
+      4,
+      "exact BL iq4_f1_lv_ctor_wrapper_01"
+    ],
+    [
+      6222012,
+      4,
+      "exact CSU array bound"
+    ],
+    [
+      6222016,
+      4,
+      "exact CSU array bound"
+    ],
+    [
+      6222024,
+      4,
+      "exact CSU array bound"
+    ],
+    [
+      6222028,
+      4,
+      "exact CSU array bound"
+    ],
+    [
+      11742784,
+      8,
+      "DT_INIT_ARRAY metadata"
+    ],
+    [
+      11742800,
+      8,
+      "DT_INIT_ARRAY metadata"
+    ],
+    [
+      11742848,
+      8,
+      "DT_INIT_ARRAY metadata"
+    ],
+    [
+      11742864,
+      8,
+      "DT_INIT_ARRAY metadata"
+    ],
+    [
+      11742880,
+      8,
+      "DT_INIT_ARRAY metadata"
+    ],
+    [
+      11742896,
+      8,
+      "DT_INIT_ARRAY metadata"
+    ],
+    [
+      11743008,
+      8,
+      "DT_INIT_ARRAY metadata"
+    ],
+    [
+      11743024,
+      8,
+      "DT_INIT_ARRAY metadata"
+    ],
+    [
+      11743088,
+      8,
+      "DT_INIT_ARRAY metadata"
+    ]
+  ],
+  "app_version": [
+    6,
+    3,
+    23
+  ],
+  "baseline_bytes": 11874544,
+  "baseline_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "camera_access": false,
+  "candidate_bytes": 12366016,
+  "candidate_sha256": "b1904a4946fd3479adf4e22809e44b44004d6217239f05f7e36cc1f0c349b00a",
+  "changed_original_spans": [
+    {
+      "bytes": 3,
+      "candidate_hex": "5817b3",
+      "offset": 32,
+      "original_hex": "400000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "0074bc",
+      "offset": 40,
+      "original_hex": "3029b5"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "0c",
+      "offset": 56,
+      "original_hex": "0a"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "f3",
+      "offset": 60,
+      "original_hex": "1f"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "4d74f5",
+      "offset": 978732,
+      "original_hex": "a3a100"
+    },
+    {
+      "bytes": 4,
+      "candidate_hex": "3dbcf494",
+      "offset": 1170892,
+      "original_hex": "9b64fd97"
+    },
+    {
+      "bytes": 4,
+      "candidate_hex": "7409ee94",
+      "offset": 2877608,
+      "original_hex": "a22ff597"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "c501",
+      "offset": 6222013,
+      "original_hex": "2a00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "1a",
+      "offset": 6222018,
+      "original_hex": "21"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "c501",
+      "offset": 6222025,
+      "original_hex": "2a00"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "622f",
+      "offset": 6222029,
+      "original_hex": "8236"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "17",
+      "offset": 10332290,
+      "original_hex": "15"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "06",
+      "offset": 11736920,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "04",
+      "offset": 11736924,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "5817b3",
+      "offset": 11736928,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "5817f3",
+      "offset": 11736936,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "5817f3",
+      "offset": 11736944,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "a002",
+      "offset": 11736952,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "a002",
+      "offset": 11736960,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "08",
+      "offset": 11736968,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "03",
+      "offset": 11736976,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "04",
+      "offset": 11736980,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "7002",
+      "offset": 11736984,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "700240",
+      "offset": 11736992,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "700240",
+      "offset": 11737000,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "1b",
+      "offset": 11737008,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "1b",
+      "offset": 11737016,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "01",
+      "offset": 11737024,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "01",
+      "offset": 11737032,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "05",
+      "offset": 11737036,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "40",
+      "offset": 11737050,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "40",
+      "offset": 11737058,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "f819b3",
+      "offset": 11737064,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "f819b3",
+      "offset": 11737072,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "01",
+      "offset": 11737082,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "01",
+      "offset": 11737088,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "06",
+      "offset": 11737092,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "a01db3",
+      "offset": 11737096,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "a01df4",
+      "offset": 11737104,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "a01df4",
+      "offset": 11737112,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "540a02",
+      "offset": 11737120,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 4,
+      "candidate_hex": "20ba2f03",
+      "offset": 11737128,
+      "original_hex": "00000000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "01",
+      "offset": 11737138,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "02",
+      "offset": 11737144,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "06",
+      "offset": 11737148,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "882db3",
+      "offset": 11737152,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "882df4",
+      "offset": 11737160,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "882df4",
+      "offset": 11737168,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "5002",
+      "offset": 11737176,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "5002",
+      "offset": 11737184,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "08",
+      "offset": 11737192,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "04",
+      "offset": 11737200,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "04",
+      "offset": 11737204,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "8c02",
+      "offset": 11737208,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "8c0240",
+      "offset": 11737216,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "8c0240",
+      "offset": 11737224,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "44",
+      "offset": 11737232,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "44",
+      "offset": 11737240,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "04",
+      "offset": 11737248,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "07",
+      "offset": 11737256,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "04",
+      "offset": 11737260,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "a01db3",
+      "offset": 11737264,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "a01df4",
+      "offset": 11737272,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "a01df4",
+      "offset": 11737280,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "08",
+      "offset": 11737296,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "08",
+      "offset": 11737304,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 5,
+      "candidate_hex": "50e5746404",
+      "offset": 11737312,
+      "original_hex": "0000000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "c048b7",
+      "offset": 11737320,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 4,
+      "candidate_hex": "c0482504",
+      "offset": 11737328,
+      "original_hex": "00000000"
+    },
+    {
+      "bytes": 4,
+      "candidate_hex": "c0482504",
+      "offset": 11737336,
+      "original_hex": "00000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "ccf903",
+      "offset": 11737344,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "ccf903",
+      "offset": 11737352,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "04",
+      "offset": 11737360,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 5,
+      "candidate_hex": "51e5746406",
+      "offset": 11737368,
+      "original_hex": "0000000000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "10",
+      "offset": 11737416,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 5,
+      "candidate_hex": "52e5746404",
+      "offset": 11737424,
+      "original_hex": "0000000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "a01db3",
+      "offset": 11737432,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "a01df4",
+      "offset": 11737440,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "a01df4",
+      "offset": 11737448,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "6012",
+      "offset": 11737456,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "6012",
+      "offset": 11737464,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "01",
+      "offset": 11737472,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "01",
+      "offset": 11737480,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "05",
+      "offset": 11737484,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "b6",
+      "offset": 11737490,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "2404",
+      "offset": 11737498,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "2404",
+      "offset": 11737506,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "ec4d05",
+      "offset": 11737512,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 3,
+      "candidate_hex": "ec4d05",
+      "offset": 11737520,
+      "original_hex": "000000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "01",
+      "offset": 11737530,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "01",
+      "offset": 11737536,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "06",
+      "offset": 11737540,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "bc",
+      "offset": 11737546,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "2a04",
+      "offset": 11737554,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "2a04",
+      "offset": 11737562,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "8826",
+      "offset": 11737568,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 2,
+      "candidate_hex": "8826",
+      "offset": 11737576,
+      "original_hex": "0000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "01",
+      "offset": 11737586,
+      "original_hex": "00"
+    },
+    {
+      "bytes": 4,
+      "candidate_hex": "d81b2a04",
+      "offset": 11742784,
+      "original_hex": "a01df400"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "a8",
+      "offset": 11742800,
+      "original_hex": "a0"
+    },
+    {
+      "bytes": 4,
+      "candidate_hex": "483c2504",
+      "offset": 11742848,
+      "original_hex": "d0024000"
+    },
+    {
+      "bytes": 4,
+      "candidate_hex": "70d02404",
+      "offset": 11742864,
+      "original_hex": "083c4000"
+    },
+    {
+      "bytes": 4,
+      "candidate_hex": "d0042504",
+      "offset": 11742880,
+      "original_hex": "f0084000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "5f",
+      "offset": 11742896,
+      "original_hex": "4f"
+    },
+    {
+      "bytes": 4,
+      "candidate_hex": "e8442504",
+      "offset": 11743008,
+      "original_hex": "40764000"
+    },
+    {
+      "bytes": 1,
+      "candidate_hex": "d8",
+      "offset": 11743024,
+      "original_hex": "c0"
+    },
+    {
+      "bytes": 4,
+      "candidate_hex": "00382504",
+      "offset": 11743088,
+      "original_hex": "58704000"
+    }
+  ],
+  "dynamic_changes": [
+    {
+      "file_offset": 11742784,
+      "new": 69868504,
+      "old": 15998368,
+      "tag": 25
+    },
+    {
+      "file_offset": 11742800,
+      "new": 2728,
+      "old": 2720,
+      "tag": 27
+    },
+    {
+      "file_offset": 11742848,
+      "new": 69549128,
+      "old": 4195024,
+      "tag": 1879047925
+    },
+    {
+      "file_offset": 11742864,
+      "new": 69521520,
+      "old": 4209672,
+      "tag": 5
+    },
+    {
+      "file_offset": 11742880,
+      "new": 69534928,
+      "old": 4196592,
+      "tag": 6
+    },
+    {
+      "file_offset": 11742896,
+      "new": 13407,
+      "old": 13391,
+      "tag": 10
+    },
+    {
+      "file_offset": 11743008,
+      "new": 69551336,
+      "old": 4224576,
+      "tag": 7
+    },
+    {
+      "file_offset": 11743024,
+      "new": 984,
+      "old": 960,
+      "tag": 8
+    },
+    {
+      "file_offset": 11743088,
+      "new": 69548032,
+      "old": 4223064,
+      "tag": 1879048176
+    }
+  ],
+  "firmware_accepted": false,
+  "hooks": [
+    {
+      "file_offset": 1170892,
+      "new_bytes": "3dbcf494",
+      "new_target": 69521088,
+      "old_bytes": "9b64fd97",
+      "old_target": 4681784,
+      "symbol": "iq4_f1_lv_draw_wrapper_13",
+      "va": 5365196
+    },
+    {
+      "file_offset": 2877608,
+      "new_bytes": "7409ee94",
+      "new_target": 69471864,
+      "old_bytes": "a22ff597",
+      "old_target": 4237104,
+      "symbol": "iq4_f1_firmware_unlock_01",
+      "va": 7071912
+    },
+    {
+      "file_offset": 978732,
+      "new_bytes": "4d74f594",
+      "new_target": 69517408,
+      "old_bytes": "a3a10094",
+      "old_target": 5338552,
+      "symbol": "iq4_f1_lv_ctor_wrapper_01",
+      "va": 5173036
+    }
+  ],
+  "initializer_va": 69468288,
+  "new_EH_entries": 32568,
+  "new_dynamic_import": {
+    "GLOB_DAT_va": 69871232,
+    "active_GNU_hash_strategy": "one bucket; original dynsym order retained",
+    "added_DT_NEEDED": false,
+    "dynsym_index": 545,
+    "library": "libstdc++.so.6",
+    "name": "_ZSt9terminatev",
+    "new_general_RELA_count": 1,
+    "original_dynsym_indices_preserved": 545,
+    "original_general_RELA_bytes_preserved": 960,
+    "tail_stub_va": 69521504,
+    "version": "GLIBCXX_3.4",
+    "version_index": 5
+  },
+  "new_init_entries": 1,
+  "objects": [
+    {
+      "bytes": 193320,
+      "label": "analysis/firmware/f1_user_ui_entry_03/runtime.o",
+      "sha256": "281c0e84a0c04bf8760a964875777a83861be2356f311f77570ac4776547e75b"
+    },
+    {
+      "bytes": 90632,
+      "label": "analysis/firmware/f1_user_ui_entry_03/module.o",
+      "sha256": "fdbc1c21db9bd85deec580f5506a359d8b5c219cd8ddae8b2ef0c7bd93921aaa"
+    },
+    {
+      "bytes": 211176,
+      "label": "analysis/firmware/f1_user_ui_entry_03/entry_binding_10.o",
+      "sha256": "412d663397ec4cb63d20fd3e36d1f3a4b9ee2c0166a091d11cb26f4b83d679b8"
+    },
+    {
+      "bytes": 100240,
+      "label": "analysis/firmware/f1_user_ui_entry_03/inspector.o",
+      "sha256": "66a9a20d6333c113ed6880cac4411524ff61e6de68077d7efdc306d318df360d"
+    },
+    {
+      "bytes": 53752,
+      "label": "analysis/firmware/f1_user_ui_entry_03/candidates.o",
+      "sha256": "3dc3b1797f3c9881dae050e0313c3d367de21e14fd564c471f5861b524772153"
+    },
+    {
+      "bytes": 123608,
+      "label": "analysis/firmware/f1_user_ui_entry_03/bootstrap.o",
+      "sha256": "fb5a9d64c6f5193b91ab5325a3ac133fa09ea3598cfe0a70be9804b99175ba4c"
+    },
+    {
+      "bytes": 85016,
+      "label": "analysis/firmware/f1_user_ui_entry_03/counter.o",
+      "sha256": "28ce2dd5956e5f6d7a4e93cb5325f886e01e41709696d1c6d0a97b8b85d19293"
+    },
+    {
+      "bytes": 2800,
+      "label": "analysis/firmware/f1_user_ui_entry_03/ctor_wrapper.o",
+      "sha256": "8f3d2c333c2d1f11489b7985aaf093c362632e25d20d69ee31dab33b349b342e"
+    },
+    {
+      "bytes": 3896,
+      "label": "analysis/firmware/f1_user_ui_entry_03/compare.o",
+      "sha256": "cbbb9cf8b76594b8d604088fcb58d3a837f4ccf0f2ffe37e6849c62ece8ba02d"
+    },
+    {
+      "bytes": 5728,
+      "label": "analysis/firmware/f1_stock_display_payload_build_13/payload.o",
+      "sha256": "02b73b6eecfdfa0ffe7a20acfdf3e20c9dafb4a6770b2986a2a9292f5540fd8c"
+    },
+    {
+      "bytes": 1296,
+      "label": "analysis/firmware/f1_stock_display_payload_build_13/wrapper.o",
+      "sha256": "d5dc48a15ea46935fe94fdea4cb590840d685b1f7b2b86035cfb588c0f1958d2"
+    }
+  ],
+  "original_EH_entries_preserved": 32455,
+  "original_body_preservation_verified": true,
+  "original_import_bindings": {
+    "__cxa_begin_catch": {
+      "got": 16003224,
+      "kind": "original_plt",
+      "proof_bytes": "d05900d0114e40f91062029120021fd6",
+      "proof_va": 4234496,
+      "va": 4234496
+    },
+    "__cxa_end_catch": {
+      "got": 16004888,
+      "kind": "original_plt",
+      "proof_bytes": "d05900b0118e43f910621c9120021fd6",
+      "proof_va": 4237824,
+      "va": 4237824
+    },
+    "__errno_location": {
+      "got": 16004232,
+      "kind": "original_plt",
+      "proof_bytes": "d05900b0114642f91022129120021fd6",
+      "proof_va": 4236512,
+      "va": 4236512
+    },
+    "__gxx_personality_v0": {
+      "got": 16004408,
+      "kind": "original_plt",
+      "proof_bytes": "d05900b0119e42f910e2149120021fd6",
+      "proof_va": 4236864,
+      "va": 4236864
+    },
+    "iq4_stock_lv_ctor_01": {
+      "kind": "native_lv_constructor",
+      "proof_bytes": "ff430ad1fd7b03a9fdc30091f35304a9",
+      "proof_va": 5338552,
+      "va": 5338552
+    },
+    "iq4_stock_pthread_mutex_unlock_01": {
+      "kind": "original_plt_unlock",
+      "proof_bytes": "d05900b011da42f910c2169120021fd6",
+      "proof_va": 4237104,
+      "va": 4237104
+    },
+    "memcpy": {
+      "got": 16004272,
+      "kind": "original_plt",
+      "proof_bytes": "d05900b0115a42f910c2129120021fd6",
+      "proof_va": 4236592,
+      "va": 4236592
+    },
+    "memset": {
+      "got": 16003816,
+      "kind": "original_plt",
+      "proof_bytes": "d05900b0117641f910a20b9120021fd6",
+      "proof_va": 4235680,
+      "va": 4235680
+    },
+    "strchr": {
+      "got": 16004416,
+      "kind": "original_plt",
+      "proof_bytes": "d05900b011a242f91002159120021fd6",
+      "proof_va": 4236880,
+      "va": 4236880
+    },
+    "strcmp": {
+      "got": 16005048,
+      "kind": "original_plt",
+      "proof_bytes": "d05900b011de43f910e21e9120021fd6",
+      "proof_va": 4238144,
+      "va": 4238144
+    },
+    "strlen": {
+      "got": 16005480,
+      "kind": "original_plt",
+      "proof_bytes": "d05900b011b644f910a2259120021fd6",
+      "proof_va": 4239008,
+      "va": 4239008
+    },
+    "strrchr": {
+      "got": 16005112,
+      "kind": "original_plt",
+      "proof_bytes": "d05900b011fe43f910e21f9120021fd6",
+      "proof_va": 4238272,
+      "va": 4238272
+    }
+  },
+  "original_init_entries_preserved": 340,
+  "own_EH_entries": 113,
+  "own_fde_pairs": [
+    [
+      69468160,
+      69479292
+    ],
+    [
+      69468288,
+      69479312
+    ],
+    [
+      69471744,
+      69479384
+    ],
+    [
+      69473800,
+      69479404
+    ],
+    [
+      69473824,
+      69479444
+    ],
+    [
+      69473836,
+      69479464
+    ],
+    [
+      69474464,
+      69479520
+    ],
+    [
+      69474480,
+      69479548
+    ],
+    [
+      69474584,
+      69479568
+    ],
+    [
+      69474828,
+      69479620
+    ],
+    [
+      69475388,
+      69479672
+    ],
+    [
+      69475528,
+      69479692
+    ],
+    [
+      69475968,
+      69479764
+    ],
+    [
+      69476968,
+      69479836
+    ],
+    [
+      69471864,
+      69479932
+    ],
+    [
+      69473248,
+      69480012
+    ],
+    [
+      69473428,
+      69480076
+    ],
+    [
+      69476912,
+      69480136
+    ],
+    [
+      69480184,
+      69484076
+    ],
+    [
+      69481424,
+      69484148
+    ],
+    [
+      69482052,
+      69484216
+    ],
+    [
+      69482320,
+      69484244
+    ],
+    [
+      69482736,
+      69484264
+    ],
+    [
+      69482776,
+      69484284
+    ],
+    [
+      69483724,
+      69484348
+    ],
+    [
+      69483740,
+      69484368
+    ],
+    [
+      69481936,
+      69484440
+    ],
+    [
+      69482068,
+      69484500
+    ],
+    [
+      69482376,
+      69484564
+    ],
+    [
+      69484640,
+      69498364
+    ],
+    [
+      69485208,
+      69498408
+    ],
+    [
+      69485232,
+      69498428
+    ],
+    [
+      69485264,
+      69498468
+    ],
+    [
+      69485288,
+      69498488
+    ],
+    [
+      69485320,
+      69498528
+    ],
+    [
+      69485400,
+      69498568
+    ],
+    [
+      69485624,
+      69498612
+    ],
+    [
+      69486648,
+      69498716
+    ],
+    [
+      69487244,
+      69498776
+    ],
+    [
+      69487448,
+      69498828
+    ],
+    [
+      69488056,
+      69498888
+    ],
+    [
+      69488072,
+      69498916
+    ],
+    [
+      69488796,
+      69498988
+    ],
+    [
+      69490224,
+      69499052
+    ],
+    [
+      69491988,
+      69499124
+    ],
+    [
+      69492412,
+      69499192
+    ],
+    [
+      69493020,
+      69499240
+    ],
+    [
+      69493240,
+      69499288
+    ],
+    [
+      69495016,
+      69499356
+    ],
+    [
+      69496596,
+      69499404
+    ],
+    [
+      69496724,
+      69499464
+    ],
+    [
+      69496964,
+      69499532
+    ],
+    [
+      69497548,
+      69499552
+    ],
+    [
+      69491668,
+      69499656
+    ],
+    [
+      69491776,
+      69499704
+    ],
+    [
+      69494004,
+      69499768
+    ],
+    [
+      69495160,
+      69499848
+    ],
+    [
+      69495616,
+      69499912
+    ],
+    [
+      69495848,
+      69499968
+    ],
+    [
+      69497088,
+      69500036
+    ],
+    [
+      69500096,
+      69505460
+    ],
+    [
+      69500172,
+      69505500
+    ],
+    [
+      69500236,
+      69505540
+    ],
+    [
+      69501212,
+      69505592
+    ],
+    [
+      69502252,
+      69505660
+    ],
+    [
+      69503652,
+      69505732
+    ],
+    [
+      69504384,
+      69505784
+    ],
+    [
+      69504536,
+      69505828
+    ],
+    [
+      69504704,
+      69505872
+    ],
+    [
+      69506016,
+      69506604
+    ],
+    [
+      69506664,
+      69513580
+    ],
+    [
+      69506788,
+      69513620
+    ],
+    [
+      69506816,
+      69513640
+    ],
+    [
+      69506848,
+      69513680
+    ],
+    [
+      69506924,
+      69513720
+    ],
+    [
+      69506988,
+      69513760
+    ],
+    [
+      69507124,
+      69513780
+    ],
+    [
+      69507404,
+      69513824
+    ],
+    [
+      69508532,
+      69513872
+    ],
+    [
+      69509568,
+      69513944
+    ],
+    [
+      69509736,
+      69513964
+    ],
+    [
+      69511176,
+      69513992
+    ],
+    [
+      69511232,
+      69514032
+    ],
+    [
+      69512600,
+      69514052
+    ],
+    [
+      69512868,
+      69514096
+    ],
+    [
+      69513212,
+      69514156
+    ],
+    [
+      69509636,
+      69514232
+    ],
+    [
+      69509752,
+      69514284
+    ],
+    [
+      69510008,
+      69514336
+    ],
+    [
+      69511272,
+      69514420
+    ],
+    [
+      69511600,
+      69514484
+    ],
+    [
+      69512128,
+      69514548
+    ],
+    [
+      69513304,
+      69514620
+    ],
+    [
+      69514696,
+      69516916
+    ],
+    [
+      69514772,
+      69516936
+    ],
+    [
+      69515224,
+      69516956
+    ],
+    [
+      69515240,
+      69516984
+    ],
+    [
+      69516528,
+      69517024
+    ],
+    [
+      69516596,
+      69517044
+    ],
+    [
+      69516676,
+      69517064
+    ],
+    [
+      69514820,
+      69517116
+    ],
+    [
+      69515124,
+      69517176
+    ],
+    [
+      69515328,
+      69517228
+    ],
+    [
+      69516000,
+      69517288
+    ],
+    [
+      69516328,
+      69517344
+    ],
+    [
+      69517408,
+      69517564
+    ],
+    [
+      69517600,
+      69517668
+    ],
+    [
+      69517688,
+      69520940
+    ],
+    [
+      69519428,
+      69520992
+    ],
+    [
+      69519544,
+      69521012
+    ],
+    [
+      69519824,
+      69521032
+    ],
+    [
+      69520624,
+      69521068
+    ],
+    [
+      69521088,
+      69521452
+    ]
+  ],
+  "own_symbols": {
+    "DW.ref.__gxx_personality_v0": 69867848,
+    "StockCodeWindows01": 69867664,
+    "_ZN3iq42f111native_ui0211EntryChecksE": 69506296,
+    "_ZN3iq42f111native_ui0225resolve_static_candidatesENS0_14native_overlay6MemoryEmRNS1_10CandidatesE": 69506016,
+    "_ZN3iq42f113entry_ports017EntriesE": 69867856,
+    "_ZN3iq42f113firmware_ui0233display_grid_without_click_targetERKNS0_11native_ui029InspectorEmm": 69476968,
+    "_ZN3iq42f17entry0113observe_stackENS0_14native_overlay6MemoryEmRKNS0_11native_ui025OwnerERNS1_10StackFactsE": 69480184,
+    "_ZN3iq42f17entry016Module12after_unlockERKNS0_11native_ui0213BoundaryInputE": 69482776,
+    "_ZN3iq42f17entry016Module13overlay_portsEv": 69482736,
+    "_ZN3iq42f17entry016Module14selector_portsEv": 69482320,
+    "_ZN3iq42f17entry016Module14stop_observingEv": 69483724,
+    "_ZN3iq42f17entry016Module6tripleEPvmmPKNS0_11native_ui028ObserverE": 69482068,
+    "_ZN3iq42f17entry016Module7currentEPv": 69481936,
+    "_ZN3iq42f17entry016Module7repaintEPvm": 69482376,
+    "_ZN3iq42f17entry016Module9configureENS0_14native_overlay6MemoryENS1_9ImageGateEPFiPvES8_": 69481424,
+    "_ZN3iq42f17entry107Binding11build_on_uiEv": 69494004,
+    "_ZN3iq42f17entry107Binding12cancel_on_uiEv": 69496596,
+    "_ZN3iq42f17entry107Binding12detach_on_uiEm": 69497088,
+    "_ZN3iq42f17entry107Binding12queue_notifyEPNS0_11native_ui028ObserverEPv": 69485288,
+    "_ZN3iq42f17entry107Binding13close_privateEv": 69495616,
+    "_ZN3iq42f17entry107Binding13native_tripleEPvmmPKNS0_11native_ui028ObserverE": 69491776,
+    "_ZN3iq42f17entry107Binding13queue_destroyEPNS0_11native_ui028ObserverE": 69485264,
+    "_ZN3iq42f17entry107Binding14control_notifyEPNS1_15ControlObserverEPvPKvj": 69485232,
+    "_ZN3iq42f17entry107Binding14native_currentEPv": 69491668,
+    "_ZN3iq42f17entry107Binding15control_destroyEPNS1_15ControlObserverE": 69485208,
+    "_ZN3iq42f17entry107Binding18queue_notificationEPv": 69495848,
+    "_ZN3iq42f17entry107Binding20control_notificationEPvPKvj": 69495160,
+    "_ZN3iq42f17entry107Binding21after_actual_boundaryERKNS0_11native_ui0213BoundaryInputEm": 69497548,
+    "_ZN3iq42f17entry107Binding23bind_on_actual_boundaryENS0_14native_overlay6MemoryERNS0_7entry016ModuleERKNS0_11native_ui0213BoundaryInputENS1_9AdmissionENS1_9PlacementENS1_9SelectionENS1_15SynchronizationE": 69490224,
+    "_ZN3iq42f17entry107Binding25observe_stock_paint_on_uiERKNS0_11native_ui0212PaintReceiptE": 69496724,
+    "_ZN3iq42f17entry107Binding28install_selection_once_on_uiENS1_9SelectionE": 69495016,
+    "_ZN3iq42f17entry107BindingC1Ev": 69484640,
+    "_ZN3iq42f17entry107BindingC2Ev": 69484640,
+    "_ZN3iq42f410ui_counter17exact_user_sha256E": 69513495,
+    "_ZN3iq42f410ui_counter7Counter13actual_tripleENS1_6TripleE": 69515240,
+    "_ZN3iq42f410ui_counter7Counter18unexpected_destroyEPNS1_8ObserverE": 69514772,
+    "_ZN3iq42f410ui_counter7Counter21detach_on_ui_dispatchEv": 69516000,
+    "_ZN3iq42f410ui_counter7Counter25confirm_later_ui_boundaryEv": 69516328,
+    "_ZN3iq42f410ui_counter7Counter6attachERKNS1_10OperationsERKNS1_4GateE": 69515328,
+    "_ZN3iq42f410ui_counter7Counter8notifiedEPNS1_8ObserverEPv": 69514820,
+    "_ZN3iq42f410ui_counter7CounterC1Ev": 69514696,
+    "_ZN3iq42f410ui_counter7CounterC2Ev": 69514696,
+    "_ZN3iq42f49bootstrap12forward_onceEPFiPvES2_RiS2_PDoFvS2_iE": 69513304,
+    "_ZN3iq42f49bootstrap9Bootstrap12after_unlockEmmmmi": 69512868,
+    "_ZN3iq42f49bootstrap9Bootstrap12epoch_bridgeEPv": 69511232,
+    "_ZN3iq42f49bootstrap9Bootstrap14inspect_bridgeEPvS3_PKNS0_10ui_counter8ObserverE": 69511176,
+    "_ZN3iq42f49bootstrap9Bootstrap16control_callbackEPv": 69512128,
+    "_ZN3iq42f49bootstrap9Bootstrap19empty_control_eventEv": 69511272,
+    "_ZN3iq42f49bootstrap9Bootstrap5beginERKNS1_8BoundaryE": 69511600,
+    "_ZN3iq42f49bootstrap9Bootstrap5laterERKNS1_8BoundaryE": 69512600,
+    "_ZN3iq42f49bootstrap9Bootstrap6notifyEPNS0_10ui_counter8ObserverEPv": 69506816,
+    "_ZN3iq42f49bootstrap9Bootstrap7active_E": 69868480,
+    "_ZN3iq42f49bootstrap9Bootstrap7destroyEPNS0_10ui_counter8ObserverE": 69506788,
+    "_ZN3iq42f49bootstrap9Bootstrap7inspectEmmPKNS0_10ui_counter8ObserverE": 69510008,
+    "_ZN3iq42f49bootstrap9Bootstrap9configureENS1_6MemoryENS1_6NativeENS1_9ImageGateE": 69507124,
+    "_ZN3iq42f49bootstrap9BootstrapC1Ev": 69506664,
+    "_ZN3iq42f49bootstrap9BootstrapC2Ev": 69506664,
+    "_ZNK3iq42f111native_ui029Inspector10idle_popupERKNS1_5OwnerE": 69504384,
+    "_ZNK3iq42f111native_ui029Inspector10popup_menuERKNS1_5OwnerEm": 69503652,
+    "_ZNK3iq42f111native_ui029Inspector11owner_chainEmRNS1_5OwnerE": 69500236,
+    "_ZNK3iq42f111native_ui029Inspector11popup_titleERKNS1_5OwnerERj": 69504536,
+    "_ZNK3iq42f111native_ui029Inspector17layout_candidatesERKNS1_5OwnerERNS1_14LayoutSnapshotE": 69504704,
+    "_ZNK3iq42f111native_ui029Inspector4readEmPvm": 69500096,
+    "_ZNK3iq42f111native_ui029Inspector4wordEmRm": 69500172,
+    "_ZNK3iq42f111native_ui029Inspector7currentERKNS1_5OwnerEb": 69502252,
+    "_ZNK3iq42f111native_ui029Inspector8boundaryERKNS1_13BoundaryInputERNS1_8BoundaryE": 69501212,
+    "_ZNK3iq42f17entry016Module8snapshotERNS1_11ObservationE": 69483740,
+    "_ZNK3iq42f17entry107Binding11check_itemsEv": 69493240,
+    "_ZNK3iq42f17entry107Binding12actual_ownerEv": 69486648,
+    "_ZNK3iq42f17entry107Binding12button_boundEb": 69493020,
+    "_ZNK3iq42f17entry107Binding14free_placementEv": 69488072,
+    "_ZNK3iq42f17entry107Binding16boundary_matchesERKNS0_11native_ui0213BoundaryInputERm": 69487448,
+    "_ZNK3iq42f17entry107Binding21stock_popup_unchangedEv": 69487244,
+    "_ZNK3iq42f17entry107Binding5on_uiEv": 69485320,
+    "_ZNK3iq42f17entry107Binding7currentEb": 69485624,
+    "_ZNK3iq42f17entry107Binding7triplesENS0_11native_ui026TripleE": 69491988,
+    "_ZNK3iq42f17entry107Binding8own_menuEm": 69492412,
+    "_ZNK3iq42f17entry107Binding8resourceEv": 69485400,
+    "_ZNK3iq42f410ui_counter7Counter15safe_to_releaseEv": 69516528,
+    "_ZNK3iq42f410ui_counter7Counter8on_ownerEv": 69515124,
+    "_ZNK3iq42f410ui_counter7Counter8snapshotEv": 69516596,
+    "_ZNK3iq42f49bootstrap9Bootstrap10own_threadEv": 69509636,
+    "_ZNK3iq42f49bootstrap9Bootstrap11owner_chainEmRNS1_5OwnerE": 69507404,
+    "_ZNK3iq42f49bootstrap9Bootstrap11valid_ownerEv": 69509752,
+    "_ZNK3iq42f49bootstrap9Bootstrap14bindings_matchEv": 69506988,
+    "_ZNK3iq42f49bootstrap9Bootstrap4readEmPvm": 69506848,
+    "_ZNK3iq42f49bootstrap9Bootstrap4wordEmRm": 69506924,
+    "_ZNK3iq42f49bootstrap9Bootstrap6statusEv": 69513212,
+    "_ZNK3iq42f49bootstrap9Bootstrap8boundaryEmmmRNS1_8BoundaryE": 69508532,
+    "__clang_call_terminate": 69474464,
+    "bcmp": 69517600,
+    "iq4_f1_after_stock_draw_13": 69519824,
+    "iq4_f1_firmware_disable_on_ui_01": 69473800,
+    "iq4_f1_firmware_initialize_01": 69468288,
+    "iq4_f1_firmware_unlock_01": 69471864,
+    "iq4_f1_lv_ctor_wrapper_01": 69517408,
+    "iq4_f1_lv_draw_wrapper_13": 69521088,
+    "iq4_f1_mode_get_01": 69473248,
+    "iq4_f1_mode_set_on_ui_01": 69473428,
+    "iq4_f1_plan_13": 69517688,
+    "iq4_f1_publish_ctor_on_return_01": 69468160,
+    "iq4_f1_state_01": 69861376,
+    "iq4_f1_state_readonly_01": 69473824
+  },
+  "phdr_file_offset": 11736920,
+  "program_headers": [
+    [
+      6,
+      4,
+      11736920,
+      15931224,
+      15931224,
+      672,
+      672,
+      8
+    ],
+    [
+      3,
+      4,
+      624,
+      4194928,
+      4194928,
+      27,
+      27,
+      1
+    ],
+    [
+      1,
+      5,
+      0,
+      4194304,
+      4194304,
+      11737592,
+      11737592,
+      65536
+    ],
+    [
+      1,
+      6,
+      11738528,
+      15998368,
+      15998368,
+      133716,
+      53459488,
+      65536
+    ],
+    [
+      2,
+      6,
+      11742600,
+      16002440,
+      16002440,
+      592,
+      592,
+      8
+    ],
+    [
+      4,
+      4,
+      652,
+      4194956,
+      4194956,
+      68,
+      68,
+      4
+    ],
+    [
+      7,
+      4,
+      11738528,
+      15998368,
+      15998368,
+      0,
+      8,
+      8
+    ],
+    [
+      1685382480,
+      4,
+      12011712,
+      69552320,
+      69552320,
+      260556,
+      260556,
+      4
+    ],
+    [
+      1685382481,
+      6,
+      0,
+      0,
+      0,
+      0,
+      0,
+      16
+    ],
+    [
+      1685382482,
+      4,
+      11738528,
+      15998368,
+      15998368,
+      4704,
+      4704,
+      1
+    ],
+    [
+      1,
+      5,
+      11927552,
+      69468160,
+      69468160,
+      347628,
+      347628,
+      65536
+    ],
+    [
+      1,
+      6,
+      12320768,
+      69861376,
+      69861376,
+      9864,
+      9864,
+      65536
+    ]
+  ],
+  "restoration_verified": false,
+  "schema": "iq4_f1_user_elf_append_02",
+  "target_executed": false
+}

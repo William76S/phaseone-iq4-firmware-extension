@@ -1,0 +1,21 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6be844: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  6be848: 910003fd     	mov	x29, sp
+  6be84c: f9000fe0     	str	x0, [sp, #0x18]
+  6be850: 97ffee18     	bl	0x6ba0b0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x19cf0>
+  6be854: 7100001f     	cmp	w0, #0x0
+  6be858: 1a9f07e0     	cset	w0, ne
+  6be85c: 12001c00     	and	w0, w0, #0xff
+  6be860: 7100001f     	cmp	w0, #0x0
+  6be864: 54000080     	b.eq	0x6be874 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1e4b4>
+  6be868: f9400fe0     	ldr	x0, [sp, #0x18]
+  6be86c: 97f5309d     	bl	0x40aae0 <pthread_mutex_lock@plt>
+  6be870: 14000002     	b	0x6be878 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1e4b8>
+  6be874: 52800000     	mov	w0, #0x0                // =0
+  6be878: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  6be87c: d65f03c0     	ret

@@ -1,0 +1,39 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution or camera access.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000435fac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_>:
+  45ac38: a9ba7bfd     	stp	x29, x30, [sp, #-0x60]!
+  45ac3c: 910003fd     	mov	x29, sp
+  45ac40: f9000bf3     	str	x19, [sp, #0x10]
+  45ac44: f9001fe0     	str	x0, [sp, #0x38]
+  45ac48: f9001be1     	str	x1, [sp, #0x30]
+  45ac4c: f90017e2     	str	x2, [sp, #0x28]
+  45ac50: f9401fe0     	ldr	x0, [sp, #0x38]
+  45ac54: 91008001     	add	x1, x0, #0x20
+  45ac58: 910103e0     	add	x0, sp, #0x40
+  45ac5c: 97fff43e     	bl	0x457d54 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21da8>
+  45ac60: 910163e0     	add	x0, sp, #0x58
+  45ac64: f94017e1     	ldr	x1, [sp, #0x28]
+  45ac68: 97fff336     	bl	0x457940 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21994>
+  45ac6c: 910163e1     	add	x1, sp, #0x58
+  45ac70: 910103e0     	add	x0, sp, #0x40
+  45ac74: aa0103e3     	mov	x3, x1
+  45ac78: aa0003e2     	mov	x2, x0
+  45ac7c: f9401be1     	ldr	x1, [sp, #0x30]
+  45ac80: f9401fe0     	ldr	x0, [sp, #0x38]
+  45ac84: 94005110     	bl	0x46f0c4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x39118>
+  45ac88: 910103e0     	add	x0, sp, #0x40
+  45ac8c: 97fff406     	bl	0x457ca4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21cf8>
+  45ac90: 14000006     	b	0x45aca8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x24cfc>
+  45ac94: aa0003f3     	mov	x19, x0
+  45ac98: 910103e0     	add	x0, sp, #0x40
+  45ac9c: 97fff402     	bl	0x457ca4 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21cf8>
+  45aca0: aa1303e0     	mov	x0, x19
+  45aca4: 97febeab     	bl	0x40a750 <_Unwind_Resume@plt>
+  45aca8: f9400bf3     	ldr	x19, [sp, #0x10]
+  45acac: a8c67bfd     	ldp	x29, x30, [sp], #0x60
+  45acb0: d65f03c0     	ret

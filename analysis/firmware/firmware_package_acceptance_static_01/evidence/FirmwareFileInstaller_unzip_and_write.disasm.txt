@@ -1,0 +1,64 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  75c198:      	stp	x29, x30, [sp, #-0x30]!
+  75c19c:      	mov	x29, sp
+  75c1a0:      	str	x0, [sp, #0x28]
+  75c1a4:      	str	x1, [sp, #0x20]
+  75c1a8:      	str	x2, [sp, #0x18]
+  75c1ac:      	str	x3, [sp, #0x10]
+  75c1b0:      	ldr	x0, [sp, #0x20]
+  75c1b4:      	add	x1, x0, #0x450
+  75c1b8:      	ldr	x0, [sp, #0x20]
+  75c1bc:      	ldr	w0, [x0, #0x490]
+  75c1c0:      	mov	w3, w0
+  75c1c4:      	ldr	x2, [sp, #0x10]
+  75c1c8:      	ldr	x0, [sp, #0x18]
+  75c1cc:      	bl	0x7635e4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x498b8>
+  75c1d0:      	and	w0, w0, #0xff
+  75c1d4:      	eor	w0, w0, #0x1
+  75c1d8:      	and	w0, w0, #0xff
+  75c1dc:      	cmp	w0, #0x0
+  75c1e0:      	b.eq	0x75c214 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x424e8>
+  75c1e4:      	ldr	x0, [sp, #0x20]
+  75c1e8:      	add	x0, x0, #0x450
+  75c1ec:      	mov	x4, x0
+  75c1f0:      	adrp	x0, 0xc3a000
+  75c1f4:      	add	x3, x0, #0xf8
+  75c1f8:      	mov	w2, #0x1a               // =26
+  75c1fc:      	adrp	x0, 0xc3a000
+  75c200:      	add	x1, x0, #0x118
+  75c204:      	mov	w0, #0x2                // =2
+  75c208:      	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  75c20c:      	mov	w0, #0x0                // =0
+  75c210:      	b	0x75c274 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x42548>
+  75c214:      	ldr	x0, [sp, #0x20]
+  75c218:      	add	x1, x0, #0x450
+  75c21c:      	ldr	x0, [sp, #0x20]
+  75c220:      	ldr	w0, [x0, #0x490]
+  75c224:      	mov	w4, w0
+  75c228:      	mov	x3, x1
+  75c22c:      	adrp	x0, 0xc3a000
+  75c230:      	add	x2, x0, #0x150
+  75c234:      	mov	w1, #0x1e               // =30
+  75c238:      	adrp	x0, 0xc3a000
+  75c23c:      	add	x0, x0, #0x118
+  75c240:      	bl	0x74649c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c770>
+  75c244:      	ldr	x2, [sp, #0x10]
+  75c248:      	ldr	x1, [sp, #0x20]
+  75c24c:      	ldr	x0, [sp, #0x28]
+  75c250:      	bl	0x75c27c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x42550>
+  75c254:      	and	w0, w0, #0xff
+  75c258:      	eor	w0, w0, #0x1
+  75c25c:      	and	w0, w0, #0xff
+  75c260:      	cmp	w0, #0x0
+  75c264:      	b.eq	0x75c270 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x42544>
+  75c268:      	mov	w0, #0x0                // =0
+  75c26c:      	b	0x75c274 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x42548>
+  75c270:      	mov	w0, #0x1                // =1
+  75c274:      	ldp	x29, x30, [sp], #0x30
+  75c278:      	ret

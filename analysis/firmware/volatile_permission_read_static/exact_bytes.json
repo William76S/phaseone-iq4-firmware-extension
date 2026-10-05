@@ -1,0 +1,153 @@
+{
+  "input": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+    "bytes": 11874544
+  },
+  "evidence_level": "static_only",
+  "device_accessed": false,
+  "sdk_loaded": false,
+  "network_accessed": false,
+  "runtime_identity_verified": false,
+  "event_or_record_changed": false,
+  "ranges": [
+    {
+      "name": "five_Permission_bool_constructors",
+      "start_va": "0x63db5c",
+      "end_va_exclusive": "0x63dbfc",
+      "file_offset": "0x23db5c",
+      "section": ".text",
+      "bytes_hex": "e01740f904a01d912300805202008052202d009001e03091e00304aaf75df797e01740f9040021912300805202008052202d009001203191e00304aaef5df797e01740f9046024912300805202008052202d009001803191e00304aae75df797e01740f904c027912300805202008052202d009001c03191e00304aadf5df797e01740f904202b912300805202008052202d009001003291e00304aad75df797",
+      "bytes_sha256": "1f11e6772e75cca04295f6f5999b1e942fa55f1849391c1c68246f0571c2a670",
+      "disassembly": "analysis/firmware/volatile_permission_read_static/five_Permission_bool_constructors.disasm.txt"
+    },
+    {
+      "name": "bool_ctor_event_registration",
+      "start_va": "0x415354",
+      "end_va_exclusive": "0x41541c",
+      "file_offset": "0x15354",
+      "section": ".text",
+      "bytes_hex": "fd7bbca9fd030091f30b00f9e01f00f9e11b00f9e2bf0039e32b00b9e01f40f9d6ffff97e01f40f900200091e11b40f96ae70b94e02e009001802391e01f40f9010000f9e02e009001202691e01f40f9010400f9e02e009001202791e01f40f9011000f9e01f40f9e1bf403901000339e01f40f9e1bf403901040339e01f40f9e12b40b901c400b9e01f40f91f6400f9e01f40f91f6800f9e01f40f961008052011800b906000014f30300aae01f40f9beffff97e00313aad1d4ff97f30b40f9fd7bc4a8c0035fd6",
+      "bytes_sha256": "aea3970b7ba186f716b75efddc27c3710b36ea3c71412267b908107dcb23de62",
+      "disassembly": "analysis/firmware/volatile_permission_read_static/bool_ctor_event_registration.disasm.txt"
+    },
+    {
+      "name": "Locked_listener_and_recompute_callback",
+      "start_va": "0x6aac0c",
+      "end_va_exclusive": "0x6aac70",
+      "file_offset": "0x2aac0c",
+      "section": ".text",
+      "bytes_hex": "000c40f900400091e10300aae00302aaaf940194e02f40f91300009406000014f30300aae02f40f9259ef597e00313aac57ef597f30b40f9fd7bc6a8c0035fd6fd7bbea9fd030091e00f00f9e10b00f9e00f40f9040000941f2003d5fd7bc2a8c0035fd6",
+      "bytes_sha256": "25a58e17a373794b81815d6cebf36068549704a589cbb78da580d7c12f205030",
+      "disassembly": "analysis/firmware/volatile_permission_read_static/Locked_listener_and_recompute_callback.disasm.txt"
+    },
+    {
+      "name": "Unlocked_inverse_and_permission_branch",
+      "start_va": "0x6aac90",
+      "end_va_exclusive": "0x6aad44",
+      "file_offset": "0x2aac90",
+      "section": ".text",
+      "bytes_hex": "e00f40f9000c40f90020009138a7f597e0bb0039e00f40f9000c40f902a01d91e0bb403900000052001c0012e103002ae00302aa3ba7f597e00f40f9001040f900200091e1bb40397313fd97e00f40f9001440f900200091e1bb40390b14fc97e00f40f9001440f900e00491e1bb40390614fc97e0bb40391f000071a0210054e0bf40391f040071000900541f0400718c0000541f000071e0000054fa0000141f080071601700541f0c0071800f0054f5000014",
+      "bytes_sha256": "d440cfdfdaa24bdeb209dcac520874540345658fbdb1791b7ff21600e3c8688d",
+      "disassembly": "analysis/firmware/volatile_permission_read_static/Unlocked_inverse_and_permission_branch.disasm.txt"
+    },
+    {
+      "name": "Level_NoLock_four_permission_stores",
+      "start_va": "0x6aad44",
+      "end_va_exclusive": "0x6aad94",
+      "file_offset": "0x2aad44",
+      "section": ".text",
+      "bytes_hex": "e00f40f9000c40f9000021912100805217a7f597e00f40f9000c40f9006024912100805212a7f597e00f40f9000c40f900c02791210080520da7f597e00f40f9000c40f900202b912100805208a7f597",
+      "bytes_sha256": "5125860a594e958a17347a423f6358602eb1117bf6d524fd5474039cfe044498",
+      "disassembly": "analysis/firmware/volatile_permission_read_static/Level_NoLock_four_permission_stores.disasm.txt"
+    },
+    {
+      "name": "Level_Basic_four_permission_stores",
+      "start_va": "0x6aae38",
+      "end_va_exclusive": "0x6aae88",
+      "file_offset": "0x2aae38",
+      "section": ".text",
+      "bytes_hex": "e00f40f9000c40f90000219101008052daa6f597e00f40f9000c40f90060249121008052d5a6f597e00f40f9000c40f900c0279121008052d0a6f597e00f40f9000c40f900202b9101008052cba6f597",
+      "bytes_sha256": "1e2a6595069fc2fe6e4a6c02a25441a4a1164938980312b2245552ec1b667bf1",
+      "disassembly": "analysis/firmware/volatile_permission_read_static/Level_Basic_four_permission_stores.disasm.txt"
+    },
+    {
+      "name": "Locked_false_four_permission_stores_and_guards",
+      "start_va": "0x6ab140",
+      "end_va_exclusive": "0x6ab23c",
+      "file_offset": "0x2ab140",
+      "section": ".text",
+      "bytes_hex": "e00f40f9000c40f9000021912100805218a6f597e00f40f9000c40f9006024912100805213a6f597e00f40f9000c40f900c02791210080520ea6f597e00f40f9000c40f900202b912100805209a6f597e00f40f9031840f9e00f40f9001840f9000040f900200191020040f901008052e00303aa40003fd6e00f40f9031c40f9e00f40f9001c40f9000040f900200191020040f901008052e00303aa40003fd6e00f40f9032040f9e00f40f9002040f9000040f900200191020040f901008052e00303aa40003fd6e00f40f9032440f9e00f40f9002440f9000040f900200191020040f901008052e00303aa40003fd61f2003d5fd7bc3a8c0035fd6",
+      "bytes_sha256": "155030ebf083fdada296e86b61cf8b5b473a2293d3818a05da1567054cb2c398",
+      "disassembly": "analysis/firmware/volatile_permission_read_static/Locked_false_four_permission_stores_and_guards.disasm.txt"
+    },
+    {
+      "name": "native_bool_get_and_set_notification",
+      "start_va": "0x41497c",
+      "end_va_exclusive": "0x414a30",
+      "file_offset": "0x1497c",
+      "section": ".text",
+      "bytes_hex": "fd7bbda9fd030091e00f00f9e083009161deff97e00f40f900004339e0bf0039e083009168deff97e0bf4039fd7bc3a8c0035fd6fd7bbca9fd030091f30b00f9e01700f9e19f0039e0e3009152deff97e01740f900c440b91f04007101010054e01740f900004339e19f40393f00006b610000541300805205000014e01740f9e19f40390100033933008052e0e300914ddeff977f06007181000054e01740f90020009136ea0b94f30b40f9fd7bc4a8c0035fd6",
+      "bytes_sha256": "18647104436224fabb4d0e8aa0e323a64255dba8864819daba64a2eaf1b52498",
+      "disassembly": "analysis/firmware/volatile_permission_read_static/native_bool_get_and_set_notification.disasm.txt"
+    }
+  ],
+  "name_records": [
+    {
+      "name": "Unlocked",
+      "name_va": "0xbe1c38",
+      "file_offset": "0x7e1c38",
+      "section": ".rodata",
+      "PinGroup_bool_offset": "0x768",
+      "interior_event_offset": "0x770",
+      "bytes_hex": "556e6c6f636b656400",
+      "bytes_sha256": "fce0d61158770b3c0d7f6f46640223b3895dae374ee6f71fd27ae88032b344ed"
+    },
+    {
+      "name": "UnlockFirmwareUpdate",
+      "name_va": "0xbe1c48",
+      "file_offset": "0x7e1c48",
+      "section": ".rodata",
+      "PinGroup_bool_offset": "0x840",
+      "interior_event_offset": "0x848",
+      "bytes_hex": "556e6c6f636b4669726d7761726555706461746500",
+      "bytes_sha256": "9ccecd1800d05291b6857096932469b14002a442eca26a0a9d36379c1dd2fcc1"
+    },
+    {
+      "name": "UnlockUI",
+      "name_va": "0xbe1c60",
+      "file_offset": "0x7e1c60",
+      "section": ".rodata",
+      "PinGroup_bool_offset": "0x918",
+      "interior_event_offset": "0x920",
+      "bytes_hex": "556e6c6f636b554900",
+      "bytes_sha256": "7af180afd59d22bc4537317f337e8ae977d340f664af65417f57238475569773"
+    },
+    {
+      "name": "UnlockCapture",
+      "name_va": "0xbe1c70",
+      "file_offset": "0x7e1c70",
+      "section": ".rodata",
+      "PinGroup_bool_offset": "0x9f0",
+      "interior_event_offset": "0x9f8",
+      "bytes_hex": "556e6c6f636b4361707475726500",
+      "bytes_sha256": "9592395cf2eb89deaa6bb97a43960e1ffbfb5d08e31e731684faca75bebe3813"
+    },
+    {
+      "name": "UnlockRestoreToDefault",
+      "name_va": "0xbe1c80",
+      "file_offset": "0x7e1c80",
+      "section": ".rodata",
+      "PinGroup_bool_offset": "0xac8",
+      "interior_event_offset": "0xad0",
+      "bytes_hex": "556e6c6f636b526573746f7265546f44656661756c7400",
+      "bytes_sha256": "ccc063a9c02f641a816748972756dcbff43c25babdff4d4927112df409be45fc"
+    }
+  ],
+  "frozen_dependencies": {
+    "analysis/firmware/VOLATILE_LOCK_COMMAND_STATIC.md": "6d7435514c2ddcb08f631802cf3671384fa8772572bcfb30bde284ba1ab6bea0",
+    "analysis/firmware/volatile_lock_command_static/manifest.json": "df13f2222abb25c6c2e31835b1fc862fa44d9fd0df5bd9741ff6a17a029fdf50",
+    "tools/firmware/os_event_locked_host.py": "8eef927b93ecf1926876889b9ef2a3476c4153b47026e83b284e7ad6a268fdb1",
+    "tools/firmware/sys_read_backup_host.py": "840ea3b3fb589bfe50f65445a53f72261a01581106db24aad627b40e45cd9d5d"
+  }
+}

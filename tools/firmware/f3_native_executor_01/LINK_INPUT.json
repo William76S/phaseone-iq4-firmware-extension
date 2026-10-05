@@ -1,0 +1,40 @@
+{
+  "schema": "iq4_f3_native_executor_link_01",
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_native_executor_build_01_final/executor.o",
+      "bytes": 16160,
+      "sha256": "54d50fa7790a570a878a2c837c31ef6c06d08fc661f70d6bca0c60dfefc0c8e5"
+    },
+    {
+      "path": "analysis/firmware/f3_native_executor_build_01_final/native_calls.o",
+      "bytes": 4600,
+      "sha256": "07c3fefc4ede3977b97ef3a573ad504237c8ae25419a421120ed080e50f371f2"
+    },
+    {
+      "path": "analysis/firmware/f3_native_executor_build_01_final/wait_wrapper.o",
+      "bytes": 936,
+      "sha256": "f7c422a502fab1d9f3ec3852f0b234497b4ea6786a9f11b6b35f62ab7b4d058b"
+    }
+  ],
+  "hook": {
+    "va": "0x49d9d0",
+    "old_LE": "9fd70994",
+    "original_target": "0x71384c",
+    "return_pc": "0x49d9d4",
+    "entry": "iq4_f3_ifm_wait_wrapper_01"
+  },
+  "aliases": {
+    "iq4_f3_original_ifm_wait_01": "0x71384c",
+    "iq4_native_original_syscall_01": "0x40ae40"
+  },
+  "required_dependencies": [
+    "native_activity_01/activity.o",
+    "native_runtime_01/self_read.o",
+    "f3_save_coordinator_06"
+  ],
+  "native_executor": "actual ImageFileBackgroundThread b805c0",
+  "target_executed": false,
+  "camera_access": false,
+  "actual_native_thread_tested": false
+}

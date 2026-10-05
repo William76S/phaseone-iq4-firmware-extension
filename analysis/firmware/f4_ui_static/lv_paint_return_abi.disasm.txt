@@ -1,0 +1,27 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; private names and recovered types are provisional.
+  51da0c: a9a97bfd     	stp	x29, x30, [sp, #-0x170]!
+  51da10: 910003fd     	mov	x29, sp
+  51da14: a90153f3     	stp	x19, x20, [sp, #0x10]
+  51da18: aa0803f3     	mov	x19, x8
+  51da1c: f9001fe0     	str	x0, [sp, #0x38]
+  51da20: f9001be1     	str	x1, [sp, #0x30]
+  51da24: f90017e2     	str	x2, [sp, #0x28]
+  51da28: f90013e3     	str	x3, [sp, #0x20]
+  51da2c: f9401fe0     	ldr	x0, [sp, #0x38]
+  51da30: 39441000     	ldrb	w0, [x0, #0x104]
+  51da34: 52000000     	eor	w0, w0, #0x1
+  51da38: 12001c00     	and	w0, w0, #0xff
+  51da3c: 7100001f     	cmp	w0, #0x0
+  51da40: 54000100     	b.eq	0x51da60
+  51da44: 52800004     	mov	w4, #0x0
+  51da48: 52800003     	mov	w3, #0x0
+  51da4c: 52800002     	mov	w2, #0x0
+  51da50: 52800001     	mov	w1, #0x0
+  51da54: aa1303e0     	mov	x0, x19
+  51da58: 97fce8a6     	bl	0x457cf0
+  51da5c: 1400013e     	b	0x51df54
+  51da60: f9401fe0     	ldr	x0, [sp, #0x38]
+  51da64: 91044000     	add	x0, x0, #0x110
+  51da68: 97fe9c97     	bl	0x4c4cc4
+  51da6c: 12001c00     	and	w0, w0, #0xff

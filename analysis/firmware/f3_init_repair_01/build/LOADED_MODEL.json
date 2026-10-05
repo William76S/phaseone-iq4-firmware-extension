@@ -1,0 +1,171 @@
+{
+  "schema": "iq4_rtti_loader_bias_host_model_01",
+  "user": {
+    "path": "analysis/firmware/f1_f3_f4_user_integration_build_04_recording_repair_01/P1Linux_RatioMask_JPEG_LVRecording_6.03.33.bin",
+    "bytes": 13224552,
+    "sha256": "1500c38530ff3fe1f9ae0befaae5a7ee3a091e8b7994cd281e548184f6618e3a"
+  },
+  "library": {
+    "path": "analysis/firmware/f1_user_ui_entry_01/libstdcxx_original_ANALYSIS_ONLY.elf",
+    "bytes": 1538432,
+    "sha256": "5876c5861ffae1b3f6a5fc091be8f1d601edf602ebeed6a4aa3bf5c3cfbe11aa"
+  },
+  "cases": [
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x7000000000",
+      "old": 1,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x7000001000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x7000002000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x7000003000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x7000004000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x7000005000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x7000006000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x7000007000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x7000008000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x7000009000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x700000a000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x700000b000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x700000c000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x700000d000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x700000e000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "valid_loader_4K_bias",
+      "bias": "0x700000f000",
+      "old": 0,
+      "new": 1
+    },
+    {
+      "case": "non_page_bias_rejected",
+      "delta": 1,
+      "new": 0
+    },
+    {
+      "case": "non_page_bias_rejected",
+      "delta": 4,
+      "new": 0
+    },
+    {
+      "case": "non_page_bias_rejected",
+      "delta": 8,
+      "new": 0
+    },
+    {
+      "case": "non_page_bias_rejected",
+      "delta": 128,
+      "new": 0
+    },
+    {
+      "case": "non_page_bias_rejected",
+      "delta": 2048,
+      "new": 0
+    },
+    {
+      "case": "non_page_bias_rejected",
+      "delta": 4095,
+      "new": 0
+    },
+    {
+      "case": "corruption_rejected",
+      "field": "copy_vptr",
+      "new": 0
+    },
+    {
+      "case": "corruption_rejected",
+      "field": "copy_slot",
+      "new": 0
+    },
+    {
+      "case": "corruption_rejected",
+      "field": "library_header",
+      "new": 0
+    },
+    {
+      "case": "corruption_rejected",
+      "field": "destructor",
+      "new": 0
+    },
+    {
+      "case": "corruption_rejected",
+      "field": "type_name",
+      "new": 0
+    }
+  ],
+  "host_C_verifiers_executed": true,
+  "model_from_actual_ELF_program_headers_and_relocations": true,
+  "pin_graph_used_to_make_model": false,
+  "target_executed": false,
+  "camera_accessed": false
+}

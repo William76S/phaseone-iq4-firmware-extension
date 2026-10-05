@@ -1,0 +1,48 @@
+﻿test_id,feature,scenario,expected,environment,status,actual,evidence_path,restore_result
+P0-01,基线,型号与固件及模块哈希,精确记录且原始文件不变,静态输入+真实未修改IQ4,阻塞,包/20模块哈希、实机型号/显示6.03.18已核对；机内运行模块哈希未读回，整体未通过,evidence/p0/device_baseline.json;analysis/firmware/inventory.json,未修改相机文件
+P0-02,基线,备份和实际恢复入口,临时修改后可以恢复原厂,真实IQ4待恢复验证,阻塞,405普通及日志单次均kError无原件；415已读回Factory9896728B；首次加载/恢复入口继续自行建立,evidence/p0/windows_user_module_read_01.json;evidence/p0/windows_factory_module_read_01.json;deploy/RECOVERY.md,未写入，无扩展
+P0-03,基线,原厂拍摄与LV及JPEG,未修改状态输出可打开,真实未修改IQ4+主机解码,未测试,原厂LV启停和完整IIQ拍摄/解码通过；原厂JPEG与机内菜单/卡文件复核未完成,evidence/p0/device_baseline.json;evidence/p0/raw_decode.json,LV停，准备拍摄是
+LV-01,遮罩,关闭与四比例,真实机内显示且边界误差不超过1显示像素,待指定,未测试,主机几何与独立显示层验证通过（50/50）；无target adapter，临时/持久机内未测试，不能算本验收项通过,evidence/display/verification.json;analysis/firmware/UI_JPEG_ABI.md,未写入扩展；原厂LV关闭并准备拍摄
+LV-02,遮罩,横竖方向与旋转,比例随源方向正确旋转,待指定,未测试,主机几何与独立显示层验证通过（50/50）；无target adapter，临时/持久机内未测试，不能算本验收项通过,evidence/display/verification.json;analysis/firmware/UI_JPEG_ABI.md,未写入扩展；原厂LV关闭并准备拍摄
+LV-03,遮罩,overview及1:1及四角平移,完整源构图映射不漂移,待指定,未测试,主机几何与独立显示层验证通过（50/50）；无target adapter，临时/持久机内未测试，不能算本验收项通过,evidence/display/verification.json;analysis/firmware/UI_JPEG_ABI.md,未写入扩展；原厂LV关闭并准备拍摄
+LV-04,遮罩,菜单触摸与原厂辅助,不吞触摸且辅助正常,待指定,未测试,,,
+LV-05,遮罩,LCD与HDMI,分别验证各自视口和覆盖层语义,待指定,未测试,,,
+LV-06,遮罩,输出文件检查,RAW JPEG视频不包含显示遮罩,待指定,未测试,主机几何与独立显示层验证通过（50/50）；无target adapter，临时/持久机内未测试，不能算本验收项通过,evidence/display/verification.json;analysis/firmware/UI_JPEG_ABI.md,未写入扩展；原厂LV关闭并准备拍摄
+LV-07,遮罩,性能与重启,帧率下降目标不超过5%且设置保持,待指定,未测试,,,
+LUT-01,LUT,identity17/33/65,机内处理且编码前等效误差不超过1/255,待指定,未测试,,,
+LUT-02,LUT,invert及swap_rg,轴顺序和通道正确,待指定,未测试,,,
+LUT-03,LUT,非默认domain及强度0/50/100,domain归一化和混合正确,待指定,未测试,,,
+LUT-04,LUT,注释CRLF BOM科学计数,正确解析且locale不影响小数点,待指定,未测试,,,
+LUT-05,LUT,坏文件与不支持方言,拒绝并保留旧LUT及拍摄能力,待指定,未测试,,,
+LUT-06,LUT,色域及IQ Style顺序,sRGB约定明确且与参考管线一致,待指定,未测试,,,
+LUT-07,LUT,同一IIQ前后哈希,字节和新增LUT元数据均不变化,待指定,未测试,,,
+JPG-01,JPEG,六种尺寸档位,由完整源生成且尺寸定义正确,待指定,未测试,,,
+JPG-02,JPEG,Sensor+及较小源,100%用实际源且无伪放大,待指定,未测试,,,
+JPG-03,JPEG,全尺寸高频细节,证明不是4K或LV上采样,待指定,未测试,,,
+JPG-04,JPEG,方向EXIF色彩标记,可正确显示且方向不重复应用,待指定,未测试,,,
+JPG-05,JPEG,手动导出与自动队列,RAW先落盘且JPEG独立排队,待指定,未测试,,,
+JPG-06,JPEG,满卡写失败与连续拍摄,任务受控失败且原RAW保留,待指定,未测试,,,
+JPG-07,JPEG,时间内存及文件大小,六档实测留存无资源持续增长,待指定,未测试,,,
+VID-01,录像,SDK RGB24基线,格式尺寸SourceCrop及消费限制记录,真实未修改IQ4+Windows官方SDK,进行中,RGB24 60秒3695帧/61.576接收每秒；JPEG60秒1049帧；Auto60秒974帧实际选JPEG；主尺寸1024×764；源时间/新帧率未知，JPEG声明Length非真实压缩容量,evidence/p0/windows_lv_rgb24_60s_01.json;evidence/p0/windows_lv_jpeg_60s_01.json;evidence/p0/windows_lv_auto_metadata_60s_01.json,SDK原format/dimension/crop恢复、全部释放；RGB仅电池201/207变化；JPEG110属性字节一致
+VID-02,录像,机内干净帧与stride,无UI混入且缓冲生命周期正确,待指定,未测试,,,
+VID-03,录像,10秒机内短片,机内页面开始停止落盘且完整解码,待指定,未测试,主机容器24/24及完整解码52帧通过；目标AArch64构建可重复；机内帧/编码/UI/卡适配尚未运行，不计此机内验收通过,evidence/recording/verification.json;evidence/target/repeat_build.json,
+VID-04,录像,60秒动态场景及PTS,时间轴正确且新帧证据可复核,待指定,未测试,主机容器24/24及完整解码52帧通过；目标AArch64构建可重复；机内帧/编码/UI/卡适配尚未运行，不计此机内验收通过,evidence/recording/verification.json;evidence/target/repeat_build.json,
+VID-05,录像,1920x1080真60fps,5分钟动态样片及各阶段计数；已知丢帧目标低于0.1%,待指定,未测试,,,
+VID-06,录像,5分钟及15分钟稳定性,CPU内存温度队列与写卡日志完整,待指定,未测试,,,
+VID-07,录像,开始停止20次,每个文件有效且无资源持续增长,待指定,未测试,,,
+VID-08,录像,源中断写失败容量不足,受控结束并释放资源,待指定,未测试,主机容器24/24及完整解码52帧通过；目标AArch64构建可重复；机内帧/编码/UI/卡适配尚未运行，不计此机内验收通过,evidence/recording/verification.json;evidence/target/repeat_build.json,
+VID-09,录像,临时文件及片段恢复,受控进程中止与截断测试有结果,待指定,未测试,主机容器24/24及完整解码52帧通过；目标AArch64构建可重复；机内帧/编码/UI/卡适配尚未运行，不计此机内验收通过,evidence/recording/verification.json;evidence/target/repeat_build.json,
+VID-10,录像,热保护与电源状态,原厂保护有效且未编造阈值,待指定,未测试,,,
+UI-01,页面,机内入口及三页布局,真实屏幕可操作且可返回原厂,待指定,未测试,,,
+UI-02,页面,录像状态机与重复点击,无双实例；保存后才报告成功,待指定,未测试,,,
+UI-03,页面,录像退出与静态拍摄协调,受控收尾且停止后正常拍照,待指定,未测试,,,
+UI-04,页面,不支持的模式,不可选且原因真实,待指定,未测试,,,
+REG-01,回归,扩展关闭与开启,RAW JPEG WB IQStyle LV触摸联机正常,待指定,未测试,,,
+REG-02,回归,冷启动及休眠唤醒各5次,无异常且默认状态正确,待指定,未测试,,,
+REG-03,交付,禁用卸载及恢复,操作可重复且恢复原厂,待指定,未测试,,,
+DEL-01,交付,源码重建与版本绑定,构建对应实装组件且输入哈希验证有效,待指定,未测试,,,
+BR-01,Black Reference兼容,原厂手动Black Reference与自动暗场补偿,保持原厂入口、启动条件和完成行为；不写入校准或安全配置,真实IQ4；逐项实测待执行,未测试,静态检查原BlackRef管理/设置/对话框区保持不变；尚未实机回归,analysis/firmware/black_reference_compatibility_01/CURRENT_REVIEW.json,本轮未访问相机；未修改原厂校准
+BR-02,Black Reference兼容,SD/XQD选择RAW、JPEG、RAW+JPEG后执行Black Reference,校准帧不作为普通照片导出；原厂临时关闭存储时扩展不得重开,真实IQ4；逐项实测待执行,未测试,原厂校准帧隔离与存储保护调用链核对中；未实机验收,analysis/firmware/f3_capture_kind_01/;tools/firmware/f3_native_storage_bridge_01/,本轮未访问相机；未修改原厂校准
+BR-03,Black Reference兼容,Dual Exposure显示与Black Reference或原厂busy同时出现,原厂忙碌门禁继续生效；不在校准中改倍率或快门,真实IQ4；逐项实测待执行,未测试,保留原Dual回调busy判定；原factory调用链核对中,tools/firmware/dual_exposure_01/;analysis/firmware/dual_exposure_backend_01/,本轮未访问相机；未修改原厂校准
+BR-04,Black Reference兼容,录像期间原厂LV停止或释放client,停止采集并完成自有录像收尾；不阻塞原厂校准或强制重启LV,真实IQ4；逐项实测待执行,未测试,旧session三反例失败；新17 normal/17 san通过，包含无新帧结束和未知状态保留；不是机内验收,analysis/firmware/f4_native_stop_build_06_final/BUILD.json,本轮未访问相机；未修改原厂校准
+BR-05,Black Reference兼容,Black Reference完成后恢复普通拍摄、LV和录像,SD/XQD各格式及原厂LV可恢复使用；无错误删除、校准文件泄漏或残留锁,真实IQ4；逐项实测待执行,未测试,等待实机兼容性验收,analysis/firmware/black_reference_compatibility_01/CURRENT_REVIEW.json,本轮未访问相机；未修改原厂校准

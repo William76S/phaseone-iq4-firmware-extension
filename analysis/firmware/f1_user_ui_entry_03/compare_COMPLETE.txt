@@ -1,0 +1,17 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_user_ui_entry_03/compare.o:	file format elf64-littleaarch64
+
+Disassembly of section .text.bcmp:
+
+0000000000000000 <bcmp>:
+       0: b40000e2     	cbz	x2, 0x1c <bcmp+0x1c>
+       4: 38401408     	ldrb	w8, [x0], #0x1
+       8: 38401429     	ldrb	w9, [x1], #0x1
+       c: 6b09011f     	cmp	w8, w9
+      10: 540000a1     	b.ne	0x24 <bcmp+0x24>
+      14: f1000442     	subs	x2, x2, #0x1
+      18: 54ffff61     	b.ne	0x4 <bcmp+0x4>
+      1c: 2a1f03e0     	mov	w0, wzr
+      20: d65f03c0     	ret
+      24: 52800020     	mov	w0, #0x1                // =1
+      28: d65f03c0     	ret

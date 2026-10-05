@@ -1,0 +1,62 @@
+INPUT SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY: nearest private-function symbol labels are not authoritative.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  797278: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  79727c: d2890101     	mov	x1, #0x4808             // =18440
+  797280: 910003fd     	mov	x29, sp
+  797284: a90363f7     	stp	x23, x24, [sp, #0x30]
+  797288: d001c077     	adrp	x23, 0x3fa5000 <_ZNSt5ctypeIcE2idE+0x3041ed8>
+  79728c: 8b010018     	add	x24, x0, x1
+  797290: a90153f3     	stp	x19, x20, [sp, #0x10]
+  797294: d001c093     	adrp	x19, 0x3fa9000 <_ZNSt5ctypeIcE2idE+0x3045ed8>
+  797298: b94112f4     	ldr	w20, [x23, #0x110]
+  79729c: a9025bf5     	stp	x21, x22, [sp, #0x20]
+  7972a0: aa0003f5     	mov	x21, x0
+  7972a4: 97fdfff8     	bl	0x717284 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x29204>
+  7972a8: 2a1403e2     	mov	w2, w20
+  7972ac: 9124e276     	add	x22, x19, #0x938
+  7972b0: aa1803e1     	mov	x1, x24
+  7972b4: 8b020842     	add	x2, x2, x2, lsl #2
+  7972b8: 8b020ec2     	add	x2, x22, x2, lsl #3
+  7972bc: b9000440     	str	w0, [x2, #0x4]
+  7972c0: aa1503e0     	mov	x0, x21
+  7972c4: 97fffce5     	bl	0x796658 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7c92c>
+  7972c8: f95056a0     	ldr	x0, [x21, #0x20a8]
+  7972cc: d2842e04     	mov	x4, #0x2170             // =8560
+  7972d0: aa1803e3     	mov	x3, x24
+  7972d4: 8b0402a1     	add	x1, x21, x4
+  7972d8: d288ec02     	mov	x2, #0x4760             // =18272
+  7972dc: 8b0202a2     	add	x2, x21, x2
+  7972e0: 97ffc0a6     	bl	0x787578 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x6d84c>
+  7972e4: 97fdffe8     	bl	0x717284 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x29204>
+  7972e8: 2a0003f4     	mov	w20, w0
+  7972ec: 914012a0     	add	x0, x21, #0x4, lsl #12  // =0x4000
+  7972f0: b947d000     	ldr	w0, [x0, #0x7d0]
+  7972f4: 34000260     	cbz	w0, 0x797340 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7d614>
+  7972f8: b94112f3     	ldr	w19, [x23, #0x110]
+  7972fc: 8b130a60     	add	x0, x19, x19, lsl #2
+  797300: 8b000ec0     	add	x0, x22, x0, lsl #3
+  797304: b9000c1f     	str	wzr, [x0, #0xc]
+  797308: 97fdffdf     	bl	0x717284 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x29204>
+  79730c: 8b130a73     	add	x19, x19, x19, lsl #2
+  797310: b94112e1     	ldr	w1, [x23, #0x110]
+  797314: 8b130ed3     	add	x19, x22, x19, lsl #3
+  797318: 11000421     	add	w1, w1, #0x1
+  79731c: 711ffc3f     	cmp	w1, #0x7ff
+  797320: 1a9f9021     	csel	w1, w1, wzr, ls
+  797324: b90112e1     	str	w1, [x23, #0x110]
+  797328: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+  79732c: a94363f7     	ldp	x23, x24, [sp, #0x30]
+  797330: b9001660     	str	w0, [x19, #0x14]
+  797334: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  797338: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  79733c: d65f03c0     	ret
+  797340: aa1503e0     	mov	x0, x21
+  797344: 97fffe05     	bl	0x796b58 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x7ce2c>
+  797348: 9118e2a0     	add	x0, x21, #0x638
+  79734c: b940c401     	ldr	w1, [x0, #0xc4]

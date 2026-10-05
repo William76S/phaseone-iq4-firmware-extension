@@ -1,0 +1,76 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution or actual field read.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6b6b70: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  6b6b74: 910003fd     	mov	x29, sp
+  6b6b78: f9000fe0     	str	x0, [sp, #0x18]
+  6b6b7c: f9400fe0     	ldr	x0, [sp, #0x18]
+  6b6b80: b940e800     	ldr	w0, [x0, #0xe8]
+  6b6b84: 7100101f     	cmp	w0, #0x4
+  6b6b88: 540001c1     	b.ne	0x6b6bc0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16800>
+  6b6b8c: b0002a80     	adrp	x0, 0xc07000
+  6b6b90: 91234003     	add	x3, x0, #0x8d0
+  6b6b94: 52803582     	mov	w2, #0x1ac              // =428
+  6b6b98: b0002a80     	adrp	x0, 0xc07000
+  6b6b9c: 91220001     	add	x1, x0, #0x880
+  6b6ba0: 52800080     	mov	w0, #0x4                // =4
+  6b6ba4: 94023e6a     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  6b6ba8: 9100a3e0     	add	x0, sp, #0x28
+  6b6bac: 52800002     	mov	w2, #0x0                // =0
+  6b6bb0: 52800001     	mov	w1, #0x0                // =0
+  6b6bb4: 97f5eaeb     	bl	0x431760 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6lengthEv+0x18>
+  6b6bb8: f94017e0     	ldr	x0, [sp, #0x28]
+  6b6bbc: 14000007     	b	0x6b6bd8 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x16818>
+  6b6bc0: f9400fe0     	ldr	x0, [sp, #0x18]
+  6b6bc4: b940e801     	ldr	w1, [x0, #0xe8]
+  6b6bc8: f9400fe0     	ldr	x0, [sp, #0x18]
+  6b6bcc: 2a0103e1     	mov	w1, w1
+  6b6bd0: 91002821     	add	x1, x1, #0xa
+  6b6bd4: f8617800     	ldr	x0, [x0, x1, lsl #3]
+  6b6bd8: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  6b6bdc: d65f03c0     	ret
+  6b6be0: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  6b6be4: 910003fd     	mov	x29, sp
+  6b6be8: f9000bf3     	str	x19, [sp, #0x10]
+  6b6bec: aa0803f3     	mov	x19, x8
+  6b6bf0: f90017e0     	str	x0, [sp, #0x28]
+  6b6bf4: f94017e0     	ldr	x0, [sp, #0x28]
+  6b6bf8: b940e800     	ldr	w0, [x0, #0xe8]
+  6b6bfc: 7100101f     	cmp	w0, #0x4
+  6b6c00: 540001e1     	b.ne	0x6b6c3c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x1687c>
+  6b6c04: b0002a80     	adrp	x0, 0xc07000
+  6b6c08: 91234003     	add	x3, x0, #0x8d0
+  6b6c0c: 528036e2     	mov	w2, #0x1b7              // =439
+  6b6c10: b0002a80     	adrp	x0, 0xc07000
+  6b6c14: 91220001     	add	x1, x0, #0x880
+  6b6c18: 52800080     	mov	w0, #0x4                // =4
+  6b6c1c: 94023e4c     	bl	0x74654c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x2c820>
+  6b6c20: 52800004     	mov	w4, #0x0                // =0
+  6b6c24: 52800003     	mov	w3, #0x0                // =0
+  6b6c28: 52800002     	mov	w2, #0x0                // =0
+  6b6c2c: 52800001     	mov	w1, #0x0                // =0
+  6b6c30: aa1303e0     	mov	x0, x19
+  6b6c34: 97f6842f     	bl	0x457cf0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21d44>
+  6b6c38: 1400000e     	b	0x6b6c70 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0x168b0>
+  6b6c3c: f94017e0     	ldr	x0, [sp, #0x28]
+  6b6c40: b940e800     	ldr	w0, [x0, #0xe8]
+  6b6c44: 2a0003e1     	mov	w1, w0
+  6b6c48: aa0103e0     	mov	x0, x1
+  6b6c4c: d37ff800     	lsl	x0, x0, #1
+  6b6c50: 8b010000     	add	x0, x0, x1
+  6b6c54: d37df000     	lsl	x0, x0, #3
+  6b6c58: 9101c000     	add	x0, x0, #0x70
+  6b6c5c: f94017e1     	ldr	x1, [sp, #0x28]
+  6b6c60: 8b000020     	add	x0, x1, x0
+  6b6c64: aa0003e1     	mov	x1, x0
+  6b6c68: aa1303e0     	mov	x0, x19
+  6b6c6c: 97f6843a     	bl	0x457d54 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x21da8>
+  6b6c70: aa1303e0     	mov	x0, x19
+  6b6c74: f9400bf3     	ldr	x19, [sp, #0x10]
+  6b6c78: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  6b6c7c: d65f03c0     	ret

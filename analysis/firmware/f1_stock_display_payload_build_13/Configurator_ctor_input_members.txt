@@ -1,0 +1,77 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000435fac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_>:
+  4ed574: a9b97bfd     	stp	x29, x30, [sp, #-0x70]!
+  4ed578: 910003fd     	mov	x29, sp
+  4ed57c: a90153f3     	stp	x19, x20, [sp, #0x10]
+  4ed580: f9002fe0     	str	x0, [sp, #0x58]
+  4ed584: f9002be1     	str	x1, [sp, #0x50]
+  4ed588: f90027e2     	str	x2, [sp, #0x48]
+  4ed58c: f90023e3     	str	x3, [sp, #0x40]
+  4ed590: f9001fe4     	str	x4, [sp, #0x38]
+  4ed594: f9001be5     	str	x5, [sp, #0x30]
+  4ed598: f90017e6     	str	x6, [sp, #0x28]
+  4ed59c: f90013e7     	str	x7, [sp, #0x20]
+  4ed5a0: f9402fe4     	ldr	x4, [sp, #0x58]
+  4ed5a4: 52820003     	mov	w3, #0x1000             // =4096
+  4ed5a8: 52800042     	mov	w2, #0x2                // =2
+  4ed5ac: 90003520     	adrp	x0, 0xb91000
+  4ed5b0: 911dc001     	add	x1, x0, #0x770
+  4ed5b4: aa0403e0     	mov	x0, x4
+  4ed5b8: 94088a60     	bl	0x70ff38 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x21eb8>
+  4ed5bc: 90003520     	adrp	x0, 0xb91000
+  4ed5c0: 913d2001     	add	x1, x0, #0xf48
+  4ed5c4: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed5c8: f9000001     	str	x1, [x0]
+  4ed5cc: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed5d0: f9402be1     	ldr	x1, [sp, #0x50]
+  4ed5d4: f900d401     	str	x1, [x0, #0x1a8]
+  4ed5d8: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed5dc: f94027e1     	ldr	x1, [sp, #0x48]
+  4ed5e0: f900d801     	str	x1, [x0, #0x1b0]
+  4ed5e4: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed5e8: f94023e1     	ldr	x1, [sp, #0x40]
+  4ed5ec: f900dc01     	str	x1, [x0, #0x1b8]
+  4ed5f0: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed5f4: f9401be1     	ldr	x1, [sp, #0x30]
+  4ed5f8: f900e001     	str	x1, [x0, #0x1c0]
+  4ed5fc: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed600: f900e41f     	str	xzr, [x0, #0x1c8]
+  4ed604: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed608: f900e81f     	str	xzr, [x0, #0x1d0]
+  4ed60c: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed610: f900ec1f     	str	xzr, [x0, #0x1d8]
+  4ed614: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed618: f900f01f     	str	xzr, [x0, #0x1e0]
+  4ed61c: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed620: f9403be1     	ldr	x1, [sp, #0x70]
+  4ed624: f900f401     	str	x1, [x0, #0x1e8]
+  4ed628: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed62c: f9401fe1     	ldr	x1, [sp, #0x38]
+  4ed630: f900f801     	str	x1, [x0, #0x1f0]
+  4ed634: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed638: 9107e000     	add	x0, x0, #0x1f8
+  4ed63c: 9400270b     	bl	0x4f7268 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0xc12bc>
+  4ed640: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed644: 91228000     	add	x0, x0, #0x8a0
+  4ed648: 94002631     	bl	0x4f6f0c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0xc0f60>
+  4ed64c: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed650: f9404be1     	ldr	x1, [sp, #0x90]
+  4ed654: f904dc01     	str	x1, [x0, #0x9b8]
+  4ed658: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed65c: f9404fe1     	ldr	x1, [sp, #0x98]
+  4ed660: f904e001     	str	x1, [x0, #0x9c0]
+  4ed664: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed668: f9403fe1     	ldr	x1, [sp, #0x78]
+  4ed66c: f904e401     	str	x1, [x0, #0x9c8]
+  4ed670: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed674: f94043e1     	ldr	x1, [sp, #0x80]
+  4ed678: f904e801     	str	x1, [x0, #0x9d0]
+  4ed67c: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed680: f94047e1     	ldr	x1, [sp, #0x88]
+  4ed684: f904ec01     	str	x1, [x0, #0x9d8]
+  4ed688: f9402fe0     	ldr	x0, [sp, #0x58]
+  4ed68c: 91278002     	add	x2, x0, #0x9e0

@@ -1,0 +1,215 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f1_normal_fit_display_build_09/hook_capture.o:	file format elf64-littleaarch64
+
+Disassembly of section .text._ZN3iq42f18normal0921publish_ingress_on_uiERKNS1_13IngressStatusE:
+
+0000000000000000 <_ZN3iq42f18normal0921publish_ingress_on_uiERKNS1_13IngressStatusE>:
+       0: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+       4: f9000bf3     	str	x19, [sp, #0x10]
+       8: 910003fd     	mov	x29, sp
+       c: 90000013     	adrp	x19, 0x0 <_ZN3iq42f18normal0921publish_ingress_on_uiERKNS1_13IngressStatusE>
+		000000000000000c:  R_AARCH64_ADR_GOT_PAGE	iq4_f1_normal_fit_ingress_observed_09
+      10: aa0003e1     	mov	x1, x0
+      14: f9400273     	ldr	x19, [x19]
+		0000000000000014:  R_AARCH64_LD64_GOT_LO12_NC	iq4_f1_normal_fit_ingress_observed_09
+      18: 885ffe68     	ldaxr	w8, [x19]
+      1c: 11000508     	add	w8, w8, #0x1
+      20: 8809fe68     	stlxr	w9, w8, [x19]
+      24: 35ffffa9     	cbnz	w9, 0x18 <_ZN3iq42f18normal0921publish_ingress_on_uiERKNS1_13IngressStatusE+0x18>
+      28: 91002260     	add	x0, x19, #0x8
+      2c: 52802902     	mov	w2, #0x148              // =328
+      30: 94000000     	bl	0x30 <_ZN3iq42f18normal0921publish_ingress_on_uiERKNS1_13IngressStatusE+0x30>
+		0000000000000030:  R_AARCH64_CALL26	memcpy
+      34: 6f00e400     	movi	v0.2d, #0000000000000000
+      38: ad0a8260     	stp	q0, q0, [x19, #0x150]
+      3c: ad0b8260     	stp	q0, q0, [x19, #0x170]
+      40: ad0c8260     	stp	q0, q0, [x19, #0x190]
+      44: ad0d8260     	stp	q0, q0, [x19, #0x1b0]
+      48: ad0e8260     	stp	q0, q0, [x19, #0x1d0]
+      4c: 885f7e68     	ldxr	w8, [x19]
+      50: 11000508     	add	w8, w8, #0x1
+      54: 8809fe68     	stlxr	w9, w8, [x19]
+      58: 35ffffa9     	cbnz	w9, 0x4c <_ZN3iq42f18normal0921publish_ingress_on_uiERKNS1_13IngressStatusE+0x4c>
+      5c: f9400bf3     	ldr	x19, [sp, #0x10]
+      60: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+      64: d65f03c0     	ret
+
+Disassembly of section .text._ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE:
+
+0000000000000000 <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE>:
+       0: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+       4: f9000bf5     	str	x21, [sp, #0x10]
+       8: a9024ff4     	stp	x20, x19, [sp, #0x20]
+       c: 910003fd     	mov	x29, sp
+      10: 90000013     	adrp	x19, 0x0 <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE>
+		0000000000000010:  R_AARCH64_ADR_PREL_PG_HI21	.bss._ZN12_GLOBAL__N_18consumerE
+      14: 91000273     	add	x19, x19, #0x0
+		0000000000000014:  R_AARCH64_ADD_ABS_LO12_NC	.bss._ZN12_GLOBAL__N_18consumerE
+      18: c8dffe68     	ldar	x8, [x19]
+      1c: b40000c8     	cbz	x8, 0x34 <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE+0x34>
+      20: 2a1f03e0     	mov	w0, wzr
+      24: a9424ff4     	ldp	x20, x19, [sp, #0x20]
+      28: f9400bf5     	ldr	x21, [sp, #0x10]
+      2c: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+      30: d65f03c0     	ret
+      34: 394c0408     	ldrb	w8, [x0, #0x301]
+      38: 37000088     	tbnz	w8, #0x0, 0x48 <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE+0x48>
+      3c: 394c0008     	ldrb	w8, [x0, #0x300]
+      40: 7100051f     	cmp	w8, #0x1
+      44: 54fffee1     	b.ne	0x20 <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE+0x20>
+      48: f9403809     	ldr	x9, [x0, #0x70]
+      4c: b4fffea9     	cbz	x9, 0x20 <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE+0x20>
+      50: f9403408     	ldr	x8, [x0, #0x68]
+      54: aa0003f5     	mov	x21, x0
+      58: aa0103f4     	mov	x20, x1
+      5c: aa0803e0     	mov	x0, x8
+      60: d63f0120     	blr	x9
+      64: f940aaa9     	ldr	x9, [x21, #0x150]
+      68: eb09001f     	cmp	x0, x9
+      6c: 2a1f03e0     	mov	w0, wzr
+      70: 54fffda1     	b.ne	0x24 <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE+0x24>
+      74: b940c289     	ldr	w9, [x20, #0xc0]
+      78: 7100053f     	cmp	w9, #0x1
+      7c: 54fffd41     	b.ne	0x24 <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE+0x24>
+      80: b940fe89     	ldr	w9, [x20, #0xfc]
+      84: 34fffd09     	cbz	w9, 0x24 <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE+0x24>
+      88: 90000009     	adrp	x9, 0x0 <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE>
+		0000000000000088:  R_AARCH64_ADR_PREL_PG_HI21	.bss._ZN12_GLOBAL__N_18retainedE
+      8c: 91000129     	add	x9, x9, #0x0
+		000000000000008c:  R_AARCH64_ADD_ABS_LO12_NC	.bss._ZN12_GLOBAL__N_18retainedE
+      90: a9005135     	stp	x21, x20, [x9]
+      94: c85ffe68     	ldaxr	x8, [x19]
+      98: b50000a8     	cbnz	x8, 0xac <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE+0xac>
+      9c: c808fe69     	stlxr	w8, x9, [x19]
+      a0: 35ffffa8     	cbnz	w8, 0x94 <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE+0x94>
+      a4: 52800020     	mov	w0, #0x1                // =1
+      a8: 17ffffdf     	b	0x24 <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE+0x24>
+      ac: 2a1f03e0     	mov	w0, wzr
+      b0: d5033f5f     	clrex
+      b4: 17ffffdc     	b	0x24 <_ZN3iq42f18normal0935install_capture_consumer_once_on_uiERNS1_21ProvenProviderAdapterERNS1_8RendererE+0x24>
+
+Disassembly of section .text.iq4_f1_scaler_after_09:
+
+0000000000000000 <iq4_f1_scaler_after_09>:
+       0: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+       4: f9000bf7     	str	x23, [sp, #0x10]
+       8: a90257f6     	stp	x22, x21, [sp, #0x20]
+       c: a9034ff4     	stp	x20, x19, [sp, #0x30]
+      10: 910003fd     	mov	x29, sp
+      14: aa0003f3     	mov	x19, x0
+      18: 94000000     	bl	0x18 <iq4_f1_scaler_after_09+0x18>
+		0000000000000018:  R_AARCH64_CALL26	__errno_location
+      1c: b9400014     	ldr	w20, [x0]
+      20: b4000b33     	cbz	x19, 0x184 <iq4_f1_scaler_after_09+0x184>
+      24: 90000015     	adrp	x21, 0x0 <iq4_f1_scaler_after_09>
+		0000000000000024:  R_AARCH64_ADR_PREL_PG_HI21	.bss._ZN12_GLOBAL__N_14busyE
+      28: 910002b5     	add	x21, x21, #0x0
+		0000000000000028:  R_AARCH64_ADD_ABS_LO12_NC	.bss._ZN12_GLOBAL__N_14busyE
+      2c: 52800028     	mov	w8, #0x1                // =1
+      30: 085ffea9     	ldaxrb	w9, [x21]
+      34: 080a7ea8     	stxrb	w10, w8, [x21]
+      38: 35ffffca     	cbnz	w10, 0x30 <iq4_f1_scaler_after_09+0x30>
+      3c: 37000a49     	tbnz	w9, #0x0, 0x184 <iq4_f1_scaler_after_09+0x184>
+      40: 90000008     	adrp	x8, 0x0 <iq4_f1_scaler_after_09>
+		0000000000000040:  R_AARCH64_ADR_PREL_PG_HI21	.bss._ZN12_GLOBAL__N_18sequenceE
+      44: 91000108     	add	x8, x8, #0x0
+		0000000000000044:  R_AARCH64_ADD_ABS_LO12_NC	.bss._ZN12_GLOBAL__N_18sequenceE
+      48: 885ffd09     	ldaxr	w9, [x8]
+      4c: 11000529     	add	w9, w9, #0x1
+      50: 880afd09     	stlxr	w10, w9, [x8]
+      54: 35ffffaa     	cbnz	w10, 0x48 <iq4_f1_scaler_after_09+0x48>
+      58: 90000009     	adrp	x9, 0x0 <iq4_f1_scaler_after_09>
+		0000000000000058:  R_AARCH64_ADR_PREL_PG_HI21	.bss._ZN12_GLOBAL__N_18observedE
+      5c: f940012a     	ldr	x10, [x9]
+		000000000000005c:  R_AARCH64_LDST64_ABS_LO12_NC	.bss._ZN12_GLOBAL__N_18observedE
+      60: b100055f     	cmn	x10, #0x1
+      64: 54000060     	b.eq	0x70 <iq4_f1_scaler_after_09+0x70>
+      68: 9100054a     	add	x10, x10, #0x1
+      6c: f900012a     	str	x10, [x9]
+		000000000000006c:  R_AARCH64_LDST64_ABS_LO12_NC	.bss._ZN12_GLOBAL__N_18observedE
+      70: 3cc88260     	ldur	q0, [x19, #0x88]
+      74: 90000009     	adrp	x9, 0x0 <iq4_f1_scaler_after_09>
+		0000000000000074:  R_AARCH64_ADR_PREL_PG_HI21	.bss._ZN12_GLOBAL__N_18observedE+0x8
+      78: 91000129     	add	x9, x9, #0x0
+		0000000000000078:  R_AARCH64_ADD_ABS_LO12_NC	.bss._ZN12_GLOBAL__N_18observedE+0x8
+      7c: ad430663     	ldp	q3, q1, [x19, #0x60]
+      80: f940526a     	ldr	x10, [x19, #0xa0]
+      84: 3c808120     	stur	q0, [x9, #0x8]
+      88: ad420262     	ldp	q2, q0, [x19, #0x40]
+      8c: f900012a     	str	x10, [x9]
+      90: 3c848121     	stur	q1, [x9, #0x48]
+      94: 3c838123     	stur	q3, [x9, #0x38]
+      98: 3c818122     	stur	q2, [x9, #0x18]
+      9c: 3c828120     	stur	q0, [x9, #0x28]
+      a0: f940126a     	ldr	x10, [x19, #0x20]
+      a4: ad400261     	ldp	q1, q0, [x19]
+      a8: f9002d3f     	str	xzr, [x9, #0x58]
+      ac: f900412a     	str	x10, [x9, #0x80]
+      b0: 5280002a     	mov	w10, #0x1               // =1
+      b4: ad030121     	stp	q1, q0, [x9, #0x60]
+      b8: f9001d3f     	str	xzr, [x9, #0x38]
+      bc: f900153f     	str	xzr, [x9, #0x28]
+      c0: b900892a     	str	w10, [x9, #0x88]
+      c4: 885f7d09     	ldxr	w9, [x8]
+      c8: 11000529     	add	w9, w9, #0x1
+      cc: 880afd09     	stlxr	w10, w9, [x8]
+      d0: 35ffffaa     	cbnz	w10, 0xc4 <iq4_f1_scaler_after_09+0xc4>
+      d4: 90000008     	adrp	x8, 0x0 <iq4_f1_scaler_after_09>
+		00000000000000d4:  R_AARCH64_ADR_PREL_PG_HI21	.bss._ZN12_GLOBAL__N_18consumerE
+      d8: 91000108     	add	x8, x8, #0x0
+		00000000000000d8:  R_AARCH64_ADD_ABS_LO12_NC	.bss._ZN12_GLOBAL__N_18consumerE
+      dc: c8dffd17     	ldar	x23, [x8]
+      e0: b4000517     	cbz	x23, 0x180 <iq4_f1_scaler_after_09+0x180>
+      e4: aa0003f6     	mov	x22, x0
+      e8: f94002e0     	ldr	x0, [x23]
+      ec: 394c0008     	ldrb	w8, [x0, #0x300]
+      f0: 7100051f     	cmp	w8, #0x1
+      f4: 540000a1     	b.ne	0x108 <iq4_f1_scaler_after_09+0x108>
+      f8: f94006e2     	ldr	x2, [x23, #0x8]
+      fc: aa1303e1     	mov	x1, x19
+     100: 94000000     	bl	0x100 <iq4_f1_scaler_after_09+0x100>
+		0000000000000100:  R_AARCH64_CALL26	_ZN3iq42f18normal0921ProvenProviderAdapter28dispatch_scaler_return_on_uiERKNS1_13ScalerCaptureERNS1_8RendererE
+     104: 14000003     	b	0x110 <iq4_f1_scaler_after_09+0x110>
+     108: aa1303e1     	mov	x1, x19
+     10c: 94000000     	bl	0x10c <iq4_f1_scaler_after_09+0x10c>
+		000000000000010c:  R_AARCH64_CALL26	_ZN3iq42f18normal0921ProvenProviderAdapter27observe_scaler_return_on_uiERKNS1_13ScalerCaptureE
+     110: 90000013     	adrp	x19, 0x0 <iq4_f1_scaler_after_09>
+		0000000000000110:  R_AARCH64_ADR_GOT_PAGE	iq4_f1_normal_fit_ingress_observed_09
+     114: f9400273     	ldr	x19, [x19]
+		0000000000000114:  R_AARCH64_LD64_GOT_LO12_NC	iq4_f1_normal_fit_ingress_observed_09
+     118: 885ffe68     	ldaxr	w8, [x19]
+     11c: 11000508     	add	w8, w8, #0x1
+     120: 8809fe68     	stlxr	w9, w8, [x19]
+     124: 35ffffa9     	cbnz	w9, 0x118 <iq4_f1_scaler_after_09+0x118>
+     128: f94002e8     	ldr	x8, [x23]
+     12c: 91002260     	add	x0, x19, #0x8
+     130: 52802902     	mov	w2, #0x148              // =328
+     134: 9106e101     	add	x1, x8, #0x1b8
+     138: 94000000     	bl	0x138 <iq4_f1_scaler_after_09+0x138>
+		0000000000000138:  R_AARCH64_CALL26	memcpy
+     13c: 90000008     	adrp	x8, 0x0 <iq4_f1_scaler_after_09>
+		000000000000013c:  R_AARCH64_ADR_PREL_PG_HI21	.bss._ZN12_GLOBAL__N_18observedE
+     140: 91000108     	add	x8, x8, #0x0
+		0000000000000140:  R_AARCH64_ADD_ABS_LO12_NC	.bss._ZN12_GLOBAL__N_18observedE
+     144: aa1603e0     	mov	x0, x22
+     148: ad430500     	ldp	q0, q1, [x8, #0x60]
+     14c: ad0d8660     	stp	q0, q1, [x19, #0x1b0]
+     150: ad440900     	ldp	q0, q2, [x8, #0x80]
+     154: ad0e8a60     	stp	q0, q2, [x19, #0x1d0]
+     158: ad410101     	ldp	q1, q0, [x8, #0x20]
+     15c: ad0b8261     	stp	q1, q0, [x19, #0x170]
+     160: ad420102     	ldp	q2, q0, [x8, #0x40]
+     164: ad0c8262     	stp	q2, q0, [x19, #0x190]
+     168: ad400101     	ldp	q1, q0, [x8]
+     16c: ad0a8261     	stp	q1, q0, [x19, #0x150]
+     170: 885f7e68     	ldxr	w8, [x19]
+     174: 11000508     	add	w8, w8, #0x1
+     178: 8809fe68     	stlxr	w9, w8, [x19]
+     17c: 35ffffa9     	cbnz	w9, 0x170 <iq4_f1_scaler_after_09+0x170>
+     180: 089ffebf     	stlrb	wzr, [x21]
+     184: b9000014     	str	w20, [x0]
+     188: a9434ff4     	ldp	x20, x19, [sp, #0x30]
+     18c: f9400bf7     	ldr	x23, [sp, #0x10]
+     190: a94257f6     	ldp	x22, x21, [sp, #0x20]
+     194: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+     198: d65f03c0     	ret

@@ -1,0 +1,46 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000435fac <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_>:
+  47e930: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  47e934: f240043f     	tst	x1, #0x3
+  47e938: 910003fd     	mov	x29, sp
+  47e93c: a90153f3     	stp	x19, x20, [sp, #0x10]
+  47e940: aa0103f3     	mov	x19, x1
+  47e944: aa0203f4     	mov	x20, x2
+  47e948: a9025bf5     	stp	x21, x22, [sp, #0x20]
+  47e94c: 2a0403f6     	mov	w22, w4
+  47e950: 2a0303f5     	mov	w21, w3
+  47e954: 2a0503e4     	mov	w4, w5
+  47e958: 2a0603e5     	mov	w5, w6
+  47e95c: 54000121     	b.ne	0x47e980 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x489d4>
+  47e960: 2a1603e3     	mov	w3, w22
+  47e964: 2a1503e2     	mov	w2, w21
+  47e968: aa1403e1     	mov	x1, x20
+  47e96c: aa1303e0     	mov	x0, x19
+  47e970: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  47e974: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+  47e978: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  47e97c: 1415ab07     	b	0x9e9598 <zError+0xdc1c>
+  47e980: b00037e2     	adrp	x2, 0xb7b000
+  47e984: b00037e1     	adrp	x1, 0xb7b000
+  47e988: 91204042     	add	x2, x2, #0x810
+  47e98c: 9120a021     	add	x1, x1, #0x828
+  47e990: 52800ba3     	mov	w3, #0x5d               // =93
+  47e994: b00037e0     	adrp	x0, 0xb7b000
+  47e998: 91212000     	add	x0, x0, #0x848
+  47e99c: 29071be4     	stp	w4, w6, [sp, #0x38]
+  47e9a0: 97fe2ef8     	bl	0x40a580 <printf@plt>
+  47e9a4: 940bb759     	bl	0x76c708 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x529dc>
+  47e9a8: 294717e4     	ldp	w4, w5, [sp, #0x38]
+  47e9ac: 2a1603e3     	mov	w3, w22
+  47e9b0: 2a1503e2     	mov	w2, w21
+  47e9b4: aa1403e1     	mov	x1, x20
+  47e9b8: aa1303e0     	mov	x0, x19
+  47e9bc: a94153f3     	ldp	x19, x20, [sp, #0x10]
+  47e9c0: a9425bf5     	ldp	x21, x22, [sp, #0x20]
+  47e9c4: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  47e9c8: 1415aaf4     	b	0x9e9598 <zError+0xdc1c>
+  47e9cc: d503201f     	nop

@@ -1,0 +1,45 @@
+{
+  "F1_camera_acceptance": false,
+  "PHDR_strategy": "active 12-entry table within original all-zero RX/RW file gap; first RX extended only into gap",
+  "active_PHDR_file_offset": 11736920,
+  "active_PHDR_va": 15931224,
+  "baseline_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "camera_access": false,
+  "candidate_emitted": false,
+  "firmware_accepted": false,
+  "functional_payload_required": true,
+  "hooks": [
+    {
+      "old_bytes": "9b64fd97",
+      "target": 4681784,
+      "va": 5365196,
+      "wrapper": "iq4_f1_lv_draw_wrapper_12"
+    },
+    {
+      "old_bytes": "a22ff597",
+      "target": 4237104,
+      "va": 7071912,
+      "wrapper": "iq4_f1_firmware_unlock_01"
+    },
+    {
+      "old_bytes": "a3a10094",
+      "target": 5338552,
+      "va": 5173036,
+      "wrapper": "iq4_f1_lv_ctor_wrapper_01"
+    }
+  ],
+  "new_RX_va": 69468160,
+  "original_DT_INIT": 4234128,
+  "original_EH_entries": 32455,
+  "original_INIT_ARRAY_entries": 340,
+  "required_symbols": [
+    "iq4_f1_lv_draw_wrapper_12",
+    "iq4_f1_firmware_unlock_01",
+    "iq4_f1_lv_ctor_wrapper_01",
+    "iq4_f1_firmware_initialize_01",
+    "iq4_f1_mode_get_01",
+    "iq4_f1_mode_set_on_ui_01"
+  ],
+  "schema": "iq4_f1_user_elf_append_plan_01",
+  "target_executed": false
+}

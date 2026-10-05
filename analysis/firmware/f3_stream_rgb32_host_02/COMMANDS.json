@@ -1,0 +1,91 @@
+[
+  {
+    "argv": [
+      "clang",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-O1",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/stream_rgb32.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/bounded_jpeg.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tests/codec/stream_rgb32/test_stream.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/build/libjpeg8/.libs/libjpeg.a",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_rgb32_host_02/stream_normal"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_rgb32_host_02/stream_normal",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_rgb32_host_02"
+    ],
+    "exit": 0,
+    "stdout": "{\"synthetic_geometry\":[14204,10652],\"jpeg_bytes\":4132088,\"rgb24_row_bytes\":42612,\"destination_bytes\":16384,\"decoded_rows\":10652,\"camera\":false}\n{\"synthetic_geometry\":[10653,7989],\"jpeg_bytes\":2438742,\"rgb24_row_bytes\":31959,\"destination_bytes\":16384,\"decoded_rows\":7989,\"camera\":false}\n{\"synthetic_geometry\":[7102,5326],\"jpeg_bytes\":1190124,\"rgb24_row_bytes\":21306,\"destination_bytes\":16384,\"decoded_rows\":5326,\"camera\":false}\n{\"host_groups\":18,\"passed\":true,\"native_target\":false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "clang",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-O1",
+      "-g",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/stream_rgb32.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/bounded_jpeg.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tests/codec/stream_rgb32/test_stream.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/evidence/codec/build/libjpeg8_sanitized/.libs/libjpeg.a",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_rgb32_host_02/stream_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_rgb32_host_02/stream_sanitized"
+    ],
+    "exit": 0,
+    "stdout": "{\"host_groups\":15,\"passed\":true,\"native_target\":false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-fPIC",
+      "-ffp-contract=off",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-omit-frame-pointer",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DIQ4_JPEG_API_VERSION=82",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/stream_rgb32.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_stream_rgb32_host_02/stream_rgb32_aarch64.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

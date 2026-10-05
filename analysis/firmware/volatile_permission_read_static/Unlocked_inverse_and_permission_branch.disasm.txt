@@ -1,0 +1,52 @@
+STATIC ONLY; linked VAs; nearest exported labels are not recovered private names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6aac90: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aac94: f9400c00     	ldr	x0, [x0, #0x18]
+  6aac98: 91002000     	add	x0, x0, #0x8
+  6aac9c: 97f5a738     	bl	0x41497c <.text+0x974c>
+  6aaca0: 3900bbe0     	strb	w0, [sp, #0x2e]
+  6aaca4: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aaca8: f9400c00     	ldr	x0, [x0, #0x18]
+  6aacac: 911da002     	add	x2, x0, #0x768
+  6aacb0: 3940bbe0     	ldrb	w0, [sp, #0x2e]
+  6aacb4: 52000000     	eor	w0, w0, #0x1
+  6aacb8: 12001c00     	and	w0, w0, #0xff
+  6aacbc: 2a0003e1     	mov	w1, w0
+  6aacc0: aa0203e0     	mov	x0, x2
+  6aacc4: 97f5a73b     	bl	0x4149b0 <.text+0x9780>
+  6aacc8: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aaccc: f9401000     	ldr	x0, [x0, #0x20]
+  6aacd0: 91002000     	add	x0, x0, #0x8
+  6aacd4: 3940bbe1     	ldrb	w1, [sp, #0x2e]
+  6aacd8: 97fd1373     	bl	0x5efaa4 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0xf69f4>
+  6aacdc: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aace0: f9401400     	ldr	x0, [x0, #0x28]
+  6aace4: 91002000     	add	x0, x0, #0x8
+  6aace8: 3940bbe1     	ldrb	w1, [sp, #0x2e]
+  6aacec: 97fc140b     	bl	0x5afd18 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0xb6c68>
+  6aacf0: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aacf4: f9401400     	ldr	x0, [x0, #0x28]
+  6aacf8: 9104e000     	add	x0, x0, #0x138
+  6aacfc: 3940bbe1     	ldrb	w1, [sp, #0x2e]
+  6aad00: 97fc1406     	bl	0x5afd18 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0xb6c68>
+  6aad04: 3940bbe0     	ldrb	w0, [sp, #0x2e]
+  6aad08: 7100001f     	cmp	w0, #0x0
+  6aad0c: 540021a0     	b.eq	0x6ab140 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0xad80>
+  6aad10: 3940bfe0     	ldrb	w0, [sp, #0x2f]
+  6aad14: 7100041f     	cmp	w0, #0x1
+  6aad18: 54000900     	b.eq	0x6aae38 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0xaa78>
+  6aad1c: 7100041f     	cmp	w0, #0x1
+  6aad20: 5400008c     	b.gt	0x6aad30 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0xa970>
+  6aad24: 7100001f     	cmp	w0, #0x0
+  6aad28: 540000e0     	b.eq	0x6aad44 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0xa984>
+  6aad2c: 140000fa     	b	0x6ab114 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0xad54>
+  6aad30: 7100081f     	cmp	w0, #0x2
+  6aad34: 54001760     	b.eq	0x6ab020 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0xac60>
+  6aad38: 71000c1f     	cmp	w0, #0x3
+  6aad3c: 54000f80     	b.eq	0x6aaf2c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0xab6c>
+  6aad40: 140000f5     	b	0x6ab114 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm+0xad54>

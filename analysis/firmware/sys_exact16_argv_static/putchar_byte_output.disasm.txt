@@ -1,0 +1,22 @@
+STATIC ONLY; exported proximity is not a private function identity.
+
+analysis/firmware/sys_exact16_argv_static/busybox.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+000000000000b7a0 <.text>:
+    db4c: b0000582     	adrp	x2, 0xbe000
+    db50: 2a0003e3     	mov	w3, w0
+    db54: 12001c01     	and	w1, w0, #0xff
+    db58: f9479c42     	ldr	x2, [x2, #0xf38]
+    db5c: f9400040     	ldr	x0, [x2]
+    db60: a9429002     	ldp	x2, x4, [x0, #0x28]
+    db64: eb04005f     	cmp	x2, x4
+    db68: 54000043     	b.lo	0xdb70 <.text+0x23d0>
+    db6c: 17fff491     	b	0xadb0 <__overflow@plt>
+    db70: 91000444     	add	x4, x2, #0x1
+    db74: f9001404     	str	x4, [x0, #0x28]
+    db78: 2a0103e0     	mov	w0, w1
+    db7c: 39000043     	strb	w3, [x2]
+    db80: d65f03c0     	ret
+    db84: a9bf7bf3     	stp	x19, x30, [sp, #-0x10]!

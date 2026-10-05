@@ -1,0 +1,161 @@
+{
+  "original_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "target_abi_verified": false,
+  "fixed_address_factory": "native_binding.cpp",
+  "fixed_factory_implemented": true,
+  "functions": [
+    {
+      "name": "settings_construct",
+      "va": 8109140,
+      "file_offset": 3914836,
+      "prefix_hex": "fd7bb8a9fd030091f35301a9f55b02a9f71b00f9e02700f9e02740f900102e1e",
+      "sha256": "b5e10230bf5427bf8957aee6db556db8357775e8bed411f424c3c1901b6b23af",
+      "aapcs64": "x0=owned settings[0x2c8]",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "settings_destroy",
+      "va": 8109892,
+      "file_offset": 3915588,
+      "prefix_hex": "fd7bbea9fd030091e00f00f9e00f40f90020079127ffff97e00f40f900c00691",
+      "sha256": "a2d00147e83ff2be1b4580cf0370a4c7f23f86abf46b804bf93f70b3b989c35c",
+      "aapcs64": "x0=constructed settings; nondeleting",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "generator_construct",
+      "va": 9838680,
+      "file_offset": 5644376,
+      "prefix_hex": "fd7bbba9fd030091f35301a9f30300aa14000191f55b02a9f50301aa01600091",
+      "sha256": "5dfe94d127999d07e649dc0216eccc7e285dd9ead4b6b217a1e1d9ab08fabbde",
+      "aapcs64": "x0=generator[0x1f0],x1=exclusive base,x2=u64 bytes",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "generator_destroy",
+      "va": 9839272,
+      "file_offset": 5644968,
+      "prefix_hex": "fd7bbca901400791fd030091f35301a9f30300aaf55b02a9230840f9830000b4",
+      "sha256": "e241d125d2b0431b63a18446b220273bf211d75e26bd261b186eb356b4ec9fdf",
+      "aapcs64": "x0=constructed generator; nondeleting",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "image_construct",
+      "va": 9454928,
+      "file_offset": 5260624,
+      "prefix_hex": "fd7bbea903260090640080d2fd030091f35301a9f30300aa6132009114200191",
+      "sha256": "cc36be8600702918216730c528813ed6bb0994fc16aab84c540c40345b2a0566",
+      "aapcs64": "x0=zeroed CImageBuffer[0x58]",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "image_destroy",
+      "va": 9452712,
+      "file_offset": 5258408,
+      "prefix_hex": "fd7bbea9fd030091f30b00f9f30300aa00004039c0010034601e40f97f020039",
+      "sha256": "25e9464863d8c71fe3fe370944cc82494d1ea145e061b34aa2418bde24d0ff65",
+      "aapcs64": "x0=constructed CImageBuffer; nondeleting",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "configure_source",
+      "va": 9831544,
+      "file_offset": 5637240,
+      "prefix_hex": "fd7bbaa9fd030091f35301a9f30300aae8430191e00302aaf55b02a9f503012a",
+      "sha256": "0f4091f1e688d7cd52534acd53d949e62432636b8a19ce066d61a8e69693b1c5",
+      "aapcs64": "x0=generator,w1=sensorID,x2=owned mutable tags",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "configure_profile",
+      "va": 9835016,
+      "file_offset": 5640712,
+      "prefix_hex": "fd7baea9fd030091f35301a9f40301aaf303022af55b02a9f50300aaf76303a9",
+      "sha256": "c03cc23d6a082fe67d6b0da6250e31235d72a670b8de8e43664dd5841f416545",
+      "aapcs64": "x0=generator,x1=settings,w2=profileSlot(0 finite scope)",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "process",
+      "va": 9845288,
+      "file_offset": 5650984,
+      "prefix_hex": "10e284d2ff6330cbfd7b05a9fd430191f35306a9f30304aaf40300aae8270b6d",
+      "sha256": "4986ef6e3799ed91518e7e792fdaa3042d8377573da975166cafe5ba19153abe",
+      "aapcs64": "x0=generator,x1=RawInput,x2=RGB32,x3=planar,x4=settings,x5=pool,x6=cancel; w0=outer bool not completion",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "pool_construct",
+      "va": 7432836,
+      "file_offset": 3238532,
+      "prefix_hex": "fd7bbba9fd030091f35301a9e01f00f9e11b00f9e22f00b9e32b00b9e42700b9",
+      "sha256": "a632acfd6c5e09617b1a96daf8873712f4a8735be5dcb3f8e72cbebbf3ecf684",
+      "aapcs64": "x0=pool[0x18],x1=name,w2=count,w3=priority,w4=stack",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "pool_start",
+      "va": 7433304,
+      "file_offset": 3239000,
+      "prefix_hex": "fd7bbda9fd030091e00f00f9ff2f00b9e00f40f9010840b9e02f40b93f00006b",
+      "sha256": "5c33246b2f92e7de176a704990de5d1a4cf65a926e8b32f22fd588353259f2bc",
+      "aapcs64": "x0=constructed pool; starts all workers, NOT destructor",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "pool_join",
+      "va": 7433824,
+      "file_offset": 3239520,
+      "prefix_hex": "fd7bb3a9fd030091f30b00f9e01700f9e01740f90050403900000052001c0012",
+      "sha256": "bd18d8f0b2165c326422b928ae1875a5fa598f57a4baee66f40516445a13779c",
+      "aapcs64": "x0=started owned pool; waits all queued functions",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "image_plane",
+      "va": 9454536,
+      "file_offset": 5260232,
+      "prefix_hex": "011c40b9020c40b9210400513f480071680100540326009063a01891041040b9",
+      "sha256": "6b329c5d99605d947f3c94d6fa351f0902168cc6fdd60b2071c5cd4792e34d89",
+      "aapcs64": "x0=CImageBuffer; x0=borrowed plane pointer",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "image_width",
+      "va": 9454664,
+      "file_offset": 5260360,
+      "prefix_hex": "001440b9c0035fd6001840b9c0035fd6001040b9c0035fd6000c40b9c0035fd6",
+      "sha256": "2216ac80bcdac4f290824216057bee2884dbf4da975707c1bf1dd02982887880",
+      "aapcs64": "x0=CImageBuffer; w0=width",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "image_height",
+      "va": 9454672,
+      "file_offset": 5260368,
+      "prefix_hex": "001840b9c0035fd6001040b9c0035fd6000c40b9c0035fd6002440b9c0035fd6",
+      "sha256": "fa83f859ed6a3d94d7e5e642cc665b9ee5e55cea26e7f0b993a760d5c0ff1706",
+      "aapcs64": "x0=CImageBuffer; w0=height",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "image_stride",
+      "va": 9454696,
+      "file_offset": 5260392,
+      "prefix_hex": "002440b9c0035fd6003040b9c0035fd6000440b9c0035fd6000840b9c0035fd6",
+      "sha256": "81550108716baeb42e036070f4f702f6c1df55b99725d356222c75940fc60799",
+      "aapcs64": "x0=CImageBuffer; w0=byte stride",
+      "target_runtime_accepted": false
+    },
+    {
+      "name": "image_format",
+      "va": 9454496,
+      "file_offset": 5260192,
+      "prefix_hex": "001c40b9c0035fd600300091c0035fd600c0c03c2000803dc0035fd61f2003d5",
+      "sha256": "bc44433bbfd9252078b30a8b7999fc5d81c795f30bdd06bd1b98fe84ef3e0d09",
+      "aapcs64": "x0=CImageBuffer; w0=[x0+0x1c] format; 904398 is always0",
+      "target_runtime_accepted": false
+    }
+  ]
+}

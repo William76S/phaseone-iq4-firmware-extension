@@ -1,0 +1,43 @@
+{
+  "schema": "iq4_f3_capture_menu_link_04",
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_04/policy.o",
+      "bytes": 3872,
+      "sha256": "d272ce9dc423401c763a0c2c93e6d88cc795afacd9a6e02962c91f1b2146cb97"
+    },
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_04/menu.o",
+      "bytes": 29288,
+      "sha256": "650f86eb43467730269bafaeffa225f3e9635251a62dac77e1c86d24caf4bf6b"
+    },
+    {
+      "path": "analysis/firmware/f3_capture_menu_build_04/wrapper.o",
+      "bytes": 1120,
+      "sha256": "d68a9c9980a80601469ad5c65ed1bf7f580fdeabe58e8747dfe85ff7c02e2385"
+    }
+  ],
+  "hook": {
+    "va": "0x4f0d34",
+    "old_LE": "e1d2ff97",
+    "original_target": "0x4e58b8",
+    "return_pc": "0x4f0d38",
+    "entry": "iq4_f3_file_settings_append_wrapper_04"
+  },
+  "aliases": [],
+  "required_dependencies": [
+    "f3_native_executor_01",
+    "f3_save_coordinator_06",
+    "native_activity_01",
+    "native_runtime_01/self_read.o",
+    "f4_native_menu_03/native_calls.o",
+    "f4_native_source_02/native_calls.o",
+    "src/codec/export_geometry.o"
+  ],
+  "replace_not_duplicate": "all menu03/policy.o symbols; sole own packed settings",
+  "direct_coordinator_consumer": true,
+  "actual_factory_before_hook_required": true,
+  "actual_native_capture_or_manual_tested": false,
+  "target_executed": false,
+  "camera_access": false
+}

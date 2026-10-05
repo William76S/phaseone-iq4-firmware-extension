@@ -1,0 +1,128 @@
+STATIC ONLY; linked VAs. Nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006ee080 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_>:
+  6f8048:      	stp	x29, x30, [sp, #-0x40]!
+  6f804c:      	mov	x29, sp
+  6f8050:      	str	x0, [sp, #0x18]
+  6f8054:      	str	x1, [sp, #0x10]
+  6f8058:      	ldr	x3, [sp, #0x10]
+  6f805c:      	mov	w2, #0x1                // =1
+  6f8060:      	adrp	x0, 0xc1b000
+  6f8064:      	add	x1, x0, #0x180
+  6f8068:      	mov	x0, x3
+  6f806c:      	bl	0x740b08 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x26ddc>
+  6f8070:      	and	w0, w0, #0xff
+  6f8074:      	cmp	w0, #0x0
+  6f8078:      	b.eq	0x6f80a0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0xa020>
+  6f807c:      	ldr	x0, [sp, #0x10]
+  6f8080:      	ldr	x0, [x0]
+  6f8084:      	add	x0, x0, #0x20
+  6f8088:      	ldr	x2, [x0]
+  6f808c:      	adrp	x0, 0xc1b000
+  6f8090:      	add	x1, x0, #0x518
+  6f8094:      	ldr	x0, [sp, #0x10]
+  6f8098:      	blr	x2
+  6f809c:      	b	0x6f8224 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0xa1a4>
+  6f80a0:      	ldr	x0, [sp, #0x10]
+  6f80a4:      	mov	w1, #0x1                // =1
+  6f80a8:      	bl	0x4641fc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcS5_S5_+0x2e250>
+  6f80ac:      	str	x0, [sp, #0x38]
+  6f80b0:      	ldr	x0, [sp, #0x10]
+  6f80b4:      	ldr	x0, [x0]
+  6f80b8:      	add	x0, x0, #0x20
+  6f80bc:      	ldr	x2, [x0]
+  6f80c0:      	adrp	x0, 0xc1b000
+  6f80c4:      	add	x1, x0, #0x560
+  6f80c8:      	ldr	x0, [sp, #0x10]
+  6f80cc:      	blr	x2
+  6f80d0:      	adrp	x0, 0xc1b000
+  6f80d4:      	add	x1, x0, #0x588
+  6f80d8:      	ldr	x0, [sp, #0x38]
+  6f80dc:      	bl	0x74f7f0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x35ac4>
+  6f80e0:      	and	w0, w0, #0xff
+  6f80e4:      	cmp	w0, #0x0
+  6f80e8:      	b.eq	0x6f816c <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0xa0ec>
+  6f80ec:      	ldr	x0, [sp, #0x18]
+  6f80f0:      	ldr	x0, [x0, #0x40]
+  6f80f4:      	add	x0, x0, #0x528
+  6f80f8:      	bl	0x5e0138 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0xe7088>
+  6f80fc:      	str	w0, [sp, #0x34]
+  6f8100:      	ldr	w0, [sp, #0x34]
+  6f8104:      	cmp	w0, #0x0
+  6f8108:      	cset	w0, ne
+  6f810c:      	strb	w0, [sp, #0x33]
+  6f8110:      	ldrb	w0, [sp, #0x33]
+  6f8114:      	cmp	w0, #0x0
+  6f8118:      	b.eq	0x6f8140 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0xa0c0>
+  6f811c:      	ldr	x0, [sp, #0x10]
+  6f8120:      	ldr	x0, [x0]
+  6f8124:      	add	x0, x0, #0x20
+  6f8128:      	ldr	x2, [x0]
+  6f812c:      	adrp	x0, 0xc1b000
+  6f8130:      	add	x1, x0, #0x590
+  6f8134:      	ldr	x0, [sp, #0x10]
+  6f8138:      	blr	x2
+  6f813c:      	b	0x6f8224 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0xa1a4>
+  6f8140:      	ldr	x0, [sp, #0x18]
+  6f8144:      	ldr	x0, [x0, #0x40]
+  6f8148:      	add	x0, x0, #0x450
+  6f814c:      	mov	w1, #0x0                // =0
+  6f8150:      	bl	0x4149b0 <.text+0x9780>
+  6f8154:      	ldr	x0, [sp, #0x18]
+  6f8158:      	ldr	x0, [x0, #0x40]
+  6f815c:      	add	x0, x0, #0x1c8
+  6f8160:      	ldr	x1, [sp, #0x38]
+  6f8164:      	bl	0x7129c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x24940>
+  6f8168:      	b	0x6f8204 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0xa184>
+  6f816c:      	adrp	x0, 0xc1b000
+  6f8170:      	add	x1, x0, #0x5b0
+  6f8174:      	ldr	x0, [sp, #0x38]
+  6f8178:      	bl	0x74f7f0 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x35ac4>
+  6f817c:      	and	w0, w0, #0xff
+  6f8180:      	cmp	w0, #0x0
+  6f8184:      	b.eq	0x6f8204 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0xa184>
+  6f8188:      	ldr	x0, [sp, #0x18]
+  6f818c:      	ldr	x0, [x0, #0x48]
+  6f8190:      	add	x0, x0, #0x5e8
+  6f8194:      	bl	0x5e2a90 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5c_strEv+0xe99e0>
+  6f8198:      	str	w0, [sp, #0x2c]
+  6f819c:      	ldr	w0, [sp, #0x2c]
+  6f81a0:      	cmp	w0, #0x0
+  6f81a4:      	cset	w0, ne
+  6f81a8:      	strb	w0, [sp, #0x2b]
+  6f81ac:      	ldrb	w0, [sp, #0x2b]
+  6f81b0:      	cmp	w0, #0x0
+  6f81b4:      	b.eq	0x6f81dc <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0xa15c>
+  6f81b8:      	ldr	x0, [sp, #0x10]
+  6f81bc:      	ldr	x0, [x0]
+  6f81c0:      	add	x0, x0, #0x20
+  6f81c4:      	ldr	x2, [x0]
+  6f81c8:      	adrp	x0, 0xc1b000
+  6f81cc:      	add	x1, x0, #0x590
+  6f81d0:      	ldr	x0, [sp, #0x10]
+  6f81d4:      	blr	x2
+  6f81d8:      	b	0x6f8224 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0xa1a4>
+  6f81dc:      	ldr	x0, [sp, #0x18]
+  6f81e0:      	ldr	x0, [x0, #0x48]
+  6f81e4:      	add	x0, x0, #0x458
+  6f81e8:      	mov	w1, #0x0                // =0
+  6f81ec:      	bl	0x4149b0 <.text+0x9780>
+  6f81f0:      	ldr	x0, [sp, #0x18]
+  6f81f4:      	ldr	x0, [x0, #0x48]
+  6f81f8:      	add	x0, x0, #0xe8
+  6f81fc:      	ldr	x1, [sp, #0x38]
+  6f8200:      	bl	0x7129c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_+0x24940>
+  6f8204:      	ldr	x0, [sp, #0x10]
+  6f8208:      	ldr	x0, [x0]
+  6f820c:      	add	x0, x0, #0x20
+  6f8210:      	ldr	x2, [x0]
+  6f8214:      	adrp	x0, 0xc1b000
+  6f8218:      	add	x1, x0, #0x5b8
+  6f821c:      	ldr	x0, [sp, #0x10]
+  6f8220:      	blr	x2
+  6f8224:      	ldp	x29, x30, [sp], #0x40
+  6f8228:      	ret

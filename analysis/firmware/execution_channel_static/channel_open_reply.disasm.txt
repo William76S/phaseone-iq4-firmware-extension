@@ -1,0 +1,113 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPChannel.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000000d50 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)>:
+     d50: 41 54                        	pushq	%r12
+     d52: 55                           	pushq	%rbp
+     d53: 48 89 fd                     	movq	%rdi, %rbp
+     d56: 53                           	pushq	%rbx
+     d57: 80 7e 22 00                  	cmpb	$0x0, 0x22(%rsi)
+     d5b: 0f 85 67 01 00 00            	jne	0xec8 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x178>
+     d61: 0f b6 4e 16                  	movzbl	0x16(%rsi), %ecx
+     d65: 49 89 f4                     	movq	%rsi, %r12
+     d68: 0f b6 97 a1 00 00 00         	movzbl	0xa1(%rdi), %edx
+     d6f: 0f b6 b7 a0 00 00 00         	movzbl	0xa0(%rdi), %esi
+     d76: 80 f9 01                     	cmpb	$0x1, %cl
+     d79: 0f 85 11 01 00 00            	jne	0xe90 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x140>
+     d7f: 41 0f b6 44 24 10            	movzbl	0x10(%r12), %eax
+     d85: 83 e0 01                     	andl	$0x1, %eax
+     d88: 88 87 b2 00 00 00            	movb	%al, 0xb2(%rdi)
+     d8e: 0f b6 87 b2 00 00 00         	movzbl	0xb2(%rdi), %eax
+     d95: 84 c0                        	testb	%al, %al
+     d97: 0f 85 43 01 00 00            	jne	0xee0 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x190>
+     d9d: 0f b6 85 b1 00 00 00         	movzbl	0xb1(%rbp), %eax
+     da4: 48 8b bd a8 00 00 00         	movq	0xa8(%rbp), %rdi
+     dab: b9 01 00 00 00               	movl	$0x1, %ecx
+     db0: 84 c0                        	testb	%al, %al
+     db2: 0f 84 c8 00 00 00            	je	0xe80 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x130>
+     db8: e8 00 00 00 00               	callq	0xdbd <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x6d>
+		0000000000000db9:  R_X86_64_PLT32	P1::IQP::ChannelTransport::SetDebug(unsigned char, unsigned char, bool)-0x4
+     dbd: 41 0f b6 4c 24 17            	movzbl	0x17(%r12), %ecx
+     dc3: 89 cb                        	movl	%ecx, %ebx
+     dc5: 41 89 c8                     	movl	%ecx, %r8d
+     dc8: c0 eb 04                     	shrb	$0x4, %bl
+     dcb: 41 83 e0 0f                  	andl	$0xf, %r8d
+     dcf: 80 f9 8f                     	cmpb	$-0x71, %cl
+     dd2: 0f 87 30 01 00 00            	ja	0xf08 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x1b8>
+     dd8: 41 80 f8 08                  	cmpb	$0x8, %r8b
+     ddc: 0f 87 26 01 00 00            	ja	0xf08 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x1b8>
+     de2: 0f b6 95 a1 00 00 00         	movzbl	0xa1(%rbp), %edx
+     de9: 0f b6 b5 a0 00 00 00         	movzbl	0xa0(%rbp), %esi
+     df0: 0f b6 cb                     	movzbl	%bl, %ecx
+     df3: 41 83 e0 0f                  	andl	$0xf, %r8d
+     df7: 48 8b bd a8 00 00 00         	movq	0xa8(%rbp), %rdi
+     dfe: e8 00 00 00 00               	callq	0xe03 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0xb3>
+		0000000000000dff:  R_X86_64_PLT32	P1::IQP::ChannelTransport::SetAlignment(unsigned char, unsigned char, unsigned char, unsigned char)-0x4
+     e03: 41 0f b7 54 24 14            	movzwl	0x14(%r12), %edx
+     e09: b8 ff ff ff ff               	movl	$0xffffffff, %eax       # imm = 0xFFFFFFFF
+     e0e: 89 d9                        	movl	%ebx, %ecx
+     e10: d3 e0                        	shll	%cl, %eax
+     e12: 21 d0                        	andl	%edx, %eax
+     e14: 66 3d ef 00                  	cmpw	$0xef, %ax
+     e18: 0f 86 0a 01 00 00            	jbe	0xf28 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x1d8>
+     e1e: 41 8b 4c 24 18               	movl	0x18(%r12), %ecx
+     e23: 66 89 85 b4 00 00 00         	movw	%ax, 0xb4(%rbp)
+     e2a: 0f b6 95 a1 00 00 00         	movzbl	0xa1(%rbp), %edx
+     e31: 0f b6 b5 a0 00 00 00         	movzbl	0xa0(%rbp), %esi
+     e38: 8d 81 10 27 00 00            	leal	0x2710(%rcx), %eax
+     e3e: 81 f9 ee d8 ff ff            	cmpl	$0xffffd8ee, %ecx       # imm = 0xFFFFD8EE
+     e44: 48 8b bd a8 00 00 00         	movq	0xa8(%rbp), %rdi
+     e4b: 0f 46 c8                     	cmovbel	%eax, %ecx
+     e4e: e8 00 00 00 00               	callq	0xe53 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x103>
+		0000000000000e4f:  R_X86_64_PLT32	P1::IQP::ChannelTransport::SetWriteTimeout(unsigned char, unsigned char, unsigned int)-0x4
+     e53: 41 0f b7 74 24 20            	movzwl	0x20(%r12), %esi
+     e59: 48 8d 7d 38                  	leaq	0x38(%rbp), %rdi
+     e5d: e8 00 00 00 00               	callq	0xe62 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x112>
+		0000000000000e5e:  R_X86_64_PLT32	P1::IQP::IQPMessageProtocolInfo::RegisterProtocolVersion(P1::IQP::MessageProtocolVersion)-0x4
+     e62: be 04 00 00 00               	movl	$0x4, %esi
+     e67: 84 c0                        	testb	%al, %al
+     e69: 74 33                        	je	0xe9e <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x14e>
+     e6b: 5b                           	popq	%rbx
+     e6c: 48 89 ef                     	movq	%rbp, %rdi
+     e6f: 5d                           	popq	%rbp
+     e70: 41 5c                        	popq	%r12
+     e72: e9 b9 f4 ff ff               	jmp	0x330 <P1::IQP::Channel::SetState(P1::IQP::ChannelProtocol::EnumChannelState)>
+     e77: 66 0f 1f 84 00 00 00 00 00   	nopw	(%rax,%rax)
+     e80: 0f b6 8d b2 00 00 00         	movzbl	0xb2(%rbp), %ecx
+     e87: e9 2c ff ff ff               	jmp	0xdb8 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x68>
+     e8c: 0f 1f 40 00                  	nopl	(%rax)
+     e90: 48 8d 3d 00 00 00 00         	leaq	(%rip), %rdi            # 0xe97 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x147>
+		0000000000000e93:  R_X86_64_PC32	.LC22-0x4
+     e97: 31 c0                        	xorl	%eax, %eax
+     e99: e8 00 00 00 00               	callq	0xe9e <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x14e>
+		0000000000000e9a:  R_X86_64_PLT32	P1::Universal::LogMsgError(wchar_t const*, ...)-0x4
+     e9e: 48 8b bd a8 00 00 00         	movq	0xa8(%rbp), %rdi
+     ea5: be 08 00 00 00               	movl	$0x8, %esi
+     eaa: 4c 89 e2                     	movq	%r12, %rdx
+     ead: e8 00 00 00 00               	callq	0xeb2 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x162>
+		0000000000000eae:  R_X86_64_PLT32	P1::IQP::ChannelTransport::SendErrorReply(P1::IQP::ChannelProtocol::EnumChannelError, P1::IQP::ChannelProtocol::CommonPacketHeader const&)-0x4
+     eb2: 31 f6                        	xorl	%esi, %esi
+     eb4: 84 c0                        	testb	%al, %al
+     eb6: 74 b3                        	je	0xe6b <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x11b>
+     eb8: 5b                           	popq	%rbx
+     eb9: 48 89 ef                     	movq	%rbp, %rdi
+     ebc: 5d                           	popq	%rbp
+     ebd: 41 5c                        	popq	%r12
+     ebf: e9 fc fb ff ff               	jmp	0xac0 <P1::IQP::Channel::SendCloseRequest()>
+     ec4: 0f 1f 40 00                  	nopl	(%rax)
+     ec8: 5b                           	popq	%rbx
+     ec9: 48 89 ef                     	movq	%rbp, %rdi
+     ecc: be 01 00 00 00               	movl	$0x1, %esi
+     ed1: 5d                           	popq	%rbp
+     ed2: 41 5c                        	popq	%r12
+     ed4: e9 57 f4 ff ff               	jmp	0x330 <P1::IQP::Channel::SetState(P1::IQP::ChannelProtocol::EnumChannelState)>
+     ed9: 0f 1f 80 00 00 00 00         	nopl	(%rax)
+     ee0: 48 8d 3d 00 00 00 00         	leaq	(%rip), %rdi            # 0xee7 <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x197>
+		0000000000000ee3:  R_X86_64_PC32	.LC23-0x4
+     ee7: 31 c0                        	xorl	%eax, %eax
+     ee9: e8 00 00 00 00               	callq	0xeee <P1::IQP::Channel::HandleOpenReply(P1::IQP::ChannelProtocol::OpenReplyPacket const&)+0x19e>
+		0000000000000eea:  R_X86_64_PLT32	P1::Universal::LogMsgWarning(wchar_t const*, ...)-0x4
+     eee: 0f b6 95 a1 00 00 00         	movzbl	0xa1(%rbp), %edx

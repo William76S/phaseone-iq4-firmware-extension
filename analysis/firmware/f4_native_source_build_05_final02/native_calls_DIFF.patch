@@ -1,0 +1,23 @@
+--- tools/firmware/f4_native_source_02/native_calls.cpp
++++ tools/firmware/f4_native_source_05/native_calls.cpp
+@@ -27,3 +27,20 @@
+  return (uint64_t)t.s*1000000000+(uint64_t)t.n;
+ }
+ extern "C" uint64_t iq4_f4_native_tid_02(void) {long n=call2(178,0,0);return n>0?(uint64_t)n:0;}
++
++/* Same original queue-global recursive lock used by 712790.
++ * Never call while holding a native frame lock. No retry or synthetic success. */
++#if defined(IQ4_F4_QUEUE_LOCK_SYNTHETIC_HOST)
++extern "C" void iq4_f4_test_original_queue_lock_05(void *);
++#endif
++extern "C" int iq4_f4_native_queue_lock_05(uintptr_t p) {
++ if(p!=0xf553c0)return 0;
++ try {
++#if defined(IQ4_F4_QUEUE_LOCK_SYNTHETIC_HOST)
++  iq4_f4_test_original_queue_lock_05((void *)p);
++#else
++  ((void(*)(void *))(uintptr_t)0x71242c)((void *)p);
++#endif
++  return 1;
++ } catch (...) { return 0; }
++}

@@ -1,0 +1,91 @@
+analysis/firmware/f4_ram_loader_static/ld-2.28.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000000085c8 <_dl_rtld_di_serinfo>:
+    d8a8:      	stp	x29, x30, [sp, #-0x50]!
+    d8ac:      	mov	x29, sp
+    d8b0:      	stp	x19, x20, [sp, #0x10]
+    d8b4:      	adrp	x19, 0x30000 <_rtld_global>
+    d8b8:      	add	x4, x19, #0x0
+    d8bc:      	mov	x20, x0
+    d8c0:      	stp	x21, x22, [sp, #0x20]
+    d8c4:      	mov	w22, w1
+    d8c8:      	ldr	x0, [x4, #0x9f0]
+    d8cc:      	stp	x23, x24, [sp, #0x30]
+    d8d0:      	mov	x21, x3
+    d8d4:      	ldr	x24, [x20, #0x148]
+    d8d8:      	str	x25, [sp, #0x40]
+    d8dc:      	mov	x23, x2
+    d8e0:      	ldr	x25, [x20, #0x140]
+    d8e4:      	cbnz	x0, 0xd9ac <_dl_rtld_di_serinfo+0x53e4>
+    d8e8:      	cmp	x25, #0x0
+    d8ec:      	ccmp	x24, #0x0, #0x4, ne
+    d8f0:      	b.ne	0xd950 <_dl_rtld_di_serinfo+0x5388>
+    d8f4:      	ldr	w19, [x20, #0x2c8]
+    d8f8:      	sub	w19, w19, #0x1
+    d8fc:      	mov	x3, x21
+    d900:      	cmn	w19, #0x1
+    d904:      	b.eq	0xd938 <_dl_rtld_di_serinfo+0x5370>
+    d908:      	ldr	x0, [x20, #0x3c0]
+    d90c:      	mov	x2, x23
+    d910:      	mov	w1, w22
+    d914:      	ldr	x4, [x0, w19, uxtw #3]
+    d918:      	mov	x0, x4
+    d91c:      	ldrb	w4, [x4, #0x31c]
+    d920:      	tbnz	w4, #0x3, 0xd8f8 <_dl_rtld_di_serinfo+0x5330>
+    d924:      	bl	0xd770 <_dl_rtld_di_serinfo+0x51a8>
+    d928:      	sub	w19, w19, #0x1
+    d92c:      	mov	x3, x21
+    d930:      	cmn	w19, #0x1
+    d934:      	b.ne	0xd908 <_dl_rtld_di_serinfo+0x5340>
+    d938:      	ldp	x19, x20, [sp, #0x10]
+    d93c:      	ldp	x21, x22, [sp, #0x20]
+    d940:      	ldp	x23, x24, [sp, #0x30]
+    d944:      	ldr	x25, [sp, #0x40]
+    d948:      	ldp	x29, x30, [sp], #0x50
+    d94c:      	ret
+    d950:      	ldr	x19, [x24, #0x8]
+    d954:      	lsr	x19, x19, #3
+    d958:      	cbz	w19, 0xd8f4 <_dl_rtld_di_serinfo+0x532c>
+    d95c:      	adrp	x0, 0x2f000
+    d960:      	ldr	w0, [x0, #0x720]
+    d964:      	tbnz	w0, #0x1, 0xd9c4 <_dl_rtld_di_serinfo+0x53fc>
+    d968:      	ldr	x1, [x20]
+    d96c:      	sub	w24, w19, #0x1
+    d970:      	ldr	x0, [x25, #0x8]
+    d974:      	add	x0, x0, x1
+    d978:      	add	x19, x0, #0x8
+    d97c:      	add	x24, x19, w24, uxtw #3
+    d980:      	b	0xd988 <_dl_rtld_di_serinfo+0x53c0>
+    d984:      	add	x19, x19, #0x8
+    d988:      	ldr	x3, [x0]
+    d98c:      	mov	x2, x21
+    d990:      	mov	w0, w22
+    d994:      	mov	x1, x23
+    d998:      	blr	x3
+    d99c:      	mov	x0, x19
+    d9a0:      	cmp	x24, x19
+    d9a4:      	b.ne	0xd984 <_dl_rtld_di_serinfo+0x53bc>
+    d9a8:      	b	0xd8f4 <_dl_rtld_di_serinfo+0x532c>
+    d9ac:      	ldrb	w4, [x0, #0x31c]
+    d9b0:      	tbnz	w4, #0x3, 0xd9b8 <_dl_rtld_di_serinfo+0x53f0>
+    d9b4:      	bl	0xd770 <_dl_rtld_di_serinfo+0x51a8>
+    d9b8:      	add	x19, x19, #0x0
+    d9bc:      	str	xzr, [x19, #0x9f0]
+    d9c0:      	b	0xd8e8 <_dl_rtld_di_serinfo+0x5320>
+    d9c4:      	ldr	x1, [x20, #0x8]
+    d9c8:      	ldrb	w0, [x1]
+    d9cc:      	cbnz	w0, 0xd9ec <_dl_rtld_di_serinfo+0x5424>
+    d9d0:      	adrp	x1, 0x31000 <_dl_argv>
+    d9d4:      	adrp	x0, 0x18000
+    d9d8:      	add	x0, x0, #0x740
+    d9dc:      	ldr	x1, [x1]
+    d9e0:      	ldr	x1, [x1]
+    d9e4:      	cmp	x1, #0x0
+    d9e8:      	csel	x1, x0, x1, eq
+    d9ec:      	adrp	x0, 0x1a000
+    d9f0:      	add	x0, x0, #0x3d8
+    d9f4:      	bl	0xe540 <_dl_debug_state+0x770>
+    d9f8:      	b	0xd968 <_dl_rtld_di_serinfo+0x53a0>
+    d9fc:      	nop

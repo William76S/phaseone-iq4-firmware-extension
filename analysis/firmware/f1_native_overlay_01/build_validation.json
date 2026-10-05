@@ -1,0 +1,69 @@
+{
+  "schema": "iq4_f1_native_overlay01_build_v1",
+  "tests": {
+    "normal": {
+      "groups": 19,
+      "independent_pixels": 1048576,
+      "exit_code": 0,
+      "receipt": "19 F1 own-code groups; 1048576 independent pixels; vendor/device execution zero"
+    },
+    "asan_ubsan": {
+      "groups": 19,
+      "independent_pixels": 1048576,
+      "exit_code": 0,
+      "receipt": "19 F1 own-code groups; 1048576 independent pixels; vendor/device execution zero"
+    },
+    "production": {
+      "groups": 1,
+      "exit_code": 0,
+      "receipt": "production disabled: zero native reads/calls"
+    }
+  },
+  "target_objects": [
+    {
+      "ELF_type": 1,
+      "machine": 183,
+      "sha256": "eb7a1592011ec539af79e496c8e1bc3ce6c6f160e72c44cb75206f956786dc81",
+      "bytes": 124144,
+      "undefined_symbols": [
+        "_ZN3iq47display12makeDrawPlanERKNS0_11ViewMappingERKNS0_10MaskConfigE",
+        "_ZN3iq47display13TemporaryMask6selectENS_8MaskModeE",
+        "_ZSt9terminatev",
+        "_ZdlPvm",
+        "__cxa_begin_catch",
+        "__cxa_end_catch",
+        "__gxx_personality_v0",
+        "lround"
+      ],
+      "needed": [],
+      "glibc_versions": [],
+      "interpreter": null
+    },
+    {
+      "ELF_type": 1,
+      "machine": 183,
+      "sha256": "5f737b9f39d00bf07dbc7edf1d28e936f2d0cd345949616294850777b80e0c29",
+      "bytes": 33984,
+      "undefined_symbols": [],
+      "needed": [],
+      "glibc_versions": [],
+      "interpreter": null
+    }
+  ],
+  "production_binding_enabled": false,
+  "device_accessed": false,
+  "vendor_code_executed": false,
+  "target_executed": false,
+  "actual_native_instance_hook_or_recovery_verified": false,
+  "actual_surface_viewport_mapping_and_fresh_repaint_verified": false,
+  "actual_RAW_JPEG_video_isolation_verified": false,
+  "sources": {
+    "tools/firmware/f1_native_overlay_01/overlay.cpp": "028811c7ae69d93bf55b74347d23af16e052b30be44166f711f0ab6a7ab70e5a",
+    "tools/firmware/f1_native_overlay_01/test_overlay.cpp": "384bc6e8c8740fc6911157d1e77c59e9c6beec2ecefe21c4fa0d3d22905680fe",
+    "src/core/lib/image_core.cpp": "d5be65d21f902c9a323ea36d1f64404b035b3146cb516c04ed0f3159782210a1",
+    "src/display/lib/display_mask.cpp": "ea31465595211a39feedcb131d7a5ad953a372c9f8f92c7234ca3aaa1c1bb606",
+    "tools/firmware/f1_native_overlay_01/overlay.hpp": "9d91f51247affd51da907da5c86198fed86189d404a0792ddf6d12e91183e1e3",
+    "tools/firmware/f1_native_overlay_01/abi_probe.cpp": "dd17cfc528e729eb219842ac5e7fa23a5f4f3157bca603176fd974d88d50eea6",
+    "src/display/include/iq4/display_mask.hpp": "33c8217784c6b6ba72f3e329467ee56be51e04a9e2d2d9451a4d9652118b1543"
+  }
+}

@@ -1,0 +1,72 @@
+STATIC ONLY; offsets belong to the explicitly named input/section.
+
+analysis/firmware/execution_channel_static/IQPDevelopment.cpp.o:	file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000000cb0 <P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)>:
+     cb0: 41 56                        	pushq	%r14
+     cb2: 45 89 c6                     	movl	%r8d, %r14d
+     cb5: 41 55                        	pushq	%r13
+     cb7: 49 89 d5                     	movq	%rdx, %r13
+     cba: 41 54                        	pushq	%r12
+     cbc: 41 89 cc                     	movl	%ecx, %r12d
+     cbf: 55                           	pushq	%rbp
+     cc0: 48 89 fd                     	movq	%rdi, %rbp
+     cc3: 48 81 c7 18 0a 00 00         	addq	$0xa18, %rdi            # imm = 0xA18
+     cca: 53                           	pushq	%rbx
+     ccb: 89 f3                        	movl	%esi, %ebx
+     ccd: 48 83 ec 20                  	subq	$0x20, %rsp
+     cd1: e8 00 00 00 00               	callq	0xcd6 <P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)+0x26>
+		0000000000000cd2:  R_X86_64_PLT32	P1::Platform::Thread_Cpp::IsRunning() const-0x4
+     cd6: 84 c0                        	testb	%al, %al
+     cd8: 75 16                        	jne	0xcf0 <P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)+0x40>
+     cda: 48 83 c4 20                  	addq	$0x20, %rsp
+     cde: 5b                           	popq	%rbx
+     cdf: 5d                           	popq	%rbp
+     ce0: 41 5c                        	popq	%r12
+     ce2: 41 5d                        	popq	%r13
+     ce4: 41 5e                        	popq	%r14
+     ce6: c3                           	retq
+     ce7: 66 0f 1f 84 00 00 00 00 00   	nopw	(%rax,%rax)
+     cf0: 48 8d bd 80 0b 00 00         	leaq	0xb80(%rbp), %rdi
+     cf7: e8 00 00 00 00               	callq	0xcfc <P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)+0x4c>
+		0000000000000cf8:  R_X86_64_PLT32	P1::Platform::Thread_Cpp::IsRunning() const-0x4
+     cfc: 84 c0                        	testb	%al, %al
+     cfe: 74 da                        	je	0xcda <P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)+0x2a>
+     d00: 45 85 e4                     	testl	%r12d, %r12d
+     d03: 74 05                        	je	0xd0a <P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)+0x5a>
+     d05: 4d 85 ed                     	testq	%r13, %r13
+     d08: 74 21                        	je	0xd2b <P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)+0x7b>
+     d0a: 0f b6 f3                     	movzbl	%bl, %esi
+     d0d: 45 89 f0                     	movl	%r14d, %r8d
+     d10: 44 89 e1                     	movl	%r12d, %ecx
+     d13: 4c 89 ea                     	movq	%r13, %rdx
+     d16: 48 89 ef                     	movq	%rbp, %rdi
+     d19: e8 00 00 00 00               	callq	0xd1e <P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)+0x6e>
+		0000000000000d1a:  R_X86_64_PLT32	P1::IQP::DevelopmentAgent::SendAsync_Message(unsigned char, void const*, unsigned int, unsigned int)-0x4
+     d1e: 48 83 c4 20                  	addq	$0x20, %rsp
+     d22: 5b                           	popq	%rbx
+     d23: 5d                           	popq	%rbp
+     d24: 41 5c                        	popq	%r12
+     d26: 41 5d                        	popq	%r13
+     d28: 41 5e                        	popq	%r14
+     d2a: c3                           	retq
+     d2b: 49 89 e4                     	movq	%rsp, %r12
+     d2e: be 01 00 65 00               	movl	$0x650001, %esi         # imm = 0x650001
+     d33: 48 8d 15 00 00 00 00         	leaq	(%rip), %rdx            # 0xd3a <P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)+0x8a>
+		0000000000000d36:  R_X86_64_PC32	.LC23-0x4
+     d3a: 4c 89 e7                     	movq	%r12, %rdi
+     d3d: e8 00 00 00 00               	callq	0xd42 <P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)+0x92>
+		0000000000000d3e:  R_X86_64_PLT32	P1::Universal::ModuleError::ModuleError(unsigned int, wchar_t const*)-0x4
+     d42: 48 8d 35 00 00 00 00         	leaq	(%rip), %rsi            # 0xd49 <P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)+0x99>
+		0000000000000d45:  R_X86_64_PC32	.LC24-0x4
+     d49: 4c 89 e7                     	movq	%r12, %rdi
+     d4c: 31 c0                        	xorl	%eax, %eax
+     d4e: e8 00 00 00 00               	callq	0xd53 <P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)+0xa3>
+		0000000000000d4f:  R_X86_64_PLT32	void P1::Universal::ThrowError<P1::Universal::ModuleError>(P1::Universal::ModuleError const&, wchar_t const*, ...)-0x4
+     d53: 48 89 c5                     	movq	%rax, %rbp
+     d56: e9 00 00 00 00               	jmp	0xd5b <P1::IQP::DevelopmentAgent::SendMessage(unsigned char, void const*, unsigned int, unsigned int)+0xab>
+		0000000000000d57:  R_X86_64_PC32	.text.unlikely+0x324
+     d5b: 90                           	nop
+     d5c: 0f 1f 40 00                  	nopl	(%rax)

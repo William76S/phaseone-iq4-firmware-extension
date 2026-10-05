@@ -1,0 +1,100 @@
+Exact User SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no target execution.
+  51d884: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  51d888: 910003fd     	mov	x29, sp
+  51d88c: f9000bf3     	str	x19, [sp, #0x10]
+  51d890: f90017e0     	str	x0, [sp, #0x28]
+  51d894: f94017e0     	ldr	x0, [sp, #0x28]
+  51d898: 39441000     	ldrb	w0, [x0, #0x104]
+  51d89c: 52000000     	eor	w0, w0, #0x1
+  51d8a0: 12001c00     	and	w0, w0, #0xff
+  51d8a4: 7100001f     	cmp	w0, #0x0
+  51d8a8: 54000060     	b.eq	0x51d8b4
+  51d8ac: f94017e0     	ldr	x0, [sp, #0x28]
+  51d8b0: 94000a7c     	bl	0x5202a0
+  51d8b4: f94017e0     	ldr	x0, [sp, #0x28]
+  51d8b8: f9416000     	ldr	x0, [x0, #0x2c0]
+  51d8bc: f9401c02     	ldr	x2, [x0, #0x38]
+  51d8c0: f94017e0     	ldr	x0, [sp, #0x28]
+  51d8c4: f9416000     	ldr	x0, [x0, #0x2c0]
+  51d8c8: f9401c00     	ldr	x0, [x0, #0x38]
+  51d8cc: f9400000     	ldr	x0, [x0]
+  51d8d0: 91010000     	add	x0, x0, #0x40
+  51d8d4: f9400001     	ldr	x1, [x0]
+  51d8d8: aa0203e0     	mov	x0, x2
+  51d8dc: d63f0020     	blr	x1
+  51d8e0: 7100081f     	cmp	w0, #0x2
+  51d8e4: 1a9f17e0     	cset	w0, eq
+  51d8e8: 12001c00     	and	w0, w0, #0xff
+  51d8ec: 7100001f     	cmp	w0, #0x0
+  51d8f0: 540000c0     	b.eq	0x51d908
+  51d8f4: f94017e0     	ldr	x0, [sp, #0x28]
+  51d8f8: f941c000     	ldr	x0, [x0, #0x380]
+  51d8fc: 52800021     	mov	w1, #0x1
+  51d900: 97fe3a11     	bl	0x4ac144
+  51d904: 14000005     	b	0x51d918
+  51d908: f94017e0     	ldr	x0, [sp, #0x28]
+  51d90c: f941c000     	ldr	x0, [x0, #0x380]
+  51d910: 52800001     	mov	w1, #0x0
+  51d914: 97fe3a0c     	bl	0x4ac144
+  51d918: f94017e0     	ldr	x0, [sp, #0x28]
+  51d91c: 94000192     	bl	0x51df64
+  51d920: f94017e0     	ldr	x0, [sp, #0x28]
+  51d924: 39441000     	ldrb	w0, [x0, #0x104]
+  51d928: 7100001f     	cmp	w0, #0x0
+  51d92c: 540002c0     	b.eq	0x51d984
+  51d930: 52800002     	mov	w2, #0x0
+  51d934: 52800021     	mov	w1, #0x1
+  51d938: f94017e0     	ldr	x0, [sp, #0x28]
+  51d93c: 940001b5     	bl	0x51e010
+  51d940: f94017e0     	ldr	x0, [sp, #0x28]
+  51d944: f946a400     	ldr	x0, [x0, #0xd48]
+  51d948: aa0003f3     	mov	x19, x0
+  51d94c: f94017e0     	ldr	x0, [sp, #0x28]
+  51d950: f9418002     	ldr	x2, [x0, #0x300]
+  51d954: f94017e0     	ldr	x0, [sp, #0x28]
+  51d958: f9418000     	ldr	x0, [x0, #0x300]
+  51d95c: f9400000     	ldr	x0, [x0]
+  51d960: 91010000     	add	x0, x0, #0x40
+  51d964: f9400001     	ldr	x1, [x0]
+  51d968: aa0203e0     	mov	x0, x2
+  51d96c: d63f0020     	blr	x1
+  51d970: 12001c00     	and	w0, w0, #0xff
+  51d974: 2a0003e1     	mov	w1, w0
+  51d978: aa1303e0     	mov	x0, x19
+  51d97c: 97fe39f2     	bl	0x4ac144
+  51d980: 1400000c     	b	0x51d9b0
+  51d984: f94017e0     	ldr	x0, [sp, #0x28]
+  51d988: f9407c00     	ldr	x0, [x0, #0xf8]
+  51d98c: 52800021     	mov	w1, #0x1
+  51d990: 97fe39ed     	bl	0x4ac144
+  51d994: f94017e0     	ldr	x0, [sp, #0x28]
+  51d998: f946a400     	ldr	x0, [x0, #0xd48]
+  51d99c: 52800001     	mov	w1, #0x0
+  51d9a0: 97fe39e9     	bl	0x4ac144
+  51d9a4: f94017e0     	ldr	x0, [sp, #0x28]
+  51d9a8: 94000206     	bl	0x51e1c0
+  51d9ac: d503201f     	nop
+  51d9b0: f9400bf3     	ldr	x19, [sp, #0x10]
+  51d9b4: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  51d9b8: d65f03c0     	ret
+  51d9bc: a9be7bfd     	stp	x29, x30, [sp, #-0x20]!
+  51d9c0: 910003fd     	mov	x29, sp
+  51d9c4: f9000fe0     	str	x0, [sp, #0x18]
+  51d9c8: f9400fe0     	ldr	x0, [sp, #0x18]
+  51d9cc: 94000af1     	bl	0x520590
+  51d9d0: f9400fe0     	ldr	x0, [sp, #0x18]
+  51d9d4: f9455803     	ldr	x3, [x0, #0xab0]
+  51d9d8: f9400fe0     	ldr	x0, [sp, #0x18]
+  51d9dc: f9455800     	ldr	x0, [x0, #0xab0]
+  51d9e0: f9400000     	ldr	x0, [x0]
+  51d9e4: 9100a000     	add	x0, x0, #0x28
+  51d9e8: f9400002     	ldr	x2, [x0]
+  51d9ec: 52800021     	mov	w1, #0x1
+  51d9f0: aa0303e0     	mov	x0, x3
+  51d9f4: d63f0040     	blr	x2
+  51d9f8: f9400fe0     	ldr	x0, [sp, #0x18]
+  51d9fc: 390ae01f     	strb	wzr, [x0, #0x2b8]
+  51da00: d503201f     	nop
+  51da04: a8c27bfd     	ldp	x29, x30, [sp], #0x20
+  51da08: d65f03c0     	ret

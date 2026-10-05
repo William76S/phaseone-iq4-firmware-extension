@@ -1,0 +1,45 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000719d2c <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm>:
+  7400ac: a9bc7bfd     	stp	x29, x30, [sp, #-0x40]!
+  7400b0: 910003fd     	mov	x29, sp
+  7400b4: f90017e0     	str	x0, [sp, #0x28]
+  7400b8: f90013e1     	str	x1, [sp, #0x20]
+  7400bc: b9001fe2     	str	w2, [sp, #0x1c]
+  7400c0: f94017e0     	ldr	x0, [sp, #0x28]
+  7400c4: f94013e1     	ldr	x1, [sp, #0x20]
+  7400c8: f9000401     	str	x1, [x0, #0x8]
+  7400cc: f94017e0     	ldr	x0, [sp, #0x28]
+  7400d0: b9401fe1     	ldr	w1, [sp, #0x1c]
+  7400d4: b9001001     	str	w1, [x0, #0x10]
+  7400d8: b9003fff     	str	wzr, [sp, #0x3c]
+  7400dc: b9403fe0     	ldr	w0, [sp, #0x3c]
+  7400e0: 71009c1f     	cmp	w0, #0x27
+  7400e4: 540001ac     	b.gt	0x740118 <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x263ec>
+  7400e8: f94017e1     	ldr	x1, [sp, #0x28]
+  7400ec: b9803fe0     	ldrsw	x0, [sp, #0x3c]
+  7400f0: 91000800     	add	x0, x0, #0x2
+  7400f4: d37df000     	lsl	x0, x0, #3
+  7400f8: 8b000020     	add	x0, x1, x0
+  7400fc: d0002781     	adrp	x1, 0xc32000
+  740100: 9129c021     	add	x1, x1, #0xa70
+  740104: f9000401     	str	x1, [x0, #0x8]
+  740108: b9403fe0     	ldr	w0, [sp, #0x3c]
+  74010c: 11000400     	add	w0, w0, #0x1
+  740110: b9003fe0     	str	w0, [sp, #0x3c]
+  740114: 17fffff2     	b	0x7400dc <_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4copyEPcmm+0x263b0>
+  740118: f94017e0     	ldr	x0, [sp, #0x28]
+  74011c: b900141f     	str	wzr, [x0, #0x14]
+  740120: f94017e0     	ldr	x0, [sp, #0x28]
+  740124: f9400000     	ldr	x0, [x0]
+  740128: 91006000     	add	x0, x0, #0x18
+  74012c: f9400001     	ldr	x1, [x0]
+  740130: f94017e0     	ldr	x0, [sp, #0x28]
+  740134: d63f0020     	blr	x1
+  740138: d503201f     	nop
+  74013c: a8c47bfd     	ldp	x29, x30, [sp], #0x40
+  740140: d65f03c0     	ret

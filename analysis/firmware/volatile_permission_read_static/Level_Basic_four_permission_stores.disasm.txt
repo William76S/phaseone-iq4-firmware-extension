@@ -1,0 +1,27 @@
+STATIC ONLY; linked VAs; nearest exported labels are not recovered private names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006a03c0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm>:
+  6aae38: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aae3c: f9400c00     	ldr	x0, [x0, #0x18]
+  6aae40: 91210000     	add	x0, x0, #0x840
+  6aae44: 52800001     	mov	w1, #0x0                // =0
+  6aae48: 97f5a6da     	bl	0x4149b0 <.text+0x9780>
+  6aae4c: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aae50: f9400c00     	ldr	x0, [x0, #0x18]
+  6aae54: 91246000     	add	x0, x0, #0x918
+  6aae58: 52800021     	mov	w1, #0x1                // =1
+  6aae5c: 97f5a6d5     	bl	0x4149b0 <.text+0x9780>
+  6aae60: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aae64: f9400c00     	ldr	x0, [x0, #0x18]
+  6aae68: 9127c000     	add	x0, x0, #0x9f0
+  6aae6c: 52800021     	mov	w1, #0x1                // =1
+  6aae70: 97f5a6d0     	bl	0x4149b0 <.text+0x9780>
+  6aae74: f9400fe0     	ldr	x0, [sp, #0x18]
+  6aae78: f9400c00     	ldr	x0, [x0, #0x18]
+  6aae7c: 912b2000     	add	x0, x0, #0xac8
+  6aae80: 52800001     	mov	w1, #0x0                // =0
+  6aae84: 97f5a6cb     	bl	0x4149b0 <.text+0x9780>

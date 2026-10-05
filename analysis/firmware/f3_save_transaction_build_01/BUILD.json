@@ -1,0 +1,170 @@
+{
+  "schema": "iq4_f3_transaction_build_01",
+  "commands": [
+    [
+      "/usr/bin/clang",
+      "-std=c11",
+      "-O1",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_save_transaction_01/transaction.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_save_transaction_01/test_transaction.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_save_transaction_build_01/test_normal"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_save_transaction_build_01/test_normal"
+    ],
+    [
+      "/usr/bin/clang",
+      "-std=c11",
+      "-O1",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_save_transaction_01/transaction.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_save_transaction_01/test_transaction.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_save_transaction_build_01/test_asan_ubsan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_save_transaction_build_01/test_asan_ubsan"
+    ],
+    [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-fno-omit-frame-pointer",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_save_transaction_build_01/transaction.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_save_transaction_01/transaction.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_save_transaction_build_01/transaction.o"
+    ],
+    [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-nm",
+      "-u",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_save_transaction_build_01/transaction.o"
+    ],
+    [
+      "/usr/bin/file",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_save_transaction_build_01/transaction.o"
+    ]
+  ],
+  "results": [
+    {
+      "command": 0,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": 1,
+      "returncode": 0,
+      "stdout": "{\"owned_host_fault_groups\":40,\"passed\":true,\"target_executed\":false,\"native_ports_bound\":false}\n",
+      "stderr": ""
+    },
+    {
+      "command": 2,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": 3,
+      "returncode": 0,
+      "stdout": "{\"owned_host_fault_groups\":40,\"passed\":true,\"target_executed\":false,\"native_ports_bound\":false}\n",
+      "stderr": ""
+    },
+    {
+      "command": 4,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": 5,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": 6,
+      "returncode": 0,
+      "stdout": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_save_transaction_build_01/transaction.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped\n",
+      "stderr": ""
+    }
+  ],
+  "inputs": [
+    {
+      "path": "tools/firmware/f3_save_transaction_01/transaction.h",
+      "bytes": 2980,
+      "sha256": "576c5bb2337dcb237a057e17385d85966bad0359bd9182b193a69af2edcab881"
+    },
+    {
+      "path": "tools/firmware/f3_save_transaction_01/transaction.c",
+      "bytes": 6606,
+      "sha256": "b6cea8c14282d800c53968e16709485a40ab82f3aff1feec4e511508b723eddd"
+    },
+    {
+      "path": "tools/firmware/f3_save_transaction_01/test_transaction.c",
+      "bytes": 7878,
+      "sha256": "9b5f8941000ad64dd8d946a131221fc574c53b36576b918e2374203fa593bd95"
+    },
+    {
+      "path": "tools/firmware/f3_save_transaction_01/build.py",
+      "bytes": 2582,
+      "sha256": "24a699cceaff7d10c1b2d8ea2a26805f923745bd62f263421bc94a1668b11fd7"
+    },
+    {
+      "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "bytes": 188226560,
+      "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "analysis/firmware/f3_save_transaction_build_01/test_asan_ubsan",
+      "bytes": 90368,
+      "sha256": "0e1ae7d6ff12bf75ae5dc384105d090ee7ef6a4aa6a2f0c6588b32446cc32e9f"
+    },
+    {
+      "path": "analysis/firmware/f3_save_transaction_build_01/test_normal",
+      "bytes": 35080,
+      "sha256": "f52668c538cd37644c52505533f88241962d5f189f9127bb9a92c036348ae4e9"
+    },
+    {
+      "path": "analysis/firmware/f3_save_transaction_build_01/transaction.d",
+      "bytes": 357,
+      "sha256": "06edf7c220c16823d21b86a1f57e68500cbc34ca5d12baa925519de7c5581c6c"
+    },
+    {
+      "path": "analysis/firmware/f3_save_transaction_build_01/transaction.o",
+      "bytes": 4920,
+      "sha256": "14fae1d7baf71858b155d7f4880c06d9e204af3174cc964679f287b3b9bda503"
+    }
+  ],
+  "target_executed": false,
+  "sdk_executed": false,
+  "device_accessed": false,
+  "native_ports_bound": false
+}

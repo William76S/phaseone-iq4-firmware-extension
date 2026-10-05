@@ -1,0 +1,93 @@
+{
+  "schema": "iq4_native_storage_bridge_link_01",
+  "source": {
+    "path": "tools/firmware/f3_native_storage_bridge_01/SOURCE_SHA256.json",
+    "bytes": 13700,
+    "sha256": "37a9f78a046804859243b50a80c05e31754b920895c2aaf2ea5979d47f853ecd"
+  },
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_native_storage_bridge_01/build/storage_bridge.o",
+      "bytes": 20624,
+      "sha256": "fd547ad57d9acb3086bb4846d6d77e26c8cd58a4f59963175e753fe8a5df5052"
+    },
+    {
+      "path": "analysis/firmware/f3_native_storage_bridge_01/build/storage_native_calls.o",
+      "bytes": 2920,
+      "sha256": "95642629f03107d2a3579b7c65ad0d380920ce9c9989b0f9849fd18d47b2f49e"
+    },
+    {
+      "path": "analysis/firmware/f3_native_storage_bridge_01/build/storage_wrappers.o",
+      "bytes": 2504,
+      "sha256": "c1aebe641a8220e5ef6a5eb3d5ca0c5a7d2321c591a8f4552d7591cd4b5398ef"
+    },
+    {
+      "path": "analysis/firmware/f3_native_storage_bridge_01/build/storage_mutex.o",
+      "bytes": 2272,
+      "sha256": "eebf602743fd3b4f16920c19625170aa4918f7ccb73c838a8fbb139bf1f4cf1c"
+    }
+  ],
+  "BL_hooks": [
+    {
+      "va": 5178608,
+      "branch_kind": "BL",
+      "old_hex": "f2d4ff97",
+      "target_symbol": "iq4_f3_storage_output_append_wrapper_01",
+      "original_target": 5134520
+    },
+    {
+      "va": 9309176,
+      "branch_kind": "BL",
+      "old_hex": "0a20f497",
+      "target_symbol": "iq4_f3_legacy_jpeg_disabled_01",
+      "original_target": 6196256
+    },
+    {
+      "va": 9309504,
+      "branch_kind": "BL",
+      "old_hex": "b81ff497",
+      "target_symbol": "iq4_f3_legacy_jpeg_disabled_01",
+      "original_target": 6196256
+    }
+  ],
+  "auxiliary_hooks": [
+    {
+      "va": 6199428,
+      "branch_kind": "B",
+      "old_hex": "e01740f9",
+      "target_symbol": "iq4_f3_storage_regular_enter_01"
+    },
+    {
+      "va": 6199488,
+      "branch_kind": "B",
+      "old_hex": "e0e30091",
+      "target_symbol": "iq4_f3_storage_regular_leave_01"
+    },
+    {
+      "va": 6199552,
+      "branch_kind": "B",
+      "old_hex": "e00f40f9",
+      "target_symbol": "iq4_f3_storage_silent_enter_01"
+    },
+    {
+      "va": 6199564,
+      "branch_kind": "B",
+      "old_hex": "e0a30091",
+      "target_symbol": "iq4_f3_storage_silent_leave_01"
+    }
+  ],
+  "required_functions": [
+    "iq4_f3_native_mode_set_on_ui_01",
+    "iq4_f3_native_storage_mutex_initialize_01",
+    "iq4_f3_storage_output_child_01",
+    "iq4_f3_legacy_jpeg_disabled_01",
+    "iq4_f3_storage_ui_set_return_01",
+    "iq4_f3_storage_enter_01",
+    "iq4_f3_storage_leave_01"
+  ],
+  "aliases": [],
+  "initialization_success_stage": 100,
+  "initializer_required_stage45": true,
+  "requires_native_size_menu_02": true,
+  "target_executed": false
+}

@@ -1,0 +1,49 @@
+EXACT USER SHA256 9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb
+STATIC ONLY; no actual callable binding.
+  4e756c: a9bd7bfd     	stp	x29, x30, [sp, #-0x30]!
+  4e7570: 910003fd     	mov	x29, sp
+  4e7574: f9000fe0     	str	x0, [sp, #0x18]
+  4e7578: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e757c: b9434800     	ldr	w0, [x0, #0x348]
+  4e7580: f9400fe1     	ldr	x1, [sp, #0x18]
+  4e7584: 2a0003e0     	mov	w0, w0
+  4e7588: 91018000     	add	x0, x0, #0x60
+  4e758c: d37df000     	lsl	x0, x0, #3
+  4e7590: 8b000020     	add	x0, x1, x0
+  4e7594: f9400400     	ldr	x0, [x0, #0x8]
+  4e7598: f90013e0     	str	x0, [sp, #0x20]
+  4e759c: b9002fff     	str	wzr, [sp, #0x2c]
+  4e75a0: b9802fe0     	ldrsw	x0, [sp, #0x2c]
+  4e75a4: f1001c1f     	cmp	x0, #0x7
+  4e75a8: 54000168     	b.hi	0x4e75d4
+  4e75ac: f9400fe1     	ldr	x1, [sp, #0x18]
+  4e75b0: b9802fe0     	ldrsw	x0, [sp, #0x2c]
+  4e75b4: 91018000     	add	x0, x0, #0x60
+  4e75b8: d37df000     	lsl	x0, x0, #3
+  4e75bc: 8b000020     	add	x0, x1, x0
+  4e75c0: f900041f     	str	xzr, [x0, #0x8]
+  4e75c4: b9402fe0     	ldr	w0, [sp, #0x2c]
+  4e75c8: 11000400     	add	w0, w0, #0x1
+  4e75cc: b9002fe0     	str	w0, [sp, #0x2c]
+  4e75d0: 17fffff4     	b	0x4e75a0
+  4e75d4: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e75d8: f9400c01     	ldr	x1, [x0, #0x18]
+  4e75dc: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e75e0: f9018401     	str	x1, [x0, #0x308]
+  4e75e4: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e75e8: b903481f     	str	wzr, [x0, #0x348]
+  4e75ec: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e75f0: f9400c00     	ldr	x0, [x0, #0x18]
+  4e75f4: aa0003e2     	mov	x2, x0
+  4e75f8: f94013e1     	ldr	x1, [sp, #0x20]
+  4e75fc: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e7600: 94000284     	bl	0x4e8010
+  4e7604: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e7608: 91008000     	add	x0, x0, #0x20
+  4e760c: 94089f3b     	bl	0x70f2f8
+  4e7610: d2800001     	mov	x1, #0x0
+  4e7614: f9400fe0     	ldr	x0, [sp, #0x18]
+  4e7618: 97ffff5a     	bl	0x4e7380
+  4e761c: d503201f     	nop
+  4e7620: a8c37bfd     	ldp	x29, x30, [sp], #0x30
+  4e7624: d65f03c0     	ret

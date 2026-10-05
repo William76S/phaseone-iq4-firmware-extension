@@ -1,0 +1,95 @@
+--- frozen_display06/runtime_linux.cpp
++++ new_entry07/runtime_linux.cpp
+@@ -1,7 +1,8 @@
++#include "bridge.hpp"
+ // Target-only Linux/AArch64 wrapper. Never executed by the host validation tool.
+ #include "../f1_observe_geometry_04/observe.hpp"
+ #include "../f1_observe_stack_05/observe.hpp"
+-#include "observe.hpp"
++#include "../f1_display_observe_06/observe.hpp"
+ #include "../f4_ui_bootstrap_02/sha256.h"
+ #include <elf.h>
+ #include <fcntl.h>
+@@ -17,6 +18,9 @@
+ #if !defined(__aarch64__) || !defined(__linux__)
+ #error This runtime binds only the fixed IQ4 AArch64 Linux original
+ #endif
++extern "C" unsigned iq4_f1_role_ctor_status;
++extern "C" __attribute__((visibility("default"))) iq4::f1::entry07::Published iq4_f1_entry_binding_observed_07;
++iq4::f1::entry07::Published iq4_f1_entry_binding_observed_07;
+ extern "C" {__attribute__((visibility("default"))) iq4::f1::entry01::PublishedObservation iq4_f1_entry_observed;
+ __attribute__((visibility("default"))) iq4::f1::observe04::Published iq4_f1_geometry_observed_04;
+ __attribute__((visibility("default"))) iq4::f1::stack05::Published iq4_f1_stack_observed_05;
+@@ -54,6 +58,8 @@
+     return m.inode==static_cast<std::uint64_t>(s.st_ino)&&m.major==major&&m.minor==minor;
+ }
+ std::atomic<Address> original_unlock{}, original_try_lock{};int memory_fd=-1;
++alignas(iq4::f1::entry07::BoundaryBridge) unsigned char entry07_storage[sizeof(iq4::f1::entry07::BoundaryBridge)]{};
++iq4::f1::entry07::BoundaryBridge* entry07_bridge=nullptr;
+ alignas(Module) unsigned char module_storage[sizeof(Module)]{};Module* module=nullptr;
+ alignas(iq4::f1::observe04::Collector) unsigned char geometry_storage[sizeof(iq4::f1::observe04::Collector)]{};
+ iq4::f1::observe04::Collector* geometry=nullptr;
+@@ -127,6 +133,25 @@
+     if(ok)ok=user_ro_mappings(eh,ph,st);
+     rclose(fd);return ok;
+ }
++// Protected entry-only admission from Root's separately reviewed new UI07
++// deployment contract. Absence/unknown/failure stays OFF. This file does not
++// attest geometry, source coverage, paint freshness, or Surface lifetime.
++bool entry07_admission(iq4::f1::entry07::Placement& placement) noexcept {
++    if(iq4_f1_role_ctor_status!=4)return false;
++    const char*path="/run/iq4_f1_observe02/ui07.entry";
++    struct stat d{},a{},b{},c{};
++    if(::lstat("/run/iq4_f1_observe02",&d)||!S_ISDIR(d.st_mode)||d.st_uid||d.st_gid||(d.st_mode&07777)!=0700||
++       ::lstat(path,&a)||!S_ISREG(a.st_mode)||a.st_uid||a.st_gid||(a.st_mode&07777)!=0600||a.st_nlink!=1||a.st_size<=0||a.st_size>=96)return false;
++    int fd=static_cast<int>(raw_call(SYS_openat,AT_FDCWD,reinterpret_cast<long>(path),O_RDONLY|O_CLOEXEC|O_NOFOLLOW));if(fd<0)return false;
++    char text[96]{},canonical[96]{};bool ok=!::fstat(fd,&b)&&a.st_dev==b.st_dev&&a.st_ino==b.st_ino&&a.st_size==b.st_size&&a.st_mode==b.st_mode&&a.st_uid==b.st_uid&&a.st_gid==b.st_gid&&b.st_nlink==1;
++    long n=ok?raw_call(SYS_read,fd,reinterpret_cast<long>(text),b.st_size):-1;char extra{};
++    ok=ok&&n==b.st_size&&raw_call(SYS_read,fd,reinterpret_cast<long>(&extra),1)==0&&!::fstat(fd,&c)&&b.st_dev==c.st_dev&&b.st_ino==c.st_ino&&b.st_size==c.st_size&&b.st_mtim.tv_sec==c.st_mtim.tv_sec&&b.st_mtim.tv_nsec==c.st_mtim.tv_nsec;
++    rclose(fd);int x=-1,y=-1;char tail{};
++    if(!ok||::sscanf(text,"IQ4_F1_UI07_ENTRY_ONLY %d %d%c",&x,&y,&tail)!=3||tail!='\n'||x<0||y<0||x>32767||y>32767)return false;
++    int size=::snprintf(canonical,sizeof canonical,"IQ4_F1_UI07_ENTRY_ONLY %d %d\n",x,y);
++    if(size!=n||std::memcmp(text,canonical,static_cast<std::size_t>(n))||::lstat(path,&c)||b.st_dev!=c.st_dev||b.st_ino!=c.st_ino||b.st_size!=c.st_size)return false;
++    placement={x,y};return true;
++}
+ __attribute__((constructor)) void prepare() noexcept {
+     // Dormant for UI: no native object/getter, thread, observer, event or camera
+     // operation. No launcher marker descriptor is consumed by this module.
+@@ -140,6 +165,7 @@
+     geometry=new(geometry_storage)iq4::f1::observe04::Collector({nullptr,self_read},0);
+     stack_collector=new(stack_storage)iq4::f1::stack05::Collector({nullptr,self_read},0);
+     display_collector=new(display_storage)iq4::f1::display06::Collector({nullptr,self_read},0,reinterpret_cast<Address>(&iq4_f1_display_paint_callback_06));
++    entry07_bridge=new(entry07_storage)iq4::f1::entry07::BoundaryBridge;
+     original_paint.store(0x51da0c,std::memory_order_release);
+     iq4::f1::display06::publish(iq4_f1_display_observed_06,display_collector->snapshot());
+     if(module->configure({nullptr,self_read},{true,true,true,true,0},reinterpret_cast<int(*)(void*)>(original_try_lock.load(std::memory_order_acquire)),reinterpret_cast<int(*)(void*)>(original_unlock.load(std::memory_order_acquire)))){diagnostic_ready.store(true,std::memory_order_release);iq4_f1_entry_observed.startup.store(4,std::memory_order_release);}
+@@ -155,7 +181,7 @@
+     errno=incoming;
+     const int result=reinterpret_cast<int(*)(void*)>(address)(mutex); // EXACTLY ONCE, first.
+     const int saved=errno;
+-    if(caller==0x6be8ac && result==0 && diagnostic_ready.load(std::memory_order_acquire) && !inside) {
++    if(caller==0x6be8ac && result==0 && (diagnostic_ready.load(std::memory_order_acquire) || (entry07_bridge&&entry07_bridge->admitted())) && !inside) {
+         inside=true;Address tp{};asm volatile("mrs %0, tpidr_el0":"=r"(tp));
+         const BoundaryInput input{caller,reinterpret_cast<Address>(__builtin_frame_address(0)),tp,reinterpret_cast<Address>(mutex),result};
+         iq4::f1::entry01::Observation before{};
+@@ -191,6 +217,20 @@
+                 if(stack_facts.attempts>=64)diagnostic_ready.store(false,std::memory_order_release);
+             }
+         }
++        if(entry07_bridge&&display_collector){
++            iq4::f1::entry07::Placement placement{};
++            if(!entry07_bridge->admitted()&&entry07_admission(placement))
++                (void)entry07_bridge->admit_once({true,true,true,true},placement);
++            entry07_bridge->after_original_unlock_on_ui({nullptr,self_read},*module,*display_collector,input,
++                {reinterpret_cast<int(*)(void*)>(original_try_lock.load(std::memory_order_acquire)),reinterpret_cast<int(*)(void*)>(original_unlock.load(std::memory_order_acquire))});
++            iq4_f1_entry_binding_observed_07.sequence.fetch_add(1,std::memory_order_acq_rel);
++            iq4_f1_entry_binding_observed_07.metadata=entry07_bridge->binding().status_on_ui();
++            iq4_f1_entry_binding_observed_07.sequence.fetch_add(1,std::memory_order_release);
++            if(iq4_f1_entry_binding_observed_07.metadata.ui_mutation_attempted){
++                auto changed=display_collector->snapshot();changed.native_ui_mutation_called=1;
++                iq4::f1::display06::publish(iq4_f1_display_observed_06,changed);
++            }
++        }
+         inside=false;
+     }
+     errno=saved;return result;

@@ -1,0 +1,18 @@
+
+/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_native_menu_candidate_02/P1Linux_F1_NativeMenu_6.03.24.bin:	file format elf64-littleaarch64
+
+Disassembly of section .f1.2.8.text.iq4_f1_after_stock_draw_13:
+
+0000000004241440 <iq4_f1_after_stock_draw_13>:
+ 4241440: d10683ff     	sub	sp, sp, #0x1a0
+ 4241444: a9167bfd     	stp	x29, x30, [sp, #0x160]
+ 4241448: f900bbfc     	str	x28, [sp, #0x170]
+ 424144c: a91857f6     	stp	x22, x21, [sp, #0x180]
+ 4241450: a9194ff4     	stp	x20, x19, [sp, #0x190]
+ 4241454: 910583fd     	add	x29, sp, #0x160
+ 4241458: aa0003f3     	mov	x19, x0
+ 424145c: 97fffae9     	bl	0x4240000 <iq4_f1_mode_get_01>
+ 4241460: 528014c8     	mov	w8, #0xa6               // =166
+ 4241464: b90007e8     	str	w8, [sp, #0x4]
+ 4241468: b40004b3     	cbz	x19, 0x42414fc <iq4_f1_after_stock_draw_13+0xbc>
+ 424146c: 51000408     	sub	w8, w0, #0x1

@@ -1,0 +1,84 @@
+{
+  "evidence_level": "host_cross_build_only",
+  "tool": {
+    "path": "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+    "sha256": "c65cd34917923f575448cc0603dd7c2326da0af0e5c323043d090662dcdf351c",
+    "version": "0.15.2"
+  },
+  "command": [
+    "build/toolchains/zig-aarch64-macos-0.15.2/zig",
+    "cc",
+    "-target",
+    "aarch64-linux-gnu.2.17",
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fPIE",
+    "-pie",
+    "-Wl,--build-id=sha1",
+    "tools/firmware/f4_ram_entry_01/readonly_monitor.c",
+    "-o",
+    "analysis/firmware/f4_ram_loader_static/readonly_monitor.target.elf"
+  ],
+  "source": {
+    "path": "tools/firmware/f4_ram_entry_01/readonly_monitor.c",
+    "sha256": "b9ff162491d3be3adfc8115d7f00fca83c2726ee16544e764ef1e8a515c2ddaa"
+  },
+  "artifact": {
+    "path": "analysis/firmware/f4_ram_loader_static/readonly_monitor.target.elf",
+    "sha256": "9df46704bdc21e0b89eeeb4532cc892fc9a4e860c2701e743e806ecc3d670654",
+    "bytes": 23208,
+    "ELF_type": 3,
+    "machine": 183,
+    "glibc_versions": [
+      "GLIBC_2.17"
+    ],
+    "undefined_dynsym": [
+      "__errno_location",
+      "__libc_start_main",
+      "abort",
+      "clock_gettime",
+      "close",
+      "fcntl",
+      "memchr",
+      "nanosleep",
+      "open",
+      "read",
+      "readlink",
+      "snprintf",
+      "strcmp",
+      "strlen",
+      "strrchr",
+      "write"
+    ]
+  },
+  "forbidden_imports_absent": [
+    "chmod",
+    "chown",
+    "connect",
+    "dlopen",
+    "execve",
+    "execvp",
+    "ftruncate",
+    "ioctl",
+    "kill",
+    "mkdir",
+    "popen",
+    "ptrace",
+    "pwrite",
+    "raise",
+    "reboot",
+    "rename",
+    "socket",
+    "system",
+    "truncate",
+    "unlink"
+  ],
+  "target_executed": false,
+  "camera_control_or_staging": false,
+  "firmware_entry_binding": false,
+  "recovery_writer": false,
+  "does_not_prove_user_AT_SECURE_or_dynamic_loader_runtime": true
+}

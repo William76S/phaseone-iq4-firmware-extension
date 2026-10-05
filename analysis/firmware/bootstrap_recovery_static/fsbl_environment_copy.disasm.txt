@@ -1,0 +1,55 @@
+STATIC ONLY; synthetic section view, not a target executable.
+SOURCE BOOT SHA256 7a3a3d6f62c61e7d627a9f55d844d74be9111b26eb7a7fa42f5bdd7be7dabe9e
+analysis/firmware/bootstrap_recovery_static/fsbl_view.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000fffc0000 <.text>:
+fffd0840: 92402c29     	and	x9, x1, #0xfff
+fffd0844: b200c3ec     	mov	x12, #0x101010101010101 // =72340172838076673
+fffd0848: 92400c31     	and	x17, x1, #0xf
+fffd084c: f13fc13f     	cmp	x9, #0xff0
+fffd0850: cb1103e8     	neg	x8, x17
+fffd0854: 540008cc     	b.gt	0xfffd096c <.text+0x1096c>
+fffd0858: a9401424     	ldp	x4, x5, [x1]
+fffd085c: cb0c0088     	sub	x8, x4, x12
+fffd0860: b200d889     	orr	x9, x4, #0x7f7f7f7f7f7f7f7f
+fffd0864: ea290106     	bics	x6, x8, x9
+fffd0868: 540001c1     	b.ne	0xfffd08a0 <.text+0x108a0>
+fffd086c: cb0c00aa     	sub	x10, x5, x12
+fffd0870: b200d8ab     	orr	x11, x5, #0x7f7f7f7f7f7f7f7f
+fffd0874: ea2b0147     	bics	x7, x10, x11
+fffd0878: 54000440     	b.eq	0xfffd0900 <.text+0x10900>
+fffd087c: dac00ce7     	rev	x7, x7
+fffd0880: dac010ef     	clz	x15, x7
+fffd0884: d2800709     	mov	x9, #0x38               // =56
+fffd0888: 8b4f0c03     	add	x3, x0, x15, lsr #3
+fffd088c: cb0f012f     	sub	x15, x9, x15
+fffd0890: 9acf20a5     	lsl	x5, x5, x15
+fffd0894: f8001065     	stur	x5, [x3, #0x1]
+fffd0898: f9000004     	str	x4, [x0]
+fffd089c: d65f03c0     	ret
+fffd08a0: dac00cc6     	rev	x6, x6
+fffd08a4: dac010cf     	clz	x15, x6
+fffd08a8: 8b4f0c03     	add	x3, x0, x15, lsr #3
+fffd08ac: f10061e9     	subs	x9, x15, #0x18
+fffd08b0: 540000ab     	b.lt	0xfffd08c4 <.text+0x108c4>
+fffd08b4: 9ac92485     	lsr	x5, x4, x9
+fffd08b8: b81fd065     	stur	w5, [x3, #-0x3]
+fffd08bc: b9000004     	str	w4, [x0]
+fffd08c0: d65f03c0     	ret
+fffd08c4: b400004f     	cbz	x15, 0xfffd08cc <.text+0x108cc>
+fffd08c8: 79000004     	strh	w4, [x0]
+fffd08cc: 3900007f     	strb	wzr, [x3]
+fffd08d0: d65f03c0     	ret
+fffd08d4: d503201f     	nop
+fffd08d8: d503201f     	nop
+fffd08dc: d503201f     	nop
+fffd08e0: d503201f     	nop
+fffd08e4: d503201f     	nop
+fffd08e8: d503201f     	nop
+fffd08ec: d503201f     	nop
+fffd08f0: d503201f     	nop
+fffd08f4: d503201f     	nop
+fffd08f8: d503201f     	nop
+fffd08fc: d503201f     	nop

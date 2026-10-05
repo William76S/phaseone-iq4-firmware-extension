@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "tools/firmware/f1_user_elf_append_02/elf_append.py",
+    "--stock",
+    "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "--payload-lock",
+    "analysis/firmware/f1_card_source_replay_02/ACTUAL_INPUT_LOCK.json",
+    "--expected-payload-lock-sha256",
+    "bb8de0b0fd4f5de47013466584502a7949801fa291d3e5821ade8eed40272d7a",
+    "--app-version",
+    "6.03.23",
+    "--emit",
+    "build/f1_card_source_replay_02/FRESH_User.bin",
+    "--report",
+    "build/f1_card_source_replay_02/FRESH_LINK_REPORT.json"
+  ],
+  "cwd": "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/f1_card_source_bundle_repro_02/project",
+  "exit": 0,
+  "stdout": "{\"schema\": \"iq4_f1_user_elf_append_02\", \"report\": \"build/f1_card_source_replay_02/FRESH_LINK_REPORT.json\", \"candidate_emitted\": true, \"target_executed\": false}\n",
+  "stderr": "",
+  "target_or_SDK_executed": false
+}

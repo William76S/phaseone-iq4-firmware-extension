@@ -1,0 +1,13 @@
+STATIC ONLY; nearest exported labels are not private function names.
+
+analysis/firmware/extracted/P1Linux_6.03.21.bin:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+00000000006ee080 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_>:
+  6f6b8c: d10043ff     	sub	sp, sp, #0x10
+  6f6b90: f90007e0     	str	x0, [sp, #0x8]
+  6f6b94: f94007e0     	ldr	x0, [sp, #0x8]
+  6f6b98: f9400400     	ldr	x0, [x0, #0x8]
+  6f6b9c: 910043ff     	add	sp, sp, #0x10
+  6f6ba0: d65f03c0     	ret

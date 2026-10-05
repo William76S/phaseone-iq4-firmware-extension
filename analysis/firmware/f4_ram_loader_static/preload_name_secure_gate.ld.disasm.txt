@@ -1,0 +1,29 @@
+analysis/firmware/f4_ram_loader_static/ld-2.28.analysis.elf:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000000001040 <.text>:
+    1570:      	stp	x29, x30, [sp, #-0x20]!
+    1574:      	adrp	x1, 0x2f000
+    1578:      	mov	x29, sp
+    157c:      	ldr	w1, [x1, #0xdc8]
+    1580:      	stp	x19, x20, [sp, #0x10]
+    1584:      	mov	x20, x0
+    1588:      	cbnz	w1, 0x15a8 <.text+0x568>
+    158c:      	ldrb	w0, [x20]
+    1590:      	cmp	w0, #0x0
+    1594:      	cset	w19, ne
+    1598:      	mov	w0, w19
+    159c:      	ldp	x19, x20, [sp, #0x10]
+    15a0:      	ldp	x29, x30, [sp], #0x20
+    15a4:      	ret
+    15a8:      	bl	0x16dc0 <_dl_catch_error+0x19c0>
+    15ac:      	mov	w19, #0x0               // =0
+    15b0:      	cmp	x0, #0xfe
+    15b4:      	b.hi	0x1598 <.text+0x558>
+    15b8:      	mov	x2, x0
+    15bc:      	mov	w1, #0x2f               // =47
+    15c0:      	mov	x0, x20
+    15c4:      	bl	0x171e0 <_dl_catch_error+0x1de0>
+    15c8:      	cbnz	x0, 0x1598 <.text+0x558>
+    15cc:      	b	0x158c <.text+0x54c>

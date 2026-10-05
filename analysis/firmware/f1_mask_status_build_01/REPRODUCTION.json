@@ -1,0 +1,38 @@
+{
+  "schema": "iq4_f1_mask_status_actual_fresh_reproduction_01",
+  "source_bundle": "deploy/f1_card_candidate_04/SOURCE_BUNDLE.json",
+  "source_zip_sha256": "0774d5470d4db9815e4db3d5cc1ea129c9074a9047de732ea8a9de34d0c39856",
+  "source_members": 18,
+  "actual_cross_compiles_each_build": 4,
+  "host_only": true,
+  "camera_or_SDK_access": false,
+  "actual_AArch64_execution": false,
+  "persistent_acceptance": false,
+  "products": [
+    {
+      "file": "P1Linux_F1_MaskStatus_6.03.25.bin",
+      "bytes": 12265800,
+      "sha256": "0614eb093fe1104f403b4c65c00380de2590679dd4b541cfb8f803ffe21c338f",
+      "whole_bytes_equal": true
+    },
+    {
+      "file": "package/IQ4-user-only.fwr",
+      "bytes": 12266372,
+      "sha256": "b8f1c7b2bc8866613099f3b1dab12e82c83686a0e787992b1ab68f05e9818865",
+      "whole_bytes_equal": true
+    },
+    {
+      "file": "package/IQ4-user-only-candidate.fwp",
+      "bytes": 12266874,
+      "sha256": "00603ca444b92f7ff24a9847abd9fbddbb700317b3b93146fda288a83c61130d",
+      "whole_bytes_equal": true
+    }
+  ],
+  "all_actual_build_commands_exit_zero": true,
+  "initial_fresh_invocation_failure": {
+    "stage": "before_compiler_start",
+    "reason": "Root driver passed relative compiler/input paths; build runs compiler with fresh source ROOT cwd, so relative compiler was absent. Source unchanged; retried driver with README-prescribed absolute paths and fresh output directory.",
+    "exit": 1,
+    "camera_access": false
+  }
+}

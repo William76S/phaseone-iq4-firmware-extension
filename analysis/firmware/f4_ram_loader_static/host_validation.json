@@ -1,0 +1,45 @@
+{
+  "evidence_level": "host_synthetic_tests_only",
+  "tests_run": 18,
+  "passed_test_ids": [
+    "test_monitor_parser.ParserTests.test_64bit_start_ticks",
+    "test_monitor_parser.ParserTests.test_identity_exact",
+    "test_monitor_parser.ParserTests.test_max_u64",
+    "test_monitor_parser.ParserTests.test_sign_overflow_zero_and_malformed",
+    "test_monitor_parser.ParserTests.test_signed_other_fields_and_empty_token",
+    "test_monitor_parser.ParserTests.test_size_limit",
+    "test_monitor_parser.ParserTests.test_truncated_or_embedded_nul",
+    "test_one_shot_model.OneShotTests.test_arm_without_supervisor_refused",
+    "test_one_shot_model.OneShotTests.test_artifact_mismatch_and_secure_fall_back_to_stock",
+    "test_one_shot_model.OneShotTests.test_deadline_does_not_claim_to_unload_running_user",
+    "test_one_shot_model.OneShotTests.test_each_absent_gate_refuses_before_mutation",
+    "test_one_shot_model.OneShotTests.test_line_equal_and_only_expected_span",
+    "test_one_shot_model.OneShotTests.test_real_host_inode_and_open_fd_fixture",
+    "test_one_shot_model.OneShotTests.test_restore_before_exec_required",
+    "test_one_shot_model.OneShotTests.test_sdk_closed_does_not_disable_deadline_restore",
+    "test_one_shot_model.OneShotTests.test_subsequent_respawn_never_reloads",
+    "test_one_shot_model.OneShotTests.test_unexpected_runner_refuses_overwrite",
+    "test_one_shot_model.OneShotTests.test_unique_line_refusal"
+  ],
+  "failures": [],
+  "errors": [],
+  "skipped": [],
+  "sources_sha256": {
+    "tools/firmware/f4_ram_entry_01/README.md": "fd7cb316aa7a5b0bd93fb15ffef35e0f701b84fc0744471133d1a2079b3b4292",
+    "tools/firmware/f4_ram_entry_01/build_readonly_probe.py": "74ef9292e8251d9a0623b63221e7f213e3917f4c3f696e198b25276dd37f72b6",
+    "tools/firmware/f4_ram_entry_01/one_shot_model.py": "9c732079c7e420de769678cde214dc3d2ba2341e57f1223e95151fbed12bcc46",
+    "tools/firmware/f4_ram_entry_01/readonly_monitor.c": "b9ff162491d3be3adfc8115d7f00fca83c2726ee16544e764ef1e8a515c2ddaa",
+    "tools/firmware/f4_ram_entry_01/run_host_validation.py": "eafdde7c19528ee6bbe1d2dc92209d48900f0482d99070250d9fa4f0a0800cf6",
+    "tools/firmware/f4_ram_entry_01/test_monitor_parser.py": "b49abe5b6293e5b457e1c9ef74f92173a92d7fad1c756bf7022b0724ebf04223",
+    "tools/firmware/f4_ram_entry_01/test_one_shot_model.py": "9d2d9ce7edae253c10d000557d3ed67f4289079f2b78ad5ede034dd8fdb930e2"
+  },
+  "test_fixtures": [
+    "C parser of synthetic proc stat bytes",
+    "one-shot pure state model",
+    "host temporary-directory inode/open-fd fixture"
+  ],
+  "device_accessed": false,
+  "SDK_loaded": false,
+  "target_executed": false,
+  "actual_pid_monitored": false
+}

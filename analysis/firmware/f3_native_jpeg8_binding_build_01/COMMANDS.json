@@ -1,0 +1,202 @@
+[
+  {
+    "kind": "compiler_identity",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "version"
+    ],
+    "exit": 0,
+    "stdout": "0.15.2\n",
+    "stderr": ""
+  },
+  {
+    "kind": "host_sdk_identity",
+    "argv": [
+      "/usr/bin/xcrun",
+      "--show-sdk-path"
+    ],
+    "exit": 0,
+    "stdout": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DIQ4_JPEG_API_VERSION=82",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_jpeg8_binding_01/native_jpeg82.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_jpeg8_binding_01/test_binding.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/unadmitted_host"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/unadmitted_host"
+    ],
+    "exit": 0,
+    "stdout": "{\"host_synthetic_groups\":4,\"native_functions_invoked\":0}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DIQ4_JPEG_API_VERSION=82",
+      "-DIQ4_JPEG82_SYNTHETIC_HOST_TEST_ONLY",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_jpeg8_binding_01/native_jpeg82.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_jpeg8_binding_01/test_binding.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/synthetic"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/synthetic"
+    ],
+    "exit": 0,
+    "stdout": "{\"host_synthetic_groups\":22,\"native_functions_invoked\":0}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_compile",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/clang",
+      "-isysroot",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DIQ4_JPEG_API_VERSION=82",
+      "-DIQ4_JPEG82_SYNTHETIC_HOST_TEST_ONLY",
+      "-fsanitize=address,undefined",
+      "-fno-omit-frame-pointer",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_jpeg8_binding_01/native_jpeg82.c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_jpeg8_binding_01/test_binding.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/synthetic_asan_ubsan"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "own_host_synthetic_execution",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/synthetic_asan_ubsan"
+    ],
+    "exit": 0,
+    "stdout": "{\"host_synthetic_groups\":22,\"native_functions_invoked\":0}\n",
+    "stderr": ""
+  },
+  {
+    "kind": "cross_compile_only",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DIQ4_JPEG_API_VERSION=82",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-fPIC",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/native_jpeg82.o.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/tools/firmware/f3_native_jpeg8_binding_01/native_jpeg82.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/native_jpeg82.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "static_ET_REL_inspect",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-dr",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/native_jpeg82.o"
+    ],
+    "exit": 0,
+    "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/native_jpeg82.o:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n0000000000000000 <iq4_native_jpeg82_unadmitted_table_01>:\n       0: 52841e09     \tmov\tw9, #0x20f0             // =8432\n       4: 5286970b     \tmov\tw11, #0x34b8            // =13496\n       8: b900511f     \tstr\twzr, [x8, #0x50]\n       c: 72a01349     \tmovk\tw9, #0x9a, lsl #16\n      10: 72a0134b     \tmovk\tw11, #0x9a, lsl #16\n      14: 9101612a     \tadd\tx10, x9, #0x58\n      18: a9002909     \tstp\tx9, x10, [x8]\n      1c: 913b612a     \tadd\tx10, x9, #0xed8\n      20: a901290b     \tstp\tx11, x10, [x8, #0x10]\n      24: 9114a16a     \tadd\tx10, x11, #0x528\n      28: 9117416b     \tadd\tx11, x11, #0x5d0\n      2c: a9022d0a     \tstp\tx10, x11, [x8, #0x20]\n      30: b277012a     \torr\tx10, x9, #0x200\n      34: 91056129     \tadd\tx9, x9, #0x158\n      38: a903250a     \tstp\tx10, x9, [x8, #0x30]\n      3c: 52800a49     \tmov\tw9, #0x52               // =82\n      40: b9004109     \tstr\tw9, [x8, #0x40]\n      44: 52804909     \tmov\tw9, #0x248              // =584\n      48: f9002509     \tstr\tx9, [x8, #0x48]\n      4c: d65f03c0     \tret\n\n0000000000000050 <iq4_native_jpeg82_bind_01>:\n      50: b4000c23     \tcbz\tx3, 0x1d4 <iq4_native_jpeg82_bind_01+0x184>\n      54: d10283ff     \tsub\tsp, sp, #0xa0\n      58: a9047bfd     \tstp\tx29, x30, [sp, #0x40]\n      5c: a9056ffc     \tstp\tx28, x27, [sp, #0x50]\n      60: a90667fa     \tstp\tx26, x25, [sp, #0x60]\n      64: a9075ff8     \tstp\tx24, x23, [sp, #0x70]\n      68: a90857f6     \tstp\tx22, x21, [sp, #0x80]\n      6c: a9094ff4     \tstp\tx20, x19, [sp, #0x90]\n      70: 910103fd     \tadd\tx29, sp, #0x40\n      74: 6f00e400     \tmovi\tv0.2d, #0000000000000000\n      78: aa0303f3     \tmov\tx19, x3\n      7c: aa0003e8     \tmov\tx8, x0\n      80: 52800020     \tmov\tw0, #0x1                // =1\n      84: f900287f     \tstr\txzr, [x3, #0x50]\n      88: ad008060     \tstp\tq0, q0, [x3, #0x10]\n      8c: ad018060     \tstp\tq0, q0, [x3, #0x30]\n      90: 3d800060     \tstr\tq0, [x3]\n      94: b4000aa8     \tcbz\tx8, 0x1e8 <iq4_native_jpeg82_bind_01+0x198>\n      98: aa0103f5     \tmov\tx21, x1\n      9c: b4000a61     \tcbz\tx1, 0x1e8 <iq4_native_jpeg82_bind_01+0x198>\n      a0: aa0203f4     \tmov\tx20, x2\n      a4: aa1f03e9     \tmov\tx9, xzr\n      a8: 9000000a     \tadrp\tx10, 0x0 <iq4_native_jpeg82_unadmitted_table_01>\n\t\t00000000000000a8:  R_AARCH64_ADR_PREL_PG_HI21\t.rodata.cst32\n      ac: 9100014a     \tadd\tx10, x10, #0x0\n\t\t00000000000000ac:  R_AARCH64_ADD_ABS_LO12_NC\t.rodata.cst32\n      b0: 3869690b     \tldrb\tw11, [x8, x9]\n      b4: 3869694c     \tldrb\tw12, [x10, x9]\n      b8: 6b0c017f     \tcmp\tw11, w12\n      bc: 54000901     \tb.ne\t0x1dc <iq4_native_jpeg82_bind_01+0x18c>\n      c0: 91000529     \tadd\tx9, x9, #0x1\n      c4: f100813f     \tcmp\tx9, #0x20\n      c8: 54ffff41     \tb.ne\t0xb0 <iq4_native_jpeg82_bind_01+0x60>\n      cc: aa1f03f7     \tmov\tx23, xzr\n      d0: 52800308     \tmov\tw8, #0x18               // =24\n      d4: 90000009     \tadrp\tx9, 0x0 <iq4_native_jpeg82_unadmitted_table_01>\n\t\t00000000000000d4:  R_AARCH64_ADR_PREL_PG_HI21\t.data.rel.ro\n      d8: 91000129     \tadd\tx9, x9, #0x0\n\t\t00000000000000d8:  R_AARCH64_ADD_ABS_LO12_NC\t.data.rel.ro\n      dc: 9b0826fb     \tmadd\tx27, x23, x8, x9\n      e0: aa0903fa     \tmov\tx26, x9\n      e4: f940077c     \tldr\tx28, [x27, #0x8]\n      e8: b400041c     \tcbz\tx28, 0x168 <iq4_native_jpeg82_bind_01+0x118>\n      ec: f9400378     \tldr\tx24, [x27]\n      f0: aa1f03f9     \tmov\tx25, xzr\n      f4: 14000004     \tb\t0x104 <iq4_native_jpeg82_bind_01+0xb4>\n      f8: 8b1902d9     \tadd\tx25, x22, x25\n      fc: eb1c033f     \tcmp\tx25, x28\n     100: 54000342     \tb.hs\t0x168 <iq4_native_jpeg82_bind_01+0x118>\n     104: cb190388     \tsub\tx8, x28, x25\n     108: 52800809     \tmov\tw9, #0x40               // =64\n     10c: 8b190301     \tadd\tx1, x24, x25\n     110: f101011f     \tcmp\tx8, #0x40\n     114: 910003e2     \tmov\tx2, sp\n     118: aa1403e0     \tmov\tx0, x20\n     11c: 9a893116     \tcsel\tx22, x8, x9, lo\n     120: aa1603e3     \tmov\tx3, x22\n     124: d63f02a0     \tblr\tx21\n     128: 7100041f     \tcmp\tw0, #0x1\n     12c: 540006e1     \tb.ne\t0x208 <iq4_native_jpeg82_bind_01+0x1b8>\n     130: eb19039f     \tcmp\tx28, x25\n     134: 54fffe20     \tb.eq\t0xf8 <iq4_native_jpeg82_bind_01+0xa8>\n     138: f9400b68     \tldr\tx8, [x27, #0x10]\n     13c: f10006df     \tcmp\tx22, #0x1\n     140: 910003ea     \tmov\tx10, sp\n     144: 9a9f86c9     \tcsinc\tx9, x22, xzr, hi\n     148: 8b190108     \tadd\tx8, x8, x25\n     14c: 3840154b     \tldrb\tw11, [x10], #0x1\n     150: 3840150c     \tldrb\tw12, [x8], #0x1\n     154: 6b0c017f     \tcmp\tw11, w12\n     158: 54000461     \tb.ne\t0x1e4 <iq4_native_jpeg82_bind_01+0x194>\n     15c: f1000529     \tsubs\tx9, x9, #0x1\n     160: 54ffff61     \tb.ne\t0x14c <iq4_native_jpeg82_bind_01+0xfc>\n     164: 17ffffe5     \tb\t0xf8 <iq4_native_jpeg82_bind_01+0xa8>\n     168: 910006f7     \tadd\tx23, x23, #0x1\n     16c: 52800308     \tmov\tw8, #0x18               // =24\n     170: aa1a03e9     \tmov\tx9, x26\n     174: f10026ff     \tcmp\tx23, #0x9\n     178: 54fffb21     \tb.ne\t0xdc <iq4_native_jpeg82_bind_01+0x8c>\n     17c: 52841e08     \tmov\tw8, #0x20f0             // =8432\n     180: 5286970a     \tmov\tw10, #0x34b8            // =13496\n     184: 2a1f03e0     \tmov\tw0, wzr\n     188: 72a01348     \tmovk\tw8, #0x9a, lsl #16\n     18c: 72a0134a     \tmovk\tw10, #0x9a, lsl #16\n     190: 91016109     \tadd\tx9, x8, #0x58\n     194: a9002668     \tstp\tx8, x9, [x19]\n     198: 913b6109     \tadd\tx9, x8, #0xed8\n     19c: a901266a     \tstp\tx10, x9, [x19, #0x10]\n     1a0: 9114a149     \tadd\tx9, x10, #0x528\n     1a4: 9117414a     \tadd\tx10, x10, #0x5d0\n     1a8: a9022a69     \tstp\tx9, x10, [x19, #0x20]\n     1ac: b2770109     \torr\tx9, x8, #0x200\n     1b0: 91056108     \tadd\tx8, x8, #0x158\n     1b4: a9032269     \tstp\tx9, x8, [x19, #0x30]\n     1b8: 52800a48     \tmov\tw8, #0x52               // =82\n     1bc: b9004268     \tstr\tw8, [x19, #0x40]\n     1c0: 52804908     \tmov\tw8, #0x248              // =584\n     1c4: f9002668     \tstr\tx8, [x19, #0x48]\n     1c8: 52800028     \tmov\tw8, #0x1                // =1\n     1cc: b9005268     \tstr\tw8, [x19, #0x50]\n     1d0: 14000006     \tb\t0x1e8 <iq4_native_jpeg82_bind_01+0x198>\n     1d4: 52800020     \tmov\tw0, #0x1                // =1\n     1d8: d65f03c0     \tret\n     1dc: 52800040     \tmov\tw0, #0x2                // =2\n     1e0: 14000002     \tb\t0x1e8 <iq4_native_jpeg82_bind_01+0x198>\n     1e4: 52800080     \tmov\tw0, #0x4                // =4\n     1e8: a9494ff4     \tldp\tx20, x19, [sp, #0x90]\n     1ec: a94857f6     \tldp\tx22, x21, [sp, #0x80]\n     1f0: a9475ff8     \tldp\tx24, x23, [sp, #0x70]\n     1f4: a94667fa     \tldp\tx26, x25, [sp, #0x60]\n     1f8: a9456ffc     \tldp\tx28, x27, [sp, #0x50]\n     1fc: a9447bfd     \tldp\tx29, x30, [sp, #0x40]\n     200: 910283ff     \tadd\tsp, sp, #0xa0\n     204: d65f03c0     \tret\n     208: 52800060     \tmov\tw0, #0x3                // =3\n     20c: 17fffff7     \tb\t0x1e8 <iq4_native_jpeg82_bind_01+0x198>\n",
+    "stderr": ""
+  },
+  {
+    "kind": "cross_compile_only",
+    "argv": [
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/build/toolchains/zig-aarch64-macos-0.15.2/zig",
+      "cc",
+      "-target",
+      "aarch64-linux-gnu.2.28",
+      "-std=c11",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-DIQ4_JPEG_API_VERSION=82",
+      "-g0",
+      "-ffreestanding",
+      "-fno-stack-protector",
+      "-mno-outline-atomics",
+      "-fPIC",
+      "-funwind-tables",
+      "-fno-asynchronous-unwind-tables",
+      "-MMD",
+      "-MF",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/stream_rgb32.o.d",
+      "-c",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/src/codec/stream_rgb32.c",
+      "-o",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/stream_rgb32.o"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "kind": "static_ET_REL_inspect",
+    "argv": [
+      "/Library/Developer/CommandLineTools/usr/bin/llvm-objdump",
+      "-dr",
+      "/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/stream_rgb32.o"
+    ],
+    "exit": 0,
+    "stdout": "\n/Users/william76/Desktop/research_on_p1/IQ4_Codex_Handoff_v2/analysis/firmware/f3_native_jpeg8_binding_build_01/stream_rgb32.o:\tfile format elf64-littleaarch64\n\nDisassembly of section .text:\n\n0000000000000000 <iq4_jpeg_stream_rgb32>:\n       0: d10143ff     \tsub\tsp, sp, #0x50\n       4: a9017bfd     \tstp\tx29, x30, [sp, #0x10]\n       8: a9025ff8     \tstp\tx24, x23, [sp, #0x20]\n       c: a90357f6     \tstp\tx22, x21, [sp, #0x30]\n      10: a9044ff4     \tstp\tx20, x19, [sp, #0x40]\n      14: 910043fd     \tadd\tx29, sp, #0x10\n      18: b40006c3     \tcbz\tx3, 0xf0 <iq4_jpeg_stream_rgb32+0xf0>\n      1c: b4000180     \tcbz\tx0, 0x4c <iq4_jpeg_stream_rgb32+0x4c>\n      20: b101641f     \tcmn\tx0, #0x59\n      24: 52800028     \tmov\tw8, #0x1                // =1\n      28: 54000668     \tb.hi\t0xf4 <iq4_jpeg_stream_rgb32+0xf4>\n      2c: b100e47f     \tcmn\tx3, #0x39\n      30: 54000628     \tb.hi\t0xf4 <iq4_jpeg_stream_rgb32+0xf4>\n      34: 91016008     \tadd\tx8, x0, #0x58\n      38: eb03011f     \tcmp\tx8, x3\n      3c: 54000089     \tb.ls\t0x4c <iq4_jpeg_stream_rgb32+0x4c>\n      40: 9100e068     \tadd\tx8, x3, #0x38\n      44: eb00011f     \tcmp\tx8, x0\n      48: 54000548     \tb.hi\t0xf0 <iq4_jpeg_stream_rgb32+0xf0>\n      4c: b4000181     \tcbz\tx1, 0x7c <iq4_jpeg_stream_rgb32+0x7c>\n      50: b100a43f     \tcmn\tx1, #0x29\n      54: 52800028     \tmov\tw8, #0x1                // =1\n      58: 540004e8     \tb.hi\t0xf4 <iq4_jpeg_stream_rgb32+0xf4>\n      5c: b100e47f     \tcmn\tx3, #0x39\n      60: 540004a8     \tb.hi\t0xf4 <iq4_jpeg_stream_rgb32+0xf4>\n      64: 9100a028     \tadd\tx8, x1, #0x28\n      68: eb03011f     \tcmp\tx8, x3\n      6c: 54000089     \tb.ls\t0x7c <iq4_jpeg_stream_rgb32+0x7c>\n      70: 9100e068     \tadd\tx8, x3, #0x38\n      74: eb01011f     \tcmp\tx8, x1\n      78: 540003c8     \tb.hi\t0xf0 <iq4_jpeg_stream_rgb32+0xf0>\n      7c: b4000182     \tcbz\tx2, 0xac <iq4_jpeg_stream_rgb32+0xac>\n      80: b100645f     \tcmn\tx2, #0x19\n      84: 52800028     \tmov\tw8, #0x1                // =1\n      88: 54000368     \tb.hi\t0xf4 <iq4_jpeg_stream_rgb32+0xf4>\n      8c: b100e47f     \tcmn\tx3, #0x39\n      90: 54000328     \tb.hi\t0xf4 <iq4_jpeg_stream_rgb32+0xf4>\n      94: 91006048     \tadd\tx8, x2, #0x18\n      98: eb03011f     \tcmp\tx8, x3\n      9c: 54000089     \tb.ls\t0xac <iq4_jpeg_stream_rgb32+0xac>\n      a0: 9100e068     \tadd\tx8, x3, #0x38\n      a4: eb02011f     \tcmp\tx8, x2\n      a8: 54000248     \tb.hi\t0xf0 <iq4_jpeg_stream_rgb32+0xf0>\n      ac: b4000321     \tcbz\tx1, 0x110 <iq4_jpeg_stream_rgb32+0x110>\n      b0: f9400029     \tldr\tx9, [x1]\n      b4: b40002e9     \tcbz\tx9, 0x110 <iq4_jpeg_stream_rgb32+0x110>\n      b8: f940042a     \tldr\tx10, [x1, #0x8]\n      bc: b40002aa     \tcbz\tx10, 0x110 <iq4_jpeg_stream_rgb32+0x110>\n      c0: ab0a013f     \tcmn\tx9, x10\n      c4: 52800028     \tmov\tw8, #0x1                // =1\n      c8: 1a9f37eb     \tcset\tw11, hs\n      cc: b100e47f     \tcmn\tx3, #0x39\n      d0: 54000128     \tb.hi\t0xf4 <iq4_jpeg_stream_rgb32+0xf4>\n      d4: 3700010b     \ttbnz\tw11, #0x0, 0xf4 <iq4_jpeg_stream_rgb32+0xf4>\n      d8: 9100e068     \tadd\tx8, x3, #0x38\n      dc: eb09011f     \tcmp\tx8, x9\n      e0: 54000189     \tb.ls\t0x110 <iq4_jpeg_stream_rgb32+0x110>\n      e4: 8b090148     \tadd\tx8, x10, x9\n      e8: eb03011f     \tcmp\tx8, x3\n      ec: 54000129     \tb.ls\t0x110 <iq4_jpeg_stream_rgb32+0x110>\n      f0: 52800028     \tmov\tw8, #0x1                // =1\n      f4: a9444ff4     \tldp\tx20, x19, [sp, #0x40]\n      f8: 2a0803e0     \tmov\tw0, w8\n      fc: a94357f6     \tldp\tx22, x21, [sp, #0x30]\n     100: a9425ff8     \tldp\tx24, x23, [sp, #0x20]\n     104: a9417bfd     \tldp\tx29, x30, [sp, #0x10]\n     108: 910143ff     \tadd\tsp, sp, #0x50\n     10c: d65f03c0     \tret\n     110: aa0203f4     \tmov\tx20, x2\n     114: aa0103f6     \tmov\tx22, x1\n     118: aa0003f7     \tmov\tx23, x0\n     11c: aa0303e0     \tmov\tx0, x3\n     120: 2a1f03e1     \tmov\tw1, wzr\n     124: 52800702     \tmov\tw2, #0x38               // =56\n     128: aa0303f5     \tmov\tx21, x3\n     12c: 94000000     \tbl\t0x12c <iq4_jpeg_stream_rgb32+0x12c>\n\t\t000000000000012c:  R_AARCH64_CALL26\tmemset\n     130: b4000797     \tcbz\tx23, 0x220 <iq4_jpeg_stream_rgb32+0x220>\n     134: b94052e9     \tldr\tw9, [x23, #0x50]\n     138: aa1703e8     \tmov\tx8, x23\n     13c: 7100053f     \tcmp\tw9, #0x1\n     140: 54000701     \tb.ne\t0x220 <iq4_jpeg_stream_rgb32+0x220>\n     144: b9404109     \tldr\tw9, [x8, #0x40]\n     148: 321f0129     \torr\tw9, w9, #0x2\n     14c: 7101493f     \tcmp\tw9, #0x52\n     150: 54000681     \tb.ne\t0x220 <iq4_jpeg_stream_rgb32+0x220>\n     154: f9402509     \tldr\tx9, [x8, #0x48]\n     158: f109213f     \tcmp\tx9, #0x248\n     15c: 54000621     \tb.ne\t0x220 <iq4_jpeg_stream_rgb32+0x220>\n     160: f9400109     \tldr\tx9, [x8]\n     164: b40005e9     \tcbz\tx9, 0x220 <iq4_jpeg_stream_rgb32+0x220>\n     168: f9400509     \tldr\tx9, [x8, #0x8]\n     16c: b40005a9     \tcbz\tx9, 0x220 <iq4_jpeg_stream_rgb32+0x220>\n     170: f9400909     \tldr\tx9, [x8, #0x10]\n     174: b4000569     \tcbz\tx9, 0x220 <iq4_jpeg_stream_rgb32+0x220>\n     178: f9400d09     \tldr\tx9, [x8, #0x18]\n     17c: b4000529     \tcbz\tx9, 0x220 <iq4_jpeg_stream_rgb32+0x220>\n     180: f9401109     \tldr\tx9, [x8, #0x20]\n     184: b40004e9     \tcbz\tx9, 0x220 <iq4_jpeg_stream_rgb32+0x220>\n     188: f9401509     \tldr\tx9, [x8, #0x28]\n     18c: b40004a9     \tcbz\tx9, 0x220 <iq4_jpeg_stream_rgb32+0x220>\n     190: f9401909     \tldr\tx9, [x8, #0x30]\n     194: b4000469     \tcbz\tx9, 0x220 <iq4_jpeg_stream_rgb32+0x220>\n     198: f9401d08     \tldr\tx8, [x8, #0x38]\n     19c: b4000428     \tcbz\tx8, 0x220 <iq4_jpeg_stream_rgb32+0x220>\n     1a0: b40003b6     \tcbz\tx22, 0x214 <iq4_jpeg_stream_rgb32+0x214>\n     1a4: aa1403ea     \tmov\tx10, x20\n     1a8: b4000374     \tcbz\tx20, 0x214 <iq4_jpeg_stream_rgb32+0x214>\n     1ac: f94002c8     \tldr\tx8, [x22]\n     1b0: aa1603e9     \tmov\tx9, x22\n     1b4: b4000308     \tcbz\tx8, 0x214 <iq4_jpeg_stream_rgb32+0x214>\n     1b8: f940054b     \tldr\tx11, [x10, #0x8]\n     1bc: b40002cb     \tcbz\tx11, 0x214 <iq4_jpeg_stream_rgb32+0x214>\n     1c0: f940094a     \tldr\tx10, [x10, #0x10]\n     1c4: b400028a     \tcbz\tx10, 0x214 <iq4_jpeg_stream_rgb32+0x214>\n     1c8: b940192a     \tldr\tw10, [x9, #0x18]\n     1cc: 3400024a     \tcbz\tw10, 0x214 <iq4_jpeg_stream_rgb32+0x214>\n     1d0: 529ffb8b     \tmov\tw11, #0xffdc            // =65500\n     1d4: 6b0b015f     \tcmp\tw10, w11\n     1d8: 540001e8     \tb.hi\t0x214 <iq4_jpeg_stream_rgb32+0x214>\n     1dc: b9401d2b     \tldr\tw11, [x9, #0x1c]\n     1e0: 129ffb8c     \tmov\tw12, #-0xffdd           // =-65501\n     1e4: 129ffb6d     \tmov\tw13, #-0xffdc           // =-65500\n     1e8: 0b0c016c     \tadd\tw12, w11, w12\n     1ec: 6b0d019f     \tcmp\tw12, w13\n     1f0: 54000123     \tb.lo\t0x214 <iq4_jpeg_stream_rgb32+0x214>\n     1f4: b940212c     \tldr\tw12, [x9, #0x20]\n     1f8: 5101958c     \tsub\tw12, w12, #0x65\n     1fc: 3101959f     \tcmn\tw12, #0x65\n     200: 540000a9     \tb.ls\t0x214 <iq4_jpeg_stream_rgb32+0x214>\n     204: d37ef54a     \tlsl\tx10, x10, #2\n     208: f9400929     \tldr\tx9, [x9, #0x10]\n     20c: eb0a013f     \tcmp\tx9, x10\n     210: 540000e2     \tb.hs\t0x22c <iq4_jpeg_stream_rgb32+0x22c>\n     214: 52800028     \tmov\tw8, #0x1                // =1\n     218: b90002a8     \tstr\tw8, [x21]\n     21c: 17ffffb6     \tb\t0xf4 <iq4_jpeg_stream_rgb32+0xf4>\n     220: 52800048     \tmov\tw8, #0x2                // =2\n     224: b90002a8     \tstr\tw8, [x21]\n     228: 17ffffb3     \tb\t0xf4 <iq4_jpeg_stream_rgb32+0xf4>\n     22c: 7100056b     \tsubs\tw11, w11, #0x1\n     230: 54000061     \tb.ne\t0x23c <iq4_jpeg_stream_rgb32+0x23c>\n     234: aa1f03eb     \tmov\tx11, xzr\n     238: 14000005     \tb\t0x24c <iq4_jpeg_stream_rgb32+0x24c>\n     23c: aa2a03ec     \tmvn\tx12, x10\n     240: 9acb098c     \tudiv\tx12, x12, x11\n     244: eb0c013f     \tcmp\tx9, x12\n     248: 54fffe68     \tb.hi\t0x214 <iq4_jpeg_stream_rgb32+0x214>\n     24c: 9b0b2929     \tmadd\tx9, x9, x11, x10\n     250: f94006ca     \tldr\tx10, [x22, #0x8]\n     254: ab0a011f     \tcmn\tx8, x10\n     258: 1a9f37e8     \tcset\tw8, hs\n     25c: eb0a013f     \tcmp\tx9, x10\n     260: 54fffda8     \tb.hi\t0x214 <iq4_jpeg_stream_rgb32+0x214>\n     264: 35fffd88     \tcbnz\tw8, 0x214 <iq4_jpeg_stream_rgb32+0x214>\n     268: 52800020     \tmov\tw0, #0x1                // =1\n     26c: 5288a301     \tmov\tw1, #0x4518             // =17688\n     270: 94000000     \tbl\t0x270 <iq4_jpeg_stream_rgb32+0x270>\n\t\t0000000000000270:  R_AARCH64_CALL26\tcalloc\n     274: b4001120     \tcbz\tx0, 0x498 <iq4_jpeg_stream_rgb32+0x498>\n     278: ad4106e0     \tldp\tq0, q1, [x23, #0x20]\n     27c: 52889709     \tmov\tw9, #0x44b8             // =17592\n     280: f9402ae8     \tldr\tx8, [x23, #0x50]\n     284: aa0003f3     \tmov\tx19, x0\n     288: 91401278     \tadd\tx24, x19, #0x4, lsl #12 // =0x4000\n     28c: f9021673     \tstr\tx19, [x19, #0x428]\n     290: 3d912000     \tstr\tq0, [x0, #0x4480]\n     294: 3dc012e0     \tldr\tq0, [x23, #0x40]\n     298: 3d912401     \tstr\tq1, [x0, #0x4490]\n     29c: 3d912800     \tstr\tq0, [x0, #0x44a0]\n     2a0: ad4002e1     \tldp\tq1, q0, [x23]\n     2a4: f9225808     \tstr\tx8, [x0, #0x44b0]\n     2a8: f9400a88     \tldr\tx8, [x20, #0x10]\n     2ac: 91134317     \tadd\tx23, x24, #0x4d0\n     2b0: f9022e73     \tstr\tx19, [x19, #0x458]\n     2b4: 3d911c00     \tstr\tq0, [x0, #0x4470]\n     2b8: 3dc00280     \tldr\tq0, [x20]\n     2bc: 3ca96800     \tstr\tq0, [x0, x9]\n     2c0: b9401ac9     \tldr\tw9, [x22, #0x18]\n     2c4: 3d911801     \tstr\tq1, [x0, #0x4460]\n     2c8: f9226408     \tstr\tx8, [x0, #0x44c8]\n     2cc: 8b090520     \tadd\tx0, x9, x9, lsl #1\n     2d0: 52880008     \tmov\tw8, #0x4000             // =16384\n     2d4: f9227e68     \tstr\tx8, [x19, #0x44f8]\n     2d8: f9227a60     \tstr\tx0, [x19, #0x44f0]\n     2dc: 94000000     \tbl\t0x2dc <iq4_jpeg_stream_rgb32+0x2dc>\n\t\t00000000000002dc:  R_AARCH64_CALL26\tmalloc\n     2e0: f9228660     \tstr\tx0, [x19, #0x4508]\n     2e4: b4000e00     \tcbz\tx0, 0x4a4 <iq4_jpeg_stream_rgb32+0x4a4>\n     2e8: 90000008     \tadrp\tx8, 0x0 <iq4_jpeg_stream_rgb32>\n\t\t00000000000002e8:  R_AARCH64_ADR_PREL_PG_HI21\t.text+0x548\n     2ec: 91000108     \tadd\tx8, x8, #0x0\n\t\t00000000000002ec:  R_AARCH64_ADD_ABS_LO12_NC\t.text+0x548\n     2f0: 910bc260     \tadd\tx0, x19, #0x2f0\n     2f4: f9022268     \tstr\tx8, [x19, #0x440]\n     2f8: 90000008     \tadrp\tx8, 0x0 <iq4_jpeg_stream_rgb32>\n\t\t00000000000002f8:  R_AARCH64_ADR_PREL_PG_HI21\t.text+0x55c\n     2fc: 91000108     \tadd\tx8, x8, #0x0\n\t\t00000000000002fc:  R_AARCH64_ADD_ABS_LO12_NC\t.text+0x55c\n     300: f9022668     \tstr\tx8, [x19, #0x448]\n     304: 90000008     \tadrp\tx8, 0x0 <iq4_jpeg_stream_rgb32>\n\t\t0000000000000304:  R_AARCH64_ADR_PREL_PG_HI21\t.text+0x5f8\n     308: 91000108     \tadd\tx8, x8, #0x0\n\t\t0000000000000308:  R_AARCH64_ADD_ABS_LO12_NC\t.text+0x5f8\n     30c: f9022a68     \tstr\tx8, [x19, #0x450]\n     310: 94000000     \tbl\t0x310 <iq4_jpeg_stream_rgb32+0x310>\n\t\t0000000000000310:  R_AARCH64_CALL26\t_setjmp\n     314: 35000cc0     \tcbnz\tw0, 0x4ac <iq4_jpeg_stream_rgb32+0x4ac>\n     318: f9623268     \tldr\tx8, [x19, #0x4460]\n     31c: 91092274     \tadd\tx20, x19, #0x248\n     320: aa1403e0     \tmov\tx0, x20\n     324: d63f0100     \tblr\tx8\n     328: eb14001f     \tcmp\tx0, x20\n     32c: f9000260     \tstr\tx0, [x19]\n     330: 54001041     \tb.ne\t0x538 <iq4_jpeg_stream_rgb32+0x538>\n     334: f9623668     \tldr\tx8, [x19, #0x4468]\n     338: b944a301     \tldr\tw1, [x24, #0x4a0]\n     33c: 90000009     \tadrp\tx9, 0x0 <iq4_jpeg_stream_rgb32>\n\t\t000000000000033c:  R_AARCH64_ADR_PREL_PG_HI21\t.text+0x6ac\n     340: 91000129     \tadd\tx9, x9, #0x0\n\t\t0000000000000340:  R_AARCH64_ADD_ABS_LO12_NC\t.text+0x6ac\n     344: f9625662     \tldr\tx2, [x19, #0x44a8]\n     348: aa1303e0     \tmov\tx0, x19\n     34c: 9110c274     \tadd\tx20, x19, #0x430\n     350: f9012669     \tstr\tx9, [x19, #0x248]\n     354: d63f0100     \tblr\tx8\n     358: 90000008     \tadrp\tx8, 0x0 <iq4_jpeg_stream_rgb32>\n\t\t0000000000000358:  R_AARCH64_ADR_PREL_PG_HI21\t.rodata.cst8\n     35c: fd400ec0     \tldr\td0, [x22, #0x18]\n     360: aa1303e0     \tmov\tx0, x19\n     364: fd400101     \tldr\td1, [x8]\n\t\t0000000000000364:  R_AARCH64_LDST64_ABS_LO12_NC\t.rodata.cst8\n     368: f9623a68     \tldr\tx8, [x19, #0x4470]\n     36c: f9001674     \tstr\tx20, [x19, #0x28]\n     370: 6d030660     \tstp\td0, d1, [x19, #0x30]\n     374: d63f0100     \tblr\tx8\n     378: f9623e68     \tldr\tx8, [x19, #0x4478]\n     37c: b94022c1     \tldr\tw1, [x22, #0x20]\n     380: aa1303e0     \tmov\tx0, x19\n     384: 52800022     \tmov\tw2, #0x1                // =1\n     388: b9012a7f     \tstr\twzr, [x19, #0x128]\n     38c: b901127f     \tstr\twzr, [x19, #0x110]\n     390: f9008e7f     \tstr\txzr, [x19, #0x118]\n     394: d63f0100     \tblr\tx8\n     398: f9624268     \tldr\tx8, [x19, #0x4480]\n     39c: aa1303e0     \tmov\tx0, x19\n     3a0: 52800021     \tmov\tw1, #0x1                // =1\n     3a4: d63f0100     \tblr\tx8\n     3a8: b9415674     \tldr\tw20, [x19, #0x154]\n     3ac: b9403668     \tldr\tw8, [x19, #0x34]\n     3b0: 6b08029f     \tcmp\tw20, w8\n     3b4: 54000622     \tb.hs\t0x478 <iq4_jpeg_stream_rgb32+0x478>\n     3b8: f9628668     \tldr\tx8, [x19, #0x4508]\n     3bc: b9401ac9     \tldr\tw9, [x22, #0x18]\n     3c0: f90007e8     \tstr\tx8, [sp, #0x8]\n     3c4: 34000369     \tcbz\tw9, 0x430 <iq4_jpeg_stream_rgb32+0x430>\n     3c8: f9400aca     \tldr\tx10, [x22, #0x10]\n     3cc: 2a1403eb     \tmov\tw11, w20\n     3d0: f94002c9     \tldr\tx9, [x22]\n     3d4: aa1f03e8     \tmov\tx8, xzr\n     3d8: 9b0b2549     \tmadd\tx9, x10, x11, x9\n     3dc: 5280004a     \tmov\tw10, #0x2               // =2\n     3e0: 5280006b     \tmov\tw11, #0x3               // =3\n     3e4: 5100096c     \tsub\tw12, w11, #0x2\n     3e8: f962866d     \tldr\tx13, [x19, #0x4508]\n     3ec: 5100094e     \tsub\tw14, w10, #0x2\n     3f0: 386c492c     \tldrb\tw12, [x9, w12, uxtw]\n     3f4: 91000508     \tadd\tx8, x8, #0x1\n     3f8: 382e49ac     \tstrb\tw12, [x13, w14, uxtw]\n     3fc: 5100056c     \tsub\tw12, w11, #0x1\n     400: 5100054e     \tsub\tw14, w10, #0x1\n     404: f962866d     \tldr\tx13, [x19, #0x4508]\n     408: 386c492c     \tldrb\tw12, [x9, w12, uxtw]\n     40c: 382e49ac     \tstrb\tw12, [x13, w14, uxtw]\n     410: f962866c     \tldr\tx12, [x19, #0x4508]\n     414: 386b492d     \tldrb\tw13, [x9, w11, uxtw]\n     418: 1100116b     \tadd\tw11, w11, #0x4\n     41c: 382a498d     \tstrb\tw13, [x12, w10, uxtw]\n     420: 11000d4a     \tadd\tw10, w10, #0x3\n     424: b9401acc     \tldr\tw12, [x22, #0x18]\n     428: eb0c011f     \tcmp\tx8, x12\n     42c: 54fffdc3     \tb.lo\t0x3e4 <iq4_jpeg_stream_rgb32+0x3e4>\n     430: f9624668     \tldr\tx8, [x19, #0x4488]\n     434: 910023e1     \tadd\tx1, sp, #0x8\n     438: aa1303e0     \tmov\tx0, x19\n     43c: 52800022     \tmov\tw2, #0x1                // =1\n     440: d63f0100     \tblr\tx8\n     444: 7100041f     \tcmp\tw0, #0x1\n     448: 540006e1     \tb.ne\t0x524 <iq4_jpeg_stream_rgb32+0x524>\n     44c: b9415668     \tldr\tw8, [x19, #0x154]\n     450: 11000689     \tadd\tw9, w20, #0x1\n     454: 6b09011f     \tcmp\tw8, w9\n     458: 54000661     \tb.ne\t0x524 <iq4_jpeg_stream_rgb32+0x524>\n     45c: b944eb09     \tldr\tw9, [x24, #0x4e8]\n     460: b940366a     \tldr\tw10, [x19, #0x34]\n     464: 2a0803f4     \tmov\tw20, w8\n     468: 11000529     \tadd\tw9, w9, #0x1\n     46c: 6b0a011f     \tcmp\tw8, w10\n     470: b904eb09     \tstr\tw9, [x24, #0x4e8]\n     474: 54fffa23     \tb.lo\t0x3b8 <iq4_jpeg_stream_rgb32+0x3b8>\n     478: f9624a68     \tldr\tx8, [x19, #0x4490]\n     47c: aa1303e0     \tmov\tx0, x19\n     480: d63f0100     \tblr\tx8\n     484: f9627268     \tldr\tx8, [x19, #0x44e0]\n     488: f1000d1f     \tcmp\tx8, #0x3\n     48c: 540005a9     \tb.ls\t0x540 <iq4_jpeg_stream_rgb32+0x540>\n     490: 2a1f03e8     \tmov\tw8, wzr\n     494: 14000005     \tb\t0x4a8 <iq4_jpeg_stream_rgb32+0x4a8>\n     498: 52800068     \tmov\tw8, #0x3                // =3\n     49c: b90002a8     \tstr\tw8, [x21]\n     4a0: 17ffff15     \tb\t0xf4 <iq4_jpeg_stream_rgb32+0xf4>\n     4a4: 52800068     \tmov\tw8, #0x3                // =3\n     4a8: b90002e8     \tstr\tw8, [x23]\n     4ac: f9400668     \tldr\tx8, [x19, #0x8]\n     4b0: b4000168     \tcbz\tx8, 0x4dc <iq4_jpeg_stream_rgb32+0x4dc>\n     4b4: b9451308     \tldr\tw8, [x24, #0x510]\n     4b8: 35000128     \tcbnz\tw8, 0x4dc <iq4_jpeg_stream_rgb32+0x4dc>\n     4bc: b944ef08     \tldr\tw8, [x24, #0x4ec]\n     4c0: 52800029     \tmov\tw9, #0x1                // =1\n     4c4: aa1303e0     \tmov\tx0, x19\n     4c8: b9051309     \tstr\tw9, [x24, #0x510]\n     4cc: f9624e69     \tldr\tx9, [x19, #0x4498]\n     4d0: 11000508     \tadd\tw8, w8, #0x1\n     4d4: b904ef08     \tstr\tw8, [x24, #0x4ec]\n     4d8: d63f0120     \tblr\tx9\n     4dc: b94002e8     \tldr\tw8, [x23]\n     4e0: 34000068     \tcbz\tw8, 0x4ec <iq4_jpeg_stream_rgb32+0x4ec>\n     4e4: aa1f03e8     \tmov\tx8, xzr\n     4e8: 14000002     \tb\t0x4f0 <iq4_jpeg_stream_rgb32+0x4f0>\n     4ec: f9627268     \tldr\tx8, [x19, #0x44e0]\n     4f0: f9226e68     \tstr\tx8, [x19, #0x44d8]\n     4f4: f9628660     \tldr\tx0, [x19, #0x4508]\n     4f8: ad4006e0     \tldp\tq0, q1, [x23]\n     4fc: 3dc00ae2     \tldr\tq2, [x23, #0x20]\n     500: f9401ae8     \tldr\tx8, [x23, #0x30]\n     504: 3d800aa2     \tstr\tq2, [x21, #0x20]\n     508: ad0006a0     \tstp\tq0, q1, [x21]\n     50c: f9001aa8     \tstr\tx8, [x21, #0x30]\n     510: 94000000     \tbl\t0x510 <iq4_jpeg_stream_rgb32+0x510>\n\t\t0000000000000510:  R_AARCH64_CALL26\tfree\n     514: aa1303e0     \tmov\tx0, x19\n     518: 94000000     \tbl\t0x518 <iq4_jpeg_stream_rgb32+0x518>\n\t\t0000000000000518:  R_AARCH64_CALL26\tfree\n     51c: b94002a8     \tldr\tw8, [x21]\n     520: 17fffef5     \tb\t0xf4 <iq4_jpeg_stream_rgb32+0xf4>\n     524: 528000e8     \tmov\tw8, #0x7                // =7\n     528: 910bc260     \tadd\tx0, x19, #0x2f0\n     52c: 52800021     \tmov\tw1, #0x1                // =1\n     530: b90002e8     \tstr\tw8, [x23]\n     534: 94000000     \tbl\t0x534 <iq4_jpeg_stream_rgb32+0x534>\n\t\t0000000000000534:  R_AARCH64_CALL26\tlongjmp\n     538: 52800048     \tmov\tw8, #0x2                // =2\n     53c: 17fffffb     \tb\t0x528 <iq4_jpeg_stream_rgb32+0x528>\n     540: 528000c8     \tmov\tw8, #0x6                // =6\n     544: 17fffff9     \tb\t0x528 <iq4_jpeg_stream_rgb32+0x528>\n\n0000000000000548 <start_destination>:\n     548: f9401409     \tldr\tx9, [x0, #0x28]\n     54c: 52880008     \tmov\tw8, #0x4000             // =16384\n     550: 9100c12a     \tadd\tx10, x9, #0x30\n     554: a900212a     \tstp\tx10, x8, [x9]\n     558: d65f03c0     \tret\n\n000000000000055c <empty_destination>:\n     55c: a9be7bfd     \tstp\tx29, x30, [sp, #-0x20]!\n     560: a9014ff4     \tstp\tx20, x19, [sp, #0x10]\n     564: 910003fd     \tmov\tx29, sp\n     568: f9401414     \tldr\tx20, [x0, #0x28]\n     56c: f9401693     \tldr\tx19, [x20, #0x28]\n     570: f9627268     \tldr\tx8, [x19, #0x44e0]\n     574: f9626669     \tldr\tx9, [x19, #0x44c8]\n     578: eb080128     \tsubs\tx8, x9, x8\n     57c: d34efd08     \tlsr\tx8, x8, #14\n     580: fa402904     \tccmp\tx8, #0x0, #0x4, hs\n     584: 540002e0     \tb.eq\t0x5e0 <empty_destination+0x84>\n     588: f9626268     \tldr\tx8, [x19, #0x44c0]\n     58c: f9625e60     \tldr\tx0, [x19, #0x44b8]\n     590: 91118261     \tadd\tx1, x19, #0x460\n     594: 52880002     \tmov\tw2, #0x4000             // =16384\n     598: d63f0100     \tblr\tx8\n     59c: f140101f     \tcmp\tx0, #0x4, lsl #12       // =0x4000\n     5a0: 540001a8     \tb.hi\t0x5d4 <empty_destination+0x78>\n     5a4: f9627268     \tldr\tx8, [x19, #0x44e0]\n     5a8: f140101f     \tcmp\tx0, #0x4, lsl #12       // =0x4000\n     5ac: 8b000108     \tadd\tx8, x8, x0\n     5b0: f9227268     \tstr\tx8, [x19, #0x44e0]\n     5b4: 54000101     \tb.ne\t0x5d4 <empty_destination+0x78>\n     5b8: 9100c288     \tadd\tx8, x20, #0x30\n     5bc: 52880009     \tmov\tw9, #0x4000             // =16384\n     5c0: 52800020     \tmov\tw0, #0x1                // =1\n     5c4: a9002688     \tstp\tx8, x9, [x20]\n     5c8: a9414ff4     \tldp\tx20, x19, [sp, #0x10]\n     5cc: a8c27bfd     \tldp\tx29, x30, [sp], #0x20\n     5d0: d65f03c0     \tret\n     5d4: 52889a08     \tmov\tw8, #0x44d0             // =17616\n     5d8: 528000a9     \tmov\tw9, #0x5                // =5\n     5dc: 14000003     \tb\t0x5e8 <empty_destination+0x8c>\n     5e0: 52889a08     \tmov\tw8, #0x44d0             // =17616\n     5e4: 52800089     \tmov\tw9, #0x4                // =4\n     5e8: 910bc260     \tadd\tx0, x19, #0x2f0\n     5ec: 52800021     \tmov\tw1, #0x1                // =1\n     5f0: b8286a69     \tstr\tw9, [x19, x8]\n     5f4: 94000000     \tbl\t0x5f4 <empty_destination+0x98>\n\t\t00000000000005f4:  R_AARCH64_CALL26\tlongjmp\n\n00000000000005f8 <finish_destination>:\n     5f8: a9be7bfd     \tstp\tx29, x30, [sp, #-0x20]!\n     5fc: a9014ff4     \tstp\tx20, x19, [sp, #0x10]\n     600: 910003fd     \tmov\tx29, sp\n     604: f9401409     \tldr\tx9, [x0, #0x28]\n     608: f9400528     \tldr\tx8, [x9, #0x8]\n     60c: f9401534     \tldr\tx20, [x9, #0x28]\n     610: f140111f     \tcmp\tx8, #0x4, lsl #12       // =0x4000\n     614: 54000348     \tb.hi\t0x67c <finish_destination+0x84>\n     618: f140111f     \tcmp\tx8, #0x4, lsl #12       // =0x4000\n     61c: 540002a0     \tb.eq\t0x670 <finish_destination+0x78>\n     620: f9627289     \tldr\tx9, [x20, #0x44e0]\n     624: f962668a     \tldr\tx10, [x20, #0x44c8]\n     628: eb090149     \tsubs\tx9, x10, x9\n     62c: 540002e3     \tb.lo\t0x688 <finish_destination+0x90>\n     630: 5288000a     \tmov\tw10, #0x4000            // =16384\n     634: cb080153     \tsub\tx19, x10, x8\n     638: eb09027f     \tcmp\tx19, x9\n     63c: 54000268     \tb.hi\t0x688 <finish_destination+0x90>\n     640: f9626288     \tldr\tx8, [x20, #0x44c0]\n     644: f9625e80     \tldr\tx0, [x20, #0x44b8]\n     648: 91118281     \tadd\tx1, x20, #0x460\n     64c: aa1303e2     \tmov\tx2, x19\n     650: d63f0100     \tblr\tx8\n     654: eb13001f     \tcmp\tx0, x19\n     658: 54000088     \tb.hi\t0x668 <finish_destination+0x70>\n     65c: f9627288     \tldr\tx8, [x20, #0x44e0]\n     660: 8b000108     \tadd\tx8, x8, x0\n     664: f9227288     \tstr\tx8, [x20, #0x44e0]\n     668: eb13001f     \tcmp\tx0, x19\n     66c: 54000141     \tb.ne\t0x694 <finish_destination+0x9c>\n     670: a9414ff4     \tldp\tx20, x19, [sp, #0x10]\n     674: a8c27bfd     \tldp\tx29, x30, [sp], #0x20\n     678: d65f03c0     \tret\n     67c: 52889a08     \tmov\tw8, #0x44d0             // =17616\n     680: 528000c9     \tmov\tw9, #0x6                // =6\n     684: 14000006     \tb\t0x69c <finish_destination+0xa4>\n     688: 52889a08     \tmov\tw8, #0x44d0             // =17616\n     68c: 52800089     \tmov\tw9, #0x4                // =4\n     690: 14000003     \tb\t0x69c <finish_destination+0xa4>\n     694: 52889a08     \tmov\tw8, #0x44d0             // =17616\n     698: 528000a9     \tmov\tw9, #0x5                // =5\n     69c: 910bc280     \tadd\tx0, x20, #0x2f0\n     6a0: 52800021     \tmov\tw1, #0x1                // =1\n     6a4: b8286a89     \tstr\tw9, [x20, x8]\n     6a8: 94000000     \tbl\t0x6a8 <finish_destination+0xb0>\n\t\t00000000000006a8:  R_AARCH64_CALL26\tlongjmp\n\n00000000000006ac <library_error>:\n     6ac: a9bf7bfd     \tstp\tx29, x30, [sp, #-0x10]!\n     6b0: 910003fd     \tmov\tx29, sp\n     6b4: f9400009     \tldr\tx9, [x0]\n     6b8: 52800108     \tmov\tw8, #0x8                // =8\n     6bc: 52800021     \tmov\tw1, #0x1                // =1\n     6c0: f940f12a     \tldr\tx10, [x9, #0x1e0]\n     6c4: b9402929     \tldr\tw9, [x9, #0x28]\n     6c8: 9140114b     \tadd\tx11, x10, #0x4, lsl #12 // =0x4000\n     6cc: 910bc140     \tadd\tx0, x10, #0x2f0\n     6d0: b945116c     \tldr\tw12, [x11, #0x510]\n     6d4: b9050169     \tstr\tw9, [x11, #0x500]\n     6d8: 7100019f     \tcmp\tw12, #0x0\n     6dc: 528000cc     \tmov\tw12, #0x6               // =6\n     6e0: 1a880188     \tcsel\tw8, w12, w8, eq\n     6e4: b904d168     \tstr\tw8, [x11, #0x4d0]\n     6e8: 94000000     \tbl\t0x6e8 <library_error+0x3c>\n\t\t00000000000006e8:  R_AARCH64_CALL26\tlongjmp\n",
+    "stderr": ""
+  }
+]

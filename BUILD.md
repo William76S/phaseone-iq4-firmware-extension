@@ -13,7 +13,7 @@ sh src/core/build_host.sh
 sh src/display/build_host.sh
 ```
 
-macOS脚本使用Xcode Command Line Tools的`xcrun`/clang++；Linux默认clang++，也可设置`CXX=g++`。产物分别写入`build/core/`和`evidence/display/build/`。这些测试检查图像核心和遮罩组件，**不能证明最终固件能启动、写卡或删除照片**。其他平台未在本次发布中验证。
+macOS脚本使用Xcode Command Line Tools的`xcrun`/clang++；Linux默认clang++，也可设置`CXX=g++`。产物分别写入`build/core/`和`evidence/display/build/`。这些测试检查图像核心和遮罩组件，**不能证明最终固件能启动、写卡或删除照片**。本次从Git暂存树解出的全新目录，在macOS上验证核心83项、显示50项通过；见`docs/HOST_VALIDATION_6.03.61.json`。其他平台未在本次发布中验证。
 
 ## 完整6.03.61固件
 

@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-08",
+  "source_tree_tested": "4c90198e859ab42578729760367e6aa93187259e",
+  "environment": "macOS Apple Silicon, system clang++ and Xcode Command Line Tools",
+  "input": "git archive of staged source tree into a fresh directory; no local build outputs copied",
+  "camera_accessed": false,
+  "firmware_built": false,
+  "commands": [
+    {
+      "command": "sh src/core/build_host.sh",
+      "exit_code": 0,
+      "result": {
+        "level": "host_validation",
+        "camera_connected_by_test": false,
+        "passed": 83,
+        "failed": 0
+      }
+    },
+    {
+      "command": "sh src/display/build_host.sh",
+      "exit_code": 0,
+      "result": {
+        "level": "host_validation",
+        "camera_control": false,
+        "target_surface_adapter": "unverified",
+        "passed": 50,
+        "failed": 0,
+        "independent_reference_pixels_checked": 3400740,
+        "masked_pixels_checked": 792982
+      }
+    }
+  ]
+}

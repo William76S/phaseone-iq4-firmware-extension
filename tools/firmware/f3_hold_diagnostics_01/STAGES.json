@@ -1,0 +1,30 @@
+{
+  "worker": {
+    "101": "if(ticket!=&job",
+    "102": "if(G::recheck",
+    "103": "auto cr=f3_card_begin",
+    "104": "if(!j.card||!f3_card_valid_05",
+    "105": "char relative[256]",
+    "106": "if(!f3_fs_prepare_03",
+    "107": "auto opened=config.files.open_leaf",
+    "108": "if(!f3_fs_manual_raw_03",
+    "109": "if(j.captured&&!hash_leaf",
+    "110": "R::ConstructorInputs inputs",
+    "111": "if(j.reader->construct",
+    "112": "if(j.reader->open",
+    "113": "int fd=j.reader->held_native_fd()",
+    "114": "if(!source_buffers(j))",
+    "115": "if(j.reader->read_candidate",
+    "116": "if(j.bundle->build",
+    "117": "auto p=N::persistent_pool_02().initialize",
+    "118": "p=N::persistent_pool_02().acquire",
+    "119": "N::Attempt attempt",
+    "120": "if(f3_arena_create_01(&j.render_arena",
+    "121": "uint64_t mapped=0;if(f3_arena_loan_01(&j.render_arena",
+    "122": "auto sensor=entry",
+    "123": "p=j.render->run"
+  },
+  "cleanup": "201 render state;202 pool;203 bundle;204 RAW discard;205 reader;206-209 arenas;210 RAW fd;211 parent fd;212 manual card release;250 callback complete",
+  "card": "C number is first card-local hold call line in card.c;0 means no card-local hold recorded",
+  "scope": "Diagnostic only; unchanged failure gates and ownership behavior; no device acceptance"
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "iq4_49_final_rollback_local_review_01",
+  "release": {
+    "version": "6.03.49",
+    "IQ": "6.03.46",
+    "System": "8.02.28",
+    "date": "2026-10-07",
+    "fwp_bytes": 13309179,
+    "fwp_sha256": "b207420059ebf463094ce9bb3f5b9fedbe0f3b961e163f0e97ee3b4902ef23bc",
+    "camera_accessed": false,
+    "hardware_acceptance": false,
+    "recovery_verified": false,
+    "input_spec": {
+      "path": "tools/firmware/f1_f3_f4_user_integration_05/INPUTS_REPAIR_20.json",
+      "bytes": 58143,
+      "sha256": "dc3a6daf5c9f3a7b081857bc6c9ba2e918f1afaf5c5f0fc405deaf9addc808be"
+    }
+  },
+  "User": {
+    "path": "analysis/firmware/f1_f3_f4_user_integration_build_20_dual_rollback/P1Linux_RatioMask_JPEG_LVRecording_6.03.49.bin",
+    "bytes": 13308104,
+    "sha256": "c8b5f37616d174edc3e6ce53b4ab75905b7a81d5b161feeaa4161f78281c392e"
+  },
+  "objects": 73,
+  "hooks": 41,
+  "original_windows": 210,
+  "all_original_windows_match": true,
+  "new_47_48_dual_hooks_removed": [
+    "0x538810",
+    "0x53865c"
+  ],
+  "functional_baseline_commit": "775654b",
+  "functional_source_equivalence": {
+    "path": "analysis/firmware/dual_48_input_audit_01/ROLLBACK_EQUIVALENCE.json",
+    "bytes": 4774,
+    "sha256": "aa66bc418c53ec82e9bd55888f00902cac663806ecea371b12e54971f9e0ed93"
+  },
+  "old48_counterexample": {
+    "path": "analysis/firmware/dual_46_rollback_layout_01/OLD48_REAL_NATIVE_DOMAIN_COUNTEREXAMPLE.json",
+    "bytes": 1390,
+    "sha256": "78c80546a5520244bb8f52473d18ffb9eb0b83dca9385c2234a85ecf9becfe3d"
+  },
+  "checks": [
+    {
+      "tool": "build.py",
+      "exit": 0
+    },
+    {
+      "tool": "verify.py",
+      "exit": 0
+    },
+    {
+      "tool": "seal.py",
+      "exit": 0
+    },
+    {
+      "tool": "verify_user.py",
+      "exit": 0
+    },
+    {
+      "tool": "verify_runtime_pins.py",
+      "exit": 0
+    },
+    {
+      "tool": "package.py",
+      "exit": 0
+    },
+    {
+      "tool": "inspect_package.py",
+      "exit": 0
+    }
+  ],
+  "camera_accessed": false,
+  "hardware_acceptance": false,
+  "persistent_failure_recovery_verified": false
+}

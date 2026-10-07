@@ -1,0 +1,175 @@
+{
+  "schema": "iq4_new_raw_receipt55_link_inputs",
+  "source_manifest": "tools/firmware/stock_new_raw_receipt_55/SOURCE_SHA256.json",
+  "source_manifest_sha256": "552729cc7efd0e93d067778a7eee5affcc99d92c1e1a371dface7a8857cbc504",
+  "objects": [
+    {
+      "path": "analysis/firmware/stock_new_raw_receipt_55/build/receipt.o",
+      "bytes": 68160,
+      "sha256": "45c67dcf828c40d642865542be3d1287708fa4e10c15349e2e89c13b085867ff"
+    },
+    {
+      "path": "analysis/firmware/stock_new_raw_receipt_55/build/wrappers.o",
+      "bytes": 936,
+      "sha256": "c8b7ad5237f908b4c0e0829a2ff3f9cd7e8770e1d44d8b9a9fc743715ccf2a88"
+    }
+  ],
+  "runtime_pin_header": "tools/firmware/stock_new_raw_receipt_55/pins.h",
+  "runtime_pin_header_sha256": "8088fa45862af6740626c15fde757399373b459e0d9f398bb8b16054a864f141",
+  "BL_hooks": [
+    {
+      "va": 7983872,
+      "old_hex": "7aa10494",
+      "original_target": 9197800,
+      "target_symbol": "iq4_new_raw_enqueue_thunk_55",
+      "branch_kind": "BL"
+    },
+    {
+      "va": 9197636,
+      "old_hex": "a5f6ff97",
+      "original_target": 9188056,
+      "target_symbol": "iq4_new_raw_node_event_55",
+      "branch_kind": "BL"
+    },
+    {
+      "va": 9198676,
+      "old_hex": "a1f5ff97",
+      "original_target": 9188056,
+      "target_symbol": "iq4_new_raw_node_event_55",
+      "branch_kind": "BL"
+    },
+    {
+      "va": 9302072,
+      "old_hex": "59000094",
+      "original_target": 9302428,
+      "target_symbol": "iq4_new_raw_xqd_store_55",
+      "branch_kind": "BL"
+    },
+    {
+      "va": 8544204,
+      "old_hex": "4191ef97",
+      "original_target": 4236496,
+      "target_symbol": "iq4_new_raw_open_55",
+      "branch_kind": "BL"
+    },
+    {
+      "va": 9294912,
+      "old_hex": "7eedfb97",
+      "original_target": 8227384,
+      "target_symbol": "iq4_new_raw_sd_close_55",
+      "branch_kind": "BL"
+    },
+    {
+      "va": 9304296,
+      "old_hex": "b317fd97",
+      "original_target": 8542132,
+      "target_symbol": "iq4_new_raw_xqd_dtor_55",
+      "branch_kind": "BL"
+    },
+    {
+      "va": 9304304,
+      "old_hex": "b117fd97",
+      "original_target": 8542132,
+      "target_symbol": "iq4_new_raw_xqd_dtor_55",
+      "branch_kind": "BL"
+    },
+    {
+      "va": 9291316,
+      "old_hex": "aaa5ff97",
+      "original_target": 9198812,
+      "target_symbol": "iq4_new_raw_refs_55",
+      "branch_kind": "BL"
+    },
+    {
+      "va": 4810860,
+      "old_hex": "55080094",
+      "original_target": 4819392,
+      "target_symbol": "iq4_new_raw_backup_enqueue_55",
+      "branch_kind": "BL"
+    }
+  ],
+  "auxiliary_hooks": [
+    {
+      "va": 9307672,
+      "old_hex": "e0003fd6",
+      "target_symbol": "iq4_new_raw_sd_store_55",
+      "branch_kind": "BL"
+    }
+  ],
+  "aliases": [
+    {
+      "symbol": "iq4_new_raw_syscall_55",
+      "va": 4238912
+    },
+    {
+      "symbol": "iq4_new_raw_errno_55",
+      "va": 4236512
+    },
+    {
+      "symbol": "iq4_new_raw_original_open_55",
+      "va": 4236496
+    },
+    {
+      "symbol": "iq4_new_raw_original_enqueue_55",
+      "va": 9197800
+    },
+    {
+      "symbol": "iq4_new_raw_original_node_event_55",
+      "va": 9188056
+    },
+    {
+      "symbol": "iq4_new_raw_original_xqd_store_55",
+      "va": 9302428
+    },
+    {
+      "symbol": "iq4_new_raw_original_sd_store_55",
+      "va": 9293720
+    },
+    {
+      "symbol": "iq4_new_raw_original_writer_close_55",
+      "va": 8227384
+    },
+    {
+      "symbol": "iq4_new_raw_original_file_close_55",
+      "va": 8542220
+    },
+    {
+      "symbol": "iq4_new_raw_original_file_dtor_55",
+      "va": 8542132
+    },
+    {
+      "symbol": "iq4_new_raw_original_refs_55",
+      "va": 9198812
+    },
+    {
+      "symbol": "iq4_new_raw_original_backup_enqueue_55",
+      "va": 4819392
+    }
+  ],
+  "new_required_functions": [
+    "iq4_new_raw_bind_55",
+    "iq4_new_raw_settings_enter_55",
+    "iq4_new_raw_settings_leave_55",
+    "iq4_new_raw_active_55",
+    "iq4_new_raw_policy_55",
+    "iq4_new_raw_acquire_55",
+    "iq4_new_raw_publication_55",
+    "iq4_new_raw_end_55",
+    "iq4_new_raw_backup_suppressed_55",
+    "iq4_new_raw_enqueue_thunk_55",
+    "iq4_new_raw_node_event_55",
+    "iq4_new_raw_xqd_store_55",
+    "iq4_new_raw_sd_store_55",
+    "iq4_new_raw_open_55",
+    "iq4_new_raw_sd_close_55",
+    "iq4_new_raw_xqd_dtor_55",
+    "iq4_new_raw_refs_55",
+    "iq4_new_raw_backup_enqueue_55"
+  ],
+  "external_pin_exclusion_sites": [
+    4812584
+  ],
+  "host_groups": 26,
+  "camera_accessed": false,
+  "target_device_executed": false
+}

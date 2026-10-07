@@ -1,0 +1,152 @@
+{
+  "schema": "iq4_stock_jpeg_xqd_link_01",
+  "source": {
+    "path": "tools/firmware/f3_stock_jpeg_xqd_01/SOURCE_SHA256.json",
+    "bytes": 10231,
+    "sha256": "acbffa0e08f402dfd3644d639b95ead9ba2222d4d14e4a5a7ada3317aef0f839"
+  },
+  "source_manifest": "tools/firmware/f3_stock_jpeg_xqd_01/SOURCE_SHA256.json",
+  "source_manifest_sha256": "acbffa0e08f402dfd3644d639b95ead9ba2222d4d14e4a5a7ada3317aef0f839",
+  "objects": [
+    {
+      "path": "analysis/firmware/f3_stock_jpeg_xqd_01/build/runtime.o",
+      "bytes": 40912,
+      "sha256": "8cb530909e7e5a0aac445010e7b2c2a44786037c718816511f010010dfcc3a47"
+    },
+    {
+      "path": "analysis/firmware/f3_stock_jpeg_xqd_01/build/publish.o",
+      "bytes": 9072,
+      "sha256": "43b95176b8978f6c2a86f320aaa173dce8109d9341236b275ebc86497ce7205d"
+    },
+    {
+      "path": "analysis/firmware/f3_stock_jpeg_xqd_01/build/settings.o",
+      "bytes": 8200,
+      "sha256": "63830f8387ffeaf902c86bff572cc89f5ec35f6428da1f9bf07fd078926cea62"
+    },
+    {
+      "path": "analysis/firmware/f3_stock_jpeg_xqd_01/build/wrappers.o",
+      "bytes": 1104,
+      "sha256": "eddb8ef684aa1d1e5594c8d990dd57ad96d1433e23863d7dcf7f12f52946b389"
+    }
+  ],
+  "BL_hooks": [
+    {
+      "va": 4344780,
+      "old_hex": "57ef1294",
+      "original_target": 9308456,
+      "target_symbol": "iq4_stock_jpeg_ctor_wrapper_01"
+    },
+    {
+      "va": 9310020,
+      "old_hex": "c8000094",
+      "original_target": 9310820,
+      "target_symbol": "iq4_stock_jpeg_thumbnail_01"
+    },
+    {
+      "va": 9310040,
+      "old_hex": "1c020094",
+      "original_target": 9312200,
+      "target_symbol": "iq4_stock_jpeg_4k_01"
+    },
+    {
+      "va": 9310620,
+      "old_hex": "f8cdec97",
+      "original_target": 4278652,
+      "target_symbol": "iq4_stock_jpeg_presence_01"
+    },
+    {
+      "va": 9310716,
+      "old_hex": "8e0ff197",
+      "original_target": 5394484,
+      "target_symbol": "iq4_stock_jpeg_free_space_01"
+    },
+    {
+      "va": 9311760,
+      "old_hex": "d8010094",
+      "original_target": 9313648,
+      "target_symbol": "iq4_stock_jpeg_encode_write_01"
+    },
+    {
+      "va": 9313144,
+      "old_hex": "7e000094",
+      "original_target": 9313648,
+      "target_symbol": "iq4_stock_jpeg_encode_write_01"
+    }
+  ],
+  "aliases": [
+    {
+      "symbol": "strnlen",
+      "va": 4234880,
+      "kind": "original imported routine",
+      "original_first16_LE": "d05900d011ae40f91062059120021fd6",
+      "original_first16_sha256": "f53216bb93b942fc000940b054866c4263229ddd4542b0ba070fd1047c1b1c9d"
+    },
+    {
+      "symbol": "strcmp",
+      "va": 4238144,
+      "kind": "original imported routine",
+      "original_first16_LE": "d05900b011de43f910e21e9120021fd6",
+      "original_first16_sha256": "fd2543410a2f960e7d7580b3dd596ac2877ee3b223baa32eb895193a4a4f93ac"
+    },
+    {
+      "symbol": "strlen",
+      "va": 4239008,
+      "kind": "original imported routine",
+      "original_first16_LE": "d05900b011b644f910a2259120021fd6",
+      "original_first16_sha256": "a8e7918d3e8da093a25efea2fd953d7fa90af61a63d0f6b9f394e57abe6275ef"
+    },
+    {
+      "symbol": "memchr",
+      "va": 4237904,
+      "kind": "original imported routine",
+      "original_first16_LE": "d05900b011a243f910021d9120021fd6",
+      "original_first16_sha256": "bc06a7bbd6f5839a231a3e351b68bf25d573ffabd5d5329d30e7760189354ba4"
+    },
+    {
+      "symbol": "memcpy",
+      "va": 4236592,
+      "kind": "original imported routine",
+      "original_first16_LE": "d05900b0115a42f910c2129120021fd6",
+      "original_first16_sha256": "3ec623f42254724c282aed9feb73a5b5c3cbe2cf77ba5cefc4beb3c616f2840d"
+    },
+    {
+      "symbol": "memcmp",
+      "va": 4239712,
+      "kind": "original imported routine",
+      "original_first16_LE": "d0590090116645f910222b9120021fd6",
+      "original_first16_sha256": "691db1a54382eadabf79cda87f5d62d589e73ee2b262aaf06eec929495feee2c"
+    },
+    {
+      "symbol": "iq4_f3_original_syscall_03",
+      "va": 4238912,
+      "kind": "original imported routine",
+      "original_first16_LE": "d05900b0119e44f910e2249120021fd6",
+      "original_first16_sha256": "0cc51ec789db50f20ec52457bb384252add5b99eaf2326a501b8ea947b218bff"
+    },
+    {
+      "symbol": "iq4_f3_original_errno_location_03",
+      "va": 4236512,
+      "kind": "original imported routine",
+      "original_first16_LE": "d05900b0114642f91022129120021fd6",
+      "original_first16_sha256": "4e8837bd53cecd28b01df16b9767653c794c5515207dd56caf103e8c4a90fb54"
+    }
+  ],
+  "required_functions": [
+    "iq4_stock_jpeg_bound_01",
+    "iq4_stock_jpeg_destination_get_01",
+    "iq4_stock_jpeg_destination_set_01",
+    "iq4_stock_jpeg_mode_get_01",
+    "iq4_stock_jpeg_mode_set_01",
+    "iq4_stock_jpeg_size_get_01",
+    "iq4_stock_jpeg_size_set_01"
+  ],
+  "requires_stock_jpeg_catalog_01": true,
+  "stock_quality": 90,
+  "stock_sizes": [
+    "Thumbnail",
+    "4K"
+  ],
+  "raw_path_original": true,
+  "camera_accessed": false,
+  "target_executed": false
+}

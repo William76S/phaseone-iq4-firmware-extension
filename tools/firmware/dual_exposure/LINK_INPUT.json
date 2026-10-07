@@ -1,0 +1,106 @@
+{
+  "schema": "iq4_dual_native_arrow_link_03",
+  "replace_only": {
+    "path": "analysis/firmware/dual_exposure_build_02/dual.o",
+    "bytes": 16464,
+    "sha256": "723460c19d94403d01977b284f4e1cb8555600e6d4eaf22e5a65465a88dc9057"
+  },
+  "replacement": {
+    "path": "analysis/firmware/dual_exposure_arrow_repair/build_final/dual.o",
+    "bytes": 30232,
+    "sha256": "639ba9ea72217227c9380bf1239e5bbac9ff1371cc45384b71dd173b7b4c7a84"
+  },
+  "required_functions": [
+    "iq4_dual_after_open_01",
+    "iq4_dual_open_wrapper_01",
+    "iq4_dual_long_tick_02",
+    "iq4_dual_long_tick_wrapper_02",
+    "iq4_dual_label_ctor_03",
+    "iq4_dual_attach_03",
+    "iq4_dual_attach_wrapper_03",
+    "iq4_dual_range_03",
+    "iq4_dual_range_wrapper_03"
+  ],
+  "remove_required_functions": [
+    "iq4_dual_cycle_01",
+    "iq4_dual_unknown_tag_wrapper_01"
+  ],
+  "remove_auxiliary_hooks": [
+    {
+      "va": 5470552,
+      "old_hex": "68000014",
+      "target_symbol": "iq4_dual_unknown_tag_wrapper_01"
+    }
+  ],
+  "hooks": [
+    {
+      "va": 5467828,
+      "old_hex": "dfd8fd97",
+      "original_target": 4903472,
+      "branch_kind": "BL",
+      "target_symbol": "iq4_dual_label_ctor_03"
+    },
+    {
+      "va": 5467860,
+      "old_hex": "de64fe97",
+      "original_target": 5046860,
+      "branch_kind": "BL",
+      "target_symbol": "iq4_dual_attach_wrapper_03"
+    },
+    {
+      "va": 5471848,
+      "old_hex": "99010094",
+      "original_target": 5473484,
+      "branch_kind": "BL",
+      "target_symbol": "iq4_dual_open_wrapper_01"
+    },
+    {
+      "va": 5473600,
+      "old_hex": "b18c0794",
+      "original_target": 7452676,
+      "branch_kind": "BL",
+      "target_symbol": "iq4_dual_long_tick_wrapper_02"
+    },
+    {
+      "va": 5474208,
+      "old_hex": "60003fd6",
+      "original_target": null,
+      "branch_kind": "BL",
+      "target_symbol": "iq4_dual_range_wrapper_03"
+    }
+  ],
+  "aliases": [
+    {
+      "symbol": "iq4_stock_dual_update_01",
+      "va": 5473484,
+      "kind": "native Dual Exposure code",
+      "original_first16_LE": "fd7bbaa9fd030091e00f00f9e00f40f9"
+    },
+    {
+      "symbol": "iq4_stock_dual_quantize_02",
+      "va": 7452676,
+      "kind": "native Dual Exposure code",
+      "original_first16_LE": "fd7bbda9fd030091e01f00bd00608352"
+    }
+  ],
+  "remove_aliases": [
+    "iq4_stock_dual_callback_return_01"
+  ],
+  "pins": {
+    "path": "tools/firmware/dual_exposure/PINS.json",
+    "bytes": 3185,
+    "sha256": "1bfaba9a95ca3811c6f0075e2ec4a3e5c213ea38006a3aefd8d31fb728cfb1e1"
+  },
+  "stock": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "actual_A64_emulation": {
+    "path": "analysis/firmware/dual_exposure_arrow_repair/ACTUAL_A64.json",
+    "bytes": 4954,
+    "sha256": "42efad2fde5cd9fffed8f740fa23e3305baa889b4ccd6eb59cc148496fa5b181"
+  },
+  "target_executed": false,
+  "camera_accessed": false
+}

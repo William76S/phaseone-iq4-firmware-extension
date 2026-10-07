@@ -1,0 +1,24 @@
+{
+  "schema": "iq4_47_root_runtime_table_guard_review",
+  "stock_sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb",
+  "tables": [
+    {
+      "va": 12739800,
+      "bytes": 3260,
+      "sha256": "62b16ab95ba38bb881781aba8f18e6e175449942a7cd8338334dec72e8ae3ad5",
+      "description": "native 163-entry shutter table",
+      "PT_LOAD_flags": 5,
+      "writable": false
+    },
+    {
+      "va": 12746192,
+      "bytes": 8,
+      "sha256": "cb529eddce2ef8826d77d57b8acb0f1b648ed6a4b1b5358696939aab6ee2b17c",
+      "description": "native seconds quantizer comparison constant",
+      "PT_LOAD_flags": 5,
+      "writable": false
+    }
+  ],
+  "wrapper_review": "clamp preserves original setter property and method, passes corrected W1; EV wrapper saves buffer/size/format, returns requested double in D0 and tail-calls original format; both have explicit CFI",
+  "camera_accessed": false
+}

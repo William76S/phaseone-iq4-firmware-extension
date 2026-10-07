@@ -1,24 +1,32 @@
 # Phase One IQ4 firmware extensions
 
-私人研究工程快照，最新离线候选 **P1Linux 6.03.34 / IQ 6.03.31 / System 8.02.13**（2026-10-05）。
+当前源码与固件版本：**P1Linux 6.03.61 / IQ 6.03.58 / System 8.02.40**。
 
-[固件候选下载](deploy/f1_f3_f4_card_candidate_05_blackref_01/IQ4-user-only-candidate.fwp) · [菜单、限制和复现说明](deploy/F1_F3_F4_REPAIR_CANDIDATE_05.md)
+[下载 6.03.61](https://github.com/William76S/phaseone-iq4-firmware-extension/releases/tag/v6.03.61) · [本版功能与限制](docs/RELEASE_6.03.61.md) · [构建说明](BUILD.md) · [未解决问题](docs/KNOWN_ISSUES.md)
 
-包含 Ratio Mask、SD/XQD RAW/JPEG/RAW+JPEG 保存设置、六档 JPEG 尺寸、默认质量100、Dual Exposure 1/3档调节，以及原生 LV 录像和 Black Ref 保护的研究实现。
+本项目基于精确版本的原厂固件做扩展，不是 Phase One 官方固件，也不包含原厂完整源码。
 
-**仅 Ratio Mask 有此前用户可见成功反馈；最新组合 JPEG、录像、Black Ref 兼容与持久恢复未实机验收。** 无卡 Capture One JPEG 传输未完成；Black Ref 后可能需重新选择保存格式。此仓库不能视为安全刷写或失败恢复保证。
+## 当前功能
 
-## 仓库内容与本地依赖
+- Ratio Mask：LV侧栏图标短按开关、开启蓝点、长按设置比例与透明度；包含缩放与持久设置相关修复。
+- Dual Exposure：原厂双曝光流程上的可调EV差值及加减按钮，范围最高+5EV。
+- JPEG：仅原厂4K，质量100；XQD的IIQ Only / IIQ+JPEG / JPEG Only与SD存储策略联动。
+- 6.03.61新增同卡、同目录、同名IIQ+JPG配对删除，以及JPEG Only图库主卡删除。
 
-这是从本地研究工程导出的新快照，不包含历史 Git 提交。包含自主源码、主机测试、合成测试素材、固件静态分析和候选05。原厂固件/库、SDK、工具链、样本照片、相机备份、设备日志与安全相关调查保留本地。
+50% / Sensor+大尺寸JPEG试验已撤回，LV Recording已移除。LUT和无卡Capture One JPEG传输未完成。历史目录中的实现或菜单不代表当前固件具有这些能力。
 
-已有文件保持原字节及哈希，因此部分历史构建记录仍引用本地路径。完整固件重建须恢复拥有合法来源的本地原件、依赖和生成对象；**此快照并非开箱即用的独立工具链**。IMPORT_MANIFEST.json 列出已导入文件的长度与SHA-256，构建入口见交付说明。
+**验证范围：** 6.03.53的XQD同时保存IIQ和4K JPEG有用户实机成功反馈；Ratio Mask和Dual Exposure也有阶段性实机反馈。**6.03.61本版只有静态及主机验证，尚未完成实机验收。** JPEG Only、双卡组合、删除和失败恢复不能视为已全部通过。XQD开机Ready慢的问题仍未查明。
 
-## 常用目录
+## 别人可以自行构建吗？
 
-- `src/`、`tools/firmware/`：核心代码、原生接入、版本绑定和打包工具。
-- `tests/`、`fixtures/`：主机测试和合成输入。
-- `analysis/firmware/`：保留的静态分析和构建证据；不等于实机结果。
-- `deploy/`：最新候选及限制说明。
+**可以构建、运行独立主机组件测试；目前不能仅靠干净克隆直接重建完整6.03.61固件。** 原因不仅是未附原厂固件：当前装配脚本还依赖本地历史对象、生成头文件、冻结清单与收据，尚未整理成从源文件到FWP的独立构建流程。详见[构建缺项](docs/BUILD_GAPS_6.03.61.md)。
 
-未为原厂内容授予任何额外许可；仓库当前不添加开源许可证。
+Release提供本机已生成的FWP和校验值。GitHub自动附带的Source code压缩包是这个源码快照，不能与完整可独立重建包混同。
+
+## 内容与来源
+
+`src/`、`tests/`和`fixtures/`提供独立组件与合成测试；`tools/firmware/`保存版本绑定、原生接口和补丁构建源码。`analysis/`及旧`deploy/`是历史资料。
+
+本次同步记录见`UPDATE_MANIFEST_6.03.61.json`。`IMPORT_MANIFEST.json`只描述2026-10-05首次导入。新的原厂固件、SDK、工具链、样本照片、设备日志、安全调查和私有备份未随本次源码更新上传。
+
+仓库未另行授予开源许可证；第三方文件遵循随附许可。This software is based in part on the work of the Independent JPEG Group. 参见`src/codec/vendor/libjpeg-turbo-1.5.3/LICENSE.md`及`README.ijg`。

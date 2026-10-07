@@ -1,0 +1,124 @@
+{
+  "schema": "iq4_51_owned_Dual_glyph_final_local_review_01",
+  "release": {
+    "version": "6.03.51",
+    "IQ": "6.03.48",
+    "System": "8.02.30",
+    "date": "2026-10-07",
+    "fwp_bytes": 13309643,
+    "fwp_sha256": "673f58ea99b5f01a6bf9695b13da7166df19871a84ecb6af395bcecedbff1555",
+    "camera_accessed": false,
+    "hardware_acceptance": false,
+    "recovery_verified": false
+  },
+  "package": {
+    "path": "deploy/iq4_6.03.51/IQ4_6.03.51.fwp",
+    "bytes": 13309643,
+    "sha256": "673f58ea99b5f01a6bf9695b13da7166df19871a84ecb6af395bcecedbff1555"
+  },
+  "User": {
+    "path": "analysis/firmware/f1_f3_f4_user_integration_build_22_dual_glyph_align/P1Linux_RatioMask_JPEG_LVRecording_6.03.51.bin",
+    "bytes": 13308568,
+    "sha256": "d1a7abcf47b5b0d58d60fc2d69a55cecf658acc8a3e6d986d50ce096452fcf4d"
+  },
+  "baseline_release": "6.03.50",
+  "baseline_commit": "15b84badb6ef5af1f2ff2d09b700b40bd9f54e87",
+  "scope": "Only owned left/right Dual EXP glyph label rectangles and layout flags; no exposure change",
+  "changed_object": {
+    "path": "analysis/firmware/dual_glyph_align_01/build_final/dual.o",
+    "bytes": 41448,
+    "sha256": "ba461e9a4bc88083bf4ef588a757997bf7183aacc119338bf354330ada56fe9a"
+  },
+  "all_other72_objects_equal_to50": true,
+  "objects": 73,
+  "hooks": 43,
+  "all_hook_sites_and_aliases_unchanged_from50": true,
+  "original_windows": 221,
+  "all_original_windows_match": true,
+  "local_glyph_y": -3,
+  "original_button_hitbox": [
+    70,
+    70
+  ],
+  "original_font_and_paint_retained": true,
+  "visual_tuning_value_not_measured_ink": true,
+  "entire50_source_restored_after_removing_glyph_additions": true,
+  "source_manifest": {
+    "path": "analysis/firmware/dual_glyph_align_01/SOURCE_SHA256.json",
+    "bytes": 5015,
+    "sha256": "a1f5c3a90ba0c77808bbac79b8ed5ff83a3d0b67251984644f383b532b7db30e"
+  },
+  "component_link_inputs": {
+    "path": "analysis/firmware/dual_glyph_align_01/LINK_INPUTS_01.json",
+    "bytes": 1646,
+    "sha256": "3b482272d91be6d89e11f4377a5933d65074b72034b9fc44b7c61416583e4062"
+  },
+  "native_geometry_events_receipt": {
+    "path": "analysis/firmware/dual_glyph_align_01/A64_GEOMETRY.json",
+    "bytes": 5023,
+    "sha256": "79dfbfc062ef34a7824d7a10e66aee7b0439a7075d395f5b3572faced9cb49f5"
+  },
+  "source_equivalence_receipt": {
+    "path": "analysis/firmware/dual_glyph_align_independent_01/SOURCE_EQUIVALENCE.json",
+    "bytes": 3121,
+    "sha256": "43fadc71a0b2facd279ebff8bd796c64c93517b1eeaf4d36f2a39b1ef1e2cd52"
+  },
+  "independent_final_review": {
+    "path": "analysis/firmware/dual_glyph_align_independent_01/FINAL_REVIEW.json",
+    "bytes": 3392,
+    "sha256": "b4a804563701d44944d692274c51964f36d3b85fde61dc3f2529081d852edecf"
+  },
+  "input_inventory": {
+    "path": "tools/firmware/ratio_ui_repair_01/INPUT_BASELINE_51.json",
+    "bytes": 674,
+    "sha256": "f773d907bfe4bbba729dbe709f237b4157ada065610b7fbb9d35c5ae1eb135dd"
+  },
+  "input_spec": {
+    "path": "tools/firmware/f1_f3_f4_user_integration_05/INPUTS_REPAIR_22.json",
+    "bytes": 58884,
+    "sha256": "89e55e72db5f8746ba41f0fa9bb5c01012ab9cceeaddc06ba437950217fb1cfd"
+  },
+  "checks": [
+    {
+      "tool": "build.py",
+      "exit": 0
+    },
+    {
+      "tool": "verify.py",
+      "exit": 0
+    },
+    {
+      "tool": "seal.py",
+      "exit": 0
+    },
+    {
+      "tool": "verify_user.py",
+      "exit": 0
+    },
+    {
+      "tool": "verify_runtime_pins.py",
+      "exit": 0
+    },
+    {
+      "tool": "package.py",
+      "exit": 0
+    },
+    {
+      "tool": "inspect_package.py",
+      "exit": 0
+    }
+  ],
+  "host_cases_each": 6,
+  "original_constructors_and_real_parent_binding_executed_on_host": true,
+  "native_layout_origins": 2,
+  "tap_and_hold_four_directions_and_busy_passed_on_host": true,
+  "camera_accessed": false,
+  "hardware_acceptance": false,
+  "actual_glyph_ink_rendered": false,
+  "actual_glyph_clip_accepted": false,
+  "actual_optical_cap_accepted": false,
+  "IIQ_metadata_accepted": false,
+  "CaptureOne_merge_accepted": false,
+  "BlackRef_accepted": false,
+  "persistent_failure_recovery_verified": false
+}

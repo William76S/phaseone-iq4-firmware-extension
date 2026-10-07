@@ -1,0 +1,117 @@
+{
+  "schema": "iq4_50_plus5EV_final_local_review_01",
+  "release": {
+    "version": "6.03.50",
+    "IQ": "6.03.47",
+    "System": "8.02.29",
+    "date": "2026-10-07",
+    "fwp_bytes": 13309499,
+    "fwp_sha256": "b3998a22c1e68b7c27fac5afc5f7308355a9d8db1c2fd71538581c1511b16322",
+    "camera_accessed": false,
+    "hardware_acceptance": false,
+    "recovery_verified": false
+  },
+  "package": {
+    "path": "deploy/iq4_6.03.50/IQ4_6.03.50.fwp",
+    "bytes": 13309499,
+    "sha256": "b3998a22c1e68b7c27fac5afc5f7308355a9d8db1c2fd71538581c1511b16322"
+  },
+  "User": {
+    "path": "analysis/firmware/f1_f3_f4_user_integration_build_21_dual_5ev/P1Linux_RatioMask_JPEG_LVRecording_6.03.50.bin",
+    "bytes": 13308424,
+    "sha256": "99c38a0d3950e6f718d89240b61423062f5415b264af00c5d8a0098226e47bab"
+  },
+  "objects": 73,
+  "hooks": 43,
+  "original_windows": 215,
+  "all_original_windows_match": true,
+  "baseline_release": "6.03.49",
+  "baseline_commit": "8f862982c91eb65c0b679fa44b757f9b33125613",
+  "changed_object": {
+    "path": "analysis/firmware/dual_5ev_domain_02/build_sealed/dual.o",
+    "bytes": 38200,
+    "sha256": "2aff9b17affb18cd077e8ba417401beb49e9a273b504cb78a27c7808d2283b22"
+  },
+  "all_other72_objects_equal_to49": true,
+  "new_Dual_call_sites": [
+    "0x538810",
+    "0x53865c"
+  ],
+  "unchanged_ratio_and_other_features": true,
+  "source_manifest": {
+    "path": "analysis/firmware/dual_5ev_domain_02/SOURCE_SHA256.json",
+    "bytes": 5102,
+    "sha256": "715a2592d7de4a39543e1c0a81ec3f9c9dbc596a4731f6dae3ae331c3124e30e"
+  },
+  "native_UI_receipt": {
+    "path": "analysis/firmware/dual_5ev_domain_02/A64_EMULATION.json",
+    "bytes": 34245,
+    "sha256": "29a776d61837a22584fec57299e9a1c01d827ebd38aa7f7492d8480e4471543e"
+  },
+  "native_sensor_parameter_receipt": {
+    "path": "analysis/firmware/dual_5ev_domain_02/A64_SENSOR_PARAMETERS.json",
+    "bytes": 35073,
+    "sha256": "5c6f6e84c9137179090109b1036c9eef7014f627878577ba63faaabe56c007eb"
+  },
+  "layout_equivalence": {
+    "path": "analysis/firmware/dual_5ev_domain_02/LAYOUT_EQUIVALENCE.json",
+    "bytes": 521,
+    "sha256": "1b7c814c622c10fa951063269f06815fe4df6e3184fd58fe55456b86a2ead846"
+  },
+  "checks": [
+    {
+      "tool": "build.py",
+      "exit": 0
+    },
+    {
+      "tool": "verify.py",
+      "exit": 0
+    },
+    {
+      "tool": "seal.py",
+      "exit": 0
+    },
+    {
+      "tool": "verify_user.py",
+      "exit": 0
+    },
+    {
+      "tool": "verify_runtime_pins.py",
+      "exit": 0
+    },
+    {
+      "tool": "package.py",
+      "exit": 0
+    },
+    {
+      "tool": "inspect_package.py",
+      "exit": 0
+    }
+  ],
+  "host_cases_each": 133,
+  "native_UI_cycles": 38,
+  "sensor_parameter_cases": 30,
+  "requested_long_seconds_cap": 1.0,
+  "actual_optical_cap_accepted": false,
+  "IIQ_metadata_accepted": false,
+  "CaptureOne_merge_accepted": false,
+  "BlackRef_accepted": false,
+  "camera_accessed": false,
+  "hardware_acceptance": false,
+  "persistent_failure_recovery_verified": false,
+  "independent_final_component_review": {
+    "path": "analysis/firmware/dual_5ev_independent_audit_02/FINAL_COMPONENT_REVIEW.json",
+    "bytes": 5583,
+    "sha256": "a9fef8b2242c82e28ea68c6882d31d75270156d094927aebb9dc64bda362e204"
+  },
+  "independent_report": {
+    "path": "analysis/firmware/dual_5ev_independent_audit_02/REPORT.md",
+    "bytes": 6960,
+    "sha256": "2436fe20483c18c68a0dd89698f379e2afb4e4b3d2d9c8600e3400aaaf870002"
+  },
+  "input_inventory": {
+    "path": "tools/firmware/ratio_ui_repair_01/INPUT_BASELINE_50.json",
+    "bytes": 1483,
+    "sha256": "1a49f2636e39d0d85e33cd1613620f15406cf48a42aac26da6073d78ad0b3931"
+  }
+}

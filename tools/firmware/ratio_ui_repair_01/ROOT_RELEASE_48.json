@@ -1,0 +1,86 @@
+{
+  "schema": "iq4_48_final_local_release_review_01",
+  "release": {
+    "version": "6.03.48",
+    "IQ": "6.03.45",
+    "System": "8.02.27",
+    "date": "2026-10-07",
+    "fwp_bytes": 13309499,
+    "fwp_sha256": "4907f1c18bb13cc413d7d29281d27b9afd2e6b857407480b6ea9bde162ba7d4c",
+    "camera_accessed": false,
+    "hardware_acceptance": false,
+    "recovery_verified": false,
+    "input_spec": {
+      "path": "tools/firmware/f1_f3_f4_user_integration_05/INPUTS_REPAIR_19.json",
+      "bytes": 58828,
+      "sha256": "36ab79a048a072ddd9be6ba477d82da48c7bcdcdaa649eb8969952de63df367a"
+    }
+  },
+  "User": {
+    "path": "analysis/firmware/f1_f3_f4_user_integration_build_19_dual_label/P1Linux_RatioMask_JPEG_LVRecording_6.03.48.bin",
+    "bytes": 13308424,
+    "sha256": "50d971134bd6e15ddb8ef994122132fb2c7c28bcbadb767a59e929c852e1e3ff"
+  },
+  "objects": 73,
+  "hooks": 43,
+  "original_windows": 215,
+  "all_original_windows_match": true,
+  "release_checks": [
+    {
+      "tool": "build.py",
+      "exit": 0
+    },
+    {
+      "tool": "verify.py",
+      "exit": 0
+    },
+    {
+      "tool": "seal.py",
+      "exit": 0
+    },
+    {
+      "tool": "verify_user.py",
+      "exit": 0
+    },
+    {
+      "tool": "verify_runtime_pins.py",
+      "exit": 0
+    },
+    {
+      "tool": "package.py",
+      "exit": 0
+    },
+    {
+      "tool": "inspect_package.py",
+      "exit": 0
+    }
+  ],
+  "owned_EXP_text_box": {
+    "before": [
+      134,
+      50
+    ],
+    "after": [
+      154,
+      50
+    ],
+    "center_unchanged": true,
+    "native_font_and_arrows_unchanged": true,
+    "independent_evidence": {
+      "path": "analysis/firmware/dual_label_horizontal_evidence_01/RECEIPT.json",
+      "bytes": 3864,
+      "sha256": "e211b9de6bb3134df4654dec63fa8caaac7cc18b528f4ce6ed54be2aa5630851"
+    }
+  },
+  "plus5_physical_source_equivalence": {
+    "path": "analysis/firmware/dual_exp_label_width_01/PHYSICAL_ALGORITHM_EQUIVALENCE.json",
+    "bytes": 2265,
+    "sha256": "9a5a590221a00fc77b450c9d0b3673e2f9f57134a5092d0c27b8c482e22cc37c"
+  },
+  "camera_accessed": false,
+  "target_hardware_accepted": false,
+  "IIQ_pixels_and_metadata_accepted": false,
+  "black_reference_accepted": false,
+  "persistent_failure_recovery_verified": false,
+  "unchanged_limit": "mtd0 original erase-block and independent failed-User recovery remain unresolved"
+}

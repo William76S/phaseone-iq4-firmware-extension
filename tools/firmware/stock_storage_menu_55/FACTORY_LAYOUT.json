@@ -1,0 +1,153 @@
+{
+  "stock": {
+    "path": "analysis/firmware/extracted/P1Linux_6.03.21.bin",
+    "bytes": 11874544,
+    "sha256": "9b611efe64067685b770ba3984ae951684c5a401f73f77a03b316be374032cdb"
+  },
+  "root_title": 389,
+  "root_children": [
+    "Storage switch DTO+8",
+    "Advanced Setup",
+    "SD Storage DTO+408",
+    "JPEG Size DTO+608"
+  ],
+  "advanced_children": [
+    "Host DTO+308",
+    "XQD/CFX DTO+108",
+    "SD DTO+208"
+  ],
+  "SD_Storage": {
+    "append": "0x4f04f0",
+    "dto_ctor": "0x5b7d60",
+    "dto_offset": "0x408",
+    "VM_offset": "0x1d8",
+    "getter": "0x495448",
+    "setter": "0x5b66bc",
+    "vtable": "0xbbd228",
+    "getter_slot": "0x40",
+    "setter_slot": "0x48",
+    "table": {
+      "label": "sd_storage_mode",
+      "va": 16066768,
+      "file_offset": 11806928,
+      "bytes": 144,
+      "sha256": "4e7d3f4d8bef4788adf91837e6e1a0933abf001dfd64da2e84a0b50242e32dfb",
+      "hex": "3100000000000000000000000000000000000000010100000903000000000000000000000000000002000000010100000a03000000000000000000000000000003000000000100000b0300000000000000000000000000000400000001010000100400000000000000000000000000000500000001010000110400000000000000000000000000000100000001010000",
+      "records": [
+        {
+          "index": 0,
+          "title_id": 49,
+          "literal": null,
+          "value": 0,
+          "visible": 1,
+          "enabled": 1
+        },
+        {
+          "index": 1,
+          "title_id": 777,
+          "literal": null,
+          "value": 2,
+          "visible": 1,
+          "enabled": 1
+        },
+        {
+          "index": 2,
+          "title_id": 778,
+          "literal": null,
+          "value": 3,
+          "visible": 0,
+          "enabled": 1
+        },
+        {
+          "index": 3,
+          "title_id": 779,
+          "literal": null,
+          "value": 4,
+          "visible": 1,
+          "enabled": 1
+        },
+        {
+          "index": 4,
+          "title_id": 1040,
+          "literal": null,
+          "value": 5,
+          "visible": 1,
+          "enabled": 1
+        },
+        {
+          "index": 5,
+          "title_id": 1041,
+          "literal": null,
+          "value": 1,
+          "visible": 1,
+          "enabled": 1
+        }
+      ]
+    },
+    "labels_by_enum": {
+      "0": "Off",
+      "2": "JPEG Only",
+      "3": "Mirror Mode",
+      "4": "Archive Mode",
+      "5": "Primary Storage",
+      "1": "Overflow"
+    }
+  },
+  "raw_events": {
+    "VM_XQD": "VM+1c0 -> XQDgroup+8",
+    "VM_SD": "VM+1c8 -> SDgroup+8",
+    "native_raw_values": {
+      "0": "Off",
+      "1": "Optional",
+      "2": "Primary"
+    },
+    "card_presence": "group+468; getter41497c",
+    "raw_group_status": "8dbbac; Primary no-card is status1, eligible card is status2"
+  },
+  "original_resources": [
+    {
+      "title_id": 49,
+      "va": "0xc0e250",
+      "hex": "3100000000000000108ac00000000000",
+      "label": "Off"
+    },
+    {
+      "title_id": 775,
+      "va": "0xc10ff0",
+      "hex": "070300000000000038b8c00000000000",
+      "label": "SD Storage"
+    },
+    {
+      "title_id": 777,
+      "va": "0xc11010",
+      "hex": "090300000000000060b8c00000000000",
+      "label": "JPEG Only"
+    },
+    {
+      "title_id": 778,
+      "va": "0xc11020",
+      "hex": "0a0300000000000070b8c00000000000",
+      "label": "Mirror Mode"
+    },
+    {
+      "title_id": 779,
+      "va": "0xc11030",
+      "hex": "0b0300000000000080b8c00000000000",
+      "label": "Archive Mode"
+    },
+    {
+      "title_id": 1040,
+      "va": "0xc12080",
+      "hex": "100400000000000060cdc00000000000",
+      "label": "Primary Storage"
+    },
+    {
+      "title_id": 1041,
+      "va": "0xc12090",
+      "hex": "110400000000000070cdc00000000000",
+      "label": "Overflow"
+    }
+  ],
+  "backend_three_format_values_are_independent": true,
+  "camera_accessed": false
+}
